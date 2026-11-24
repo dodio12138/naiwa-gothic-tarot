@@ -17,7 +17,10 @@ const cardText = (d) => (isEn() ? { ...d, ...CARDS_EN[d.id] } : d);
 
 /* ════════ 基础 ════════ */
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-const BASE = 360;                       // 与 CSS --card-w 一致
+// 牌的基准尺寸：GPU 按这个尺寸 × 设备像素比生成图层纹理，再缩放显示。
+// 手机上揭示时最大只有 260px 宽，用 360 会让 22 张牌的图层吃掉几百 MB 显存，iOS 会直接杀掉页面
+const BASE = Math.min(innerWidth, innerHeight) <= 760 ? 260 : 360;
+document.documentElement.style.setProperty('--card-w', `${BASE}px`);
 const TAU = Math.PI * 2;
 const BACK = `${import.meta.env.BASE_URL}back.webp`;
 const REVERSE_CHANCE = 0.4;
@@ -242,9 +245,7 @@ function makeCard(data) {
     <div class="lift">
       <div class="tilt"><div class="inner">
         <div class="face back"><img src="${BACK}" alt="" draggable="false"></div>
-        <div class="face front" aria-label="${data.zh} · ${titleCase(data.en)}">${frontLayers(data.id)}
-          <div class="sheen"></div><div class="glare"></div>
-        </div>
+        <div class="face front"></div>
       </div></div>
       <img class="mb mbx" src="${UI('back-blur-x.webp')}" alt="" draggable="false">
       <img class="mb mby" src="${UI('back-blur-y.webp')}" alt="" draggable="false">
@@ -757,10 +758,11 @@ function pick(c) {
   c.reversed = CFG.reversed && rand() < REVERSE_CHANCE;
   if (S.fate) {
     const fated = S.cards.find((x) => x.data.id === S.fate.id);
-    if (fated && fated !== c) { const tmp = c.data; setFace(c, fated.data); setFace(fated, tmp); }
+    if (fated && fated !== c) [c.data, fated.data] = [fated.data, c.data];
     c.reversed = S.fate.drawn ? S.fate.reversed : (CFG.reversed && S.fate.reversed);
   }
   c.el.classList.toggle('reversed', c.reversed);
+  setFace(c, c.data);   // 牌面只给选中的牌生成：没选中的牌永远不会翻开，省掉它们的正面图层
 
   // 余下的牌合拢；鼠标不动也立刻按当前位置找到下一张最近的牌
   FAN.hot = -1;

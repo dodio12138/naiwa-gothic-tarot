@@ -218,6 +218,7 @@ body.is-intro .brand { opacity: 0; pointer-events: none; }   /* 首页已有标�
 }
 .card .face.back img { width: 100%; height: 100%; object-fit: cover; }
 .card .front { transform: rotateY(180deg); }
+.card .face.front:empty { display: none; }   /* 未选中的牌不生成正面，也不占图层 */
 
 /* 正面三层 */
 .layers { position: absolute; inset: 0; }
@@ -258,9 +259,8 @@ body.is-intro .brand { opacity: 0; pointer-events: none; }   /* 首页已有标�
 .modal-card:hover .plates, .modal-card.show-plates .plates { opacity: 1; scale: 1; }
 
 .card .aura {
-  position: absolute; inset: -8%; border-radius: 12px; opacity: 0;
-  background: radial-gradient(closest-side, rgba(246,217,79,.55), rgba(200,138,69,.2) 60%, transparent);
-  filter: blur(18px);
+  position: absolute; inset: -12%; border-radius: 12px; opacity: 0;
+  background: radial-gradient(closest-side, rgba(246,217,79,.5), rgba(200,138,69,.18) 55%, rgba(200,138,69,.06) 80%, transparent);   /* 渐变本身足够柔和，不用 blur 滤镜（22 张牌各一个滤镜层太吃内存） */
   pointer-events: none;
 }
 .card .sheen {
