@@ -4,6 +4,7 @@ import { CARDS, SPREADS, artSrc } from './cards.js';
 import { createParticles } from './particles.js';
 import { createAudio } from './audio.js';
 import { lightsHTML } from './lights.js';
+import { renderShare } from './share.js';
 import { t, getLang, setLang, SPREADS_EN, CARDS_EN, titleCase } from './i18n.js';
 
 /* ════════ 语言 ════════ */
@@ -932,7 +933,10 @@ function readingHTML() {
         </div>
       </div>`;
     }).join('')}
-    <div class="r-foot"><button class="plate sm" type="button" data-again>${t('again')}</button></div>`;
+    <div class="r-foot">
+      <button class="plate sm" type="button" data-share>${t('share')}</button>
+      <button class="plate sm" type="button" data-again>${t('again')}</button>
+    </div>`;
 }
 
 function openReading() {
@@ -952,6 +956,7 @@ function openReading() {
 
 readingInner.addEventListener('click', (e) => {
   if (e.target.closest('[data-again]')) return restart();
+  if (e.target.closest('[data-share]')) return openShare();
   const item = e.target.closest('.r-item');
   if (item) {
     const c = S.picked.find((x) => x.slot === +item.dataset.slot);
@@ -1042,6 +1047,79 @@ modal.addEventListener('click', (e) => {
   if (e.target.closest('[data-close]') || e.target.classList.contains('modal-body')) closeModal();
 });
 addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+/* ════════ 分享图 ════════ */
+const shareEl = $('#share');
+const shareImg = $('#share-img');
+const shareMaking = $('#share-making');
+const shareSend = $('#share-send');
+let shareBlob = null, shareUrl = null;
+const shareName = () => `naiwa-tarot-${new Date().toISOString().slice(0, 10)}.jpg`;
+
+async function openShare() {
+  if (!shareEl.hidden) return;
+  audio.click();
+  shareEl.hidden = false;
+  $('#share-save').textContent = t('shareSave');
+  shareSend.textContent = t('shareSend');
+  $('#share-close').textContent = t('shareClose');
+  $('#share-tip').textContent = t('shareTip');
+  shareImg.removeAttribute('src');
+  shareMaking.textContent = t('shareMaking');
+  shareSend.hidden = true;
+  gsap.fromTo('.share-backdrop', { opacity: 0 }, { opacity: 1, duration: 0.4 });
+  gsap.fromTo('.share-frame', { y: 30, opacity: 0, scale: 0.96 }, { y: 0, opacity: 1, scale: 1, duration: 0.6, ease: 'expo.out' });
+  try {
+    const now = new Date();
+    const date = isEn()
+      ? now.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+      : `${now.getFullYear()} 年 ${now.getMonth() + 1} 月 ${now.getDate()} 日`;
+    const cards = S.picked.slice().sort((a, b) => a.slot - b.slot).map((c) => {
+      const d = cardText(c.data);
+      return {
+        id: d.id, num: d.num, en: d.en, name: cardName(d), pos: posName(c.slot), reversed: c.reversed,
+        badge: t(c.reversed ? 'reversed' : 'upright'), keys: d.keys,
+        text: c.reversed ? d.rev : d.up, whisper: t('whisper') + d.whisper,
+      };
+    });
+    const abs = (u) => new URL(u, document.baseURI).href;
+    const cv = await renderShare({
+      lang: getLang(), layout: S.key, cards,
+      head: { eyebrow: 'NAIWA · GOTHIC · TAROT', small: t('titleSmall'), big: t('titleBig'), spread: spreadText(S.key).name, date, question: S.question },
+      footer: { cta: t('shareCta'), url: location.origin + location.pathname },
+      assets: {
+        art: (id) => abs(artSrc(id, 'full')), frame: abs(UI('frame.webp')), plate: abs(UI('plate.webp')),
+        divider: abs(UI('divider.webp')), starchart: abs(UI('starchart.webp')),
+      },
+    });
+    shareBlob = await new Promise((r) => cv.toBlob(r, 'image/jpeg', 0.92));
+    if (shareUrl) URL.revokeObjectURL(shareUrl);
+    shareUrl = URL.createObjectURL(shareBlob);
+    shareImg.src = shareUrl;
+    shareMaking.textContent = '';
+    const file = new File([shareBlob], shareName(), { type: 'image/jpeg' });
+    shareSend.hidden = !(navigator.canShare && navigator.canShare({ files: [file] }));
+  } catch (err) {
+    console.error(err);
+    shareMaking.textContent = t('shareFail');
+  }
+}
+function closeShare() {
+  gsap.to('#share', { opacity: 0, duration: 0.25, onComplete() { shareEl.hidden = true; gsap.set('#share', { clearProps: 'opacity' }); } });
+}
+$('#share-save').addEventListener('click', () => {
+  if (!shareUrl) return;
+  audio.click();
+  const a = document.createElement('a');
+  a.href = shareUrl; a.download = shareName();
+  document.body.appendChild(a); a.click(); a.remove();
+});
+shareSend.addEventListener('click', async () => {
+  try { await navigator.share({ files: [new File([shareBlob], shareName(), { type: 'image/jpeg' })], title: t('pageTitle') }); } catch { /* 用户取消 */ }
+});
+shareEl.addEventListener('click', (e) => { if (e.target.closest('[data-close-share]')) closeShare(); });
+addEventListener('keydown', (e) => { if (e.key === 'Escape' && !shareEl.hidden) closeShare(); });
+if (import.meta.env.DEV) window.__openShare = openShare;
 
 /* ════════ 重新开始 ════════ */
 async function restart() {

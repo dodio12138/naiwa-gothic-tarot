@@ -377,7 +377,7 @@ body.picking { touch-action: none; }                       /* 选牌时手指滑
 .r-text { margin: 0; font-size: 14px; line-height: 1.85; color: #ddd0c4; }
 .r-whisper { margin: 8px 0 0; font-size: 13px; color: var(--iris); line-height: 1.7; }
 .r-whisper .wl { color: #6f8a3d; }
-.r-foot { display: flex; justify-content: center; margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--line); }
+.r-foot { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--line); }
 
 /* ───────── 大图弹窗 ───────── */
 #modal { position: fixed; inset: 0; z-index: 50; }
@@ -612,3 +612,25 @@ body.lang-en .r-head h2 { font-family: var(--serif-en); letter-spacing: .08em; }
 body.calm .lt { animation-duration: 9s; }
 body.calm .lt-flash, body.calm .lt-flame { animation: none; opacity: .7; }
 @media (prefers-reduced-motion: reduce) { .lt { animation: none !important; opacity: .7; } }
+
+/* ───────── 分享图预览 ───────── */
+#share { position: fixed; inset: 0; z-index: 60; }
+.share-backdrop { position: absolute; inset: 0; background: rgba(8,5,7,.86); backdrop-filter: blur(10px); }
+.share-body {
+  position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px;
+  padding: 24px 16px; pointer-events: none;
+}
+.share-body > * { pointer-events: auto; }
+.share-frame {
+  position: relative; height: min(74vh, 900px); aspect-ratio: 9 / 16; max-width: 92vw;
+  background: #120c10; box-shadow: 0 30px 90px rgba(0,0,0,.8), 0 0 0 1px rgba(200,138,69,.45);
+}
+.share-frame img { width: 100%; height: 100%; object-fit: contain; display: block; user-select: auto; -webkit-user-select: auto; -webkit-touch-callout: default; }
+.share-frame img:not([src]), .share-frame img[src=""] { visibility: hidden; }
+.share-making {
+  position: absolute; inset: 0; display: grid; place-items: center; margin: 0;
+  font-size: 14px; letter-spacing: .2em; color: var(--gold-hi);
+}
+.share-making:empty { display: none; }
+.share-actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+.share-tip { margin: 0; font-size: 12px; color: var(--muted); letter-spacing: .08em; }

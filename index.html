@@ -85,6 +85,19 @@
     <div class="reading-inner" id="reading-inner"></div>
   </aside>
 
+  <div id="share" role="dialog" aria-modal="true" hidden>
+    <div class="share-backdrop" data-close-share></div>
+    <div class="share-body">
+      <div class="share-frame"><img id="share-img" alt="" /><p class="share-making" id="share-making"></p></div>
+      <div class="share-actions">
+        <button class="plate sm" id="share-save" type="button"></button>
+        <button class="plate sm" id="share-send" type="button" hidden></button>
+        <button class="plate sm" id="share-close" type="button" data-close-share></button>
+      </div>
+      <p class="share-tip" id="share-tip"></p>
+    </div>
+  </div>
+
   <div id="modal" hidden>
     <div class="modal-backdrop" data-close></div>
     <div class="modal-body">
