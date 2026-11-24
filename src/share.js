@@ -282,11 +282,16 @@ export async function renderShare(o) {
   ctx.textAlign = 'center';
 
   /* ── 页脚：二维码 + 网址 ── */
-  const qr = document.createElement('canvas');
-  await QRCode.toCanvas(qr, o.footer.url, { margin: 1, width: 132, color: { dark: '#1a1018', light: '#ecc98a' } });
+  // o.footer.qrImage：外部提供的二维码图片（B 站版用 Toy SDK 生成，指向 Toy 本身）；否则用 url 本地生成
+  let qr = null;
+  if (o.footer.qrImage) qr = await loadImg(o.footer.qrImage).catch(() => null);
+  if (!qr) {
+    qr = document.createElement('canvas');
+    await QRCode.toCanvas(qr, o.footer.url, { margin: 1, width: 132, color: { dark: '#1a1018', light: '#ecc98a' } });
+  }
   const qx = W - 110 - 132, qy = H - 82 - 132;
   ctx.fillStyle = '#ecc98a'; ctx.beginPath(); ctx.roundRect(qx - 8, qy - 8, 148, 148, 6); ctx.fill();
-  ctx.drawImage(qr, qx, qy);
+  ctx.drawImage(qr, qx, qy, 132, 132);
   ctx.textAlign = 'left';
   ctx.fillStyle = COL.goldHi; ctx.font = `600 28px ${FT}`;
   ctx.fillText(o.footer.cta, 110, H - 146);

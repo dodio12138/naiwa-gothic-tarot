@@ -5,6 +5,7 @@ import { createParticles } from './particles.js';
 import { createAudio } from './audio.js';
 import { lightsHTML } from './lights.js';
 import { loreOf } from './lore.js';
+import { BILI, INSET, onInsetChange, toyQr, textIsSafe, saveToAlbum, sharePic, canAppShare, canAppSave } from './bili.js';
 import { Q, onQuality, setQualityPick, tickFps } from './perf.js';
 import { renderShare } from './share.js';
 import { dailyFate, recordDaily, streak, drawnToday, collect, collected } from './journal.js';
@@ -407,11 +408,11 @@ function fanGeom(n) {
   const targetW = Math.min(W * (mobile ? 0.86 : 0.92) - fw, 1150);
   const R = targetW / (2 * Math.sin(rad(full / 2)));
   const sag = R * (1 - Math.cos(rad(full / 2)));
-  const pad = mobile ? Math.max(48, H * 0.08) : 40;
+  const pad = (mobile ? Math.max(48, H * 0.08) : 40) + INSET.b;
   // 两端的牌斜着垂下来：横屏手机、矮窗口时要保证最外侧的牌角也留在屏幕里
   const half = rad(full / 2);
   const edgeExt = (fh / 2) * Math.cos(half) + (fw / 2) * Math.sin(half);
-  const centerY = Math.min(H - fh * 0.5 - pad - sag * 0.55, H - 10 - sag - edgeExt);
+  const centerY = Math.min(H - fh * 0.5 - pad - sag * 0.55, H - 10 - INSET.b - sag - edgeExt);
   const cy = centerY + R;
   const spread = step * (n - 1);
   const angle = (i) => -spread / 2 + step * i;
@@ -429,7 +430,7 @@ function fanGeom(n) {
 function pickSlotGeom(n) {
   const { W, mobile } = vp();
   const f = fanGeom(22);
-  const y0 = mobile ? 62 : 80;
+  const y0 = (mobile ? 62 : 80) + INSET.t;
   const y1 = f.top - (mobile ? 30 : 46);
   const availH = Math.max(80, y1 - y0);
   const gap = mobile ? 12 : 28;
@@ -461,7 +462,7 @@ function revealSlotGeom() {
 }
 function slotGeomFor(g) {
   const { W, H, mobile, sheet } = vp();
-  const area = { x0: 0, x1: W, y0: mobile ? 58 : 76, y1: H - (mobile ? 34 : 44) };
+  const area = { x0: INSET.l, x1: W - INSET.r, y0: (mobile ? 58 : 76) + INSET.t, y1: H - (mobile ? 34 : 44) - INSET.b };
   if (S.readingOpen) {
     if (sheet) area.y1 = H * 0.44 - 4;
     else area.x1 = W - Math.min(440, W * 0.38);
@@ -1214,7 +1215,7 @@ const shareEl = $('#share');
 const shareImg = $('#share-img');
 const shareMaking = $('#share-making');
 const shareSend = $('#share-send');
-let shareBlob = null, shareUrl = null;
+let shareBlob = null, shareUrl = null, shareData = null;
 const shareName = () => `naiwa-tarot-${new Date().toISOString().slice(0, 10)}.jpg`;
 
 async function openShare() {
@@ -1244,10 +1245,13 @@ async function openShare() {
       };
     });
     const abs = (u) => new URL(u, document.baseURI).href;
+    // B 站版：玩家问题先过内容安全检测（不通过就不印在图上）；二维码指向 Toy 本身
+    const question = S.question && (await textIsSafe(S.question)) ? S.question : '';
+    const qr = BILI ? await toyQr(264) : null;
     const cv = await renderShare({
       lang: getLang(), layout: S.key === 'daily' ? 'one' : S.key, cards,
-      head: { eyebrow: 'NAIWA · GOTHIC · TAROT', small: t('titleSmall'), big: t('titleBig'), spread: spreadText(S.key).name, date, question: S.question },
-      footer: { cta: t('shareCta'), url: location.origin + location.pathname },
+      head: { eyebrow: 'NAIWA · GOTHIC · TAROT', small: t('titleSmall'), big: t('titleBig'), spread: spreadText(S.key).name, date, question },
+      footer: { cta: t('shareCta'), url: qr?.url || location.origin + location.pathname, qrImage: qr?.base64 },
       assets: {
         art: (id) => abs(artSrc(id, 'full')), frame: abs(UI('frame.webp')), plate: abs(UI('plate.webp')),
         divider: abs(UI('divider.webp')), starchart: abs(UI('starchart.webp')),
@@ -1259,7 +1263,15 @@ async function openShare() {
     shareImg.src = shareUrl;
     shareMaking.textContent = '';
     const file = new File([shareBlob], shareName(), { type: 'image/jpeg' });
-    shareSend.hidden = !(navigator.canShare && navigator.canShare({ files: [file] }));
+    shareData = null;
+    if (BILI && (await canAppSave() || await canAppShare())) {
+      // B 站 App 内：浏览器下载不可用，改用 SDK 存相册 / 拉起分享面板（图片 base64 需 ≤2MB）
+      shareData = cv.toDataURL('image/jpeg', 0.86);
+      if (shareData.length > 1.9e6) shareData = cv.toDataURL('image/jpeg', 0.7);
+      shareSend.hidden = !(await canAppShare());
+    } else {
+      shareSend.hidden = !(navigator.canShare && navigator.canShare({ files: [file] }));
+    }
   } catch (err) {
     console.error(err);
     shareMaking.textContent = t('shareFail');
@@ -1268,14 +1280,18 @@ async function openShare() {
 function closeShare() {
   gsap.to('#share', { opacity: 0, duration: 0.25, onComplete() { shareEl.hidden = true; gsap.set('#share', { clearProps: 'opacity' }); } });
 }
-$('#share-save').addEventListener('click', () => {
+$('#share-save').addEventListener('click', async () => {
   if (!shareUrl) return;
   audio.click();
+  if (shareData) {
+    try { if (await saveToAlbum(shareData, t('shareAlbumHint'))) { shareMaking.textContent = t('shareSaved'); return; } } catch { /* 用户拒绝相册权限等 */ }
+  }
   const a = document.createElement('a');
   a.href = shareUrl; a.download = shareName();
   document.body.appendChild(a); a.click(); a.remove();
 });
 shareSend.addEventListener('click', async () => {
+  if (shareData) { try { await sharePic(shareData); } catch { /* 用户取消 */ } return; }
   try { await navigator.share({ files: [new File([shareBlob], shareName(), { type: 'image/jpeg' })], title: t('pageTitle') }); } catch { /* 用户取消 */ }
 });
 shareEl.addEventListener('click', (e) => { if (e.target.closest('[data-close-share]')) closeShare(); });
@@ -1442,20 +1458,20 @@ btnRevealAll.addEventListener('click', revealAll);
 
 /* ════════ 窗口变化 ════════ */
 let rT;
-addEventListener('resize', () => {
-  clearTimeout(rT);
-  rT = setTimeout(() => {
-    if (S.phase === 'pick') {
-      fanApply();
-      const geo = pickSlotGeom(S.slots.length);
-      S.slots.forEach((s, i) => gsap.to(s.el, { x: geo[i].x, y: geo[i].y, width: geo[i].w, height: geo[i].h, duration: 0.4 }));
-      S.picked.forEach((c) => gsap.to(c.el, { x: geo[c.slot].x, y: geo[c.slot].y, scale: geo[c.slot].w / BASE, duration: 0.4 }));
-    } else if (S.phase === 'reveal' || S.phase === 'done') {
-      layoutReveal(0.4);
-    }
-    placeSigil(0.4);
-  }, 120);
-});
+function relayout() {
+  if (S.phase === 'pick') {
+    fanApply();
+    const geo = pickSlotGeom(S.slots.length);
+    S.slots.forEach((s, i) => gsap.to(s.el, { x: geo[i].x, y: geo[i].y, width: geo[i].w, height: geo[i].h, duration: 0.4 }));
+    S.picked.forEach((c) => gsap.to(c.el, { x: geo[c.slot].x, y: geo[c.slot].y, scale: geo[c.slot].w / BASE, duration: 0.4 }));
+  } else if (S.phase === 'reveal' || S.phase === 'done') {
+    layoutReveal(0.4);
+  }
+  placeSigil(0.4);
+}
+addEventListener('resize', () => { clearTimeout(rT); rT = setTimeout(relayout, 120); });
+// B 站 App：安全区 / 胶囊留白变化（转屏、沉浸切换）后重新排版
+onInsetChange(() => { clearTimeout(rT); rT = setTimeout(() => { relayout(); fitIntro(); }, 60); });
 
 /* ════════ 启动 ════════ */
 buildIntro();

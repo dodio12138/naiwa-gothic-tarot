@@ -56,6 +56,19 @@ for f in ~/Downloads/Naiwa_Gothic_Tarot/titled/*.png; do
 done
 ```
 
+## B 站 Toy 版
+
+```bash
+npm run toy        # 构建 B 站版到 dist-bili/，并打包成 release/naiwa-tarot-toy.zip
+npm run dev:bili   # 本地调试 B 站版（控制台可用 __toyMock({ safeArea: { top: 47, right: 0, bottom: 34, left: 0 } }) 模拟 App 安全区）
+```
+
+B 站版（`src/bili.js`，只在 `--mode bili` 时启用）额外接入了 Toy JS SDK：
+
+- 安全区：App 内读取 `safeArea` 并持续监听容器变化，顶栏、首页、牌位、解读面板、详情、图鉴都避开状态栏、底部导航和右上角胶囊按钮
+- 分享图：二维码用 `getQrCode` 指向 Toy 本身；App 内「保存图片」走 `saveImageToAlbum`，「分享」走 `sharePicture`
+- 玩家输入的问题先经 `checkInputSafety` 检测，未明确通过时不印在分享图上
+
 ## 部署
 
 推送到 `main` 分支后，GitHub Actions（`.github/workflows/deploy.yml`）会自动构建并发布到 GitHub Pages。

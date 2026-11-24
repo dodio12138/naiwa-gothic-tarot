@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "dev:bili": "vite --mode bili",
+    "build:bili": "vite build --mode bili",
+    "toy": "vite build --mode bili && mkdir -p release && rm -f release/naiwa-tarot-toy.zip && cd dist-bili && zip -qr ../release/naiwa-tarot-toy.zip . -x '.*'"
   },
   "devDependencies": {
     "vite": "^6.0.0"
