@@ -64,6 +64,11 @@
     <label class="st-row"><span><b>跳过洗牌动画</b><small>直接进入选牌</small></span><input type="checkbox" data-k="skipIntro"><i class="sw"></i></label>
     <label class="st-row"><span><b>逆位</b><small>允许抽到逆位牌</small></span><input type="checkbox" data-k="reversed"><i class="sw"></i></label>
     <div class="st-group" id="st-g-show">表 现</div>
+    <div class="st-row st-qrow"><span><b id="st-q-title">画质</b><small id="st-q-desc">自动</small></span>
+      <div class="seg" role="radiogroup" aria-labelledby="st-q-title">
+        <button type="button" role="radio" data-q="auto">自动</button><button type="button" role="radio" data-q="high">高</button><button type="button" role="radio" data-q="mid">中</button><button type="button" role="radio" data-q="low">低</button>
+      </div>
+    </div>
     <label class="st-row"><span><b>视差 / 陀螺仪</b><small>悬停或倾斜手机时的纵深</small></span><input type="checkbox" data-k="parallax"><i class="sw"></i></label>
     <label class="st-row"><span><b>牌面光效</b><small>月光、烛火、星芒等发光动效</small></span><input type="checkbox" data-k="lights"><i class="sw"></i></label>
     <label class="st-row"><span><b>弱化动效</b><small>更快、更少闪光与震动</small></span><input type="checkbox" data-k="calm"><i class="sw"></i></label>
@@ -72,11 +77,15 @@
   </div>
 
   <section id="intro">
+    <div class="intro-fit">
+    <div class="intro-a">
     <div class="hero-wrap"><div class="hero-card" id="hero-card"></div><i class="hero-shadow" aria-hidden="true"></i></div>
     <p class="eyebrow">NAIWA&nbsp;·&nbsp;GOTHIC&nbsp;·&nbsp;TAROT</p>
     <h1 class="title"><span class="t1">奶蛙</span><span class="sep" aria-hidden="true">·</span><span class="t2">暗夜占卜</span></h1>
     <i class="rule title-rule" aria-hidden="true"></i>
     <p class="lede">一只始终面无表情的黄色梨形怪物，<br />穿行于庄严、阴郁、华丽的哥特塔罗世界。</p>
+    </div>
+    <div class="intro-b">
     <label class="question plate">
       <input id="question" type="text" maxlength="60" autocomplete="off" placeholder="在心中默念你的问题……（可不填）" />
     </label>
@@ -86,8 +95,12 @@
       <small id="daily-sub"></small>
     </button>
     <div class="spreads" id="spreads"></div>
-    <button class="codex-link" id="codex-link" type="button"></button>
-    <label class="auto-toggle"><input type="checkbox" data-k="autoDraw"><i class="sw"></i><span>一键占卜 · 自动抽牌并揭示</span></label>
+    <div class="intro-foot">
+      <button class="codex-link" id="codex-link" type="button"></button>
+      <label class="auto-toggle"><input type="checkbox" data-k="autoDraw"><i class="sw"></i><span>一键占卜 · 自动抽牌并揭示</span></label>
+    </div>
+    </div>
+    </div>
   </section>
 
   <div id="stage" aria-live="polite"></div>

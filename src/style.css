@@ -117,6 +117,13 @@ body.is-intro .brand { opacity: 0; pointer-events: none; }   /* 首页已有标�
 #intro::-webkit-scrollbar { display: none; }
 #intro > * { flex-shrink: 0; }   /* 空间不够时滚动，而不是把元素挤扁导致重叠 */
 #intro.gone { pointer-events: none; }
+.intro-fit { display: flex; flex-direction: column; align-items: center; width: 100%; }
+/* 竖屏：两组内容拆开平铺（display: contents）；横屏矮屏：左右两栏 */
+.intro-a, .intro-b { display: contents; }
+.intro-a > *, .intro-b > * { flex-shrink: 0; }
+/* 图鉴入口和一键占卜放同一行，省一行高度 */
+.intro-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 28px; margin-top: 18px; }
+.intro-foot .codex-link, .intro-foot .auto-toggle { margin-top: 0; }
 .hero-wrap { position: relative; margin-bottom: 40px; }
 .hero-card {
   position: relative; width: 128px; height: 192px;
@@ -430,13 +437,6 @@ body.picking { touch-action: none; }                       /* 选牌时手指滑
   .slot .label { font-size: 10px; letter-spacing: .12em; margin-top: 5px; }
   .slot .label em { font-size: 12px; letter-spacing: .08em; }
   .slot .label em small { --tip: 4px; height: 14px; line-height: 14px; font-size: 9px; }
-  #reading {
-    top: auto; left: 0; width: 100%; height: 56vh; padding: 22px 18px 30px;
-    background: linear-gradient(180deg, rgba(13,9,12,0), rgba(13,9,12,.92) 30px, rgba(20,14,18,.98));
-    border-top: 1px solid var(--line);
-    -webkit-mask: none; mask: none;
-  }
-  .reading-inner { padding-left: 0; padding-top: 10px; }
   .r-head h2 { font-size: 22px; }
   .modal-body { flex-direction: column; justify-content: flex-start; gap: 22px; padding: 64px 22px 40px; overflow-y: auto; pointer-events: auto; }
   .modal-card { height: auto; width: min(68vw, 300px); }
@@ -465,6 +465,17 @@ body.picking { touch-action: none; }                       /* 选牌时手指滑
 .st-row:last-child { border-bottom: 0; }
 .st-row b { display: block; font-size: 14px; font-weight: 600; letter-spacing: .12em; color: var(--text); }
 .st-row small { display: block; margin-top: 2px; font-size: 11px; color: var(--muted); letter-spacing: .05em; }
+/* 画质：四段选择 */
+.st-qrow { cursor: default; flex-wrap: wrap; }
+.seg { display: flex; border: 1px solid rgba(200,138,69,.45); border-radius: 3px; overflow: hidden; flex: none; }
+.seg button {
+  min-width: 34px; padding: 5px 8px; font: inherit; font-size: 12px; letter-spacing: .08em;
+  color: var(--muted); background: transparent; border: 0; cursor: pointer;
+  transition: color .2s, background .2s;
+}
+.seg button + button { border-left: 1px solid rgba(200,138,69,.25); }
+.seg button:hover { color: var(--text); }
+.seg button[aria-checked="true"] { color: #1a1015; background: linear-gradient(180deg, #f2d496, #c88a45); font-weight: 700; }
 /* 开关：古金滑块 */
 input[data-k] { position: absolute; opacity: 0; pointer-events: none; }
 .sw {
@@ -714,10 +725,136 @@ body.lang-en .cx-name { font-family: var(--serif-en); font-size: 12.5px; letter-
   .codex-head h2 { font-size: 24px; }
   .cx-name { font-size: 12px; letter-spacing: .06em; }
 }
+/* 首页顶部留出 HUD 的高度（含刘海安全区），避免浮动的牌和按钮叠在一起 */
+@media (max-width: 760px) {
+  #intro {
+    padding-top: calc(max(10px, env(safe-area-inset-top)) + 64px); padding-bottom: calc(24px + env(safe-area-inset-bottom));
+    /* 往下滚时内容在顶部按钮下方淡出，不和按钮叠字 */
+    -webkit-mask-image: linear-gradient(180deg, transparent calc(max(10px, env(safe-area-inset-top)) + 34px), #000 calc(max(10px, env(safe-area-inset-top)) + 64px));
+            mask-image: linear-gradient(180deg, transparent calc(max(10px, env(safe-area-inset-top)) + 34px), #000 calc(max(10px, env(safe-area-inset-top)) + 64px));
+  }
+}
+/* 超窄屏（iPhone SE 一代、折叠屏外屏等 ≤ 360px） */
+@media (max-width: 360px) {
+  .eyebrow { letter-spacing: .3em; font-size: 10px; }
+  .lede { font-size: 12px; }
+  .question.plate { padding: 0 26px; }
+  .question input { font-size: 14px; }
+  .spreads { gap: 8px; }
+  .spread-btn .plate { padding: 0 16px; font-size: 13px; letter-spacing: .1em; }
+  .plate.sm { padding: 0 16px; }
+  .plate.sm.icon { padding: 0 13px; }
+}
 @media (max-height: 860px) {
   .daily-btn { margin-bottom: 14px; gap: 6px; }
   .daily-btn .daily-emblem { width: 34px; }
   .daily-btn .plate { --h: 46px; }
   .hero-card { width: 72px; height: 108px; }
   .hero-wrap { margin-bottom: 26px; }
+}
+
+/* ════════ 画质档位（html[data-q]，由 perf.js 按设备与帧率决定） ════════ */
+/* 中 / 低：牌面阴影收小——阴影会撑大每张牌的合成图层，22 张牌叠起来很吃显存；
+   毛玻璃（backdrop-filter）每帧都要重新模糊整屏背景，换成更不透明的纯色底 */
+html[data-q="mid"] .card .face, html[data-q="low"] .card .face { box-shadow: 0 12px 22px rgba(0,0,0,.55); }
+html[data-q="mid"] .card.chosen .face, html[data-q="low"] .card.chosen .face { box-shadow: 0 12px 22px rgba(0,0,0,.55), 0 0 28px var(--glow); }
+html[data-q="mid"] .modal-backdrop, html[data-q="low"] .modal-backdrop,
+html[data-q="mid"] .share-backdrop, html[data-q="low"] .share-backdrop { backdrop-filter: none; background: rgba(8,5,7,.93); }
+html[data-q="mid"] #codex, html[data-q="low"] #codex { backdrop-filter: none; }
+/* 低：光效保留静态微光、不做逐帧动画；牌面滤镜阴影去掉 */
+html[data-q="low"] .lt, html[data-q="low"] .lt::before, html[data-q="low"] .lt::after { animation: none !important; will-change: auto; }
+html[data-q="low"] .lt { opacity: .7; }
+html[data-q="low"] .card.revealed .frame-wrap { filter: none; }
+html[data-q="low"] .daily-btn .daily-emblem { animation: none; }
+
+/* 横屏手机 / 很矮的窗口：顶栏收成一行，品牌只留图标，提示文字放不下就省略 */
+@media (max-height: 500px) and (min-width: 761px) {
+  .hud { padding-top: max(8px, env(safe-area-inset-top)); padding-left: max(14px, env(safe-area-inset-left)); padding-right: max(14px, env(safe-area-inset-right)); grid-template-columns: auto minmax(0, 1fr) auto; gap: 10px; }
+  .brand span { display: none; }
+  .hint { font-size: 12px; letter-spacing: .1em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .plate.sm { --h: 30px; font-size: 12px; padding: 0 18px; }
+  .plate.sm.icon { padding: 0 14px; }
+  #intro { padding-top: 54px; }
+}
+
+/* 解读面板从底部升起：手机，以及竖屏平板（侧栏会把牌和文字都挤得太窄）。与 main.js 的 SHEET_MQ 保持一致 */
+@media (max-width: 760px), (orientation: portrait) and (max-width: 1100px) {
+  #reading {
+    top: auto; left: 0; width: 100%; height: 56vh; padding: 22px max(18px, 6vw) calc(30px + env(safe-area-inset-bottom));
+    background: linear-gradient(180deg, rgba(13,9,12,0), rgba(13,9,12,.92) 30px, rgba(20,14,18,.98));
+    border-top: 1px solid var(--line);
+    -webkit-mask: none; mask: none;
+  }
+  .reading-inner { padding-left: 0; padding-top: 10px; max-width: 680px; margin: 0 auto; }
+}
+/* 中等宽度（平板、小窗口）：品牌只留图标，给提示文字让位 */
+@media (max-width: 1000px) {
+  .brand span { display: none; }
+}
+
+/* ════════ 首页手机排版：尽量一屏放下（再不够由 main.js 的 fitIntro 整体等比缩小） ════════ */
+@media (max-width: 760px) {
+  .spreads { flex-wrap: nowrap; gap: 8px; width: 100%; max-width: 440px; }
+  .spread-btn { flex: 1 1 0; min-width: 0; }
+  .spread-btn .sb-in { gap: 4px; }
+  .spread-btn .pips { height: 24px; }
+  .spread-btn .pips i { width: 14px; height: 21px; margin: 0 -3px; }
+  .spread-btn .plate { --h: 38px; width: 100%; padding: 0 10px; font-size: 13px; letter-spacing: .08em; white-space: nowrap; }
+  body.lang-en .spread-btn .plate { font-size: 10.5px; letter-spacing: .02em; padding: 0 8px; }
+  .spread-btn small { font-size: 10px; line-height: 1.35; white-space: normal; }
+  .intro-foot { margin-top: 14px; gap: 8px 18px; }
+  .codex-link, .auto-toggle { font-size: 12px; letter-spacing: .08em; }
+  .question.plate { margin-bottom: 16px; }
+  .title-rule { margin-top: 8px; }
+}
+/* 矮手机（iPhone SE 等）：收起英文小标题，简介字号更小 */
+@media (max-width: 760px) and (max-height: 700px) {
+  .eyebrow { display: none; }
+  .hero-card { width: 62px; height: 93px; }
+  .hero-wrap { margin-bottom: 20px; }
+  .hero-shadow { bottom: -18px; }
+  .lede { font-size: 12px; line-height: 1.7; margin: 8px 0 12px; }
+  .daily-btn { margin-bottom: 10px; gap: 4px; }
+  .daily-btn .daily-emblem { width: 28px; }
+  .daily-btn .plate { --h: 42px; font-size: 16px; }
+}
+/* 很矮的屏幕：简介整段收起，只保留标题和操作 */
+@media (max-height: 600px) {
+  .lede { display: none; }
+  .title-rule { margin-bottom: 12px; }
+}
+
+/* 横屏手机、矮的桌面窗口：左栏标题，右栏操作，一屏放下 */
+@media (orientation: landscape) and (max-height: 560px) {
+  #intro { padding-top: 56px; padding-bottom: 14px; }
+  .intro-fit { flex-direction: row; align-items: center; justify-content: center; gap: max(28px, 5vw); }
+  .intro-a, .intro-b { display: flex; flex-direction: column; align-items: center; min-width: 0; }
+  .intro-b { width: min(440px, 50vw); }
+  .hero-card { width: 64px; height: 96px; }
+  .hero-wrap { margin-bottom: 22px; }
+  .hero-shadow { bottom: -18px; }
+  .title { font-size: clamp(34px, 6vw, 60px); }
+  .eyebrow { display: block; margin-bottom: 6px; font-size: 10px; }
+  .lede { display: block; font-size: 12px; line-height: 1.7; margin: 10px 0 0; }
+  .question.plate { --h: 42px; width: 100%; margin-bottom: 12px; padding: 0 30px; }
+  .question input { font-size: 13px; }
+  .daily-btn { margin-bottom: 10px; gap: 4px; }
+  .daily-btn .daily-emblem { width: 26px; }
+  .daily-btn .plate { --h: 40px; font-size: 15px; padding: 0 34px; }
+  .spreads { flex-wrap: nowrap; gap: 8px; width: 100%; }
+  .spread-btn { flex: 1 1 0; min-width: 0; }
+  .spread-btn .sb-in { gap: 3px; }
+  .spread-btn .pips { height: 20px; }
+  .spread-btn .pips i { width: 12px; height: 18px; margin: 0 -3px; }
+  .spread-btn .plate { --h: 34px; width: 100%; padding: 0 8px; font-size: 12px; letter-spacing: .06em; white-space: nowrap; }
+  body.lang-en .spread-btn .plate { font-size: 10px; letter-spacing: .02em; }
+  .spread-btn small { font-size: 10px; line-height: 1.3; }
+  .spread-btn small .n { display: none; }
+  .intro-foot { margin-top: 10px; gap: 6px 18px; }
+  .codex-link, .auto-toggle { font-size: 11px; letter-spacing: .06em; }
+}
+@media (max-width: 760px) {
+  .spreads { align-items: flex-start; }            /* 副标题换行时三个按钮仍然顶部对齐 */
+  body.lang-en .lede br { display: none; }        /* 英文句子长，窄屏让它自然换行 */
+  body.lang-en .question input { font-size: 13px; letter-spacing: 0; }
 }

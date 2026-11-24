@@ -3,7 +3,7 @@
 
 const TAU = Math.PI * 2;
 
-export function createParticles(canvas, { reduced = false } = {}) {
+export function createParticles(canvas, { reduced = false, density = 1, dprCap = 2 } = {}) {
   const ctx = canvas.getContext('2d');
   let W = 0, H = 0, dpr = 1;
   const dust = [];
@@ -12,15 +12,16 @@ export function createParticles(canvas, { reduced = false } = {}) {
   const state = { vortex: 0, glow: 0 };
   let px = 0, py = 0, tx = 0, ty = 0; // 指针视差
   let running = true;
+  let halo = density >= 0.5;
   let last = performance.now();
 
   function resize() {
-    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    dpr = Math.min(window.devicePixelRatio || 1, dprCap);
     W = window.innerWidth; H = window.innerHeight;
     canvas.width = W * dpr; canvas.height = H * dpr;
     canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    const target = reduced ? 40 : Math.round(Math.min(170, (W * H) / 9000));
+    const target = Math.round((reduced ? 40 : Math.min(170, (W * H) / 9000)) * density);
     while (dust.length < target) dust.push(makeDust(true));
     dust.length = target;
   }
@@ -44,6 +45,7 @@ export function createParticles(canvas, { reduced = false } = {}) {
 
   function burst(x, y, { count = 90, power = 1, colors } = {}) {
     if (reduced) count = Math.round(count / 3);
+    count = Math.round(count * Math.max(0.4, density));
     const palette = colors || ['#f6d94f', '#f9e77f', '#e9d39a', '#b39963', '#ffffff'];
     for (let i = 0; i < count; i++) {
       const a = Math.random() * TAU;
@@ -96,7 +98,7 @@ export function createParticles(canvas, { reduced = false } = {}) {
       ctx.beginPath();
       ctx.arc(p.x + ox, p.y + oy, r, 0, TAU);
       ctx.fill();
-      if (p.z > 0.82) {
+      if (p.z > 0.82 && halo) {   // 近处粒子的柔光圈（低画质省掉，填充面积是粒子本身的 25 倍）
         ctx.fillStyle = `hsla(${p.hue}, 90%, 70%, ${a * 0.12})`;
         ctx.beginPath(); ctx.arc(p.x + ox, p.y + oy, r * 5, 0, TAU); ctx.fill();
       }
@@ -134,5 +136,11 @@ export function createParticles(canvas, { reduced = false } = {}) {
 
   resize();
   requestAnimationFrame(frame);
-  return { burst, state };
+  /** 画质档位变化：粒子数量、画布像素比、柔光圈 */
+  function setQuality(d, cap) {
+    density = d; dprCap = cap; halo = d >= 0.5;
+    resize();
+  }
+
+  return { burst, state, setQuality };
 }

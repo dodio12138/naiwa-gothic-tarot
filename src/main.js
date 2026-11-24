@@ -4,6 +4,7 @@ import { CARDS, SPREADS, artSrc } from './cards.js';
 import { createParticles } from './particles.js';
 import { createAudio } from './audio.js';
 import { lightsHTML } from './lights.js';
+import { Q, onQuality, setQualityPick, tickFps } from './perf.js';
 import { renderShare } from './share.js';
 import { dailyFate, recordDaily, streak, drawnToday, collect, collected } from './journal.js';
 import { t, getLang, setLang, SPREADS_EN, CARDS_EN, titleCase } from './i18n.js';
@@ -18,9 +19,15 @@ const cardText = (d) => (isEn() ? { ...d, ...CARDS_EN[d.id] } : d);
 /* ════════ 基础 ════════ */
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 // 牌的基准尺寸：GPU 按这个尺寸 × 设备像素比生成图层纹理，再缩放显示。
-// 手机上揭示时最大只有 260px 宽，用 360 会让 22 张牌的图层吃掉几百 MB 显存，iOS 会直接杀掉页面
-const BASE = Math.min(innerWidth, innerHeight) <= 760 ? 260 : 360;
-document.documentElement.style.setProperty('--card-w', `${BASE}px`);
+// 22 张牌同时在场，尺寸过大会吃掉几百 MB 显存（iOS 超限会直接杀掉页面）。
+// 取「画质档位上限」和「这块屏幕上牌最大会显示多宽」中较小的那个；每次开新一轮占卜时重算。
+let BASE = 360;
+function updateBase() {
+  const small = Math.min(innerWidth, innerHeight) <= 760;
+  BASE = Math.min(Q.p.base, small ? 260 : 360);
+  document.documentElement.style.setProperty('--card-w', `${BASE}px`);
+}
+updateBase();
 const TAU = Math.PI * 2;
 const BACK = `${import.meta.env.BASE_URL}back.webp`;
 const REVERSE_CHANCE = 0.4;
@@ -43,6 +50,8 @@ const $ = (s) => document.querySelector(s);
 const stage = $('#stage');
 const hint = $('#hint');
 const intro = $('#intro');
+const introFit = $('.intro-fit');
+const introKids = () => [...introFit.querySelectorAll('.intro-a > *, .intro-b > *')];
 const flash = $('#flash');
 const reading = $('#reading');
 const readingInner = $('#reading-inner');
@@ -53,12 +62,14 @@ const btnRevealAll = $('#reveal-all');
 const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
 const rad = (d) => (d * Math.PI) / 180;
 const deg = (r) => (r * 180) / Math.PI;
-const vp = () => ({ W: innerWidth, H: innerHeight, mobile: innerWidth < 760 });
+// mobile：窄屏手机布局；sheet：解读面板从底部升起（手机 + 竖屏平板），否则从右侧滑入
+const SHEET_MQ = matchMedia('(max-width: 760px), (orientation: portrait) and (max-width: 1100px)');
+const vp = () => ({ W: innerWidth, H: innerHeight, mobile: innerWidth < 760, sheet: SHEET_MQ.matches });
 const esc = (s) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const rand = () => crypto.getRandomValues(new Uint32Array(1))[0] / 2 ** 32;
 
 
-const fx = createParticles($('#fx'), { reduced });
+const fx = createParticles($('#fx'), { reduced, density: Q.p.dust, dprCap: Q.p.dpr });
 const audio = createAudio();
 
 /* ════════ 设置（本地记忆） ════════ */
@@ -112,10 +123,20 @@ function buildSigil() {
   $('#sigil').innerHTML = `<img src="${UI('starchart.webp')}" alt="" draggable="false">`;
   const spin = gsap.to('#sigil img', { rotation: 360, duration: 240, repeat: -1, ease: 'none' });
   return {
+    spin,
     speed(v, d = 1) { gsap.to(spin, { timeScale: v, duration: d, ease: 'power2.inOut', overwrite: true }); },
   };
 }
 const sigil = buildSigil();
+
+/* ════════ 画质档位（见 perf.js） ════════ */
+onQuality(() => {
+  fx.setQuality(Q.p.dust, Q.p.dpr);
+  sigil.spin.paused(!Q.p.spin);
+  if (S.phase !== 'intro' && !Q.p.mb) motionBlur(false);
+  syncQualityUI();
+});
+gsap.ticker.add(() => tickFps(performance.now()));
 {
   const sx = gsap.quickTo('#sigil', 'x', { duration: 1.6, ease: 'power3' });
   const sy = gsap.quickTo('#sigil', 'y', { duration: 1.6, ease: 'power3' });
@@ -179,7 +200,7 @@ function introIn() {
   document.body.classList.add('is-intro');
   intro.style.visibility = 'visible';
   intro.classList.remove('gone');
-  const kids = [...intro.children];
+  const kids = introKids();
   gsap.set(kids, { clearProps: 'all' });
   const tl = gsap.timeline();
   tl.from('.hero-wrap', { y: 40, opacity: 0, scale: 0.8, duration: 1.2, ease: 'expo.out' })
@@ -198,7 +219,7 @@ function introIn() {
 
 async function introOut() {
   heroTl?.pause();
-  await gsap.to([...intro.children], {
+  await gsap.to(introKids(), {
     y: -24, opacity: 0, filter: 'blur(10px)', duration: 0.55, ease: 'power2.in', stagger: 0.04,
   });
   intro.classList.add('gone');
@@ -225,9 +246,11 @@ function setHint(t) {
 /* ════════ 卡牌 DOM ════════ */
 // 正面三层：插画（随视差移动）→ 边框（静止，SVG 蒙版只露出窗口外一圈）→ 编号铭牌（悬停显示）
 const cardById = (id) => CARDS.find((c) => c.id === id);
+// 光源数量随画质档位：桌面全部，手机只留最大的几个；大图详情至少保留 4 个
+const lightCount = (size) => (size === 'full' ? Math.max(4, Q.p.lights) : Math.max(3, Q.p.lights));
 const frontLayers = (id, size = 'sm') => `
   <div class="layers">
-    <div class="art-wrap"><img class="art" src="${artSrc(id, size)}" alt="" draggable="false">${lightsHTML(id)}</div>
+    <div class="art-wrap"><img class="art" src="${artSrc(id, size)}" alt="" draggable="false">${lightsHTML(id, lightCount(size))}</div>
     <div class="frame-wrap"><img class="frame" src="${UI(size === 'full' ? 'frame.webp' : 'frame-sm.webp')}" alt="" draggable="false"></div>
     <div class="plates" aria-hidden="true">
       <span class="plate pl-num"><b>${cardById(id).num}</b></span>
@@ -247,8 +270,8 @@ function makeCard(data) {
         <div class="face back"><img src="${BACK}" alt="" draggable="false"></div>
         <div class="face front"></div>
       </div></div>
-      <img class="mb mbx" src="${UI('back-blur-x.webp')}" alt="" draggable="false">
-      <img class="mb mby" src="${UI('back-blur-y.webp')}" alt="" draggable="false">
+      ${Q.p.mb ? `<img class="mb mbx" src="${UI('back-blur-x.webp')}" alt="" draggable="false">
+      <img class="mb mby" src="${UI('back-blur-y.webp')}" alt="" draggable="false">` : ''}
     </div>`;
   const c = {
     el, data,
@@ -322,7 +345,7 @@ function mbTick() {
   if (!MB.on) return;
   const dt = gsap.ticker.deltaRatio(60) || 1;
   for (const c of S.cards) {
-    if (c.revealed || c.busy) continue;
+    if (c.revealed || c.busy || !c.mbx) continue;
     const x = gsap.getProperty(c.el, 'x'), y = gsap.getProperty(c.el, 'y');
     if (c.px === null) { c.px = x; c.py = y; continue; }
     const dx = (x - c.px) / dt, dy = (y - c.py) / dt;
@@ -344,9 +367,10 @@ function mbTick() {
 }
 gsap.ticker.add(mbTick);
 function motionBlur(on) {
-  MB.on = on && !reduced;
+  MB.on = on && !reduced && Q.p.mb;
   if (!MB.on) for (const c of S.cards) {
     c.bx = c.by = 0; c.px = c.py = null;
+    if (!c.mbx) continue;
     c.mbx.style.opacity = 0; c.mby.style.opacity = 0; c.backFace.style.opacity = '';
   }
 }
@@ -375,7 +399,11 @@ function fanGeom(n) {
   const targetW = Math.min(W * (mobile ? 0.86 : 0.92) - fw, 1150);
   const R = targetW / (2 * Math.sin(rad(full / 2)));
   const sag = R * (1 - Math.cos(rad(full / 2)));
-  const centerY = H - fh * 0.5 - (mobile ? Math.max(48, H * 0.08) : 40) - sag * 0.55;
+  const pad = mobile ? Math.max(48, H * 0.08) : 40;
+  // 两端的牌斜着垂下来：横屏手机、矮窗口时要保证最外侧的牌角也留在屏幕里
+  const half = rad(full / 2);
+  const edgeExt = (fh / 2) * Math.cos(half) + (fw / 2) * Math.sin(half);
+  const centerY = Math.min(H - fh * 0.5 - pad - sag * 0.55, H - 10 - sag - edgeExt);
   const cy = centerY + R;
   const spread = step * (n - 1);
   const angle = (i) => -spread / 2 + step * i;
@@ -413,12 +441,21 @@ const GRID = {
   five: [[0, 0], [0, -1], [0, 1], [-1, 0], [1, 0]],
 };
 
+// 揭示布局：默认按牌阵的十字 / 横排摆放；若改成一行横排能让牌明显更大
+// （横屏手机、手机上解读面板打开时只剩上半屏），就改用横排，牌名标签照常跟着牌位
 function revealSlotGeom() {
-  const { W, H, mobile } = vp();
-  const g = GRID[S.key];
+  const grid = GRID[S.key];
+  const a = slotGeomFor(grid);
+  if (grid.length < 4) return a;
+  const row = grid.map((_, i) => [i - (grid.length - 1) / 2, 0]);
+  const b = slotGeomFor(row);
+  return b[0].w > a[0].w * 1.25 ? b : a;   // 横排按牌位顺序，和解读面板的顺序一致
+}
+function slotGeomFor(g) {
+  const { W, H, mobile, sheet } = vp();
   const area = { x0: 0, x1: W, y0: mobile ? 58 : 76, y1: H - (mobile ? 34 : 44) };
   if (S.readingOpen) {
-    if (mobile) area.y1 = H * 0.44 - 4;
+    if (sheet) area.y1 = H * 0.44 - 4;
     else area.x1 = W - Math.min(440, W * 0.38);
   }
   const cols = Math.max(...g.map(([x]) => Math.abs(x))) * 2 + 1;
@@ -491,6 +528,7 @@ async function autoPick() {
 }
 
 function buildDeck() {
+  updateBase();   // 画质可能在上一轮中途被自动下调，新一轮按新档位建牌
   stage.innerHTML = '';
   S.cards = shuffled(CARDS).map(makeCard);
   S.picked = [];
@@ -922,10 +960,10 @@ async function revealAll() {
 }
 
 function placeSigil(d = 1.1) {
-  const { W, H, mobile } = vp();
+  const { W, H, sheet } = vp();
   let cx = W / 2, cy = H / 2;
   if (S.readingOpen) {
-    if (mobile) cy = H * 0.22;
+    if (sheet) cy = H * 0.22;
     else cx = (W - Math.min(440, W * 0.38)) / 2;
   }
   gsap.to('#sigil', { left: cx, top: cy, duration: d, ease: 'expo.inOut', overwrite: 'auto' });
@@ -965,12 +1003,12 @@ function openReading() {
   if (S.readingOpen) return;
   S.readingOpen = true;
   audio.pad();
-  const { mobile } = vp();
+  const { sheet } = vp();
   readingInner.innerHTML = readingHTML();
   reading.hidden = false;
   reading.scrollTop = 0;
   const tl = gsap.timeline();
-  tl.fromTo(reading, mobile ? { yPercent: 100 } : { xPercent: 100 }, { xPercent: 0, yPercent: 0, duration: 0.9, ease: 'expo.out' }, 0)
+  tl.fromTo(reading, sheet ? { yPercent: 100 } : { xPercent: 100 }, { xPercent: 0, yPercent: 0, duration: 0.9, ease: 'expo.out' }, 0)
     .from(readingInner.children, { y: 24, opacity: 0, duration: 0.7, ease: 'power3.out', stagger: 0.08 }, 0.25);
   tl.add(layoutReveal(0.9), 0);
   placeSigil(0.9);
@@ -1076,6 +1114,19 @@ addEventListener('keydown', (e) => {
 
 /* ════════ 每日一签入口 / 图鉴 ════════ */
 const codexEl = $('#codex');
+/* 首页一屏放下：内容比可用高度高时整体等比缩小（CSS zoom 会参与排版，居中不受影响）。
+   先靠各尺寸的紧凑样式尽量放下，这里只兜底；缩到 0.62 还放不下才允许滚动 */
+function fitIntro() {
+  introFit.style.zoom = '';
+  const cs = getComputedStyle(intro);
+  const avail = intro.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
+  const h = introFit.scrollHeight;
+  const z = clamp(avail / h, 0.62, 1);
+  if (z < 0.995) introFit.style.zoom = z.toFixed(3);
+}
+addEventListener('resize', () => requestAnimationFrame(fitIntro));
+document.fonts?.ready.then(fitIntro);
+
 function renderHomeExtras() {
   const n = streak(), done = drawnToday();
   $('#daily-name').textContent = t('daily');
@@ -1083,6 +1134,7 @@ function renderHomeExtras() {
   $('#daily-btn').classList.toggle('done', done);
   const got = Object.keys(collected()).length;
   $('#codex-link').textContent = t('codexLink')(got, CARDS.length);
+  fitIntro();   // 文案长度变了（换语言、连续天数）会影响高度
 }
 $('#daily-btn').addEventListener('click', () => { audio.unlock(); audio.click(); start('daily'); });
 
@@ -1221,8 +1273,8 @@ async function restart() {
   hintBy(null);
   const tl = gsap.timeline();
   if (S.readingOpen) {
-    const { mobile } = vp();
-    tl.to(reading, { ...(mobile ? { yPercent: 100 } : { xPercent: 100 }), duration: 0.6, ease: 'expo.in' }, 0);
+    const { sheet } = vp();
+    tl.to(reading, { ...(sheet ? { yPercent: 100 } : { xPercent: 100 }), duration: 0.6, ease: 'expo.in' }, 0);
   }
   const els = [...stage.querySelectorAll('.card')];
   tl.to(els, {
@@ -1281,6 +1333,22 @@ document.addEventListener('change', (e) => {
   saveCfg(); applyCfg();
   audio.unlock(); audio.click();
 });
+// 画质：自动 / 高 / 中 / 低（用 getElementById，避免启动时还没取到 panel）
+function syncQualityUI() {
+  const names = t('qNames');
+  document.getElementById('st-q-title').textContent = t('qTitle');
+  document.getElementById('st-q-desc').textContent = Q.pick === 'auto' ? t('qAutoNow') + names[Q.tier] : t('qFixed');
+  document.querySelectorAll('#settings [data-q]').forEach((b) => {
+    b.textContent = names[b.dataset.q];
+    b.setAttribute('aria-checked', String(b.dataset.q === Q.pick));
+  });
+}
+document.querySelector('#settings .seg').addEventListener('click', (e) => {
+  const b = e.target.closest('[data-q]');
+  if (!b || b.dataset.q === Q.pick) return;
+  setQualityPick(b.dataset.q);
+  audio.unlock(); audio.click();
+});
 function toggleSettings(open = panel.hidden) {
   if (open === !panel.hidden) return;
   btnSettings.setAttribute('aria-expanded', String(open));
@@ -1321,12 +1389,14 @@ function applyLang(rerender = true) {
   $('.st-head b').textContent = t('stHead');
   $('#st-g-read').textContent = t('stGroupRead');
   $('#st-g-show').textContent = t('stGroupShow');
-  panel.querySelectorAll('.st-row').forEach((row) => {
-    const [title, desc] = t('st')[row.querySelector('input').dataset.k];
+  panel.querySelectorAll('.st-row input[data-k]').forEach((input) => {
+    const row = input.closest('.st-row');
+    const [title, desc] = t('st')[input.dataset.k];
     row.querySelector('b').textContent = title;
     row.querySelector('small').textContent = desc;
   });
   syncSound();
+  syncQualityUI();
   if (!rerender) return;
   renderTitle();
   renderSpreads();

@@ -42,6 +42,8 @@ const UI = {
     drawnUp: '正位 · 你抽到的', drawnRev: '逆位 · 你抽到的',
     whisper: '奶蛙：',
     stHead: '设 置', stGroupRead: '占 卜', stGroupShow: '表 现',
+    qTitle: '画质', qAutoNow: '按设备自动 · 当前：', qFixed: '手动指定 · 新一轮占卜完全生效',
+    qNames: { auto: '自动', high: '高', mid: '中', low: '低' },
     st: {
       autoDraw: ['一键占卜', '自动洗牌、抽牌并依次揭示'],
       autoReveal: ['自动翻牌', '选完牌后自动揭示'],
@@ -81,6 +83,8 @@ const UI = {
     drawnUp: 'Upright · your draw', drawnRev: 'Reversed · your draw',
     whisper: 'Naiwa: ',
     stHead: 'SETTINGS', stGroupRead: 'READING', stGroupShow: 'PRESENTATION',
+    qTitle: 'Quality', qAutoNow: 'Auto for this device · now: ', qFixed: 'Manual · fully applies next reading',
+    qNames: { auto: 'Auto', high: 'High', mid: 'Mid', low: 'Low' },
     st: {
       autoDraw: ['One-click reading', 'Auto shuffle, draw and reveal'],
       autoReveal: ['Auto reveal', 'Flip the cards once chosen'],

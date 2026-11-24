@@ -48,8 +48,13 @@ export const LIGHTS = {
 };
 
 // 生成某张牌的光效层 HTML；延迟按序号错开，避免同步闪烁
-export function lightsHTML(id) {
-  const list = LIGHTS[id] || [];
+// max：最多保留几个光源（低画质时只留面积最大的几个，小星芒先省掉）
+export function lightsHTML(id, max = 99) {
+  let list = LIGHTS[id] || [];
+  if (list.length > max) {
+    const keep = new Set([...list].sort((a, b) => b[3] - a[3]).slice(0, max));
+    list = list.filter((l) => keep.has(l));
+  }
   return `<div class="lights" aria-hidden="true">${list.map(([type, x, y, r, c], i) => {
     const d = ((i * 0.618 + Number(id) * 0.37) % 1).toFixed(2);
     return `<i class="lt lt-${type}" style="--x:${x};--y:${y};--r:${r};--c:${c};--d:${d}"></i>`;
