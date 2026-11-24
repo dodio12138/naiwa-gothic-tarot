@@ -400,7 +400,30 @@ body.picking { touch-action: none; }                       /* 选牌时手指滑
   box-shadow: 0 40px 100px rgba(0,0,0,.8), 0 0 80px rgba(222,161,80,.16);
 }
 .modal-card .glare { opacity: .45; }
-.modal-text { width: min(380px, 40vw); user-select: text; }
+.modal-text {
+  width: min(420px, 42vw); max-height: min(84vh, 800px); overflow-y: auto; overscroll-behavior: contain;
+  padding-right: 10px; user-select: text;
+  scrollbar-width: thin; scrollbar-color: rgba(200,138,69,.35) transparent;
+  /* 文案变长后可滚动；上下边缘淡出 */
+  -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 18px, #000 calc(100% - 28px), transparent);
+          mask-image: linear-gradient(180deg, transparent 0, #000 18px, #000 calc(100% - 28px), transparent);
+  padding-top: 14px; padding-bottom: 28px;
+}
+/* 分项解读：感情 · 事业 · 建议 */
+.m-facets { display: grid; grid-template-columns: auto 1fr; gap: 6px 12px; margin: 12px 0 0; }
+.m-facets dt {
+  font-size: 11px; letter-spacing: .2em; color: var(--gold); padding-top: 4px; white-space: nowrap;
+}
+.m-facets dd { margin: 0; font-size: 14px; line-height: 1.75; color: #d9ccbf; }
+.m-sec.dim .m-facets dd { font-size: 12.5px; color: #85786e; }
+.m-sec.dim .m-facets dt { opacity: .7; }
+.m-lore { margin-top: 22px; padding-top: 16px; border-top: 1px solid rgba(200,138,69,.18); }
+.m-lore p { font-size: 13.5px; line-height: 1.85; color: #bfb2a6; }
+.m-astro { margin-top: 8px !important; font-size: 12.5px !important; color: var(--gold-hi) !important; letter-spacing: .06em; }
+.m-astro b { margin-right: 10px; font-weight: 400; font-size: 11px; letter-spacing: .2em; color: var(--gold); }
+.r-advice { margin: 6px 0 0; font-size: 13px; line-height: 1.7; color: #cdbfa8; }
+.r-advice b { margin-right: 8px; font-weight: 400; font-size: 11px; letter-spacing: .2em; color: var(--gold); }
+body.lang-en .m-facets dt, body.lang-en .r-advice b, body.lang-en .m-astro b { letter-spacing: .1em; }
 .m-num { font-family: var(--serif-en); font-weight: 600; font-size: 13px; letter-spacing: .4em; color: var(--gold); }
 .m-title { margin: 10px 0 4px; font-size: 44px; font-weight: 900; letter-spacing: .15em; color: var(--gold-hi); }
 .m-title .badge { font-size: 14px; vertical-align: 10px; }
@@ -440,7 +463,7 @@ body.picking { touch-action: none; }                       /* 选牌时手指滑
   .r-head h2 { font-size: 22px; }
   .modal-body { flex-direction: column; justify-content: flex-start; gap: 22px; padding: 64px 22px 40px; overflow-y: auto; pointer-events: auto; }
   .modal-card { height: auto; width: min(68vw, 300px); }
-  .modal-text { width: 100%; }
+  .modal-text { width: 100%; max-height: none; overflow: visible; padding: 0; -webkit-mask-image: none; mask-image: none; }
   .m-title { font-size: 32px; }
 }
 

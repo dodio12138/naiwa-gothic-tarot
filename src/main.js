@@ -4,6 +4,7 @@ import { CARDS, SPREADS, artSrc } from './cards.js';
 import { createParticles } from './particles.js';
 import { createAudio } from './audio.js';
 import { lightsHTML } from './lights.js';
+import { loreOf } from './lore.js';
 import { Q, onQuality, setQualityPick, tickFps } from './perf.js';
 import { renderShare } from './share.js';
 import { dailyFate, recordDaily, streak, drawnToday, collect, collected } from './journal.js';
@@ -15,6 +16,13 @@ const spreadText = (key) => (isEn() ? SPREADS_EN[key] : SPREADS[key]);
 const posName = (i) => spreadText(S.key).positions[i];
 const cardName = (d) => (isEn() ? titleCase(d.en) : d.zh);
 const cardText = (d) => (isEn() ? { ...d, ...CARDS_EN[d.id] } : d);
+const lore = (d) => loreOf(d.id, isEn());
+// 奶蛙的低语：原有一句 + lore.js 里的三句，每张抽到的牌固定随机一句（解读、详情、分享图保持一致）
+function whisperOf(c) {
+  if (c.wi == null) c.wi = Math.floor(rand() * 4);
+  const pool = [cardText(c.data).whisper, ...(lore(c.data)?.whispers || [])];
+  return pool[c.wi % pool.length];
+}
 
 /* ════════ 基础 ════════ */
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -989,7 +997,8 @@ function readingHTML() {
           <div class="r-name">${cardName(d)}<small>${d.num}${isEn() ? '' : ` · ${d.en}`}</small>
             <span class="badge ${c.reversed ? 'rev' : 'up'}">${t(c.reversed ? 'reversed' : 'upright')}</span></div>
           <p class="r-text">${c.reversed ? d.rev : d.up}</p>
-          <p class="r-whisper"><span class="wl">${t('whisper')}</span>${d.whisper}</p>
+          <p class="r-advice"><b>${t('fAdvice')}</b>${lore(d)[c.reversed ? 'rev' : 'up'].advice}</p>
+          <p class="r-whisper"><span class="wl">${t('whisper')}</span>${whisperOf(c)}</p>
         </div>
       </div>`;
     }).join('')}
@@ -1034,16 +1043,29 @@ modalCard.addEventListener('click', () => modalCard.classList.toggle('show-plate
 modalCard.dataset.tilt = 'on';
 attachTilt(modalCard, modalTilt, 10);
 
+// 正 / 逆位的分项解读：感情 · 事业 · 建议
+const facetsHTML = (f) => `
+  <dl class="m-facets">
+    <dt>${t('fLove')}</dt><dd>${f.love}</dd>
+    <dt>${t('fWork')}</dt><dd>${f.work}</dd>
+    <dt>${t('fAdvice')}</dt><dd>${f.advice}</dd>
+  </dl>`;
+
 function modalHTML(c) {
   const d = cardText(c.data);
+  const L = lore(d);
+  const mine = c.reversed ? 'rev' : 'up', other = c.reversed ? 'up' : 'rev';
   return `
     <div class="m-num">${d.num} · ${c.posText ?? posName(c.slot)}</div>
     <h3 class="m-title">${cardName(d)} <span class="badge ${c.reversed ? 'rev' : 'up'}">${t(c.reversed ? 'reversed' : 'upright')}</span></h3>
     <div class="m-en">${isEn() ? d.zh : d.en}</div>
     <div class="m-keys">${d.keys.map((k) => `<span>${k}</span>`).join('')}</div>
-    <div class="m-sec"><h4>${c.posText ? t(c.reversed ? 'reversed' : 'upright') : t(c.reversed ? 'drawnRev' : 'drawnUp')}</h4><p>${c.reversed ? d.rev : d.up}</p></div>
-    <div class="m-sec dim"><h4>${t(c.reversed ? 'upright' : 'reversed')}</h4><p>${c.reversed ? d.up : d.rev}</p></div>
-    <div class="m-whisper">${t('whisper')}${d.whisper}</div>`;
+    <div class="m-sec"><h4>${c.posText ? t(c.reversed ? 'reversed' : 'upright') : t(c.reversed ? 'drawnRev' : 'drawnUp')}</h4><p>${d[mine]}</p>${facetsHTML(L[mine])}</div>
+    <div class="m-whisper">${t('whisper')}${whisperOf(c)}</div>
+    <div class="m-sec dim"><h4>${t(c.reversed ? 'upright' : 'reversed')}</h4><p>${d[other]}</p>${facetsHTML(L[other])}</div>
+    <div class="m-sec m-lore"><h4>${t('mScene')}</h4><p>${L.scene}</p></div>
+    <div class="m-sec m-lore"><h4>${t('mOrigin')}</h4><p>${L.origin}</p>
+      <p class="m-astro"><b>${t('mAstro')}</b>${L.astro}</p></div>`;
 }
 
 function openModal(c) {
@@ -1218,7 +1240,7 @@ async function openShare() {
       return {
         id: d.id, num: d.num, en: d.en, name: cardName(d), pos: posName(c.slot), reversed: c.reversed,
         badge: t(c.reversed ? 'reversed' : 'upright'), keys: d.keys,
-        text: c.reversed ? d.rev : d.up, whisper: t('whisper') + d.whisper,
+        text: c.reversed ? d.rev : d.up, whisper: t('whisper') + whisperOf(c),
       };
     });
     const abs = (u) => new URL(u, document.baseURI).href;
