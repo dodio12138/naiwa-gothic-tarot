@@ -48,4 +48,4 @@ done
 
 推送到 `main` 分支后，GitHub Actions（`.github/workflows/deploy.yml`）会自动构建并发布到 GitHub Pages。
 
-`assets-src/` 里的大体积原图（ChatGPT 原图、插画 JPG 等）没有提交到仓库，只保存在本地；仓库里保留设计文档、提示词和导入脚本。
+`assets-src/` 保存全部制作素材：设计文档、提示词、导入脚本，以及 ChatGPT 生成的原图（`chatgpt_art/`）、无字插画 JPG（`illustrations_jpg/`）、边框 / 牌背 / UI 素材原图。网站构建只用 `public/` 里压缩后的版本。
