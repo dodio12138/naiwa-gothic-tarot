@@ -10,8 +10,14 @@ export const BILI = import.meta.env.MODE === 'bili';
 // 布局用的额外内边距（JS 计算牌位时使用）；网页版恒为 0
 export const INSET = { t: 0, r: 0, b: 0, l: 0 };
 
-// 右上角胶囊按钮预留高度：胶囊大约 32px 高，再留一点间距
-const CAPSULE = 44;
+// 右上角胶囊按钮预留高度。按发布平台预览实测（375×812）：状态栏 44px，胶囊行约在 56～86px，
+// 即胶囊占到状态栏下方约 42px；再留 8px 间距
+const CAPSULE = 50;
+
+// 发布平台「预览」：页面在模拟手机框里，SDK 不提供容器状态，但会画出 App 的状态栏、胶囊和底部互动条。
+// 这里按实测尺寸兜底，让预览看到的效果和 App 内一致
+const PREVIEW = /\/toy\/preview\//.test(location.pathname);
+const PREVIEW_SAFE = { top: 44, right: 0, bottom: 80, left: 0 };
 
 let toy = null;
 let inApp = false;
@@ -31,24 +37,35 @@ function loadSdk() {
   });
 }
 
-function applySafeArea(state) {
+function applySafeArea(state, capsule = true) {
   const sa = state?.safeArea || { top: 0, right: 0, bottom: 0, left: 0 };
+  const cap = capsule ? CAPSULE : 0;
   const root = document.documentElement.style;
   root.setProperty('--sa-t', `${sa.top}px`);
   root.setProperty('--sa-r', `${sa.right}px`);
   root.setProperty('--sa-b', `${sa.bottom}px`);
   root.setProperty('--sa-l', `${sa.left}px`);
-  root.setProperty('--cap', `${CAPSULE}px`);
-  Object.assign(INSET, { t: sa.top + CAPSULE + 6, r: sa.right, b: sa.bottom, l: sa.left });   // +6：和两行顶栏之间再留点缝
+  root.setProperty('--cap', `${cap}px`);
+  Object.assign(INSET, { t: sa.top + (cap ? cap + 6 : 0), r: sa.right, b: sa.bottom, l: sa.left });   // +6：和两行顶栏之间再留点缝   // +6：和两行顶栏之间再留点缝
   subs.forEach((fn) => fn(INSET));
 }
 
 /** 启动：加载 SDK，App 内接管安全区 */
 export const ready = BILI ? (async () => {
+  // 预览：立刻按实测尺寸留白（不等 SDK），只在手机尺寸下模拟 App 外壳；PC 端预览按普通网页处理
+  if (PREVIEW) {
+    const sync = () => {
+      const phone = Math.min(innerWidth, innerHeight) < 760;
+      document.documentElement.classList.toggle('bili-app', phone);
+      applySafeArea(phone ? { safeArea: PREVIEW_SAFE } : null, phone);
+    };
+    sync();
+    addEventListener('resize', sync);
+  }
   toy = await loadSdk();
   if (!toy) return null;
   document.documentElement.classList.add('bili');
-  try { inApp = await toy.isSupport('getContainerState'); } catch { inApp = false; }
+  try { inApp = !PREVIEW && await toy.isSupport('getContainerState'); } catch { inApp = false; }
   if (inApp) {
     document.documentElement.classList.add('bili-app');
     try { applySafeArea(await toy.getContainerState()); } catch { applySafeArea(null); }

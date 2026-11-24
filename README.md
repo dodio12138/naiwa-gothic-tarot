@@ -23,6 +23,12 @@ npm run build    # 输出到 dist/，相对路径，可直接丢到任意静态�
 - 右上角「EN / 中」中英文切换（界面、牌义、奶蛙的低语都有英文版，选择会记住；首次跟随浏览器语言）
 - 右上角齿轮设置（存在浏览器本地）：一键抽牌、自动翻牌、跳过洗牌动画、逆位、视差/陀螺仪、牌面光效、弱化动效、音效、背景音
 
+## 规划文档
+
+- [docs/roadmap.md](docs/roadmap.md) — 开发路线、现状对照与待决事项
+- [docs/design-cosmos.md](docs/design-cosmos.md) — 象征宇宙设计稿（原型、天体、知识图谱）
+- [docs/design-spreads.md](docs/design-spreads.md) — 抽牌仪式与牌阵系统设计稿
+
 ## 结构
 
 - `src/cards.js` — 22 张牌数据（正位 / 逆位 / 奶蛙的低语）与牌阵定义
@@ -60,12 +66,13 @@ done
 
 ```bash
 npm run toy        # 构建 B 站版到 dist-bili/，并打包成 release/naiwa-tarot-toy.zip
-npm run dev:bili   # 本地调试 B 站版（控制台可用 __toyMock({ safeArea: { top: 47, right: 0, bottom: 34, left: 0 } }) 模拟 App 安全区）
+npm run dev:bili   # 本地调试 B 站版（控制台可用 __toyMock({ safeArea: { top: 44, right: 0, bottom: 80, left: 0 } }) 模拟 App 安全区）
 ```
 
 B 站版（`src/bili.js`，只在 `--mode bili` 时启用）额外接入了 Toy JS SDK：
 
-- 安全区：App 内读取 `safeArea` 并持续监听容器变化，顶栏、首页、牌位、解读面板、详情、图鉴都避开状态栏、底部导航和右上角胶囊按钮
+- 安全区：App 内读取 `safeArea` 并持续监听容器变化，顶栏、首页、牌位、解读面板、详情、图鉴、分享都避开状态栏、底部互动条和右上角胶囊按钮
+- 发布平台预览（`/toy/preview/`）拿不到容器状态，按实测尺寸兜底：状态栏 44px、胶囊行约 56～86px、底部互动条 80px
 - 分享图：二维码用 `getQrCode` 指向 Toy 本身；App 内「保存图片」走 `saveImageToAlbum`，「分享」走 `sharePicture`
 - 玩家输入的问题先经 `checkInputSafety` 检测，未明确通过时不印在分享图上
 

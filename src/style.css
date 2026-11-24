@@ -658,11 +658,11 @@ body.calm .lt-flash, body.calm .lt-flame { animation: none; opacity: .7; }
 .share-backdrop { position: absolute; inset: 0; background: rgba(8,5,7,.86); backdrop-filter: blur(10px); }
 .share-body {
   position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px;
-  padding: 24px 16px; pointer-events: none;
+  padding: calc(24px + var(--top-safe)) 16px calc(24px + var(--sa-b)); pointer-events: none;
 }
 .share-body > * { pointer-events: auto; }
 .share-frame {
-  position: relative; height: min(74vh, 900px); aspect-ratio: 9 / 16; max-width: 92vw;
+  position: relative; height: min(74vh, 900px, calc(100vh - var(--top-safe) - var(--sa-b) - 150px)); aspect-ratio: 9 / 16; max-width: 92vw;
   background: #120c10; box-shadow: 0 30px 90px rgba(0,0,0,.8), 0 0 0 1px rgba(200,138,69,.45);
 }
 .share-frame img { width: 100%; height: 100%; object-fit: contain; display: block; user-select: auto; -webkit-user-select: auto; -webkit-touch-callout: default; }
@@ -788,7 +788,7 @@ body.lang-en .cx-name { font-family: var(--serif-en); font-size: 12.5px; letter-
 html[data-q="mid"] .card .face, html[data-q="low"] .card .face { box-shadow: 0 12px 22px rgba(0,0,0,.55); }
 html[data-q="mid"] .card.chosen .face, html[data-q="low"] .card.chosen .face { box-shadow: 0 12px 22px rgba(0,0,0,.55), 0 0 28px var(--glow); }
 html[data-q="mid"] .modal-backdrop, html[data-q="low"] .modal-backdrop,
-html[data-q="mid"] .share-backdrop, html[data-q="low"] .share-backdrop { backdrop-filter: none; background: rgba(8,5,7,.93); }
+html[data-q="mid"] .share-backdrop, html[data-q="low"] .share-backdrop { backdrop-filter: none; background: rgba(8,5,7,.985); }   /* 没有模糊时要几乎不透明，否则背后的解读文字会透出来和弹窗文字叠在一起 */
 html[data-q="mid"] #codex, html[data-q="low"] #codex { backdrop-filter: none; }
 /* 低：光效保留静态微光、不做逐帧动画；牌面滤镜阴影去掉 */
 html[data-q="low"] .lt, html[data-q="low"] .lt::before, html[data-q="low"] .lt::after { animation: none !important; will-change: auto; }
@@ -886,4 +886,11 @@ html[data-q="low"] .daily-btn .daily-emblem { animation: none; }
   .spreads { align-items: flex-start; }            /* 副标题换行时三个按钮仍然顶部对齐 */
   body.lang-en .lede br { display: none; }        /* 英文句子长，窄屏让它自然换行 */
   body.lang-en .question input { font-size: 13px; letter-spacing: 0; }
+}
+/* 窄屏（≤400px）游戏中顶栏会多出「重新抽牌」「全部揭示」，按钮收紧避免溢出右边 */
+@media (max-width: 400px) {
+  .hud-actions { gap: 2px; }
+  .plate.sm { padding: 0 14px; letter-spacing: .04em; }
+  .plate.sm.icon { padding: 0 11px; }
+  #lang { min-width: 40px; }
 }
