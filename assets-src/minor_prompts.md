@@ -6,14 +6,54 @@
 ID：`<花色>_<序号>`，序号 01＝王牌，02–10＝数字牌，11 侍从，12 骑士，13 王后，14 国王。
 导入：ChatGPT 下载的图命名为 `naiwa_art_<ID>*.png`，运行 `ID_PREFIX= assets-src/import_art.sh wands_01 …`。
 
+## 时段与光线（避免全是夜景）
+
+大牌的通用风格后缀里有 moonlit mist / moonlight，风格参考图又是夜景「星星」，出来的图会一律偏夜晚。小牌改为：
+- 风格参考图换成白天的 `major_19.webp`（太阳）
+- 风格后缀去掉 moonlit / moonlight，每张牌单独写一句 Lighting
+- 整套大约 2/3 白天或晨昏、1/3 夜晚；只有画面本身需要夜色的牌（圣杯七、圣杯八、宝剑九、星币五等）才用夜景
+
+| 花色 | 默认光线 |
+|---|---|
+| 权杖 | golden-hour sunset or bright warm afternoon sun, long warm shadows, glowing dust |
+| 圣杯 | soft pastel dawn or misty overcast morning over still water; some cards at twilight |
+| 宝剑 | cold grey daylight with fast windswept clouds, shafts of pale sunlight; stormy dawn |
+| 星币 | bright clear daytime sun through orchards, warm harvest light, deep green shadows |
+
+## 分组参考大牌
+
+每 2～4 张为一组，配一张光线与气氛相近的大牌做风格参考（每组开一个新对话，上传「角色三视图 + 该组参考大牌」）。
+避开画面里带十字的大牌（教皇、皇帝、审判的旗帜），以免把十字带进小牌。
+
+| 组 | 参考大牌 | 气氛 |
+|---|---|---|
+| wands_01–04 | 03 皇后 | 金色光束、白天花园 |
+| wands_05–07 | 06 恋人 | 暖色黄昏 |
+| wands_08–10 | 19 太阳 | 明亮白天 |
+| wands_11–14 | 01 魔术师 | 暖红烛光、室内王座 |
+| cups_01–03 | 14 节制 | 银蓝水面 |
+| cups_04–06 | 12 倒吊人 | 绿色森林、日光 |
+| cups_07–08 | 18 月亮 | 夜色、梦境 |
+| cups_09–10 | 06 恋人 | 暖色黄昏 |
+| cups_11–14 | 14 节制 | 银蓝水面 |
+| swords_01–04 | 07 战车 | 阴沉蓝天、风暴 |
+| swords_05–08 | 00 愚者 | 灰色雾气、悬崖 |
+| swords_09–10 | 16 高塔 | 夜晚风暴 |
+| swords_11–14 | 11 正义 | 冷色王座 |
+| pentacles_01–04 | 03 皇后 | 金色白天花园 |
+| pentacles_05 | 09 隐者 | 雪夜 |
+| pentacles_06–10 | 19 太阳 | 明亮白天、丰收 |
+| pentacles_11–14 | 08 力量 | 玫瑰花园 |
+
 ## 出图模板
 
 ```text
 [上传 naiwa_character_reference.png（身份参考）+ 一张已定稿牌面（风格参考）]
 <3.1 角色锁定前缀>
 Tarot minor arcana: <英文牌名>. Suit motif: <花色母题>. Scene: <单牌画面>.
-<3.2 风格后缀，但把 "clean space reserved for a unified tarot border and titles" 换成：>
-Full-bleed vertical 2:3 illustration that fills the entire canvas edge to edge, no border, no frame, no text, no numbers, no religious crosses.
+Lighting: <本张光线>.
+Premium dark gothic tarot card illustration, the bright yellow Naiwa mascot contrasted against a solemn gothic environment, ancient gothic architecture, black roses, elegant thorns, ornate antique-gold accents, cinematic light, detailed yet controlled symbolism, painterly atmospheric background blended with faithful matte 3D character rendering.
+Full-bleed vertical 2:3 illustration that fills the entire canvas edge to edge, no border, no frame, no text, no numbers, no religious crosses, no watermark.
 ```
 
 ## 花色母题
