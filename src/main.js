@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import { CARDS, SPREADS, artSrc } from './cards.js';
 import { createParticles } from './particles.js';
 import { createAudio } from './audio.js';
+import { lightsHTML } from './lights.js';
 import { t, getLang, setLang, SPREADS_EN, CARDS_EN, titleCase } from './i18n.js';
 
 /* ════════ 语言 ════════ */
@@ -221,13 +222,15 @@ function setHint(t) {
 const cardById = (id) => CARDS.find((c) => c.id === id);
 const frontLayers = (id, size = 'sm') => `
   <div class="layers">
-    <div class="art-wrap"><img class="art" src="${artSrc(id, size)}" alt="" draggable="false"></div>
+    <div class="art-wrap"><img class="art" src="${artSrc(id, size)}" alt="" draggable="false">${lightsHTML(id)}</div>
     <div class="frame-wrap"><img class="frame" src="${UI(size === 'full' ? 'frame.webp' : 'frame-sm.webp')}" alt="" draggable="false"></div>
     <div class="plates" aria-hidden="true">
       <span class="plate pl-num"><b>${cardById(id).num}</b></span>
       <span class="plate pl-name"><b>${cardById(id).en}</b></span>
     </div>
   </div>`;
+
+if (import.meta.env.DEV) window.__front = (id) => frontLayers(id, 'full');
 
 function makeCard(data) {
   const el = document.createElement('div');

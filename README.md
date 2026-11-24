@@ -23,6 +23,7 @@ npm run build    # 输出到 dist/，相对路径，可直接丢到任意静态�
 - `src/cards.js` — 22 张牌数据（正位 / 逆位 / 奶蛙的低语）与牌阵定义
 - `src/main.js` — 流程与动效：首页 → 洗牌漩涡 → 扇形选牌 → 翻牌揭示 → 解读 / 大图；视差（鼠标 / 陀螺仪）；运动模糊
 - `src/particles.js` — 背景金尘、洗牌漩涡、翻牌爆发粒子
+- `src/lights.js` — 22 张牌面的光源清单（月光 / 烛火 / 圣光 / 光环 / 星芒 / 闪电，位置与牌面绑定的动态光效）
 - `src/i18n.js` — 中英文界面文案与 22 张牌的英文牌义
 - `src/audio.js` — WebAudio 实时合成的仪式音效与环境底噪（右上角可静音）
 - `public/cards/art-{sm,full}/NN.webp` — **画面层**：ChatGPT 去掉原边框并向外补全的全幅插画（原图 `assets-src/chatgpt_art/`，导入脚本 `assets-src/import_art.sh`）
