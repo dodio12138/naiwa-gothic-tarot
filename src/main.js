@@ -5,6 +5,7 @@ import { createParticles } from './particles.js';
 import { createAudio } from './audio.js';
 import { lightsHTML } from './lights.js';
 import { renderShare } from './share.js';
+import { dailyFate, recordDaily, streak, drawnToday, collect, collected } from './journal.js';
 import { t, getLang, setLang, SPREADS_EN, CARDS_EN, titleCase } from './i18n.js';
 
 /* ════════ 语言 ════════ */
@@ -130,7 +131,7 @@ function renderTitle() {
   split($('.title .t2'), t('titleBig'));
 }
 function renderSpreads() {
-  $('#spreads').innerHTML = Object.keys(SPREADS).map((k) => {
+  $('#spreads').innerHTML = Object.keys(SPREADS).filter((k) => k !== 'daily').map((k) => {
     const s = spreadText(k);
     return `
     <button class="spread-btn" type="button" data-spread="${k}"><span class="sb-in">
@@ -404,6 +405,7 @@ function pickSlotGeom(n) {
 }
 
 const GRID = {
+  daily: [[0, 0]],
   one: [[0, 0]],
   three: [[-1, 0], [0, 0], [1, 0]],
   // 现状 中，阻碍 上，根源 下，建议 左，结果 右
@@ -445,12 +447,14 @@ async function start(key) {
   S.spread = SPREADS[key];
   S.question = $('#question').value.trim();
   S.phase = 'dealing';
-  S.auto = CFG.autoDraw;
+  S.fate = key === 'daily' ? dailyFate(CARDS.length) : null;
+  S.replay = !!(S.fate && S.fate.drawn);   // 今天已经抽过：快速重放到揭示
+  S.auto = CFG.autoDraw || S.replay;
   await introOut();
-  hintBy(() => t(S.auto ? 'hShuffleAuto' : 'hShuffle'));
+  hintBy(() => t(S.replay ? 'hDailyAgain' : S.auto ? 'hShuffleAuto' : 'hShuffle'));
   buildDeck();                       // 牌背立即可用；牌面在后台预载，翻牌前再确认
   motionBlur(true);
-  if (CFG.skipIntro) setSkipping(true);
+  if (CFG.skipIntro || S.replay) setSkipping(true);
   else { btnSkip.hidden = false; gsap.fromTo(btnSkip, { opacity: 0 }, { opacity: 1, duration: 0.5 }); }
   await dealIn();
   await shuffleAnim();
@@ -736,6 +740,14 @@ function onCardClick(c) {
   if (c.revealed && !c.busy) return openModal(c);
 }
 
+// 换掉一张牌的正面（每日一签用）
+function setFace(card, data) {
+  card.data = data;
+  const front = card.el.querySelector('.face.front');
+  front.setAttribute('aria-label', `${data.zh} · ${titleCase(data.en)}`);
+  front.innerHTML = `${frontLayers(data.id)}<div class="sheen"></div><div class="glare"></div>`;
+}
+
 function pick(c) {
   if (S.picked.length >= S.slots.length) return;
   c.el.classList.remove('in-fan', 'chosen', 'hot');   // 清掉高亮抬起，否则落位后整张牌会高出牌位
@@ -743,6 +755,11 @@ function pick(c) {
   c.slot = S.picked.length;
   S.picked.push(c);
   c.reversed = CFG.reversed && rand() < REVERSE_CHANCE;
+  if (S.fate) {
+    const fated = S.cards.find((x) => x.data.id === S.fate.id);
+    if (fated && fated !== c) { const tmp = c.data; setFace(c, fated.data); setFace(fated, tmp); }
+    c.reversed = S.fate.drawn ? S.fate.reversed : (CFG.reversed && S.fate.reversed);
+  }
   c.el.classList.toggle('reversed', c.reversed);
 
   // 余下的牌合拢；鼠标不动也立刻按当前位置找到下一张最近的牌
@@ -842,6 +859,8 @@ function reveal(c) {
     onComplete() {
       c.busy = false;
       c.revealed = true;
+      if (!S.replay) collect(c.data.id);
+      if (S.key === 'daily' && !S.replay) recordDaily(c.data.id, c.reversed);
       c.el.classList.add('revealed');
       c.el.dataset.tilt = 'on';
       gsap.set(c.el, { zIndex: 300 + c.slot });
@@ -887,7 +906,7 @@ function onRevealed() {
   if (left > 0) return;
   btnRevealAll.hidden = true;
   S.phase = 'done';
-  hintBy(() => t('hDone'));
+  hintBy(() => t(S.key === 'daily' ? 'hDailyDone' : 'hDone'));
   gsap.delayedCall(0.7, openReading);
 }
 
@@ -916,6 +935,7 @@ function readingHTML() {
     <div class="r-head">
       <div class="r-eyebrow">THE READING</div>
       <h2>${spreadText(S.key).name}</h2>
+      ${S.key === 'daily' ? `<p class="r-streak">${t('streak')(Math.max(1, streak()))} · ${t('comeTomorrow')}</p>` : ''}
       ${S.question ? `<p class="r-q">${esc(S.question)}</p>` : ''}
       <i class="rule"></i>
     </div>
@@ -977,11 +997,11 @@ attachTilt(modalCard, modalTilt, 10);
 function modalHTML(c) {
   const d = cardText(c.data);
   return `
-    <div class="m-num">${d.num} · ${posName(c.slot)}</div>
+    <div class="m-num">${d.num} · ${c.posText ?? posName(c.slot)}</div>
     <h3 class="m-title">${cardName(d)} <span class="badge ${c.reversed ? 'rev' : 'up'}">${t(c.reversed ? 'reversed' : 'upright')}</span></h3>
     <div class="m-en">${isEn() ? d.zh : d.en}</div>
     <div class="m-keys">${d.keys.map((k) => `<span>${k}</span>`).join('')}</div>
-    <div class="m-sec"><h4>${t(c.reversed ? 'drawnRev' : 'drawnUp')}</h4><p>${c.reversed ? d.rev : d.up}</p></div>
+    <div class="m-sec"><h4>${c.posText ? t(c.reversed ? 'reversed' : 'upright') : t(c.reversed ? 'drawnRev' : 'drawnUp')}</h4><p>${c.reversed ? d.rev : d.up}</p></div>
     <div class="m-sec dim"><h4>${t(c.reversed ? 'upright' : 'reversed')}</h4><p>${c.reversed ? d.up : d.rev}</p></div>
     <div class="m-whisper">${t('whisper')}${d.whisper}</div>`;
 }
@@ -1046,7 +1066,72 @@ function closeModal() {
 modal.addEventListener('click', (e) => {
   if (e.target.closest('[data-close]') || e.target.classList.contains('modal-body')) closeModal();
 });
-addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+addEventListener('keydown', (e) => {
+  if (e.key !== 'Escape') return;
+  if (S.modalCard) closeModal();
+  else if (!codexEl.hidden) closeCodex();
+});
+
+/* ════════ 每日一签入口 / 图鉴 ════════ */
+const codexEl = $('#codex');
+function renderHomeExtras() {
+  const n = streak(), done = drawnToday();
+  $('#daily-name').textContent = t('daily');
+  $('#daily-sub').textContent = (done ? t('dailySubDone') : t('dailySubNew')) + (n ? ` · ${t('streak')(n)}` : '');
+  $('#daily-btn').classList.toggle('done', done);
+  const got = Object.keys(collected()).length;
+  $('#codex-link').textContent = t('codexLink')(got, CARDS.length);
+}
+$('#daily-btn').addEventListener('click', () => { audio.unlock(); audio.click(); start('daily'); });
+
+function renderCodex() {
+  const col = collected();
+  const got = CARDS.filter((c) => col[c.id]).length;
+  $('#codex-title').textContent = t('codex');
+  $('#codex-progress').textContent = t('codexProgress')(got, CARDS.length);
+  $('#codex-streak').textContent = t('codexStreak')(streak());
+  $('#codex-hint').textContent = t('codexHint');
+  $('#codex-grid').innerHTML = CARDS.map((c) => {
+    const n = col[c.id] || 0;
+    return `
+      <button class="cx-card ${n ? 'got' : 'locked'}" type="button" data-id="${c.id}" ${n ? '' : 'tabindex="-1" aria-disabled="true"'}>
+        <span class="cx-thumb">
+          <img class="cx-art" src="${artSrc(c.id)}" alt="" loading="lazy">
+          <img class="cx-frame" src="${UI('frame-sm.webp')}" alt="" loading="lazy">
+          ${n ? `<span class="cx-count">×${n}</span>` : '<span class="cx-q">?</span>'}
+        </span>
+        <span class="cx-num">${c.num}</span>
+        <span class="cx-name">${n ? cardName(c) : '？？？'}</span>
+      </button>`;
+  }).join('');
+  requestAnimationFrame(() => { $('#codex-bar').style.width = `${(got / CARDS.length) * 100}%`; });
+}
+function openCodex() {
+  if (!codexEl.hidden) return;
+  audio.unlock(); audio.open();
+  if (!panel.hidden) toggleSettings(false);
+  renderCodex();
+  $('#codex-bar').style.width = '0';
+  codexEl.hidden = false;
+  codexEl.scrollTop = 0;
+  gsap.fromTo(codexEl, { opacity: 0 }, { opacity: 1, duration: 0.4 });
+  gsap.fromTo('.codex-head > *', { y: 16, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, stagger: 0.05, ease: 'power3.out' });
+  gsap.fromTo('.cx-card', { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, stagger: 0.025, ease: 'power3.out', delay: 0.1 });
+}
+function closeCodex() {
+  audio.close();
+  gsap.to(codexEl, { opacity: 0, duration: 0.25, onComplete() { codexEl.hidden = true; gsap.set(codexEl, { clearProps: 'opacity' }); } });
+  renderHomeExtras();
+}
+$('#codex-btn').addEventListener('click', openCodex);
+$('#codex-link').addEventListener('click', openCodex);
+codexEl.addEventListener('click', (e) => {
+  if (e.target.closest('[data-close-codex]')) return closeCodex();
+  const b = e.target.closest('.cx-card.got');
+  if (!b) return;
+  const data = CARDS.find((c) => c.id === b.dataset.id);
+  openModal({ data, reversed: false, el: b.querySelector('.cx-thumb'), posText: t('drawnTimes')(collected()[data.id] || 0) });
+});
 
 /* ════════ 分享图 ════════ */
 const shareEl = $('#share');
@@ -1084,7 +1169,7 @@ async function openShare() {
     });
     const abs = (u) => new URL(u, document.baseURI).href;
     const cv = await renderShare({
-      lang: getLang(), layout: S.key, cards,
+      lang: getLang(), layout: S.key === 'daily' ? 'one' : S.key, cards,
       head: { eyebrow: 'NAIWA · GOTHIC · TAROT', small: t('titleSmall'), big: t('titleBig'), spread: spreadText(S.key).name, date, question: S.question },
       footer: { cta: t('shareCta'), url: location.origin + location.pathname },
       assets: {
@@ -1146,7 +1231,8 @@ async function restart() {
   reading.hidden = true;
   gsap.set(reading, { clearProps: 'transform' });
   stage.innerHTML = '';
-  Object.assign(S, { phase: 'intro', key: null, spread: null, cards: [], picked: [], slots: [], readingOpen: false, auto: false });
+  Object.assign(S, { phase: 'intro', key: null, spread: null, cards: [], picked: [], slots: [], readingOpen: false, auto: false, fate: null, replay: false });
+  renderHomeExtras();
   setSkipping(false);
   FAN.ready = false; FAN.hot = -1; FAN.pressed = false;
   document.body.classList.remove('picking');
@@ -1242,6 +1328,8 @@ function applyLang(rerender = true) {
   if (!rerender) return;
   renderTitle();
   renderSpreads();
+  renderHomeExtras();
+  if (!codexEl.hidden) renderCodex();
   S.slots.forEach(renderSlotLabel);
   if (S.readingOpen) readingInner.innerHTML = readingHTML();
   if (S.modalCard) modalText.innerHTML = modalHTML(S.modalCard);
@@ -1254,6 +1342,7 @@ btnLang.addEventListener('click', () => {
   applyLang();
 });
 applyLang(false);
+renderHomeExtras();
 $('#brand').addEventListener('click', restart);
 btnRevealAll.addEventListener('click', revealAll);
 

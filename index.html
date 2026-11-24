@@ -31,6 +31,12 @@
       <button class="plate sm" id="skip" type="button" hidden>跳过 ››</button>
       <button class="plate sm" id="reveal-all" type="button" hidden>全部揭示</button>
       <button class="plate sm" id="restart" type="button" hidden>重新抽牌</button>
+      <button class="plate sm icon" id="codex-btn" type="button" aria-label="图鉴">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 5.5c2.6-1.2 5.3-1.2 8 0v14c-2.7-1.2-5.4-1.2-8 0z" /><path d="M20 5.5c-2.6-1.2-5.3-1.2-8 0v14c2.7-1.2 5.4-1.2 8 0z" />
+          <path d="M8 9.5l.6 1.2 1.3.2-.95.9.22 1.3L8 12.5l-1.17.6.22-1.3-.95-.9 1.3-.2z" fill="currentColor" stroke="none" />
+        </svg>
+      </button>
       <button class="plate sm icon" id="lang" type="button" aria-label="Switch to English">EN</button>
       <button class="plate sm icon" id="sound" type="button" aria-pressed="true" aria-label="关闭音效">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -74,7 +80,13 @@
     <label class="question plate">
       <input id="question" type="text" maxlength="60" autocomplete="off" placeholder="在心中默念你的问题……（可不填）" />
     </label>
+    <button class="daily-btn" id="daily-btn" type="button">
+      <img class="daily-emblem" src="/ui/emblem.webp" alt="" />
+      <b class="plate" id="daily-name">今日一签</b>
+      <small id="daily-sub"></small>
+    </button>
     <div class="spreads" id="spreads"></div>
+    <button class="codex-link" id="codex-link" type="button"></button>
     <label class="auto-toggle"><input type="checkbox" data-k="autoDraw"><i class="sw"></i><span>一键占卜 · 自动抽牌并揭示</span></label>
   </section>
 
@@ -84,6 +96,22 @@
   <aside id="reading" aria-label="解读" hidden>
     <div class="reading-inner" id="reading-inner"></div>
   </aside>
+
+  <section id="codex" role="dialog" aria-modal="true" hidden>
+    <div class="codex-inner">
+      <header class="codex-head">
+        <div class="r-eyebrow">THE CODEX</div>
+        <h2 id="codex-title"></h2>
+        <i class="rule"></i>
+        <p class="codex-progress" id="codex-progress"></p>
+        <div class="codex-bar"><i id="codex-bar"></i></div>
+        <p class="codex-streak" id="codex-streak"></p>
+      </header>
+      <div class="codex-grid" id="codex-grid"></div>
+      <p class="codex-hint" id="codex-hint"></p>
+    </div>
+    <button class="plate sm icon codex-close" type="button" data-close-codex aria-label="关闭">✕</button>
+  </section>
 
   <div id="share" role="dialog" aria-modal="true" hidden>
     <div class="share-backdrop" data-close-share></div>

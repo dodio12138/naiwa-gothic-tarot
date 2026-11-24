@@ -23,6 +23,12 @@ const UI = {
     autoToggle: '一键占卜 · 自动抽牌并揭示',
     revealAll: '全部揭示', restart: '重新抽牌', skip: '跳过 ››', again: '再抽一次',
     share: '生成分享图', shareSave: '保存图片', shareSend: '分享', shareClose: '关闭',
+    daily: '今日一签', dailySubNew: '每日一张 · 命中注定', dailySubDone: '今日已抽 · 点击回看',
+    streak: (n) => `已连续 ${n} 天`, comeTomorrow: '明天再来抽新的一签',
+    hDailyAgain: '这是你今日的签 · 明天再来', hDailyDone: '今日之签已揭晓 · 明天再来',
+    codex: '图鉴', codexLink: (a, b) => `图鉴 · 已收集 ${a} / ${b}`, codexProgress: (a, b) => `已收集 ${a} / ${b}`,
+    codexStreak: (n) => (n ? `每日一签 · 已连续 ${n} 天` : '每日一签 · 今天还没抽'),
+    drawnTimes: (n) => `抽到过 ${n} 次`, locked: '尚未遇见', codexHint: '每次翻开的牌都会收进图鉴',
     shareTip: '手机上也可以长按图片保存', shareMaking: '正在绘制……', shareCta: '扫码，抽一张属于你的牌', shareFail: '生成失败，请重试',
     home: '回到首页', settings: '设置', close: '关闭',
     soundOn: '开启音效', soundOff: '关闭音效',
@@ -56,6 +62,12 @@ const UI = {
     autoToggle: 'One-click reading · auto draw & reveal',
     revealAll: 'Reveal all', restart: 'Draw again', skip: 'Skip ››', again: 'Draw again',
     share: 'Share image', shareSave: 'Save image', shareSend: 'Share', shareClose: 'Close',
+    daily: 'Daily Draw', dailySubNew: 'One card a day · fated', dailySubDone: 'Drawn today · tap to revisit',
+    streak: (n) => `${n}-day streak`, comeTomorrow: 'Come back tomorrow for a new card',
+    hDailyAgain: "This is today's card · come back tomorrow", hDailyDone: "Today's card is revealed · come back tomorrow",
+    codex: 'Codex', codexLink: (a, b) => `Codex · ${a} / ${b} collected`, codexProgress: (a, b) => `${a} / ${b} collected`,
+    codexStreak: (n) => (n ? `Daily draw · ${n}-day streak` : 'Daily draw · not drawn today'),
+    drawnTimes: (n) => `Drawn ${n} time${n > 1 ? 's' : ''}`, locked: 'Not yet met', codexHint: 'Every card you reveal joins the codex',
     shareTip: 'On mobile you can also long-press the image to save it', shareMaking: 'Rendering…', shareCta: 'Scan to draw your own card', shareFail: 'Could not render, please try again',
     home: 'Back to home', settings: 'Settings', close: 'Close',
     soundOn: 'Turn sound on', soundOff: 'Turn sound off',
@@ -86,7 +98,8 @@ export const t = (k) => UI[lang][k];
 
 /* ── 牌阵英文 ── */
 export const SPREADS_EN = {
-  one: { name: "Today's Guidance", sub: 'One card · A message for now', positions: ['The Message'] },
+  daily: { name: 'Daily Draw', sub: 'One card a day · fated', positions: ["Today's Card"] },
+  one: { name: 'Single Card', sub: 'One card · A message for now', positions: ['The Message'] },
   three: { name: 'Flow of Time', sub: 'Three cards · Past / Present / Future', positions: ['Past', 'Present', 'Future'] },
   five: { name: 'Cross of Fate', sub: 'Five cards · Situation & guidance', positions: ['Situation', 'Obstacle', 'Root', 'Advice', 'Outcome'] },
 };

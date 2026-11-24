@@ -92,8 +92,13 @@ export const CARDS = [
 ];
 
 export const SPREADS = {
+  daily: {
+    name: '今日一签',
+    sub: '每日一张 · 命中注定',
+    positions: ['今日一签'],
+  },
   one: {
-    name: '今日指引',
+    name: '单牌指引',
     sub: '一张牌 · 此刻的启示',
     positions: ['此刻的启示'],
   },
