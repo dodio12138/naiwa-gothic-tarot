@@ -540,11 +540,19 @@ body.lang-en .r-head h2 { font-family: var(--serif-en); letter-spacing: .08em; }
   animation-delay: calc(var(--d) * -6s);
 }
 /* 月光：缓慢呼吸 */
-.lt-moon { background: radial-gradient(circle, color-mix(in srgb, var(--c) 70%, #fff) 0%, color-mix(in srgb, var(--c) 45%, transparent) 30%, transparent 68%); animation: lt-breathe 5.2s ease-in-out infinite; }
+.lt-moon {   /* 月光：中心透明，只在月轮边缘外晕开，保留月面细节 */
+  background: radial-gradient(circle closest-side, transparent 0 50%, color-mix(in srgb, var(--c) 38%, transparent) 60%, color-mix(in srgb, var(--c) 14%, transparent) 76%, transparent 100%);
+  animation: lt-moonlight 5.6s ease-in-out infinite;
+}
+@keyframes lt-moonlight { 0%, 100% { opacity: .55; scale: .98; } 50% { opacity: .9; scale: 1.05; } }
 .lt-glow { animation: lt-breathe 4.2s ease-in-out infinite; }
 @keyframes lt-breathe { 0%, 100% { opacity: .5; scale: .9; } 50% { opacity: 1; scale: 1.12; } }
 /* 外圈大范围柔光扩散，让光源更亮、更“溢出” */
-.lt-moon::after, .lt-glow::after, .lt-flame::after {
+.lt-moon::after {
+  content: ''; position: absolute; inset: -40%; border-radius: 50%;
+  background: radial-gradient(circle, transparent 30%, color-mix(in srgb, var(--c) 10%, transparent) 45%, transparent 66%);
+}
+.lt-glow::after, .lt-flame::after {
   content: ''; position: absolute; inset: -55%; border-radius: 50%;
   background: radial-gradient(circle, color-mix(in srgb, var(--c) 30%, transparent) 0%, transparent 62%);
 }
@@ -584,6 +592,16 @@ body.lang-en .r-head h2 { font-family: var(--serif-en); letter-spacing: .08em; }
   0%, 100% { opacity: .25; scale: .6; rotate: 0deg; }
   45% { opacity: 1; scale: 1.15; rotate: 22deg; }
   60% { opacity: .8; scale: .95; rotate: 30deg; }
+}
+/* 水面粼光：扁平椭圆、很淡，左右轻晃 */
+.lt-water {
+  aspect-ratio: 3 / 1; border-radius: 50%;
+  background: radial-gradient(ellipse closest-side, color-mix(in srgb, var(--c) 45%, transparent) 0%, color-mix(in srgb, var(--c) 14%, transparent) 55%, transparent 100%);
+  animation: lt-ripple 3.8s ease-in-out infinite; animation-delay: calc(var(--d) * -3.8s);
+}
+@keyframes lt-ripple {
+  0%, 100% { opacity: .25; scale: .92 1; translate: -52% -50%; }
+  50% { opacity: .6; scale: 1.08 .9; translate: -48% -50%; }
 }
 /* 闪电：偶尔连闪两下 */
 .lt-flash { animation: lt-flash 5.5s linear infinite; }

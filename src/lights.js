@@ -4,6 +4,7 @@
 //   holy  圣光，脉动 + 缓慢旋转的光芒  spark 星芒闪烁
 //   glow  通用柔光呼吸              flash 闪电，偶尔骤亮
 //   halo  光环：中心透明、只有一圈发光（用在头顶，避免盖住奶蛙的脸）
+//   water 水面粼光：扁平的微光，像水波一样轻轻晃动（用在倒影上）
 const C = {
   cool: '#d6e4ff', silver: '#eef2ff', warm: '#ffc66e', gold: '#ffd77e',
   white: '#fff3d8', red: '#ff5a48', violet: '#c9a2ff', amber: '#ff9a3c',
@@ -14,7 +15,7 @@ export const LIGHTS = {
   '01': [['spark', 0.37, 0.10, 0.12, C.white], ['glow', 0.46, 0.15, 0.22, C.gold],
          ['flame', 0.12, 0.37, 0.12, C.warm], ['flame', 0.87, 0.38, 0.12, C.warm], ['moon', 0.82, 0.21, 0.12, C.cool]],
   '02': [['moon', 0.44, 0.07, 0.30, C.cool], ['spark', 0.42, 0.24, 0.10, C.silver],
-         ['moon', 0.45, 0.81, 0.18, C.silver], ['glow', 0.45, 0.90, 0.16, C.cool]],
+         ['moon', 0.45, 0.81, 0.18, C.silver], ['water', 0.45, 0.90, 0.22, C.cool]],
   '03': [['holy', 0.75, 0.04, 0.50, C.warm], ['spark', 0.58, 0.20, 0.12, C.gold]],
   '04': [['glow', 0.20, 0.05, 0.50, C.red], ['spark', 0.73, 0.35, 0.10, C.gold], ['spark', 0.51, 0.21, 0.10, C.gold]],
   '05': [['glow', 0.55, 0.08, 0.36, C.violet], ['flame', 0.13, 0.44, 0.16, C.warm],
@@ -30,15 +31,15 @@ export const LIGHTS = {
   '12': [['moon', 0.60, 0.07, 0.16, C.cool], ['halo', 0.50, 0.68, 0.36, C.gold], ['glow', 0.52, 0.17, 0.18, C.warm],
          ['flame', 0.08, 0.65, 0.10, C.warm], ['flame', 0.90, 0.65, 0.10, C.warm]],
   '13': [['moon', 0.25, 0.10, 0.18, C.cool], ['glow', 0.81, 0.37, 0.24, C.amber], ['spark', 0.66, 0.18, 0.10, C.white]],
-  '14': [['moon', 0.33, 0.07, 0.16, C.cool], ['glow', 0.42, 0.42, 0.18, C.silver],
-         ['glow', 0.66, 0.24, 0.16, C.warm], ['glow', 0.50, 0.85, 0.26, C.cool]],
+  '14': [['moon', 0.33, 0.07, 0.16, C.cool], ['glow', 0.41, 0.39, 0.11, C.silver],
+         ['glow', 0.66, 0.24, 0.16, C.warm], ['water', 0.50, 0.86, 0.30, C.cool]],
   '15': [['glow', 0.48, 0.09, 0.22, C.red], ['flame', 0.07, 0.38, 0.10, C.red], ['flame', 0.12, 0.42, 0.10, C.amber],
          ['flame', 0.90, 0.42, 0.10, C.red], ['flame', 0.95, 0.48, 0.10, C.amber], ['flame', 0.20, 0.55, 0.18, C.amber]],
   '16': [['flash', 0.78, 0.10, 0.40, C.silver], ['flame', 0.60, 0.30, 0.34, C.amber], ['spark', 0.60, 0.08, 0.12, C.gold]],
   '17': [['spark', 0.47, 0.15, 0.30, C.white], ['spark', 0.37, 0.09, 0.08, C.silver], ['spark', 0.58, 0.08, 0.08, C.silver],
          ['spark', 0.32, 0.17, 0.07, C.silver], ['spark', 0.65, 0.20, 0.07, C.silver],
-         ['glow', 0.33, 0.66, 0.14, C.silver], ['glow', 0.33, 0.85, 0.22, C.cool], ['glow', 0.75, 0.52, 0.10, C.silver]],
-  '18': [['moon', 0.50, 0.15, 0.42, C.silver], ['moon', 0.50, 0.86, 0.26, C.cool]],
+         ['glow', 0.33, 0.66, 0.14, C.silver], ['water', 0.33, 0.86, 0.26, C.cool], ['glow', 0.75, 0.52, 0.10, C.silver]],
+  '18': [['moon', 0.50, 0.15, 0.42, C.silver], ['water', 0.50, 0.87, 0.34, C.cool]],
   '19': [['holy', 0.67, 0.15, 0.62, C.warm], ['spark', 0.24, 0.23, 0.12, C.gold]],
   '20': [['holy', 0.42, 0.12, 0.44, C.white], ['spark', 0.85, 0.16, 0.14, C.gold], ['glow', 0.45, 0.60, 0.50, C.white],
          ['flame', 0.20, 0.78, 0.14, C.gold], ['flame', 0.55, 0.78, 0.14, C.gold], ['flame', 0.85, 0.78, 0.14, C.gold]],
