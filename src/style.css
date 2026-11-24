@@ -121,7 +121,7 @@ body.is-intro .brand { opacity: 0; pointer-events: none; }   /* 首页已有标�
 /* 竖屏：两组内容拆开平铺（display: contents）；横屏矮屏：左右两栏 */
 .intro-a, .intro-b { display: contents; }
 .intro-a > *, .intro-b > * { flex-shrink: 0; }
-/* 图鉴入口和一键占卜放同一行，省一行高度 */
+/* 图鉴入口和一键抽牌放同一行，省一行高度 */
 .intro-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 28px; margin-top: 18px; }
 .intro-foot .codex-link, .intro-foot .auto-toggle { margin-top: 0; }
 .hero-wrap { position: relative; margin-bottom: 40px; }
@@ -494,7 +494,7 @@ input[data-k]:focus-visible + .sw { outline: 2px solid var(--gold-hi); outline-o
 #settings-btn svg { width: 18px; height: 18px; transition: transform .6s var(--ease-out); }
 #settings-btn[aria-expanded="true"] svg { transform: rotate(90deg); }
 
-/* 首页一键占卜开关 */
+/* 首页一键抽牌开关 */
 .auto-toggle {
   display: inline-flex; align-items: center; gap: 10px; margin-top: 18px; cursor: pointer;
   font-size: 13px; letter-spacing: .14em; color: var(--muted); transition: color .3s;

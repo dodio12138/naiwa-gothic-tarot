@@ -2,7 +2,7 @@
 // 1. 启动时按设备信号（内存、核数、系统、屏幕、省流量）估一个档位；
 // 2. 运行中监测帧率，持续掉帧就自动降一档，并记住，下次直接用低一档；
 // 3. 用户也可以在设置里手动指定（自动 / 高 / 中 / 低）。
-// 档位只决定“花多少显存和算力在装饰上”，不影响占卜流程本身。
+// 档位只决定“花多少显存和算力在装饰上”，不影响抽牌流程本身。
 
 const PICK_KEY = 'naiwa-tarot-quality';     // 用户选择：auto | high | mid | low
 const CAP_KEY = 'naiwa-tarot-perf-cap';     // 自动模式下因掉帧记住的上限
@@ -46,9 +46,12 @@ let pick = read(PICK_KEY) || 'auto';
 if (!(pick in TIERS) && pick !== 'auto') pick = 'auto';
 let cap = read(CAP_KEY);
 
+// 掉帧自动降档最多降到「中」：「低」会关掉运动模糊等核心观感，只在设备本身判定为低端或用户手动选择时使用。
+// 旧版本可能记下过 cap = low，这里按 mid 处理
 function resolve() {
   if (pick !== 'auto') return pick;
-  if (cap in TIERS && ORDER.indexOf(cap) < ORDER.indexOf(detected)) return cap;
+  const c = cap === 'low' ? 'mid' : cap;
+  if (c in TIERS && ORDER.indexOf(c) < ORDER.indexOf(detected)) return c;
   return detected;
 }
 
@@ -98,12 +101,12 @@ export function tickFps(now) {
   const i = ORDER.indexOf(Q.tier);
   // 门槛 28 帧：iPhone 低电量模式会把动画锁在 30 帧，不能把它误判成卡顿
   bad = fps < 28 ? bad + 1 : 0;
-  if (bad >= 2 && i > 0) {              // 连续两段都低于门槛才降档，偶发卡顿不算
+  if (bad >= 2 && i > 1) {              // 连续两段都低于门槛才降档（只会 高 → 中），偶发卡顿不算
     bad = 0;
     Q.tier = ORDER[i - 1];
     cap = Q.tier;
     write(CAP_KEY, cap);
-    cooldown = now + 4000;              // 降档后给 4 秒稳定，避免连降两档
+    cooldown = now + 4000;              // 降档后给 4 秒稳定
     emit();
   }
 }

@@ -20,7 +20,7 @@ const cardText = (d) => (isEn() ? { ...d, ...CARDS_EN[d.id] } : d);
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 // 牌的基准尺寸：GPU 按这个尺寸 × 设备像素比生成图层纹理，再缩放显示。
 // 22 张牌同时在场，尺寸过大会吃掉几百 MB 显存（iOS 超限会直接杀掉页面）。
-// 取「画质档位上限」和「这块屏幕上牌最大会显示多宽」中较小的那个；每次开新一轮占卜时重算。
+// 取「画质档位上限」和「这块屏幕上牌最大会显示多宽」中较小的那个；每次开新一轮抽牌时重算。
 let BASE = 360;
 function updateBase() {
   const small = Math.min(innerWidth, innerHeight) <= 760;
@@ -96,7 +96,7 @@ const S = {
   readingOpen: false,
   busy: false,
   modalCard: null,
-  auto: false,       // 一键占卜进行中
+  auto: false,       // 一键抽牌进行中
   skipping: false,   // 快进洗牌中
 };
 
@@ -512,7 +512,7 @@ function setSkipping(on) {
   applySpeed();
 }
 
-// 一键占卜：命运之手依次替你抽牌
+// 一键抽牌：命运之手依次替你抽牌
 async function autoPick() {
   hintBy(() => t('hAutoPick'));
   while (S.phase === 'pick' && S.picked.length < S.slots.length) {

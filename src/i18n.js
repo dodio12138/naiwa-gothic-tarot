@@ -16,11 +16,11 @@ export function setLang(v) {
 /* ── 界面文案 ── */
 const UI = {
   zh: {
-    pageTitle: '奶蛙 · 暗夜占卜 · Naiwa Gothic Tarot',
-    titleSmall: '奶蛙', titleBig: '暗夜占卜',
+    pageTitle: '奶蛙 · 暗夜塔罗 · Naiwa Gothic Tarot',
+    titleSmall: '奶蛙', titleBig: '暗夜塔罗',
     lede: '一只始终面无表情的黄色梨形怪物，<br />穿行于庄严、阴郁、华丽的哥特塔罗世界。',
     question: '在心中默念你的问题……（可不填）',
-    autoToggle: '一键占卜 · 自动抽牌并揭示',
+    autoToggle: '一键抽牌 · 自动洗牌并揭示',
     revealAll: '全部揭示', restart: '重新抽牌', skip: '跳过 ››', again: '再抽一次',
     share: '生成分享图', shareSave: '保存图片', shareSend: '分享', shareClose: '关闭',
     daily: '今日一签', dailySubNew: '每日一张 · 命中注定', dailySubDone: '今日已抽 · 点击回看',
@@ -41,11 +41,11 @@ const UI = {
     upright: '正位', reversed: '逆位', revTag: '逆',
     drawnUp: '正位 · 你抽到的', drawnRev: '逆位 · 你抽到的',
     whisper: '奶蛙：',
-    stHead: '设 置', stGroupRead: '占 卜', stGroupShow: '表 现',
-    qTitle: '画质', qAutoNow: '按设备自动 · 当前：', qFixed: '手动指定 · 新一轮占卜完全生效',
+    stHead: '设 置', stGroupRead: '抽 牌', stGroupShow: '表 现',
+    qTitle: '画质', qAutoNow: '按设备自动 · 当前：', qFixed: '手动指定 · 新一轮抽牌完全生效',
     qNames: { auto: '自动', high: '高', mid: '中', low: '低' },
     st: {
-      autoDraw: ['一键占卜', '自动洗牌、抽牌并依次揭示'],
+      autoDraw: ['一键抽牌', '自动洗牌、抽牌并依次揭示'],
       autoReveal: ['自动翻牌', '选完牌后自动揭示'],
       skipIntro: ['跳过洗牌动画', '直接进入选牌'],
       reversed: ['逆位', '允许抽到逆位牌'],
@@ -57,8 +57,8 @@ const UI = {
     },
   },
   en: {
-    pageTitle: 'Naiwa · Night Oracle · Gothic Tarot',
-    titleSmall: 'Naiwa', titleBig: 'Night Oracle',
+    pageTitle: 'Naiwa · Night Tarot',
+    titleSmall: 'Naiwa', titleBig: 'Night Tarot',
     lede: 'A forever-expressionless, pear-shaped yellow creature<br />wanders a solemn, gloomy and ornate gothic tarot world.',
     question: 'Silently ask your question… (optional)',
     autoToggle: 'One-click reading · auto draw & reveal',
