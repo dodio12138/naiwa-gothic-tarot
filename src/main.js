@@ -1,0 +1,1012 @@
+import './style.css';
+import { gsap } from 'gsap';
+import { CARDS, SPREADS, artSrc } from './cards.js';
+import { createParticles } from './particles.js';
+import { createAudio } from './audio.js';
+
+/* ════════ 基础 ════════ */
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const BASE = 360;                       // 与 CSS --card-w 一致
+const TAU = Math.PI * 2;
+const BACK = `${import.meta.env.BASE_URL}back.webp`;
+const REVERSE_CHANCE = 0.4;
+const DARK_CARDS = new Set(['13', '15', '16']);
+const UI = (f) => `${import.meta.env.BASE_URL}ui/${f}`;
+const touch = matchMedia('(pointer: coarse)').matches;
+
+// 图片素材通过 CSS 变量注入，保证相对路径部署时也正确
+{
+  const r = document.documentElement.style;
+  r.setProperty('--plate-img', `url("${UI('plate.webp')}")`);
+  r.setProperty('--divider-img', `url("${UI('divider.webp')}")`);
+  r.setProperty('--back-img', `url("${BACK}")`);
+}
+
+const $ = (s) => document.querySelector(s);
+const stage = $('#stage');
+const hint = $('#hint');
+const intro = $('#intro');
+const flash = $('#flash');
+const reading = $('#reading');
+const readingInner = $('#reading-inner');
+const modal = $('#modal');
+const btnRestart = $('#restart');
+const btnRevealAll = $('#reveal-all');
+
+const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+const rad = (d) => (d * Math.PI) / 180;
+const deg = (r) => (r * 180) / Math.PI;
+const vp = () => ({ W: innerWidth, H: innerHeight, mobile: innerWidth < 760 });
+const esc = (s) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const rand = () => crypto.getRandomValues(new Uint32Array(1))[0] / 2 ** 32;
+
+
+const fx = createParticles($('#fx'), { reduced });
+const audio = createAudio();
+
+/* ════════ 设置（本地记忆） ════════ */
+const CFG_KEY = 'naiwa-tarot-settings';
+const CFG = {
+  autoDraw: false, autoReveal: false, skipIntro: false, reversed: true,
+  parallax: true, calm: false, sound: !audio.muted, ambient: true,
+};
+try { Object.assign(CFG, JSON.parse(localStorage.getItem(CFG_KEY) || '{}')); } catch { /* 无存储时用默认值 */ }
+const saveCfg = () => { try { localStorage.setItem(CFG_KEY, JSON.stringify(CFG)); } catch { /* 忽略 */ } };
+const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+addEventListener('pointerdown', audio.unlock, { passive: true });
+addEventListener('keydown', audio.unlock);
+if (import.meta.env.DEV) Object.assign(window, { __audio: audio, __gsap: gsap });
+
+const S = {
+  phase: 'intro',     // intro → dealing → pick → gather → reveal → done
+  key: null,
+  spread: null,
+  question: '',
+  cards: [],          // 全部 22 张（洗好顺序）
+  picked: [],
+  slots: [],
+  readingOpen: false,
+  busy: false,
+  modalCard: null,
+  auto: false,       // 一键占卜进行中
+  skipping: false,   // 快进洗牌中
+};
+
+function applySpeed() {
+  gsap.globalTimeline.timeScale(S.skipping ? 8 : (reduced || CFG.calm ? 1.6 : 1));
+}
+applySpeed();
+
+/* ════════ 预加载牌面 ════════
+   首页先把带宽让给字体与首屏；入场动画结束、浏览器空闲时再后台预载 22 张牌面。
+   翻牌前 reveal() 会再确认该张已解码，所以即使没预载完也不会翻出空白。 */
+function preloadFaces() {
+  [...CARDS.map((c) => artSrc(c.id)), UI('frame-sm.webp')].forEach((src) => {
+    const img = new Image();
+    img.decoding = 'async';
+    img.src = src;
+  });
+}
+const idle = window.requestIdleCallback || ((fn) => setTimeout(fn, 300));
+setTimeout(() => idle(preloadFaces, { timeout: 3000 }), 1800);
+
+/* ════════ 背景法阵 ════════ */
+function buildSigil() {
+  $('#sigil').innerHTML = `<img src="${UI('starchart.webp')}" alt="" draggable="false">`;
+  const spin = gsap.to('#sigil img', { rotation: 360, duration: 240, repeat: -1, ease: 'none' });
+  return {
+    speed(v, d = 1) { gsap.to(spin, { timeScale: v, duration: d, ease: 'power2.inOut', overwrite: true }); },
+  };
+}
+const sigil = buildSigil();
+{
+  const sx = gsap.quickTo('#sigil', 'x', { duration: 1.6, ease: 'power3' });
+  const sy = gsap.quickTo('#sigil', 'y', { duration: 1.6, ease: 'power3' });
+  addEventListener('pointermove', (e) => {
+    sx((e.clientX / innerWidth - 0.5) * -24);
+    sy((e.clientY / innerHeight - 0.5) * -24);
+  }, { passive: true });
+}
+
+/* ════════ 首页 ════════ */
+let heroTl;
+function buildIntro() {
+  // 标题逐字
+  document.querySelectorAll('.title > span').forEach((el) => {
+    el.innerHTML = [...el.textContent].map((ch) => `<span class="ch">${ch}</span>`).join('');
+  });
+  // 牌阵按钮
+  $('#spreads').innerHTML = Object.entries(SPREADS).map(([k, s]) => `
+    <button class="spread-btn" type="button" data-spread="${k}"><span class="sb-in">
+      <span class="pips" style="--n:${s.positions.length}">${s.positions.map((_, i) => `<i style="--i:${i}"></i>`).join('')}</span>
+      <b class="plate">${s.name}</b><small>${s.sub.replace(/^(.+?) · /, '<span class="n">$1 · </span>')}</small>
+    </span></button>`).join('');
+  $('#spreads').addEventListener('click', (e) => {
+    const b = e.target.closest('[data-spread]');
+    if (b) { audio.unlock(); audio.click(); start(b.dataset.spread); }
+  });
+  $('#question').addEventListener('keydown', (e) => { if (e.key === 'Enter') start('three'); });
+
+  // 悬浮小牌：不断翻面展示不同的牌
+  const hc = $('#hero-card');
+  hc.innerHTML = `<div class="hc-inner">
+    <div class="hc-face hc-back"><img src="${BACK}" alt=""></div>
+    <div class="hc-face hc-front"><img alt=""><img class="hc-frame" src="${UI('frame-sm.webp')}" alt=""></div></div>`;
+  const inner = hc.querySelector('.hc-inner');
+  const front = hc.querySelector('.hc-front img');
+  let idx = Math.floor(rand() * CARDS.length);
+  front.src = artSrc(CARDS[idx].id);
+  // 牌在 -2 ~ -14px 之间浮动；影子固定在原地，牌越高影子越小越淡
+  gsap.fromTo(hc, { y: -2 }, { y: -14, duration: 2.6, ease: 'sine.inOut', yoyo: true, repeat: -1 });
+  gsap.fromTo('.hero-shadow', { scaleX: 1, scaleY: 1, opacity: 1 }, { scaleX: 0.66, scaleY: 0.75, opacity: 0.45, duration: 2.6, ease: 'sine.inOut', yoyo: true, repeat: -1 });
+  gsap.to(hc, { rotation: 2, duration: 3.4, ease: 'sine.inOut', yoyo: true, repeat: -1 });
+  heroTl = gsap.timeline({ repeat: -1, delay: 1.6 })
+    .to(inner, { rotationY: 180, duration: 1.2, ease: 'power3.inOut' })
+    .to(inner, { rotationY: 360, duration: 1.2, ease: 'power3.inOut' }, '+=2.2')
+    .add(() => {
+      gsap.set(inner, { rotationY: 0 });
+      idx = (idx + 1 + Math.floor(rand() * 5)) % CARDS.length;
+      front.src = artSrc(CARDS[idx].id);
+    }, '+=0.9');
+}
+
+function introIn() {
+  document.body.classList.add('is-intro');
+  intro.style.visibility = 'visible';
+  intro.classList.remove('gone');
+  const kids = [...intro.children];
+  gsap.set(kids, { clearProps: 'all' });
+  const tl = gsap.timeline();
+  tl.from('.hero-wrap', { y: 40, opacity: 0, scale: 0.8, duration: 1.2, ease: 'expo.out' })
+    .from('.eyebrow', { opacity: 0, letterSpacing: '1.2em', duration: 1.2, ease: 'expo.out' }, 0.1)
+    .from('.title-rule', { opacity: 0, scaleX: 0.2, duration: 1.2, ease: 'expo.out' }, 0.5)
+    .from('.title .ch', {
+      yPercent: 70, opacity: 0, filter: 'blur(14px)', rotationX: -60,
+      duration: 1.1, ease: 'expo.out', stagger: 0.06,
+    }, 0.2)
+    .from(['.lede', '.question'], { y: 20, opacity: 0, duration: 0.9, ease: 'power3.out', stagger: 0.1 }, 0.6)
+    .from('.spread-btn', { y: 30, opacity: 0, scale: 0.94, duration: 0.9, ease: 'expo.out', stagger: 0.08 }, 0.8)
+    .from('.auto-toggle', { y: 30, opacity: 0, duration: 0.9, ease: 'expo.out' }, 0.96);
+  heroTl?.play();
+  return tl;
+}
+
+async function introOut() {
+  heroTl?.pause();
+  await gsap.to([...intro.children], {
+    y: -24, opacity: 0, filter: 'blur(10px)', duration: 0.55, ease: 'power2.in', stagger: 0.04,
+  });
+  intro.classList.add('gone');
+  intro.style.visibility = 'hidden';
+  document.body.classList.remove('is-intro');
+}
+
+/* ════════ 提示文字 ════════ */
+let hintText = '';
+function setHint(t) {
+  if (t === hintText) return;
+  hintText = t;
+  gsap.to(hint, {
+    opacity: 0, y: -6, duration: 0.2, ease: 'power1.in', overwrite: true,
+    onComplete() {
+      hint.textContent = t;
+      gsap.fromTo(hint, { opacity: 0, y: 6 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' });
+    },
+  });
+}
+
+/* ════════ 卡牌 DOM ════════ */
+// 正面三层：插画（随视差移动）→ 边框（静止，SVG 蒙版只露出窗口外一圈）→ 编号铭牌（悬停显示）
+const cardById = (id) => CARDS.find((c) => c.id === id);
+const frontLayers = (id, size = 'sm') => `
+  <div class="layers">
+    <div class="art-wrap"><img class="art" src="${artSrc(id, size)}" alt="" draggable="false"></div>
+    <div class="frame-wrap"><img class="frame" src="${UI(size === 'full' ? 'frame.webp' : 'frame-sm.webp')}" alt="" draggable="false"></div>
+    <div class="plates" aria-hidden="true">
+      <span class="plate pl-num"><b>${cardById(id).num}</b></span>
+      <span class="plate pl-name"><b>${cardById(id).en}</b></span>
+    </div>
+  </div>`;
+
+function makeCard(data) {
+  const el = document.createElement('div');
+  el.className = 'card';
+  el.innerHTML = `
+    <div class="aura"></div>
+    <div class="lift">
+      <div class="tilt"><div class="inner">
+        <div class="face back"><img src="${BACK}" alt="" draggable="false"></div>
+        <div class="face front" aria-label="${data.zh} ${data.en}">${frontLayers(data.id)}
+          <div class="sheen"></div><div class="glare"></div>
+        </div>
+      </div></div>
+      <img class="mb mbx" src="${UI('back-blur-x.webp')}" alt="" draggable="false">
+      <img class="mb mby" src="${UI('back-blur-y.webp')}" alt="" draggable="false">
+    </div>`;
+  const c = {
+    el, data,
+    inner: el.querySelector('.inner'),
+    tilt: el.querySelector('.tilt'),
+    aura: el.querySelector('.aura'),
+    backFace: el.querySelector('.face.back'),
+    mbx: el.querySelector('.mbx'),
+    mby: el.querySelector('.mby'),
+    bx: 0, by: 0, px: null, py: null,
+    reversed: false, revealed: false, busy: false, slot: -1, fan: -1,
+  };
+  el.addEventListener('click', () => onCardClick(c));
+  el.addEventListener('pointerenter', () => { if (el.classList.contains('in-fan')) audio.hover(c.fan); });
+  return c;
+}
+
+/* ════════ 视差：鼠标悬停 / 手机陀螺仪 ════════ */
+const tilts = new Set();
+const gyro = { x: 0, y: 0, on: false, base: null };
+
+function attachTilt(host, tiltEl, max = 12) {
+  gsap.set(tiltEl, { '--px': 0, '--py': 0 });
+  const rx = gsap.quickTo(tiltEl, 'rotationX', { duration: 0.7, ease: 'power3' });
+  const ry = gsap.quickTo(tiltEl, 'rotationY', { duration: 0.7, ease: 'power3' });
+  const qx = gsap.quickTo(tiltEl, '--px', { duration: 0.7, ease: 'power3' });
+  const qy = gsap.quickTo(tiltEl, '--py', { duration: 0.7, ease: 'power3' });
+  const t = {
+    host, hovering: false,
+    set(px, py) {
+      if (!CFG.parallax) { px = 0; py = 0; }
+      ry(px * max); rx(-py * max); qx(px); qy(py);
+    },
+  };
+  host.addEventListener('pointermove', (e) => {
+    if (e.pointerType !== 'mouse' || host.dataset.tilt !== 'on') return;
+    t.hovering = true;
+    const r = host.getBoundingClientRect();
+    t.set(clamp(((e.clientX - r.left) / r.width) * 2 - 1, -1, 1), clamp(((e.clientY - r.top) / r.height) * 2 - 1, -1, 1));
+  });
+  host.addEventListener('pointerleave', () => { t.hovering = false; t.set(gyro.x, gyro.y); });
+  tilts.add(t);
+  return t;
+}
+
+function onOrient(e) {
+  if (e.beta == null || e.gamma == null) return;
+  if (!gyro.base) gyro.base = { b: e.beta, g: e.gamma };
+  // 基准缓慢跟随，手机换个姿势握也会自动回中
+  gyro.base.b += (e.beta - gyro.base.b) * 0.008;
+  gyro.base.g += (e.gamma - gyro.base.g) * 0.008;
+  gyro.x = clamp((e.gamma - gyro.base.g) / 18, -1, 1);
+  gyro.y = clamp((e.beta - gyro.base.b) / 18, -1, 1);
+  for (const t of tilts) if (t.host.dataset.tilt === 'on' && !t.hovering) t.set(gyro.x, gyro.y);
+}
+function enableGyro() {
+  if (gyro.on || !touch || !('DeviceOrientationEvent' in window)) return;
+  gyro.on = true;
+  // 先挂监听（安卓等无需授权的浏览器直接生效），iOS 再弹授权框
+  addEventListener('deviceorientation', onOrient);
+  const D = window.DeviceOrientationEvent;
+  if (typeof D.requestPermission === 'function') D.requestPermission().catch(() => {});
+}
+addEventListener('pointerdown', enableGyro, { passive: true });
+if (import.meta.env.DEV) Object.assign(window, { __S: S, __gyro: gyro, __tilts: tilts });
+
+/* ════════ 运动模糊 ════════
+   预烘焙了牌背的横向 / 纵向模糊贴图；每帧根据牌在“自身坐标系”里的速度，
+   交叉淡入对应方向的模糊层。只改 opacity，不触发重排，也不用实时滤镜。 */
+const MB = { on: false };
+function mbTick() {
+  if (!MB.on) return;
+  const dt = gsap.ticker.deltaRatio(60) || 1;
+  for (const c of S.cards) {
+    if (c.revealed || c.busy) continue;
+    const x = gsap.getProperty(c.el, 'x'), y = gsap.getProperty(c.el, 'y');
+    if (c.px === null) { c.px = x; c.py = y; continue; }
+    const dx = (x - c.px) / dt, dy = (y - c.py) / dt;
+    c.px = x; c.py = y;
+    const th = rad(gsap.getProperty(c.el, 'rotation'));
+    const cos = Math.cos(th), sin = Math.sin(th);
+    const lx = dx * cos + dy * sin;          // 牌自身的横向速度
+    const ly = -dx * sin + dy * cos;         // 牌自身的纵向速度
+    const w = BASE * gsap.getProperty(c.el, 'scale');
+    const tx = clamp((Math.abs(lx) / w - 0.04) * 3.4, 0, 1);
+    const ty = clamp((Math.abs(ly) / w - 0.04) * 3.4, 0, 1);
+    const nbx = c.bx + (tx - c.bx) * 0.45, nby = c.by + (ty - c.by) * 0.45;
+    if (Math.abs(nbx - c.bx) + Math.abs(nby - c.by) < 0.004 && tx === 0 && ty === 0 && c.bx < 0.01 && c.by < 0.01) continue;
+    c.bx = nbx < 0.01 ? 0 : nbx; c.by = nby < 0.01 ? 0 : nby;
+    c.mbx.style.opacity = c.bx.toFixed(3);
+    c.mby.style.opacity = c.by.toFixed(3);
+    c.backFace.style.opacity = (1 - Math.max(c.bx, c.by) * 0.9).toFixed(3);
+  }
+}
+gsap.ticker.add(mbTick);
+function motionBlur(on) {
+  MB.on = on && !reduced;
+  if (!MB.on) for (const c of S.cards) {
+    c.bx = c.by = 0; c.px = c.py = null;
+    c.mbx.style.opacity = 0; c.mby.style.opacity = 0; c.backFace.style.opacity = '';
+  }
+}
+
+function shuffled(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(rand() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+/* ════════ 布局几何 ════════ */
+function deckScale() {
+  const { W, H } = vp();
+  return clamp(Math.min(W * 0.17, H * 0.16), 96, 170) / BASE;
+}
+
+function fanGeom(n) {
+  const { W, H, mobile } = vp();
+  const fw = mobile ? clamp(W * 0.19, 60, 92) : clamp(Math.min(W * 0.075, H * 0.13), 52, 108);
+  const fh = fw * 1.5;
+  const step = mobile ? 3.6 : 3;                // 每张牌的角度间隔
+  const full = step * 21;
+  const targetW = Math.min(W * (mobile ? 0.86 : 0.92) - fw, 1150);
+  const R = targetW / (2 * Math.sin(rad(full / 2)));
+  const sag = R * (1 - Math.cos(rad(full / 2)));
+  const centerY = H - fh * 0.5 - (mobile ? Math.max(48, H * 0.08) : 40) - sag * 0.55;
+  const cy = centerY + R;
+  const spread = step * (n - 1);
+  return {
+    top: centerY - fh * 0.5 - fh * 0.16,
+    pos(i) {
+      const a = rad(-spread / 2 + step * i);
+      return { x: W / 2 + R * Math.sin(a), y: cy - R * Math.cos(a), rotation: deg(a), scale: fw / BASE };
+    },
+  };
+}
+
+function pickSlotGeom(n) {
+  const { W, mobile } = vp();
+  const f = fanGeom(22);
+  const y0 = mobile ? 62 : 80;
+  const y1 = f.top - (mobile ? 30 : 46);
+  const availH = Math.max(80, y1 - y0);
+  const gap = mobile ? 12 : 28;
+  let h = Math.min(availH, mobile ? 230 : 340);
+  let w = h / 1.5;
+  const maxW = (W * 0.92 - gap * (n - 1)) / n;
+  if (w > maxW) { w = maxW; h = w * 1.5; }
+  const cy = y0 + availH / 2;
+  return Array.from({ length: n }, (_, i) => ({ x: W / 2 + (i - (n - 1) / 2) * (w + gap), y: cy, w, h }));
+}
+
+const GRID = {
+  one: [[0, 0]],
+  three: [[-1, 0], [0, 0], [1, 0]],
+  // 现状 中，阻碍 上，根源 下，建议 左，结果 右
+  five: [[0, 0], [0, -1], [0, 1], [-1, 0], [1, 0]],
+};
+
+function revealSlotGeom() {
+  const { W, H, mobile } = vp();
+  const g = GRID[S.key];
+  const area = { x0: 0, x1: W, y0: mobile ? 58 : 76, y1: H - (mobile ? 34 : 44) };
+  if (S.readingOpen) {
+    if (mobile) area.y1 = H * 0.44 - 4;
+    else area.x1 = W - Math.min(440, W * 0.38);
+  }
+  const cols = Math.max(...g.map(([x]) => Math.abs(x))) * 2 + 1;
+  const rows = Math.max(...g.map(([, y]) => Math.abs(y))) * 2 + 1;
+  const sx = 1.14;
+  const label = mobile ? 40 : 54;   // 标签两行：位置 + 牌名
+  const byW = ((area.x1 - area.x0) * 0.92) / ((cols - 1) * sx + 1);
+  // 行距至少要容得下牌下方的标签，否则上一排的标签会被下一排的牌盖住
+  let sy = 1.16, w = 0;
+  for (let k = 0; k < 3; k++) {
+    const byH = ((area.y1 - area.y0 - label) * 0.94) / (((rows - 1) * sy + 1) * 1.5);
+    w = Math.min(byW, byH, mobile ? 260 : 330);
+    if (rows === 1) break;
+    sy = Math.max(1.16, 1 + (label + 10) / (w * 1.5));
+  }
+  const h = w * 1.5;
+  const cx = (area.x0 + area.x1) / 2;
+  const cy = (area.y0 + area.y1) / 2 - label / 2;
+  return g.map(([gx, gy]) => ({ x: cx + gx * w * sx, y: cy + gy * h * sy, w, h }));
+}
+
+/* ════════ 流程 ════════ */
+async function start(key) {
+  if (S.busy || S.phase !== 'intro') return;
+  S.busy = true;
+  S.key = key;
+  S.spread = SPREADS[key];
+  S.question = $('#question').value.trim();
+  S.phase = 'dealing';
+  S.auto = CFG.autoDraw;
+  await introOut();
+  setHint(S.auto ? '命运之手正在洗牌……' : '奶蛙正在洗牌……');
+  buildDeck();                       // 牌背立即可用；牌面在后台预载，翻牌前再确认
+  motionBlur(true);
+  if (CFG.skipIntro) setSkipping(true);
+  else { btnSkip.hidden = false; gsap.fromTo(btnSkip, { opacity: 0 }, { opacity: 1, duration: 0.5 }); }
+  await dealIn();
+  await shuffleAnim();
+  buildSlots();
+  await fanOut();
+  setSkipping(false);
+  S.busy = false;
+  btnRestart.hidden = false;
+  gsap.fromTo(btnRestart, { opacity: 0 }, { opacity: 1, duration: 0.6 });
+  if (S.auto) autoPick();
+}
+
+function setSkipping(on) {
+  S.skipping = on;
+  btnSkip.hidden = true;
+  applySpeed();
+}
+
+// 一键占卜：命运之手依次替你抽牌
+async function autoPick() {
+  setHint('命运之手正在为你抽牌……');
+  while (S.phase === 'pick' && S.picked.length < S.slots.length) {
+    await wait(CFG.calm ? 380 : 700);
+    if (S.phase !== 'pick') break;
+    const rest = S.cards.filter((c) => c.slot < 0);
+    const c = rest[Math.floor(rand() * rest.length)];
+    c.el.classList.add('chosen');
+    await wait(CFG.calm ? 120 : 260);
+    pick(c);
+  }
+}
+
+function buildDeck() {
+  stage.innerHTML = '';
+  S.cards = shuffled(CARDS).map(makeCard);
+  S.picked = [];
+  const { W, H } = vp();
+  const s = deckScale();
+  S.cards.forEach((c, i) => {
+    stage.appendChild(c.el);
+    gsap.set(c.el, {
+      x: W / 2 + (rand() - 0.5) * 200, y: H + 300, scale: s, rotation: (rand() - 0.5) * 60, zIndex: i + 1,
+    });
+    attachTilt(c.el, c.tilt);
+  });
+}
+
+function stackPos(i) {
+  const { W, H } = vp();
+  return { x: W / 2, y: H / 2 - i * 0.6, rotation: (rand() - 0.5) * 4 };
+}
+
+function dealIn() {
+  const tl = gsap.timeline();
+  S.cards.forEach((c, i) => {
+    tl.to(c.el, { ...stackPos(i), duration: 0.9, ease: 'expo.out' }, i * 0.028);
+    tl.add(() => audio.deal(), i * 0.028 + 0.06);
+  });
+  tl.to(fx.state, { glow: 0.6, duration: 0.6, yoyo: true, repeat: 1 }, 0);
+  return tl;
+}
+
+function shuffleAnim() {
+  const { W, H } = vp();
+  const cx = W / 2, cy = H / 2;
+  const rx = Math.min(W * 0.36, 440), ry = Math.min(H * 0.24, 230);
+  const n = S.cards.length;
+  const base = deckScale();
+  const tl = gsap.timeline();
+
+  // 1. 漩涡展开
+  tl.add(() => sigil.speed(16, 1.2), 0);
+  tl.add(() => audio.shuffle(0.05 + n * 0.012 + 0.75 + 1.15 + 0.7), 0);
+  tl.to(fx.state, { vortex: 1, duration: 1.1, ease: 'power2.in' }, 0);
+  tl.to('#sigil', { opacity: 0.85, duration: 1 }, 0);
+  const place = (c, i, t) => {
+    const a = (i / n) * TAU + t * TAU * 1.15 - Math.PI / 2;
+    const depth = Math.sin(a);                   // -1 远 ~ 1 近
+    return {
+      x: cx + Math.cos(a) * rx,
+      y: cy + depth * ry,
+      rotation: deg(a) + 90,
+      scale: base * (0.86 + 0.2 * (depth + 1) / 2),
+      zIndex: Math.round(100 + depth * 50),
+    };
+  };
+  S.cards.forEach((c, i) => {
+    const p = place(c, i, 0);
+    tl.to(c.el, { x: p.x, y: p.y, rotation: p.rotation, scale: p.scale, duration: 0.75, ease: 'power3.out' }, 0.05 + i * 0.012);
+    tl.set(c.el, { zIndex: p.zIndex }, 0.05 + i * 0.012);
+  });
+  // 2. 绕轨道旋转
+  const orbit = { t: 0 };
+  const t0 = 0.05 + n * 0.012 + 0.75;
+  tl.to(orbit, {
+    t: 1, duration: 1.15, ease: 'power1.inOut',
+    onUpdate() { S.cards.forEach((c, i) => gsap.set(c.el, place(c, i, orbit.t))); },
+  }, t0);
+  // 3. 收拢回牌堆
+  const t1 = t0 + 1.15;
+  const order = shuffled(S.cards.map((_, i) => i));
+  S.cards.forEach((c, i) => {
+    const k = order[i];
+    tl.to(c.el, { ...stackPos(k), scale: base, duration: 0.6, ease: 'power3.inOut' }, t1 + k * 0.012);
+    tl.set(c.el, { zIndex: k + 1 }, t1 + k * 0.012 + 0.3);
+  });
+  tl.add(() => sigil.speed(1, 1.6), t1);
+  tl.to(fx.state, { vortex: 0, duration: 1.2, ease: 'power2.out' }, t1);
+  tl.to('#sigil', { opacity: 0.5, duration: 1.4 }, t1);
+  // 4. 鸽尾洗牌
+  const t2 = t1 + 0.6 + n * 0.012 + 0.05;
+  const dw = BASE * base;
+  const sorted = S.cards.slice().sort((a, b) => gsap.getProperty(a.el, 'zIndex') - gsap.getProperty(b.el, 'zIndex'));
+  for (let r = 0; r < 1; r++) {
+    const left = sorted.filter((_, i) => i % 2 === 0);
+    const right = sorted.filter((_, i) => i % 2 === 1);
+    const tt = t2 + r * 0.9;
+    tl.add(() => audio.riffle(8, 0.2), tt);
+    tl.add(() => audio.riffle(22, 0.5), tt + 0.38);
+    tl.to(left.map((c) => c.el), { x: cx - dw * 0.6, rotation: -10, duration: 0.32, ease: 'power3.out', stagger: 0.004 }, tt);
+    tl.to(right.map((c) => c.el), { x: cx + dw * 0.6, rotation: 10, duration: 0.32, ease: 'power3.out', stagger: 0.004 }, tt);
+    tl.to(sorted.map((c) => c.el), {
+      x: cx, rotation: () => (rand() - 0.5) * 4, duration: 0.42, ease: 'power3.inOut', stagger: { each: 0.012, from: 'end' },
+    }, tt + 0.38);
+  }
+  tl.add(() => fx.burst(cx, cy, { count: 50, power: 0.6 }), '-=0.1');
+  return tl;
+}
+
+function buildSlots() {
+  S.slots = S.spread.positions.map((name, i) => {
+    const el = document.createElement('div');
+    el.className = 'slot';
+    el.innerHTML = `<span class="ghost-frame"></span><span class="label">${name}</span>`;
+    stage.insertBefore(el, stage.firstChild);
+    return { el, name, i };
+  });
+  const geo = pickSlotGeom(S.slots.length);
+  S.slots.forEach((s, i) => {
+    const g = geo[i];
+    gsap.set(s.el, { x: g.x, y: g.y, width: g.w, height: g.h, xPercent: -50, yPercent: -50 });
+  });
+}
+
+function fanOut() {
+  const cards = S.cards.slice().sort((a, b) => gsap.getProperty(a.el, 'zIndex') - gsap.getProperty(b.el, 'zIndex'));
+  S.cards = cards;
+  const f = fanGeom(cards.length);
+  const tl = gsap.timeline();
+  tl.add(() => audio.fan(), 0);
+  cards.forEach((c, i) => {
+    c.fan = i;
+    gsap.set(c.el, { zIndex: 10 + i });
+    tl.to(c.el, { ...f.pos(i), duration: 1.0, ease: 'expo.out' }, Math.abs(i - (cards.length - 1) / 2) * 0.02);
+  });
+  tl.fromTo(S.slots.map((s) => s.el), { opacity: 0, scale: 0.9 }, {
+    opacity: 1, scale: 1, duration: 0.8, ease: 'expo.out', stagger: 0.08,
+  }, 0.3);
+  tl.add(() => {
+    S.phase = 'pick';
+    updatePickHint();
+    cards.forEach((c) => c.el.classList.add('in-fan'));
+  }, 0.6);
+  return tl;
+}
+
+function updatePickHint() {
+  const left = S.slots.length - S.picked.length;
+  setHint(left > 0 ? `凭直觉选出 ${left} 张牌 · ${S.slots[S.picked.length].name}` : '命运已就位');
+}
+
+function onCardClick(c) {
+  if (S.phase === 'pick' && c.slot < 0) return pick(c);
+  if (S.phase === 'reveal' && !c.revealed) return reveal(c);
+  if (c.revealed && !c.busy) return openModal(c);
+}
+
+function pick(c) {
+  if (S.picked.length >= S.slots.length) return;
+  c.el.classList.remove('in-fan', 'chosen');   // 清掉高亮抬起，否则落位后整张牌会高出牌位
+  c.slot = S.picked.length;
+  S.picked.push(c);
+  c.reversed = CFG.reversed && rand() < REVERSE_CHANCE;
+  c.el.classList.toggle('reversed', c.reversed);
+
+  // 余下的牌合拢
+  const rest = S.cards.filter((x) => x.slot < 0);
+  const f = fanGeom(rest.length);
+  rest.forEach((x, i) => {
+    x.fan = i;
+    gsap.to(x.el, { ...f.pos(i), duration: 0.6, ease: 'power3.out', overwrite: 'auto' });
+  });
+
+  // 飞向牌位（x/y 不同缓动 → 弧线轨迹）
+  const slot = S.slots[c.slot];
+  const g = pickSlotGeom(S.slots.length)[c.slot];
+  const s = g.w / BASE;
+  gsap.set(c.el, { zIndex: 300 + c.slot });
+  audio.pick();
+  const tl = gsap.timeline();
+  tl.to(c.el, { x: g.x, duration: 0.85, ease: 'power2.inOut' }, 0)
+    .to(c.el, { y: g.y, duration: 0.85, ease: 'back.inOut(1.4)' }, 0)
+    .to(c.el, { rotation: 0, duration: 0.85, ease: 'power3.inOut' }, 0)
+    .to(c.el, { scale: s * 1.12, duration: 0.5, ease: 'power2.out' }, 0)
+    .to(c.el, { scale: s, duration: 0.35, ease: 'power2.in' }, 0.5)
+    .add(() => {
+      slot.el.classList.add('filled');
+      audio.land();
+      fx.burst(g.x, g.y + g.h / 2, { count: 26, power: 0.45 });
+      gsap.fromTo(c.aura, { opacity: 0.8 }, { opacity: 0, duration: 0.8 });
+    }, 0.82);
+
+  updatePickHint();
+  if (S.picked.length === S.slots.length) {
+    S.phase = 'gather';
+    tl.add(() => afterPick(), '+=0.15');
+  }
+}
+
+async function afterPick() {
+  const rest = S.cards.filter((c) => c.slot < 0);
+  rest.forEach((c) => c.el.classList.remove('in-fan'));
+  const { W, H } = vp();
+  audio.gather();
+  // 剩余牌收拢并沉没
+  await gsap.timeline()
+    .to(rest.map((c) => c.el), { x: W / 2, rotation: 0, duration: 0.5, ease: 'power3.in', stagger: { each: 0.01, from: 'edges' } })
+    .to(rest.map((c) => c.el), { y: H + 300, opacity: 0, duration: 0.6, ease: 'power3.in', stagger: 0.008 }, '-=0.15');
+  rest.forEach((c) => c.el.remove());
+  S.cards = S.picked.slice();
+  motionBlur(false);
+  S.phase = 'reveal';
+  await layoutReveal(0.9);
+  S.picked.forEach((c) => c.el.classList.add('revealable'));
+  setHint(S.picked.length > 1 ? '轻触牌面，逐一揭示命运' : '轻触牌面，揭示命运');
+  if (S.auto || CFG.autoReveal) {
+    setHint('命运正在揭晓……');
+    gsap.delayedCall(0.5, revealAll);
+  } else if (S.picked.length > 1) {
+    btnRevealAll.hidden = false;
+    gsap.fromTo(btnRevealAll, { opacity: 0, x: 10 }, { opacity: 1, x: 0, duration: 0.5 });
+  }
+}
+
+function layoutReveal(d = 0.8) {
+  const geo = revealSlotGeom();
+  const tl = gsap.timeline();
+  const compact = geo[0].w < 84;
+  tl.to(stage.querySelectorAll('.slot .label'), { opacity: compact ? 0 : 1, duration: 0.3 }, 0);
+  S.slots.forEach((s, i) => {
+    const g = geo[i];
+    tl.to(s.el, { x: g.x, y: g.y, width: g.w, height: g.h, duration: d, ease: 'expo.inOut' }, i * 0.04);
+  });
+  S.picked.forEach((c) => {
+    const g = geo[c.slot];
+    tl.to(c.el, { x: g.x, y: g.y, scale: g.w / BASE, rotation: 0, duration: d, ease: 'expo.inOut' }, c.slot * 0.04);
+  });
+  return tl;
+}
+
+function flashAt(x, y, size) {
+  gsap.fromTo(flash, { x, y, scale: size / 300, opacity: 0.95 }, { scale: (size / 300) * 3, opacity: 0, duration: 1.1, ease: 'power2.out' });
+}
+
+function reveal(c) {
+  if (c.busy || c.revealed) return Promise.resolve();
+  const art = c.el.querySelector('.art');
+  if (!art.complete) {
+    c.busy = true;
+    art.decode().catch(() => {}).finally(() => { c.busy = false; reveal(c); });
+    return Promise.resolve();
+  }
+  c.busy = true;
+  c.el.classList.remove('revealable');
+  const g = revealSlotGeom()[c.slot];
+  const s = g.w / BASE;
+  const dark = DARK_CARDS.has(c.data.id);
+  const colors = dark ? ['#c2334f', '#7a1d36', '#e9d39a', '#ff7a5c', '#b39963'] : undefined;
+  gsap.set(c.el, { zIndex: 400 });
+
+  const tl = gsap.timeline({
+    onComplete() {
+      c.busy = false;
+      c.revealed = true;
+      c.el.classList.add('revealed');
+      c.el.dataset.tilt = 'on';
+      gsap.set(c.el, { zIndex: 300 + c.slot });
+      onRevealed();
+    },
+  });
+  tl.add(() => audio.charge(0.5), 0)
+    .add(() => audio.flip(), 0.5)
+    .add(() => audio.reveal(dark), 0.9)
+    .to(c.aura, { opacity: 1, scale: 1.15, duration: 0.5, ease: 'power2.in' }, 0)
+    .to(c.el, { y: g.y - g.h * 0.05, duration: 0.5, ease: 'power2.out' }, 0)
+    .fromTo(c.tilt, { rotationZ: -1.5 }, { rotationZ: 1.5, duration: 0.05, repeat: 7, yoyo: true, ease: 'none' }, 0.12)
+    .to(c.tilt, { rotationZ: 0, duration: 0.08 }, 0.56)
+    .to(c.inner, { rotationY: 180, duration: 0.95, ease: 'power3.inOut' }, 0.5)
+    .to(c.el, { scale: s * 1.14, duration: 0.48, ease: 'power2.out' }, 0.5)
+    .add(() => {
+      flashAt(g.x, g.y, g.w);
+      fx.burst(g.x, g.y, { count: 120, power: clamp(g.w / 180, 0.6, 1.6), colors });
+      c.el.classList.add('shine', 'show-plates');
+      gsap.delayedCall(2.4, () => c.el.classList.remove('show-plates'));
+      if (!reduced && !CFG.calm) gsap.fromTo(stage, { x: 0 }, { x: 3, duration: 0.05, repeat: 5, yoyo: true, ease: 'none', clearProps: 'x' });
+    }, 0.9)
+    .to(c.el, { scale: s, y: g.y, duration: 0.8, ease: 'expo.out' }, 0.98)
+    .to(c.aura, { opacity: 0.22, scale: 1, duration: 1.2, ease: 'power2.out' }, 1.0);
+
+  // 牌位标签换成牌名
+  const label = S.slots[c.slot].el.querySelector('.label');
+  tl.add(() => {
+    gsap.to(label, {
+      opacity: 0, duration: 0.2,
+      onComplete() {
+        label.innerHTML = `${S.slots[c.slot].name}<em>${c.data.zh}${c.reversed ? '<small>逆</small>' : ''}</em>`;
+        gsap.to(label, { opacity: 1, duration: 0.4 });
+      },
+    });
+  }, 1.0);
+  return tl;
+}
+
+function onRevealed() {
+  const left = S.picked.filter((c) => !c.revealed).length;
+  if (left > 0) return;
+  btnRevealAll.hidden = true;
+  S.phase = 'done';
+  setHint('命运已揭晓 · 点击牌面查看详情');
+  gsap.delayedCall(0.7, openReading);
+}
+
+async function revealAll() {
+  btnRevealAll.hidden = true;
+  const list = S.picked.filter((c) => !c.revealed && !c.busy);
+  for (const c of list) {
+    reveal(c);
+    await new Promise((r) => setTimeout(r, 420));
+  }
+}
+
+function placeSigil(d = 1.1) {
+  const { W, H, mobile } = vp();
+  let cx = W / 2, cy = H / 2;
+  if (S.readingOpen) {
+    if (mobile) cy = H * 0.22;
+    else cx = (W - Math.min(440, W * 0.38)) / 2;
+  }
+  gsap.to('#sigil', { left: cx, top: cy, duration: d, ease: 'expo.inOut', overwrite: 'auto' });
+}
+
+/* ════════ 解读面板 ════════ */
+function openReading() {
+  if (S.readingOpen) return;
+  S.readingOpen = true;
+  audio.pad();
+  const { mobile } = vp();
+  readingInner.innerHTML = `
+    <div class="r-head">
+      <div class="r-eyebrow">THE READING</div>
+      <h2>${S.spread.name}</h2>
+      ${S.question ? `<p class="r-q">${esc(S.question)}</p>` : ''}
+      <i class="rule"></i>
+    </div>
+    ${S.picked.map((c) => `
+      <div class="r-item" data-slot="${c.slot}">
+        <div class="r-thumb ${c.reversed ? 'rev' : ''}"><img src="${artSrc(c.data.id)}" alt=""></div>
+        <div>
+          <div class="r-pos">${S.slots[c.slot].name}</div>
+          <div class="r-name">${c.data.zh}<small>${c.data.num} · ${c.data.en}</small>
+            <span class="badge ${c.reversed ? 'rev' : 'up'}">${c.reversed ? '逆位' : '正位'}</span></div>
+          <p class="r-text">${c.reversed ? c.data.rev : c.data.up}</p>
+          <p class="r-whisper">${c.data.whisper}</p>
+        </div>
+      </div>`).join('')}
+    <div class="r-foot"><button class="plate sm" type="button" data-again>再抽一次</button></div>`;
+  reading.hidden = false;
+  reading.scrollTop = 0;
+  const tl = gsap.timeline();
+  tl.fromTo(reading, mobile ? { yPercent: 100 } : { xPercent: 100 }, { xPercent: 0, yPercent: 0, duration: 0.9, ease: 'expo.out' }, 0)
+    .from(readingInner.children, { y: 24, opacity: 0, duration: 0.7, ease: 'power3.out', stagger: 0.08 }, 0.25);
+  tl.add(layoutReveal(0.9), 0);
+  placeSigil(0.9);
+}
+
+readingInner.addEventListener('click', (e) => {
+  if (e.target.closest('[data-again]')) return restart();
+  const item = e.target.closest('.r-item');
+  if (item) {
+    const c = S.picked.find((x) => x.slot === +item.dataset.slot);
+    if (c) openModal(c);
+  }
+});
+
+/* ════════ 大图弹窗 ════════ */
+const modalCard = $('#modal-card');
+const modalText = $('#modal-text');
+modalCard.innerHTML = `<div class="tilt"><div class="face"></div></div>`;
+const modalTilt = modalCard.querySelector('.tilt');
+const modalFace = modalCard.querySelector('.face');
+modalCard.addEventListener('click', () => modalCard.classList.toggle('show-plates'));
+modalCard.dataset.tilt = 'on';
+attachTilt(modalCard, modalTilt, 10);
+
+function openModal(c) {
+  if (S.modalCard) return;
+  S.modalCard = c;
+  audio.open();
+  const d = c.data;
+  modalFace.innerHTML = `${frontLayers(d.id)}<div class="glare"></div>`;
+  modalCard.classList.remove('show-plates');
+  // 先用小图秒开，再无缝换成高清
+  const hi = [artSrc(d.id, 'full'), UI('frame.webp')].map((src) => { const i = new Image(); i.src = src; return i; });
+  Promise.all(hi.map((i) => i.decode())).then(() => {
+    if (S.modalCard !== c) return;
+    ['.art', '.frame'].forEach((sel, k) => { modalFace.querySelector(sel).src = hi[k].src; });
+  }).catch(() => {});
+  modalCard.classList.toggle('reversed', c.reversed);
+  const pos = S.slots[c.slot]?.name;
+  modalText.innerHTML = `
+    <div class="m-num">${d.num} · ${pos ? esc(pos) : ''}</div>
+    <h3 class="m-title">${d.zh} <span class="badge ${c.reversed ? 'rev' : 'up'}">${c.reversed ? '逆位' : '正位'}</span></h3>
+    <div class="m-en">${d.en}</div>
+    <div class="m-keys">${d.keys.map((k) => `<span>${k}</span>`).join('')}</div>
+    <div class="m-sec"><h4>${c.reversed ? '逆位 · 你抽到的' : '正位 · 你抽到的'}</h4><p>${c.reversed ? d.rev : d.up}</p></div>
+    <div class="m-sec dim"><h4>${c.reversed ? '正位' : '逆位'}</h4><p>${c.reversed ? d.up : d.rev}</p></div>
+    <div class="m-whisper">奶蛙：${d.whisper}</div>`;
+  modal.hidden = false;
+
+  const from = c.el.getBoundingClientRect();
+  const to = modalCard.getBoundingClientRect();
+  gsap.set(c.el, { opacity: 0 });
+  gsap.timeline()
+    .fromTo('.modal-backdrop', { opacity: 0 }, { opacity: 1, duration: 0.5, ease: 'power2.out' }, 0)
+    .fromTo(modalCard, {
+      x: from.left + from.width / 2 - (to.left + to.width / 2),
+      y: from.top + from.height / 2 - (to.top + to.height / 2),
+      scale: from.width / to.width,
+    }, { x: 0, y: 0, scale: 1, duration: 0.8, ease: 'expo.out' }, 0)
+    .fromTo(modalTilt, { rotationY: -25 }, { rotationY: 0, duration: 1.1, ease: 'expo.out' }, 0)
+    .fromTo(modalText.children, { x: 30, opacity: 0 }, { x: 0, opacity: 1, duration: 0.7, ease: 'power3.out', stagger: 0.05 }, 0.15)
+    .fromTo('.modal-close', { opacity: 0 }, { opacity: 1, duration: 0.4 }, 0.3);
+}
+
+function closeModal() {
+  const c = S.modalCard;
+  if (!c) return;
+  audio.close();
+  const from = c.el.getBoundingClientRect();
+  const to = modalCard.getBoundingClientRect();
+  gsap.timeline({
+    onComplete() {
+      modal.hidden = true;
+      gsap.set(c.el, { opacity: 1 });
+      gsap.set([modalCard, modalTilt], { clearProps: 'transform' });
+      S.modalCard = null;
+    },
+  })
+    .to(modalText.children, { opacity: 0, duration: 0.2 }, 0)
+    .to('.modal-backdrop', { opacity: 0, duration: 0.45 }, 0.05)
+    .to(modalCard, {
+      x: from.left + from.width / 2 - (to.left + to.width / 2),
+      y: from.top + from.height / 2 - (to.top + to.height / 2),
+      scale: from.width / to.width,
+      duration: 0.55, ease: 'expo.inOut',
+    }, 0)
+    .to(modalTilt, { rotationX: 0, rotationY: 0, duration: 0.4 }, 0);
+}
+
+modal.addEventListener('click', (e) => {
+  if (e.target.closest('[data-close]') || e.target.classList.contains('modal-body')) closeModal();
+});
+addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+/* ════════ 重新开始 ════════ */
+async function restart() {
+  if (S.busy || S.phase === 'intro') return;
+  S.busy = true;
+  audio.restart();
+  if (S.modalCard) closeModal();
+  const { H } = vp();
+  btnRestart.hidden = true;
+  btnRevealAll.hidden = true;
+  btnSkip.hidden = true;
+  setHint('');
+  const tl = gsap.timeline();
+  if (S.readingOpen) {
+    const { mobile } = vp();
+    tl.to(reading, { ...(mobile ? { yPercent: 100 } : { xPercent: 100 }), duration: 0.6, ease: 'expo.in' }, 0);
+  }
+  const els = [...stage.querySelectorAll('.card')];
+  tl.to(els, {
+    y: H + 400, rotation: () => (rand() - 0.5) * 50, opacity: 0, duration: 0.75, ease: 'power3.in', stagger: 0.03,
+  }, 0);
+  tl.to(stage.querySelectorAll('.slot'), { opacity: 0, scale: 0.9, duration: 0.4, stagger: 0.04 }, 0);
+  await tl;
+  reading.hidden = true;
+  gsap.set(reading, { clearProps: 'transform' });
+  stage.innerHTML = '';
+  Object.assign(S, { phase: 'intro', key: null, spread: null, cards: [], picked: [], slots: [], readingOpen: false, auto: false });
+  setSkipping(false);
+  placeSigil(1);
+  $('#question').value = '';
+  await introIn();
+  S.busy = false;
+}
+
+btnRestart.addEventListener('click', restart);
+
+// 静音开关
+const btnSound = $('#sound');
+const syncSound = () => {
+  btnSound.classList.toggle('off', audio.muted);
+  btnSound.setAttribute('aria-pressed', String(!audio.muted));
+  btnSound.setAttribute('aria-label', audio.muted ? '开启音效' : '关闭音效');
+};
+btnSound.addEventListener('click', () => {
+  audio.unlock();
+  CFG.sound = !CFG.sound;
+  saveCfg(); applyCfg();
+  audio.click();
+});
+
+/* ════════ 设置面板 ════════ */
+const btnSkip = $('#skip');
+const btnSettings = $('#settings-btn');
+const panel = $('#settings');
+function applyCfg() {
+  audio.setMuted(!CFG.sound);
+  audio.setAmbient(CFG.ambient);
+  syncSound();
+  applySpeed();
+  document.body.classList.toggle('calm', CFG.calm);
+  if (!CFG.parallax) for (const t of tilts) t.set(0, 0);
+  document.querySelectorAll('input[data-k]').forEach((i) => { i.checked = !!CFG[i.dataset.k]; });
+}
+document.addEventListener('change', (e) => {
+  const k = e.target.dataset && e.target.dataset.k;
+  if (!k) return;
+  CFG[k] = e.target.checked;
+  saveCfg(); applyCfg();
+  audio.unlock(); audio.click();
+});
+function toggleSettings(open = panel.hidden) {
+  if (open === !panel.hidden) return;
+  btnSettings.setAttribute('aria-expanded', String(open));
+  if (open) {
+    panel.hidden = false;
+    gsap.fromTo(panel, { opacity: 0, scale: 0.94, y: -8 }, { opacity: 1, scale: 1, y: 0, duration: 0.45, ease: 'expo.out' });
+    gsap.fromTo(panel.children, { opacity: 0, x: 8 }, { opacity: 1, x: 0, duration: 0.4, stagger: 0.025, ease: 'power3.out' });
+  } else {
+    gsap.to(panel, { opacity: 0, scale: 0.96, duration: 0.2, ease: 'power2.in', onComplete: () => { panel.hidden = true; } });
+  }
+}
+btnSettings.addEventListener('click', () => { audio.unlock(); audio.click(); toggleSettings(); });
+addEventListener('pointerdown', (e) => {
+  if (!panel.hidden && !panel.contains(e.target) && !btnSettings.contains(e.target)) toggleSettings(false);
+});
+addEventListener('keydown', (e) => { if (e.key === 'Escape') toggleSettings(false); });
+btnSkip.addEventListener('click', () => { audio.click(); setSkipping(true); });
+applyCfg();
+$('#brand').addEventListener('click', restart);
+btnRevealAll.addEventListener('click', revealAll);
+
+/* ════════ 窗口变化 ════════ */
+let rT;
+addEventListener('resize', () => {
+  clearTimeout(rT);
+  rT = setTimeout(() => {
+    if (S.phase === 'pick') {
+      const rest = S.cards.filter((c) => c.slot < 0);
+      const f = fanGeom(rest.length);
+      rest.forEach((c, i) => gsap.to(c.el, { ...f.pos(i), duration: 0.4 }));
+      const geo = pickSlotGeom(S.slots.length);
+      S.slots.forEach((s, i) => gsap.to(s.el, { x: geo[i].x, y: geo[i].y, width: geo[i].w, height: geo[i].h, duration: 0.4 }));
+      S.picked.forEach((c) => gsap.to(c.el, { x: geo[c.slot].x, y: geo[c.slot].y, scale: geo[c.slot].w / BASE, duration: 0.4 }));
+    } else if (S.phase === 'reveal' || S.phase === 'done') {
+      layoutReveal(0.4);
+    }
+    placeSigil(0.4);
+  }, 120);
+});
+
+/* ════════ 启动 ════════ */
+buildIntro();
+introIn();

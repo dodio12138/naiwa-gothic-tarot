@@ -1,0 +1,10 @@
+node_modules
+dist
+.DS_Store
+.claude/settings.local.json
+
+# 制作用的大体积原图只留在本地（网站用的是 public/ 里压缩后的版本）
+assets-src/chatgpt_art/
+assets-src/illustrations_jpg/
+assets-src/*.png
+assets-src/*.jpg
