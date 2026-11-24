@@ -1,0 +1,2029 @@
+{
+  "$schema": "./cards.schema.json",
+  "cards": [
+    {
+      "id": "major_00",
+      "arcana": "major",
+      "suit": null,
+      "rank": 0,
+      "num": "0",
+      "name": {
+        "zh": "愚者",
+        "en": "THE FOOL"
+      },
+      "keys": {
+        "zh": [
+          "开始",
+          "纯真",
+          "未知"
+        ],
+        "en": [
+          "Beginnings",
+          "Innocence",
+          "The unknown"
+        ]
+      },
+      "up": {
+        "zh": "新的旅程正在悬崖边等你。不必想清楚每一步，带上小包袱，先迈出那只短短的脚。",
+        "en": "A new journey waits at the cliff's edge. You don't need every step figured out — pick up your little bundle and take that first short step."
+      },
+      "rev": {
+        "zh": "冲动或犹豫都在拖住你。看清脚下的路，再决定是跳还是等。",
+        "en": "Recklessness or hesitation is holding you back. Look at the ground beneath you, then decide whether to leap or wait."
+      },
+      "whispers": [
+        {
+          "zh": "……前面好像没有路。没关系，我也没有脖子。",
+          "en": "…There seems to be no road ahead. That's fine. I don't have a neck either."
+        },
+        {
+          "zh": "包袱里装着一块饼干。这就是全部家当。",
+          "en": "There's one biscuit in the bundle. That's everything I own."
+        },
+        {
+          "zh": "黑狗在提醒我。我听见了，但脚已经抬起来了。",
+          "en": "The black dog is warning me. I heard. My foot is already up."
+        },
+        {
+          "zh": "不知道去哪里，所以哪里都可以去。",
+          "en": "I don't know where I'm going, so I can go anywhere."
+        }
+      ],
+      "scene": {
+        "zh": "月下的悬崖边，奶蛙拎着小包袱，黑狗凑到脚边，路旁开着一朵黑玫瑰。远处是废弃的城堡——出发之前，一切都还很轻。",
+        "en": "At a moonlit cliff edge Naiwa holds a tiny bundle; a black dog noses at its feet and a single black rose grows by the path. A ruined castle waits far behind — before a journey, everything is still light."
+      },
+      "origin": {
+        "zh": "传统画面里，一个年轻人背着行囊、手拈白玫瑰走向悬崖，小白狗在脚边吠叫。编号 0 意味着他不在序列之内，又贯穿全部——整套大阿尔卡那常被读作「愚者之旅」，后面 21 张就是他一路遇见的风景。",
+        "en": "In the classic image a young traveller with a bundle and a white rose strolls toward a cliff while a small dog yaps at his heels. Numbered 0, he stands outside the sequence yet runs through all of it — the Major Arcana is often read as \"the Fool's Journey\", and the other 21 cards are what he meets along the way."
+      },
+      "astro": {
+        "zh": "风元素（现代：天王星）",
+        "en": "Air (modern: Uranus)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "适合放下顾虑去认识新的人，或给一段关系一个轻松的新开始。不必急着定义它。",
+            "en": "A good time to meet someone new, or give a relationship a light, fresh start. No need to define it yet."
+          },
+          "work": {
+            "zh": "新项目、新方向、换个环境都值得一试。经验少不是缺点，好奇心就是你的本钱。",
+            "en": "New projects, new directions, a change of scene — all worth a try. Inexperience isn't a flaw; curiosity is your capital."
+          },
+          "advice": {
+            "zh": "先迈出最小的一步，再边走边看。",
+            "en": "Take the smallest first step and figure out the rest on the way."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "一时冲动或害怕受伤，都可能让你乱了方寸。慢一点，看清对方，也看清自己。",
+            "en": "Impulse, or fear of getting hurt, may throw you off. Slow down; see the other person — and yourself — clearly."
+          },
+          "work": {
+            "zh": "计划太草率，或因为害怕失败迟迟不动。补上该做的功课，再出发。",
+            "en": "Plans are too hasty, or fear of failure keeps you frozen. Do the homework, then set off."
+          },
+          "advice": {
+            "zh": "跳之前，先低头看一眼悬崖有多高。",
+            "en": "Before you leap, glance down to see how high the cliff is."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "major_01",
+      "arcana": "major",
+      "suit": null,
+      "rank": 1,
+      "num": "I",
+      "name": {
+        "zh": "魔术师",
+        "en": "THE MAGICIAN"
+      },
+      "keys": {
+        "zh": [
+          "意志",
+          "创造",
+          "行动"
+        ],
+        "en": [
+          "Will",
+          "Creation",
+          "Action"
+        ]
+      },
+      "up": {
+        "zh": "你手里已经握着四种元素。专注意志，把想法变成现实的时刻到了。",
+        "en": "All four elements are already in your hands. Focus your will — it is time to turn ideas into reality."
+      },
+      "rev": {
+        "zh": "才能被分散或误用，小心空有技巧却缺少方向，或被话术迷惑。",
+        "en": "Talent scattered or misused. Beware of skill without direction, or of being dazzled by clever words."
+      },
+      "whispers": [
+        {
+          "zh": "魔杖举起来了。接下来做什么，我也不知道。",
+          "en": "The wand is raised. What happens next, I also do not know."
+        },
+        {
+          "zh": "四样道具都在。我只会用其中一种用法：拿着。",
+          "en": "All four tools are here. I only know one way to use them: holding."
+        },
+        {
+          "zh": "无限符号在我头上转。我数到了第八圈。",
+          "en": "The infinity sign spins over my head. I counted to eight."
+        },
+        {
+          "zh": "三根手指也能变魔术。主要靠气势。",
+          "en": "Three fingers are enough for magic. It's mostly about presence."
+        }
+      ],
+      "scene": {
+        "zh": "狭长的石祭坛上摆着权杖、圣杯、宝剑和星币，奶蛙一手举杖、一手指地，头顶浮着无限符号。天与地之间，它是那根导线。",
+        "en": "On a narrow stone altar lie a wand, a chalice, a sword and a coin. Naiwa raises a wand with one hand and points down with the other, an infinity sign floating above. Between heaven and earth, it is the wire that connects them."
+      },
+      "origin": {
+        "zh": "韦特牌中的魔术师一手举杖指天、一手指地，象征「如其在上，如其在下」；桌上的权杖、圣杯、宝剑、星币代表四元素，也就是小阿尔卡那的四个花色。他是愚者遇到的第一位老师：教会他把意念变成行动。",
+        "en": "The Rider–Waite Magician points a wand to the sky and a hand to the earth — \"as above, so below\". On his table lie wand, cup, sword and pentacle: the four elements, and the four suits of the Minor Arcana. He is the Fool's first teacher, showing how will becomes action."
+      },
+      "astro": {
+        "zh": "水星",
+        "en": "Mercury"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "主动表达会得到回应。你有魅力，也有能力经营好这段关系。",
+            "en": "Speak up and you will be answered. You have the charm and the skill to make this relationship work."
+          },
+          "work": {
+            "zh": "资源和能力都已到位，适合启动、提案、谈判。把想法落到第一步行动上。",
+            "en": "Resources and skills are in place — a good time to launch, pitch or negotiate. Turn the idea into a first action."
+          },
+          "advice": {
+            "zh": "清点手上已有的东西，你比想象中更准备好了。",
+            "en": "Take stock of what you already hold — you're more ready than you think."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "小心甜言蜜语，也别用技巧代替真心。",
+            "en": "Beware of sweet talk, and don't use tactics in place of sincerity."
+          },
+          "work": {
+            "zh": "想法太多、精力分散，或者只停留在嘴上。挑一件事做到底。",
+            "en": "Too many ideas, scattered energy, or all talk. Pick one thing and see it through."
+          },
+          "advice": {
+            "zh": "少说一点，多做一件。",
+            "en": "Say a little less; do one more thing."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "major_02",
+      "arcana": "major",
+      "suit": null,
+      "rank": 2,
+      "num": "II",
+      "name": {
+        "zh": "女祭司",
+        "en": "THE HIGH PRIESTESS"
+      },
+      "keys": {
+        "zh": [
+          "直觉",
+          "隐秘",
+          "潜意识"
+        ],
+        "en": [
+          "Intuition",
+          "Secrets",
+          "Subconscious"
+        ]
+      },
+      "up": {
+        "zh": "答案不在喧嚣里。安静下来，倾听内心的低语，直觉会为你揭开帷幕。",
+        "en": "The answer isn't in the noise. Be still and listen to the whisper within; intuition will draw back the veil."
+      },
+      "rev": {
+        "zh": "你在忽视自己的直觉，或有秘密尚未浮出水面。别急着下结论。",
+        "en": "You're ignoring your intuition, or a secret has yet to surface. Don't rush to conclusions."
+      },
+      "whispers": [
+        {
+          "zh": "卷轴上写了什么？……我不识字。",
+          "en": "What does the scroll say? …I can't read."
+        },
+        {
+          "zh": "帷幕后面有什么？我也没看过。我只负责坐着。",
+          "en": "What's behind the veil? I've never looked. I'm only in charge of sitting."
+        },
+        {
+          "zh": "黑柱子和白柱子。我是黄色的，不算在里面。",
+          "en": "A black pillar and a white pillar. I'm yellow, so I don't count."
+        },
+        {
+          "zh": "嘘。（本来也没有在说话）",
+          "en": "Shh. (I wasn't talking anyway.)"
+        }
+      ],
+      "scene": {
+        "zh": "黑白双柱之间，奶蛙坐在低矮的石座上，怀抱古卷，石榴帷幕挡住了后面的东西。脚边一弯银月，什么都没说。",
+        "en": "Between a black pillar and a white one, Naiwa sits on a low stone seat holding an ancient scroll; a pomegranate veil hides what lies behind. A silver crescent rests at its feet, saying nothing."
+      },
+      "origin": {
+        "zh": "女祭司坐在神殿的黑白双柱之间，柱上刻着 B 与 J，取自所罗门圣殿的两根柱子。她手持律法卷轴、脚踏新月，身后的石榴帷幕遮住了奥秘。她代表不言而喻的知识，是与魔术师相对的「静」。",
+        "en": "The High Priestess sits between the black and white pillars of a temple, marked B and J after the pillars of Solomon's Temple. She holds a scroll of law with a crescent moon at her feet, and a pomegranate veil hides the mysteries. She is wordless knowing — the stillness that answers the Magician's action."
+      },
+      "astro": {
+        "zh": "月亮",
+        "en": "The Moon"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "有些感觉不用说破。留意对方没说出口的部分，也相信你的第一印象。",
+            "en": "Some feelings needn't be spoken. Notice what's left unsaid, and trust your first impression."
+          },
+          "work": {
+            "zh": "信息还不完整，先观察、收集、沉住气。学习和研究类的事情会很顺。",
+            "en": "Information is incomplete — observe, gather, stay calm. Study and research go well."
+          },
+          "advice": {
+            "zh": "做决定之前，给自己一段安静的时间。",
+            "en": "Give yourself a stretch of quiet before deciding."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "隐瞒、猜疑，或者你在压抑真实的感受。说出来会比憋着好。",
+            "en": "Secrets, suspicion, or feelings you're holding down. Saying it beats keeping it in."
+          },
+          "work": {
+            "zh": "忽略了直觉发出的警告，或有内情没被摆上台面。多问一句。",
+            "en": "An intuitive warning ignored, or something kept off the table. Ask one more question."
+          },
+          "advice": {
+            "zh": "别只听外面的声音，也听听自己的。",
+            "en": "Don't only listen to voices outside; listen to your own."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "major_03",
+      "arcana": "major",
+      "suit": null,
+      "rank": 3,
+      "num": "III",
+      "name": {
+        "zh": "皇后",
+        "en": "THE EMPRESS"
+      },
+      "keys": {
+        "zh": [
+          "丰饶",
+          "养育",
+          "生命"
+        ],
+        "en": [
+          "Abundance",
+          "Nurture",
+          "Life"
+        ]
+      },
+      "up": {
+        "zh": "丰盛正在生长。照顾好自己与身边的人，创造力和美好会自然结果。",
+        "en": "Abundance is growing. Care for yourself and those around you, and creativity and beauty will bear fruit."
+      },
+      "rev": {
+        "zh": "付出过度或疏于自我照顾，生长被卡住了。先给自己一点养分。",
+        "en": "Giving too much or neglecting yourself has stalled your growth. Nourish yourself first."
+      },
+      "whispers": [
+        {
+          "zh": "肚子很圆。这就是丰饶。",
+          "en": "My belly is very round. This is abundance."
+        },
+        {
+          "zh": "我在晒肚子。这是一项很重要的工作。",
+          "en": "I am sunning my belly. This is very important work."
+        },
+        {
+          "zh": "麦子熟了。我不会割，就看着。",
+          "en": "The wheat is ripe. I don't know how to harvest, so I watch."
+        },
+        {
+          "zh": "星星王冠有十二颗。戴着有点重，但很好看吧。",
+          "en": "Twelve stars on the crown. A bit heavy. It looks nice though, right?"
+        }
+      ],
+      "scene": {
+        "zh": "魔法花园里，奶蛙靠在宽大的丝绒宝座上，头戴十二星冠。黑玫瑰、石榴和金色麦穗围着它，一束暖光刚好落在肚子上。",
+        "en": "In an enchanted garden, Naiwa leans back in a wide velvet throne under a crown of twelve stars. Dark roses, pomegranates and golden wheat surround it, and a warm beam lands right on its belly."
+      },
+      "origin": {
+        "zh": "传统的皇后是大地之母：坐在麦田与森林之间，头戴十二星冠，身旁心形盾牌上刻着金星符号。她象征自然、感官与孕育，是一切「生长」的原型。",
+        "en": "The traditional Empress is the Earth Mother: seated among wheat and forest, crowned with twelve stars, beside a heart-shaped shield bearing the sign of Venus. She embodies nature, the senses and fertility — the archetype of all growing things."
+      },
+      "astro": {
+        "zh": "金星",
+        "en": "Venus"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "温柔、被照顾、被珍惜的阶段。适合一起过日子的小事：做饭、散步、养一盆花。",
+            "en": "A season of tenderness and being cherished. Good for small shared things: cooking, walks, a potted plant."
+          },
+          "work": {
+            "zh": "创作、设计、照护类工作会有好收获。慢慢养成的东西，正在开花。",
+            "en": "Creative, design and care work bears fruit. What you've nurtured slowly is blooming."
+          },
+          "advice": {
+            "zh": "对自己好一点，丰盛会从那里开始。",
+            "en": "Be kind to yourself — abundance starts there."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "付出太多、控制太多，或者把自己弄丢了。关系需要两个人一起浇水。",
+            "en": "Giving too much, controlling too much, or losing yourself. A relationship needs two people watering it."
+          },
+          "work": {
+            "zh": "灵感枯竭、成果迟迟不来。可能只是太累了，先休息再播种。",
+            "en": "Inspiration dries up and results stall. Maybe you're just exhausted — rest before you plant again."
+          },
+          "advice": {
+            "zh": "先把自己喂饱，再去照顾别人。",
+            "en": "Feed yourself first, then tend to others."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "major_04",
+      "arcana": "major",
+      "suit": null,
+      "rank": 4,
+      "num": "IV",
+      "name": {
+        "zh": "皇帝",
+        "en": "THE EMPEROR"
+      },
+      "keys": {
+        "zh": [
+          "秩序",
+          "结构",
+          "权威"
+        ],
+        "en": [
+          "Order",
+          "Structure",
+          "Authority"
+        ]
+      },
+      "up": {
+        "zh": "建立规则与边界，以稳定的结构掌控局面。责任感会带来真正的力量。",
+        "en": "Set rules and boundaries, and command the situation with steady structure. Responsibility brings real power."
+      },
+      "rev": {
+        "zh": "控制欲过强或秩序崩塌。僵化的规则需要松动，失控的局面需要框架。",
+        "en": "Too much control, or order collapsing. Rigid rules need loosening; chaos needs a frame."
+      },
+      "whispers": [
+        {
+          "zh": "王座很大。我很严肃。",
+          "en": "The throne is big. I am very serious."
+        },
+        {
+          "zh": "金球很重。我拿了一整天，没有喊累。因为不会喊。",
+          "en": "The golden orb is heavy. I held it all day without complaining. Because I can't."
+        },
+        {
+          "zh": "公羊头在看我。我也在看它们。谁先眨眼谁输。",
+          "en": "The ram heads are watching me. I'm watching them. First to blink loses."
+        },
+        {
+          "zh": "今天的规矩是：不许笑。（很简单）",
+          "en": "Today's rule: no smiling. (Easy.)"
+        }
+      ],
+      "scene": {
+        "zh": "黑曜石王座上刻着四个公羊头，奶蛙一手权杖、一手金球，端坐不动。身后是光秃秃的岩山——秩序就是这样一块一块垒起来的。",
+        "en": "Four ram heads are carved into the obsidian throne. Naiwa sits perfectly still, scepter in one hand and golden orb in the other. Bare rock mountains rise behind — order is built one block at a time like this."
+      },
+      "origin": {
+        "zh": "皇帝坐在刻有公羊头的石座上，公羊对应白羊座；他手握安卡十字权杖与宝球，背后是荒凉的山。与皇后的丰饶相对，他代表父性、法则与秩序——把世界整理成形的力量。",
+        "en": "The Emperor sits on a stone throne carved with ram heads, the sign of Aries, holding an ankh scepter and an orb before barren mountains. Opposite the Empress's abundance, he is the father principle: law, order, the force that gives the world its shape."
+      },
+      "astro": {
+        "zh": "白羊座",
+        "en": "Aries"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "稳定、可靠、愿意承担的关系。明确的承诺比浪漫的话更有分量。",
+            "en": "A stable, dependable relationship where someone takes responsibility. A clear commitment outweighs romantic words."
+          },
+          "work": {
+            "zh": "建立流程、定规则、带团队的好时机。你说的话有分量，敢于拍板吧。",
+            "en": "A good time to set up processes, make rules and lead a team. Your word carries weight — make the call."
+          },
+          "advice": {
+            "zh": "给自己的生活画一张清楚的结构图。",
+            "en": "Draw a clear structure for your life."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "一方太强势，或者谁都不愿负责。控制不等于保护。",
+            "en": "One side is too domineering, or no one will take responsibility. Control isn't protection."
+          },
+          "work": {
+            "zh": "管得太死，或者完全没人管。规矩要么松一松，要么赶紧立起来。",
+            "en": "Micromanaged, or not managed at all. Loosen the rules — or set some up, quickly."
+          },
+          "advice": {
+            "zh": "放下一点控制，也补上一点纪律。",
+            "en": "Let go of a little control; add a little discipline."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "major_05",
+      "arcana": "major",
+      "suit": null,
+      "rank": 5,
+      "num": "V",
+      "name": {
+        "zh": "教皇",
+        "en": "THE HIEROPHANT"
+      },
+      "keys": {
+        "zh": [
+          "传统",
+          "仪式",
+          "教导"
+        ],
+        "en": [
+          "Tradition",
+          "Ritual",
+          "Teaching"
+        ]
+      },
+      "up": {
+        "zh": "向经验与传统求教。导师、制度或信仰能为你提供可靠的指引。",
+        "en": "Seek guidance from experience and tradition. A mentor, an institution or a faith can show you a reliable path."
+      },
+      "rev": {
+        "zh": "旧规矩不再适用。是时候质疑教条，走出属于自己的路。",
+        "en": "The old rules no longer fit. Time to question dogma and walk your own road."
+      },
+      "whispers": [
+        {
+          "zh": "祝福你。（手只能举这么高）",
+          "en": "Bless you. (My hand only goes this high.)"
+        },
+        {
+          "zh": "两把钥匙，开哪扇门？我也想知道。",
+          "en": "Two keys. Which door? I'd like to know too."
+        },
+        {
+          "zh": "小侍者跪了很久。我说可以起来了，但没有说出声。",
+          "en": "The acolytes have knelt a long time. I said they could stand — just not out loud."
+        },
+        {
+          "zh": "三重冠是特制的，避开了眼睛。很贴心。",
+          "en": "The triple crown is custom-made to fit around my eyes. Very thoughtful."
+        }
+      ],
+      "scene": {
+        "zh": "大教堂的双柱之间，奶蛙披着深红祭袍，举起短手祝福。两把钥匙交叉在地，两位小侍者跪在座前，烛烟慢慢升起。",
+        "en": "Between cathedral pillars, Naiwa wears a crimson mantle and raises a short hand in blessing. Two crossed keys lie on the floor, two small acolytes kneel before it, and candle smoke drifts upward."
+      },
+      "origin": {
+        "zh": "教皇（又称祭司长）头戴三重冠，举手赐福，脚下两把交叉的钥匙象征通往天上与人间的门，两位侍从跪在座前。他代表制度化的信仰、传承与教育——知识从老师传到学生的那条链。",
+        "en": "The Hierophant wears a triple crown and raises a hand in blessing; two crossed keys at his feet open heaven and earth, and two acolytes kneel before him. He stands for institutional faith, tradition and teaching — the chain by which knowledge passes from master to student."
+      },
+      "astro": {
+        "zh": "金牛座",
+        "en": "Taurus"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "适合认真、传统、被家人祝福的关系。见家长、定下约定都顺利。",
+            "en": "Good for serious, traditional relationships with family blessing. Meeting the parents or making promises goes smoothly."
+          },
+          "work": {
+            "zh": "向前辈请教、走正规流程、考证进修都有帮助。别急着另辟蹊径。",
+            "en": "Ask mentors, follow proper channels, study for credentials. Don't rush to invent your own path."
+          },
+          "advice": {
+            "zh": "找一个比你走得更远的人，问问路。",
+            "en": "Find someone who's walked further than you, and ask the way."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "被外界的期待绑住，或者两个人对「应该怎样」的看法不一样。",
+            "en": "Bound by outside expectations, or you disagree on how things \"should\" be."
+          },
+          "work": {
+            "zh": "墨守成规让你憋屈。旧方法不灵了，可以试试自己的方式。",
+            "en": "Rigid rules frustrate you. The old way isn't working — try your own."
+          },
+          "advice": {
+            "zh": "尊重传统，但别让它替你做决定。",
+            "en": "Respect tradition, but don't let it decide for you."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "major_06",
+      "arcana": "major",
+      "suit": null,
+      "rank": 6,
+      "num": "VI",
+      "name": {
+        "zh": "恋人",
+        "en": "THE LOVERS"
+      },
+      "keys": {
+        "zh": [
+          "联结",
+          "信任",
+          "抉择"
+        ],
+        "en": [
+          "Union",
+          "Trust",
+          "Choice"
+        ]
+      },
+      "up": {
+        "zh": "一段真诚的联结，或一个忠于内心的重要选择。价值观一致才是关键。",
+        "en": "A sincere bond, or an important choice made from the heart. Shared values are what matter."
+      },
+      "rev": {
+        "zh": "关系失衡或选择摇摆。先问清自己真正想要什么。",
+        "en": "An unbalanced relationship or a wavering choice. First ask yourself what you truly want."
+      },
+      "whispers": [
+        {
+          "zh": "另一只也是奶蛙。我们没有表情，但手牵着。",
+          "en": "The other one is also a Naiwa. We have no expressions, but we're holding hands."
+        },
+        {
+          "zh": "我们长得一样，所以吵架的时候不知道该生谁的气。",
+          "en": "We look the same, so when we fight I don't know who to be mad at."
+        },
+        {
+          "zh": "天使在上面看着。我们假装没注意到。",
+          "en": "The angel is watching from above. We pretend not to notice."
+        },
+        {
+          "zh": "两条路。我们决定先一起站着，不走。",
+          "en": "Two paths. We decided to stand here together for now."
+        }
+      ],
+      "scene": {
+        "zh": "岔路口的花园里，两只一模一样的奶蛙轻轻碰着小手。一棵树开黑玫瑰，一棵树结红果，天使在高处看着，没有替它们选。",
+        "en": "At a fork in a gothic garden, two identical Naiwas lightly touch hands. One tree bears dark roses, the other red fruit, and an angel watches from above — choosing nothing for them."
+      },
+      "origin": {
+        "zh": "韦特版的恋人画着伊甸园中的一男一女，天使拉斐尔在上方祝福，女子身后是缠着蛇的知识之树。更古老的马赛版画的是一个人站在两位女子之间——所以这张牌既讲爱，也讲选择。",
+        "en": "The Rider–Waite Lovers shows a man and a woman in Eden, blessed by the angel Raphael, with the serpent's Tree of Knowledge behind her. The older Marseille card shows a man between two women — so this card speaks of love and of choice alike."
+      },
+      "astro": {
+        "zh": "双子座",
+        "en": "Gemini"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "心意相通、彼此信任的阶段。有好感就表达，有承诺就兑现。",
+            "en": "Hearts in tune, trust on both sides. If you like someone, say so; if you promised, follow through."
+          },
+          "work": {
+            "zh": "合作顺利，适合找搭档、签约。面临选择时，选和你价值观一致的那条。",
+            "en": "Partnerships flow — good for finding a co-pilot or signing. At a fork, choose what matches your values."
+          },
+          "advice": {
+            "zh": "选你真正想要的，而不是看起来正确的。",
+            "en": "Choose what you truly want, not what merely looks right."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "沟通不畅、三心二意，或者一方付出得更多。先停下来聊聊。",
+            "en": "Poor communication, a wavering heart, or one side giving more. Stop and talk."
+          },
+          "work": {
+            "zh": "合作出现裂缝，或在两个选项之间摇摆太久。拖着也是一种选择。",
+            "en": "Cracks in a partnership, or swaying between options too long. Not choosing is also a choice."
+          },
+          "advice": {
+            "zh": "先问自己，再问对方。",
+            "en": "Ask yourself first, then ask them."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "major_07",
+      "arcana": "major",
+      "suit": null,
+      "rank": 7,
+      "num": "VII",
+      "name": {
+        "zh": "战车",
+        "en": "THE CHARIOT"
+      },
+      "keys": {
+        "zh": [
+          "驾驭",
+          "意志",
+          "胜利"
+        ],
+        "en": [
+          "Control",
+          "Willpower",
+          "Victory"
+        ]
+      },
+      "up": {
+        "zh": "驾驭相反的力量，以坚定意志向前推进，胜利属于专注的人。",
+        "en": "Harness opposing forces and drive forward with firm will. Victory belongs to the focused."
+      },
+      "rev": {
+        "zh": "方向失控、内耗拉扯。先让两只狮身兽朝同一个方向。",
+        "en": "Losing direction, pulled apart from within. First get both sphinxes facing the same way."
+      },
+      "whispers": [
+        {
+          "zh": "肚子卡在车沿上了。但我们在前进。",
+          "en": "My belly is stuck on the edge of the chariot. But we are moving."
+        },
+        {
+          "zh": "狮身兽一只想往左，一只想往右。我想回家。",
+          "en": "One sphinx wants left, one wants right. I want to go home."
+        },
+        {
+          "zh": "车很小，我的肚子很大。这就是胜利的代价。",
+          "en": "The chariot is small and my belly is big. This is the price of victory."
+        },
+        {
+          "zh": "城门开了。我们出发了。（车没有动）",
+          "en": "The gate is open. We're off. (The chariot hasn't moved.)"
+        }
+      ],
+      "scene": {
+        "zh": "星幕篷盖下，奶蛙站在小小的战车里，肚子顶着车沿，手握指挥杖。一黑一白两只狮身兽望着不同的方向，城门就在前方。",
+        "en": "Under a star-spangled canopy, Naiwa stands in a small chariot, belly against the rim, command staff in hand. A black sphinx and a white sphinx face different ways; the city gate lies ahead."
+      },
+      "origin": {
+        "zh": "战车上的王子头戴星冠，车前一黑一白两只狮身人面兽代表相反的力量；他没有缰绳，全凭意志驾驭。这是愚者第一次凭自己赢得的胜利。",
+        "en": "A star-crowned prince rides a chariot drawn by a black and a white sphinx — opposing forces. He holds no reins; he steers by will alone. It is the Fool's first victory won on his own."
+      },
+      "astro": {
+        "zh": "巨蟹座",
+        "en": "Cancer"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "主动争取会有结果。两个人目标一致时，关系会前进得很快。",
+            "en": "Going after it pays off. When you share a goal, things move fast."
+          },
+          "work": {
+            "zh": "竞争、考试、冲业绩的好时机。目标清楚、节奏坚定，你会赢。",
+            "en": "Great for competition, exams, sales pushes. Clear goal, steady pace — you'll win."
+          },
+          "advice": {
+            "zh": "认准一个方向，握紧缰绳。",
+            "en": "Fix one direction and hold the reins tight."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "各拉各的、想法不一致，或者控制欲作祟。先对齐方向。",
+            "en": "Pulling in different directions, or control issues. Align first."
+          },
+          "work": {
+            "zh": "冲太快翻车、计划被打乱，或者内耗严重。先停车检修。",
+            "en": "Crashing from going too fast, plans thrown off, or energy lost to infighting. Stop for repairs."
+          },
+          "advice": {
+            "zh": "慢一点没关系，方向比速度重要。",
+            "en": "Slower is fine; direction matters more than speed."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "major_08",
+      "arcana": "major",
+      "suit": null,
+      "rank": 8,
+      "num": "VIII",
+      "name": {
+        "zh": "力量",
+        "en": "STRENGTH"
+      },
+      "keys": {
+        "zh": [
+          "温柔",
+          "勇气",
+          "自我掌控"
+        ],
+        "en": [
+          "Gentleness",
+          "Courage",
+          "Self-mastery"
+        ]
+      },
+      "up": {
+        "zh": "真正的力量是温柔。以耐心和慈悲驯服内心的猛兽。",
+        "en": "True strength is gentleness. Tame the beast within through patience and compassion."
+      },
+      "rev": {
+        "zh": "自我怀疑或情绪失控。别用蛮力，先安抚自己。",
+        "en": "Self-doubt or runaway emotions. Don't use force — soothe yourself first."
+      },
+      "whispers": [
+        {
+          "zh": "狮子低头了。我只是摸了摸它。",
+          "en": "The lion bowed its head. I only patted it."
+        },
+        {
+          "zh": "狮子的毛很软。我不会说出去的。",
+          "en": "The lion's mane is soft. I won't tell anyone."
+        },
+        {
+          "zh": "我的手很小，但它愿意低头。可能是因为我很黄。",
+          "en": "My hand is tiny, but it bows anyway. Maybe because I'm so yellow."
+        },
+        {
+          "zh": "力量就是：不用力。我本来也没什么力。",
+          "en": "Strength means not using force. I don't have much anyway."
+        }
+      ],
+      "scene": {
+        "zh": "月下的玫瑰园里，巨大的黑狮安静地低下头，奶蛙用三根手指轻轻搭在它的鬃毛上。无限符号浮在头顶——温柔，也可以很久很久。",
+        "en": "In a moonlit rose garden an enormous black lion quietly bows its head, and Naiwa rests three small fingers on its mane. An infinity sign floats above — gentleness can last a very long time."
+      },
+      "origin": {
+        "zh": "一位女子轻轻合上狮子的嘴，头顶有无限符号。韦特与黄金黎明把它排在第八、把正义排在第十一，以对应狮子座与天秤座；更早的马赛版顺序正好相反。它讲的不是蛮力，而是驯服本能的温柔。",
+        "en": "A woman gently closes a lion's jaws, an infinity sign above her head. Waite and the Golden Dawn placed Strength at VIII and Justice at XI to match Leo and Libra; the older Marseille order is the reverse. Its power isn't force but the gentleness that tames instinct."
+      },
+      "astro": {
+        "zh": "狮子座",
+        "en": "Leo"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "用耐心化解摩擦，包容让关系更牢。你比自己以为的更有安全感。",
+            "en": "Patience eases friction; acceptance makes the bond stronger. You're more secure than you think."
+          },
+          "work": {
+            "zh": "面对难缠的人或事，柔和而坚定最有效。你能稳住局面。",
+            "en": "With difficult people or tasks, soft but firm works best. You can hold steady."
+          },
+          "advice": {
+            "zh": "温柔地对待自己的情绪，它就不会咬人。",
+            "en": "Treat your feelings gently and they won't bite."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "情绪起伏大、不安全感重，可能会用冷战或发脾气来试探对方。",
+            "en": "Mood swings and insecurity; you may test the other with silence or anger."
+          },
+          "work": {
+            "zh": "压力之下容易自我怀疑，或者硬撑到崩溃。承认累了，也是一种力量。",
+            "en": "Self-doubt under pressure, or pushing on until you break. Admitting you are tired is also strength."
+          },
+          "advice": {
+            "zh": "先安抚心里那只狮子，再出门。",
+            "en": "Calm the lion inside before you head out."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "major_09",
+      "arcana": "major",
+      "suit": null,
+      "rank": 9,
+      "num": "IX",
+      "name": {
+        "zh": "隐者",
+        "en": "THE HERMIT"
+      },
+      "keys": {
+        "zh": [
+          "内省",
+          "探索",
+          "智慧"
+        ],
+        "en": [
+          "Introspection",
+          "Search",
+          "Wisdom"
+        ]
+      },
+      "up": {
+        "zh": "暂时离开人群，提灯向内寻找。独处会带来清明的智慧。",
+        "en": "Step away from the crowd for a while and search inward by lantern light. Solitude brings clear wisdom."
+      },
+      "rev": {
+        "zh": "过度孤立或拒绝反思。灯还亮着，记得回来。",
+        "en": "Too much isolation, or refusing to reflect. The lamp is still lit — remember to come back."
+      },
+      "whispers": [
+        {
+          "zh": "雪很冷。灯很暖。我一直这样站着。",
+          "en": "The snow is cold. The lamp is warm. I've been standing like this the whole time."
+        },
+        {
+          "zh": "灯里有一颗星星。它说它也很冷。",
+          "en": "There's a star in my lantern. It says it's cold too."
+        },
+        {
+          "zh": "一个人走雪山，没有人看见我滑了一下。",
+          "en": "Walking the mountain alone. Nobody saw me slip."
+        },
+        {
+          "zh": "我在思考人生。（其实在想晚饭）",
+          "en": "I'm contemplating life. (Actually, dinner.)"
+        }
+      ],
+      "scene": {
+        "zh": "狭窄的雪山脊上，奶蛙披着短斗篷，一手提着装着六芒星的灯，一手拄杖。雪慢慢落进黑夜，它一个人，但并没有迷路。",
+        "en": "On a narrow snowy ridge, Naiwa wears a short cloak, holding a lantern with a six-pointed star in one hand and a staff in the other. Snow falls slowly into the night. It's alone, but not lost."
+      },
+      "origin": {
+        "zh": "一位长须老人独立雪峰，提着装有六芒星的灯，手拄长杖。他已经走过了外面的世界，现在转向内心，用自己的光为后来的人照路。",
+        "en": "A bearded old man stands alone on a snowy peak, holding a lantern with a six-pointed star and leaning on a staff. Having walked the outer world, he turns inward, and his light guides those who come after."
+      },
+      "astro": {
+        "zh": "处女座",
+        "en": "Virgo"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "需要一点个人空间来想清楚。单身的人适合先和自己相处好。",
+            "en": "You need some space to think. If single, get comfortable with yourself first."
+          },
+          "work": {
+            "zh": "适合深度钻研、独立完成的工作。少开会，多思考。",
+            "en": "Good for deep, independent work. Fewer meetings, more thinking."
+          },
+          "advice": {
+            "zh": "关掉一些噪音，提灯照照自己的内心。",
+            "en": "Turn down the noise and hold the lantern to your own heart."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "封闭自己、拒人千里，或者觉得孤单却不肯开口。",
+            "en": "Closing yourself off, pushing people away, or lonely but unwilling to say so."
+          },
+          "work": {
+            "zh": "埋头太久与外界脱节，或者在逃避该面对的反馈。抬头看看。",
+            "en": "Heads-down too long and out of touch, or dodging feedback. Look up."
+          },
+          "advice": {
+            "zh": "独处是为了回来，不是为了消失。",
+            "en": "Solitude is for coming back, not for vanishing."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "major_10",
+      "arcana": "major",
+      "suit": null,
+      "rank": 10,
+      "num": "X",
+      "name": {
+        "zh": "命运之轮",
+        "en": "WHEEL OF FORTUNE"
+      },
+      "keys": {
+        "zh": [
+          "循环",
+          "变化",
+          "命运"
+        ],
+        "en": [
+          "Cycles",
+          "Change",
+          "Fate"
+        ]
+      },
+      "up": {
+        "zh": "命运之轮正在转动，转机将至。顺势而为，抓住时机。",
+        "en": "The wheel of fortune is turning and a change of luck is near. Go with the flow and seize the moment."
+      },
+      "rev": {
+        "zh": "暂时的低谷或抗拒变化。轮子总会再转上来。",
+        "en": "A temporary low, or resisting change. The wheel will come back up."
+      },
+      "whispers": [
+        {
+          "zh": "轮子转啊转。我抬头看着，脖子不酸，因为没有脖子。",
+          "en": "The wheel goes round and round. I look up. My neck doesn't hurt, because I have no neck."
+        },
+        {
+          "zh": "转到顶上的会下来，转到底下的会上去。我一直在底下，等着。",
+          "en": "What's at the top comes down; what's at the bottom goes up. I've been at the bottom. Waiting."
+        },
+        {
+          "zh": "狮身兽在上面坐得很稳。我有点羡慕。",
+          "en": "The sphinx sits steady up there. I'm a bit jealous."
+        },
+        {
+          "zh": "命运很大。我很小。但我很黄，它应该看得见我。",
+          "en": "Fate is huge. I'm small. But I'm very yellow — it should see me."
+        }
+      ],
+      "scene": {
+        "zh": "巨大的古金轮盘悬在宇宙里，刻满炼金符号，狮身兽坐在顶端，蛇从一侧滑下。奶蛙站在轮底仰望，四角的天使、鹰、狮与牛都在看。",
+        "en": "A giant golden wheel hangs in a cosmic sky, carved with alchemical signs; a sphinx sits on top and a serpent slides down one side. Naiwa looks up from below while angel, eagle, lion and bull watch from the corners."
+      },
+      "origin": {
+        "zh": "轮盘上刻着 TARO（也可读作 ROTA、TORA）和炼金符号，顶端是持剑的狮身人面兽，一侧蛇在下滑，一侧阿努比斯在上升。四角的天使、鹰、狮、牛对应四个固定星座与四福音书。它位于大阿尔卡那的中段：没有人能永远在顶上。",
+        "en": "The wheel bears the letters TARO (also ROTA, TORA) and alchemical signs; a sword-bearing sphinx sits on top, a serpent descends and Anubis rises. Angel, eagle, lion and bull in the corners echo the four fixed signs and the four Evangelists. It sits mid-journey: no one stays on top forever."
+      },
+      "astro": {
+        "zh": "木星",
+        "en": "Jupiter"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "缘分来得意外，一次偶遇可能改变很多。顺其自然。",
+            "en": "Fate arrives unexpectedly; a chance meeting could change a lot. Go with it."
+          },
+          "work": {
+            "zh": "转机、机会、好运气。时机到了就抓住，别犹豫太久。",
+            "en": "Turning points, openings, luck. When the moment comes, take it — don't hesitate too long."
+          },
+          "advice": {
+            "zh": "留意那些「刚好」发生的事。",
+            "en": "Pay attention to things that happen \"just so\"."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "时机不对、反复错过。别强求，也别把一切都推给命运。",
+            "en": "Wrong timing, missed chances. Don't force it — and don't blame it all on fate."
+          },
+          "work": {
+            "zh": "遇到低潮或计划被打乱。这是周期的一部分，先稳住基本盘。",
+            "en": "A low patch or a disrupted plan. It's part of the cycle — protect the basics."
+          },
+          "advice": {
+            "zh": "轮子还在转，做好你能控制的那部分。",
+            "en": "The wheel keeps turning; handle the part you can control."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "major_11",
+      "arcana": "major",
+      "suit": null,
+      "rank": 11,
+      "num": "XI",
+      "name": {
+        "zh": "正义",
+        "en": "JUSTICE"
+      },
+      "keys": {
+        "zh": [
+          "平衡",
+          "因果",
+          "公正"
+        ],
+        "en": [
+          "Balance",
+          "Cause & effect",
+          "Fairness"
+        ]
+      },
+      "up": {
+        "zh": "因果自有衡量。诚实面对事实，做出公正的决定。",
+        "en": "Cause and effect keep their own accounts. Face the facts honestly and decide fairly."
+      },
+      "rev": {
+        "zh": "不公、逃避责任或偏见。天平倾斜了，需要校正。",
+        "en": "Injustice, dodging responsibility or bias. The scales are tipped and need correcting."
+      },
+      "whispers": [
+        {
+          "zh": "天平是平的。我的嘴也是平的。",
+          "en": "The scales are level. So is my mouth."
+        },
+        {
+          "zh": "剑是用来指方向的。我不会挥。",
+          "en": "The sword is for pointing. I don't swing it."
+        },
+        {
+          "zh": "两边一样重。我称过了，称了一下午。",
+          "en": "Both sides weigh the same. I checked. All afternoon."
+        },
+        {
+          "zh": "判决：大家都没有错。（主要是我不想写判决书）",
+          "en": "Verdict: no one's at fault. (Mostly I don't want to write it up.)"
+        }
+      ],
+      "scene": {
+        "zh": "两根暗柱之间，奶蛙端坐石座，一手直剑、一手天平，身后是厚重的深红帷幕。眼睛平视，嘴是一条直线——不偏不倚。",
+        "en": "Between two dark pillars, Naiwa sits upright on a stone seat, a straight sword in one hand and scales in the other, a heavy burgundy curtain behind. Eyes level, mouth a straight line — leaning neither way."
+      },
+      "origin": {
+        "zh": "正义女神坐在两柱之间，右手直剑、左手天平。和常见的蒙眼正义女神不同，她睁着眼——塔罗里的正义要看清事实。在韦特体系中它与「力量」互换了位置，排在第十一，正好落在大阿尔卡那的中央。",
+        "en": "Justice sits between two pillars, sword in her right hand and scales in her left. Unlike the blindfolded Lady Justice, her eyes are open — tarot justice must see the truth. In the Waite system she swapped places with Strength and became XI, right at the centre of the Major Arcana."
+      },
+      "astro": {
+        "zh": "天秤座",
+        "en": "Libra"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "平等、坦诚、互相尊重。该说清的事情摊开说，关系会更踏实。",
+            "en": "Equality, honesty, mutual respect. Lay out what needs saying and things will feel solid."
+          },
+          "work": {
+            "zh": "合同、法律、考核类的事情结果公正。按规则来，你的付出会被看见。",
+            "en": "Contracts, legal matters and reviews come out fair. Play by the rules; your effort will be seen."
+          },
+          "advice": {
+            "zh": "先诚实面对事实，再做决定。",
+            "en": "Face the facts honestly, then decide."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "付出不对等，或者有人没有说实话。别为了和平委屈自己。",
+            "en": "Unequal effort, or someone isn't telling the truth. Don't shrink yourself to keep the peace."
+          },
+          "work": {
+            "zh": "不公平的待遇、拖延的纠纷，或者你在逃避该负的责任。",
+            "en": "Unfair treatment, stalled disputes, or dodging your own responsibility."
+          },
+          "advice": {
+            "zh": "天平歪了，先找到是哪一边重。",
+            "en": "The scales are tipping — find which side is heavier."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "major_12",
+      "arcana": "major",
+      "suit": null,
+      "rank": 12,
+      "num": "XII",
+      "name": {
+        "zh": "倒吊人",
+        "en": "THE HANGED MAN"
+      },
+      "keys": {
+        "zh": [
+          "等待",
+          "换位",
+          "顿悟"
+        ],
+        "en": [
+          "Pause",
+          "New perspective",
+          "Insight"
+        ]
+      },
+      "up": {
+        "zh": "暂停并换个角度看世界。看似停滞，其实是在酝酿顿悟。",
+        "en": "Pause and see the world from another angle. What looks like stagnation is insight ripening."
+      },
+      "rev": {
+        "zh": "无谓的牺牲或拖延。该放下的执念就放下吧。",
+        "en": "Pointless sacrifice or procrastination. Let go of what you should let go."
+      },
+      "whispers": [
+        {
+          "zh": "倒过来看，世界还是一样黑。但光环亮了。",
+          "en": "Upside down, the world is just as dark. But my halo is on."
+        },
+        {
+          "zh": "倒挂的时候，肚子会往下巴的方向掉。但我没有下巴。",
+          "en": "When I hang upside down my belly drifts toward my chin. I don't have a chin."
+        },
+        {
+          "zh": "丝带很结实。我已经挂了三天，很舒服。",
+          "en": "The ribbon is strong. I've hung here three days. Very comfortable."
+        },
+        {
+          "zh": "从这里看，树根才是树冠。",
+          "en": "From here, the roots are the treetop."
+        }
+      ],
+      "scene": {
+        "zh": "魔法森林里，一条发光的丝带让奶蛙安全地倒挂在 T 形古树下，一条腿弯着，小手放松，脑后亮起金色光环。没有痛苦，只有换了一个角度的安静。",
+        "en": "In an enchanted forest, a glowing ribbon holds Naiwa safely upside down beneath a T-shaped tree, one leg bent, hands relaxed, a golden halo behind its head. No pain — only the stillness of a new angle."
+      },
+      "origin": {
+        "zh": "一个人头下脚上地倒挂在 T 形树上，一条腿弯成「4」字，神情平静，头后有光环。这不是刑罚，而是主动的暂停：通过放下与等待换来顿悟。",
+        "en": "A man hangs upside down from a T-shaped tree, one leg crossed into a \"4\", face serene, a halo behind his head. It isn't punishment but a chosen pause: insight gained by letting go and waiting."
+      },
+      "astro": {
+        "zh": "水元素（现代：海王星）",
+        "en": "Water (modern: Neptune)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "暂时没有进展，但不代表没有希望。试着站在对方的角度想一想。",
+            "en": "No progress for now, but that doesn't mean no hope. Try seeing it from their side."
+          },
+          "work": {
+            "zh": "项目卡住、需要等待。利用这段时间换个思路，也许会有突破。",
+            "en": "A stalled project, a wait. Use the pause to rethink — a breakthrough may come."
+          },
+          "advice": {
+            "zh": "停一下，把世界倒过来看看。",
+            "en": "Pause, and look at the world upside down."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "一味牺牲、苦等不来的回应。你值得被同等对待。",
+            "en": "Endless sacrifice, waiting for a reply that won't come. You deserve the same in return."
+          },
+          "work": {
+            "zh": "拖延、空等、无谓地耗着。该决定的时候就决定。",
+            "en": "Procrastination, waiting in vain, burning time. When it's time to decide, decide."
+          },
+          "advice": {
+            "zh": "等待要有期限。",
+            "en": "Waiting needs a deadline."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "major_13",
+      "arcana": "major",
+      "suit": null,
+      "rank": 13,
+      "num": "XIII",
+      "name": {
+        "zh": "死神",
+        "en": "DEATH"
+      },
+      "keys": {
+        "zh": [
+          "终结",
+          "转化",
+          "新生"
+        ],
+        "en": [
+          "Endings",
+          "Transformation",
+          "Rebirth"
+        ]
+      },
+      "up": {
+        "zh": "一个阶段正在结束，为新生腾出空间。不必害怕，这是蜕变。",
+        "en": "A chapter is ending to make room for new life. Don't be afraid — this is transformation."
+      },
+      "rev": {
+        "zh": "抗拒结束，困在旧模式里。放手才能重生。",
+        "en": "Resisting the end, stuck in old patterns. Let go in order to be reborn."
+      },
+      "whispers": [
+        {
+          "zh": "白马很温柔。王冠掉了一地，不是我的。",
+          "en": "The white horse is gentle. The crowns all over the ground aren't mine."
+        },
+        {
+          "zh": "黑旗上的白玫瑰是我画的。画得不太圆。",
+          "en": "I painted the white rose on the flag. It's not very round."
+        },
+        {
+          "zh": "不用怕，我只是路过。",
+          "en": "Don't be afraid. I'm only passing through."
+        },
+        {
+          "zh": "天快亮了。马说它饿了。",
+          "en": "Dawn is coming. The horse says it's hungry."
+        }
+      ],
+      "scene": {
+        "zh": "荒废的月下玫瑰园里，奶蛙骑着温顺的小白马，举着画有白玫瑰的黑旗。王冠和花瓣散落一地，两座塔之间，天正在亮。",
+        "en": "Through an abandoned moonlit rose garden, Naiwa rides a gentle white horse holding a black banner with a white rose. Crowns and petals lie scattered, and between two towers the sky is getting light."
+      },
+      "origin": {
+        "zh": "骑白马的骷髅骑士举着绘有白玫瑰的黑旗，国王倒地、主教祈祷、孩童仰望，远方两座塔之间太阳升起。在塔罗里它几乎从不指肉体的死亡，而是一个阶段的终结与转化。",
+        "en": "A skeletal knight on a white horse carries a black banner with a white rose; a king has fallen, a bishop prays, a child looks up, and the sun rises between two distant towers. In tarot it almost never means physical death, but the end and transformation of a phase."
+      },
+      "astro": {
+        "zh": "天蝎座",
+        "en": "Scorpio"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "一段关系或一种相处模式走到了尽头，结束是为了更好的开始。",
+            "en": "A relationship, or a way of relating, reaches its end — endings make room for better beginnings."
+          },
+          "work": {
+            "zh": "告别旧岗位、旧项目、旧习惯。转型虽然不舒服，但方向是对的。",
+            "en": "Saying goodbye to an old role, project or habit. Transition is uncomfortable, but it's the right way."
+          },
+          "advice": {
+            "zh": "好好告别，然后转身。",
+            "en": "Say a proper goodbye, then turn around."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "舍不得放手，反复回头。困在过去里，会错过眼前。",
+            "en": "Unable to let go, you keep looking back. Stuck in the past, you'll miss what's in front of you."
+          },
+          "work": {
+            "zh": "明知该变却一直拖着，停滞让你越来越累。",
+            "en": "You know you need to change but keep putting it off; stagnation wears you down."
+          },
+          "advice": {
+            "zh": "枯掉的花，就别再浇水了。",
+            "en": "Stop watering the flowers that have already withered."
+          }
+        }
+      },
+      "dark": true
+    },
+    {
+      "id": "major_14",
+      "arcana": "major",
+      "suit": null,
+      "rank": 14,
+      "num": "XIV",
+      "name": {
+        "zh": "节制",
+        "en": "TEMPERANCE"
+      },
+      "keys": {
+        "zh": [
+          "调和",
+          "节制",
+          "疗愈"
+        ],
+        "en": [
+          "Harmony",
+          "Moderation",
+          "Healing"
+        ]
+      },
+      "up": {
+        "zh": "在两端之间找到平衡。耐心调和，事情会慢慢变好。",
+        "en": "Find balance between the extremes. Blend patiently, and things will slowly get better."
+      },
+      "rev": {
+        "zh": "失衡、过度或急躁。放慢倒水的速度。",
+        "en": "Imbalance, excess or impatience. Pour a little more slowly."
+      },
+      "whispers": [
+        {
+          "zh": "一只脚在水里，一只脚在岸上。脚有三个趾。",
+          "en": "One foot in the water, one foot on the bank. Each foot has three toes."
+        },
+        {
+          "zh": "我在倒水。倒过去，倒回来。今天就做这个。",
+          "en": "I'm pouring water. Over, and back. That's today's job."
+        },
+        {
+          "zh": "翅膀是装饰，飞不起来。但很平衡。",
+          "en": "The wings are decorative. Can't fly. But very balanced."
+        },
+        {
+          "zh": "一只脚凉凉的，一只脚暖暖的。这就是节制。",
+          "en": "One foot cool, one foot warm. That's temperance."
+        }
+      ],
+      "scene": {
+        "zh": "月光水池边，奶蛙背着一对小小的灰白翅膀，一只脚踩在水里、一只脚踏在岸上，把银色的光在两只古杯之间慢慢倒来倒去。远处的小路通向初升的太阳。",
+        "en": "By a moonlit pool, Naiwa wears small grey-white wings, one foot in the water and one on the bank, slowly pouring silver light between two antique cups. A narrow road leads to a rising sun."
+      },
+      "origin": {
+        "zh": "有翼天使一足踏水、一足踏岸，在两只杯子之间倒水，胸前有三角形标记，远方小路通往升起的太阳。它是「死神」之后的疗愈：把对立的东西调和成新的平衡。",
+        "en": "A winged angel stands with one foot in water and one on land, pouring between two cups, a triangle on its breast, a path leading to a rising sun. It is the healing after Death: blending opposites into a new balance."
+      },
+      "astro": {
+        "zh": "射手座",
+        "en": "Sagittarius"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "相处平和、互相迁就，节奏刚刚好。争执也能慢慢调和。",
+            "en": "Calm, give-and-take, just the right rhythm. Even disagreements soften over time."
+          },
+          "work": {
+            "zh": "协调、整合、慢工出细活。不必一步到位，稳定推进最好。",
+            "en": "Coordinating, integrating, careful craftsmanship. No need to do it all at once — steady wins."
+          },
+          "advice": {
+            "zh": "每样东西放一点点，刚刚好就好。",
+            "en": "A little of each — just enough is enough."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "忽冷忽热，或者一方太多、一方太少。重新找回节奏。",
+            "en": "Hot and cold, or one gives too much and the other too little. Find the rhythm again."
+          },
+          "work": {
+            "zh": "急于求成、过度劳累，或者资源分配失衡。",
+            "en": "Rushing results, overworking, or resources out of balance."
+          },
+          "advice": {
+            "zh": "倒水要慢，杯子才不会满出来。",
+            "en": "Pour slowly so the cup doesn't overflow."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "major_15",
+      "arcana": "major",
+      "suit": null,
+      "rank": 15,
+      "num": "XV",
+      "name": {
+        "zh": "恶魔",
+        "en": "THE DEVIL"
+      },
+      "keys": {
+        "zh": [
+          "诱惑",
+          "执念",
+          "束缚"
+        ],
+        "en": [
+          "Temptation",
+          "Attachment",
+          "Bondage"
+        ]
+      },
+      "up": {
+        "zh": "你被某种欲望或执念束缚。看清它——锁链其实是松的。",
+        "en": "A desire or obsession has you bound. Look closely — the chains are actually loose."
+      },
+      "rev": {
+        "zh": "正在挣脱束缚，重获自由。觉察就是解放的开始。",
+        "en": "You're breaking free and regaining your freedom. Awareness is where liberation begins."
+      },
+      "whispers": [
+        {
+          "zh": "角是可以拆下来的。锁链也是。",
+          "en": "The horns come off. So do the chains."
+        },
+        {
+          "zh": "我演得很像吧。角是魔术贴粘上去的。",
+          "en": "Convincing, right? The horns are velcro."
+        },
+        {
+          "zh": "火炬拿反了。我是故意的。可能。",
+          "en": "I'm holding the torch upside down. On purpose. Probably."
+        },
+        {
+          "zh": "小影子问我锁链怎么解。我说：抬手。",
+          "en": "The little shadows asked how to undo the chains. I said: lift your hands."
+        }
+      ],
+      "scene": {
+        "zh": "废弃的礼拜堂里，奶蛙戴着可拆卸的小角和蝠翼坐在黑石台上，倒举火炬。台下两个小影子戴着锁链——仔细看，锁链是松的。",
+        "en": "In a ruined chapel, Naiwa sits on a black stone pedestal wearing detachable little horns and bat wings, holding a torch upside down. Below, two small shadows wear chains — look closely, and the chains are loose."
+      },
+      "origin": {
+        "zh": "长着山羊角和蝠翼的恶魔蹲在台座上，倒举火炬，台下一男一女戴着锁链——锁链很松，随时可以取下。这张牌的构图特意呼应「恋人」，讲的是被欲望与执念束缚的那一面。",
+        "en": "A horned, bat-winged devil squats on a pedestal holding a torch downward; below, a man and a woman wear chains — loose enough to lift off. The composition deliberately mirrors the Lovers, showing the side of us bound by desire and attachment."
+      },
+      "astro": {
+        "zh": "摩羯座",
+        "en": "Capricorn"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "强烈的吸引、占有欲，或者难以戒掉的关系。分清楚是喜欢还是依赖。",
+            "en": "Strong attraction, possessiveness, or a bond that's hard to quit. Tell love apart from dependence."
+          },
+          "work": {
+            "zh": "被金钱、欲望或某个习惯绑住手脚。看清代价，再决定要不要继续。",
+            "en": "Bound by money, desire or a habit. See the cost before you decide to continue."
+          },
+          "advice": {
+            "zh": "看看是什么在拴着你——也许你自己就能解开。",
+            "en": "Look at what's holding you — you might be able to untie it yourself."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "正在从一段消耗你的关系里抽身，重新找回自己。",
+            "en": "Pulling free from a draining relationship and finding yourself again."
+          },
+          "work": {
+            "zh": "戒掉坏习惯、摆脱不健康的处境。觉察已经是解放的开始。",
+            "en": "Quitting bad habits, leaving an unhealthy situation. Awareness is the start of freedom."
+          },
+          "advice": {
+            "zh": "锁链已经松了，你只需要走出去。",
+            "en": "The chains are loose already. You only need to walk away."
+          }
+        }
+      },
+      "dark": true
+    },
+    {
+      "id": "major_16",
+      "arcana": "major",
+      "suit": null,
+      "rank": 16,
+      "num": "XVI",
+      "name": {
+        "zh": "高塔",
+        "en": "THE TOWER"
+      },
+      "keys": {
+        "zh": [
+          "崩塌",
+          "惊醒",
+          "突变"
+        ],
+        "en": [
+          "Collapse",
+          "Awakening",
+          "Upheaval"
+        ]
+      },
+      "up": {
+        "zh": "虚假的确定正在崩塌。突如其来的变化，是让真相显露的闪电。",
+        "en": "False certainty is crumbling. Sudden change is the lightning that reveals the truth."
+      },
+      "rev": {
+        "zh": "在逃避必然的改变，或余震未平。早点面对，损失更小。",
+        "en": "Avoiding an inevitable change, or aftershocks still rumbling. Face it sooner and lose less."
+      },
+      "whispers": [
+        {
+          "zh": "塔塌了。我站得很远，很安全。",
+          "en": "The tower fell. I'm standing very far away. Very safe."
+        },
+        {
+          "zh": "王冠飞走了。不是我的，所以我不追。",
+          "en": "The crown flew off. Not mine, so I'm not chasing it."
+        },
+        {
+          "zh": "我早就觉得那座塔歪了。但没人问我。",
+          "en": "I always thought that tower leaned. No one asked me."
+        },
+        {
+          "zh": "打雷了。我的表情没变，因为来不及变。",
+          "en": "Thunder. My expression didn't change — there wasn't time."
+        }
+      ],
+      "scene": {
+        "zh": "闪电劈中哥特尖塔，金冠被掀飞，碎片在靛色的风暴里闪光。奶蛙站在远处安全的石阶上，抬头看着，表情一点也没变。",
+        "en": "Lightning strikes a gothic tower; its golden crown flies off and fragments glitter in the indigo storm. Naiwa stands on a safe stone stair far away, looking up, expression completely unchanged."
+      },
+      "origin": {
+        "zh": "闪电击中高塔，王冠形的塔顶被掀落，两个人从塔上坠下，火焰与二十二道光点散落空中。它是大阿尔卡那里最剧烈的一张：建立在错误基础上的东西，终究会倒。",
+        "en": "Lightning strikes a tower, knocking off its crown-shaped roof; two figures fall amid flames and twenty-two drops of light. It's the most violent card of the Major Arcana: what's built on false foundations falls in the end."
+      },
+      "astro": {
+        "zh": "火星",
+        "en": "Mars"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "突然的变故或真相揭开，可能让人措手不及。但虚假的东西倒了，才有空间重建。",
+            "en": "A sudden upheaval or a truth revealed may catch you off guard. Once false things fall, there's room to rebuild."
+          },
+          "work": {
+            "zh": "计划被打乱、结构重组、意外状况。先保证自己安全，再看废墟里留下了什么。",
+            "en": "Plans upended, restructuring, surprises. Secure yourself first, then see what survives the rubble."
+          },
+          "advice": {
+            "zh": "塌掉的，本来就站不稳。",
+            "en": "What fell was never standing firmly."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "明知有问题却一直回避，裂缝在慢慢变大。早点面对，损失更小。",
+            "en": "Avoiding a known problem while the crack widens. Face it early and lose less."
+          },
+          "work": {
+            "zh": "危机暂时避开，或者余波还没平息。趁现在加固地基。",
+            "en": "Crisis narrowly avoided, or aftershocks linger. Reinforce the foundations now."
+          },
+          "advice": {
+            "zh": "别等闪电，自己先拆掉危楼。",
+            "en": "Don't wait for lightning — take down the unsafe parts yourself."
+          }
+        }
+      },
+      "dark": true
+    },
+    {
+      "id": "major_17",
+      "arcana": "major",
+      "suit": null,
+      "rank": 17,
+      "num": "XVII",
+      "name": {
+        "zh": "星星",
+        "en": "THE STAR"
+      },
+      "keys": {
+        "zh": [
+          "希望",
+          "疗愈",
+          "灵感"
+        ],
+        "en": [
+          "Hope",
+          "Healing",
+          "Inspiration"
+        ]
+      },
+      "up": {
+        "zh": "风暴之后，星光降临。保持希望，你正在被疗愈。",
+        "en": "After the storm, starlight descends. Keep hope — you are healing."
+      },
+      "rev": {
+        "zh": "失去信心或灵感枯竭。星星还在，只是被云遮住了。",
+        "en": "Lost faith or dried-up inspiration. The stars are still there, only behind the clouds."
+      },
+      "whispers": [
+        {
+          "zh": "我在给黑玫瑰浇星星。",
+          "en": "I'm watering the black roses with stars."
+        },
+        {
+          "zh": "星光倒进池子里，池子就亮了。很简单。",
+          "en": "Pour starlight into the pond and the pond lights up. Simple."
+        },
+        {
+          "zh": "小黑鸟在看我浇花。它没说话，我也没说话。",
+          "en": "The little black bird watches me water. It says nothing. Neither do I."
+        },
+        {
+          "zh": "七颗小星星，一颗大星星。我数了很多遍，没有数错。",
+          "en": "Seven little stars, one big one. I counted many times. No mistakes."
+        }
+      ],
+      "scene": {
+        "zh": "午夜镜面般的池塘边，奶蛙两手各提一只银壶：一壶把星光倒进池里，一壶浇着黑玫瑰。头顶一颗八芒大星，周围七颗小星，一只小黑鸟停在树上。",
+        "en": "By a mirror-still midnight pond, Naiwa holds a silver pitcher in each hand: one pours starlight into the water, the other waters black roses. A great eight-pointed star shines above with seven small ones, and a little black bird rests in a tree."
+      },
+      "origin": {
+        "zh": "一位女子跪在池边，一壶水倒回池中、一壶浇向大地，头顶一颗八芒大星与七颗小星，树上停着一只鸟。经历「高塔」之后，这是第一缕平静的希望。",
+        "en": "A woman kneels by a pool, pouring one jug back into the water and one onto the land, beneath one great eight-pointed star and seven smaller ones; a bird perches in a tree. After the Tower, this is the first quiet hope."
+      },
+      "astro": {
+        "zh": "水瓶座",
+        "en": "Aquarius"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "伤口正在愈合，新的期待慢慢升起。真诚会被温柔地回应。",
+            "en": "Wounds are healing and new hope is rising. Sincerity will be met gently."
+          },
+          "work": {
+            "zh": "灵感回归、方向清晰，适合规划长期目标。坚持做对的事。",
+            "en": "Inspiration returns and direction clears — good for long-term plans. Keep doing the right thing."
+          },
+          "advice": {
+            "zh": "抬头看看，有一颗星是为你亮的。",
+            "en": "Look up — one of those stars is shining for you."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "对感情失去信心，或者期待太高而失望。先把希望还给自己。",
+            "en": "Lost faith in love, or let down by high hopes. Give the hope back to yourself first."
+          },
+          "work": {
+            "zh": "动力不足、怀疑努力的意义。休息一下，不是放弃。",
+            "en": "Low motivation, doubting the point of effort. Resting isn't giving up."
+          },
+          "advice": {
+            "zh": "云会散的，星星一直都在。",
+            "en": "The clouds will clear; the stars never left."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "major_18",
+      "arcana": "major",
+      "suit": null,
+      "rank": 18,
+      "num": "XVIII",
+      "name": {
+        "zh": "月亮",
+        "en": "THE MOON"
+      },
+      "keys": {
+        "zh": [
+          "潜意识",
+          "迷惘",
+          "直觉"
+        ],
+        "en": [
+          "Subconscious",
+          "Illusion",
+          "Intuition"
+        ]
+      },
+      "up": {
+        "zh": "前路朦胧，幻象与恐惧交织。相信直觉，慢慢走过月下小径。",
+        "en": "The road is hazy; illusion and fear intertwine. Trust your intuition and walk the moonlit path slowly."
+      },
+      "rev": {
+        "zh": "迷雾渐散，真相浮现。被压抑的情绪正在释放。",
+        "en": "The fog is lifting and the truth emerging. Repressed feelings are being released."
+      },
+      "whispers": [
+        {
+          "zh": "兔子玩偶很软。狗和狼都没有说话。",
+          "en": "The bunny plush is soft. The dog and the wolf didn't say anything."
+        },
+        {
+          "zh": "小龙虾从水里爬出来了。它好像也迷路了。",
+          "en": "A crayfish crawled out of the water. It looks lost too."
+        },
+        {
+          "zh": "狗和狼一直盯着我。我抱紧了兔子。兔子没意见。",
+          "en": "The dog and the wolf keep staring. I hug the rabbit tighter. The rabbit doesn't mind."
+        },
+        {
+          "zh": "月亮很大，大到我以为它在跟着我。",
+          "en": "The moon is so big I thought it was following me."
+        }
+      ],
+      "scene": {
+        "zh": "两座古塔之间的蜿蜒小路上，奶蛙抱着黑兔玩偶，黑狗和白狼分站两侧，池里探出一只小龙虾。巨大的苍白月亮挂在紫雾里。",
+        "en": "On a winding path between two old towers, Naiwa hugs a black rabbit plush; a black dog and a pale wolf stand on either side, and a crayfish crawls from the pool. An immense pale moon hangs in violet mist."
+      },
+      "origin": {
+        "zh": "两座塔之间，一条小路从水池蜿蜒到远山，狗与狼对着月亮嚎叫，一只螯虾从水中爬出。月光下的一切都半真半假，它象征梦境、恐惧与潜意识。",
+        "en": "Between two towers, a path winds from a pool to distant hills; a dog and a wolf howl at the moon and a crayfish crawls out of the water. Under moonlight everything is half-true — it stands for dreams, fear and the unconscious."
+      },
+      "astro": {
+        "zh": "双鱼座",
+        "en": "Pisces"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "关系里有不确定或误会，别凭想象下结论。多确认，少猜测。",
+            "en": "Uncertainty or misunderstanding in the relationship. Don't conclude from imagination — check more, guess less."
+          },
+          "work": {
+            "zh": "信息模糊、局势不明，小心被误导。重要的决定先缓一缓。",
+            "en": "Murky information, unclear situation — beware of being misled. Hold off on big decisions."
+          },
+          "advice": {
+            "zh": "害怕的时候，抱紧一件让你安心的东西，慢慢走。",
+            "en": "When you're scared, hold something comforting and walk slowly."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "误会解开、真相浮现，压在心里的话终于说出了口。",
+            "en": "Misunderstandings clear, truth surfaces, and buried feelings are finally spoken."
+          },
+          "work": {
+            "zh": "迷雾散去，看清了真实状况，可以重新规划了。",
+            "en": "The fog lifts; you see the real situation and can plan again."
+          },
+          "advice": {
+            "zh": "天快亮了，看清以后再迈步。",
+            "en": "Dawn is near — step forward once you can see."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "major_19",
+      "arcana": "major",
+      "suit": null,
+      "rank": 19,
+      "num": "XIX",
+      "name": {
+        "zh": "太阳",
+        "en": "THE SUN"
+      },
+      "keys": {
+        "zh": [
+          "快乐",
+          "清明",
+          "活力"
+        ],
+        "en": [
+          "Joy",
+          "Clarity",
+          "Vitality"
+        ]
+      },
+      "up": {
+        "zh": "光明、成功与纯粹的快乐。一切都清晰起来了。",
+        "en": "Light, success and pure joy. Everything is becoming clear."
+      },
+      "rev": {
+        "zh": "快乐被暂时遮蔽，或过度乐观。太阳仍在，只是需要等云散。",
+        "en": "Joy is briefly clouded, or you're over-optimistic. The sun is still there; wait for the clouds to pass."
+      },
+      "whispers": [
+        {
+          "zh": "今天很开心。（表情没有变）",
+          "en": "Today I'm very happy. (My expression hasn't changed.)"
+        },
+        {
+          "zh": "太阳对我笑了。我也在笑。你看不出来，但我在笑。",
+          "en": "The sun smiled at me. I'm smiling too. You can't tell, but I am."
+        },
+        {
+          "zh": "向日葵都朝着太阳。我朝着向日葵。",
+          "en": "The sunflowers face the sun. I face the sunflowers."
+        },
+        {
+          "zh": "小白马跑得很稳。我的肚子晃得很开心。",
+          "en": "The pony runs steady. My belly bounces happily."
+        }
+      ],
+      "scene": {
+        "zh": "矮石墙后长着高大的黑向日葵，奶蛙披着红披风、骑着小白马，举着红旗经过。一张温和的古金太阳脸照亮了整座花园。",
+        "en": "Tall dark sunflowers rise behind a low stone wall as Naiwa rides past on a white pony in a crimson cape, holding a red banner. A gentle antique-gold sun face lights the whole garden."
+      },
+      "origin": {
+        "zh": "一个孩子赤身骑在白马上，举着红旗，身后是向日葵与矮墙，上方一张大大的太阳脸。走出「月亮」的迷雾之后，一切都清楚了：这是大阿尔卡那里最明亮、最纯粹的快乐。",
+        "en": "A naked child rides a white horse holding a red banner, sunflowers and a low wall behind, a great sun face above. Out of the Moon's fog, everything is clear: the brightest, purest joy in the Major Arcana."
+      },
+      "astro": {
+        "zh": "太阳",
+        "en": "The Sun"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "坦诚、温暖、充满活力。适合公开、表白、一起出游。",
+            "en": "Open, warm and full of life. Good for going public, confessing, or a trip together."
+          },
+          "work": {
+            "zh": "成果被看见，事情顺利推进。自信地展示自己吧。",
+            "en": "Your results get noticed and things move forward. Show yourself with confidence."
+          },
+          "advice": {
+            "zh": "去晒晒太阳，做一件让自己开心的小事。",
+            "en": "Go get some sun, and do one small thing that makes you happy."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "小摩擦让快乐打了折扣，或者期待太过理想化。",
+            "en": "Small frictions dim the joy, or expectations are too idealized."
+          },
+          "work": {
+            "zh": "进展比预期慢，或者有点过度乐观。脚踏实地就好。",
+            "en": "Slower than hoped, or a bit over-optimistic. Stay grounded."
+          },
+          "advice": {
+            "zh": "云挡住了太阳，但没有拿走它。",
+            "en": "Clouds hide the sun; they don't take it away."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "major_20",
+      "arcana": "major",
+      "suit": null,
+      "rank": 20,
+      "num": "XX",
+      "name": {
+        "zh": "审判",
+        "en": "JUDGEMENT"
+      },
+      "keys": {
+        "zh": [
+          "觉醒",
+          "呼唤",
+          "重生"
+        ],
+        "en": [
+          "Awakening",
+          "Calling",
+          "Renewal"
+        ]
+      },
+      "up": {
+        "zh": "号角响起，是觉醒与清算的时刻。回应内心的召唤。",
+        "en": "The trumpet sounds — a time of awakening and reckoning. Answer the call within."
+      },
+      "rev": {
+        "zh": "自我批判过重，或忽视了召唤。原谅过去，才能重生。",
+        "en": "Too much self-judgment, or ignoring the call. Forgive the past in order to be reborn."
+      },
+      "whispers": [
+        {
+          "zh": "我吹响了号角。嘴还是一条线。",
+          "en": "I blew the trumpet. My mouth is still a straight line."
+        },
+        {
+          "zh": "号角吹得很响。我的嘴还是一条线，不知道声音是从哪里出来的。",
+          "en": "The trumpet is loud. My mouth is still a line. Not sure where the sound comes from."
+        },
+        {
+          "zh": "石棺打开了。里面的小光灵说：早上好。",
+          "en": "The coffins opened. The little spirits inside said good morning."
+        },
+        {
+          "zh": "翅膀一黑一白。我觉得这样比较公平。",
+          "en": "One wing black, one white. Seems fairer that way."
+        }
+      ],
+      "scene": {
+        "zh": "奶蛙站在发光的云台上，背着一黑一白的羽翼，吹响挂着红十字白旗的金色号角。云下的石棺安静地打开，小小的光灵顺着光束升起。",
+        "en": "Naiwa stands on a glowing cloud wearing one black and one white wing, blowing a golden trumpet hung with a white banner and red cross. Below, stone coffins open peacefully and small spirits of light rise along the beams."
+      },
+      "origin": {
+        "zh": "天使加百列吹响挂着红十字旗的号角，下方棺木中的人们张开双臂站起来。它取自「最后的审判」的意象，在塔罗里代表觉醒、清算，以及被召唤去过一种新的生活。",
+        "en": "The angel Gabriel sounds a trumpet hung with a red-cross banner, and below, people rise from their coffins with open arms. Drawn from the Last Judgement, in tarot it means awakening, reckoning, and being called to a new life."
+      },
+      "astro": {
+        "zh": "火元素（现代：冥王星）",
+        "en": "Fire (modern: Pluto)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "旧事重提、旧人重逢，或者终于想清楚自己要什么。给彼此一次重新开始的机会。",
+            "en": "Old matters return, old faces reappear, or you finally know what you want. Give each other a fresh start."
+          },
+          "work": {
+            "zh": "迎来评估、复盘或转折点。回应内心的召唤，做出关键决定。",
+            "en": "Reviews, retrospectives, a turning point. Answer the inner call and make the key decision."
+          },
+          "advice": {
+            "zh": "听见那声号角的时候，就站起来吧。",
+            "en": "When you hear the trumpet, stand up."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "放不下过去的错，对自己或对方太苛刻。",
+            "en": "Can't let go of past mistakes; too harsh on yourself or on them."
+          },
+          "work": {
+            "zh": "犹豫不决、错过时机，或者过度地自我批评。",
+            "en": "Indecision, missed timing, or too much self-criticism."
+          },
+          "advice": {
+            "zh": "原谅过去的自己，那时候已经尽力了。",
+            "en": "Forgive your past self — you did your best back then."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "major_21",
+      "arcana": "major",
+      "suit": null,
+      "rank": 21,
+      "num": "XXI",
+      "name": {
+        "zh": "世界",
+        "en": "THE WORLD"
+      },
+      "keys": {
+        "zh": [
+          "完成",
+          "统一",
+          "圆满"
+        ],
+        "en": [
+          "Completion",
+          "Unity",
+          "Wholeness"
+        ]
+      },
+      "up": {
+        "zh": "一个循环圆满完成。你已抵达，享受这份完整。",
+        "en": "A cycle is complete. You have arrived — enjoy the wholeness."
+      },
+      "rev": {
+        "zh": "还差最后一步，或迟迟无法收尾。把未竟之事画上句号。",
+        "en": "One last step remains, or you can't quite finish. Put a full stop on what's undone."
+      },
+      "whispers": [
+        {
+          "zh": "我在花环中间漂浮。圆满就是圆。",
+          "en": "I'm floating in the middle of the wreath. Complete means round."
+        },
+        {
+          "zh": "我在花环里转圈。转了一圈，又回到原点。这就是圆满。",
+          "en": "I spin inside the wreath. One full turn and back to the start. That's completeness."
+        },
+        {
+          "zh": "四个角都有人在看：天使、鹰、狮子、牛。我向他们点了头。（没有脖子，所以是整个身体点的）",
+          "en": "Someone in every corner: angel, eagle, lion, bull. I nodded. (No neck, so my whole body nodded.)"
+        },
+        {
+          "zh": "结束了。也开始了。",
+          "en": "It's over. It's also begun."
+        }
+      ],
+      "scene": {
+        "zh": "月桂、黑玫瑰与金丝带编成的椭圆花环正中，奶蛙失重般地漂浮着，两只手各持一支礼杖。四角是天使、鹰、狮与牛，深紫色的天空里落着金色的星。",
+        "en": "At the centre of an oval wreath of laurel, black roses and gold ribbon, Naiwa floats weightlessly with a small wand in each hand. Angel, eagle, lion and bull guard the corners under a deep purple sky of golden stars."
+      },
+      "origin": {
+        "zh": "一位手持双杖的舞者在椭圆月桂花环中央起舞，四角与「命运之轮」一样是天使、鹰、狮、牛。它是愚者之旅的终点，也是下一轮的起点：完整、统一、圆满。",
+        "en": "A dancer holding two wands moves inside an oval laurel wreath, with angel, eagle, lion and bull in the corners as on the Wheel. It's the end of the Fool's Journey and the start of the next: wholeness, unity, completion."
+      },
+      "astro": {
+        "zh": "土星",
+        "en": "Saturn"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "关系圆满、彼此成全，适合确认长久的约定。",
+            "en": "A fulfilling bond where you complete each other — good for lasting commitments."
+          },
+          "work": {
+            "zh": "项目完成、目标达成，值得庆祝。下一段旅程也在招手了。",
+            "en": "Projects complete, goals reached — celebrate. The next journey is already waving."
+          },
+          "advice": {
+            "zh": "好好庆祝这一刻，然后开启下一轮。",
+            "en": "Celebrate this moment, then begin the next round."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "差一点就圆满，却总有一个结没解开。",
+            "en": "So close to whole, but one knot remains untied."
+          },
+          "work": {
+            "zh": "收尾一拖再拖、细节没完成，或者害怕结束后的空白。",
+            "en": "Dragging out the finish, loose ends, or fear of the emptiness after."
+          },
+          "advice": {
+            "zh": "把最后一步走完，圆才会闭合。",
+            "en": "Take the last step; only then does the circle close."
+          }
+        }
+      },
+      "dark": false
+    }
+  ]
+}

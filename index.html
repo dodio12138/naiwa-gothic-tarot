@@ -9,7 +9,7 @@
   <link rel="icon" href="/favicon.png" type="image/png" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="奶蛙 · 暗夜塔罗 · Naiwa Gothic Tarot" />
-  <meta property="og:description" content="一只始终面无表情的黄色梨形怪物，穿行于庄严、阴郁、华丽的哥特塔罗世界。抽一张牌，看看命运怎么说。" />
+  <meta property="og:description" content="一只始终面无表情的黄色梨形怪物，穿行于庄严、阴郁、华丽的哥特塔罗世界。抽一张牌，听听奶蛙怎么说。" />
   <meta property="og:image" content="https://dodio12138.github.io/naiwa-gothic-tarot/og.jpg" />
   <meta property="og:url" content="https://dodio12138.github.io/naiwa-gothic-tarot/" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -63,6 +63,8 @@
     <label class="st-row"><span><b>自动翻牌</b><small>选完牌后自动揭示</small></span><input type="checkbox" data-k="autoReveal"><i class="sw"></i></label>
     <label class="st-row"><span><b>跳过洗牌动画</b><small>直接进入选牌</small></span><input type="checkbox" data-k="skipIntro"><i class="sw"></i></label>
     <label class="st-row"><span><b>逆位</b><small>允许抽到逆位牌</small></span><input type="checkbox" data-k="reversed"><i class="sw"></i></label>
+    <label class="st-row st-range" id="st-rev"><span><b id="st-rev-title">逆位概率</b><small id="st-rev-desc">洗牌时每张牌成为逆位的机会</small></span>
+      <span class="rg"><input type="range" min="0" max="100" step="5" data-r="revProb" aria-labelledby="st-rev-title"><output id="st-rev-val">40%</output></span></label>
     <div class="st-group" id="st-g-show">表 现</div>
     <div class="st-row st-qrow"><span><b id="st-q-title">画质</b><small id="st-q-desc">自动</small></span>
       <div class="seg" role="radiogroup" aria-labelledby="st-q-title">

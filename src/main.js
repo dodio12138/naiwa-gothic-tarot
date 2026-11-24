@@ -1,15 +1,14 @@
 import './style.css';
 import { gsap } from 'gsap';
-import { CARDS, SPREADS, artSrc } from './cards.js';
+import { CARDS, CARDS_EN, SPREADS, SPREADS_EN, GRID, artSrc, cardById, loreOf } from './cards.js';
 import { createParticles } from './particles.js';
 import { createAudio } from './audio.js';
 import { lightsHTML } from './lights.js';
-import { loreOf } from './lore.js';
 import { BILI, INSET, onInsetChange, toyQr, textIsSafe, saveToAlbum, sharePic, canAppShare, canAppSave } from './bili.js';
 import { Q, onQuality, setQualityPick, tickFps } from './perf.js';
 import { renderShare } from './share.js';
 import { dailyFate, recordDaily, streak, drawnToday, collect, collected } from './journal.js';
-import { t, getLang, setLang, SPREADS_EN, CARDS_EN, titleCase } from './i18n.js';
+import { t, getLang, setLang, titleCase } from './i18n.js';
 
 /* ════════ 语言 ════════ */
 const isEn = () => getLang() === 'en';
@@ -39,8 +38,6 @@ function updateBase() {
 updateBase();
 const TAU = Math.PI * 2;
 const BACK = `${import.meta.env.BASE_URL}back.webp`;
-const REVERSE_CHANCE = 0.4;
-const DARK_CARDS = new Set(['13', '15', '16']);
 const UI = (f) => `${import.meta.env.BASE_URL}ui/${f}`;
 const touch = matchMedia('(pointer: coarse)').matches;
 
@@ -84,10 +81,11 @@ const audio = createAudio();
 /* ════════ 设置（本地记忆） ════════ */
 const CFG_KEY = 'naiwa-tarot-settings';
 const CFG = {
-  autoDraw: false, autoReveal: false, skipIntro: false, reversed: true,
+  autoDraw: false, autoReveal: false, skipIntro: false, reversed: true, revProb: 40,   // revProb：逆位概率（%）
   parallax: true, lights: true, calm: false, sound: !audio.muted, ambient: true,
 };
 try { Object.assign(CFG, JSON.parse(localStorage.getItem(CFG_KEY) || '{}')); } catch { /* 无存储时用默认值 */ }
+const revChance = () => (CFG.reversed ? clamp(+CFG.revProb || 0, 0, 100) / 100 : 0);
 const saveCfg = () => { try { localStorage.setItem(CFG_KEY, JSON.stringify(CFG)); } catch { /* 忽略 */ } };
 const wait = (ms) => new Promise((r) => setTimeout(r, ms));
 addEventListener('pointerdown', audio.unlock, { passive: true });
@@ -164,7 +162,7 @@ function renderTitle() {
   split($('.title .t2'), t('titleBig'));
 }
 function renderSpreads() {
-  $('#spreads').innerHTML = Object.keys(SPREADS).filter((k) => k !== 'daily').map((k) => {
+  $('#spreads').innerHTML = Object.keys(SPREADS).filter((k) => SPREADS[k].home).map((k) => {
     const s = spreadText(k);
     return `
     <button class="spread-btn" type="button" data-spread="${k}"><span class="sb-in">
@@ -254,7 +252,6 @@ function setHint(t) {
 
 /* ════════ 卡牌 DOM ════════ */
 // 正面三层：插画（随视差移动）→ 边框（静止，SVG 蒙版只露出窗口外一圈）→ 编号铭牌（悬停显示）
-const cardById = (id) => CARDS.find((c) => c.id === id);
 // 光源数量随画质档位：桌面全部，手机只留最大的几个；大图详情至少保留 4 个
 const lightCount = (size) => (size === 'full' ? Math.max(4, Q.p.lights) : Math.max(3, Q.p.lights));
 const frontLayers = (id, size = 'sm') => `
@@ -442,13 +439,6 @@ function pickSlotGeom(n) {
   return Array.from({ length: n }, (_, i) => ({ x: W / 2 + (i - (n - 1) / 2) * (w + gap), y: cy, w, h }));
 }
 
-const GRID = {
-  daily: [[0, 0]],
-  one: [[0, 0]],
-  three: [[-1, 0], [0, 0], [1, 0]],
-  // 现状 中，阻碍 上，根源 下，建议 左，结果 右
-  five: [[0, 0], [0, -1], [0, 1], [-1, 0], [1, 0]],
-};
 
 // 揭示布局：默认按牌阵的十字 / 横排摆放；若改成一行横排能让牌明显更大
 // （横屏手机、手机上解读面板打开时只剩上半屏），就改用横排，牌名标签照常跟着牌位
@@ -494,7 +484,7 @@ async function start(key) {
   S.spread = SPREADS[key];
   S.question = $('#question').value.trim();
   S.phase = 'dealing';
-  S.fate = key === 'daily' ? dailyFate(CARDS.length) : null;
+  S.fate = key === 'daily' ? dailyFate(CARDS.map((c) => c.id)) : null;
   S.replay = !!(S.fate && S.fate.drawn);   // 今天已经抽过：快速重放到揭示
   S.auto = CFG.autoDraw || S.replay;
   await introOut();
@@ -539,7 +529,9 @@ async function autoPick() {
 function buildDeck() {
   updateBase();   // 画质可能在上一轮中途被自动下调，新一轮按新档位建牌
   stage.innerHTML = '';
-  S.cards = shuffled(CARDS).map(makeCard);
+  // 洗牌时就锁定每张牌的顺序与朝向：之后选哪张、何时翻开，都不会改变它本来的正逆
+  const p = revChance();
+  S.cards = shuffled(CARDS).map((d) => Object.assign(makeCard(d), { reversed: rand() < p }));
   S.picked = [];
   const { W, H } = vp();
   const s = deckScale();
@@ -802,13 +794,14 @@ function pick(c) {
   if (c.q) { gsap.killTweensOf(c.el, 'x,y,rotation,scale'); c.q = null; }
   c.slot = S.picked.length;
   S.picked.push(c);
-  c.reversed = CFG.reversed && rand() < REVERSE_CHANCE;
   if (S.fate) {
+    // 今日一签是特例：同一台设备同一天固定同一张牌，所以在选中时把那张牌换到手上
     const fated = S.cards.find((x) => x.data.id === S.fate.id);
     if (fated && fated !== c) [c.data, fated.data] = [fated.data, c.data];
-    c.reversed = S.fate.drawn ? S.fate.reversed : (CFG.reversed && S.fate.reversed);
+    c.reversed = S.fate.drawn ? S.fate.reversed : S.fate.revRoll < revChance();
   }
   c.el.classList.toggle('reversed', c.reversed);
+  c.wi = Math.floor(rand() * 4);   // 低语也在此时定下，刷新恢复后保持同一句
   setFace(c, c.data);   // 牌面只给选中的牌生成：没选中的牌永远不会翻开，省掉它们的正面图层
 
   // 余下的牌合拢；鼠标不动也立刻按当前位置找到下一张最近的牌
@@ -856,6 +849,7 @@ async function afterPick() {
   S.cards = S.picked.slice();
   motionBlur(false);
   S.phase = 'reveal';
+  saveSession();
   await layoutReveal(0.9);
   S.picked.forEach((c) => c.el.classList.add('revealable'));
   hintBy(() => t(S.picked.length > 1 ? 'hRevealMany' : 'hRevealOne'));
@@ -900,7 +894,7 @@ function reveal(c) {
   c.el.classList.remove('revealable');
   const g = revealSlotGeom()[c.slot];
   const s = g.w / BASE;
-  const dark = DARK_CARDS.has(c.data.id);
+  const dark = c.data.dark;
   const colors = dark ? ['#c2334f', '#7a1d36', '#e9d39a', '#ff7a5c', '#b39963'] : undefined;
   gsap.set(c.el, { zIndex: 400 });
 
@@ -913,6 +907,7 @@ function reveal(c) {
       c.el.classList.add('revealed');
       c.el.dataset.tilt = 'on';
       gsap.set(c.el, { zIndex: 300 + c.slot });
+      saveSession();
       onRevealed();
     },
   });
@@ -1006,7 +1001,8 @@ function readingHTML() {
     <div class="r-foot">
       <button class="plate sm" type="button" data-share>${t('share')}</button>
       <button class="plate sm" type="button" data-again>${t('again')}</button>
-    </div>`;
+    </div>
+    <p class="r-note">${t('disclaimer')}</p>`;
 }
 
 function openReading() {
@@ -1324,6 +1320,7 @@ async function restart() {
   gsap.set(reading, { clearProps: 'transform' });
   stage.innerHTML = '';
   Object.assign(S, { phase: 'intro', key: null, spread: null, cards: [], picked: [], slots: [], readingOpen: false, auto: false, fate: null, replay: false });
+  clearSession();
   renderHomeExtras();
   setSkipping(false);
   FAN.ready = false; FAN.hot = -1; FAN.pressed = false;
@@ -1363,6 +1360,7 @@ function applyCfg() {
   document.body.classList.toggle('no-lights', !CFG.lights);
   if (!CFG.parallax) for (const t of tilts) t.set(0, 0);
   document.querySelectorAll('input[data-k]').forEach((i) => { i.checked = !!CFG[i.dataset.k]; });
+  syncRevUI();
 }
 document.addEventListener('change', (e) => {
   const k = e.target.dataset && e.target.dataset.k;
@@ -1371,6 +1369,22 @@ document.addEventListener('change', (e) => {
   saveCfg(); applyCfg();
   audio.unlock(); audio.click();
 });
+// 逆位概率滑杆：只在开启逆位时可调
+function syncRevUI() {
+  const r = document.querySelector('input[data-r="revProb"]');
+  r.value = CFG.revProb;
+  document.getElementById('st-rev-val').textContent = `${CFG.revProb}%`;
+  document.getElementById('st-rev').classList.toggle('off', !CFG.reversed);
+  r.disabled = !CFG.reversed;
+  document.getElementById('st-rev-title').textContent = t('revTitle');
+  document.getElementById('st-rev-desc').textContent = t('revDesc');
+}
+document.querySelector('input[data-r="revProb"]').addEventListener('input', (e) => {
+  CFG.revProb = +e.target.value;
+  document.getElementById('st-rev-val').textContent = `${CFG.revProb}%`;
+});
+document.querySelector('input[data-r="revProb"]').addEventListener('change', () => { saveCfg(); audio.click(); });
+
 // 画质：自动 / 高 / 中 / 低（用 getElementById，避免启动时还没取到 panel）
 function syncQualityUI() {
   const names = t('qNames');
@@ -1435,6 +1449,7 @@ function applyLang(rerender = true) {
   });
   syncSound();
   syncQualityUI();
+  syncRevUI();
   if (!rerender) return;
   renderTitle();
   renderSpreads();
@@ -1475,4 +1490,80 @@ onInsetChange(() => { clearTimeout(rT); rT = setTimeout(() => { relayout(); fitI
 
 /* ════════ 启动 ════════ */
 buildIntro();
-introIn();
+
+/* ════════ 会话：牌一旦布好阵就记下来，刷新页面后原样恢复 ════════
+   存在 sessionStorage（只对当前标签页有效，关掉就没了）；只在牌全部落位之后保存，
+   洗牌、选牌途中刷新则重新开始——此时牌还没定，不存在「改变结果」的问题。 */
+const SESSION_KEY = 'naiwa-tarot-session';
+function saveSession() {
+  if (!S.key || !S.picked.length) return;
+  const data = {
+    v: 1, key: S.key, question: S.question,
+    cards: S.picked.map((c) => ({ id: c.data.id, reversed: c.reversed, slot: c.slot, revealed: !!c.revealed, wi: c.wi })),
+  };
+  try { sessionStorage.setItem(SESSION_KEY, JSON.stringify(data)); } catch { /* 忽略 */ }
+}
+function clearSession() { try { sessionStorage.removeItem(SESSION_KEY); } catch { /* 忽略 */ } }
+function loadSession() {
+  try {
+    const d = JSON.parse(sessionStorage.getItem(SESSION_KEY) || 'null');
+    if (!d || d.v !== 1 || !SPREADS[d.key]) return null;
+    if (d.cards.length !== SPREADS[d.key].positions.length || d.cards.some((c) => !cardById(c.id))) return null;
+    return d;
+  } catch { return null; }
+}
+
+function restoreSession(d) {
+  S.key = d.key;
+  S.spread = SPREADS[d.key];
+  S.question = d.question || '';
+  $('#question').value = S.question;
+  intro.classList.add('gone');
+  intro.style.visibility = 'hidden';
+  document.body.classList.remove('is-intro');
+  heroTl?.pause();
+  updateBase();
+  stage.innerHTML = '';
+  buildSlots();
+  S.picked = d.cards.slice().sort((a, b) => a.slot - b.slot).map((s) => {
+    const c = makeCard(cardById(s.id));
+    Object.assign(c, { slot: s.slot, reversed: s.reversed, wi: s.wi });
+    c.el.classList.toggle('reversed', c.reversed);
+    setFace(c, c.data);
+    stage.appendChild(c.el);
+    attachTilt(c.el, c.tilt);
+    if (s.revealed) {
+      c.revealed = true;
+      gsap.set(c.inner, { rotationY: 180 });
+      c.el.classList.add('revealed');
+      c.el.dataset.tilt = 'on';
+      S.slots[c.slot].card = c;
+      renderSlotLabel(S.slots[c.slot]);
+    } else {
+      c.el.classList.add('revealable');
+    }
+    return c;
+  });
+  S.cards = S.picked.slice();
+  const geo = revealSlotGeom();
+  S.slots.forEach((s, i) => gsap.set(s.el, { x: geo[i].x, y: geo[i].y, width: geo[i].w, height: geo[i].h, xPercent: -50, yPercent: -50 }));
+  S.picked.forEach((c) => gsap.set(c.el, { x: geo[c.slot].x, y: geo[c.slot].y, scale: geo[c.slot].w / BASE, rotation: 0, zIndex: 300 + c.slot }));
+  if (geo[0].w < 84) gsap.set(stage.querySelectorAll('.slot .label'), { opacity: 0 });
+  gsap.from(stage.children, { opacity: 0, duration: 0.6, stagger: 0.05 });
+  btnRestart.hidden = false;
+  if (S.picked.every((c) => c.revealed)) {
+    S.phase = 'done';
+    hintBy(() => t(S.key === 'daily' ? 'hDailyDone' : 'hDone'));
+    gsap.delayedCall(0.4, openReading);
+  } else {
+    S.phase = 'reveal';
+    hintBy(() => t(S.picked.length > 1 ? 'hRevealMany' : 'hRevealOne'));
+    if (S.picked.filter((c) => !c.revealed).length > 1) btnRevealAll.hidden = false;
+  }
+}
+
+{
+  const saved = loadSession();
+  if (saved) restoreSession(saved);
+  else introIn();
+}

@@ -2,6 +2,17 @@
 const KEY = 'naiwa-tarot-journal';
 const J = { seed: '', daily: {}, collected: {}, streak: 0, last: '' };
 try { Object.assign(J, JSON.parse(localStorage.getItem(KEY) || '{}')); } catch { /* 无存储时只在本次会话内有效 */ }
+// 旧版本用两位数字做牌 ID（'21'），现在统一为 'major_21'
+{
+  const up = (id) => (/^\d\d$/.test(id) ? `major_${id}` : id);
+  let changed = false;
+  for (const id of Object.keys(J.collected)) {
+    const n = up(id);
+    if (n !== id) { J.collected[n] = (J.collected[n] || 0) + J.collected[id]; delete J.collected[id]; changed = true; }
+  }
+  for (const d of Object.values(J.daily)) { const n = up(d.id); if (n !== d.id) { d.id = n; changed = true; } }
+  if (changed) setTimeout(save);
+}
 if (!J.seed) {
   J.seed = Array.from(crypto.getRandomValues(new Uint32Array(2)), (n) => n.toString(36)).join('');
   save();
@@ -20,12 +31,13 @@ function hash(str) {
   return h >>> 0;
 }
 
-/** 今天命中注定的那张牌；已经抽过则返回记录 */
-export function dailyFate(total = 22) {
+/** 今天的那张牌（ids 为可抽的牌 ID 列表）；已经抽过则返回记录。
+ *  revRoll 是 0~1 的固定值，由调用方按当前逆位概率判断正逆 */
+export function dailyFate(ids) {
   const k = todayKey();
   if (J.daily[k]) return { ...J.daily[k], drawn: true };
   const h = hash(`${J.seed}|${k}`);
-  return { id: pad(h % total), reversed: (Math.floor(h / total) % 100) < 40, drawn: false };
+  return { id: ids[h % ids.length], revRoll: (Math.floor(h / ids.length) % 1000) / 1000, drawn: false };
 }
 
 /** 记下今天的签并更新连续天数（同一天只记一次） */

@@ -1,0 +1,63 @@
+{
+  "$comment": "牌阵配置。positions 按抽牌顺序排列；x / y 是揭示时的格位（以牌宽为单位，0,0 为中心，y 向下为正）。home=false 的牌阵不出现在首页牌阵按钮里。",
+  "spreads": [
+    {
+      "id": "daily", "home": false, "category": "traditional",
+      "name": { "zh": "今日一签", "en": "Daily Draw" },
+      "sub": { "zh": "每日一张 · 今日的提醒", "en": "One card a day · today's reminder" },
+      "positions": [
+        { "id": "today", "x": 0, "y": 0,
+          "name": { "zh": "今日一签", "en": "Today's Card" },
+          "meaning": { "zh": "今天值得留意的主题。", "en": "A theme worth noticing today." } }
+      ]
+    },
+    {
+      "id": "one", "home": true, "category": "traditional",
+      "name": { "zh": "单牌指引", "en": "Single Card" },
+      "sub": { "zh": "一张牌 · 此刻的启示", "en": "One card · A message for now" },
+      "positions": [
+        { "id": "message", "x": 0, "y": 0,
+          "name": { "zh": "此刻的启示", "en": "The Message" },
+          "meaning": { "zh": "当下的指引或值得反思的主题。", "en": "Guidance for now, or a theme to reflect on." } }
+      ]
+    },
+    {
+      "id": "three", "home": true, "category": "traditional",
+      "name": { "zh": "时间之流", "en": "Flow of Time" },
+      "sub": { "zh": "三张牌 · 过去 / 现在 / 未来", "en": "Three cards · Past / Present / Future" },
+      "positions": [
+        { "id": "past", "x": -1, "y": 0,
+          "name": { "zh": "过去", "en": "Past" },
+          "meaning": { "zh": "背景与既有的影响。", "en": "Background and lingering influences." } },
+        { "id": "present", "x": 0, "y": 0,
+          "name": { "zh": "现在", "en": "Present" },
+          "meaning": { "zh": "当前的状态。", "en": "Where things stand now." } },
+        { "id": "future", "x": 1, "y": 0,
+          "name": { "zh": "未来", "en": "Future" },
+          "meaning": { "zh": "可能的发展方向，而不是必然的结果。", "en": "A possible direction — not a fixed outcome." } }
+      ]
+    },
+    {
+      "id": "five", "home": true, "category": "traditional",
+      "name": { "zh": "十字指引", "en": "Cross of Guidance" },
+      "sub": { "zh": "五张牌 · 处境与指引", "en": "Five cards · Situation & guidance" },
+      "positions": [
+        { "id": "situation", "x": 0, "y": 0,
+          "name": { "zh": "现状", "en": "Situation" },
+          "meaning": { "zh": "你此刻所处的位置。", "en": "Where you are right now." } },
+        { "id": "obstacle", "x": -1, "y": 0,
+          "name": { "zh": "阻碍", "en": "Obstacle" },
+          "meaning": { "zh": "正在拖住你的东西。", "en": "What is holding you back." } },
+        { "id": "support", "x": 1, "y": 0,
+          "name": { "zh": "助力", "en": "Support" },
+          "meaning": { "zh": "可以借用的力量。", "en": "Strength you can draw on." } },
+        { "id": "advice", "x": 0, "y": -1,
+          "name": { "zh": "建议", "en": "Advice" },
+          "meaning": { "zh": "可以尝试的方向。", "en": "A direction worth trying." } },
+        { "id": "potential", "x": 0, "y": 1,
+          "name": { "zh": "可能的发展", "en": "Potential" },
+          "meaning": { "zh": "顺着现在走下去可能出现的样子，而不是定数。", "en": "Where things may lead if they continue — not a certainty." } }
+      ]
+    }
+  ]
+}

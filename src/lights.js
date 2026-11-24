@@ -11,52 +11,53 @@ const C = {
 };
 
 export const LIGHTS = {
-  '00': [['moon', 0.32, 0.15, 0.30, C.cool]],
-  '01': [['spark', 0.37, 0.10, 0.12, C.white], ['glow', 0.46, 0.15, 0.22, C.gold],
+  major_00: [['moon', 0.32, 0.15, 0.30, C.cool]],
+  major_01: [['spark', 0.37, 0.10, 0.12, C.white], ['glow', 0.46, 0.15, 0.22, C.gold],
          ['flame', 0.12, 0.37, 0.12, C.warm], ['flame', 0.87, 0.38, 0.12, C.warm], ['moon', 0.82, 0.21, 0.12, C.cool]],
-  '02': [['moon', 0.44, 0.07, 0.30, C.cool], ['spark', 0.42, 0.24, 0.10, C.silver],
+  major_02: [['moon', 0.44, 0.07, 0.30, C.cool], ['spark', 0.42, 0.24, 0.10, C.silver],
          ['moon', 0.45, 0.81, 0.18, C.silver], ['water', 0.45, 0.90, 0.22, C.cool]],
-  '03': [['holy', 0.75, 0.04, 0.50, C.warm], ['spark', 0.58, 0.20, 0.12, C.gold]],
-  '04': [['glow', 0.20, 0.05, 0.50, C.red], ['spark', 0.73, 0.35, 0.10, C.gold], ['spark', 0.51, 0.21, 0.10, C.gold]],
-  '05': [['glow', 0.55, 0.08, 0.36, C.violet], ['flame', 0.13, 0.44, 0.16, C.warm],
+  major_03: [['holy', 0.75, 0.04, 0.50, C.warm], ['spark', 0.58, 0.20, 0.12, C.gold]],
+  major_04: [['glow', 0.20, 0.05, 0.50, C.red], ['spark', 0.73, 0.35, 0.10, C.gold], ['spark', 0.51, 0.21, 0.10, C.gold]],
+  major_05: [['glow', 0.55, 0.08, 0.36, C.violet], ['flame', 0.13, 0.44, 0.16, C.warm],
          ['flame', 0.85, 0.41, 0.16, C.warm], ['spark', 0.50, 0.12, 0.10, C.gold]],
-  '06': [['holy', 0.50, 0.16, 0.55, C.white], ['spark', 0.50, 0.08, 0.14, C.white]],
-  '07': [['spark', 0.30, 0.13, 0.08, C.silver], ['spark', 0.50, 0.08, 0.08, C.silver], ['spark', 0.68, 0.14, 0.08, C.silver],
+  major_06: [['holy', 0.50, 0.16, 0.55, C.white], ['spark', 0.50, 0.08, 0.14, C.white]],
+  major_07: [['spark', 0.30, 0.13, 0.08, C.silver], ['spark', 0.50, 0.08, 0.08, C.silver], ['spark', 0.68, 0.14, 0.08, C.silver],
          ['flame', 0.95, 0.52, 0.10, C.warm], ['spark', 0.50, 0.84, 0.12, C.gold]],
-  '08': [['moon', 0.71, 0.13, 0.20, C.cool], ['glow', 0.20, 0.26, 0.16, C.gold]],
-  '09': [['flame', 0.26, 0.60, 0.26, C.warm], ['moon', 0.67, 0.13, 0.20, C.cool]],
-  '10': [['holy', 0.50, 0.32, 0.50, C.gold], ['spark', 0.50, 0.33, 0.14, C.white], ['moon', 0.83, 0.27, 0.16, C.violet]],
-  '11': [['moon', 0.50, 0.10, 0.16, C.cool], ['spark', 0.23, 0.30, 0.12, C.white],
+  major_08: [['moon', 0.71, 0.13, 0.20, C.cool], ['glow', 0.20, 0.26, 0.16, C.gold]],
+  major_09: [['flame', 0.26, 0.60, 0.26, C.warm], ['moon', 0.67, 0.13, 0.20, C.cool]],
+  major_10: [['holy', 0.50, 0.32, 0.50, C.gold], ['spark', 0.50, 0.33, 0.14, C.white], ['moon', 0.83, 0.27, 0.16, C.violet]],
+  major_11: [['moon', 0.50, 0.10, 0.16, C.cool], ['spark', 0.23, 0.30, 0.12, C.white],
          ['flame', 0.08, 0.50, 0.14, C.warm], ['halo', 0.50, 0.29, 0.42, C.gold], ['spark', 0.83, 0.50, 0.08, C.gold]],
-  '12': [['moon', 0.60, 0.07, 0.16, C.cool], ['halo', 0.50, 0.68, 0.36, C.gold], ['glow', 0.52, 0.17, 0.18, C.warm],
+  major_12: [['moon', 0.60, 0.07, 0.16, C.cool], ['halo', 0.50, 0.68, 0.36, C.gold], ['glow', 0.52, 0.17, 0.18, C.warm],
          ['flame', 0.08, 0.65, 0.10, C.warm], ['flame', 0.90, 0.65, 0.10, C.warm]],
-  '13': [['moon', 0.25, 0.10, 0.18, C.cool], ['glow', 0.81, 0.37, 0.24, C.amber], ['spark', 0.66, 0.18, 0.10, C.white]],
-  '14': [['moon', 0.33, 0.07, 0.16, C.cool], ['glow', 0.41, 0.39, 0.11, C.silver],
+  major_13: [['moon', 0.25, 0.10, 0.18, C.cool], ['glow', 0.81, 0.37, 0.24, C.amber], ['spark', 0.66, 0.18, 0.10, C.white]],
+  major_14: [['moon', 0.33, 0.07, 0.16, C.cool], ['glow', 0.41, 0.39, 0.11, C.silver],
          ['glow', 0.66, 0.24, 0.16, C.warm], ['water', 0.50, 0.86, 0.30, C.cool]],
-  '15': [['glow', 0.48, 0.09, 0.22, C.red], ['flame', 0.07, 0.38, 0.10, C.red], ['flame', 0.12, 0.42, 0.10, C.amber],
+  major_15: [['glow', 0.48, 0.09, 0.22, C.red], ['flame', 0.07, 0.38, 0.10, C.red], ['flame', 0.12, 0.42, 0.10, C.amber],
          ['flame', 0.90, 0.42, 0.10, C.red], ['flame', 0.95, 0.48, 0.10, C.amber], ['flame', 0.20, 0.55, 0.18, C.amber]],
-  '16': [['flash', 0.78, 0.10, 0.40, C.silver], ['flame', 0.60, 0.30, 0.34, C.amber], ['spark', 0.60, 0.08, 0.12, C.gold]],
-  '17': [['spark', 0.47, 0.15, 0.30, C.white], ['spark', 0.37, 0.09, 0.08, C.silver], ['spark', 0.58, 0.08, 0.08, C.silver],
+  major_16: [['flash', 0.78, 0.10, 0.40, C.silver], ['flame', 0.60, 0.30, 0.34, C.amber], ['spark', 0.60, 0.08, 0.12, C.gold]],
+  major_17: [['spark', 0.47, 0.15, 0.30, C.white], ['spark', 0.37, 0.09, 0.08, C.silver], ['spark', 0.58, 0.08, 0.08, C.silver],
          ['spark', 0.32, 0.17, 0.07, C.silver], ['spark', 0.65, 0.20, 0.07, C.silver],
          ['glow', 0.33, 0.66, 0.14, C.silver], ['water', 0.33, 0.86, 0.26, C.cool], ['glow', 0.75, 0.52, 0.10, C.silver]],
-  '18': [['moon', 0.50, 0.15, 0.42, C.silver], ['water', 0.50, 0.87, 0.34, C.cool]],
-  '19': [['holy', 0.67, 0.15, 0.62, C.warm], ['spark', 0.24, 0.23, 0.12, C.gold]],
-  '20': [['holy', 0.42, 0.12, 0.44, C.white], ['spark', 0.85, 0.16, 0.14, C.gold], ['glow', 0.45, 0.60, 0.50, C.white],
+  major_18: [['moon', 0.50, 0.15, 0.42, C.silver], ['water', 0.50, 0.87, 0.34, C.cool]],
+  major_19: [['holy', 0.67, 0.15, 0.62, C.warm], ['spark', 0.24, 0.23, 0.12, C.gold]],
+  major_20: [['holy', 0.42, 0.12, 0.44, C.white], ['spark', 0.85, 0.16, 0.14, C.gold], ['glow', 0.45, 0.60, 0.50, C.white],
          ['flame', 0.20, 0.78, 0.14, C.gold], ['flame', 0.55, 0.78, 0.14, C.gold], ['flame', 0.85, 0.78, 0.14, C.gold]],
-  '21': [['spark', 0.22, 0.33, 0.14, C.gold], ['spark', 0.78, 0.33, 0.14, C.gold], ['spark', 0.35, 0.05, 0.08, C.white],
+  major_21: [['spark', 0.22, 0.33, 0.14, C.gold], ['spark', 0.78, 0.33, 0.14, C.gold], ['spark', 0.35, 0.05, 0.08, C.white],
          ['spark', 0.70, 0.18, 0.08, C.white], ['spark', 0.30, 0.60, 0.08, C.white], ['spark', 0.72, 0.62, 0.08, C.white]],
 };
 
 // 生成某张牌的光效层 HTML；延迟按序号错开，避免同步闪烁
 // max：最多保留几个光源（低画质时只留面积最大的几个，小星芒先省掉）
 export function lightsHTML(id, max = 99) {
+  const seed = [...id].reduce((a, ch) => a + ch.charCodeAt(0), 0);   // 每张牌的闪烁相位不同
   let list = LIGHTS[id] || [];
   if (list.length > max) {
     const keep = new Set([...list].sort((a, b) => b[3] - a[3]).slice(0, max));
     list = list.filter((l) => keep.has(l));
   }
   return `<div class="lights" aria-hidden="true">${list.map(([type, x, y, r, c], i) => {
-    const d = ((i * 0.618 + Number(id) * 0.37) % 1).toFixed(2);
+    const d = ((i * 0.618 + seed * 0.37) % 1).toFixed(2);
     return `<i class="lt lt-${type}" style="--x:${x};--y:${y};--r:${r};--c:${c};--d:${d}"></i>`;
   }).join('')}</div>`;
 }

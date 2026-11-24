@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run check && vite build",
     "preview": "vite preview",
     "dev:bili": "vite --mode bili",
-    "build:bili": "vite build --mode bili",
-    "toy": "vite build --mode bili && cp assets-src/cover/toy-cover.jpg assets-src/cover/toy-icon.png dist-bili/ && mkdir -p release && rm -f release/naiwa-tarot-toy.zip && cp assets-src/cover/toy-cover.jpg assets-src/cover/toy-icon.png release/ && cd dist-bili && zip -qr ../release/naiwa-tarot-toy.zip . -x '.*'"
+    "build:bili": "npm run check && vite build --mode bili",
+    "toy": "npm run check && vite build --mode bili && mkdir -p release && rm -f release/naiwa-tarot-toy.zip && cp assets-src/cover/toy-cover.jpg assets-src/cover/toy-icon.png release/ && cd dist-bili && zip -qr9 ../release/naiwa-tarot-toy.zip . -x '.*'",
+    "check": "node scripts/validate-data.mjs"
   },
   "devDependencies": {
     "vite": "^6.0.0"
