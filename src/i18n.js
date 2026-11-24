@@ -1,0 +1,183 @@
+// 中英文切换：界面文案 + 牌面英文内容
+// 选择记在 localStorage；首次访问跟随浏览器语言
+
+const KEY = 'naiwa-tarot-lang';
+let lang = 'zh';
+try {
+  lang = localStorage.getItem(KEY) || ((navigator.language || '').toLowerCase().startsWith('zh') ? 'zh' : 'en');
+} catch { /* 无存储时用中文 */ }
+
+export const getLang = () => lang;
+export function setLang(v) {
+  lang = v;
+  try { localStorage.setItem(KEY, v); } catch { /* 忽略 */ }
+}
+
+/* ── 界面文案 ── */
+const UI = {
+  zh: {
+    pageTitle: '奶蛙 · 暗夜占卜 · Naiwa Gothic Tarot',
+    titleSmall: '奶蛙', titleBig: '暗夜占卜',
+    lede: '一只始终面无表情的黄色梨形怪物，<br />穿行于庄严、阴郁、华丽的哥特塔罗世界。',
+    question: '在心中默念你的问题……（可不填）',
+    autoToggle: '一键占卜 · 自动抽牌并揭示',
+    revealAll: '全部揭示', restart: '重新抽牌', skip: '跳过 ››', again: '再抽一次',
+    home: '回到首页', settings: '设置', close: '关闭',
+    soundOn: '开启音效', soundOff: '关闭音效',
+    langBtn: 'EN', langAria: 'Switch to English',
+    hShuffle: '奶蛙正在洗牌……', hShuffleAuto: '命运之手正在洗牌……',
+    hPick: (n, pos) => `凭直觉选出 ${n} 张牌 · ${pos}`, hPicked: '命运已就位',
+    hAutoPick: '命运之手正在为你抽牌……',
+    hRevealOne: '轻触牌面，揭示命运', hRevealMany: '轻触牌面，逐一揭示命运',
+    hRevealing: '命运正在揭晓……', hDone: '命运已揭晓 · 点击牌面查看详情',
+    upright: '正位', reversed: '逆位', revTag: '逆',
+    drawnUp: '正位 · 你抽到的', drawnRev: '逆位 · 你抽到的',
+    whisper: '奶蛙：',
+    stHead: '设 置', stGroupRead: '占 卜', stGroupShow: '表 现',
+    st: {
+      autoDraw: ['一键占卜', '自动洗牌、抽牌并依次揭示'],
+      autoReveal: ['自动翻牌', '选完牌后自动揭示'],
+      skipIntro: ['跳过洗牌动画', '直接进入选牌'],
+      reversed: ['逆位', '允许抽到逆位牌'],
+      parallax: ['视差 / 陀螺仪', '悬停或倾斜手机时的纵深'],
+      calm: ['弱化动效', '更快、更少闪光与震动'],
+      sound: ['音效', '洗牌、翻牌等仪式音效'],
+      ambient: ['背景音', '低沉的环境长音'],
+    },
+  },
+  en: {
+    pageTitle: 'Naiwa · Night Oracle · Gothic Tarot',
+    titleSmall: 'Naiwa', titleBig: 'Night Oracle',
+    lede: 'A forever-expressionless, pear-shaped yellow creature<br />wanders a solemn, gloomy and ornate gothic tarot world.',
+    question: 'Silently ask your question… (optional)',
+    autoToggle: 'One-click reading · auto draw & reveal',
+    revealAll: 'Reveal all', restart: 'Draw again', skip: 'Skip ››', again: 'Draw again',
+    home: 'Back to home', settings: 'Settings', close: 'Close',
+    soundOn: 'Turn sound on', soundOff: 'Turn sound off',
+    langBtn: '中', langAria: '切换到中文',
+    hShuffle: 'Naiwa is shuffling…', hShuffleAuto: 'The hand of fate is shuffling…',
+    hPick: (n, pos) => `Trust your intuition — choose ${n} · ${pos}`, hPicked: 'Fate is in place',
+    hAutoPick: 'The hand of fate is drawing for you…',
+    hRevealOne: 'Tap the card to reveal your fate', hRevealMany: 'Tap each card to reveal your fate',
+    hRevealing: 'Your fate is unfolding…', hDone: 'Fate revealed · tap a card for details',
+    upright: 'Upright', reversed: 'Reversed', revTag: 'REV',
+    drawnUp: 'Upright · your draw', drawnRev: 'Reversed · your draw',
+    whisper: 'Naiwa: ',
+    stHead: 'SETTINGS', stGroupRead: 'READING', stGroupShow: 'PRESENTATION',
+    st: {
+      autoDraw: ['One-click reading', 'Auto shuffle, draw and reveal'],
+      autoReveal: ['Auto reveal', 'Flip the cards once chosen'],
+      skipIntro: ['Skip the shuffle', 'Go straight to choosing'],
+      reversed: ['Reversals', 'Allow reversed cards'],
+      parallax: ['Parallax / gyroscope', 'Depth on hover or phone tilt'],
+      calm: ['Reduce motion', 'Faster, fewer flashes and shakes'],
+      sound: ['Sound effects', 'Shuffle, flip and ritual sounds'],
+      ambient: ['Ambience', 'A low drone in the background'],
+    },
+  },
+};
+export const t = (k) => UI[lang][k];
+
+/* ── 牌阵英文 ── */
+export const SPREADS_EN = {
+  one: { name: "Today's Guidance", sub: 'One card · A message for now', positions: ['The Message'] },
+  three: { name: 'Flow of Time', sub: 'Three cards · Past / Present / Future', positions: ['Past', 'Present', 'Future'] },
+  five: { name: 'Cross of Fate', sub: 'Five cards · Situation & guidance', positions: ['Situation', 'Obstacle', 'Root', 'Advice', 'Outcome'] },
+};
+
+/* ── 牌面英文：关键词 / 正位 / 逆位 / 奶蛙的低语 ── */
+export const CARDS_EN = {
+  '00': { keys: ['Beginnings', 'Innocence', 'The unknown'],
+    up: "A new journey waits at the cliff's edge. You don't need every step figured out — pick up your little bundle and take that first short step.",
+    rev: 'Recklessness or hesitation is holding you back. Look at the ground beneath you, then decide whether to leap or wait.',
+    whisper: "…There seems to be no road ahead. That's fine. I don't have a neck either." },
+  '01': { keys: ['Will', 'Creation', 'Action'],
+    up: 'All four elements are already in your hands. Focus your will — it is time to turn ideas into reality.',
+    rev: 'Talent scattered or misused. Beware of skill without direction, or of being dazzled by clever words.',
+    whisper: 'The wand is raised. What happens next, I also do not know.' },
+  '02': { keys: ['Intuition', 'Secrets', 'Subconscious'],
+    up: "The answer isn't in the noise. Be still and listen to the whisper within; intuition will draw back the veil.",
+    rev: "You're ignoring your intuition, or a secret has yet to surface. Don't rush to conclusions.",
+    whisper: "What does the scroll say? …I can't read." },
+  '03': { keys: ['Abundance', 'Nurture', 'Life'],
+    up: 'Abundance is growing. Care for yourself and those around you, and creativity and beauty will bear fruit.',
+    rev: 'Giving too much or neglecting yourself has stalled your growth. Nourish yourself first.',
+    whisper: 'My belly is very round. This is abundance.' },
+  '04': { keys: ['Order', 'Structure', 'Authority'],
+    up: 'Set rules and boundaries, and command the situation with steady structure. Responsibility brings real power.',
+    rev: 'Too much control, or order collapsing. Rigid rules need loosening; chaos needs a frame.',
+    whisper: 'The throne is big. I am very serious.' },
+  '05': { keys: ['Tradition', 'Ritual', 'Teaching'],
+    up: 'Seek guidance from experience and tradition. A mentor, an institution or a faith can show you a reliable path.',
+    rev: 'The old rules no longer fit. Time to question dogma and walk your own road.',
+    whisper: 'Bless you. (My hand only goes this high.)' },
+  '06': { keys: ['Union', 'Trust', 'Choice'],
+    up: 'A sincere bond, or an important choice made from the heart. Shared values are what matter.',
+    rev: 'An unbalanced relationship or a wavering choice. First ask yourself what you truly want.',
+    whisper: "The other one is also a Naiwa. We have no expressions, but we're holding hands." },
+  '07': { keys: ['Control', 'Willpower', 'Victory'],
+    up: 'Harness opposing forces and drive forward with firm will. Victory belongs to the focused.',
+    rev: 'Losing direction, pulled apart from within. First get both sphinxes facing the same way.',
+    whisper: 'My belly is stuck on the edge of the chariot. But we are moving.' },
+  '08': { keys: ['Gentleness', 'Courage', 'Self-mastery'],
+    up: 'True strength is gentleness. Tame the beast within through patience and compassion.',
+    rev: "Self-doubt or runaway emotions. Don't use force — soothe yourself first.",
+    whisper: 'The lion bowed its head. I only patted it.' },
+  '09': { keys: ['Introspection', 'Search', 'Wisdom'],
+    up: 'Step away from the crowd for a while and search inward by lantern light. Solitude brings clear wisdom.',
+    rev: 'Too much isolation, or refusing to reflect. The lamp is still lit — remember to come back.',
+    whisper: "The snow is cold. The lamp is warm. I've been standing like this the whole time." },
+  '10': { keys: ['Cycles', 'Change', 'Fate'],
+    up: 'The wheel of fortune is turning and a change of luck is near. Go with the flow and seize the moment.',
+    rev: 'A temporary low, or resisting change. The wheel will come back up.',
+    whisper: "The wheel goes round and round. I look up. My neck doesn't hurt, because I have no neck." },
+  '11': { keys: ['Balance', 'Cause & effect', 'Fairness'],
+    up: 'Cause and effect keep their own accounts. Face the facts honestly and decide fairly.',
+    rev: 'Injustice, dodging responsibility or bias. The scales are tipped and need correcting.',
+    whisper: 'The scales are level. So is my mouth.' },
+  '12': { keys: ['Pause', 'New perspective', 'Insight'],
+    up: 'Pause and see the world from another angle. What looks like stagnation is insight ripening.',
+    rev: 'Pointless sacrifice or procrastination. Let go of what you should let go.',
+    whisper: 'Upside down, the world is just as dark. But my halo is on.' },
+  '13': { keys: ['Endings', 'Transformation', 'Rebirth'],
+    up: "A chapter is ending to make room for new life. Don't be afraid — this is transformation.",
+    rev: 'Resisting the end, stuck in old patterns. Let go in order to be reborn.',
+    whisper: "The white horse is gentle. The crowns all over the ground aren't mine." },
+  '14': { keys: ['Harmony', 'Moderation', 'Healing'],
+    up: 'Find balance between the extremes. Blend patiently, and things will slowly get better.',
+    rev: 'Imbalance, excess or impatience. Pour a little more slowly.',
+    whisper: 'One foot in the water, one foot on the bank. Each foot has three toes.' },
+  '15': { keys: ['Temptation', 'Attachment', 'Bondage'],
+    up: 'A desire or obsession has you bound. Look closely — the chains are actually loose.',
+    rev: "You're breaking free and regaining your freedom. Awareness is where liberation begins.",
+    whisper: 'The horns come off. So do the chains.' },
+  '16': { keys: ['Collapse', 'Awakening', 'Upheaval'],
+    up: 'False certainty is crumbling. Sudden change is the lightning that reveals the truth.',
+    rev: 'Avoiding an inevitable change, or aftershocks still rumbling. Face it sooner and lose less.',
+    whisper: "The tower fell. I'm standing very far away. Very safe." },
+  '17': { keys: ['Hope', 'Healing', 'Inspiration'],
+    up: 'After the storm, starlight descends. Keep hope — you are healing.',
+    rev: 'Lost faith or dried-up inspiration. The stars are still there, only behind the clouds.',
+    whisper: "I'm watering the black roses with stars." },
+  '18': { keys: ['Subconscious', 'Illusion', 'Intuition'],
+    up: 'The road is hazy; illusion and fear intertwine. Trust your intuition and walk the moonlit path slowly.',
+    rev: 'The fog is lifting and the truth emerging. Repressed feelings are being released.',
+    whisper: "The bunny plush is soft. The dog and the wolf didn't say anything." },
+  '19': { keys: ['Joy', 'Clarity', 'Vitality'],
+    up: 'Light, success and pure joy. Everything is becoming clear.',
+    rev: "Joy is briefly clouded, or you're over-optimistic. The sun is still there; wait for the clouds to pass.",
+    whisper: "Today I'm very happy. (My expression hasn't changed.)" },
+  '20': { keys: ['Awakening', 'Calling', 'Renewal'],
+    up: 'The trumpet sounds — a time of awakening and reckoning. Answer the call within.',
+    rev: 'Too much self-judgment, or ignoring the call. Forgive the past in order to be reborn.',
+    whisper: 'I blew the trumpet. My mouth is still a straight line.' },
+  '21': { keys: ['Completion', 'Unity', 'Wholeness'],
+    up: 'A cycle is complete. You have arrived — enjoy the wholeness.',
+    rev: "One last step remains, or you can't quite finish. Put a full stop on what's undone.",
+    whisper: "I'm floating in the middle of the wreath. Complete means round." },
+};
+
+// 英文牌名用首字母大写形式（THE HIGH PRIESTESS → The High Priestess）
+// 冠词、介词在名字中间保持小写（Wheel of Fortune）
+export const titleCase = (s) => s.toLowerCase()
+  .replace(/\b[a-z]+/g, (w, i) => (i > 0 && /^(of|the|and)$/.test(w) ? w : w[0].toUpperCase() + w.slice(1)));

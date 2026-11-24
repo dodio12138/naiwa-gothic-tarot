@@ -376,7 +376,7 @@ body.is-intro .brand { opacity: 0; pointer-events: none; }   /* 首页已有标�
 .badge.rev { color: var(--rev); }
 .r-text { margin: 0; font-size: 14px; line-height: 1.85; color: #ddd0c4; }
 .r-whisper { margin: 8px 0 0; font-size: 13px; color: var(--iris); line-height: 1.7; }
-.r-whisper::before { content: '奶蛙：'; color: #6f8a3d; }
+.r-whisper .wl { color: #6f8a3d; }
 .r-foot { display: flex; justify-content: center; margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--line); }
 
 /* ───────── 大图弹窗 ───────── */
@@ -505,4 +505,23 @@ body.calm .card .sheen { display: none; }
   .spread-btn .pips { height: 26px; }
   .spread-btn .pips i { width: 15px; height: 23px; }
   .auto-toggle { margin-top: 12px; }
+}
+
+/* ───────── 语言切换 ───────── */
+#lang { font-family: var(--serif-en); font-weight: 800; font-size: 12px; letter-spacing: .06em; min-width: 46px; }
+body:not(.lang-en) #lang { font-family: var(--serif-zh); font-weight: 600; }
+body.lang-en #lang { font-family: var(--serif-zh); font-weight: 600; font-size: 13px; }
+/* 英文标题：Cinzel，字号收小以容纳更长的单词 */
+body.lang-en .title { font-family: var(--serif-en); font-weight: 800; font-size: clamp(34px, 6.4vw, 78px); letter-spacing: .03em; }
+body.lang-en .title .t1 { font-size: .52em; vertical-align: .5em; }
+body.lang-en .lede, body.lang-en .r-text, body.lang-en .m-sec p { letter-spacing: .02em; }
+body.lang-en .spread-btn .plate { letter-spacing: .12em; font-family: var(--serif-en); font-size: 15px; }
+body.lang-en .slot .label { letter-spacing: .14em; }
+body.lang-en .slot .label em { font-family: var(--serif-en); font-size: 12.5px; letter-spacing: .06em; }
+body.lang-en .r-name, body.lang-en .m-title { font-family: var(--serif-en); letter-spacing: .04em; }
+body.lang-en .m-title { font-size: 34px; }
+body.lang-en .r-head h2 { font-family: var(--serif-en); letter-spacing: .08em; }
+@media (max-width: 760px) {
+  body.lang-en .spread-btn .plate { font-size: 12px; letter-spacing: .04em; padding: 0 20px; }
+  body.lang-en .m-title { font-size: 26px; }
 }

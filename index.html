@@ -31,6 +31,7 @@
       <button class="plate sm" id="skip" type="button" hidden>跳过 ››</button>
       <button class="plate sm" id="reveal-all" type="button" hidden>全部揭示</button>
       <button class="plate sm" id="restart" type="button" hidden>重新抽牌</button>
+      <button class="plate sm icon" id="lang" type="button" aria-label="Switch to English">EN</button>
       <button class="plate sm icon" id="sound" type="button" aria-pressed="true" aria-label="关闭音效">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="currentColor" fill-opacity=".15"/>
@@ -51,12 +52,12 @@
 
   <div id="settings" role="dialog" aria-label="设置" hidden>
     <div class="st-head"><i class="rule"></i><b>设 置</b></div>
-    <div class="st-group">占 卜</div>
+    <div class="st-group" id="st-g-read">占 卜</div>
     <label class="st-row"><span><b>一键占卜</b><small>自动洗牌、抽牌并依次揭示</small></span><input type="checkbox" data-k="autoDraw"><i class="sw"></i></label>
     <label class="st-row"><span><b>自动翻牌</b><small>选完牌后自动揭示</small></span><input type="checkbox" data-k="autoReveal"><i class="sw"></i></label>
     <label class="st-row"><span><b>跳过洗牌动画</b><small>直接进入选牌</small></span><input type="checkbox" data-k="skipIntro"><i class="sw"></i></label>
     <label class="st-row"><span><b>逆位</b><small>允许抽到逆位牌</small></span><input type="checkbox" data-k="reversed"><i class="sw"></i></label>
-    <div class="st-group">表 现</div>
+    <div class="st-group" id="st-g-show">表 现</div>
     <label class="st-row"><span><b>视差 / 陀螺仪</b><small>悬停或倾斜手机时的纵深</small></span><input type="checkbox" data-k="parallax"><i class="sw"></i></label>
     <label class="st-row"><span><b>弱化动效</b><small>更快、更少闪光与震动</small></span><input type="checkbox" data-k="calm"><i class="sw"></i></label>
     <label class="st-row"><span><b>音效</b><small>洗牌、翻牌等仪式音效</small></span><input type="checkbox" data-k="sound"><i class="sw"></i></label>

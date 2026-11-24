@@ -3,6 +3,14 @@ import { gsap } from 'gsap';
 import { CARDS, SPREADS, artSrc } from './cards.js';
 import { createParticles } from './particles.js';
 import { createAudio } from './audio.js';
+import { t, getLang, setLang, SPREADS_EN, CARDS_EN, titleCase } from './i18n.js';
+
+/* ════════ 语言 ════════ */
+const isEn = () => getLang() === 'en';
+const spreadText = (key) => (isEn() ? SPREADS_EN[key] : SPREADS[key]);
+const posName = (i) => spreadText(S.key).positions[i];
+const cardName = (d) => (isEn() ? titleCase(d.en) : d.zh);
+const cardText = (d) => (isEn() ? { ...d, ...CARDS_EN[d.id] } : d);
 
 /* ════════ 基础 ════════ */
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -113,17 +121,25 @@ const sigil = buildSigil();
 
 /* ════════ 首页 ════════ */
 let heroTl;
-function buildIntro() {
-  // 标题逐字
-  document.querySelectorAll('.title > span').forEach((el) => {
-    el.innerHTML = [...el.textContent].map((ch) => `<span class="ch">${ch}</span>`).join('');
-  });
-  // 牌阵按钮
-  $('#spreads').innerHTML = Object.entries(SPREADS).map(([k, s]) => `
+// 标题逐字拆分（入场动画按字错落）
+function renderTitle() {
+  const split = (el, txt) => { el.innerHTML = [...txt].map((ch) => `<span class="ch">${ch === ' ' ? '&nbsp;' : ch}</span>`).join(''); };
+  split($('.title .t1'), t('titleSmall'));
+  split($('.title .t2'), t('titleBig'));
+}
+function renderSpreads() {
+  $('#spreads').innerHTML = Object.keys(SPREADS).map((k) => {
+    const s = spreadText(k);
+    return `
     <button class="spread-btn" type="button" data-spread="${k}"><span class="sb-in">
       <span class="pips" style="--n:${s.positions.length}">${s.positions.map((_, i) => `<i style="--i:${i}"></i>`).join('')}</span>
       <b class="plate">${s.name}</b><small>${s.sub.replace(/^(.+?) · /, '<span class="n">$1 · </span>')}</small>
-    </span></button>`).join('');
+    </span></button>`;
+  }).join('');
+}
+function buildIntro() {
+  renderTitle();
+  renderSpreads();
   $('#spreads').addEventListener('click', (e) => {
     const b = e.target.closest('[data-spread]');
     if (b) { audio.unlock(); audio.click(); start(b.dataset.spread); }
@@ -186,6 +202,8 @@ async function introOut() {
 
 /* ════════ 提示文字 ════════ */
 let hintText = '';
+let hintFn = null;
+function hintBy(fn) { hintFn = fn; setHint(fn ? fn() : ''); }
 function setHint(t) {
   if (t === hintText) return;
   hintText = t;
@@ -219,7 +237,7 @@ function makeCard(data) {
     <div class="lift">
       <div class="tilt"><div class="inner">
         <div class="face back"><img src="${BACK}" alt="" draggable="false"></div>
-        <div class="face front" aria-label="${data.zh} ${data.en}">${frontLayers(data.id)}
+        <div class="face front" aria-label="${data.zh} · ${titleCase(data.en)}">${frontLayers(data.id)}
           <div class="sheen"></div><div class="glare"></div>
         </div>
       </div></div>
@@ -423,7 +441,7 @@ async function start(key) {
   S.phase = 'dealing';
   S.auto = CFG.autoDraw;
   await introOut();
-  setHint(S.auto ? '命运之手正在洗牌……' : '奶蛙正在洗牌……');
+  hintBy(() => t(S.auto ? 'hShuffleAuto' : 'hShuffle'));
   buildDeck();                       // 牌背立即可用；牌面在后台预载，翻牌前再确认
   motionBlur(true);
   if (CFG.skipIntro) setSkipping(true);
@@ -447,7 +465,7 @@ function setSkipping(on) {
 
 // 一键占卜：命运之手依次替你抽牌
 async function autoPick() {
-  setHint('命运之手正在为你抽牌……');
+  hintBy(() => t('hAutoPick'));
   while (S.phase === 'pick' && S.picked.length < S.slots.length) {
     await wait(CFG.calm ? 380 : 700);
     if (S.phase !== 'pick') break;
@@ -557,18 +575,27 @@ function shuffleAnim() {
 }
 
 function buildSlots() {
-  S.slots = S.spread.positions.map((name, i) => {
+  S.slots = S.spread.positions.map((_, i) => {
     const el = document.createElement('div');
     el.className = 'slot';
-    el.innerHTML = `<span class="ghost-frame"></span><span class="label">${name}</span>`;
+    el.innerHTML = `<span class="ghost-frame"></span><span class="label"></span>`;
     stage.insertBefore(el, stage.firstChild);
-    return { el, name, i };
+    const slot = { el, i, card: null };
+    renderSlotLabel(slot);
+    return slot;
   });
   const geo = pickSlotGeom(S.slots.length);
   S.slots.forEach((s, i) => {
     const g = geo[i];
     gsap.set(s.el, { x: g.x, y: g.y, width: g.w, height: g.h, xPercent: -50, yPercent: -50 });
   });
+}
+
+// 牌位标签：位置名；翻开后加上牌名与逆位小标
+function renderSlotLabel(slot) {
+  const c = slot.card;
+  slot.el.querySelector('.label').innerHTML = posName(slot.i)
+    + (c ? `<em>${cardName(c.data)}${c.reversed ? `<small>${t('revTag')}</small>` : ''}</em>` : '');
 }
 
 function fanOut() {
@@ -594,8 +621,10 @@ function fanOut() {
 }
 
 function updatePickHint() {
-  const left = S.slots.length - S.picked.length;
-  setHint(left > 0 ? `凭直觉选出 ${left} 张牌 · ${S.slots[S.picked.length].name}` : '命运已就位');
+  hintBy(() => {
+    const left = S.slots.length - S.picked.length;
+    return left > 0 ? t('hPick')(left, posName(S.picked.length)) : t('hPicked');
+  });
 }
 
 function onCardClick(c) {
@@ -661,9 +690,9 @@ async function afterPick() {
   S.phase = 'reveal';
   await layoutReveal(0.9);
   S.picked.forEach((c) => c.el.classList.add('revealable'));
-  setHint(S.picked.length > 1 ? '轻触牌面，逐一揭示命运' : '轻触牌面，揭示命运');
+  hintBy(() => t(S.picked.length > 1 ? 'hRevealMany' : 'hRevealOne'));
   if (S.auto || CFG.autoReveal) {
-    setHint('命运正在揭晓……');
+    hintBy(() => t('hRevealing'));
     gsap.delayedCall(0.5, revealAll);
   } else if (S.picked.length > 1) {
     btnRevealAll.hidden = false;
@@ -742,7 +771,8 @@ function reveal(c) {
     gsap.to(label, {
       opacity: 0, duration: 0.2,
       onComplete() {
-        label.innerHTML = `${S.slots[c.slot].name}<em>${c.data.zh}${c.reversed ? '<small>逆</small>' : ''}</em>`;
+        S.slots[c.slot].card = c;
+        renderSlotLabel(S.slots[c.slot]);
         gsap.to(label, { opacity: 1, duration: 0.4 });
       },
     });
@@ -755,7 +785,7 @@ function onRevealed() {
   if (left > 0) return;
   btnRevealAll.hidden = true;
   S.phase = 'done';
-  setHint('命运已揭晓 · 点击牌面查看详情');
+  hintBy(() => t('hDone'));
   gsap.delayedCall(0.7, openReading);
 }
 
@@ -779,30 +809,37 @@ function placeSigil(d = 1.1) {
 }
 
 /* ════════ 解读面板 ════════ */
+function readingHTML() {
+  return `
+    <div class="r-head">
+      <div class="r-eyebrow">THE READING</div>
+      <h2>${spreadText(S.key).name}</h2>
+      ${S.question ? `<p class="r-q">${esc(S.question)}</p>` : ''}
+      <i class="rule"></i>
+    </div>
+    ${S.picked.map((c) => {
+      const d = cardText(c.data);
+      return `
+      <div class="r-item" data-slot="${c.slot}">
+        <div class="r-thumb ${c.reversed ? 'rev' : ''}"><img src="${artSrc(d.id)}" alt=""></div>
+        <div>
+          <div class="r-pos">${posName(c.slot)}</div>
+          <div class="r-name">${cardName(d)}<small>${d.num}${isEn() ? '' : ` · ${d.en}`}</small>
+            <span class="badge ${c.reversed ? 'rev' : 'up'}">${t(c.reversed ? 'reversed' : 'upright')}</span></div>
+          <p class="r-text">${c.reversed ? d.rev : d.up}</p>
+          <p class="r-whisper"><span class="wl">${t('whisper')}</span>${d.whisper}</p>
+        </div>
+      </div>`;
+    }).join('')}
+    <div class="r-foot"><button class="plate sm" type="button" data-again>${t('again')}</button></div>`;
+}
+
 function openReading() {
   if (S.readingOpen) return;
   S.readingOpen = true;
   audio.pad();
   const { mobile } = vp();
-  readingInner.innerHTML = `
-    <div class="r-head">
-      <div class="r-eyebrow">THE READING</div>
-      <h2>${S.spread.name}</h2>
-      ${S.question ? `<p class="r-q">${esc(S.question)}</p>` : ''}
-      <i class="rule"></i>
-    </div>
-    ${S.picked.map((c) => `
-      <div class="r-item" data-slot="${c.slot}">
-        <div class="r-thumb ${c.reversed ? 'rev' : ''}"><img src="${artSrc(c.data.id)}" alt=""></div>
-        <div>
-          <div class="r-pos">${S.slots[c.slot].name}</div>
-          <div class="r-name">${c.data.zh}<small>${c.data.num} · ${c.data.en}</small>
-            <span class="badge ${c.reversed ? 'rev' : 'up'}">${c.reversed ? '逆位' : '正位'}</span></div>
-          <p class="r-text">${c.reversed ? c.data.rev : c.data.up}</p>
-          <p class="r-whisper">${c.data.whisper}</p>
-        </div>
-      </div>`).join('')}
-    <div class="r-foot"><button class="plate sm" type="button" data-again>再抽一次</button></div>`;
+  readingInner.innerHTML = readingHTML();
   reading.hidden = false;
   reading.scrollTop = 0;
   const tl = gsap.timeline();
@@ -831,6 +868,18 @@ modalCard.addEventListener('click', () => modalCard.classList.toggle('show-plate
 modalCard.dataset.tilt = 'on';
 attachTilt(modalCard, modalTilt, 10);
 
+function modalHTML(c) {
+  const d = cardText(c.data);
+  return `
+    <div class="m-num">${d.num} · ${posName(c.slot)}</div>
+    <h3 class="m-title">${cardName(d)} <span class="badge ${c.reversed ? 'rev' : 'up'}">${t(c.reversed ? 'reversed' : 'upright')}</span></h3>
+    <div class="m-en">${isEn() ? d.zh : d.en}</div>
+    <div class="m-keys">${d.keys.map((k) => `<span>${k}</span>`).join('')}</div>
+    <div class="m-sec"><h4>${t(c.reversed ? 'drawnRev' : 'drawnUp')}</h4><p>${c.reversed ? d.rev : d.up}</p></div>
+    <div class="m-sec dim"><h4>${t(c.reversed ? 'upright' : 'reversed')}</h4><p>${c.reversed ? d.up : d.rev}</p></div>
+    <div class="m-whisper">${t('whisper')}${d.whisper}</div>`;
+}
+
 function openModal(c) {
   if (S.modalCard) return;
   S.modalCard = c;
@@ -845,15 +894,7 @@ function openModal(c) {
     ['.art', '.frame'].forEach((sel, k) => { modalFace.querySelector(sel).src = hi[k].src; });
   }).catch(() => {});
   modalCard.classList.toggle('reversed', c.reversed);
-  const pos = S.slots[c.slot]?.name;
-  modalText.innerHTML = `
-    <div class="m-num">${d.num} · ${pos ? esc(pos) : ''}</div>
-    <h3 class="m-title">${d.zh} <span class="badge ${c.reversed ? 'rev' : 'up'}">${c.reversed ? '逆位' : '正位'}</span></h3>
-    <div class="m-en">${d.en}</div>
-    <div class="m-keys">${d.keys.map((k) => `<span>${k}</span>`).join('')}</div>
-    <div class="m-sec"><h4>${c.reversed ? '逆位 · 你抽到的' : '正位 · 你抽到的'}</h4><p>${c.reversed ? d.rev : d.up}</p></div>
-    <div class="m-sec dim"><h4>${c.reversed ? '正位' : '逆位'}</h4><p>${c.reversed ? d.up : d.rev}</p></div>
-    <div class="m-whisper">奶蛙：${d.whisper}</div>`;
+  modalText.innerHTML = modalHTML(c);
   modal.hidden = false;
 
   const from = c.el.getBoundingClientRect();
@@ -911,7 +952,7 @@ async function restart() {
   btnRestart.hidden = true;
   btnRevealAll.hidden = true;
   btnSkip.hidden = true;
-  setHint('');
+  hintBy(null);
   const tl = gsap.timeline();
   if (S.readingOpen) {
     const { mobile } = vp();
@@ -941,7 +982,7 @@ const btnSound = $('#sound');
 const syncSound = () => {
   btnSound.classList.toggle('off', audio.muted);
   btnSound.setAttribute('aria-pressed', String(!audio.muted));
-  btnSound.setAttribute('aria-label', audio.muted ? '开启音效' : '关闭音效');
+  btnSound.setAttribute('aria-label', t(audio.muted ? 'soundOn' : 'soundOff'));
 };
 btnSound.addEventListener('click', () => {
   audio.unlock();
@@ -988,6 +1029,49 @@ addEventListener('pointerdown', (e) => {
 addEventListener('keydown', (e) => { if (e.key === 'Escape') toggleSettings(false); });
 btnSkip.addEventListener('click', () => { audio.click(); setSkipping(true); });
 applyCfg();
+
+/* ════════ 中英文切换 ════════ */
+const btnLang = $('#lang');
+function applyLang(rerender = true) {
+  const en = isEn();
+  document.documentElement.lang = en ? 'en' : 'zh-CN';
+  document.body.classList.toggle('lang-en', en);
+  document.title = t('pageTitle');
+  $('.lede').innerHTML = t('lede');
+  $('#question').placeholder = t('question');
+  $('.auto-toggle span').textContent = t('autoToggle');
+  btnRevealAll.textContent = t('revealAll');
+  btnRestart.textContent = t('restart');
+  btnSkip.textContent = t('skip');
+  btnLang.textContent = t('langBtn');
+  btnLang.setAttribute('aria-label', t('langAria'));
+  $('#brand').setAttribute('aria-label', t('home'));
+  btnSettings.setAttribute('aria-label', t('settings'));
+  $('.modal-close').setAttribute('aria-label', t('close'));
+  $('.st-head b').textContent = t('stHead');
+  $('#st-g-read').textContent = t('stGroupRead');
+  $('#st-g-show').textContent = t('stGroupShow');
+  panel.querySelectorAll('.st-row').forEach((row) => {
+    const [title, desc] = t('st')[row.querySelector('input').dataset.k];
+    row.querySelector('b').textContent = title;
+    row.querySelector('small').textContent = desc;
+  });
+  syncSound();
+  if (!rerender) return;
+  renderTitle();
+  renderSpreads();
+  S.slots.forEach(renderSlotLabel);
+  if (S.readingOpen) readingInner.innerHTML = readingHTML();
+  if (S.modalCard) modalText.innerHTML = modalHTML(S.modalCard);
+  if (hintFn) setHint(hintFn());
+}
+btnLang.addEventListener('click', () => {
+  audio.unlock(); audio.click();
+  setLang(isEn() ? 'zh' : 'en');
+  gsap.fromTo(['#intro', '#reading', '#modal-text', '#hint'], { opacity: 0.25 }, { opacity: 1, duration: 0.5, ease: 'power2.out' });
+  applyLang();
+});
+applyLang(false);
 $('#brand').addEventListener('click', restart);
 btnRevealAll.addEventListener('click', revealAll);
 
