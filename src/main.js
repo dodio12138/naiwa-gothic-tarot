@@ -211,7 +211,7 @@ function setHint(t) {
   gsap.to(hint, {
     opacity: 0, y: -6, duration: 0.2, ease: 'power1.in', overwrite: true,
     onComplete() {
-      hint.textContent = t;
+      hint.textContent = hintText;
       gsap.fromTo(hint, { opacity: 0, y: 6 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' });
     },
   });
@@ -643,14 +643,14 @@ function fanApply() {
     let a = f.angle(i), lift = 0, k = 1;
     if (h >= 0) {
       const d = i - h;
-      if (d === 0) { lift = f.fh * 0.24; k = 1.1; }
-      else a += Math.sign(d) * f.step * 1.25;   // 两侧整体让开，间距保持均匀，不会挤成一团
+      if (d === 0) { lift = f.fh * 0.36; k = 1.04; }
+      else a += Math.sign(d) * f.step * 0.22;   // 两侧只让出一小块
     }
     const p = f.posAt(a, lift, k);
     if (c.q) { c.q.x(p.x); c.q.y(p.y); c.q.r(p.rotation); c.q.s(p.scale); }
     else gsap.to(c.el, { ...p, duration: 0.5, ease: 'power3.out', overwrite: 'auto' });
     c.el.classList.toggle('hot', i === h);
-    c.el.style.zIndex = i === h ? 250 : 10 + i;
+    c.el.style.zIndex = 10 + i;   // 叠放层级保持不变
   });
 }
 function setHot(i) {
@@ -682,7 +682,7 @@ function fanIndexAt(px, py) {
   const f = fanGeom(rest.length);
   const dx = px - f.cx, dy = f.cy - py;
   const r = Math.hypot(dx, dy);
-  if (r < f.R - f.fh * 0.8 || r > f.R + f.fh * 0.9) return -1;
+  if (r < f.R - f.fh * 0.8 || r > f.R + f.fh * 1.2) return -1;   // 上沿放宽，抬高后的牌顶部也算在内
   const th = deg(Math.atan2(dx, dy));
   const a0 = f.angle(0), a1 = f.angle(rest.length - 1);
   if (th < a0 - f.step * 1.6 || th > a1 + f.step * 1.6) return -1;
