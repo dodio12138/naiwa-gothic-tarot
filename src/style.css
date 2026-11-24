@@ -146,10 +146,14 @@ body.is-intro .brand { opacity: 0; pointer-events: none; }   /* 首页已有标�
 }
 .title span { display: inline-block; }
 .title .t1 {
-  font-size: .5em; vertical-align: .55em; margin-right: .2em; color: var(--yellow);
+  font-size: .5em; vertical-align: .55em; margin-right: 0; color: var(--yellow);
   text-shadow: 0 0 24px rgba(246,217,79,.4);
 }
 .title .t2 { filter: drop-shadow(0 4px 24px rgba(200,138,69,.35)); }
+.title .sep {
+  font-size: .42em; vertical-align: .62em; margin: 0 .28em 0 .05em;
+  color: var(--gold); text-shadow: 0 0 14px rgba(222,161,80,.5);
+}
 .title .t2 .ch {
   background: linear-gradient(180deg, #fff1cf 0%, #f2c77e 32%, #c88a45 62%, #7a4216 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent;

@@ -16,10 +16,13 @@ const touch = matchMedia('(pointer: coarse)').matches;
 
 // 图片素材通过 CSS 变量注入，保证相对路径部署时也正确
 {
+  // 必须转成绝对地址：CSS 变量里的相对 url() 会按“使用它的样式表”解析，
+  // 线上样式表在 assets/ 下，相对路径会指到 assets/ui/… 而 404。
+  const abs = (u) => new URL(u, document.baseURI).href;
   const r = document.documentElement.style;
-  r.setProperty('--plate-img', `url("${UI('plate.webp')}")`);
-  r.setProperty('--divider-img', `url("${UI('divider.webp')}")`);
-  r.setProperty('--back-img', `url("${BACK}")`);
+  r.setProperty('--plate-img', `url("${abs(UI('plate.webp'))}")`);
+  r.setProperty('--divider-img', `url("${abs(UI('divider.webp'))}")`);
+  r.setProperty('--back-img', `url("${abs(BACK)}")`);
 }
 
 const $ = (s) => document.querySelector(s);
