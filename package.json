@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "dev:bili": "vite --mode bili",
     "build:bili": "vite build --mode bili",
-    "toy": "vite build --mode bili && mkdir -p release && rm -f release/naiwa-tarot-toy.zip && cd dist-bili && zip -qr ../release/naiwa-tarot-toy.zip . -x '.*'"
+    "toy": "vite build --mode bili && cp assets-src/cover/toy-cover.jpg assets-src/cover/toy-icon.png dist-bili/ && mkdir -p release && rm -f release/naiwa-tarot-toy.zip && cp assets-src/cover/toy-cover.jpg assets-src/cover/toy-icon.png release/ && cd dist-bili && zip -qr ../release/naiwa-tarot-toy.zip . -x '.*'"
   },
   "devDependencies": {
     "vite": "^6.0.0"
