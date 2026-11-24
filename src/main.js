@@ -1061,8 +1061,8 @@ function modalHTML(c) {
     <div class="m-whisper">${t('whisper')}${whisperOf(c)}</div>
     <div class="m-sec dim"><h4>${t(c.reversed ? 'upright' : 'reversed')}</h4><p>${d[other]}</p>${facetsHTML(L[other])}</div>
     <div class="m-sec m-lore"><h4>${t('mScene')}</h4><p>${L.scene}</p></div>
-    <div class="m-sec m-lore"><h4>${t('mOrigin')}</h4><p>${L.origin}</p>
-      <p class="m-astro"><b>${t('mAstro')}</b>${L.astro}</p></div>`;
+    ${L.origin ? `<div class="m-sec m-lore"><h4>${t('mOrigin')}</h4><p>${L.origin}</p>
+      <p class="m-astro"><b>${t('mAstro')}</b>${L.astro}</p></div>` : ''}`;
 }
 
 function openModal(c) {

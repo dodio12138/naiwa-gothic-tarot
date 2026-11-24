@@ -29,7 +29,7 @@ export function loreOf(id, en) {
   const k = en ? 'en' : 'zh';
   const pick = (o) => ({ love: o.love[k], work: o.work[k], advice: o.advice[k] });
   return {
-    scene: c.scene[k], origin: c.origin[k], astro: c.astro[k],
+    scene: c.scene[k], origin: c.origin?.[k] || '', astro: c.astro?.[k] || '',
     up: pick(c.facets.up), rev: pick(c.facets.rev),
     whispers: c.whispers.slice(1).map((w) => w[k]),
   };
