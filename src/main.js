@@ -256,7 +256,6 @@ function makeCard(data) {
     reversed: false, revealed: false, busy: false, slot: -1, fan: -1,
   };
   el.addEventListener('click', () => onCardClick(c));
-  el.addEventListener('pointerenter', () => { if (el.classList.contains('in-fan')) audio.hover(c.fan); });
   return c;
 }
 
@@ -373,12 +372,15 @@ function fanGeom(n) {
   const centerY = H - fh * 0.5 - (mobile ? Math.max(48, H * 0.08) : 40) - sag * 0.55;
   const cy = centerY + R;
   const spread = step * (n - 1);
+  const angle = (i) => -spread / 2 + step * i;
+  const posAt = (aDeg, lift = 0, k = 1) => {
+    const a = rad(aDeg), r = R + lift;
+    return { x: W / 2 + r * Math.sin(a), y: cy - r * Math.cos(a), rotation: aDeg, scale: (fw / BASE) * k };
+  };
   return {
     top: centerY - fh * 0.5 - fh * 0.16,
-    pos(i) {
-      const a = rad(-spread / 2 + step * i);
-      return { x: W / 2 + R * Math.sin(a), y: cy - R * Math.cos(a), rotation: deg(a), scale: fw / BASE };
-    },
+    cx: W / 2, cy, R, fw, fh, step, angle, posAt,
+    pos: (i) => posAt(angle(i)),
   };
 }
 
@@ -450,6 +452,7 @@ async function start(key) {
   await shuffleAnim();
   buildSlots();
   await fanOut();
+  fanReady(true);
   setSkipping(false);
   S.busy = false;
   btnRestart.hidden = false;
@@ -470,10 +473,11 @@ async function autoPick() {
     await wait(CFG.calm ? 380 : 700);
     if (S.phase !== 'pick') break;
     const rest = S.cards.filter((c) => c.slot < 0);
-    const c = rest[Math.floor(rand() * rest.length)];
-    c.el.classList.add('chosen');
-    await wait(CFG.calm ? 120 : 260);
-    pick(c);
+    const idx = Math.floor(rand() * rest.length);
+    setHot(idx);
+    await wait(CFG.calm ? 160 : 340);
+    if (S.phase !== 'pick') break;
+    pick(rest[idx]);
   }
 }
 
@@ -620,6 +624,101 @@ function fanOut() {
   return tl;
 }
 
+/* ════════ 磁吸选牌 ════════
+   按指针相对扇形圆心的角度直接算出最近的牌（不靠重叠的 DOM 命中，切换稳定），
+   高亮牌沿半径抬起放大、两侧像 Dock 一样让开；位置由 quickTo 实时跟随。 */
+const FAN = { hot: -1, ready: false, pressed: false, mx: -1, my: -1, mouse: false };
+const fanRest = () => S.cards.filter((c) => c.slot < 0);
+
+function fanApply() {
+  const rest = fanRest();
+  if (!rest.length) return;
+  const f = fanGeom(rest.length);
+  const h = FAN.hot;
+  rest.forEach((c, i) => {
+    c.fan = i;
+    let a = f.angle(i), lift = 0, k = 1;
+    if (h >= 0) {
+      const d = i - h;
+      if (d === 0) { lift = f.fh * 0.24; k = 1.1; }
+      else a += Math.sign(d) * f.step * 1.25;   // 两侧整体让开，间距保持均匀，不会挤成一团
+    }
+    const p = f.posAt(a, lift, k);
+    if (c.q) { c.q.x(p.x); c.q.y(p.y); c.q.r(p.rotation); c.q.s(p.scale); }
+    else gsap.to(c.el, { ...p, duration: 0.5, ease: 'power3.out', overwrite: 'auto' });
+    c.el.classList.toggle('hot', i === h);
+    c.el.style.zIndex = i === h ? 250 : 10 + i;
+  });
+}
+function setHot(i) {
+  if (i === FAN.hot) return;
+  FAN.hot = i;
+  if (i >= 0) audio.hover(i);
+  fanApply();
+}
+function fanReady(on) {
+  FAN.ready = on;
+  FAN.hot = -1;
+  FAN.pressed = false;
+  document.body.classList.toggle('picking', on);
+  for (const c of fanRest()) {
+    if (on) {
+      const o = { duration: 0.38, ease: 'power3' };
+      c.q = { x: gsap.quickTo(c.el, 'x', o), y: gsap.quickTo(c.el, 'y', o), r: gsap.quickTo(c.el, 'rotation', o), s: gsap.quickTo(c.el, 'scale', o) };
+    } else if (c.q) {
+      gsap.killTweensOf(c.el, 'x,y,rotation,scale');
+      c.q = null;
+      c.el.classList.remove('hot');
+    }
+  }
+}
+// 指针 → 牌序号；带迟滞，避免在两张牌交界处来回跳
+function fanIndexAt(px, py) {
+  const rest = fanRest();
+  if (!rest.length) return -1;
+  const f = fanGeom(rest.length);
+  const dx = px - f.cx, dy = f.cy - py;
+  const r = Math.hypot(dx, dy);
+  if (r < f.R - f.fh * 0.8 || r > f.R + f.fh * 0.9) return -1;
+  const th = deg(Math.atan2(dx, dy));
+  const a0 = f.angle(0), a1 = f.angle(rest.length - 1);
+  if (th < a0 - f.step * 1.6 || th > a1 + f.step * 1.6) return -1;
+  if (FAN.hot >= 0 && FAN.hot < rest.length && Math.abs(th - f.angle(FAN.hot)) < f.step * 0.7) return FAN.hot;
+  return clamp(Math.round((th - a0) / f.step), 0, rest.length - 1);
+}
+const fanActive = () => S.phase === 'pick' && FAN.ready && !S.auto && S.picked.length < S.slots.length;
+addEventListener('pointermove', (e) => {
+  FAN.mx = e.clientX; FAN.my = e.clientY; FAN.mouse = e.pointerType === 'mouse';
+  if (!fanActive()) return;
+  if (e.pointerType === 'mouse' || FAN.pressed) setHot(fanIndexAt(e.clientX, e.clientY));
+}, { passive: true });
+addEventListener('pointerdown', (e) => {
+  if (!fanActive() || e.button > 0) return;
+  const i = fanIndexAt(e.clientX, e.clientY);
+  if (i < 0) return;
+  FAN.pressed = true;
+  setHot(i);
+});
+addEventListener('pointerup', () => {
+  if (!FAN.pressed) return;
+  FAN.pressed = false;
+  if (fanActive() && FAN.hot >= 0) pick(fanRest()[FAN.hot]);
+});
+addEventListener('pointercancel', () => { FAN.pressed = false; });
+document.addEventListener('pointerleave', () => { if (fanActive() && !FAN.pressed) setHot(-1); });
+addEventListener('keydown', (e) => {
+  if (!fanActive()) return;
+  const n = fanRest().length;
+  if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+    e.preventDefault();
+    const base = FAN.hot < 0 ? Math.floor(n / 2) : FAN.hot + (e.key === 'ArrowLeft' ? -1 : 1);
+    setHot(clamp(base, 0, n - 1));
+  } else if ((e.key === 'Enter' || e.key === ' ') && FAN.hot >= 0 && document.activeElement?.tagName !== 'INPUT') {
+    e.preventDefault();
+    pick(fanRest()[FAN.hot]);
+  }
+});
+
 function updatePickHint() {
   hintBy(() => {
     const left = S.slots.length - S.picked.length;
@@ -628,26 +727,24 @@ function updatePickHint() {
 }
 
 function onCardClick(c) {
-  if (S.phase === 'pick' && c.slot < 0) return pick(c);
+  if (S.phase === 'pick' && c.slot < 0) { if (!FAN.ready) pick(c); return; }
   if (S.phase === 'reveal' && !c.revealed) return reveal(c);
   if (c.revealed && !c.busy) return openModal(c);
 }
 
 function pick(c) {
   if (S.picked.length >= S.slots.length) return;
-  c.el.classList.remove('in-fan', 'chosen');   // 清掉高亮抬起，否则落位后整张牌会高出牌位
+  c.el.classList.remove('in-fan', 'chosen', 'hot');   // 清掉高亮抬起，否则落位后整张牌会高出牌位
+  if (c.q) { gsap.killTweensOf(c.el, 'x,y,rotation,scale'); c.q = null; }
   c.slot = S.picked.length;
   S.picked.push(c);
   c.reversed = CFG.reversed && rand() < REVERSE_CHANCE;
   c.el.classList.toggle('reversed', c.reversed);
 
-  // 余下的牌合拢
-  const rest = S.cards.filter((x) => x.slot < 0);
-  const f = fanGeom(rest.length);
-  rest.forEach((x, i) => {
-    x.fan = i;
-    gsap.to(x.el, { ...f.pos(i), duration: 0.6, ease: 'power3.out', overwrite: 'auto' });
-  });
+  // 余下的牌合拢；鼠标不动也立刻按当前位置找到下一张最近的牌
+  FAN.hot = -1;
+  if (FAN.mouse && fanActive()) FAN.hot = fanIndexAt(FAN.mx, FAN.my);
+  fanApply();
 
   // 飞向牌位（x/y 不同缓动 → 弧线轨迹）
   const slot = S.slots[c.slot];
@@ -676,6 +773,7 @@ function pick(c) {
 }
 
 async function afterPick() {
+  fanReady(false);
   const rest = S.cards.filter((c) => c.slot < 0);
   rest.forEach((c) => c.el.classList.remove('in-fan'));
   const { W, H } = vp();
@@ -969,6 +1067,8 @@ async function restart() {
   stage.innerHTML = '';
   Object.assign(S, { phase: 'intro', key: null, spread: null, cards: [], picked: [], slots: [], readingOpen: false, auto: false });
   setSkipping(false);
+  FAN.ready = false; FAN.hot = -1; FAN.pressed = false;
+  document.body.classList.remove('picking');
   placeSigil(1);
   $('#question').value = '';
   await introIn();
@@ -1081,9 +1181,7 @@ addEventListener('resize', () => {
   clearTimeout(rT);
   rT = setTimeout(() => {
     if (S.phase === 'pick') {
-      const rest = S.cards.filter((c) => c.slot < 0);
-      const f = fanGeom(rest.length);
-      rest.forEach((c, i) => gsap.to(c.el, { ...f.pos(i), duration: 0.4 }));
+      fanApply();
       const geo = pickSlotGeom(S.slots.length);
       S.slots.forEach((s, i) => gsap.to(s.el, { x: geo[i].x, y: geo[i].y, width: geo[i].w, height: geo[i].h, duration: 0.4 }));
       S.picked.forEach((c) => gsap.to(c.el, { x: geo[c.slot].x, y: geo[c.slot].y, scale: geo[c.slot].w / BASE, duration: 0.4 }));
