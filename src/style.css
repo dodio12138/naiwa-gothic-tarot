@@ -530,7 +530,7 @@ body.lang-en .r-head h2 { font-family: var(--serif-en); letter-spacing: .08em; }
    光效层放在画面层（.art-wrap）里：跟随视差、倾斜、翻牌、逆位一起动。
    只在翻开的牌和大图上渲染；动画只改 opacity / scale，走合成层。 */
 .lights { position: absolute; inset: 0; pointer-events: none; mix-blend-mode: screen; mix-blend-mode: plus-lighter; opacity: 1; }
-.card:not(.revealed) .lights { display: none; }
+.card:not(.revealed) .lights, body.no-lights .lights { display: none; }
 .lt {
   position: absolute; left: calc(var(--x) * 100%); top: calc(var(--y) * 100%);
   width: calc(var(--r) * 100%); aspect-ratio: 1; translate: -50% -50%;

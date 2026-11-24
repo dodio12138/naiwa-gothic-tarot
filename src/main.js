@@ -60,7 +60,7 @@ const audio = createAudio();
 const CFG_KEY = 'naiwa-tarot-settings';
 const CFG = {
   autoDraw: false, autoReveal: false, skipIntro: false, reversed: true,
-  parallax: true, calm: false, sound: !audio.muted, ambient: true,
+  parallax: true, lights: true, calm: false, sound: !audio.muted, ambient: true,
 };
 try { Object.assign(CFG, JSON.parse(localStorage.getItem(CFG_KEY) || '{}')); } catch { /* 无存储时用默认值 */ }
 const saveCfg = () => { try { localStorage.setItem(CFG_KEY, JSON.stringify(CFG)); } catch { /* 忽略 */ } };
@@ -1104,6 +1104,7 @@ function applyCfg() {
   syncSound();
   applySpeed();
   document.body.classList.toggle('calm', CFG.calm);
+  document.body.classList.toggle('no-lights', !CFG.lights);
   if (!CFG.parallax) for (const t of tilts) t.set(0, 0);
   document.querySelectorAll('input[data-k]').forEach((i) => { i.checked = !!CFG[i.dataset.k]; });
 }
