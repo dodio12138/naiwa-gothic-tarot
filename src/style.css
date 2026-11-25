@@ -217,6 +217,12 @@ body.is-intro .brand { opacity: 0; pointer-events: none; }   /* 首页已有标�
   margin-left: calc(var(--card-w) / -2); margin-top: calc(var(--card-w) * -.75);
   will-change: transform;
 }
+.card.deck {   /* 桌面上未被选中的牌：小尺寸渲染，正面不存在，也不需要 3D 层 */
+  width: var(--deck-w); height: calc(var(--deck-w) * 1.5);
+  margin-left: calc(var(--deck-w) / -2); margin-top: calc(var(--deck-w) * -.75);
+}
+.card.deck .tilt, .card.deck .inner { transform-style: flat; }
+.card.deck .face { box-shadow: 0 10px 20px rgba(0,0,0,.6); border-radius: 3px; }
 .card .lift {
   position: absolute; inset: 0; perspective: 1800px;
   transition: transform .45s var(--ease-out);

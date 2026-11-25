@@ -29,12 +29,17 @@ const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 // 牌的基准尺寸：GPU 按这个尺寸 × 设备像素比生成图层纹理，再缩放显示。
 // 22 张牌同时在场，尺寸过大会吃掉几百 MB 显存（iOS 超限会直接杀掉页面）。
 // 取「画质档位上限」和「这块屏幕上牌最大会显示多宽」中较小的那个；每次开新一轮抽牌时重算。
-let BASE = 360;
+// 桌面上没被选中的牌另用一个小尺寸 DECK：它们在牌堆 / 扇形里最大也只有一百多像素宽，
+// 按揭示尺寸生成图层纯属浪费。被选中的那张才切换成 BASE（见 pick 里的 grow）。
+let BASE = 360, DECK = 170;
 function updateBase() {
   const small = Math.min(innerWidth, innerHeight) <= 760;
   BASE = Math.min(Q.p.base, small ? 260 : 360);
+  DECK = Math.min(BASE, small ? 110 : 170);
   document.documentElement.style.setProperty('--card-w', `${BASE}px`);
+  document.documentElement.style.setProperty('--deck-w', `${DECK}px`);
 }
+const baseOf = (c) => (c.el.classList.contains('deck') ? DECK : BASE);
 updateBase();
 const TAU = Math.PI * 2;
 const BACK = `${import.meta.env.BASE_URL}back.webp`;
@@ -88,9 +93,14 @@ const CFG = {
 try { Object.assign(CFG, JSON.parse(localStorage.getItem(CFG_KEY) || '{}')); } catch { /* 无存储时用默认值 */ }
 // 当前牌组
 const deckCards = () => (CFG.deck === 'major' ? CARDS.filter((c) => c.arcana === 'major') : CARDS);
-// 摆在桌上供选择的牌数：无论牌组多大，扇形里都只摆 22 张。
-// 牌组先整体洗乱，再取最上面的 22 张——每一张被选中的概率仍然相同，同时避免 78 张牌同时占用图层导致手机卡顿
-const FAN_N = 22;
+// 摆在桌上供选择的牌数：大屏摆满整副，平板 / 横屏 56 张，手机 44 张，低画质 33 张。
+// 牌组先整体洗乱，再取最上面的若干张——每一张被选中的概率仍然相同
+function fanCount(total) {
+  const { W, H } = vp();
+  let n = W >= 1100 && H >= 600 ? 78 : W >= 760 ? 56 : 44;
+  if (Q.tier === 'low') n = Math.min(n, 33);
+  return Math.min(total, n);
+}
 const revChance = () => (CFG.reversed ? clamp(+CFG.revProb || 0, 0, 100) / 100 : 0);
 const saveCfg = () => { try { localStorage.setItem(CFG_KEY, JSON.stringify(CFG)); } catch { /* 忽略 */ } };
 const wait = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -274,7 +284,7 @@ if (import.meta.env.DEV) window.__front = (id) => frontLayers(id, 'full');
 
 function makeCard(data) {
   const el = document.createElement('div');
-  el.className = 'card';
+  el.className = 'card deck';   // deck：小尺寸、无 3D 图层，选中时去掉
   el.innerHTML = `
     <div class="aura"></div>
     <div class="lift">
@@ -366,7 +376,7 @@ function mbTick() {
     const cos = Math.cos(th), sin = Math.sin(th);
     const lx = dx * cos + dy * sin;          // 牌自身的横向速度
     const ly = -dx * sin + dy * cos;         // 牌自身的纵向速度
-    const w = BASE * gsap.getProperty(c.el, 'scale');
+    const w = baseOf(c) * gsap.getProperty(c.el, 'scale');
     const tx = clamp((Math.abs(lx) / w - 0.04) * 3.4, 0, 1);
     const ty = clamp((Math.abs(ly) / w - 0.04) * 3.4, 0, 1);
     const nbx = c.bx + (tx - c.bx) * 0.45, nby = c.by + (ty - c.by) * 0.45;
@@ -399,15 +409,16 @@ function shuffled(arr) {
 /* ════════ 布局几何 ════════ */
 function deckScale() {
   const { W, H } = vp();
-  return clamp(Math.min(W * 0.17, H * 0.16), 96, 170) / BASE;
+  return clamp(Math.min(W * 0.17, H * 0.16), 96, 170) / DECK;
 }
 
 function fanGeom(n) {
   const { W, H, mobile } = vp();
   const fw = mobile ? clamp(W * 0.19, 60, 92) : clamp(Math.min(W * 0.075, H * 0.13), 52, 108);
   const fh = fw * 1.5;
-  const step = mobile ? 3.6 : 3;                // 每张牌的角度间隔
-  const full = step * 21;
+  // 扇形总张角固定，每张牌的角度间隔按张数均分；牌多时桌面版张得更开一些
+  const full = mobile ? 76 : (n > 30 ? 82 : 63);
+  const step = full / Math.max(n - 1, 1);
   const targetW = Math.min(W * (mobile ? 0.86 : 0.92) - fw, 1150);
   const R = targetW / (2 * Math.sin(rad(full / 2)));
   const sag = R * (1 - Math.cos(rad(full / 2)));
@@ -421,7 +432,7 @@ function fanGeom(n) {
   const angle = (i) => -spread / 2 + step * i;
   const posAt = (aDeg, lift = 0, k = 1) => {
     const a = rad(aDeg), r = R + lift;
-    return { x: W / 2 + r * Math.sin(a), y: cy - r * Math.cos(a), rotation: aDeg, scale: (fw / BASE) * k };
+    return { x: W / 2 + r * Math.sin(a), y: cy - r * Math.cos(a), rotation: aDeg, scale: (fw / DECK) * k };
   };
   return {
     top: centerY - fh * 0.5 - fh * 0.16,
@@ -537,7 +548,7 @@ function buildDeck() {
   stage.innerHTML = '';
   // 洗牌时就锁定每张牌的顺序与朝向：之后选哪张、何时翻开，都不会改变它本来的正逆
   const p = revChance();
-  S.cards = shuffled(deckCards()).slice(0, FAN_N).map((d) => Object.assign(makeCard(d), { reversed: rand() < p }));
+  S.cards = shuffled(deckCards()).slice(0, fanCount(deckCards().length)).map((d) => Object.assign(makeCard(d), { reversed: rand() < p }));
   // 牌面只预载摆出来的这几张（今日一签再加上注定的那张）
   preload([...S.cards.map((c) => artSrc(c.data.id)), ...(S.fate ? [artSrc(S.fate.id)] : [])]);
   S.picked = [];
@@ -559,9 +570,11 @@ function stackPos(i) {
 
 function dealIn() {
   const tl = gsap.timeline();
+  const each = Math.min(0.028, 1.1 / S.cards.length);   // 张数多时总时长封顶
+  const every = Math.max(1, Math.round(S.cards.length / 24));
   S.cards.forEach((c, i) => {
-    tl.to(c.el, { ...stackPos(i), duration: 0.9, ease: 'expo.out' }, i * 0.028);
-    tl.add(() => audio.deal(), i * 0.028 + 0.06);
+    tl.to(c.el, { ...stackPos(i), duration: 0.9, ease: 'expo.out' }, i * each);
+    if (i % every === 0) tl.add(() => audio.deal(), i * each + 0.06);
   });
   tl.to(fx.state, { glow: 0.6, duration: 0.6, yoyo: true, repeat: 1 }, 0);
   return tl;
@@ -616,7 +629,7 @@ function shuffleAnim() {
   tl.to('#sigil', { opacity: 0.5, duration: 1.4 }, t1);
   // 4. 鸽尾洗牌
   const t2 = t1 + 0.6 + n * 0.012 + 0.05;
-  const dw = BASE * base;
+  const dw = DECK * base;
   const sorted = S.cards.slice().sort((a, b) => gsap.getProperty(a.el, 'zIndex') - gsap.getProperty(b.el, 'zIndex'));
   for (let r = 0; r < 1; r++) {
     const left = sorted.filter((_, i) => i % 2 === 0);
@@ -810,6 +823,10 @@ function pick(c) {
     c.reversed = S.fate.drawn ? S.fate.reversed : S.fate.revRoll < revChance();
   }
   c.el.classList.toggle('reversed', c.reversed);
+  // grow：从桌面的小尺寸换成揭示用的大尺寸，同时按比例改 scale，画面上大小不跳
+  const sc = gsap.getProperty(c.el, 'scale');
+  c.el.classList.remove('deck');
+  gsap.set(c.el, { scale: sc * DECK / BASE });
   c.wi = Math.floor(rand() * 4);   // 低语也在此时定下，刷新恢复后保持同一句
   setFace(c, c.data);   // 牌面只给选中的牌生成：没选中的牌永远不会翻开，省掉它们的正面图层
 
@@ -1554,6 +1571,7 @@ function restoreSession(d) {
   buildSlots();
   S.picked = d.cards.slice().sort((a, b) => a.slot - b.slot).map((s) => {
     const c = makeCard(cardById(s.id));
+    c.el.classList.remove('deck');
     Object.assign(c, { slot: s.slot, reversed: s.reversed, wi: s.wi });
     c.el.classList.toggle('reversed', c.reversed);
     setFace(c, c.data);
