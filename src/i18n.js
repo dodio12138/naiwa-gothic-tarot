@@ -45,6 +45,7 @@ const UI = {
     fLove: '感情', fWork: '事业', fAdvice: '建议', mScene: '画面', mOrigin: '原型', mAstro: '对应',
     stHead: '设 置', stGroupRead: '抽 牌', stGroupShow: '表 现',
     revTitle: '逆位概率', revDesc: '洗牌时每张牌成为逆位的机会',
+    deckTitle: '牌组', deckDesc: '22 张大阿卡纳，或完整 78 张 · 下一轮生效', deckMajor: '大牌 22', deckFull: '完整 78',
     qTitle: '画质', qAutoNow: '按设备自动 · 当前：', qFixed: '手动指定 · 新一轮抽牌完全生效',
     qNames: { auto: '自动', high: '高', mid: '中', low: '低' },
     st: {
@@ -89,6 +90,7 @@ const UI = {
     fLove: 'Love', fWork: 'Work', fAdvice: 'Advice', mScene: 'In This Deck', mOrigin: 'The Archetype', mAstro: 'Correspondence',
     stHead: 'SETTINGS', stGroupRead: 'READING', stGroupShow: 'PRESENTATION',
     revTitle: 'Reversal chance', revDesc: 'Chance each card lands reversed when shuffled',
+    deckTitle: 'Deck', deckDesc: '22 Major Arcana or the full 78 · applies next reading', deckMajor: 'Major 22', deckFull: 'Full 78',
     qTitle: 'Quality', qAutoNow: 'Auto for this device · now: ', qFixed: 'Manual · fully applies next reading',
     qNames: { auto: 'Auto', high: 'High', mid: 'Mid', low: 'Low' },
     st: {

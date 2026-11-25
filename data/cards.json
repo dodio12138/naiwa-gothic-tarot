@@ -2024,6 +2024,4710 @@
         }
       },
       "dark": false
+    },
+    {
+      "id": "wands_01",
+      "arcana": "minor",
+      "suit": "wands",
+      "rank": 1,
+      "num": "ACE",
+      "name": {
+        "zh": "权杖王牌",
+        "en": "ACE OF WANDS"
+      },
+      "keys": {
+        "zh": [
+          "灵感",
+          "创造",
+          "新的热情"
+        ],
+        "en": [
+          "Inspiration",
+          "Creation",
+          "New passion"
+        ]
+      },
+      "up": {
+        "zh": "一束新的火苗刚刚点燃。灵感、勇气和想做点什么的冲动都在这里，抓住它，先动起来。",
+        "en": "A new spark has just caught. Inspiration, courage and the urge to make something are all here — seize it and start moving."
+      },
+      "rev": {
+        "zh": "火点着了却烧不起来：拖延、方向不清，或热情被泼了冷水。先找回你为什么想做这件事。",
+        "en": "The spark won't catch: delay, unclear direction, or enthusiasm doused. Remember why you wanted to do this."
+      },
+      "whispers": [
+        {
+          "zh": "这根棍子在发芽。我也想发芽，但我只会发呆。",
+          "en": "This stick is sprouting. I'd like to sprout too, but I only know how to stare."
+        },
+        {
+          "zh": "光里伸出一只手，递给我一根木棍。我收下了。",
+          "en": "A hand reached out of the light and gave me a stick. I took it."
+        }
+      ],
+      "scene": {
+        "zh": "清晨的光从云里伸出一只金色的手，握着一根正在发芽的权杖；奶蛙站在山坡上仰头看着，远处的城堡还在晨雾里。",
+        "en": "A golden hand of morning light reaches from the clouds, holding a wand that is sprouting fresh leaves; Naiwa looks up from a hillside, a castle still in the mist beyond."
+      },
+      "origin": {
+        "zh": "韦特牌中，一只手从云中伸出，握着长出新叶的木杖，下方是河流、山丘与城堡。王牌代表一个花色力量最纯粹的源头——权杖的源头是火：意志、创造与生命力。",
+        "en": "In the Rider–Waite card a hand emerges from a cloud holding a budding wand above rivers, hills and a castle. Each Ace is the pure root of its suit; for Wands that root is Fire — will, creativity and vitality."
+      },
+      "astro": {
+        "zh": "火元素之根",
+        "en": "Root of Fire"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "一段关系里出现了新的火花，或你重新燃起了心动的感觉。",
+            "en": "A new spark in a relationship, or you feel that flutter again."
+          },
+          "work": {
+            "zh": "新项目、新点子、创业的念头都很有生命力，值得马上起个头。",
+            "en": "New projects, ideas or ventures have real life in them — start something now."
+          },
+          "advice": {
+            "zh": "把脑子里的念头写下来，今天就做第一件小事。",
+            "en": "Write the idea down and do the first small thing today."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "热度来得快去得也快，或者心里想但迟迟不敢表达。",
+            "en": "Heat that comes and goes fast, or wanting to say something but never daring."
+          },
+          "work": {
+            "zh": "点子很多却始终没开始，或者被现实打击了积极性。",
+            "en": "Plenty of ideas but no start, or motivation knocked down by reality."
+          },
+          "advice": {
+            "zh": "先别急着找更大的火，护住手里这一点。",
+            "en": "Don't hunt for a bigger fire yet — protect the little one you have."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "wands_02",
+      "arcana": "minor",
+      "suit": "wands",
+      "rank": 2,
+      "num": "II",
+      "name": {
+        "zh": "权杖二",
+        "en": "TWO OF WANDS"
+      },
+      "keys": {
+        "zh": [
+          "规划",
+          "远见",
+          "抉择"
+        ],
+        "en": [
+          "Planning",
+          "Vision",
+          "Decision"
+        ]
+      },
+      "up": {
+        "zh": "你站在城墙上看着更大的世界。机会在远方，现在是规划路线、决定要不要出发的时候。",
+        "en": "You stand on the battlements looking at a wider world. Opportunity lies far off; now is the time to plan the route and decide whether to go."
+      },
+      "rev": {
+        "zh": "害怕离开熟悉的地方，或计划做了一半就停住。舒适区很安全，但也很小。",
+        "en": "Afraid to leave the familiar, or a plan stalled halfway. The comfort zone is safe — and small."
+      },
+      "whispers": [
+        {
+          "zh": "我手里有一个地球仪。我不知道哪里是我家。",
+          "en": "I'm holding a globe. I don't know where home is on it."
+        },
+        {
+          "zh": "一根权杖钉在墙上，一根在我手里。我在想要不要再拿一根。",
+          "en": "One wand is fixed to the wall, one is in my hand. I'm wondering whether to take another."
+        }
+      ],
+      "scene": {
+        "zh": "阳光明亮的城墙上，奶蛙一手捧着小地球仪、一手扶着权杖，眺望海湾与远方的海岸线；另一根权杖固定在墙边。",
+        "en": "On a sunny battlement Naiwa holds a small globe in one hand and a wand in the other, gazing over a bay toward a distant coast; a second wand is fixed to the wall."
+      },
+      "origin": {
+        "zh": "传统画面中，一位领主站在城垛上，手持地球仪远眺大海，一根权杖固定在墙上，墙上还刻有玫瑰与百合交叉的纹章。它讲的是已经拥有一些成果之后，对更大世界的渴望与筹划。",
+        "en": "Traditionally a lord stands on a battlement holding a globe and gazing out to sea, one wand fixed beside him and a crest of crossed roses and lilies on the wall. It speaks of wanting a wider world once some success is already in hand."
+      },
+      "astro": {
+        "zh": "白羊座第一旬 · 火星（0–10°）",
+        "en": "Mars in Aries · 1st decan (0–10°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "开始认真考虑这段关系的未来，比如要不要一起去一个新地方。",
+            "en": "You start thinking seriously about where this relationship goes — maybe somewhere new together."
+          },
+          "work": {
+            "zh": "适合做长期规划、拓展市场或考虑换城市发展。",
+            "en": "Good for long-term plans, expanding into new markets, or considering a move."
+          },
+          "advice": {
+            "zh": "在地图上画出第一段路线，而不是只盯着远方。",
+            "en": "Draw the first leg of the route instead of only staring at the horizon."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "因为害怕改变而原地踏步。",
+            "en": "Standing still because change feels scary."
+          },
+          "work": {
+            "zh": "计划很大，执行很少；或者明明想走却被眼前的安稳拖住。",
+            "en": "Big plans, little execution — or comfort holding you back from going."
+          },
+          "advice": {
+            "zh": "别把规划当成行动的替代品。",
+            "en": "Don't let planning stand in for doing."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "wands_03",
+      "arcana": "minor",
+      "suit": "wands",
+      "rank": 3,
+      "num": "III",
+      "name": {
+        "zh": "权杖三",
+        "en": "THREE OF WANDS"
+      },
+      "keys": {
+        "zh": [
+          "扩展",
+          "等待回报",
+          "远航"
+        ],
+        "en": [
+          "Expansion",
+          "Awaiting results",
+          "Setting sail"
+        ]
+      },
+      "up": {
+        "zh": "船已经出发，你站在高处看它们远去。之前播下的努力正在向外扩展，耐心等待回音。",
+        "en": "The ships have sailed and you watch them go from high ground. What you set in motion is spreading outward — wait patiently for word back."
+      },
+      "rev": {
+        "zh": "回报比预期来得慢，或者计划遇到阻滞。别急着撤回，检查一下航线。",
+        "en": "Returns are slower than hoped, or plans hit a snag. Don't recall the ships yet — check the course."
+      },
+      "whispers": [
+        {
+          "zh": "船在走。我在站。我们都在努力。",
+          "en": "The ships are sailing. I'm standing. We're all doing our best."
+        },
+        {
+          "zh": "金色的海很好看。我数了船，有三艘，和权杖一样多。",
+          "en": "The golden sea is pretty. I counted the ships: three, same as the wands."
+        }
+      ],
+      "scene": {
+        "zh": "金色午后，奶蛙站在悬崖边三根发芽的权杖之间，背对我们望着海上远去的小帆船。",
+        "en": "In the golden afternoon Naiwa stands among three sprouting wands at a cliff edge, watching small sailboats head out across the sea."
+      },
+      "origin": {
+        "zh": "韦特牌中，一个人背对观者站在山崖上，身边三根权杖插地，望着海上航行的船只。这是第一次收获之后的展望：贸易、远行与更大的格局。",
+        "en": "In the Rider–Waite card a figure stands on a cliff with his back to us among three planted wands, watching ships at sea. It is the outlook after a first success: trade, travel and a broader horizon."
+      },
+      "astro": {
+        "zh": "白羊座第二旬 · 太阳（10–20°）",
+        "en": "the Sun in Aries · 2nd decan (10–20°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "异地、跨文化或需要等待的关系，有望慢慢靠近。",
+            "en": "Long-distance or cross-cultural bonds, or ones that need waiting, are slowly drawing closer."
+          },
+          "work": {
+            "zh": "出口、外地合作、长线投资开始有动静。",
+            "en": "Overseas work, remote partnerships or long-term investments start to move."
+          },
+          "advice": {
+            "zh": "把眼光放远，同时准备好接住回来的消息。",
+            "en": "Look far ahead, and be ready to catch the news when it returns."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "期待落空或对方迟迟没有回应。",
+            "en": "Expectations unmet, or no reply for a long time."
+          },
+          "work": {
+            "zh": "进展延误、合作伙伴掉链子。",
+            "en": "Delays, or partners who drop the ball."
+          },
+          "advice": {
+            "zh": "降低一点预期，但别放弃航线。",
+            "en": "Lower expectations a little, but keep the course."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "wands_04",
+      "arcana": "minor",
+      "suit": "wands",
+      "rank": 4,
+      "num": "IV",
+      "name": {
+        "zh": "权杖四",
+        "en": "FOUR OF WANDS"
+      },
+      "keys": {
+        "zh": [
+          "庆祝",
+          "安定",
+          "归属"
+        ],
+        "en": [
+          "Celebration",
+          "Stability",
+          "Homecoming"
+        ]
+      },
+      "up": {
+        "zh": "四根权杖搭成花门，到了值得庆祝的时刻：一段稳定、一次团聚，或一个阶段的圆满落成。",
+        "en": "Four wands form a garlanded gate — a time to celebrate: stability, a reunion, or a stage completed."
+      },
+      "rev": {
+        "zh": "庆祝被打断，或者家里有些小摩擦。快乐还在，只是需要多一点包容。",
+        "en": "A celebration interrupted, or small frictions at home. The joy is still there; it needs a little patience."
+      },
+      "whispers": [
+        {
+          "zh": "花门很好看。我站在下面，假装自己是新郎。（或新娘）",
+          "en": "The flower gate is lovely. I'm standing under it pretending to be the groom. (Or the bride.)"
+        },
+        {
+          "zh": "我举着两束花。没有人接，我就自己闻。",
+          "en": "I'm holding up two bouquets. Nobody took them, so I smell them myself."
+        }
+      ],
+      "scene": {
+        "zh": "阳光下，四根缠着丝带和玫瑰的权杖搭成花门，奶蛙站在门下高举两束花，身后是温暖的哥特庄园和庆祝的人影。",
+        "en": "In sunlight, four wands wound with ribbons and roses form a gate; Naiwa stands beneath it holding up two bouquets, a warm gothic manor and celebrating figures behind."
+      },
+      "origin": {
+        "zh": "传统画面里，四根权杖支起花环，两位人物举着花束欢迎来客，背后是城堡。它是权杖花色里最安稳快乐的一张：婚礼、乔迁、团聚与阶段性成果。",
+        "en": "Traditionally four wands hold up a garland while two figures raise bouquets in welcome before a castle. It is the most settled, joyful card of the suit: weddings, housewarmings, reunions and milestones."
+      },
+      "astro": {
+        "zh": "白羊座第三旬 · 金星（20–30°）",
+        "en": "Venus in Aries · 3rd decan (20–30°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "适合确定关系、见家人、筹备婚礼或同居。",
+            "en": "Good for commitment, meeting family, planning a wedding or moving in."
+          },
+          "work": {
+            "zh": "项目落地、团队庆功，工作环境稳定和谐。",
+            "en": "A project lands, the team celebrates, the workplace feels stable."
+          },
+          "advice": {
+            "zh": "给自己办一个小小的庆祝，哪怕只是一顿好饭。",
+            "en": "Throw yourself a small celebration, even if it's just a good meal."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "家人意见不合，或对「安定下来」有不同期待。",
+            "en": "Family disagreements, or different ideas about settling down."
+          },
+          "work": {
+            "zh": "成果被忽视，或团队里有点不和。",
+            "en": "Achievements overlooked, or friction in the team."
+          },
+          "advice": {
+            "zh": "别等完美再庆祝，先感谢已经拥有的。",
+            "en": "Don't wait for perfect to celebrate; be grateful for what's here."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "wands_05",
+      "arcana": "minor",
+      "suit": "wands",
+      "rank": 5,
+      "num": "V",
+      "name": {
+        "zh": "权杖五",
+        "en": "FIVE OF WANDS"
+      },
+      "keys": {
+        "zh": [
+          "竞争",
+          "摩擦",
+          "切磋"
+        ],
+        "en": [
+          "Competition",
+          "Friction",
+          "Sparring"
+        ]
+      },
+      "up": {
+        "zh": "五根权杖乱作一团，大家都想表达自己。冲突不一定是坏事，它也可能是切磋和成长。",
+        "en": "Five wands clash at once — everyone wants to be heard. Conflict isn't always bad; it can be sparring that makes you grow."
+      },
+      "rev": {
+        "zh": "回避冲突、憋着不说，或者争吵终于平息。也可能是该停止无意义的内耗了。",
+        "en": "Avoiding conflict and holding it in, or a quarrel finally dying down. Maybe it's time to stop pointless infighting."
+      },
+      "whispers": [
+        {
+          "zh": "我们在打架。其实是在跳舞，只是棍子太多了。",
+          "en": "We're fighting. Actually we're dancing — there are just too many sticks."
+        },
+        {
+          "zh": "没有人受伤。只有一片花瓣被打下来了。",
+          "en": "Nobody got hurt. Only one petal was knocked down."
+        }
+      ],
+      "scene": {
+        "zh": "夕阳下的废墟庭院里，五只奶蛙挥着发芽的木杖互相轻敲，像在玩一场没有输赢的打闹，花瓣和尘土在空中飞。",
+        "en": "In a sunset ruin courtyard five Naiwas tap sprouting wands against each other in a playful scuffle with no winner, petals and dust in the air."
+      },
+      "origin": {
+        "zh": "韦特牌中，五个年轻人挥舞木杖混战，但没有人真正受伤，更像游戏或比赛。它代表竞争、意见不合，以及在碰撞中寻找自己的位置。",
+        "en": "In the Rider–Waite card five young men brandish staves in a melee, yet no one is hurt — more game than battle. It stands for competition, disagreement and finding your place through friction."
+      },
+      "astro": {
+        "zh": "狮子座第一旬 · 土星（0–10°）",
+        "en": "Saturn in Leo · 1st decan (0–10°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "小吵小闹、意见不合，或者有竞争者出现。",
+            "en": "Small squabbles, disagreements, or a rival appears."
+          },
+          "work": {
+            "zh": "团队头脑风暴很热闹，竞争激烈但也能激发潜力。",
+            "en": "Lively brainstorming; fierce competition that also brings out potential."
+          },
+          "advice": {
+            "zh": "把争吵变成讨论：先听完，再说自己的。",
+            "en": "Turn the quarrel into a discussion: listen fully, then speak."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "冷战，或为了和平一直忍着。",
+            "en": "Cold silence, or swallowing everything to keep the peace."
+          },
+          "work": {
+            "zh": "内耗严重、互相拖后腿。",
+            "en": "Draining infighting, people pulling each other down."
+          },
+          "advice": {
+            "zh": "退一步，看看这场争论到底值不值得。",
+            "en": "Step back and ask whether this argument is worth it."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "wands_06",
+      "arcana": "minor",
+      "suit": "wands",
+      "rank": 6,
+      "num": "VI",
+      "name": {
+        "zh": "权杖六",
+        "en": "SIX OF WANDS"
+      },
+      "keys": {
+        "zh": [
+          "胜利",
+          "认可",
+          "凯旋"
+        ],
+        "en": [
+          "Victory",
+          "Recognition",
+          "Triumph"
+        ]
+      },
+      "up": {
+        "zh": "你骑着白马戴着桂冠回来了，大家在欢呼。努力被看见，此刻可以大方地接受掌声。",
+        "en": "You ride back on a white horse wearing laurels while people cheer. Your effort has been seen — accept the applause."
+      },
+      "rev": {
+        "zh": "成功被延迟、没被认可，或者太在意别人的评价。也可能是骄傲让你跌了一跤。",
+        "en": "Success delayed or unrecognized, or too much concern for others' approval. Pride may also trip you up."
+      },
+      "whispers": [
+        {
+          "zh": "他们在为我欢呼。我挥了挥手。手很短，他们可能没看到。",
+          "en": "They're cheering for me. I waved. My arm is short; they might not have seen."
+        },
+        {
+          "zh": "桂冠有点扎。但胜利就是这样的。",
+          "en": "The laurel wreath is a bit scratchy. That's victory for you."
+        }
+      ],
+      "scene": {
+        "zh": "夕阳洒满哥特小镇的街道，奶蛙戴着桂冠骑着小白马走过，手里的权杖顶端挂着花环，四周是欢呼的人影和飘落的花瓣。",
+        "en": "Sunset fills a gothic town street as Naiwa rides a white pony wearing a laurel wreath, a garland atop its wand, cheering figures and falling petals all around."
+      },
+      "origin": {
+        "zh": "传统画面中，一位骑士头戴桂冠骑马穿过人群，手中权杖也挂着桂冠，周围的人举杖欢呼。它是公开的胜利与荣誉，也提醒人们：掌声来自他人。",
+        "en": "Traditionally a rider crowned with laurels passes through a cheering crowd, a wreath on his wand. It is public victory and honour — and a reminder that applause comes from others."
+      },
+      "astro": {
+        "zh": "狮子座第二旬 · 木星（10–20°）",
+        "en": "Jupiter in Leo · 2nd decan (10–20°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "关系被身边人祝福，或你在感情里重新找回自信。",
+            "en": "The relationship is blessed by those around you, or you regain confidence in love."
+          },
+          "work": {
+            "zh": "升职、获奖、项目被公开肯定。",
+            "en": "Promotion, awards, or public recognition for a project."
+          },
+          "advice": {
+            "zh": "好好庆祝，也记得感谢一起努力的人。",
+            "en": "Celebrate properly, and thank those who helped."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "太在意别人怎么看你们。",
+            "en": "Too focused on how others see you two."
+          },
+          "work": {
+            "zh": "功劳被抢，或成果迟迟得不到认可。",
+            "en": "Credit taken by someone else, or recognition that never comes."
+          },
+          "advice": {
+            "zh": "别把自我价值全押在掌声上。",
+            "en": "Don't stake all your worth on applause."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "wands_07",
+      "arcana": "minor",
+      "suit": "wands",
+      "rank": 7,
+      "num": "VII",
+      "name": {
+        "zh": "权杖七",
+        "en": "SEVEN OF WANDS"
+      },
+      "keys": {
+        "zh": [
+          "坚守",
+          "捍卫",
+          "立场"
+        ],
+        "en": [
+          "Perseverance",
+          "Defence",
+          "Standing firm"
+        ]
+      },
+      "up": {
+        "zh": "你站在高处，下面有六根权杖向你挑战。位置虽然有利但不轻松，坚持你的立场。",
+        "en": "You hold the high ground while six wands rise against you. The position is good but not easy — hold your stance."
+      },
+      "rev": {
+        "zh": "感觉被围攻、精疲力尽，或者开始怀疑自己是否值得坚持。",
+        "en": "Feeling besieged and exhausted, or doubting whether it's worth holding on."
+      },
+      "whispers": [
+        {
+          "zh": "六根棍子在下面。我只有一根，但我站得比较高。",
+          "en": "Six sticks below. I only have one, but I'm standing higher."
+        },
+        {
+          "zh": "风把我的披风吹起来了。看起来很英勇。其实是风大。",
+          "en": "The wind blew my cape up. Looks heroic. It's just windy."
+        }
+      ],
+      "scene": {
+        "zh": "橙红色的晚霞下，奶蛙站在岩石山顶，双手横握一根发芽的权杖，六根权杖从山脊下方伸上来，披风被风吹起。",
+        "en": "Under an orange-red sky Naiwa stands on a rocky summit holding a sprouting wand crosswise, six wands rising from below the ridge, its cape blown back by the wind."
+      },
+      "origin": {
+        "zh": "韦特牌中，一个人站在高处挥杖抵挡下方伸来的六根木杖，两只脚穿着不一样的鞋——仓促应战。它代表捍卫自己的位置与信念，以少敌多。",
+        "en": "In the Rider–Waite card a man on high ground fends off six staves from below, wearing mismatched shoes — he was caught off guard. It means defending your position and beliefs against the odds."
+      },
+      "astro": {
+        "zh": "狮子座第三旬 · 火星（20–30°）",
+        "en": "Mars in Leo · 3rd decan (20–30°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "需要捍卫这段关系，或面对外界的质疑。",
+            "en": "You may need to defend the relationship or face outside doubt."
+          },
+          "work": {
+            "zh": "竞争激烈但你占据优势，守住核心。",
+            "en": "Strong competition, but you have the advantage — protect your core."
+          },
+          "advice": {
+            "zh": "选好值得守的东西，其他的放一放。",
+            "en": "Choose what's worth defending; let the rest go."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "累了，不想再解释了。",
+            "en": "Tired, no longer wanting to explain."
+          },
+          "work": {
+            "zh": "压力太大，开始让步或被挤出位置。",
+            "en": "Overwhelmed, giving ground or being pushed out."
+          },
+          "advice": {
+            "zh": "你可以休息，不等于认输。",
+            "en": "Resting isn't the same as surrendering."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "wands_08",
+      "arcana": "minor",
+      "suit": "wands",
+      "rank": 8,
+      "num": "VIII",
+      "name": {
+        "zh": "权杖八",
+        "en": "EIGHT OF WANDS"
+      },
+      "keys": {
+        "zh": [
+          "迅速",
+          "进展",
+          "消息"
+        ],
+        "en": [
+          "Speed",
+          "Momentum",
+          "News"
+        ]
+      },
+      "up": {
+        "zh": "八根权杖划过晴空，事情突然快起来了：消息、行程和进展接踵而来。",
+        "en": "Eight wands streak across a clear sky — things suddenly speed up: news, travel and progress arrive in quick succession."
+      },
+      "rev": {
+        "zh": "延误、误会或太着急。速度失控时，先停一下再出发。",
+        "en": "Delays, misunderstandings or haste. When speed runs away with you, pause before going again."
+      },
+      "whispers": [
+        {
+          "zh": "八根权杖从我头上飞过去了。我只来得及抬头。",
+          "en": "Eight wands flew over my head. I only had time to look up."
+        },
+        {
+          "zh": "它们飞得很快。我走得很慢。但我们去同一个地方。",
+          "en": "They fly fast. I walk slowly. But we're going to the same place."
+        }
+      ],
+      "scene": {
+        "zh": "晴朗的正午蓝天下，八根发芽的权杖排成一列斜飞过绿色山丘，奶蛙站在下面小小地仰头看着。",
+        "en": "Under a bright noon sky eight sprouting wands fly diagonally in formation over green hills while a small Naiwa looks up from below."
+      },
+      "origin": {
+        "zh": "这是韦特牌里少见没有人物的一张：八根木杖斜飞过开阔的田野与河流。它象征快速的行动、远方的消息、旅行，以及「箭已离弦」的状态。",
+        "en": "One of the few Rider–Waite cards without a figure: eight staves fly at an angle over open country and a river. It stands for swift action, news from afar, travel, and an arrow already in flight."
+      },
+      "astro": {
+        "zh": "射手座第一旬 · 水星（0–10°）",
+        "en": "Mercury in Sagittarius · 1st decan (0–10°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "关系进展飞快，或突然收到对方的消息。",
+            "en": "Things move fast in love, or a sudden message arrives."
+          },
+          "work": {
+            "zh": "项目推进顺利，出差、沟通频繁。",
+            "en": "Projects accelerate; travel and communication pick up."
+          },
+          "advice": {
+            "zh": "趁势而行，但记得留一点缓冲。",
+            "en": "Ride the momentum, but leave a little buffer."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "节奏不一致：一个太急，一个太慢。",
+            "en": "Out of sync: one rushes, one lags."
+          },
+          "work": {
+            "zh": "计划延误、消息错乱、行程取消。",
+            "en": "Delays, crossed messages, cancelled trips."
+          },
+          "advice": {
+            "zh": "先确认方向，再加速。",
+            "en": "Confirm the direction before speeding up."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "wands_09",
+      "arcana": "minor",
+      "suit": "wands",
+      "rank": 9,
+      "num": "IX",
+      "name": {
+        "zh": "权杖九",
+        "en": "NINE OF WANDS"
+      },
+      "keys": {
+        "zh": [
+          "韧性",
+          "戒备",
+          "最后坚持"
+        ],
+        "en": [
+          "Resilience",
+          "Vigilance",
+          "Last stand"
+        ]
+      },
+      "up": {
+        "zh": "你已经受过伤、很累了，但还站着。再撑一下，终点就在前面。",
+        "en": "You're bruised and tired, but still standing. Hold on a little longer — the finish is close."
+      },
+      "rev": {
+        "zh": "戒备心太重、身心透支，或者终于决定放下防备休息。",
+        "en": "Too guarded, burned out, or finally deciding to lower your defences and rest."
+      },
+      "whispers": [
+        {
+          "zh": "我头上贴了一块创可贴。不是很疼，只是想让你看见。",
+          "en": "There's a plaster on my head. It doesn't hurt much — I just wanted you to see it."
+        },
+        {
+          "zh": "身后有八根权杖。它们是栅栏，也是我的朋友。",
+          "en": "Eight wands stand behind me. They're a fence, and also my friends."
+        }
+      ],
+      "scene": {
+        "zh": "阴沉的黄昏里，篝火映红废墟，奶蛙头上贴着小绷带，倚着一根权杖站岗，身后八根权杖排成栅栏。",
+        "en": "In an overcast dusk lit by a campfire, Naiwa wears a small bandage and leans on one wand, keeping watch before a fence of eight wands."
+      },
+      "origin": {
+        "zh": "韦特牌中，一个头缠绷带的人倚杖而立，警惕地回望，身后八根木杖排成一道墙。它代表经历挫折后仍坚持的韧性，也提醒过度防备会让人疲惫。",
+        "en": "In the Rider–Waite card a man with a bandaged head leans on his staff, glancing back warily before a wall of eight staves. It is resilience after setbacks — and a warning that constant guard is exhausting."
+      },
+      "astro": {
+        "zh": "射手座第二旬 · 月亮（10–20°）",
+        "en": "the Moon in Sagittarius · 2nd decan (10–20°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "曾受过伤，所以很难再敞开心扉。",
+            "en": "Past hurt makes it hard to open up again."
+          },
+          "work": {
+            "zh": "项目到了最后冲刺阶段，咬牙撑住。",
+            "en": "The project is in its final stretch — grit your teeth."
+          },
+          "advice": {
+            "zh": "你不需要一个人守着全部栅栏。",
+            "en": "You don't have to guard the whole fence alone."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "防备心让对方靠不近。",
+            "en": "Your guard keeps them from coming close."
+          },
+          "work": {
+            "zh": "筋疲力尽，快要撑不住了。",
+            "en": "Exhausted, close to giving up."
+          },
+          "advice": {
+            "zh": "承认累了，请人帮忙。",
+            "en": "Admit you're tired and ask for help."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "wands_10",
+      "arcana": "minor",
+      "suit": "wands",
+      "rank": 10,
+      "num": "X",
+      "name": {
+        "zh": "权杖十",
+        "en": "TEN OF WANDS"
+      },
+      "keys": {
+        "zh": [
+          "重担",
+          "责任",
+          "过度承担"
+        ],
+        "en": [
+          "Burden",
+          "Responsibility",
+          "Overload"
+        ]
+      },
+      "up": {
+        "zh": "你抱着一大捆权杖走向远方的村庄，责任太多压得看不见前路。终点不远，但这样走太辛苦。",
+        "en": "You carry a huge bundle of wands toward a distant village, so loaded you can't see the road. The end is near, but this is too heavy."
+      },
+      "rev": {
+        "zh": "终于学会放下一些担子，或者已经被压垮。分工、拒绝和休息都是能力。",
+        "en": "Finally setting some burdens down — or already crushed. Delegating, saying no and resting are skills too."
+      },
+      "whispers": [
+        {
+          "zh": "我抱着十根棍子。肚子在前面开路。",
+          "en": "I'm carrying ten sticks. My belly leads the way."
+        },
+        {
+          "zh": "村庄就在前面。我闭上眼睛也能走到。因为看不见路。",
+          "en": "The village is just ahead. I could walk there with my eyes closed — I can't see the road anyway."
+        }
+      ],
+      "scene": {
+        "zh": "金色的夕阳里，奶蛙抱着一大捆发芽的权杖，肚子顶在前面，一步一步走向远方的村庄。",
+        "en": "In golden sunset Naiwa hugs a huge bundle of sprouting wands, belly pushing forward, plodding step by step toward a distant village."
+      },
+      "origin": {
+        "zh": "传统画面中，一个人弯腰抱着十根木杖走向远处的房屋，脸几乎被杖挡住。这是火元素走到极限：成功带来的责任，变成了沉重的负担。",
+        "en": "Traditionally a man bends under ten staves, face hidden behind them, trudging toward a house. It is Fire at its limit: the responsibilities of success turned into a heavy load."
+      },
+      "astro": {
+        "zh": "射手座第三旬 · 土星（20–30°）",
+        "en": "Saturn in Sagittarius · 3rd decan (20–30°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "一个人扛着关系里大部分的付出。",
+            "en": "One person is carrying most of the relationship."
+          },
+          "work": {
+            "zh": "工作量超负荷，事事亲力亲为。",
+            "en": "Overloaded at work, doing everything yourself."
+          },
+          "advice": {
+            "zh": "列出手上的事，划掉至少一件。",
+            "en": "List what you're carrying and cross off at least one."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "终于说出「我需要你也一起分担」。",
+            "en": "Finally saying, 'I need you to share this too.'"
+          },
+          "work": {
+            "zh": "开始分工或拒绝新的任务；也可能是撑不住了。",
+            "en": "Starting to delegate or refuse new tasks — or reaching breaking point."
+          },
+          "advice": {
+            "zh": "放下不属于你的那几根。",
+            "en": "Put down the wands that aren't yours to carry."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "wands_11",
+      "arcana": "minor",
+      "suit": "wands",
+      "rank": 11,
+      "num": "PAGE",
+      "name": {
+        "zh": "权杖侍从",
+        "en": "PAGE OF WANDS"
+      },
+      "keys": {
+        "zh": [
+          "好奇",
+          "探索",
+          "新消息"
+        ],
+        "en": [
+          "Curiosity",
+          "Exploration",
+          "Fresh news"
+        ]
+      },
+      "up": {
+        "zh": "一个充满好奇心的开始。新的兴趣、新的消息或一次说走就走的冒险正在召唤你。",
+        "en": "A curious beginning. A new interest, fresh news, or a spontaneous adventure is calling."
+      },
+      "rev": {
+        "zh": "三分钟热度，或者有想法却不敢迈出第一步。",
+        "en": "Enthusiasm that fizzles fast, or ideas without the nerve to take the first step."
+      },
+      "whispers": [
+        {
+          "zh": "我在看这根棍子发芽。它长了一片新叶子。我记下来了。",
+          "en": "I'm watching this stick sprout. It grew a new leaf. I wrote it down."
+        },
+        {
+          "zh": "帽子上的羽毛是我捡的。它让我看起来很有学问。",
+          "en": "I found the feather on my cap. It makes me look educated."
+        }
+      ],
+      "scene": {
+        "zh": "炎热的沙漠废墟中，奶蛙戴着插羽毛的小帽、披着红色短斗篷，双手捧着一根发芽的权杖，认真研究它的新叶。",
+        "en": "In sun-baked desert ruins Naiwa wears a feathered cap and a short red cape, holding a sprouting wand and studying its new leaves intently."
+      },
+      "origin": {
+        "zh": "韦特牌中，一位年轻人站在沙漠里凝视手中的权杖，衣服上绣着火蜥蜴。侍从是花色的「学徒」，带来消息与新的开端，权杖侍从热情、冲动、充满好奇。",
+        "en": "In the Rider–Waite card a youth in a salamander-patterned tunic stands in a desert gazing at his staff. Pages are the apprentices of their suit, bringing news and beginnings; the Page of Wands is eager, impulsive and curious."
+      },
+      "astro": {
+        "zh": "火中之土（宫廷牌元素，现代常用对应）",
+        "en": "Earth of Fire (court element, common modern attribution)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "一段刚刚开始、充满新鲜感的暧昧。",
+            "en": "A fresh, exciting new flirtation."
+          },
+          "work": {
+            "zh": "学新技能、尝试新方向，或收到令人兴奋的消息。",
+            "en": "Learning a skill, trying a new direction, or exciting news."
+          },
+          "advice": {
+            "zh": "对感兴趣的东西，先玩起来再说。",
+            "en": "With what excites you, start playing before you plan."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "热情来得快去得快。",
+            "en": "Enthusiasm that burns hot and fades fast."
+          },
+          "work": {
+            "zh": "计划太多却没一件坚持下去。",
+            "en": "Many plans, none followed through."
+          },
+          "advice": {
+            "zh": "挑一件事，坚持做到第七天。",
+            "en": "Pick one thing and keep at it until day seven."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "wands_12",
+      "arcana": "minor",
+      "suit": "wands",
+      "rank": 12,
+      "num": "KNIGHT",
+      "name": {
+        "zh": "权杖骑士",
+        "en": "KNIGHT OF WANDS"
+      },
+      "keys": {
+        "zh": [
+          "冲劲",
+          "冒险",
+          "热烈"
+        ],
+        "en": [
+          "Energy",
+          "Adventure",
+          "Passion"
+        ]
+      },
+      "up": {
+        "zh": "骑着前蹄扬起的骏马冲出去！行动力、热情和冒险精神正当时，适合大胆出击。",
+        "en": "Charge out on a rearing horse! Drive, passion and daring are at their peak — act boldly."
+      },
+      "rev": {
+        "zh": "冲动鲁莽、半途而废，或者脾气急躁伤到了别人。",
+        "en": "Reckless, unfinished, or a short temper that hurts others."
+      },
+      "whispers": [
+        {
+          "zh": "马站起来了。我还坐在上面。这是我今天最大的成就。",
+          "en": "The horse reared. I'm still on it. That's my biggest achievement today."
+        },
+        {
+          "zh": "我在冲锋。不知道往哪冲，但气势很足。",
+          "en": "I'm charging. Not sure where, but with great conviction."
+        }
+      ],
+      "scene": {
+        "zh": "烈焰般的晚霞下，奶蛙穿着轻甲、披着绣火蜥蜴的红斗篷，骑着前蹄扬起的栗色马，高举发芽的权杖冲过沙漠废墟。",
+        "en": "Under a blazing sunset Naiwa in light armour and a salamander-embroidered red cape rides a rearing chestnut horse, wand raised, charging through desert ruins."
+      },
+      "origin": {
+        "zh": "韦特牌中，骑士驾着扬蹄的马冲过沙漠，盔甲上饰有火蜥蜴，远处是金字塔。骑士代表花色力量的行动，权杖骑士是最热烈也最冲动的一位。",
+        "en": "In the Rider–Waite card a knight in salamander-decorated armour charges across the desert on a rearing horse, pyramids beyond. Knights are their suit in motion; the Knight of Wands is the most passionate and impulsive."
+      },
+      "astro": {
+        "zh": "火中之风（宫廷牌元素，现代常用对应）",
+        "en": "Air of Fire (court element, common modern attribution)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "热烈、主动、充满激情，但也可能来得快去得快。",
+            "en": "Passionate and bold — though it may burn out quickly."
+          },
+          "work": {
+            "zh": "大胆开拓、出差、开始新挑战的好时机。",
+            "en": "A good time to push into new territory, travel or take on a challenge."
+          },
+          "advice": {
+            "zh": "趁热出发，但先确认油箱是满的。",
+            "en": "Go while it's hot — but check the tank first."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "冲动的承诺，或对方忽冷忽热。",
+            "en": "Impulsive promises, or someone hot and cold."
+          },
+          "work": {
+            "zh": "急躁冒进、计划不周，事情做一半就丢下。",
+            "en": "Rash moves, poor planning, things left half done."
+          },
+          "advice": {
+            "zh": "慢三秒再开口，慢三天再决定。",
+            "en": "Wait three seconds before speaking, three days before deciding."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "wands_13",
+      "arcana": "minor",
+      "suit": "wands",
+      "rank": 13,
+      "num": "QUEEN",
+      "name": {
+        "zh": "权杖王后",
+        "en": "QUEEN OF WANDS"
+      },
+      "keys": {
+        "zh": [
+          "自信",
+          "魅力",
+          "热情"
+        ],
+        "en": [
+          "Confidence",
+          "Charisma",
+          "Warmth"
+        ]
+      },
+      "up": {
+        "zh": "自信、温暖、有吸引力。你知道自己是谁，也敢让别人看见——像向日葵一样大方地朝向阳光。",
+        "en": "Confident, warm and magnetic. You know who you are and let others see it — turning toward the sun like a sunflower."
+      },
+      "rev": {
+        "zh": "自信心动摇，或者用强势、嫉妒掩盖不安。",
+        "en": "Confidence shaken, or insecurity masked by domineering or jealousy."
+      },
+      "whispers": [
+        {
+          "zh": "我拿着一朵向日葵。它比我还会朝着太阳。",
+          "en": "I'm holding a sunflower. It faces the sun better than I do."
+        },
+        {
+          "zh": "脚边的黑猫是我的。它不理我，这说明我们很合拍。",
+          "en": "The black cat at my feet is mine. It ignores me, which means we get along."
+        }
+      ],
+      "scene": {
+        "zh": "金色午后的阳光穿过高窗，奶蛙戴着小金冠坐在刻着狮子的石座上，一手权杖、一手向日葵，脚边坐着一只黑猫。",
+        "en": "Golden afternoon light streams through tall windows as Naiwa, wearing a small crown, sits on a lion-carved throne with a wand and a sunflower, a black cat at its feet."
+      },
+      "origin": {
+        "zh": "传统画面中，王后坐在饰有狮子的王座上，一手权杖、一手向日葵，脚边有一只黑猫。王后代表花色力量的内在成熟；权杖王后温暖、坚定，又带一点神秘。",
+        "en": "Traditionally the Queen sits on a lion throne holding a wand and a sunflower, a black cat at her feet. Queens are the inner mastery of their suit; the Queen of Wands is warm, determined and a little mysterious."
+      },
+      "astro": {
+        "zh": "火中之水（宫廷牌元素，现代常用对应）",
+        "en": "Water of Fire (court element, common modern attribution)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "自信迷人，容易吸引别人，也能大方表达爱意。",
+            "en": "Confident and attractive, open in expressing love."
+          },
+          "work": {
+            "zh": "适合当众展示、领导团队、做个人品牌。",
+            "en": "Good for public speaking, leading a team or building a personal brand."
+          },
+          "advice": {
+            "zh": "今天穿一件让自己开心的衣服出门。",
+            "en": "Wear something today that makes you feel good."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "占有欲或嫉妒心冒头。",
+            "en": "Possessiveness or jealousy creeping in."
+          },
+          "work": {
+            "zh": "过度强势、急于证明自己，或突然失去自信。",
+            "en": "Overbearing, desperate to prove yourself, or suddenly unsure."
+          },
+          "advice": {
+            "zh": "自信不需要压过别人。",
+            "en": "Confidence doesn't need to overpower anyone."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "wands_14",
+      "arcana": "minor",
+      "suit": "wands",
+      "rank": 14,
+      "num": "KING",
+      "name": {
+        "zh": "权杖国王",
+        "en": "KING OF WANDS"
+      },
+      "keys": {
+        "zh": [
+          "远见",
+          "领导",
+          "魄力"
+        ],
+        "en": [
+          "Vision",
+          "Leadership",
+          "Boldness"
+        ]
+      },
+      "up": {
+        "zh": "有远见、有魄力的领导者。你看得到别人看不到的方向，并且能带着大家走过去。",
+        "en": "A visionary, bold leader. You see a direction others can't, and can lead them there."
+      },
+      "rev": {
+        "zh": "独断专行、脾气暴躁，或空有愿景却不落地。",
+        "en": "Autocratic, hot-tempered, or full of vision with no follow-through."
+      },
+      "whispers": [
+        {
+          "zh": "我在看远方。远方也在看我。我们互相都没说话。",
+          "en": "I'm looking into the distance. The distance looks back. Neither of us speaks."
+        },
+        {
+          "zh": "王座上刻着火蜥蜴。它们比我还严肃。",
+          "en": "Salamanders are carved on my throne. They're even more serious than me."
+        }
+      ],
+      "scene": {
+        "zh": "夕阳从敞开的拱门灌进来，奶蛙戴着火焰形小金冠、披着深红斗篷，坐在刻着狮子与火蜥蜴的高座上，手握开花的权杖眺望远方。",
+        "en": "Sunset pours through an open arch as Naiwa, in a flame-shaped crown and deep crimson cape, sits on a high throne carved with lions and salamanders, holding a flowering wand and gazing afar."
+      },
+      "origin": {
+        "zh": "韦特牌中，国王坐在饰有狮子与火蜥蜴的王座上，手持发芽的权杖，脚边还有一只小火蜥蜴。国王代表花色力量的外在掌控；权杖国王是有远见的开创者与领导者。",
+        "en": "In the Rider–Waite card the King sits on a throne of lions and salamanders, holding a budding wand, a small salamander at his feet. Kings are outward mastery of their suit; the King of Wands is a visionary founder and leader."
+      },
+      "astro": {
+        "zh": "火中之火（宫廷牌元素，现代常用对应）",
+        "en": "Fire of Fire (court element, common modern attribution)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "成熟主动，愿意为两个人的未来做规划。",
+            "en": "Mature and proactive, willing to plan a future together."
+          },
+          "work": {
+            "zh": "适合创业、带团队、拍板做重大决定。",
+            "en": "Good for founding, leading a team, or making big calls."
+          },
+          "advice": {
+            "zh": "说出你的愿景，让别人知道往哪走。",
+            "en": "Speak your vision so others know where to go."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "控制欲太强，或者不肯听对方的意见。",
+            "en": "Too controlling, or refusing to listen."
+          },
+          "work": {
+            "zh": "独断、急躁，承诺太多而兑现太少。",
+            "en": "Autocratic, impatient, promising more than you deliver."
+          },
+          "advice": {
+            "zh": "好的领导也会停下来听。",
+            "en": "Good leaders also stop and listen."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "cups_01",
+      "arcana": "minor",
+      "suit": "cups",
+      "rank": 1,
+      "num": "ACE",
+      "name": {
+        "zh": "圣杯王牌",
+        "en": "ACE OF CUPS"
+      },
+      "keys": {
+        "zh": [
+          "新的感情",
+          "满溢",
+          "接纳"
+        ],
+        "en": [
+          "New feelings",
+          "Overflow",
+          "Openness"
+        ]
+      },
+      "up": {
+        "zh": "一只圣杯满溢而出，情感的源头被打开了。新的爱、新的友谊或一次深深的感动正在到来。",
+        "en": "A cup overflows — the wellspring of feeling opens. New love, friendship or a deep moment of being moved is arriving."
+      },
+      "rev": {
+        "zh": "情感被压抑、心门紧闭，或者付出的爱没有被接住。",
+        "en": "Feelings held back, a closed heart, or love that wasn't received."
+      },
+      "whispers": [
+        {
+          "zh": "杯子里的水一直在往外流。我没有关水龙头，因为没有水龙头。",
+          "en": "Water keeps pouring out of the cup. I didn't turn off the tap — there isn't one."
+        },
+        {
+          "zh": "我坐在池边。荷花开了。我的心也开了一点点。",
+          "en": "I'm sitting by the pond. The lotus opened. So did my heart, a little."
+        }
+      ],
+      "scene": {
+        "zh": "粉金色的晨光里，一只光做的手从云中递出圣杯，五道水流落入开满睡莲的池塘，奶蛙坐在池边仰头看着。",
+        "en": "In pink-gold dawn light a hand of light offers a chalice from the clouds; five streams fall into a pond of water lilies as Naiwa watches from the edge."
+      },
+      "origin": {
+        "zh": "韦特牌中，一只手从云中托出圣杯，一只白鸽衔着圣饼降入杯中，五道水流落入开满睡莲的池塘。它是水元素之根：爱、情感、直觉与灵性的满溢。",
+        "en": "In the Rider–Waite card a hand from a cloud holds a cup into which a dove descends with a wafer; five streams fall into a lily pond. It is the root of Water: love, feeling, intuition and spiritual overflow."
+      },
+      "astro": {
+        "zh": "水元素之根",
+        "en": "Root of Water"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "心动、表白、关系的新开始，或重新爱上对方。",
+            "en": "A crush, a confession, a fresh start — or falling for them again."
+          },
+          "work": {
+            "zh": "做喜欢的事、带着感情投入的工作会很顺。",
+            "en": "Work you love and pour feeling into flows easily."
+          },
+          "advice": {
+            "zh": "允许自己被感动，不必急着解释。",
+            "en": "Let yourself be moved without rushing to explain it."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "想爱却不敢，或者情绪憋着没说。",
+            "en": "Wanting to love but afraid, or feelings left unsaid."
+          },
+          "work": {
+            "zh": "对工作失去热情，只剩机械完成。",
+            "en": "Lost passion for work, only going through the motions."
+          },
+          "advice": {
+            "zh": "先把杯子里的水分给自己一点。",
+            "en": "Pour a little from the cup for yourself first."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "cups_02",
+      "arcana": "minor",
+      "suit": "cups",
+      "rank": 2,
+      "num": "II",
+      "name": {
+        "zh": "圣杯二",
+        "en": "TWO OF CUPS"
+      },
+      "keys": {
+        "zh": [
+          "结合",
+          "互相吸引",
+          "伙伴"
+        ],
+        "en": [
+          "Union",
+          "Mutual attraction",
+          "Partnership"
+        ]
+      },
+      "up": {
+        "zh": "两个人举杯相对，心意互通。爱情、友情或合作中出现了平等而真诚的连结。",
+        "en": "Two people raise their cups to each other, hearts in tune. A balanced, sincere bond in love, friendship or partnership."
+      },
+      "rev": {
+        "zh": "关系失衡、沟通不顺，或者一方开始退缩。",
+        "en": "An imbalanced bond, poor communication, or one side pulling back."
+      },
+      "whispers": [
+        {
+          "zh": "我们交换了杯子。里面的水一样多。这很公平。",
+          "en": "We swapped cups. Same amount of water in each. Very fair."
+        },
+        {
+          "zh": "头上有一只会发光的狮子。它在祝福我们，或者在看热闹。",
+          "en": "There's a glowing lion above us. It's blessing us, or just watching."
+        }
+      ],
+      "scene": {
+        "zh": "薄雾的清晨湖畔花园里，两只奶蛙面对面交换圣杯，头顶浮着一颗光做的带翼狮首和两条交缠的丝带。",
+        "en": "In a misty morning lakeside garden two Naiwas exchange chalices, a winged lion's head of light and two entwined ribbons floating above."
+      },
+      "origin": {
+        "zh": "传统画面中，一男一女交换圣杯，上方是赫尔墨斯双蛇杖与带翼狮首。它是圣杯花色里的「恋人」：两颗心的相遇、和解与盟约。",
+        "en": "Traditionally a man and woman exchange cups beneath a caduceus crowned with a winged lion's head. It is the suit's 'Lovers': two hearts meeting, reconciliation, a pact."
+      },
+      "astro": {
+        "zh": "巨蟹座第一旬 · 金星（0–10°）",
+        "en": "Venus in Cancer · 1st decan (0–10°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "互相吸引、确认关系，或者旧日的误会和解。",
+            "en": "Mutual attraction, making it official, or old misunderstandings healed."
+          },
+          "work": {
+            "zh": "遇到合拍的搭档，合作建立在信任之上。",
+            "en": "A well-matched partner; collaboration built on trust."
+          },
+          "advice": {
+            "zh": "给对方一个平等的位置，也给自己。",
+            "en": "Give the other an equal place — and yourself too."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "付出不对等，或者开始互相猜疑。",
+            "en": "Unequal giving, or growing suspicion."
+          },
+          "work": {
+            "zh": "合作出现裂缝、意见难以统一。",
+            "en": "Cracks in a partnership, hard to agree."
+          },
+          "advice": {
+            "zh": "先说出自己的感受，而不是指责。",
+            "en": "Name your feelings rather than blaming."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "cups_03",
+      "arcana": "minor",
+      "suit": "cups",
+      "rank": 3,
+      "num": "III",
+      "name": {
+        "zh": "圣杯三",
+        "en": "THREE OF CUPS"
+      },
+      "keys": {
+        "zh": [
+          "友谊",
+          "庆祝",
+          "相聚"
+        ],
+        "en": [
+          "Friendship",
+          "Celebration",
+          "Community"
+        ]
+      },
+      "up": {
+        "zh": "朋友们举杯欢庆，丰收与喜悦一起分享。适合聚会、团聚和庆祝小小的成功。",
+        "en": "Friends raise their cups together, sharing harvest and joy. A time for gatherings, reunions and celebrating small wins."
+      },
+      "rev": {
+        "zh": "聚会过度、八卦是非，或者在人群中感到孤单。",
+        "en": "Overindulgence, gossip, or feeling lonely in a crowd."
+      },
+      "whispers": [
+        {
+          "zh": "我们三个碰杯了。叮。这是我听过最好听的声音。",
+          "en": "The three of us clinked cups. Ding. Best sound I've ever heard."
+        },
+        {
+          "zh": "南瓜和葡萄是我们带来的。不是偷的。",
+          "en": "We brought the pumpkins and grapes. We didn't steal them."
+        }
+      ],
+      "scene": {
+        "zh": "温暖的丰收午后，三只奶蛙站在喷泉边的花园里举杯相碰，脚边堆着葡萄、南瓜和百合。",
+        "en": "On a warm harvest afternoon three Naiwas clink chalices in a garden by a fountain, grapes, pumpkins and lilies at their feet."
+      },
+      "origin": {
+        "zh": "韦特牌中，三位女子在丰收的田野上举杯起舞，脚下是南瓜与葡萄。它是情谊、团聚与共同庆祝的牌，常被看作「三女神」或姐妹情谊的象征。",
+        "en": "In the Rider–Waite card three women dance with raised cups amid harvest fruit. It is friendship, reunion and shared celebration, often read as the three Graces or sisterhood."
+      },
+      "astro": {
+        "zh": "巨蟹座第二旬 · 水星（10–20°）",
+        "en": "Mercury in Cancer · 2nd decan (10–20°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "和朋友一起时更容易遇到喜欢的人；感情里充满轻松快乐。",
+            "en": "Love may come through friends; the relationship feels light and fun."
+          },
+          "work": {
+            "zh": "团队气氛好，适合庆功、社交和合作。",
+            "en": "Good team spirit — celebrate, network, collaborate."
+          },
+          "advice": {
+            "zh": "约上朋友，好好吃一顿。",
+            "en": "Gather your friends and share a good meal."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "第三者、八卦，或者朋友关系里有隔阂。",
+            "en": "A third party, gossip, or distance among friends."
+          },
+          "work": {
+            "zh": "只顾热闹，正事被耽误。",
+            "en": "Too much partying, real work neglected."
+          },
+          "advice": {
+            "zh": "分清楚谁是真正在乎你的人。",
+            "en": "Notice who truly cares for you."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "cups_04",
+      "arcana": "minor",
+      "suit": "cups",
+      "rank": 4,
+      "num": "IV",
+      "name": {
+        "zh": "圣杯四",
+        "en": "FOUR OF CUPS"
+      },
+      "keys": {
+        "zh": [
+          "倦怠",
+          "冷淡",
+          "忽视的机会"
+        ],
+        "en": [
+          "Apathy",
+          "Contemplation",
+          "Missed offer"
+        ]
+      },
+      "up": {
+        "zh": "面前摆着三只杯子你都提不起兴趣，旁边递来的第四只也没注意到。也许不是没有好东西，而是你需要先休息。",
+        "en": "Three cups before you and none appeal; you don't even notice the fourth being offered. Perhaps good things exist — you just need rest first."
+      },
+      "rev": {
+        "zh": "从低落中走出来，重新对生活产生兴趣，开始接住新的机会。",
+        "en": "Coming out of a slump, curious again, ready to accept new chances."
+      },
+      "whispers": [
+        {
+          "zh": "三个杯子。我都不想要。第四个是从云里来的，我也假装没看见。",
+          "en": "Three cups. I don't want any. The fourth came from a cloud; I pretended not to see it."
+        },
+        {
+          "zh": "我在树下坐着。抱着手。这叫思考。",
+          "en": "I'm sitting under a tree with my arms folded. This is called thinking."
+        }
+      ],
+      "scene": {
+        "zh": "绿色森林的斑驳日光里，奶蛙抱着手坐在大树下，面前草地上摆着三只圣杯，一只光做的手从旁边的小云里递来第四只，它没有发现。",
+        "en": "In dappled green forest light Naiwa sits under a large tree with arms folded, three chalices on the grass; a hand of light offers a fourth from a little cloud, unnoticed."
+      },
+      "origin": {
+        "zh": "传统画面中，一个年轻人抱臂坐在树下，凝视面前三只杯子，云中伸出的手递来第四只，他却视而不见。它讲的是厌倦、内省，以及因沉浸在不满中而错过的机会。",
+        "en": "Traditionally a young man sits arms crossed beneath a tree, staring at three cups while a hand from a cloud offers a fourth he ignores. It is boredom, introspection, and the chance missed while sulking."
+      },
+      "astro": {
+        "zh": "巨蟹座第三旬 · 月亮（20–30°）",
+        "en": "the Moon in Cancer · 3rd decan (20–30°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "对现有关系有些倦怠，或对新的追求者提不起兴趣。",
+            "en": "Bored in the relationship, or uninterested in a new admirer."
+          },
+          "work": {
+            "zh": "工作缺乏动力，可能忽略了身边的新机会。",
+            "en": "Low motivation at work; you may be missing an offer nearby."
+          },
+          "advice": {
+            "zh": "抬头看一眼旁边，也许有东西正递过来。",
+            "en": "Glance to the side — something may be being offered."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "重新打开心扉，愿意再试一次。",
+            "en": "Opening up again, willing to try once more."
+          },
+          "work": {
+            "zh": "走出倦怠期，开始接新任务。",
+            "en": "Out of the rut, taking on new tasks."
+          },
+          "advice": {
+            "zh": "接住那只杯子，先尝一口再说。",
+            "en": "Take the cup and taste it before deciding."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "cups_05",
+      "arcana": "minor",
+      "suit": "cups",
+      "rank": 5,
+      "num": "V",
+      "name": {
+        "zh": "圣杯五",
+        "en": "FIVE OF CUPS"
+      },
+      "keys": {
+        "zh": [
+          "失落",
+          "遗憾",
+          "哀悼"
+        ],
+        "en": [
+          "Loss",
+          "Regret",
+          "Grief"
+        ]
+      },
+      "up": {
+        "zh": "三只杯子倒了，你只顾看着洒掉的部分。悲伤是真实的，但身后还有两只杯子立着。",
+        "en": "Three cups have spilled and you only see the loss. The grief is real — but two cups still stand behind you."
+      },
+      "rev": {
+        "zh": "慢慢从失落中走出来，开始接受、原谅，转身看向还剩下的。",
+        "en": "Slowly recovering from loss, accepting, forgiving, turning to what remains."
+      },
+      "whispers": [
+        {
+          "zh": "三个杯子倒了。水流进了河里。河没有说谢谢。",
+          "en": "Three cups fell over. The water ran into the river. The river didn't say thank you."
+        },
+        {
+          "zh": "我披着斗篷站了很久。后面还有两个杯子，我等一下再回头。",
+          "en": "I've stood here in my cloak a long time. There are two cups behind me; I'll turn around later."
+        }
+      ],
+      "scene": {
+        "zh": "阴凉的灰绿色清晨，披着深灰斗篷的奶蛙站在雾气弥漫的河边，低头看着三只倒下流水的圣杯，身后还立着两只，石桥通向对岸的小城堡。",
+        "en": "On a cool grey-green morning Naiwa in a dark hooded cloak stands by a misty river, looking down at three spilled cups; two still stand behind it, and a stone bridge leads to a castle."
+      },
+      "origin": {
+        "zh": "韦特牌中，一个披黑斗篷的人低头哀悼三只倒下的杯子，身后两只杯子完好，远处一座桥通向城堡。它是失落与悔恨，也暗示着转身后的出路。",
+        "en": "In the Rider–Waite card a black-cloaked figure mourns three spilled cups, two upright behind him and a bridge to a castle beyond. It is loss and regret — with a way forward once you turn around."
+      },
+      "astro": {
+        "zh": "天蝎座第一旬 · 火星（0–10°）",
+        "en": "Mars in Scorpio · 1st decan (0–10°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "分手、失望，或还沉浸在过去的遗憾里。",
+            "en": "A breakup, disappointment, or lingering regret."
+          },
+          "work": {
+            "zh": "计划受挫、损失，或对结果感到失望。",
+            "en": "Setbacks, losses, or disappointing results."
+          },
+          "advice": {
+            "zh": "给悲伤一点时间，然后回头数数剩下的杯子。",
+            "en": "Give grief some time, then count the cups still standing."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "开始放下前任或过去的伤，愿意重新开始。",
+            "en": "Letting go of an ex or old wound, ready to start over."
+          },
+          "work": {
+            "zh": "从失败里吸取教训，重新调整方向。",
+            "en": "Learning from failure and changing course."
+          },
+          "advice": {
+            "zh": "那座桥一直在，过去吧。",
+            "en": "The bridge has always been there — cross it."
+          }
+        }
+      },
+      "dark": true
+    },
+    {
+      "id": "cups_06",
+      "arcana": "minor",
+      "suit": "cups",
+      "rank": 6,
+      "num": "VI",
+      "name": {
+        "zh": "圣杯六",
+        "en": "SIX OF CUPS"
+      },
+      "keys": {
+        "zh": [
+          "回忆",
+          "纯真",
+          "善意"
+        ],
+        "en": [
+          "Nostalgia",
+          "Innocence",
+          "Kindness"
+        ]
+      },
+      "up": {
+        "zh": "小时候的花园、旧日的朋友、单纯的善意。回忆带来温暖，也提醒你保留那份纯真。",
+        "en": "A childhood garden, old friends, simple kindness. Memory brings warmth and reminds you to keep that innocence."
+      },
+      "rev": {
+        "zh": "困在过去不肯往前，或者把回忆美化得太过。",
+        "en": "Stuck in the past, or remembering it as better than it was."
+      },
+      "whispers": [
+        {
+          "zh": "我送了一杯花给另一只我。它说谢谢。我们都没有笑。",
+          "en": "I gave a cup of flowers to another me. It said thanks. Neither of us smiled."
+        },
+        {
+          "zh": "这个院子我小时候来过。也可能没来过。但感觉很熟悉。",
+          "en": "I came to this courtyard as a child. Or maybe not. It feels familiar either way."
+        }
+      ],
+      "scene": {
+        "zh": "阳光温暖的古堡庭院开满鲜花，一只小奶蛙把装满白色小星花的圣杯递给另一只奶蛙，台阶上还摆着四只插着花的杯子。",
+        "en": "In a sunny old castle courtyard full of flowers, a small Naiwa hands a chalice of white star-flowers to another Naiwa; four more cups of flowers sit on the steps."
+      },
+      "origin": {
+        "zh": "传统画面中，一个孩子把插着白花的杯子递给另一个更小的孩子，背景是古老的庭院。它关于童年、怀旧、单纯的给予，也常指故人重逢。",
+        "en": "Traditionally a child offers a cup of white flowers to a smaller child in an old courtyard. It speaks of childhood, nostalgia, simple giving, and often reunions with people from the past."
+      },
+      "astro": {
+        "zh": "天蝎座第二旬 · 太阳（10–20°）",
+        "en": "the Sun in Scorpio · 2nd decan (10–20°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "旧情复燃、青梅竹马，或关系里的单纯与温柔。",
+            "en": "An old flame, a childhood sweetheart, or simple tenderness."
+          },
+          "work": {
+            "zh": "老朋友或老东家带来的机会，或与孩子相关的工作。",
+            "en": "Opportunities via old friends or employers, or work with children."
+          },
+          "advice": {
+            "zh": "做一件小时候喜欢做的事。",
+            "en": "Do something you loved as a child."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "拿现在和过去比，觉得都不如从前。",
+            "en": "Comparing everything to the past and finding it lacking."
+          },
+          "work": {
+            "zh": "守着旧方法不肯改变。",
+            "en": "Clinging to old ways, refusing to change."
+          },
+          "advice": {
+            "zh": "回忆可以带走，不必住在里面。",
+            "en": "Carry memories with you — don't live inside them."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "cups_07",
+      "arcana": "minor",
+      "suit": "cups",
+      "rank": 7,
+      "num": "VII",
+      "name": {
+        "zh": "圣杯七",
+        "en": "SEVEN OF CUPS"
+      },
+      "keys": {
+        "zh": [
+          "幻想",
+          "选择太多",
+          "迷惑"
+        ],
+        "en": [
+          "Illusion",
+          "Too many choices",
+          "Daydreams"
+        ]
+      },
+      "up": {
+        "zh": "七只杯子漂在云里，每只都装着诱人的幻象。想象力很美，但要分清哪些是真的、哪些只是梦。",
+        "en": "Seven cups float in the clouds, each holding a tempting vision. Imagination is lovely, but tell the real from the dream."
+      },
+      "rev": {
+        "zh": "从幻想中醒来，看清现实并做出选择。",
+        "en": "Waking from fantasy, seeing clearly, and making a choice."
+      },
+      "whispers": [
+        {
+          "zh": "七个杯子。一个装着城堡，一个装着龙，一个装着一颗蛋。我最想要那颗蛋。",
+          "en": "Seven cups: one has a castle, one a dragon, one an egg. I want the egg most."
+        },
+        {
+          "zh": "它们都在云上。我在地上。这就是问题所在。",
+          "en": "They're all in the clouds. I'm on the ground. That's the problem."
+        }
+      ],
+      "scene": {
+        "zh": "梦幻的紫色暮光里，奶蛙站在雾气弥漫的岸边，面前七只圣杯浮在发光的云上，分别装着城堡、珠宝、桂冠、小龙、蒙面的光影、蛇和一颗发光的蛋。",
+        "en": "In dreamy violet twilight Naiwa stands on a misty shore facing seven cups on glowing clouds: a castle, jewels, a laurel, a small dragon, a veiled light, a snake and a glowing egg."
+      },
+      "origin": {
+        "zh": "韦特牌中，一个人面对云中七只杯子，里面分别是头像、蒙面人、蛇、城堡、珠宝、桂冠和龙。它代表白日梦、诱惑与选择困难：幻象越多，越难看清真正想要的。",
+        "en": "In the Rider–Waite card a figure faces seven cups in the clouds holding a head, a veiled figure, a snake, a castle, jewels, a wreath and a dragon. It is daydreams, temptation and indecision: the more visions, the harder to see what you truly want."
+      },
+      "astro": {
+        "zh": "天蝎座第三旬 · 金星（20–30°）",
+        "en": "Venus in Scorpio · 3rd decan (20–30°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "对感情抱有太多想象，或在几个人之间犹豫。",
+            "en": "Too much fantasy in love, or torn between several people."
+          },
+          "work": {
+            "zh": "选项太多、方向不定，容易被不切实际的计划吸引。",
+            "en": "Too many options; drawn to unrealistic plans."
+          },
+          "advice": {
+            "zh": "写下三个最想要的，划掉两个。",
+            "en": "Write your top three wishes, then cross out two."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "看清对方真实的样子，不再被想象迷惑。",
+            "en": "Seeing who they really are, past the fantasy."
+          },
+          "work": {
+            "zh": "终于做出取舍，计划变得清晰。",
+            "en": "Finally choosing; plans become clear."
+          },
+          "advice": {
+            "zh": "梦可以做，但要选一个醒来去实现。",
+            "en": "Keep dreaming — but wake up for one of them."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "cups_08",
+      "arcana": "minor",
+      "suit": "cups",
+      "rank": 8,
+      "num": "VIII",
+      "name": {
+        "zh": "圣杯八",
+        "en": "EIGHT OF CUPS"
+      },
+      "keys": {
+        "zh": [
+          "离开",
+          "寻找意义",
+          "放下"
+        ],
+        "en": [
+          "Walking away",
+          "Seeking meaning",
+          "Letting go"
+        ]
+      },
+      "up": {
+        "zh": "八只杯子码得整整齐齐，你却选择离开。不是它们不好，而是你需要去寻找更深的东西。",
+        "en": "Eight cups stacked neatly — and you walk away. Not because they're bad, but because you need something deeper."
+      },
+      "rev": {
+        "zh": "想走却走不了，或走了又回头；也可能是害怕面对内心的空缺。",
+        "en": "Wanting to leave but unable, or leaving and coming back; perhaps fearing the emptiness inside."
+      },
+      "whispers": [
+        {
+          "zh": "我把杯子摆好才走的。走也要走得整齐。",
+          "en": "I stacked the cups neatly before leaving. Even leaving should be tidy."
+        },
+        {
+          "zh": "我回头看了一眼。只看一眼。然后继续走。",
+          "en": "I glanced back once. Just once. Then kept walking."
+        }
+      ],
+      "scene": {
+        "zh": "深蓝的夜里，残缺的弦月被日食的阴影遮住一角，奶蛙披着短斗篷拄着手杖沿岩石海岸走向雾中的群山，身后岩石上整齐码着八只圣杯。",
+        "en": "In deep blue night beneath a crescent moon half-shadowed by an eclipse, Naiwa in a short cloak walks with a staff along a rocky shore toward misty mountains, eight cups stacked neatly behind it."
+      },
+      "origin": {
+        "zh": "传统画面中，一个披红斗篷的人在月夜背对八只叠放的杯子，拄杖走向荒凉的山中，天上是月蚀般的月亮。它是主动的离开：放下已经不再滋养你的东西，去追寻意义。",
+        "en": "Traditionally a red-cloaked figure turns from eight stacked cups and walks with a staff into barren hills under an eclipsed moon. It is a deliberate departure: leaving what no longer nourishes you to seek meaning."
+      },
+      "astro": {
+        "zh": "双鱼座第一旬 · 土星（0–10°）",
+        "en": "Saturn in Pisces · 1st decan (0–10°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "一段关系已经无法满足内心，选择离开或暂停。",
+            "en": "A relationship no longer fulfils you; you choose to leave or pause."
+          },
+          "work": {
+            "zh": "辞职、转行，或放下一个做得不错却没意义的项目。",
+            "en": "Quitting, changing careers, or dropping a good but empty project."
+          },
+          "advice": {
+            "zh": "问问自己：你在找的到底是什么？",
+            "en": "Ask yourself: what are you really looking for?"
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "明知不合适却舍不得走。",
+            "en": "Knowing it's wrong but unable to leave."
+          },
+          "work": {
+            "zh": "反复横跳，迟迟下不了离开的决心。",
+            "en": "Going back and forth, unable to commit to leaving."
+          },
+          "advice": {
+            "zh": "离开不是失败，是换个方向找。",
+            "en": "Leaving isn't failing — it's searching elsewhere."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "cups_09",
+      "arcana": "minor",
+      "suit": "cups",
+      "rank": 9,
+      "num": "IX",
+      "name": {
+        "zh": "圣杯九",
+        "en": "NINE OF CUPS"
+      },
+      "keys": {
+        "zh": [
+          "满足",
+          "愿望成真",
+          "享受"
+        ],
+        "en": [
+          "Contentment",
+          "Wish fulfilled",
+          "Pleasure"
+        ]
+      },
+      "up": {
+        "zh": "俗称「愿望牌」。九只杯子摆成一排，你满意地坐着——想要的东西大多已经得到，好好享受吧。",
+        "en": "Known as the 'wish card'. Nine cups in a row and you sit contentedly — most of what you wanted is here. Enjoy it."
+      },
+      "rev": {
+        "zh": "得到了却仍不满足，或者过度沉溺于享乐。",
+        "en": "Having it all yet still unsatisfied, or indulging too much."
+      },
+      "whispers": [
+        {
+          "zh": "九个杯子都是我的。我一个都不打算分。",
+          "en": "All nine cups are mine. I don't plan to share any."
+        },
+        {
+          "zh": "我抱着手坐着。这是一种很满足的姿势。",
+          "en": "I'm sitting with my arms folded. It's a very satisfied pose."
+        }
+      ],
+      "scene": {
+        "zh": "温暖的傍晚金光下，奶蛙心满意足地坐在长椅上，短手交叠在肚子上，面前铺着深蓝桌布的弧形长桌上排着九只圣杯，后面是花园喷泉。",
+        "en": "In warm golden evening light Naiwa sits contentedly on a bench, arms folded over its belly, nine chalices arranged on a curved blue-draped table, a garden fountain behind."
+      },
+      "origin": {
+        "zh": "韦特牌中，一个体态丰满的人双臂抱胸坐着，身后弧形桌上排列着九只杯子，神情满足。它常被称为「愿望牌」，代表物质与情感上的满足和惬意。",
+        "en": "In the Rider–Waite card a stout, satisfied man sits arms folded before nine cups on a curved table. Often called the 'wish card', it signals material and emotional contentment."
+      },
+      "astro": {
+        "zh": "双鱼座第二旬 · 木星（10–20°）",
+        "en": "Jupiter in Pisces · 2nd decan (10–20°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "感情甜蜜满足，心愿成真。",
+            "en": "Sweet, satisfying love; wishes come true."
+          },
+          "work": {
+            "zh": "达成目标、收获回报，生活舒适。",
+            "en": "Goals reached, rewards gained, life comfortable."
+          },
+          "advice": {
+            "zh": "允许自己享受，不必立刻追求下一个目标。",
+            "en": "Let yourself enjoy it before chasing the next goal."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "表面满足，心里却空落落的。",
+            "en": "Content on the surface, empty underneath."
+          },
+          "work": {
+            "zh": "过度消费、贪多，或满足来得太浅。",
+            "en": "Overspending, greed, or shallow satisfaction."
+          },
+          "advice": {
+            "zh": "想想什么才是真正让你满足的。",
+            "en": "Think about what truly satisfies you."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "cups_10",
+      "arcana": "minor",
+      "suit": "cups",
+      "rank": 10,
+      "num": "X",
+      "name": {
+        "zh": "圣杯十",
+        "en": "TEN OF CUPS"
+      },
+      "keys": {
+        "zh": [
+          "圆满",
+          "家庭",
+          "和睦"
+        ],
+        "en": [
+          "Harmony",
+          "Family",
+          "Lasting happiness"
+        ]
+      },
+      "up": {
+        "zh": "彩虹上挂着十只杯子，一家人在河边欢欣起舞。情感上的圆满与长久的幸福。",
+        "en": "Ten cups arc across a rainbow while a family dances by the river. Emotional fulfilment and lasting happiness."
+      },
+      "rev": {
+        "zh": "家庭不和、价值观冲突，或对「完美家庭」的期待太高。",
+        "en": "Family discord, clashing values, or too-high expectations of the perfect family."
+      },
+      "whispers": [
+        {
+          "zh": "彩虹上有十个杯子。下雨的时候它们在接水。",
+          "en": "Ten cups on the rainbow. When it rains, they collect the water."
+        },
+        {
+          "zh": "小的那两只在跳舞。我也想跳，但我在负责举手。",
+          "en": "The two little ones are dancing. I'd like to dance too, but I'm in charge of raising my arms."
+        }
+      ],
+      "scene": {
+        "zh": "雨后清透的阳光下，四只奶蛙站在河岸边，两只大的向天空张开短手，彩虹上排着十只圣杯，两只小奶蛙手拉手跳舞，对岸是温馨的小屋和绿色山丘。",
+        "en": "In clear light after rain four Naiwas stand on a riverbank — two big ones raising their arms to a rainbow of ten cups, two small ones dancing hand in hand, a cosy cottage on the far bank."
+      },
+      "origin": {
+        "zh": "传统画面中，一对夫妇张开双臂迎向天上由十只杯子组成的彩虹，两个孩子在旁边嬉戏，远处是家园。它是情感层面的最高圆满：和谐的家庭与持久的幸福。",
+        "en": "Traditionally a couple raise their arms to a rainbow of ten cups while two children play nearby, a home in the distance. It is emotional fulfilment at its height: a harmonious family and lasting joy."
+      },
+      "astro": {
+        "zh": "双鱼座第三旬 · 火星（20–30°）",
+        "en": "Mars in Pisces · 3rd decan (20–30°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "关系稳定幸福，适合组建家庭、长期承诺。",
+            "en": "Stable, happy love; good for building a family or lasting commitment."
+          },
+          "work": {
+            "zh": "工作与生活平衡，团队像家人一样。",
+            "en": "Work-life balance; a team that feels like family."
+          },
+          "advice": {
+            "zh": "今天给家人或重要的人打个电话。",
+            "en": "Call your family or someone dear today."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "家人反对，或两个人对未来的想象不一致。",
+            "en": "Family disapproval, or different visions of the future."
+          },
+          "work": {
+            "zh": "为了维持表面和谐而压抑真实感受。",
+            "en": "Suppressing real feelings to keep up appearances."
+          },
+          "advice": {
+            "zh": "幸福不需要完美的样子。",
+            "en": "Happiness doesn't need to look perfect."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "cups_11",
+      "arcana": "minor",
+      "suit": "cups",
+      "rank": 11,
+      "num": "PAGE",
+      "name": {
+        "zh": "圣杯侍从",
+        "en": "PAGE OF CUPS"
+      },
+      "keys": {
+        "zh": [
+          "感性",
+          "惊喜",
+          "创意萌芽"
+        ],
+        "en": [
+          "Sensitivity",
+          "Surprise",
+          "Creative spark"
+        ]
+      },
+      "up": {
+        "zh": "杯子里探出一条小鱼——意想不到的惊喜、温柔的心意或一个创意的萌芽。保持一颗柔软好奇的心。",
+        "en": "A little fish peeks out of the cup — an unexpected surprise, a tender message, or a creative spark. Keep a soft, curious heart."
+      },
+      "rev": {
+        "zh": "情绪化、不切实际，或者把心意藏着不敢表达。",
+        "en": "Moody, unrealistic, or hiding feelings out of shyness."
+      },
+      "whispers": [
+        {
+          "zh": "杯子里有一条鱼。它看着我，我看着它。我们都没有表情。",
+          "en": "There's a fish in my cup. It looks at me, I look at it. Neither of us has an expression."
+        },
+        {
+          "zh": "帽子上的百合是我自己插的。海风把它吹歪了。",
+          "en": "I stuck the lily in my hat myself. The sea wind knocked it crooked."
+        }
+      ],
+      "scene": {
+        "zh": "粉蓝色的海边清晨，奶蛙披着淡蓝短斗篷、戴着插百合的软帽，站在浪边举着一只圣杯，杯里探出一条银色小鱼。",
+        "en": "On a pink-and-blue seaside morning Naiwa in a pale blue cape and a floppy hat with a lily stands at the water's edge holding up a cup, a little silver fish peeking out."
+      },
+      "origin": {
+        "zh": "韦特牌中，一位衣着华丽的年轻人站在海边，惊奇地看着从杯中探出头的鱼。圣杯侍从代表感性的信使：情书、邀请、直觉的灵光与艺术的萌芽。",
+        "en": "In the Rider–Waite card a richly dressed youth by the sea gazes in surprise at a fish rising from his cup. The Page of Cups is a messenger of feeling: love notes, invitations, intuitive flashes and budding art."
+      },
+      "astro": {
+        "zh": "水中之土（宫廷牌元素，现代常用对应）",
+        "en": "Earth of Water (court element, common modern attribution)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "收到一份温柔的告白或小惊喜。",
+            "en": "A tender confession or a sweet surprise."
+          },
+          "work": {
+            "zh": "创意灵感冒出来，适合尝试艺术或设计。",
+            "en": "Creative ideas bubble up — try art or design."
+          },
+          "advice": {
+            "zh": "相信那个看似天真的念头。",
+            "en": "Trust the idea that seems naïve."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "情绪起伏大，或者用幻想逃避现实。",
+            "en": "Mood swings, or escaping into fantasy."
+          },
+          "work": {
+            "zh": "想法太天马行空，难以落地。",
+            "en": "Ideas too far-fetched to land."
+          },
+          "advice": {
+            "zh": "温柔可以保留，但要说出来。",
+            "en": "Keep your tenderness — and say it out loud."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "cups_12",
+      "arcana": "minor",
+      "suit": "cups",
+      "rank": 12,
+      "num": "KNIGHT",
+      "name": {
+        "zh": "圣杯骑士",
+        "en": "KNIGHT OF CUPS"
+      },
+      "keys": {
+        "zh": [
+          "浪漫",
+          "邀请",
+          "追随内心"
+        ],
+        "en": [
+          "Romance",
+          "Invitation",
+          "Following the heart"
+        ]
+      },
+      "up": {
+        "zh": "骑士捧着杯子缓缓渡河而来，带来浪漫的邀请或一个由心出发的提议。跟着感觉走。",
+        "en": "The knight crosses the river slowly, cup held forward — a romantic invitation or a heartfelt proposal. Follow your feelings."
+      },
+      "rev": {
+        "zh": "甜言蜜语不可靠，或情绪化、不切实际的追求。",
+        "en": "Sweet talk you can't trust, or a moody, unrealistic pursuit."
+      },
+      "whispers": [
+        {
+          "zh": "我的头盔上有一对小翅膀。它们不会飞，但会让我走得更浪漫。",
+          "en": "My helmet has little wings. They can't fly, but they make me travel more romantically."
+        },
+        {
+          "zh": "马走得很慢。我捧着杯子，一滴都没洒。",
+          "en": "The horse walks slowly. I'm holding the cup and haven't spilled a drop."
+        }
+      ],
+      "scene": {
+        "zh": "朦胧的上午金银色光里，奶蛙穿着银甲、头盔上有小翅膀，骑着白马缓缓渡过浅河，双手向前捧着一只圣杯，两岸垂柳和百合。",
+        "en": "In hazy gold-silver morning light Naiwa in silver armour and a winged helmet rides a white horse across a shallow river, holding a chalice forward, willows and lilies on the banks."
+      },
+      "origin": {
+        "zh": "韦特牌中，骑士戴着有翼头盔，骑着白马缓步前进，手中捧杯如同献礼。与其他骑士的冲锋不同，他代表温柔的追求、浪漫的邀请与理想主义。",
+        "en": "In the Rider–Waite card a knight in a winged helmet rides a white horse at a gentle pace, cup held out like an offering. Unlike the other charging knights, he is gentle pursuit, romantic invitation and idealism."
+      },
+      "astro": {
+        "zh": "水中之风（宫廷牌元素，现代常用对应）",
+        "en": "Air of Water (court element, common modern attribution)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "浪漫的追求者、约会邀请或求婚。",
+            "en": "A romantic suitor, a date invitation, or a proposal."
+          },
+          "work": {
+            "zh": "收到创意类工作邀约，或跟随热情转换方向。",
+            "en": "A creative job offer, or changing direction to follow your passion."
+          },
+          "advice": {
+            "zh": "用心表达，但也要准备好行动。",
+            "en": "Express it from the heart — and be ready to act."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "对方说得好听做得少，或你沉迷于浪漫想象。",
+            "en": "All words and no action, or lost in romantic fantasy."
+          },
+          "work": {
+            "zh": "情绪化决定，事后后悔。",
+            "en": "Emotional decisions you later regret."
+          },
+          "advice": {
+            "zh": "看对方怎么做，而不只是怎么说。",
+            "en": "Watch what they do, not just what they say."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "cups_13",
+      "arcana": "minor",
+      "suit": "cups",
+      "rank": 13,
+      "num": "QUEEN",
+      "name": {
+        "zh": "圣杯王后",
+        "en": "QUEEN OF CUPS"
+      },
+      "keys": {
+        "zh": [
+          "共情",
+          "直觉",
+          "温柔"
+        ],
+        "en": [
+          "Empathy",
+          "Intuition",
+          "Compassion"
+        ]
+      },
+      "up": {
+        "zh": "她坐在海边凝视着一只带盖的圣杯，读得懂别人没说出口的情绪。用共情和直觉去照顾人，也照顾自己。",
+        "en": "She sits by the sea gazing into a lidded cup, reading emotions no one has voiced. Care for others with empathy and intuition — and care for yourself."
+      },
+      "rev": {
+        "zh": "情绪被别人带着走，过度付出，或者把感受藏得太深。",
+        "en": "Swept up by others' feelings, over-giving, or hiding emotions too deep."
+      },
+      "whispers": [
+        {
+          "zh": "这个杯子有盖子。我不打开，我只是看着它。这就是直觉。",
+          "en": "This cup has a lid. I don't open it, I just look at it. That's intuition."
+        },
+        {
+          "zh": "浪花碰到我的脚。凉的。我没有动。",
+          "en": "A wave touched my feet. Cold. I didn't move."
+        }
+      ],
+      "scene": {
+        "zh": "柔和的银色阴天下，奶蛙戴着珍珠小冠、披着海蓝斗篷，坐在刻着贝壳与小海兽的石座上，双手捧着一只精致的带盖圣杯静静凝视，浪花拍着脚边的鹅卵石。",
+        "en": "Under soft silver overcast light Naiwa, in a pearl crown and sea-blue cape, sits on a stone throne carved with shells and sea creatures, gazing into an ornate lidded cup while waves wash the pebbles at its feet."
+      },
+      "origin": {
+        "zh": "传统画面中，王后坐在海边贝壳装饰的王座上，凝视一只饰有天使的带盖圣杯——那是全套牌里唯一有盖的杯子。她是情感与直觉的掌握者，深情、包容又神秘。",
+        "en": "Traditionally the Queen sits on a shell-carved throne at the shore, gazing into an ornate lidded cup decorated with angels — the only closed cup in the deck. She masters feeling and intuition: loving, accepting and mysterious."
+      },
+      "astro": {
+        "zh": "水中之水（宫廷牌元素，现代常用对应）",
+        "en": "Water of Water (court element, common modern attribution)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "温柔体贴、懂得倾听的伴侣，关系里情感交流很深。",
+            "en": "A caring, listening partner; deep emotional exchange."
+          },
+          "work": {
+            "zh": "适合照护、咨询、艺术类工作，凭直觉判断会很准。",
+            "en": "Good for caregiving, counselling or art; your intuition is sharp."
+          },
+          "advice": {
+            "zh": "今天先听听自己的感受。",
+            "en": "Listen to your own feelings first today."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "情绪依赖，或总在照顾别人而忽略自己。",
+            "en": "Emotional dependence, or always caring for others but not yourself."
+          },
+          "work": {
+            "zh": "被他人情绪消耗，判断失去客观。",
+            "en": "Drained by others' moods, losing objectivity."
+          },
+          "advice": {
+            "zh": "设一点边界，你的杯子也需要盖子。",
+            "en": "Set some boundaries — your cup needs a lid too."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "cups_14",
+      "arcana": "minor",
+      "suit": "cups",
+      "rank": 14,
+      "num": "KING",
+      "name": {
+        "zh": "圣杯国王",
+        "en": "KING OF CUPS"
+      },
+      "keys": {
+        "zh": [
+          "情绪成熟",
+          "平静",
+          "包容"
+        ],
+        "en": [
+          "Emotional maturity",
+          "Calm",
+          "Diplomacy"
+        ]
+      },
+      "up": {
+        "zh": "王座漂在汹涌的海上，他却平静地坐着。情绪成熟的人能感受一切，又不被淹没。",
+        "en": "The throne floats on a rough sea, yet he sits calmly. Emotional maturity means feeling everything without being drowned."
+      },
+      "rev": {
+        "zh": "压抑情绪、冷漠疏离，或者表面平静内心翻涌。",
+        "en": "Repressed feelings, coldness, or calm on the surface with turmoil beneath."
+      },
+      "whispers": [
+        {
+          "zh": "我的王座漂在海上。船晃，我不晃。",
+          "en": "My throne floats on the sea. The ship rocks; I don't."
+        },
+        {
+          "zh": "旁边跳起一条鱼。它在问我还好吗。我说还好。",
+          "en": "A fish leapt beside me. It asked if I was okay. I said I was."
+        }
+      ],
+      "scene": {
+        "zh": "暴风雨中透出几缕阳光，奶蛙戴着小金冠、穿深蓝长袍，平静地坐在漂浮于翻滚海面的石座上，一手圣杯一手短杖，一侧银鱼跃出水面，另一侧帆船在浪里起伏。",
+        "en": "Under stormy skies with breaks of sun, Naiwa in a small crown and deep blue robe sits calmly on a stone throne floating on rolling waves, holding a cup and a short sceptre; a silver fish leaps on one side, a ship rides the swell on the other."
+      },
+      "origin": {
+        "zh": "韦特牌中，国王的王座漂浮在波涛汹涌的海面上，他一手持杯一手持杖，身旁跃出一条鱼，远处有船。他代表在情感风浪中保持平衡的成熟与慈悲。",
+        "en": "In the Rider–Waite card the King's throne floats on a turbulent sea; he holds a cup and sceptre, a fish leaps beside him and a ship sails beyond. He is maturity and compassion that stay balanced amid emotional storms."
+      },
+      "astro": {
+        "zh": "水中之火（宫廷牌元素，现代常用对应）",
+        "en": "Fire of Water (court element, common modern attribution)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "成熟稳重、情绪稳定的伴侣，能包容彼此的波动。",
+            "en": "A mature, steady partner who can hold both your ups and downs."
+          },
+          "work": {
+            "zh": "适合调解、管理、心理或医疗相关的角色。",
+            "en": "Good for mediating, managing, or roles in therapy or care."
+          },
+          "advice": {
+            "zh": "遇事先深呼吸，再开口。",
+            "en": "Take a deep breath before you speak."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "情绪冷处理，让对方感觉被拒之门外。",
+            "en": "Cold-shouldering that shuts the other out."
+          },
+          "work": {
+            "zh": "压力下情绪失控，或用控制代替沟通。",
+            "en": "Losing your temper under pressure, or controlling instead of talking."
+          },
+          "advice": {
+            "zh": "平静不是压住，而是允许它流过。",
+            "en": "Calm isn't holding it down — it's letting it pass through."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "swords_01",
+      "arcana": "minor",
+      "suit": "swords",
+      "rank": 1,
+      "num": "ACE",
+      "name": {
+        "zh": "宝剑王牌",
+        "en": "ACE OF SWORDS"
+      },
+      "keys": {
+        "zh": [
+          "清晰",
+          "真相",
+          "突破"
+        ],
+        "en": [
+          "Clarity",
+          "Truth",
+          "Breakthrough"
+        ]
+      },
+      "up": {
+        "zh": "一把剑劈开云层，思路突然清晰。真相、决断和新的想法像一道光，帮你斩断混乱。",
+        "en": "A sword cuts through the clouds and your mind clears. Truth, decisiveness and a new idea slice through confusion like light."
+      },
+      "rev": {
+        "zh": "想法混乱、判断失准，或者用尖锐的言语伤了人。",
+        "en": "Muddled thinking, poor judgement, or sharp words that wound."
+      },
+      "whispers": [
+        {
+          "zh": "剑尖上挂着桂冠。它掉下来的时候，我会接住。",
+          "en": "There's a laurel on the sword's tip. When it falls, I'll catch it."
+        },
+        {
+          "zh": "风很大。羽毛都飞走了，我的想法也清楚了。",
+          "en": "The wind is strong. The feathers blew away, and my thoughts cleared."
+        }
+      ],
+      "scene": {
+        "zh": "冷灰色的天光与疾风中，一只光做的手从明亮的云里伸出，握着一把剑尖挂着金色桂冠的银剑；奶蛙站在嶙峋的山岩上仰头看着，白羽在风里飞。",
+        "en": "In cold grey light and racing wind a hand of light from a bright cloud holds a silver sword crowned with a golden laurel; Naiwa looks up from jagged crags as white feathers blow past."
+      },
+      "origin": {
+        "zh": "韦特牌中，一只手从云中握着直立的剑，剑尖戴着王冠，王冠上垂下橄榄枝与棕榈叶，下方是荒凉的山峰。它是风元素之根：理性、真相与决断的力量。",
+        "en": "In the Rider–Waite card a hand from a cloud grips an upright sword crowned with a diadem hung with olive and palm, above barren peaks. It is the root of Air: intellect, truth and decisive force."
+      },
+      "astro": {
+        "zh": "风元素之根",
+        "en": "Root of Air"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "把话说清楚，关系反而会更明朗。",
+            "en": "Saying it plainly will clear the air between you."
+          },
+          "work": {
+            "zh": "新思路、关键决定、谈判中占上风。",
+            "en": "A new idea, a key decision, the upper hand in negotiation."
+          },
+          "advice": {
+            "zh": "先写下事实，再写下感受，分开看。",
+            "en": "Write down the facts, then the feelings — look at them separately."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "言语伤人，或者因为误会而争执。",
+            "en": "Hurtful words, or arguments born of misunderstanding."
+          },
+          "work": {
+            "zh": "判断错误、信息混乱，迟迟做不了决定。",
+            "en": "Wrong calls, confused information, indecision."
+          },
+          "advice": {
+            "zh": "话出口前，先想想它会落在哪里。",
+            "en": "Before speaking, think where the words will land."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "swords_02",
+      "arcana": "minor",
+      "suit": "swords",
+      "rank": 2,
+      "num": "II",
+      "name": {
+        "zh": "宝剑二",
+        "en": "TWO OF SWORDS"
+      },
+      "keys": {
+        "zh": [
+          "僵持",
+          "回避",
+          "两难"
+        ],
+        "en": [
+          "Stalemate",
+          "Avoidance",
+          "Dilemma"
+        ]
+      },
+      "up": {
+        "zh": "你闭着眼睛、双剑交叉护在胸前，试图不去面对选择。平静只是暂时的，迟早需要睁眼。",
+        "en": "Eyes closed, two swords crossed over your heart, you try not to face the choice. The calm is temporary; sooner or later you must look."
+      },
+      "rev": {
+        "zh": "终于睁开眼面对真相，或者被信息淹没、更加混乱。",
+        "en": "Finally opening your eyes to the truth — or overwhelmed by information and more confused."
+      },
+      "whispers": [
+        {
+          "zh": "我闭着眼睛。不是在睡觉，是在不做决定。",
+          "en": "My eyes are closed. Not sleeping — just not deciding."
+        },
+        {
+          "zh": "两把剑交叉在胸前。很重，但很安全。",
+          "en": "Two swords crossed over my chest. Heavy, but safe."
+        }
+      ],
+      "scene": {
+        "zh": "平静的蓝色月夜，奶蛙坐在海边石凳上，闭着眼睛，双手交叉握着两把长剑护在胸前，身后平静的海面上立着几块礁石。",
+        "en": "On a calm blue moonlit night Naiwa sits on a stone bench by the sea, eyes closed, two long swords crossed over its chest, rocks rising from the still water behind."
+      },
+      "origin": {
+        "zh": "传统画面中，一位蒙眼女子坐在海边，双手交叉持剑于胸前，背后是礁石与新月。它代表僵持与回避：用不看来保持平衡，却也因此无法前进。",
+        "en": "Traditionally a blindfolded woman sits by the sea with two swords crossed over her chest, rocks and a crescent moon behind. It is stalemate and avoidance: balance kept by not looking — and so no movement."
+      },
+      "astro": {
+        "zh": "天秤座第一旬 · 月亮（0–10°）",
+        "en": "the Moon in Libra · 1st decan (0–10°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "在两个人或两个选择之间犹豫，或冷战僵持。",
+            "en": "Torn between two people or choices, or a cold standoff."
+          },
+          "work": {
+            "zh": "决策卡住，信息不够，不敢拍板。",
+            "en": "A stuck decision, not enough information, afraid to commit."
+          },
+          "advice": {
+            "zh": "把两个选项都写下来，睁眼看一遍。",
+            "en": "Write both options down and look at them with open eyes."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "真相浮出，不得不面对。",
+            "en": "The truth surfaces and must be faced."
+          },
+          "work": {
+            "zh": "被太多意见拉扯，越想越乱。",
+            "en": "Pulled by too many opinions, more confused the more you think."
+          },
+          "advice": {
+            "zh": "选一个，然后让自己承担它。",
+            "en": "Choose one, and let yourself own it."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "swords_03",
+      "arcana": "minor",
+      "suit": "swords",
+      "rank": 3,
+      "num": "III",
+      "name": {
+        "zh": "宝剑三",
+        "en": "THREE OF SWORDS"
+      },
+      "keys": {
+        "zh": [
+          "心碎",
+          "悲伤",
+          "释放"
+        ],
+        "en": [
+          "Heartbreak",
+          "Sorrow",
+          "Release"
+        ]
+      },
+      "up": {
+        "zh": "三把剑穿过一颗心，大雨落下。心碎是真实的痛，但哭出来也是疗愈的开始。",
+        "en": "Three swords pierce a heart as rain falls. Heartbreak is real pain — but letting it out is where healing begins."
+      },
+      "rev": {
+        "zh": "伤口在慢慢愈合，开始原谅和放下；也可能是一直压着不肯哭。",
+        "en": "The wound is slowly healing, forgiveness beginning — or tears you still refuse to shed."
+      },
+      "whispers": [
+        {
+          "zh": "那颗心是石头做的。所以我没有哭。我只是打了伞。",
+          "en": "That heart is made of stone, so I didn't cry. I just opened my umbrella."
+        },
+        {
+          "zh": "雨会停的。伞也会收起来的。",
+          "en": "The rain will stop. The umbrella will close too."
+        }
+      ],
+      "scene": {
+        "zh": "冷灰色的雨天，一颗石雕般的深红色心悬在乌云前，被三把银剑干净地穿过；奶蛙撑着一把小黑伞站在雨里，平静地抬头看着。",
+        "en": "On a cold grey rainy day a carved crimson stone heart hangs before dark clouds, cleanly pierced by three silver swords; Naiwa stands in the rain under a small black umbrella, looking up calmly."
+      },
+      "origin": {
+        "zh": "韦特牌中，一颗红心被三把剑刺穿，背景是灰色的暴雨云。它是塔罗中最直白的悲伤：心碎、背叛、失去，也代表痛过之后的清醒。",
+        "en": "In the Rider–Waite card a red heart pierced by three swords hangs against grey storm clouds. It is tarot's plainest sorrow — heartbreak, betrayal, loss — and the clarity that follows pain."
+      },
+      "astro": {
+        "zh": "天秤座第二旬 · 土星（10–20°）",
+        "en": "Saturn in Libra · 2nd decan (10–20°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "失恋、背叛，或一句话深深刺痛了你。",
+            "en": "A breakup, betrayal, or words that cut deep."
+          },
+          "work": {
+            "zh": "被否定、被批评，或合作中出现伤人的冲突。",
+            "en": "Rejection, criticism, or a hurtful clash at work."
+          },
+          "advice": {
+            "zh": "允许自己难过，给眼泪一个出口。",
+            "en": "Let yourself be sad; give the tears a way out."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "慢慢走出伤痛，学会原谅。",
+            "en": "Slowly moving past the hurt, learning to forgive."
+          },
+          "work": {
+            "zh": "从打击中恢复，重新振作。",
+            "en": "Recovering from a blow, getting back up."
+          },
+          "advice": {
+            "zh": "伤疤可以留着，痛可以放下。",
+            "en": "Keep the scar; let go of the pain."
+          }
+        }
+      },
+      "dark": true
+    },
+    {
+      "id": "swords_04",
+      "arcana": "minor",
+      "suit": "swords",
+      "rank": 4,
+      "num": "IV",
+      "name": {
+        "zh": "宝剑四",
+        "en": "FOUR OF SWORDS"
+      },
+      "keys": {
+        "zh": [
+          "休息",
+          "恢复",
+          "静养"
+        ],
+        "en": [
+          "Rest",
+          "Recovery",
+          "Retreat"
+        ]
+      },
+      "up": {
+        "zh": "奶蛙安静地躺在石凳上休息，剑挂在墙上。战斗之后需要停下来，好好恢复。",
+        "en": "Naiwa lies quietly resting on a stone bench, swords hung on the wall. After the fight comes a needed pause to recover."
+      },
+      "rev": {
+        "zh": "该休息却停不下来，或者休息够了、准备重新出发。",
+        "en": "Unable to stop when you need rest — or rested enough and ready to return."
+      },
+      "whispers": [
+        {
+          "zh": "我在休息。剑也在休息。",
+          "en": "I'm resting. The swords are resting too."
+        },
+        {
+          "zh": "窗外的光照在我肚子上。暖暖的，我不想起来。",
+          "en": "Light from the window falls on my belly. It's warm. I don't want to get up."
+        }
+      ],
+      "scene": {
+        "zh": "清晨淡淡的天光从花窗照进安静的拱顶大厅，奶蛙仰躺在雕花石凳上，短手放在肚子上闭眼休息，墙上挂着三把剑，石凳下还横着一把。",
+        "en": "Pale morning light falls through a leaded window into a quiet vaulted hall where Naiwa lies on a carved stone bench, hands on its belly, eyes closed; three swords hang on the wall and one lies beneath the bench."
+      },
+      "origin": {
+        "zh": "传统画面中，一位骑士的石像双手合十躺在墓上，墙上挂着三把剑，身下还有一把，旁边是彩绘玻璃窗。它不是死亡，而是休战、静养与沉思。",
+        "en": "Traditionally a knight's effigy lies on a tomb with hands joined in prayer, three swords above and one beneath, beside a stained-glass window. It is not death but truce, recuperation and contemplation."
+      },
+      "astro": {
+        "zh": "天秤座第三旬 · 木星（20–30°）",
+        "en": "Jupiter in Libra · 3rd decan (20–30°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "关系需要冷静期，给彼此一点空间。",
+            "en": "The relationship needs a cooling-off period and some space."
+          },
+          "work": {
+            "zh": "休假、调整节奏，或暂停一个项目。",
+            "en": "Time off, a slower pace, or pausing a project."
+          },
+          "advice": {
+            "zh": "今天允许自己什么都不做一小时。",
+            "en": "Allow yourself one hour of doing nothing today."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "冷静期太长，变成了冷漠。",
+            "en": "The break goes on too long and turns cold."
+          },
+          "work": {
+            "zh": "身心透支却还在硬撑，或休整结束该重新出发。",
+            "en": "Burned out but still pushing — or rested and ready to go."
+          },
+          "advice": {
+            "zh": "休息不是浪费时间。",
+            "en": "Rest isn't wasted time."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "swords_05",
+      "arcana": "minor",
+      "suit": "swords",
+      "rank": 5,
+      "num": "V",
+      "name": {
+        "zh": "宝剑五",
+        "en": "FIVE OF SWORDS"
+      },
+      "keys": {
+        "zh": [
+          "争胜",
+          "代价",
+          "不光彩的胜利"
+        ],
+        "en": [
+          "Conflict",
+          "Cost of winning",
+          "Hollow victory"
+        ]
+      },
+      "up": {
+        "zh": "你赢了，收起了别人的剑，但对方垂头离开。这样的胜利值得吗？有时候赢了争吵，却输了关系。",
+        "en": "You won and gathered the swords, but the others walk off dejected. Was it worth it? Sometimes you win the argument and lose the relationship."
+      },
+      "rev": {
+        "zh": "争执平息，愿意和解；或者终于承认自己也有错。",
+        "en": "The conflict settles and you're ready to reconcile — or you admit you were wrong too."
+      },
+      "whispers": [
+        {
+          "zh": "我拿了三把剑。他们走了。海风很冷。",
+          "en": "I took three swords. They left. The sea wind is cold."
+        },
+        {
+          "zh": "我回头看了看他们。我也不知道我赢了什么。",
+          "en": "I looked back at them. I'm not sure what I won."
+        }
+      ],
+      "scene": {
+        "zh": "冷灰色的午后，奶蛙在大风的海滩上抱起三把银剑，回头看着两个低头走向海边的小小身影，沙滩上还躺着两把剑。",
+        "en": "On a cold grey afternoon Naiwa gathers three silver swords on a windswept beach, glancing back at two small figures walking away toward the sea, two more swords on the sand."
+      },
+      "origin": {
+        "zh": "韦特牌中，一个人得意地拾起剑，身后两人沮丧地走向海边，天空云层破碎。它代表不择手段的胜利、冲突的代价与人际上的损伤。",
+        "en": "In the Rider–Waite card a smirking man collects swords while two others trudge dejectedly toward the sea under a torn sky. It stands for winning at any cost and the damage conflict leaves behind."
+      },
+      "astro": {
+        "zh": "水瓶座第一旬 · 金星（0–10°）",
+        "en": "Venus in Aquarius · 1st decan (0–10°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "争吵中谁都想赢，结果两败俱伤。",
+            "en": "Both want to win the fight; both end up hurt."
+          },
+          "work": {
+            "zh": "职场斗争、勾心斗角，赢了也不舒服。",
+            "en": "Office politics and scheming — even winning feels bad."
+          },
+          "advice": {
+            "zh": "想想你更想要「赢」还是「好」。",
+            "en": "Ask whether you'd rather be right or be well."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "放下面子，愿意主动和好。",
+            "en": "Swallowing pride and reaching out to make up."
+          },
+          "work": {
+            "zh": "冲突告一段落，开始修复关系。",
+            "en": "The conflict ends; repair begins."
+          },
+          "advice": {
+            "zh": "道歉不是认输。",
+            "en": "Apologizing isn't losing."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "swords_06",
+      "arcana": "minor",
+      "suit": "swords",
+      "rank": 6,
+      "num": "VI",
+      "name": {
+        "zh": "宝剑六",
+        "en": "SIX OF SWORDS"
+      },
+      "keys": {
+        "zh": [
+          "过渡",
+          "离开困境",
+          "前往平静"
+        ],
+        "en": [
+          "Transition",
+          "Moving on",
+          "Toward calmer waters"
+        ]
+      },
+      "up": {
+        "zh": "小船载着六把剑，从湍急的水面驶向平静的彼岸。离开困境的路虽然安静，却在一点点变好。",
+        "en": "A small boat carries six swords from rough water toward a calmer shore. The way out of trouble is quiet, but it's getting better bit by bit."
+      },
+      "rev": {
+        "zh": "想离开却走不了，或者带着旧包袱上路。",
+        "en": "Wanting to leave but stuck, or carrying old baggage into the new place."
+      },
+      "whispers": [
+        {
+          "zh": "我在撑船。船上的那位一直没说话。我也没说。",
+          "en": "I'm poling the boat. The one aboard hasn't said a word. Neither have I."
+        },
+        {
+          "zh": "这边的水很急，前面的水很平。我们慢慢过去。",
+          "en": "The water here is rough; ahead it's calm. We'll get there slowly."
+        }
+      ],
+      "scene": {
+        "zh": "清冷的黎明，奶蛙站在小木船的船尾撑篙，船头坐着一个安静的披斗篷小身影，船上立着六把银剑；一边是湍急的水，前方是平静的水面和远处有塔楼的海岸。",
+        "en": "In a cool dawn Naiwa poles a small wooden boat from the stern, a quiet cloaked figure at the bow, six silver swords standing in the boat; rough water to one side, calm water and a towered shore ahead."
+      },
+      "origin": {
+        "zh": "传统画面中，船夫撑着载有母子的小船驶向对岸，船上插着六把剑；船一侧水流湍急，另一侧平静。它是带着伤痛的过渡与迁移：离开风暴，驶向更安稳的地方。",
+        "en": "Traditionally a ferryman poles a boat carrying a woman and child toward a far shore, six swords planted in the boat, rough water on one side and calm on the other. It is transition carrying old wounds: leaving the storm for steadier ground."
+      },
+      "astro": {
+        "zh": "水瓶座第二旬 · 水星（10–20°）",
+        "en": "Mercury in Aquarius · 2nd decan (10–20°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "从一段难熬的关系里走出来，或两个人一起渡过难关。",
+            "en": "Leaving a painful relationship, or getting through hard times together."
+          },
+          "work": {
+            "zh": "换环境、换岗位，或项目从混乱进入平稳期。",
+            "en": "A change of place or role, or a project moving from chaos to calm."
+          },
+          "advice": {
+            "zh": "不必一下子到岸，先离开湍流。",
+            "en": "You don't have to reach shore at once — just leave the rapids."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "旧问题没解决，换了地方又重演。",
+            "en": "Unresolved issues repeat in the new place."
+          },
+          "work": {
+            "zh": "拖着不走，或走得很不甘心。",
+            "en": "Delaying the move, or leaving resentfully."
+          },
+          "advice": {
+            "zh": "放下几把剑，船会轻一点。",
+            "en": "Set down a few swords; the boat will be lighter."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "swords_07",
+      "arcana": "minor",
+      "suit": "swords",
+      "rank": 7,
+      "num": "VII",
+      "name": {
+        "zh": "宝剑七",
+        "en": "SEVEN OF SWORDS"
+      },
+      "keys": {
+        "zh": [
+          "策略",
+          "隐瞒",
+          "独自行动"
+        ],
+        "en": [
+          "Strategy",
+          "Deception",
+          "Going it alone"
+        ]
+      },
+      "up": {
+        "zh": "奶蛙抱着五把剑悄悄溜走，还回头看了一眼。也许是聪明的策略，也许是不太光彩的小动作——要看你是谁。",
+        "en": "Naiwa tiptoes off with five swords, glancing back. Clever strategy or a not-so-honest move — it depends on who you are."
+      },
+      "rev": {
+        "zh": "秘密被揭穿、良心不安，或者决定坦白和归还。",
+        "en": "A secret exposed, a guilty conscience, or deciding to confess and give it back."
+      },
+      "whispers": [
+        {
+          "zh": "我拿了五把剑。剩下两把太重了。不是因为我有良心。",
+          "en": "I took five swords. The other two were too heavy. Not because I have a conscience."
+        },
+        {
+          "zh": "我回头看了一眼。没有人发现。我继续踮脚。",
+          "en": "I looked back. Nobody noticed. I kept tiptoeing."
+        }
+      ],
+      "scene": {
+        "zh": "雾蒙蒙的灰色清晨，奶蛙抱着五把银剑踮着脚从一片彩色帐篷边溜走，回头瞥了一眼，身后地上还插着两把剑。",
+        "en": "On a misty grey morning Naiwa tiptoes away from a cluster of colourful tents hugging five silver swords, glancing back, two swords left planted in the ground."
+      },
+      "origin": {
+        "zh": "韦特牌中，一个人抱着五把剑踮脚离开营地，回头偷看，身后留下两把。它代表计谋、隐瞒、独自行事，也可能是机智的脱身。",
+        "en": "In the Rider–Waite card a man tiptoes away from a camp carrying five swords, looking back, two left behind. It signifies cunning, concealment, acting alone — or a clever escape."
+      },
+      "astro": {
+        "zh": "水瓶座第三旬 · 月亮（20–30°）",
+        "en": "the Moon in Aquarius · 3rd decan (20–30°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "关系里有隐瞒或不坦白的部分。",
+            "en": "Something hidden or unspoken in the relationship."
+          },
+          "work": {
+            "zh": "需要策略和巧思，但小心别越界；也要防人之心。",
+            "en": "Strategy and wit help, but don't cross lines — and watch your back."
+          },
+          "advice": {
+            "zh": "想清楚：你在保护自己，还是在逃避？",
+            "en": "Ask: are you protecting yourself, or running away?"
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "谎言被拆穿，或终于选择坦诚。",
+            "en": "A lie uncovered, or finally choosing honesty."
+          },
+          "work": {
+            "zh": "计谋失败，或良心过不去。",
+            "en": "A scheme fails, or your conscience won't rest."
+          },
+          "advice": {
+            "zh": "把拿走的东西还回去，心会轻一些。",
+            "en": "Return what you took; your heart will feel lighter."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "swords_08",
+      "arcana": "minor",
+      "suit": "swords",
+      "rank": 8,
+      "num": "VIII",
+      "name": {
+        "zh": "宝剑八",
+        "en": "EIGHT OF SWORDS"
+      },
+      "keys": {
+        "zh": [
+          "受困",
+          "自我限制",
+          "无力感"
+        ],
+        "en": [
+          "Restriction",
+          "Self-limitation",
+          "Feeling trapped"
+        ]
+      },
+      "up": {
+        "zh": "奶蛙被丝带松松地缠着，周围插着八把剑。看起来被困住了，其实丝带一挣就开——困住你的更多是想法。",
+        "en": "Naiwa is loosely wrapped in ribbon, ringed by eight swords. It looks trapped, yet the ribbon would slip with one shrug — what holds you is mostly thought."
+      },
+      "rev": {
+        "zh": "意识到自己其实可以离开，开始一点点挣脱束缚。",
+        "en": "Realizing you can leave after all, and starting to slip free."
+      },
+      "whispers": [
+        {
+          "zh": "我被丝带绑着。其实很松。我只是还没想好往哪走。",
+          "en": "I'm tied up with ribbon. It's actually loose. I just haven't decided where to go."
+        },
+        {
+          "zh": "地上湿湿的。剑一直站着。我也一直站着。",
+          "en": "The ground is wet. The swords keep standing. So do I."
+        }
+      ],
+      "scene": {
+        "zh": "雾气笼罩的阴天湿地上，奶蛙身上松松地缠着白丝带，周围一圈插着八把银剑，远处山上有座城堡。",
+        "en": "On a misty overcast marsh Naiwa stands loosely wrapped in white ribbon, ringed by eight silver swords planted in the ground, a castle on a distant hill."
+      },
+      "origin": {
+        "zh": "传统画面中，一位被蒙眼、松绑的女子站在泥地里，周围立着八把剑，远处是城堡。绳索并不牢固，剑也没有完全围住她——它讲的是自我设限与无力感。",
+        "en": "Traditionally a blindfolded, loosely bound woman stands in mud surrounded by eight swords, a castle beyond. The bonds are loose and the swords don't fully enclose her — it is about self-imposed limits and helplessness."
+      },
+      "astro": {
+        "zh": "双子座第一旬 · 木星（0–10°）",
+        "en": "Jupiter in Gemini · 1st decan (0–10°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "觉得被困在关系里，却不敢改变。",
+            "en": "Feeling stuck in the relationship but afraid to change."
+          },
+          "work": {
+            "zh": "工作上感到受限、无路可走，其实还有选择。",
+            "en": "Feeling boxed in at work, though there are options."
+          },
+          "advice": {
+            "zh": "列出三个你以为「不可能」的选项，再看一遍。",
+            "en": "List three options you think are 'impossible' and look again."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "开始为自己争取空间。",
+            "en": "Starting to claim space for yourself."
+          },
+          "work": {
+            "zh": "打破思维定式，找到出路。",
+            "en": "Breaking old thinking and finding a way out."
+          },
+          "advice": {
+            "zh": "动一动手，丝带就会松开。",
+            "en": "Move your hands — the ribbon will loosen."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "swords_09",
+      "arcana": "minor",
+      "suit": "swords",
+      "rank": 9,
+      "num": "IX",
+      "name": {
+        "zh": "宝剑九",
+        "en": "NINE OF SWORDS"
+      },
+      "keys": {
+        "zh": [
+          "焦虑",
+          "失眠",
+          "过度担忧"
+        ],
+        "en": [
+          "Anxiety",
+          "Sleeplessness",
+          "Worry"
+        ]
+      },
+      "up": {
+        "zh": "深夜在床上坐起，双手捂脸，墙上挂着九把剑。很多恐惧在夜里会被放大，天亮后可能没那么可怕。",
+        "en": "Sitting up in bed at night, hands over your face, nine swords on the wall. Fears grow large at night; by daylight they may shrink."
+      },
+      "rev": {
+        "zh": "焦虑开始减轻，或者终于愿意说出心里的担忧、寻求帮助。",
+        "en": "Anxiety easing, or finally voicing your worries and asking for help."
+      },
+      "whispers": [
+        {
+          "zh": "我睡不着。墙上的剑一直在。我数到第九把就开始从头数。",
+          "en": "I can't sleep. The swords on the wall are still there. When I reach nine, I start over."
+        },
+        {
+          "zh": "蜡烛还亮着。只要它亮着，我就不是一个人。",
+          "en": "The candle is still lit. As long as it is, I'm not alone."
+        }
+      ],
+      "scene": {
+        "zh": "漆黑的夜里，奶蛙在雕花木床上坐起，双手捂着脸颊，床头一支小蜡烛亮着，身后深色石墙上整齐横挂着九把银剑。",
+        "en": "In the dark of night Naiwa sits up in a carved wooden bed, hands pressed to its cheeks, a small candle lit on the bedside, nine silver swords hung in rows on the dark stone wall behind."
+      },
+      "origin": {
+        "zh": "韦特牌中，一个人深夜从床上坐起掩面哭泣，墙上横挂九把剑，被子上绣着玫瑰与星座符号。它是焦虑、噩梦与自责，很多痛苦来自脑中而非现实。",
+        "en": "In the Rider–Waite card a figure sits up in bed weeping into their hands, nine swords on the wall, a quilt patterned with roses and astrological signs. It is anxiety, nightmares and guilt — much of the pain lives in the mind."
+      },
+      "astro": {
+        "zh": "双子座第二旬 · 火星（10–20°）",
+        "en": "Mars in Gemini · 2nd decan (10–20°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "对关系过度担心、胡思乱想。",
+            "en": "Overthinking and worrying about the relationship."
+          },
+          "work": {
+            "zh": "工作压力导致失眠，担心犯错或被否定。",
+            "en": "Work stress causing insomnia; fear of mistakes or rejection."
+          },
+          "advice": {
+            "zh": "把担心写下来，看看哪些真的会发生。",
+            "en": "Write the worries down and see which could really happen."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "最坏的时刻过去了，焦虑慢慢平复。",
+            "en": "The worst has passed; anxiety slowly settles."
+          },
+          "work": {
+            "zh": "开始求助，或者找到减压的方法。",
+            "en": "Seeking help, or finding ways to ease stress."
+          },
+          "advice": {
+            "zh": "天亮了，先拉开窗帘。",
+            "en": "It's morning — open the curtains first."
+          }
+        }
+      },
+      "dark": true
+    },
+    {
+      "id": "swords_10",
+      "arcana": "minor",
+      "suit": "swords",
+      "rank": 10,
+      "num": "X",
+      "name": {
+        "zh": "宝剑十",
+        "en": "TEN OF SWORDS"
+      },
+      "keys": {
+        "zh": [
+          "终结",
+          "触底",
+          "黎明前"
+        ],
+        "en": [
+          "Rock bottom",
+          "Ending",
+          "Before dawn"
+        ]
+      },
+      "up": {
+        "zh": "奶蛙趴在岸边，十把剑插在身旁，天边已经透出金色的光。最糟的已经发生了——接下来只会往上走。",
+        "en": "Naiwa lies face-down on the shore with ten swords beside it, golden light already on the horizon. The worst has happened — from here, the only way is up."
+      },
+      "rev": {
+        "zh": "从低谷慢慢爬起来，或者拒绝承认一件事已经结束。",
+        "en": "Slowly climbing out of the low point, or refusing to accept something has ended."
+      },
+      "whispers": [
+        {
+          "zh": "我趴着。不是倒下了，是在休息。剑都没碰到我。",
+          "en": "I'm lying face-down. Not fallen — resting. None of the swords touched me."
+        },
+        {
+          "zh": "天快亮了。我再趴一会儿就起来。",
+          "en": "Dawn is coming. I'll lie here a bit longer, then get up."
+        }
+      ],
+      "scene": {
+        "zh": "黑色夜空的尽头透出第一缕金色晨光，奶蛙毫发无伤地趴在深色鹅卵石岸边休息，眼睛睁着，十把银剑在它身旁插成一排，平静的暗色海水映着微光。",
+        "en": "At the edge of a black night sky the first golden dawn breaks; Naiwa lies unharmed and resting face-down on a dark pebble shore, eyes open, ten silver swords planted in a row beside it, calm dark water catching the light."
+      },
+      "origin": {
+        "zh": "传统画面中，一个人趴在地上，背上插着十把剑，天空漆黑，但地平线上已经泛起金光。它是彻底的终结与触底，也是「最黑暗的时刻过去后，黎明就会到来」。",
+        "en": "Traditionally a figure lies face-down with ten swords in his back under a black sky, while the horizon glows gold. It is total ending and rock bottom — and the promise that dawn follows the darkest hour."
+      },
+      "astro": {
+        "zh": "双子座第三旬 · 太阳（20–30°）",
+        "en": "the Sun in Gemini · 3rd decan (20–30°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "一段关系彻底结束，痛但也终于清楚了。",
+            "en": "A relationship fully ends — painful, but finally clear."
+          },
+          "work": {
+            "zh": "项目失败或职业低谷，触底之后才能反弹。",
+            "en": "A failed project or career low — bounce back starts from the bottom."
+          },
+          "advice": {
+            "zh": "承认它结束了，然后给自己一个新的早晨。",
+            "en": "Admit it's over, then give yourself a new morning."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "正在恢复，伤口慢慢长好。",
+            "en": "Recovering; the wounds are slowly healing."
+          },
+          "work": {
+            "zh": "拒绝放手，让痛苦拖得更久。",
+            "en": "Refusing to let go, prolonging the pain."
+          },
+          "advice": {
+            "zh": "站起来不用很快，但要开始。",
+            "en": "You needn't stand up fast — just begin."
+          }
+        }
+      },
+      "dark": true
+    },
+    {
+      "id": "swords_11",
+      "arcana": "minor",
+      "suit": "swords",
+      "rank": 11,
+      "num": "PAGE",
+      "name": {
+        "zh": "宝剑侍从",
+        "en": "PAGE OF SWORDS"
+      },
+      "keys": {
+        "zh": [
+          "好奇",
+          "警觉",
+          "求知"
+        ],
+        "en": [
+          "Curiosity",
+          "Vigilance",
+          "Eagerness to learn"
+        ]
+      },
+      "up": {
+        "zh": "站在风大的山丘上，握剑警觉地看着天空。思维敏锐、求知欲强，适合学习、调查和提问。",
+        "en": "On a windy hill, sword in hand, watching the sky alertly. A sharp, curious mind — good for learning, investigating and asking questions."
+      },
+      "rev": {
+        "zh": "说话尖刻、爱八卦，或者只有想法没有行动。",
+        "en": "Sharp-tongued, gossipy, or all ideas and no action."
+      },
+      "whispers": [
+        {
+          "zh": "我在看鸟。它们飞过去了。我记住了它们的方向。",
+          "en": "I'm watching the birds. They flew past. I memorized their direction."
+        },
+        {
+          "zh": "风把披风吹起来了。我握紧剑，假装很警觉。其实是很警觉。",
+          "en": "The wind lifted my cape. I gripped my sword and pretended to be alert. I actually am."
+        }
+      ],
+      "scene": {
+        "zh": "清爽的白天，风把云吹得飞快，奶蛙披着石板蓝的短斗篷站在草坡上，双手握着直立的银剑，警觉地看着一群飞过的鸟。",
+        "en": "In crisp daylight with clouds racing, Naiwa in a short slate-blue cape stands on a grassy hilltop holding a silver sword upright, alertly watching a flock of birds fly past."
+      },
+      "origin": {
+        "zh": "韦特牌中，年轻人站在风吹的高地上，双手持剑，回头警惕地望着，天上有鸟群。宝剑侍从代表好奇、敏锐与求知，也有爱打探消息的一面。",
+        "en": "In the Rider–Waite card a youth stands on windy high ground holding a sword, glancing warily over his shoulder as birds fly overhead. The Page of Swords is curious, sharp and eager to learn — and likes to gather gossip."
+      },
+      "astro": {
+        "zh": "风中之土（宫廷牌元素，现代常用对应）",
+        "en": "Earth of Air (court element, common modern attribution)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "对对方充满好奇，聊天聊得很投机。",
+            "en": "Curious about each other; conversations flow."
+          },
+          "work": {
+            "zh": "适合学习、写作、调研，或接到新的信息。",
+            "en": "Good for study, writing, research, or receiving new information."
+          },
+          "advice": {
+            "zh": "多问一个「为什么」。",
+            "en": "Ask one more 'why'."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "话太直、伤人，或者喜欢打听别人的事。",
+            "en": "Too blunt and hurtful, or nosy about others."
+          },
+          "work": {
+            "zh": "空谈多于行动，或被流言影响。",
+            "en": "More talk than action, or swayed by rumours."
+          },
+          "advice": {
+            "zh": "先查证，再开口。",
+            "en": "Check before you speak."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "swords_12",
+      "arcana": "minor",
+      "suit": "swords",
+      "rank": 12,
+      "num": "KNIGHT",
+      "name": {
+        "zh": "宝剑骑士",
+        "en": "KNIGHT OF SWORDS"
+      },
+      "keys": {
+        "zh": [
+          "果断",
+          "冲锋",
+          "直言"
+        ],
+        "en": [
+          "Decisiveness",
+          "Charging ahead",
+          "Bluntness"
+        ]
+      },
+      "up": {
+        "zh": "骑着白马全速冲锋，剑高高举起。目标清楚、行动迅速，适合直面问题、一鼓作气。",
+        "en": "Charging full speed on a white horse, sword raised high. Clear aim and swift action — tackle the problem head-on."
+      },
+      "rev": {
+        "zh": "太过急躁、不顾后果，或言辞锋利伤了人。",
+        "en": "Too hasty, heedless of consequences, or words that cut too deep."
+      },
+      "whispers": [
+        {
+          "zh": "马跑得太快了。我的肚子被风吹得往后飘。",
+          "en": "The horse is too fast. My belly is blown backwards by the wind."
+        },
+        {
+          "zh": "我在冲锋。前面是云。我不怕云。",
+          "en": "I'm charging. Ahead are clouds. I'm not afraid of clouds."
+        }
+      ],
+      "scene": {
+        "zh": "阳光从被风撕开的云层里打下来，奶蛙穿着轻银甲、披着风暴蓝短斗篷，骑着白马全速冲过荒原，高举银剑，羽毛在身边打转。",
+        "en": "Sunbeams break through wind-torn clouds as Naiwa in light silver armour and a storm-blue cape gallops a white horse across a moor, sword held high, feathers swirling."
+      },
+      "origin": {
+        "zh": "传统画面中，骑士骑着白马全速冲锋，高举长剑，云层与树木被狂风吹向一边。他是行动最快的骑士：果断、勇敢，也可能鲁莽冲动。",
+        "en": "Traditionally the knight charges at full gallop on a white horse, sword raised, clouds and trees bent by the gale. He is the fastest knight: decisive and brave — and possibly reckless."
+      },
+      "astro": {
+        "zh": "风中之风（宫廷牌元素，现代常用对应）",
+        "en": "Air of Air (court element, common modern attribution)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "直接表白或直接摊牌，进展很快。",
+            "en": "A direct confession or showdown; things move fast."
+          },
+          "work": {
+            "zh": "雷厉风行、快速解决问题的时机。",
+            "en": "Time to act fast and solve the problem."
+          },
+          "advice": {
+            "zh": "冲之前，确认一下马的方向。",
+            "en": "Before charging, check which way the horse is facing."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "说话太冲，或者不考虑对方感受。",
+            "en": "Too blunt, ignoring the other's feelings."
+          },
+          "work": {
+            "zh": "冒进、做事不顾后果。",
+            "en": "Rash moves without thinking of consequences."
+          },
+          "advice": {
+            "zh": "慢下来，听一听再决定。",
+            "en": "Slow down, listen, then decide."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "swords_13",
+      "arcana": "minor",
+      "suit": "swords",
+      "rank": 13,
+      "num": "QUEEN",
+      "name": {
+        "zh": "宝剑王后",
+        "en": "QUEEN OF SWORDS"
+      },
+      "keys": {
+        "zh": [
+          "清醒",
+          "独立",
+          "坦率"
+        ],
+        "en": [
+          "Clear-sightedness",
+          "Independence",
+          "Honesty"
+        ]
+      },
+      "up": {
+        "zh": "她坐在高处的石座上，一手握剑、一手抬起。清醒、独立、说话直接，用理性保护自己也帮助别人。",
+        "en": "She sits on a high stone throne, sword in one hand, the other raised. Clear-sighted, independent and direct — she uses reason to protect herself and help others."
+      },
+      "rev": {
+        "zh": "过于冷淡、尖刻，或者被过去的伤痛困住，变得刻薄。",
+        "en": "Too cold or cutting, or embittered by old wounds."
+      },
+      "whispers": [
+        {
+          "zh": "我举起一只手。不是打招呼，是表示我在听。",
+          "en": "I raised a hand. Not hello — it means I'm listening."
+        },
+        {
+          "zh": "王座上刻着蝴蝶。它们很轻，我的剑很重。我们很平衡。",
+          "en": "Butterflies are carved on my throne. They're light, my sword is heavy. We balance."
+        }
+      ],
+      "scene": {
+        "zh": "清澈明亮的高空白天，奶蛙戴着银色小冠、披着灰蓝斗篷，端坐在刻着蝴蝶的高大石座上，一手竖握银剑、一手平静地抬起，云在脚下飘。",
+        "en": "In crisp, bright high-altitude daylight Naiwa, in a silver crown and grey-blue cape, sits upright on a tall butterfly-carved stone throne, sword held vertical in one hand and the other raised calmly, clouds drifting below."
+      },
+      "origin": {
+        "zh": "韦特牌中，王后侧身坐在饰有蝴蝶与天使头像的王座上，一手竖剑、一手伸出，天上飞着一只鸟。她是经历过痛苦后的清醒与智慧：坦率、公正、独立。",
+        "en": "In the Rider–Waite card the Queen sits in profile on a throne carved with butterflies and a cherub, sword upright, one hand extended, a single bird above. She is clarity and wisdom earned through sorrow: frank, fair and independent."
+      },
+      "astro": {
+        "zh": "风中之水（宫廷牌元素，现代常用对应）",
+        "en": "Water of Air (court element, common modern attribution)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "需要真诚直接的沟通，不必讨好。",
+            "en": "Honest, direct communication — no need to please."
+          },
+          "work": {
+            "zh": "适合需要判断力的工作：分析、写作、法律、管理。",
+            "en": "Good for work that needs judgement: analysis, writing, law, management."
+          },
+          "advice": {
+            "zh": "说真话，但保留温度。",
+            "en": "Speak the truth, but keep it warm."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "过于挑剔或冷漠，让对方难以靠近。",
+            "en": "Too critical or cold to let them close."
+          },
+          "work": {
+            "zh": "言辞刻薄，或被情绪蒙蔽判断。",
+            "en": "Cutting words, or judgement clouded by feelings."
+          },
+          "advice": {
+            "zh": "放下一点防备，不是所有人都会伤你。",
+            "en": "Lower your guard a little — not everyone will hurt you."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "swords_14",
+      "arcana": "minor",
+      "suit": "swords",
+      "rank": 14,
+      "num": "KING",
+      "name": {
+        "zh": "宝剑国王",
+        "en": "KING OF SWORDS"
+      },
+      "keys": {
+        "zh": [
+          "理性",
+          "权威",
+          "公正"
+        ],
+        "en": [
+          "Intellect",
+          "Authority",
+          "Judgement"
+        ]
+      },
+      "up": {
+        "zh": "他正面端坐，剑竖得笔直。理性、公正、有原则，用清晰的判断做出决定。",
+        "en": "He faces forward with his sword perfectly upright. Rational, fair and principled — he decides with clear judgement."
+      },
+      "rev": {
+        "zh": "冷酷、专断，或用权力和道理压人。",
+        "en": "Cold, authoritarian, or using power and logic to dominate."
+      },
+      "whispers": [
+        {
+          "zh": "剑要竖得很直。我已经保持这个姿势一个小时了。",
+          "en": "The sword must be perfectly upright. I've held this pose for an hour."
+        },
+        {
+          "zh": "我在思考。表情和不思考的时候一样。",
+          "en": "I'm thinking. My face looks the same as when I'm not."
+        }
+      ],
+      "scene": {
+        "zh": "蓝天白云的清爽白天，奶蛙戴着银色小冠、穿深蓝长袍，正面端坐在刻着蝴蝶与新月的高大石座上，一手竖握银剑，身后是高高的柏树和被风吹散的云。",
+        "en": "On a clear day of blue sky and white cloud Naiwa, in a silver crown and deep blue robe, sits facing forward on a tall stone throne carved with butterflies and crescents, sword held upright, tall cypresses and windswept clouds behind."
+      },
+      "origin": {
+        "zh": "传统画面中，国王正面坐在饰有蝴蝶与新月的王座上，手持微微倾斜的剑，背后是高高的树和飞鸟。他是理性与法则的掌控者：公正、权威、以思想统御。",
+        "en": "Traditionally the King sits facing forward on a throne of butterflies and crescents, sword slightly tilted, tall trees and birds behind. He masters reason and law: just, authoritative, ruling by thought."
+      },
+      "astro": {
+        "zh": "风中之火（宫廷牌元素，现代常用对应）",
+        "en": "Fire of Air (court element, common modern attribution)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "理性成熟的伴侣，或需要把规则和边界谈清楚。",
+            "en": "A rational, mature partner, or a need to agree on rules and boundaries."
+          },
+          "work": {
+            "zh": "适合做决策、制定规则、处理法律与合同。",
+            "en": "Good for decisions, setting rules, legal matters and contracts."
+          },
+          "advice": {
+            "zh": "用事实说话，用原则做决定。",
+            "en": "Let facts speak and principles decide."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "太讲道理而忽视感情，或控制欲强。",
+            "en": "All logic, no feeling, or controlling."
+          },
+          "work": {
+            "zh": "独断专行，或者用规则压人。",
+            "en": "Autocratic, or using rules to dominate."
+          },
+          "advice": {
+            "zh": "道理之外，还有人心。",
+            "en": "Beyond reason, there are hearts."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "pentacles_01",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "rank": 1,
+      "num": "ACE",
+      "name": {
+        "zh": "星币王牌",
+        "en": "ACE OF PENTACLES"
+      },
+      "keys": {
+        "zh": [
+          "新机会",
+          "物质基础",
+          "落地"
+        ],
+        "en": [
+          "New opportunity",
+          "Material foundation",
+          "Manifestation"
+        ]
+      },
+      "up": {
+        "zh": "一枚金色星币从云中递来，下方是盛开的花园。一个实实在在的机会：新工作、新收入或一个可以落地的计划。",
+        "en": "A golden coin is offered from the clouds above a blooming garden. A tangible opportunity: a new job, new income, or a plan you can make real."
+      },
+      "rev": {
+        "zh": "机会错过、计划不落地，或者把钱和精力花在了不对的地方。",
+        "en": "A missed chance, plans that never land, or money and energy spent in the wrong place."
+      },
+      "whispers": [
+        {
+          "zh": "那枚金币很大。我想把它种在花园里，看会不会长出更多。",
+          "en": "That coin is huge. I want to plant it in the garden and see if more grow."
+        },
+        {
+          "zh": "花园的拱门开着。我还在门口，没有进去。",
+          "en": "The garden arch is open. I'm still at the gate."
+        }
+      ],
+      "scene": {
+        "zh": "明亮的清晨阳光穿过花园，一只金光做的手从白云里托出一枚巨大的星币；下方玫瑰拱门通往远处的青山，奶蛙站在花园小路上仰头看着。",
+        "en": "Bright morning sun fills a garden as a hand of golden light offers a great star-coin from a white cloud; below, a rose arch opens onto blue hills and Naiwa looks up from the path."
+      },
+      "origin": {
+        "zh": "韦特牌中，一只手从云中托着刻有五芒星的金币，下方是百合盛开的花园，一道树篱拱门通向远山。它是土元素之根：物质、身体、财富与把想法变成现实的能力。",
+        "en": "In the Rider–Waite card a hand from a cloud holds a pentacle above a garden of lilies, a hedge arch opening onto distant mountains. It is the root of Earth: matter, body, wealth and the power to make ideas real."
+      },
+      "astro": {
+        "zh": "土元素之根",
+        "en": "Root of Earth"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "一段踏实、可以长久的关系开始了。",
+            "en": "A grounded, lasting relationship begins."
+          },
+          "work": {
+            "zh": "新工作、加薪、投资机会，或者一个能赚钱的点子。",
+            "en": "A new job, a raise, an investment, or an idea that can earn."
+          },
+          "advice": {
+            "zh": "从一件具体可执行的小事做起。",
+            "en": "Start with one concrete, doable thing."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "想要稳定却缺乏行动，或物质条件成了阻碍。",
+            "en": "Wanting stability without acting, or money getting in the way."
+          },
+          "work": {
+            "zh": "错失机会、预算超支，计划只停留在纸上。",
+            "en": "Missed chances, overspending, plans stuck on paper."
+          },
+          "advice": {
+            "zh": "先管好手上的这一枚。",
+            "en": "Take care of the coin you already hold."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "pentacles_02",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "rank": 2,
+      "num": "II",
+      "name": {
+        "zh": "星币二",
+        "en": "TWO OF PENTACLES"
+      },
+      "keys": {
+        "zh": [
+          "平衡",
+          "灵活",
+          "多线并行"
+        ],
+        "en": [
+          "Balance",
+          "Adaptability",
+          "Juggling"
+        ]
+      },
+      "up": {
+        "zh": "一边跳舞一边抛接两枚星币，身后船只在大浪里起伏。生活很忙，但你还应付得来，保持灵活和节奏。",
+        "en": "Dancing while juggling two coins as ships ride big waves behind. Life is busy, but you're keeping up — stay flexible and keep the rhythm."
+      },
+      "rev": {
+        "zh": "事情太多手忙脚乱，或者财务和时间失去平衡。",
+        "en": "Too much at once, or money and time out of balance."
+      },
+      "whispers": [
+        {
+          "zh": "我在抛两枚金币。它们连着一根丝带，所以不会掉。我很聪明。",
+          "en": "I'm juggling two coins. They're tied with a ribbon, so they can't fall. I'm very clever."
+        },
+        {
+          "zh": "后面的船在晃。我也在晃。我们在同一个节奏里。",
+          "en": "The ships behind are rocking. So am I. We share a rhythm."
+        }
+      ],
+      "scene": {
+        "zh": "阳光和白云的正午，奶蛙在花园露台上踮脚跳着小舞步，抛接两枚由绿色丝带连成无限符号的星币，矮墙后的海面上两艘船在大浪里起伏。",
+        "en": "Under a breezy noon sun Naiwa does a little dance on a garden terrace, juggling two coins linked by a green infinity ribbon, two ships riding high waves beyond the wall."
+      },
+      "origin": {
+        "zh": "传统画面中，一个戴高帽的年轻人边跳舞边抛接两枚星币，两枚币被无限符号形的带子相连，背景是在巨浪中起伏的船。它代表在变化中保持平衡与灵活应变。",
+        "en": "Traditionally a young man in a tall hat dances while juggling two pentacles joined by an infinity-shaped band, ships tossing on great waves behind. It means keeping balance and adapting amid change."
+      },
+      "astro": {
+        "zh": "摩羯座第一旬 · 木星（0–10°）",
+        "en": "Jupiter in Capricorn · 1st decan (0–10°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "在感情和其他事务之间找平衡，或者暧昧中保持轻松。",
+            "en": "Balancing love with everything else, or keeping a flirtation light."
+          },
+          "work": {
+            "zh": "兼顾多个项目、副业，或处理收支平衡。",
+            "en": "Juggling projects, a side job, or balancing income and spending."
+          },
+          "advice": {
+            "zh": "给每件事排个先后，抛接会更稳。",
+            "en": "Put things in order — the juggling gets steadier."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "忙到忽略了对方。",
+            "en": "So busy you neglect each other."
+          },
+          "work": {
+            "zh": "精力分散、账目混乱，开始顾此失彼。",
+            "en": "Spread too thin, accounts in a mess, dropping balls."
+          },
+          "advice": {
+            "zh": "放下一个球，才能接住另一个。",
+            "en": "Drop one ball to catch another."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "pentacles_03",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "rank": 3,
+      "num": "III",
+      "name": {
+        "zh": "星币三",
+        "en": "THREE OF PENTACLES"
+      },
+      "keys": {
+        "zh": [
+          "合作",
+          "手艺",
+          "被认可"
+        ],
+        "en": [
+          "Teamwork",
+          "Craftsmanship",
+          "Recognition"
+        ]
+      },
+      "up": {
+        "zh": "石匠奶蛙在拱门上精雕细琢，另外两人拿着图纸讨论。专业能力被看见，团队合作带来好作品。",
+        "en": "Stonemason Naiwa carves the arch with care while two others study the plans. Skill is noticed; teamwork makes good work."
+      },
+      "rev": {
+        "zh": "合作不顺、各说各话，或者手艺没被重视。",
+        "en": "Poor teamwork, everyone talking past each other, or skill undervalued."
+      },
+      "whispers": [
+        {
+          "zh": "我在刻拱门。下面两位在看图纸。我们三个都不知道图纸是谁画的。",
+          "en": "I'm carving the arch. The two below are reading the plans. None of us knows who drew them."
+        },
+        {
+          "zh": "锤子敲下去，石头掉一点。慢慢地，它就变好看了。",
+          "en": "Tap the hammer, a bit of stone falls. Slowly it becomes beautiful."
+        }
+      ],
+      "scene": {
+        "zh": "温暖明亮的午后，奶蛙站在木脚手架上雕刻一座浅色石头的花园拱门，拱门上嵌着三枚呈三角形排列的星币；下方两个穿棕色长袍、戴兜帽的小身影展开图纸讨论。",
+        "en": "In warm bright afternoon light Naiwa stands on a wooden scaffold carving a pale stone garden arch set with three coins in a triangle, while two small hooded figures in brown robes unroll a plan below."
+      },
+      "origin": {
+        "zh": "韦特牌中，一位石匠站在长凳上雕刻教堂的拱门，一位修士和一位拿着图纸的贵人在旁边商议，拱门上刻着三枚星币。它代表专业技艺、团队协作，以及作品得到认可。",
+        "en": "In the Rider–Waite card a stonemason on a bench carves a cathedral arch while a monk and a patron holding plans confer beside him, three pentacles carved above. It means skilled craft, collaboration and recognition of good work."
+      },
+      "astro": {
+        "zh": "摩羯座第二旬 · 火星（10–20°）",
+        "en": "Mars in Capricorn · 2nd decan (10–20°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "两个人一起经营、规划未来，关系越来越踏实。",
+            "en": "Building and planning together; the relationship grows solid."
+          },
+          "work": {
+            "zh": "专业得到认可，适合团队合作、拜师学艺。",
+            "en": "Your expertise is recognized; good for teamwork or apprenticeship."
+          },
+          "advice": {
+            "zh": "把你擅长的那一部分做到最好。",
+            "en": "Do the part you're best at, and do it well."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "彼此不配合，各自为政。",
+            "en": "Not working together, each going their own way."
+          },
+          "work": {
+            "zh": "沟通不畅、标准不一，或者努力没被看见。",
+            "en": "Poor communication, mismatched standards, effort unseen."
+          },
+          "advice": {
+            "zh": "先对齐图纸，再动锤子。",
+            "en": "Agree on the plan before picking up the hammer."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "pentacles_04",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "rank": 4,
+      "num": "IV",
+      "name": {
+        "zh": "星币四",
+        "en": "FOUR OF PENTACLES"
+      },
+      "keys": {
+        "zh": [
+          "守护",
+          "安全感",
+          "吝啬"
+        ],
+        "en": [
+          "Security",
+          "Holding on",
+          "Possessiveness"
+        ]
+      },
+      "up": {
+        "zh": "紧紧抱着星币、头上顶一枚、脚下踩两枚。守住已有的东西很重要，但抓得太紧也会失去流动。",
+        "en": "Hugging one coin, one on the head, two under the feet. Protecting what you have matters — but grip too hard and nothing can flow."
+      },
+      "rev": {
+        "zh": "学会放手与分享，或者因为过度紧张反而失去。",
+        "en": "Learning to let go and share — or losing it all by clutching too tight."
+      },
+      "whispers": [
+        {
+          "zh": "我抱着一枚，头上顶着一枚，脚下踩着两枚。我哪也去不了，但它们都很安全。",
+          "en": "One in my arms, one on my head, two under my feet. I can't go anywhere, but they're all safe."
+        },
+        {
+          "zh": "有人问我借一枚。我假装没听见。",
+          "en": "Someone asked to borrow one. I pretended not to hear."
+        }
+      ],
+      "scene": {
+        "zh": "晴朗的正午，奶蛙坐在城镇前的石凳上，紧紧抱着一枚大星币贴在肚子上，头顶稳稳地顶着一枚，两只三趾脚下各踩一枚。",
+        "en": "At clear noon Naiwa sits on a stone bench before a sunny walled town, hugging one big coin to its belly, another balanced on its head, two under its three-toed feet."
+      },
+      "origin": {
+        "zh": "传统画面中，一个戴王冠的人坐在城外，双手紧抱一枚星币，头上和脚下各有星币。它代表守财、控制与安全感，也提醒过度执着会让人封闭。",
+        "en": "Traditionally a crowned man sits outside a city clutching one pentacle, with others on his crown and under his feet. It is saving, control and security — and a warning that over-attachment closes you off."
+      },
+      "astro": {
+        "zh": "摩羯座第三旬 · 太阳（20–30°）",
+        "en": "the Sun in Capricorn · 3rd decan (20–30°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "占有欲强，或因为害怕失去而不敢投入。",
+            "en": "Possessive, or afraid to fully commit for fear of loss."
+          },
+          "work": {
+            "zh": "适合存钱、守住成果，但别太保守。",
+            "en": "Good for saving and protecting gains — but don't be too conservative."
+          },
+          "advice": {
+            "zh": "想想：你在守护，还是在害怕？",
+            "en": "Ask: are you protecting, or just afraid?"
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "学会信任，给对方空间。",
+            "en": "Learning to trust and give space."
+          },
+          "work": {
+            "zh": "开始投资或分享资源；也可能是财务失控。",
+            "en": "Starting to invest or share — or losing control of money."
+          },
+          "advice": {
+            "zh": "松开一点手，东西才会流进来。",
+            "en": "Loosen your grip so things can flow in."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "pentacles_05",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "rank": 5,
+      "num": "V",
+      "name": {
+        "zh": "星币五",
+        "en": "FIVE OF PENTACLES"
+      },
+      "keys": {
+        "zh": [
+          "困顿",
+          "匮乏",
+          "被冷落"
+        ],
+        "en": [
+          "Hardship",
+          "Scarcity",
+          "Feeling left out"
+        ]
+      },
+      "up": {
+        "zh": "两只奶蛙在雪夜里艰难前行，经过一扇透着暖光的窗。困难是真的，但帮助可能就在旁边，只是你还没敲门。",
+        "en": "Two Naiwas trudge through a snowy night past a warmly lit window. The hardship is real — but help may be right beside you, if you knock."
+      },
+      "rev": {
+        "zh": "最难的时候过去了，开始接受帮助、慢慢恢复。",
+        "en": "The worst is over; you begin accepting help and recovering."
+      },
+      "whispers": [
+        {
+          "zh": "雪很深。我们走得很慢。窗户里很暖，但我们没有敲门。",
+          "en": "The snow is deep. We walk slowly. It's warm behind the window, but we didn't knock."
+        },
+        {
+          "zh": "我们两个靠在一起走。这样冷一半。",
+          "en": "We walk leaning on each other. That way it's half as cold."
+        }
+      ],
+      "scene": {
+        "zh": "寒冷的雪夜，两只裹着破旧补丁斗篷的奶蛙在窄窄的哥特小巷里艰难地踩着深雪前行，其中一只拄着小拐杖，头顶一扇彩色花窗透出温暖的金光，窗上有花纹和五枚星币。",
+        "en": "On a cold snowy night two Naiwas in worn, patched cloaks trudge through deep snow down a narrow gothic street, one on a small crutch, beneath a glowing leaded window patterned with flowers and five coins."
+      },
+      "origin": {
+        "zh": "韦特牌中，两个衣衫褴褛的人在雪中蹒跚走过教堂的彩窗，其中一人拄着拐杖，窗上透出五枚星币的光。它代表贫困、病痛与被排斥，也暗示庇护其实近在咫尺。",
+        "en": "In the Rider–Waite card two ragged figures, one on crutches, stumble through snow past a lit church window showing five pentacles. It means poverty, illness and exclusion — and shelter that is closer than it seems."
+      },
+      "astro": {
+        "zh": "金牛座第一旬 · 水星（0–10°）",
+        "en": "Mercury in Taurus · 1st decan (0–10°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "感到被冷落，或两个人一起经历艰难时期。",
+            "en": "Feeling left out, or going through hard times together."
+          },
+          "work": {
+            "zh": "收入减少、失业或资源不足。",
+            "en": "Lower income, job loss, or lack of resources."
+          },
+          "advice": {
+            "zh": "敲敲那扇亮着的门，开口求助。",
+            "en": "Knock on the lit door — ask for help."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "关系熬过低谷，开始回暖。",
+            "en": "The relationship survives the low and warms up."
+          },
+          "work": {
+            "zh": "财务状况好转，找到新的支持。",
+            "en": "Finances improve; new support appears."
+          },
+          "advice": {
+            "zh": "接受帮助，不是软弱。",
+            "en": "Accepting help isn't weakness."
+          }
+        }
+      },
+      "dark": true
+    },
+    {
+      "id": "pentacles_06",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "rank": 6,
+      "num": "VI",
+      "name": {
+        "zh": "星币六",
+        "en": "SIX OF PENTACLES"
+      },
+      "keys": {
+        "zh": [
+          "给予",
+          "分享",
+          "互惠"
+        ],
+        "en": [
+          "Generosity",
+          "Sharing",
+          "Give and take"
+        ]
+      },
+      "up": {
+        "zh": "奶蛙一手拿着天平，一手把星币分给需要的人。有给有收，资源在流动中变得公平。",
+        "en": "Naiwa holds a balance in one hand and gives coins with the other. Giving and receiving keep resources flowing fairly."
+      },
+      "rev": {
+        "zh": "给予带着条件，或者付出与回报严重失衡。",
+        "en": "Strings attached to giving, or a badly lopsided give-and-take."
+      },
+      "whispers": [
+        {
+          "zh": "我在发金币。天平是用来确认我没有多给的。",
+          "en": "I'm handing out coins. The scale is to make sure I don't give too much."
+        },
+        {
+          "zh": "他们跪着。我说站起来吧，地上凉。",
+          "en": "They're kneeling. I said get up, the ground is cold."
+        }
+      ],
+      "scene": {
+        "zh": "明亮温暖的正午，果园旁的小镇广场上，奶蛙披着深红商人斗篷，一手提着金色小天平，一手把星币递给两只跪在面前的小奶蛙。",
+        "en": "At bright warm noon in a town square by an orchard, Naiwa in a deep red merchant's cape holds a small golden scale in one hand and gives coins to two small Naiwas kneeling before it."
+      },
+      "origin": {
+        "zh": "传统画面中，一位富商一手持天平，一手向跪地的乞丐施舍金币。它讲的是慷慨与公平，也提醒人们注意施与受之间的权力关系。",
+        "en": "Traditionally a wealthy merchant holds scales in one hand and gives coins to kneeling beggars with the other. It is generosity and fairness — and a reminder of the power between giver and receiver."
+      },
+      "astro": {
+        "zh": "金牛座第二旬 · 月亮（10–20°）",
+        "en": "the Moon in Taurus · 2nd decan (10–20°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "互相照顾、付出对等的关系。",
+            "en": "A relationship of mutual care and balanced giving."
+          },
+          "work": {
+            "zh": "得到资助、奖金，或适合做公益与分享。",
+            "en": "Funding, a bonus, or a good time for charity and sharing."
+          },
+          "advice": {
+            "zh": "今天帮一个人，也接受一次帮助。",
+            "en": "Help someone today, and accept help once too."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "一方一直给，一方一直拿。",
+            "en": "One always gives, the other always takes."
+          },
+          "work": {
+            "zh": "借钱不还、付出不被认可，或带着控制的施舍。",
+            "en": "Unpaid loans, unrecognized effort, or giving used as control."
+          },
+          "advice": {
+            "zh": "给之前，先看看自己的口袋。",
+            "en": "Before giving, check your own pockets."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "pentacles_07",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "rank": 7,
+      "num": "VII",
+      "name": {
+        "zh": "星币七",
+        "en": "SEVEN OF PENTACLES"
+      },
+      "keys": {
+        "zh": [
+          "耐心",
+          "评估",
+          "长期投资"
+        ],
+        "en": [
+          "Patience",
+          "Assessment",
+          "Long-term investment"
+        ]
+      },
+      "up": {
+        "zh": "奶蛙拄着锄头看灌木上长出的星币。收获需要时间，现在是停下来评估、调整方向的时候。",
+        "en": "Naiwa leans on a hoe watching coins grow on a bush. Harvest takes time; now is the moment to pause, assess and adjust."
+      },
+      "rev": {
+        "zh": "急于求成、看不到回报而灰心，或者投入方向不对。",
+        "en": "Impatient for results, discouraged by slow returns, or investing in the wrong place."
+      },
+      "whispers": [
+        {
+          "zh": "金币长在树上。我在等它们熟。已经等了三天。",
+          "en": "The coins grow on the bush. I'm waiting for them to ripen. Three days so far."
+        },
+        {
+          "zh": "我戴了草帽。这样看起来更像在思考。",
+          "en": "I'm wearing a straw hat. It makes me look more thoughtful."
+        }
+      ],
+      "scene": {
+        "zh": "温暖的夏末午后，奶蛙戴着草帽倚着长柄锄头，若有所思地看着一丛绿叶灌木上像果实一样长着的七枚星币，身后是菜园和旧石墙。",
+        "en": "On a warm late-summer afternoon Naiwa in a straw hat leans on a long hoe, thoughtfully watching seven coins growing like fruit on a leafy bush, a vegetable garden and old stone wall behind."
+      },
+      "origin": {
+        "zh": "韦特牌中，一位农夫倚着锄头，凝视藤蔓上长出的七枚星币，神情疲惫又若有所思。它代表耕耘之后的等待、阶段性评估与长期的投入。",
+        "en": "In the Rider–Waite card a farmer leans on his hoe gazing at seven pentacles growing on a vine, tired and thoughtful. It is the waiting after labour, taking stock, and long-term investment."
+      },
+      "astro": {
+        "zh": "金牛座第三旬 · 土星（20–30°）",
+        "en": "Saturn in Taurus · 3rd decan (20–30°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "关系需要时间慢慢培养，别急着要结果。",
+            "en": "The relationship needs time to grow; don't rush the outcome."
+          },
+          "work": {
+            "zh": "长期项目进入观察期，适合复盘和调整策略。",
+            "en": "A long project in review — time to assess and adjust."
+          },
+          "advice": {
+            "zh": "看看哪些种子值得继续浇水。",
+            "en": "See which seeds are worth watering."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "付出很多却看不到回应，开始动摇。",
+            "en": "Giving a lot without response, starting to waver."
+          },
+          "work": {
+            "zh": "投资回报差，或者半途而废。",
+            "en": "Poor returns, or giving up halfway."
+          },
+          "advice": {
+            "zh": "不是所有种子都会发芽，换一块地也可以。",
+            "en": "Not every seed sprouts — you can try another plot."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "pentacles_08",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "rank": 8,
+      "num": "VIII",
+      "name": {
+        "zh": "星币八",
+        "en": "EIGHT OF PENTACLES"
+      },
+      "keys": {
+        "zh": [
+          "专注",
+          "练习",
+          "精进"
+        ],
+        "en": [
+          "Diligence",
+          "Practice",
+          "Mastery"
+        ]
+      },
+      "up": {
+        "zh": "系着皮围裙在工作台前一枚一枚地雕刻星币。专注、重复、精益求精——手艺就是这样练成的。",
+        "en": "In a leather apron at the workbench, carving coins one by one. Focus, repetition, refinement — that's how craft is built."
+      },
+      "rev": {
+        "zh": "敷衍了事、追求速度忽视质量，或者陷入重复失去意义。",
+        "en": "Cutting corners, speed over quality, or stuck in meaningless repetition."
+      },
+      "whispers": [
+        {
+          "zh": "这是第八枚。每一枚我都刻得一样认真。",
+          "en": "This is the eighth. I carved each one just as carefully."
+        },
+        {
+          "zh": "锤子轻轻敲。星星慢慢出来。",
+          "en": "Tap the hammer gently. The star slowly appears."
+        }
+      ],
+      "scene": {
+        "zh": "明亮清晨的阳光下，奶蛙系着小皮围裙坐在作坊外结实的木工作台前，用小凿子和锤子在一枚金币上刻五芒星，旁边木柱上挂着已经完成的星币，一共八枚。",
+        "en": "In bright morning sun Naiwa in a small leather apron sits at a sturdy workbench outside a workshop, carving a five-pointed star into a gold coin with a chisel and hammer; finished coins hang on a post beside it, eight in all."
+      },
+      "origin": {
+        "zh": "传统画面中，一位工匠坐在长凳上专心地雕刻星币，已完成的作品挂在一旁的柱子上，远处是城镇。它是学徒精神：专注练习、精进技艺、脚踏实地地积累。",
+        "en": "Traditionally a craftsman sits at a bench intently carving pentacles, finished ones displayed on a post, a town in the distance. It is the apprentice's spirit: focused practice, honing skill, building steadily."
+      },
+      "astro": {
+        "zh": "处女座第一旬 · 太阳（0–10°）",
+        "en": "the Sun in Virgo · 1st decan (0–10°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "用行动而不是言语经营感情，一点点变好。",
+            "en": "Showing love through effort, not words, improving bit by bit."
+          },
+          "work": {
+            "zh": "适合进修、练技能、埋头做好手上的活。",
+            "en": "Good for training, skill-building and focusing on the work at hand."
+          },
+          "advice": {
+            "zh": "今天把一件小事做到满意为止。",
+            "en": "Do one small thing today until you're satisfied with it."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "只顾工作，忽略了陪伴。",
+            "en": "Too absorbed in work, neglecting time together."
+          },
+          "work": {
+            "zh": "敷衍、急躁，或重复劳动让人倦怠。",
+            "en": "Sloppiness, impatience, or burnout from repetition."
+          },
+          "advice": {
+            "zh": "问问自己：现在练的，是你想要的吗？",
+            "en": "Ask: is what you're practising what you want?"
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "pentacles_09",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "rank": 9,
+      "num": "IX",
+      "name": {
+        "zh": "星币九",
+        "en": "NINE OF PENTACLES"
+      },
+      "keys": {
+        "zh": [
+          "独立",
+          "富足",
+          "自我价值"
+        ],
+        "en": [
+          "Independence",
+          "Abundance",
+          "Self-worth"
+        ]
+      },
+      "up": {
+        "zh": "穿着华服站在葡萄园里，手上停着一只猎鹰。靠自己的努力获得了富足与自在，可以好好享受。",
+        "en": "In fine robes in a vineyard, a falcon on your hand. Abundance and ease earned through your own work — enjoy it."
+      },
+      "rev": {
+        "zh": "表面风光内心空虚，或过度依赖他人、花钱失度。",
+        "en": "Fine on the outside, empty inside, or overdependent and overspending."
+      },
+      "whispers": [
+        {
+          "zh": "我手上有一只鹰。它戴着小帽子，所以不会飞走，也不会啄我。",
+          "en": "There's a falcon on my hand. It wears a little hood, so it won't fly off or peck me."
+        },
+        {
+          "zh": "葡萄园里挂着九枚金币。都是我自己挂上去的。",
+          "en": "Nine coins hang in the vineyard. I hung them all myself."
+        }
+      ],
+      "scene": {
+        "zh": "温暖的金色午后，奶蛙穿着绣金的绿色长袍站在茂盛的葡萄园里，举起的三指小手上停着一只戴头罩的小猎鹰，九枚星币挂在葡萄藤间，远处是一座宅邸。",
+        "en": "In warm golden afternoon light Naiwa in a gold-embroidered green robe stands in a lush vineyard, a small hooded falcon on its raised hand, nine coins hanging among the vines, a manor in the distance."
+      },
+      "origin": {
+        "zh": "韦特牌中，一位衣着华丽的女子站在丰收的葡萄园里，手上停着戴头罩的猎鹰，身旁九枚星币。她代表通过自律与努力得来的独立、优雅与富足。",
+        "en": "In the Rider–Waite card an elegantly dressed woman stands in a fruitful vineyard with a hooded falcon on her hand, nine pentacles beside her. She is independence, refinement and abundance earned through discipline."
+      },
+      "astro": {
+        "zh": "处女座第二旬 · 金星（10–20°）",
+        "en": "Venus in Virgo · 2nd decan (10–20°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "享受独处，或在关系中保持独立和自我价值。",
+            "en": "Enjoying solitude, or keeping your independence within a relationship."
+          },
+          "work": {
+            "zh": "经济独立、事业有成，生活品质提升。",
+            "en": "Financial independence, career success, a better quality of life."
+          },
+          "advice": {
+            "zh": "奖励自己一样好东西，你值得。",
+            "en": "Treat yourself to something good — you've earned it."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "用物质填补情感空缺。",
+            "en": "Filling emotional gaps with things."
+          },
+          "work": {
+            "zh": "财务依赖他人，或消费失控。",
+            "en": "Financial dependence, or spending out of control."
+          },
+          "advice": {
+            "zh": "真正的富足包括心里的那一份。",
+            "en": "True abundance includes the kind inside."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "pentacles_10",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "rank": 10,
+      "num": "X",
+      "name": {
+        "zh": "星币十",
+        "en": "TEN OF PENTACLES"
+      },
+      "keys": {
+        "zh": [
+          "传承",
+          "家族",
+          "长久富足"
+        ],
+        "en": [
+          "Legacy",
+          "Family",
+          "Lasting wealth"
+        ]
+      },
+      "up": {
+        "zh": "拱门上嵌着十枚星币，三代奶蛙和两只白狗在庭院里。长久的富足、家族的传承与稳固的根基。",
+        "en": "Ten coins set into the archway; three generations of Naiwas and two white dogs in the courtyard. Lasting wealth, family legacy and solid roots."
+      },
+      "rev": {
+        "zh": "家族纠纷、遗产问题，或者被传统和责任束缚。",
+        "en": "Family disputes, inheritance issues, or feeling bound by tradition and duty."
+      },
+      "whispers": [
+        {
+          "zh": "拱门上有十枚金币。最老的那只奶蛙说，以前只有一枚。",
+          "en": "Ten coins on the archway. The oldest Naiwa says there used to be just one."
+        },
+        {
+          "zh": "小的那只在摸狗。狗很白，摸起来很软。",
+          "en": "The little one is petting the dogs. They're very white and very soft."
+        }
+      ],
+      "scene": {
+        "zh": "明亮温暖的午后，爬满常春藤的宏伟石拱门上嵌着十枚星币，拱门下的庭院里，年长的奶蛙穿着花纹华袍坐在长椅上，两只成年奶蛙在聊天，一只小奶蛙在摸两只友好的白狗，拱门外是繁荣的小镇。",
+        "en": "On a bright warm afternoon an ivy-covered stone archway is set with ten coins; in the courtyard an elder Naiwa in a patterned robe sits on a bench, two adults chat, and a small Naiwa pets two friendly white dogs, a prosperous town beyond."
+      },
+      "origin": {
+        "zh": "传统画面中，一位老人坐在拱门下抚摸两只白狗，一对年轻夫妇和孩子在旁，十枚星币排列成生命之树的形状。它是物质层面的最终圆满：家族、财富与世代传承。",
+        "en": "Traditionally an old man sits beneath an archway stroking two white dogs, a young couple and child nearby, ten pentacles arranged as the Tree of Life. It is material fulfilment at its peak: family, wealth and generations."
+      },
+      "astro": {
+        "zh": "处女座第三旬 · 水星（20–30°）",
+        "en": "Mercury in Virgo · 3rd decan (20–30°)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "关系稳定长久，得到家人支持，适合谈婚论嫁。",
+            "en": "A stable, lasting bond with family support — time to talk marriage."
+          },
+          "work": {
+            "zh": "家族企业、长期资产、稳定的职业根基。",
+            "en": "Family business, long-term assets, a secure career foundation."
+          },
+          "advice": {
+            "zh": "想想你想留给以后的是什么。",
+            "en": "Think about what you want to leave behind."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "家人意见左右关系，或门第观念造成压力。",
+            "en": "Family opinions sway the relationship, or pressure over background."
+          },
+          "work": {
+            "zh": "财产纠纷、家族期待太重。",
+            "en": "Property disputes, or heavy family expectations."
+          },
+          "advice": {
+            "zh": "传承可以选择，不必全盘接收。",
+            "en": "You can choose what to inherit."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "pentacles_11",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "rank": 11,
+      "num": "PAGE",
+      "name": {
+        "zh": "星币侍从",
+        "en": "PAGE OF PENTACLES"
+      },
+      "keys": {
+        "zh": [
+          "学习",
+          "踏实",
+          "新计划"
+        ],
+        "en": [
+          "Study",
+          "Diligence",
+          "New plans"
+        ]
+      },
+      "up": {
+        "zh": "在春天的草地上双手举着一枚星币仔细端详。一个踏实的学生：认真学习、规划未来、从小处开始。",
+        "en": "In a spring meadow, holding up a coin and studying it closely. A diligent student: learning carefully, planning ahead, starting small."
+      },
+      "rev": {
+        "zh": "只想不做、拖延，或者对学习失去兴趣。",
+        "en": "All plans and no action, procrastination, or losing interest in learning."
+      },
+      "whispers": [
+        {
+          "zh": "我在看这枚金币。它很圆，和我一样。",
+          "en": "I'm studying this coin. It's round, like me."
+        },
+        {
+          "zh": "草地上的花开了。我没有看花，因为我在学习。",
+          "en": "The meadow flowers are blooming. I'm not looking at them; I'm studying."
+        }
+      ],
+      "scene": {
+        "zh": "清新明亮的春日早晨，奶蛙穿着苔绿色短斗篷、戴着小帽站在开满鲜花的草地上，双手举着一枚星币，一本正经地端详着，身后是犁过的田和一片树林。",
+        "en": "On a fresh bright spring morning Naiwa in a moss-green cape and small cap stands in a flowering meadow, holding up a coin with both hands and studying it gravely, ploughed fields and a grove behind."
+      },
+      "origin": {
+        "zh": "韦特牌中，一位年轻人站在开花的田野上，双手托着星币专注地凝视，远处是犁过的土地。星币侍从是勤奋的学徒，代表学习、新的财务或事业计划，以及踏实的开端。",
+        "en": "In the Rider–Waite card a youth in a flowering field gazes intently at the pentacle he holds up, ploughed land beyond. The Page of Pentacles is the diligent apprentice: study, new financial or career plans, steady beginnings."
+      },
+      "astro": {
+        "zh": "土中之土（宫廷牌元素，现代常用对应）",
+        "en": "Earth of Earth (court element, common modern attribution)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "慢热但认真，一步一步建立信任。",
+            "en": "Slow to warm but sincere, building trust step by step."
+          },
+          "work": {
+            "zh": "适合考证、进修、开始一份新工作或理财计划。",
+            "en": "Good for exams, courses, a new job, or a savings plan."
+          },
+          "advice": {
+            "zh": "今天学一点点新东西。",
+            "en": "Learn a little something new today."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "想得多做得少，关系停在原地。",
+            "en": "Thinking a lot, doing little; things stand still."
+          },
+          "work": {
+            "zh": "拖延、半途而废，或者目标不切实际。",
+            "en": "Procrastination, quitting halfway, or unrealistic goals."
+          },
+          "advice": {
+            "zh": "把大计划切成今天能做的一小块。",
+            "en": "Cut the big plan into one piece you can do today."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "pentacles_12",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "rank": 12,
+      "num": "KNIGHT",
+      "name": {
+        "zh": "星币骑士",
+        "en": "KNIGHT OF PENTACLES"
+      },
+      "keys": {
+        "zh": [
+          "稳重",
+          "可靠",
+          "坚持"
+        ],
+        "en": [
+          "Reliability",
+          "Steadiness",
+          "Persistence"
+        ]
+      },
+      "up": {
+        "zh": "骑着一匹纹丝不动的黑色重挽马，手捧星币望着犁好的田。不急不躁，一步一个脚印，最可靠的骑士。",
+        "en": "On a stock-still black draft horse, holding a coin and gazing at ploughed fields. Unhurried, step by step — the most dependable knight."
+      },
+      "rev": {
+        "zh": "太过保守、固执，或者因为太慢而错过时机。",
+        "en": "Too cautious, stubborn, or so slow you miss the moment."
+      },
+      "whispers": [
+        {
+          "zh": "马一动不动。我也一动不动。我们在等田自己长出东西。",
+          "en": "The horse doesn't move. Neither do I. We're waiting for the field to grow something."
+        },
+        {
+          "zh": "别的骑士都在冲锋。我在耐心。",
+          "en": "The other knights charge. I practise patience."
+        }
+      ],
+      "scene": {
+        "zh": "温暖稳定的午后阳光里，奶蛙穿着深绿铠甲，耐心地坐在一匹纹丝不动的结实黑色挽马上，双手向前捧着一枚星币，站在犁得整整齐齐的田边，远处有橡树和农舍。",
+        "en": "In steady warm afternoon sun Naiwa in dark green armour sits patiently on a sturdy black draft horse standing perfectly still at the edge of neatly ploughed fields, holding a coin forward, oaks and a farmhouse beyond."
+      },
+      "origin": {
+        "zh": "传统画面中，骑士坐在静止不动的黑马上，手托星币望着犁过的田地。他是唯一停下脚步的骑士：勤勉、可靠、按部就班，也可能过于保守。",
+        "en": "Traditionally the knight sits on a motionless black horse holding a pentacle and gazing at ploughed fields. He is the only knight standing still: hardworking, reliable, methodical — and perhaps too cautious."
+      },
+      "astro": {
+        "zh": "土中之风（宫廷牌元素，现代常用对应）",
+        "en": "Air of Earth (court element, common modern attribution)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "慢热但忠诚可靠，给人安全感。",
+            "en": "Slow to warm but loyal and dependable — a source of security."
+          },
+          "work": {
+            "zh": "稳扎稳打的工作阶段，适合长期执行与维护。",
+            "en": "A steady phase of work, good for long execution and upkeep."
+          },
+          "advice": {
+            "zh": "今天不求快，只求把它做完。",
+            "en": "Don't aim for fast today — just finish it."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "太闷、太固执，关系缺少新鲜感。",
+            "en": "Too dull or stubborn; the relationship lacks spark."
+          },
+          "work": {
+            "zh": "停滞不前、墨守成规，错过机会。",
+            "en": "Stagnant, stuck in routine, missing chances."
+          },
+          "advice": {
+            "zh": "偶尔让马走两步也不错。",
+            "en": "Let the horse take a few steps now and then."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "pentacles_13",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "rank": 13,
+      "num": "QUEEN",
+      "name": {
+        "zh": "星币王后",
+        "en": "QUEEN OF PENTACLES"
+      },
+      "keys": {
+        "zh": [
+          "滋养",
+          "务实",
+          "温暖富足"
+        ],
+        "en": [
+          "Nurturing",
+          "Practicality",
+          "Warm abundance"
+        ]
+      },
+      "up": {
+        "zh": "坐在玫瑰花园里的王座上，温柔地捧着一枚星币，脚边一只小白兔。务实又温暖，把生活照顾得井井有条。",
+        "en": "On a throne in a rose garden, tenderly cradling a coin, a little white rabbit at her feet. Practical and warm, she keeps life well tended."
+      },
+      "rev": {
+        "zh": "过度操劳、只顾照顾别人，或者被物质和琐事淹没。",
+        "en": "Overworked, caring for everyone but yourself, or buried in chores and things."
+      },
+      "whispers": [
+        {
+          "zh": "我抱着一枚金币，像抱着一个枕头。",
+          "en": "I'm holding a coin like a pillow."
+        },
+        {
+          "zh": "脚边有一只兔子。它不说话，但它一直在。",
+          "en": "There's a rabbit at my feet. It doesn't talk, but it's always there."
+        }
+      ],
+      "scene": {
+        "zh": "明亮温暖的正午阳光穿过玫瑰拱门，奶蛙戴着精致的小金冠、披着苔绿天鹅绒斗篷，坐在刻着果实与山羊头的石座上，膝上温柔地捧着一枚大星币，草地上坐着一只小白兔。",
+        "en": "Bright warm noon light falls through a rose arch onto Naiwa, in a delicate crown and moss-green velvet cape, seated on a stone throne carved with fruit and goat heads, cradling a large coin on its lap, a small white rabbit in the grass."
+      },
+      "origin": {
+        "zh": "韦特牌中，王后坐在饰有果实与山羊头的王座上，膝上捧着星币，周围是花园与玫瑰拱门，脚边有一只兔子。她是大地之母般的存在：务实、慷慨、懂得经营生活。",
+        "en": "In the Rider–Waite card the Queen sits on a throne of fruit and goat heads, cradling a pentacle in a garden under a rose bower, a rabbit at her feet. She is an earth-mother figure: practical, generous and good at tending life."
+      },
+      "astro": {
+        "zh": "土中之水（宫廷牌元素，现代常用对应）",
+        "en": "Water of Earth (court element, common modern attribution)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "温暖体贴、会照顾人的伴侣，日子过得踏实温馨。",
+            "en": "A warm, caring partner; a cosy, grounded life together."
+          },
+          "work": {
+            "zh": "兼顾工作与家庭，理财有方，事业稳中有升。",
+            "en": "Balancing work and home, good with money, steady growth."
+          },
+          "advice": {
+            "zh": "给自己做一顿好吃的。",
+            "en": "Cook yourself something good."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "照顾别人照顾到忘了自己。",
+            "en": "Caring so much for others you forget yourself."
+          },
+          "work": {
+            "zh": "被家务和琐事拖累，或者过分看重物质。",
+            "en": "Weighed down by chores, or too focused on material things."
+          },
+          "advice": {
+            "zh": "把照顾分一点给自己。",
+            "en": "Save some of that care for yourself."
+          }
+        }
+      },
+      "dark": false
+    },
+    {
+      "id": "pentacles_14",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "rank": 14,
+      "num": "KING",
+      "name": {
+        "zh": "星币国王",
+        "en": "KING OF PENTACLES"
+      },
+      "keys": {
+        "zh": [
+          "成功",
+          "稳固",
+          "财富掌控"
+        ],
+        "en": [
+          "Success",
+          "Stability",
+          "Mastery of wealth"
+        ]
+      },
+      "up": {
+        "zh": "坐在刻着公牛头的王座上，长袍绣满葡萄，一手星币一手权杖。事业有成、财务稳固，有能力照顾好身边的人。",
+        "en": "On a bull-carved throne, robe embroidered with grapes, coin in one hand and sceptre in the other. Success, financial security, and the means to care for those around him."
+      },
+      "rev": {
+        "zh": "贪婪、固执，或者用金钱衡量一切。",
+        "en": "Greed, stubbornness, or measuring everything by money."
+      },
+      "whispers": [
+        {
+          "zh": "我的袍子上全是葡萄。我有点饿了。",
+          "en": "My robe is covered in grapes. I'm a bit hungry."
+        },
+        {
+          "zh": "我坐得很稳。王座很宽，刚好装下我的肚子。",
+          "en": "I sit very steadily. The throne is wide — just enough for my belly."
+        }
+      ],
+      "scene": {
+        "zh": "温暖的金色傍晚，奶蛙戴着缀有小叶子的金冠、穿着绣满葡萄藤的深色长袍，坐在刻着公牛头的宽大石座上，膝上放着一枚大星币，手握金色短权杖，四周是葡萄藤和富饶的城堡花园。",
+        "en": "In warm golden late-afternoon light Naiwa, in a leaf-trimmed gold crown and a dark robe embroidered with vines, sits on a broad bull-carved throne with a large coin on its knee and a short golden sceptre, grapevines and a rich castle garden around it."
+      },
+      "origin": {
+        "zh": "传统画面中，国王坐在饰有公牛头的王座上，长袍上满是葡萄纹样，手持星币与权杖，身后是城堡与葡萄园。他是物质世界的成功者：富足、稳重、慷慨而有责任感。",
+        "en": "Traditionally the King sits on a throne carved with bulls, his robe covered in grapes, holding a pentacle and sceptre before a castle and vineyard. He is success in the material world: prosperous, steady, generous and responsible."
+      },
+      "astro": {
+        "zh": "土中之火（宫廷牌元素，现代常用对应）",
+        "en": "Fire of Earth (court element, common modern attribution)"
+      },
+      "facets": {
+        "up": {
+          "love": {
+            "zh": "成熟可靠、能给对方安稳生活的伴侣。",
+            "en": "A mature, dependable partner who can offer a secure life."
+          },
+          "work": {
+            "zh": "事业成熟、投资有成，适合管理资源与团队。",
+            "en": "Career and investments mature; good for managing resources and people."
+          },
+          "advice": {
+            "zh": "用你拥有的，去照顾值得的人。",
+            "en": "Use what you have to care for those who matter."
+          }
+        },
+        "rev": {
+          "love": {
+            "zh": "太看重物质，或用金钱代替陪伴。",
+            "en": "Too materialistic, or using money instead of presence."
+          },
+          "work": {
+            "zh": "固执守旧、贪多求稳，错失变化。",
+            "en": "Stubborn, greedy for security, missing change."
+          },
+          "advice": {
+            "zh": "财富是工具，不是全部。",
+            "en": "Wealth is a tool, not everything."
+          }
+        }
+      },
+      "dark": false
     }
   ]
 }

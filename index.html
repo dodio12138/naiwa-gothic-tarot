@@ -65,9 +65,14 @@
     <label class="st-row"><span><b>逆位</b><small>允许抽到逆位牌</small></span><input type="checkbox" data-k="reversed"><i class="sw"></i></label>
     <label class="st-row st-range" id="st-rev"><span><b id="st-rev-title">逆位概率</b><small id="st-rev-desc">洗牌时每张牌成为逆位的机会</small></span>
       <span class="rg"><input type="range" min="0" max="100" step="5" data-r="revProb" aria-labelledby="st-rev-title"><output id="st-rev-val">40%</output></span></label>
+    <div class="st-row st-qrow"><span><b id="st-deck-title">牌组</b><small id="st-deck-desc">下一轮抽牌生效</small></span>
+      <div class="seg" id="st-deck" role="radiogroup" aria-labelledby="st-deck-title">
+        <button type="button" role="radio" data-deck="major">22</button><button type="button" role="radio" data-deck="full">78</button>
+      </div>
+    </div>
     <div class="st-group" id="st-g-show">表 现</div>
     <div class="st-row st-qrow"><span><b id="st-q-title">画质</b><small id="st-q-desc">自动</small></span>
-      <div class="seg" role="radiogroup" aria-labelledby="st-q-title">
+      <div class="seg" id="st-quality" role="radiogroup" aria-labelledby="st-q-title">
         <button type="button" role="radio" data-q="auto">自动</button><button type="button" role="radio" data-q="high">高</button><button type="button" role="radio" data-q="mid">中</button><button type="button" role="radio" data-q="low">低</button>
       </div>
     </div>

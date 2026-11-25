@@ -82,9 +82,15 @@ const audio = createAudio();
 const CFG_KEY = 'naiwa-tarot-settings';
 const CFG = {
   autoDraw: false, autoReveal: false, skipIntro: false, reversed: true, revProb: 40,   // revProb：逆位概率（%）
+  deck: 'full',   // full：完整 78 张；major：只用 22 张大阿卡纳
   parallax: true, lights: true, calm: false, sound: !audio.muted, ambient: true,
 };
 try { Object.assign(CFG, JSON.parse(localStorage.getItem(CFG_KEY) || '{}')); } catch { /* 无存储时用默认值 */ }
+// 当前牌组
+const deckCards = () => (CFG.deck === 'major' ? CARDS.filter((c) => c.arcana === 'major') : CARDS);
+// 摆在桌上供选择的牌数：无论牌组多大，扇形里都只摆 22 张。
+// 牌组先整体洗乱，再取最上面的 22 张——每一张被选中的概率仍然相同，同时避免 78 张牌同时占用图层导致手机卡顿
+const FAN_N = 22;
 const revChance = () => (CFG.reversed ? clamp(+CFG.revProb || 0, 0, 100) / 100 : 0);
 const saveCfg = () => { try { localStorage.setItem(CFG_KEY, JSON.stringify(CFG)); } catch { /* 忽略 */ } };
 const wait = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -115,15 +121,15 @@ applySpeed();
 /* ════════ 预加载牌面 ════════
    首页先把带宽让给字体与首屏；入场动画结束、浏览器空闲时再后台预载 22 张牌面。
    翻牌前 reveal() 会再确认该张已解码，所以即使没预载完也不会翻出空白。 */
-function preloadFaces() {
-  [...CARDS.map((c) => artSrc(c.id)), UI('frame-sm.webp')].forEach((src) => {
+function preload(srcs) {
+  srcs.forEach((src) => {
     const img = new Image();
     img.decoding = 'async';
     img.src = src;
   });
 }
 const idle = window.requestIdleCallback || ((fn) => setTimeout(fn, 300));
-setTimeout(() => idle(preloadFaces, { timeout: 3000 }), 1800);
+setTimeout(() => idle(() => preload([UI('frame-sm.webp')]), { timeout: 3000 }), 1800);
 
 /* ════════ 背景法阵 ════════ */
 function buildSigil() {
@@ -484,7 +490,7 @@ async function start(key) {
   S.spread = SPREADS[key];
   S.question = $('#question').value.trim();
   S.phase = 'dealing';
-  S.fate = key === 'daily' ? dailyFate(CARDS.map((c) => c.id)) : null;
+  S.fate = key === 'daily' ? dailyFate(deckCards().map((c) => c.id)) : null;
   S.replay = !!(S.fate && S.fate.drawn);   // 今天已经抽过：快速重放到揭示
   S.auto = CFG.autoDraw || S.replay;
   await introOut();
@@ -531,7 +537,9 @@ function buildDeck() {
   stage.innerHTML = '';
   // 洗牌时就锁定每张牌的顺序与朝向：之后选哪张、何时翻开，都不会改变它本来的正逆
   const p = revChance();
-  S.cards = shuffled(CARDS).map((d) => Object.assign(makeCard(d), { reversed: rand() < p }));
+  S.cards = shuffled(deckCards()).slice(0, FAN_N).map((d) => Object.assign(makeCard(d), { reversed: rand() < p }));
+  // 牌面只预载摆出来的这几张（今日一签再加上注定的那张）
+  preload([...S.cards.map((c) => artSrc(c.data.id)), ...(S.fate ? [artSrc(S.fate.id)] : [])]);
   S.picked = [];
   const { W, H } = vp();
   const s = deckScale();
@@ -798,6 +806,7 @@ function pick(c) {
     // 今日一签是特例：同一台设备同一天固定同一张牌，所以在选中时把那张牌换到手上
     const fated = S.cards.find((x) => x.data.id === S.fate.id);
     if (fated && fated !== c) [c.data, fated.data] = [fated.data, c.data];
+    else if (!fated) c.data = cardById(S.fate.id);   // 注定的牌不在桌面上的 22 张里：直接换到手上
     c.reversed = S.fate.drawn ? S.fate.reversed : S.fate.revRoll < revChance();
   }
   c.el.classList.toggle('reversed', c.reversed);
@@ -1361,12 +1370,29 @@ function applyCfg() {
   if (!CFG.parallax) for (const t of tilts) t.set(0, 0);
   document.querySelectorAll('input[data-k]').forEach((i) => { i.checked = !!CFG[i.dataset.k]; });
   syncRevUI();
+  syncDeckUI();
 }
 document.addEventListener('change', (e) => {
   const k = e.target.dataset && e.target.dataset.k;
   if (!k) return;
   CFG[k] = e.target.checked;
   saveCfg(); applyCfg();
+  audio.unlock(); audio.click();
+});
+// 牌组：大阿卡纳 22 张 / 完整 78 张
+function syncDeckUI() {
+  document.getElementById('st-deck-title').textContent = t('deckTitle');
+  document.getElementById('st-deck-desc').textContent = t('deckDesc');
+  document.querySelectorAll('#st-deck [data-deck]').forEach((b) => {
+    b.textContent = t(b.dataset.deck === 'major' ? 'deckMajor' : 'deckFull');
+    b.setAttribute('aria-checked', String(b.dataset.deck === CFG.deck));
+  });
+}
+document.getElementById('st-deck').addEventListener('click', (e) => {
+  const b = e.target.closest('[data-deck]');
+  if (!b || b.dataset.deck === CFG.deck) return;
+  CFG.deck = b.dataset.deck;
+  saveCfg(); syncDeckUI();
   audio.unlock(); audio.click();
 });
 // 逆位概率滑杆：只在开启逆位时可调
@@ -1395,7 +1421,7 @@ function syncQualityUI() {
     b.setAttribute('aria-checked', String(b.dataset.q === Q.pick));
   });
 }
-document.querySelector('#settings .seg').addEventListener('click', (e) => {
+document.getElementById('st-quality').addEventListener('click', (e) => {
   const b = e.target.closest('[data-q]');
   if (!b || b.dataset.q === Q.pick) return;
   setQualityPick(b.dataset.q);
@@ -1450,6 +1476,7 @@ function applyLang(rerender = true) {
   syncSound();
   syncQualityUI();
   syncRevUI();
+  syncDeckUI();
   if (!rerender) return;
   renderTitle();
   renderSpreads();
