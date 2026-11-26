@@ -29,6 +29,8 @@ npm run build    # 输出到 dist/，相对路径，可直接丢到任意静态�
 - [docs/roadmap.md](docs/roadmap.md) — 开发路线、现状对照与待决事项
 - [docs/design-cosmos.md](docs/design-cosmos.md) — 象征宇宙设计稿（原型、天体、知识图谱）
 - [docs/design-spreads.md](docs/design-spreads.md) — 抽牌仪式与牌阵系统设计稿
+- [docs/naiwa.md](docs/naiwa.md) — 奶蛙角色资料卡：迷因来源、外形、参考图、IP 风险
+- [docs/tarot_slm_technical_design_v0.6.md](docs/tarot_slm_technical_design_v0.6.md) — AI 解读（神经符号混合 SLM）技术设计，v0.4 为旧版
 
 ## 结构
 
