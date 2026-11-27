@@ -50,8 +50,8 @@
         }
       ],
       "scene": {
-        "zh": "月下的悬崖边，奶蛙拎着小包袱，黑狗凑到脚边，路旁开着一朵黑玫瑰。远处是废弃的城堡——出发之前，一切都还很轻。",
-        "en": "At a moonlit cliff edge Naiwa holds a tiny bundle; a black dog noses at its feet and a single black rose grows by the path. A ruined castle waits far behind — before a journey, everything is still light."
+        "zh": "满月下的悬崖石径上，奶蛙扛着挂小包袱的木棍，一只深色小狗站在崖边仰头看它，路旁开着几朵黑玫瑰。远处山顶的城堡还亮着灯——出发之前，一切都还很轻。",
+        "en": "On a moonlit cliff path Naiwa carries a tiny bundle on a stick; a small dark dog at the edge looks up at it, and a few black roses grow by the way. A lit castle waits on the far peak — before a journey, everything is still light."
       },
       "origin": {
         "zh": "传统画面里，一个年轻人背着行囊、手拈白玫瑰走向悬崖，小白狗在脚边吠叫。编号 0 意味着他不在序列之内，又贯穿全部——整套大阿尔卡那常被读作「愚者之旅」，后面 21 张就是他一路遇见的风景。",
@@ -142,8 +142,8 @@
         }
       ],
       "scene": {
-        "zh": "狭长的石祭坛上摆着权杖、圣杯、宝剑和星币，奶蛙一手举杖、一手指地，头顶浮着无限符号。天与地之间，它是那根导线。",
-        "en": "On a narrow stone altar lie a wand, a chalice, a sword and a coin. Naiwa raises a wand with one hand and points down with the other, an infinity sign floating above. Between heaven and earth, it is the wire that connects them."
+        "zh": "红色玫瑰窗前的石祭坛上摆着权杖、圣杯、短剑和星币，奶蛙一手高举发光的权杖、一手张开向下，头顶浮着无限符号。天与地之间，它是那根导线。",
+        "en": "Before a red rose window, a stone altar holds a wand, a chalice, a dagger and a pentacle coin. Naiwa raises a glowing wand with one hand and opens the other toward the ground, an infinity sign floating above. Between heaven and earth, it is the wire that connects them."
       },
       "origin": {
         "zh": "韦特牌中的魔术师一手举杖指天、一手指地，象征「如其在上，如其在下」；桌上的权杖、圣杯、宝剑、星币代表四元素，也就是小阿尔卡那的四个花色。他是愚者遇到的第一位老师：教会他把意念变成行动。",
@@ -234,8 +234,8 @@
         }
       ],
       "scene": {
-        "zh": "黑白双柱之间，奶蛙坐在低矮的石座上，怀抱古卷，石榴帷幕挡住了后面的东西。脚边一弯银月，什么都没说。",
-        "en": "Between a black pillar and a white one, Naiwa sits on a low stone seat holding an ancient scroll; a pomegranate veil hides what lies behind. A silver crescent rests at its feet, saying nothing."
+        "zh": "黑白双柱之间，奶蛙戴着银色新月冠，坐在高背石座上怀抱古卷，石榴帷幕挡住了后面的东西。座前一弯银月、一池静水，什么都没说。",
+        "en": "Between a black pillar and a white one, Naiwa sits on a high-backed stone throne in a silver crescent crown, holding an ancient scroll; a pomegranate veil hides what lies behind. A silver crescent and a still pool wait at its feet, saying nothing."
       },
       "origin": {
         "zh": "女祭司坐在神殿的黑白双柱之间，柱上刻着 B 与 J，取自所罗门圣殿的两根柱子。她手持律法卷轴、脚踏新月，身后的石榴帷幕遮住了奥秘。她代表不言而喻的知识，是与魔术师相对的「静」。",
@@ -326,8 +326,8 @@
         }
       ],
       "scene": {
-        "zh": "魔法花园里，奶蛙靠在宽大的丝绒宝座上，头戴十二星冠。黑玫瑰、石榴和金色麦穗围着它，一束暖光刚好落在肚子上。",
-        "en": "In an enchanted garden, Naiwa leans back in a wide velvet throne under a crown of twelve stars. Dark roses, pomegranates and golden wheat surround it, and a warm beam lands right on its belly."
+        "zh": "常春藤与暗红玫瑰围着的花园里，奶蛙靠在红丝绒宝座上，头戴缀星金冠，手持百合权杖。金星盾牌、石榴和金色麦穗围在身旁，一束暖阳从高处斜照进来。",
+        "en": "In a garden of ivy and dark-red roses, Naiwa leans back in a red velvet throne, wearing a starry golden crown and holding a lily sceptre. A Venus-marked shield, pomegranates and golden wheat surround it, and a warm beam slants in from above."
       },
       "origin": {
         "zh": "传统的皇后是大地之母：坐在麦田与森林之间，头戴十二星冠，身旁心形盾牌上刻着金星符号。她象征自然、感官与孕育，是一切「生长」的原型。",
@@ -510,8 +510,8 @@
         }
       ],
       "scene": {
-        "zh": "大教堂的双柱之间，奶蛙披着深红祭袍，举起短手祝福。两把钥匙交叉在地，两位小侍者跪在座前，烛烟慢慢升起。",
-        "en": "Between cathedral pillars, Naiwa wears a crimson mantle and raises a short hand in blessing. Two crossed keys lie on the floor, two small acolytes kneel before it, and candle smoke drifts upward."
+        "zh": "大教堂的彩窗前，奶蛙戴着三重冠、披深红祭袍，举起短手祝福。两把金钥匙交叉放在座前台阶上，两位兜帽侍者跪在两侧，香炉的烟慢慢升起。",
+        "en": "Before cathedral stained glass, Naiwa wears a triple crown and a crimson mantle and raises a short hand in blessing. Two golden keys lie crossed on the step, two hooded acolytes kneel at either side, and incense smoke drifts upward."
       },
       "origin": {
         "zh": "教皇（又称祭司长）头戴三重冠，举手赐福，脚下两把交叉的钥匙象征通往天上与人间的门，两位侍从跪在座前。他代表制度化的信仰、传承与教育——知识从老师传到学生的那条链。",
@@ -602,8 +602,8 @@
         }
       ],
       "scene": {
-        "zh": "岔路口的花园里，两只一模一样的奶蛙轻轻碰着小手。一棵树开黑玫瑰，一棵树结红果，天使在高处看着，没有替它们选。",
-        "en": "At a fork in a gothic garden, two identical Naiwas lightly touch hands. One tree bears dark roses, the other red fruit, and an angel watches from above — choosing nothing for them."
+        "zh": "岔路口的花园里，两只一模一样的奶蛙手牵着手。左边的树开暗红玫瑰，右边的树结满石榴、缠着一条蛇；天使在高处看着，没有替它们选。",
+        "en": "At a fork in a gothic garden, two identical Naiwas hold hands. The left tree blooms with dark-red roses; the right bears pomegranates, a serpent coiled around its trunk. An angel watches from above — choosing nothing for them."
       },
       "origin": {
         "zh": "韦特版的恋人画着伊甸园中的一男一女，天使拉斐尔在上方祝福，女子身后是缠着蛇的知识之树。更古老的马赛版画的是一个人站在两位女子之间——所以这张牌既讲爱，也讲选择。",
@@ -694,8 +694,8 @@
         }
       ],
       "scene": {
-        "zh": "星幕篷盖下，奶蛙站在小小的战车里，肚子顶着车沿，手握指挥杖。一黑一白两只狮身兽望着不同的方向，城门就在前方。",
-        "en": "Under a star-spangled canopy, Naiwa stands in a small chariot, belly against the rim, command staff in hand. A black sphinx and a white sphinx face different ways; the city gate lies ahead."
+        "zh": "缀满金星的蓝色华盖下，奶蛙戴着金冠端坐，手握星轮权杖。一黑一白两只狮身兽被金链拴在座前，望着不同的方向；风暴之后，城堡亮着灯。",
+        "en": "Under a deep-blue canopy scattered with gold stars, Naiwa sits crowned, holding a star-wheel staff. A black sphinx and a white sphinx, chained in gold before it, gaze different ways; beyond the storm a castle's lights are burning."
       },
       "origin": {
         "zh": "战车上的王子头戴星冠，车前一黑一白两只狮身人面兽代表相反的力量；他没有缰绳，全凭意志驾驭。这是愚者第一次凭自己赢得的胜利。",
@@ -786,8 +786,8 @@
         }
       ],
       "scene": {
-        "zh": "月下的玫瑰园里，巨大的黑狮安静地低下头，奶蛙用三根手指轻轻搭在它的鬃毛上。无限符号浮在头顶——温柔，也可以很久很久。",
-        "en": "In a moonlit rose garden an enormous black lion quietly bows its head, and Naiwa rests three small fingers on its mane. An infinity sign floats above — gentleness can last a very long time."
+        "zh": "月下的玫瑰废园里，巨大的黑狮闭着眼安静地低下头，奶蛙把小手轻轻按在它的额头上。无限符号浮在头顶——温柔，也可以很久很久。",
+        "en": "In a moonlit ruined rose garden an enormous black lion closes its eyes and quietly bows its head, and Naiwa rests a small hand on its brow. An infinity sign floats above — gentleness can last a very long time."
       },
       "origin": {
         "zh": "一位女子轻轻合上狮子的嘴，头顶有无限符号。韦特与黄金黎明把它排在第八、把正义排在第十一，以对应狮子座与天秤座；更早的马赛版顺序正好相反。它讲的不是蛮力，而是驯服本能的温柔。",
@@ -970,8 +970,8 @@
         }
       ],
       "scene": {
-        "zh": "巨大的古金轮盘悬在宇宙里，刻满炼金符号，狮身兽坐在顶端，蛇从一侧滑下。奶蛙站在轮底仰望，四角的天使、鹰、狮与牛都在看。",
-        "en": "A giant golden wheel hangs in a cosmic sky, carved with alchemical signs; a sphinx sits on top and a serpent slides down one side. Naiwa looks up from below while angel, eagle, lion and bull watch from the corners."
+        "zh": "巨大的古金轮盘悬在紫色星云里，刻满炼金符号；带翼的狮身兽坐在顶端，蛇从左侧滑下，胡狼头的人形从右侧攀上。奶蛙站在下方废墟的石台上，四角的天使、鹰、狮与牛都在看。",
+        "en": "A giant golden wheel hangs in a violet nebula, carved with alchemical signs; a winged sphinx sits on top, a serpent slides down the left and a jackal-headed figure climbs the right. Naiwa stands on a stone dais among ruins below while angel, eagle, lion and bull watch from the corners."
       },
       "origin": {
         "zh": "轮盘上刻着 TARO（也可读作 ROTA、TORA）和炼金符号，顶端是持剑的狮身人面兽，一侧蛇在下滑，一侧阿努比斯在上升。四角的天使、鹰、狮、牛对应四个固定星座与四福音书。它位于大阿尔卡那的中段：没有人能永远在顶上。",
@@ -1062,8 +1062,8 @@
         }
       ],
       "scene": {
-        "zh": "两根暗柱之间，奶蛙端坐石座，一手直剑、一手天平，身后是厚重的深红帷幕。眼睛平视，嘴是一条直线——不偏不倚。",
-        "en": "Between two dark pillars, Naiwa sits upright on a stone seat, a straight sword in one hand and scales in the other, a heavy burgundy curtain behind. Eyes level, mouth a straight line — leaning neither way."
+        "zh": "两根暗柱之间，奶蛙端坐石座，一手直剑、一手天平，头后一圈金光，身后是厚重的深红帷幕，柱上立着蒙眼的雕像。眼睛平视，嘴是一条直线——不偏不倚。",
+        "en": "Between two dark pillars, Naiwa sits upright on a stone seat, a straight sword in one hand and scales in the other, a ring of gold light behind its head and a heavy burgundy curtain beyond; blindfolded statues stand on the pillars. Eyes level, mouth a straight line — leaning neither way."
       },
       "origin": {
         "zh": "正义女神坐在两柱之间，右手直剑、左手天平。和常见的蒙眼正义女神不同，她睁着眼——塔罗里的正义要看清事实。在韦特体系中它与「力量」互换了位置，排在第十一，正好落在大阿尔卡那的中央。",
@@ -1246,8 +1246,8 @@
         }
       ],
       "scene": {
-        "zh": "荒废的月下玫瑰园里，奶蛙骑着温顺的小白马，举着画有白玫瑰的黑旗。王冠和花瓣散落一地，两座塔之间，天正在亮。",
-        "en": "Through an abandoned moonlit rose garden, Naiwa rides a gentle white horse holding a black banner with a white rose. Crowns and petals lie scattered, and between two towers the sky is getting light."
+        "zh": "月下荒废的玫瑰园里，奶蛙披着黑色兜帽斗篷、骑着白马，举着绣白玫瑰的黑旗。一顶金冠倒在红色花瓣间，两座塔之间，太阳贴着地平线。",
+        "en": "Through an abandoned moonlit rose garden, Naiwa rides a white horse in a black hooded cloak, holding a black banner with a white rose. A golden crown lies among red petals, and between two towers the sun rests on the horizon."
       },
       "origin": {
         "zh": "骑白马的骷髅骑士举着绘有白玫瑰的黑旗，国王倒地、主教祈祷、孩童仰望，远方两座塔之间太阳升起。在塔罗里它几乎从不指肉体的死亡，而是一个阶段的终结与转化。",
@@ -1338,8 +1338,8 @@
         }
       ],
       "scene": {
-        "zh": "月光水池边，奶蛙背着一对小小的灰白翅膀，一只脚踩在水里、一只脚踏在岸上，把银色的光在两只古杯之间慢慢倒来倒去。远处的小路通向初升的太阳。",
-        "en": "By a moonlit pool, Naiwa wears small grey-white wings, one foot in the water and one on the bank, slowly pouring silver light between two antique cups. A narrow road leads to a rising sun."
+        "zh": "月光水池边，奶蛙背着一对白色羽翼，一只脚踩在水里、一只脚踏在岸上，把银色的光从铜杯慢慢倒进高脚杯。远处的小路穿过山林，通向群山间的太阳。",
+        "en": "By a moonlit pool, Naiwa wears a pair of white wings, one foot in the water and one on the bank, slowly pouring silver light from a copper cup into a goblet. A winding road leads through the hills toward the sun."
       },
       "origin": {
         "zh": "有翼天使一足踏水、一足踏岸，在两只杯子之间倒水，胸前有三角形标记，远方小路通往升起的太阳。它是「死神」之后的疗愈：把对立的东西调和成新的平衡。",
@@ -1522,8 +1522,8 @@
         }
       ],
       "scene": {
-        "zh": "闪电劈中哥特尖塔，金冠被掀飞，碎片在靛色的风暴里闪光。奶蛙站在远处安全的石阶上，抬头看着，表情一点也没变。",
-        "en": "Lightning strikes a gothic tower; its golden crown flies off and fragments glitter in the indigo storm. Naiwa stands on a safe stone stair far away, looking up, expression completely unchanged."
+        "zh": "闪电劈中山顶的哥特高塔，金冠被掀飞，石块和火星在黑灰色的风暴里四散，两缕光影向下坠落。奶蛙就站在前方的石阶上，抬头看着，表情一点也没变。",
+        "en": "Lightning strikes a gothic tower on the peak; its golden crown flies off as stones and sparks scatter through the grey-black storm, and two glowing shapes fall. Naiwa stands on the stone steps right in front, looking up, expression completely unchanged."
       },
       "origin": {
         "zh": "闪电击中高塔，王冠形的塔顶被掀落，两个人从塔上坠下，火焰与二十二道光点散落空中。它是大阿尔卡那里最剧烈的一张：建立在错误基础上的东西，终究会倒。",
@@ -1614,8 +1614,8 @@
         }
       ],
       "scene": {
-        "zh": "午夜镜面般的池塘边，奶蛙两手各提一只银壶：一壶把星光倒进池里，一壶浇着黑玫瑰。头顶一颗八芒大星，周围七颗小星，一只小黑鸟停在树上。",
-        "en": "By a mirror-still midnight pond, Naiwa holds a silver pitcher in each hand: one pours starlight into the water, the other waters black roses. A great eight-pointed star shines above with seven small ones, and a little black bird rests in a tree."
+        "zh": "午夜镜面般的池塘边，奶蛙站在岩石上，两手各提一只银壶：一壶把星光倒进池里，一壶浇着黑玫瑰。头顶一颗八芒大星，周围一圈小星，一只黑鸟停在开花的树上。",
+        "en": "By a mirror-still midnight pond, Naiwa stands on the rocks with a silver pitcher in each hand: one pours starlight into the water, the other waters black roses. A great eight-pointed star shines above, ringed by small ones, and a black bird rests in a flowering tree."
       },
       "origin": {
         "zh": "一位女子跪在池边，一壶水倒回池中、一壶浇向大地，头顶一颗八芒大星与七颗小星，树上停着一只鸟。经历「高塔」之后，这是第一缕平静的希望。",
@@ -1798,8 +1798,8 @@
         }
       ],
       "scene": {
-        "zh": "矮石墙后长着高大的黑向日葵，奶蛙披着红披风、骑着小白马，举着红旗经过。一张温和的古金太阳脸照亮了整座花园。",
-        "en": "Tall dark sunflowers rise behind a low stone wall as Naiwa rides past on a white pony in a crimson cape, holding a red banner. A gentle antique-gold sun face lights the whole garden."
+        "zh": "矮石墙后长着高大的金色向日葵，奶蛙披着红披风、骑着小白马，举着绣太阳纹的红旗经过。一张温和的古金太阳脸照亮了整座花园。",
+        "en": "Tall golden sunflowers rise behind a low stone wall as Naiwa rides past on a white pony in a crimson cape, holding a red banner embroidered with a sun. A gentle antique-gold sun face lights the whole garden."
       },
       "origin": {
         "zh": "一个孩子赤身骑在白马上，举着红旗，身后是向日葵与矮墙，上方一张大大的太阳脸。走出「月亮」的迷雾之后，一切都清楚了：这是大阿尔卡那里最明亮、最纯粹的快乐。",
@@ -1890,8 +1890,8 @@
         }
       ],
       "scene": {
-        "zh": "奶蛙站在发光的云台上，背着一黑一白的羽翼，吹响挂着红十字白旗的金色号角。云下古老的石匣安静地打开，小小的光灵顺着光束升起。",
-        "en": "Naiwa stands on a glowing cloud wearing one black and one white wing, blowing a golden trumpet hung with a white banner and red cross. Below, ancient stone chests open peacefully and small spirits of light rise along the beams."
+        "zh": "奶蛙站在发光的云台上，背着黑白相间的羽翼，吹响挂着红十字白旗的金色号角。云下古老的石匣安静地打开，小小的光灵顺着光束升起。",
+        "en": "Naiwa stands on a glowing cloud with wings of mingled white and black feathers, blowing a golden trumpet hung with a white banner and red cross. Below, ancient stone chests open peacefully and small spirits of light rise along the beams."
       },
       "origin": {
         "zh": "天使加百列吹响挂着红十字旗的号角，下方棺木中的人们张开双臂站起来。它取自「最后的审判」的意象，在塔罗里代表觉醒、清算，以及被召唤去过一种新的生活。",
