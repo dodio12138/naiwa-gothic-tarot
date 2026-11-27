@@ -1,4 +1,4 @@
-"""单次解读：python3 ai/runtime/cli.py <牌阵> <牌:方向:位置> ... [--q 问题] [--say 用户说的话] [--model qwen3:4b] [--trace]
+"""单次解读：python3 ai/runtime/cli.py <牌阵> <牌:方向:位置> ... [--q 问题] [--say 用户说的话] [--model qwen3:1.7b] [--trace]
 例：python3 ai/runtime/cli.py three major_16:r:past major_17:u:present major_18:u:future --q 分手以后我还能好起来吗
 方向：u 正位，r 逆位。--trace 打印完整调试轨迹（检索、状态、动作、提示词）。"""
 import json
@@ -13,7 +13,7 @@ def main(argv):
     if len(argv) < 2:
         print(__doc__)
         return
-    spread, cards, q, says, model, trace = argv[0], [], '', [], 'qwen3:4b', False
+    spread, cards, q, says, model, trace = argv[0], [], '', [], 'qwen3:1.7b', False
     i = 1
     while i < len(argv):
         a = argv[i]

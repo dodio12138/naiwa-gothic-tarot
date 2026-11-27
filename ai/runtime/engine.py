@@ -1,6 +1,6 @@
 """最小闭环：抽牌结果 → 检索与规则 → 结构化状态 → 选动作 → 受状态约束的生成 → 输出检查。
 
-对应 v0.6 第 9.7 节的运行顺序。模型用本地 Ollama（默认 qwen3:4b，未微调），只负责写一段话；
+对应 v0.6 第 9.7 节的运行顺序。模型用本地 Ollama（默认 qwen3:1.7b，未微调），只负责写一段话；
 危机转向与结束是程序直接给出的固定话术，不经过模型。
 """
 import json
@@ -27,13 +27,14 @@ SYSTEM = """你是「奶蛙」：一只面无表情、温和、话不多的黄�
 /no_think"""
 
 ACTION_GUIDE = {
-    'ANSWER': '按位置逐张简短解读（每张一两句，引用一个看得见的意象），再用一句话说整体；最后可以用一句给定的低语收尾（选最贴切的一句，原文照用）。不要提问。总长 120～220 字。',
+    'ANSWER': '按位置逐张解读：每张都以「位置·牌名」开头（例如「现在·星星」），一两句，引用一个看得见的意象；再用一句话说整体；最后可以用一句给定的低语收尾（原文照用）。不要提问，不要用列表符号。总长 120～220 字。',
     'ASK': '先简短解读（引用看得见的意象，不替用户做决定），然后用一个开放、不诱导的问题结尾，帮用户想清楚自己在意什么。总长 100～180 字。',
     'ANSWER_MEANING': '用户只想知道牌义：直接讲这张牌在当前方向下的含义和关键词，不分析用户本人，不联系用户的经历，不提问。80～150 字。',
-    'REFLECT': '用户说出了自己的联想。先用用户自己的话轻轻复述，不分析原因，不追问细节，不做任何诊断；告诉对方可以不说、也可以随时停下。可以给一句温和的低语。60～120 字。',
+    'REFLECT': '用户说出了自己的联想。只用一两句轻轻接住（可以复述用户的原话），然后停下：不解释这段记忆，不说它代表什么、来自哪里，不把它和牌义联系起来下结论，不追问细节，不做任何诊断。40～80 字。',
     'PLAYFUL_REPLY': '用户明确是来玩梗的。用一两句轻松、带点自嘲的话接住，不做心理分析，不讲大道理；可以邀请对方「比一张牌」。30～80 字。',
 }
 
+EXIT_TEXT = {'zh': '不想多说也没关系，可以不说，也可以随时停下。', 'en': "You don't have to say more. You can stop whenever you like."}
 CLOSE_TEXT = {'zh': '好。这张牌就留在这里。', 'en': 'All right. This card can stay here.'}
 SAFETY_TEXT = {
     'zh': '听起来你现在挺难受的。牌先放一放。如果你有伤害自己的念头，或正身处危险，请马上联系身边信任的人、当地的心理援助热线或急救电话。愿意的话，也可以说说发生了什么。',
@@ -73,6 +74,8 @@ def build_state(inp, lang='zh'):
 def _prompt(state, action):
     lines = [f"牌阵：{state['spread']['name']}" + (f"（{state['spread']['note']}）" if state['spread']['note'] else '')]
     lines.append(f"用户的问题：{state['question'] or '（没有提问，做纯符号解读，不要追问私事）'}")
+    if state['spread']['note']:
+        lines.append(f"这个牌阵的边界（必须遵守）：{state['spread']['note']} 解读时用「在你眼中」来说对方，不替对方下结论。")
     for f in state['known_facts'][1 if state['question'] else 0:]:
         lines.append(f"用户刚才说：{f['text']}")
     for c in state['active_cards']:
@@ -108,7 +111,41 @@ def _chat(model, system, user, num_predict=420):
                   'prompt_tokens': d.get('prompt_eval_count'), 'total_ms': (d.get('total_duration') or 0) / 1e6}
 
 
-def run(inp, model='qwen3:4b', lang='zh'):
+def _card_lines(state, model, lang):
+    """张数多（≥4）时分步生成：每张牌单独一两句，再单独写一句整体；小模型一次写不全 6～10 张"""
+    lines, stats_all = [], []
+    for c in state['active_cards']:
+        o = '逆位' if c['orientation'] == 'reversed' else '正位'
+        vis = '；'.join((c.get('visible_traditional') or [])[:4])
+        p = (f"位置：{c['position']['name']}（{c['position']['meaning']}）\n牌：{c['name']} · {o}\n关键词：{'、'.join(c['keywords'])}\n牌义：{c['meaning']}"
+             + (f"\n画面里看得见的传统意象：{vis}" if vis else '')
+             + (f"\n牌阵边界：{state['spread']['note']}" if state['spread']['note'] else '')
+             + f"\n\n用一两句话解读这张牌在这个位置上的意思，以「{c['position']['name']}·{c['name']}：」开头，不提问，不用列表，40～70 字。")
+        t, st = _chat(model, SYSTEM, p, num_predict=160)
+        head = f"{c['position']['name']}·{c['name']}"
+        if not t.startswith(head):
+            t = f"{head}：{t.split('：', 1)[-1] if '：' in t[:20] else t}"
+        lines.append(t.strip())
+        stats_all.append(st)
+    q = state['question'] or '（没有提问）'
+    p = ("用户的问题：" + q + "\n各位置的解读：\n" + '\n'.join(lines)
+         + (f"\n牌阵边界：{state['spread']['note']}" if state['spread']['note'] else '')
+         + "\n\n用一句话说整体（不预测结果，不替任何人下结论" + ("，用「在你眼中」来说对方" if state['spread']['note'] else '') + "），30～60 字。")
+    t, st = _chat(model, SYSTEM, p, num_predict=120)
+    stats_all.append(st)
+    agg = {'eval_count': sum(x['eval_count'] or 0 for x in stats_all), 'eval_ms': sum(x['eval_ms'] for x in stats_all),
+           'prompt_tokens': sum(x['prompt_tokens'] or 0 for x in stats_all), 'total_ms': sum(x['total_ms'] for x in stats_all), 'calls': len(stats_all)}
+    return '\n'.join(lines) + '\n\n' + t.strip(), agg
+
+
+def _strip_questions(text):
+    """个人联想之后不追问：去掉带问号的句子"""
+    parts = re.split(r'(?<=[。！？!?\n])', text)
+    keep = [x for x in parts if '？' not in x and '?' not in x]
+    return ''.join(keep).strip()
+
+
+def run(inp, model='qwen3:1.7b', lang='zh'):
     """跑一轮，返回完整调试轨迹（v0.6 第 21.8 节：检索内容、状态、动作、提示词、输出、耗时）"""
     t0 = time.time()
     action, why = decide(inp.get('question', ''), inp.get('user_turns') or [])
@@ -120,13 +157,24 @@ def run(inp, model='qwen3:4b', lang='zh'):
         trace.update(output=CLOSE_TEXT[lang], generated=False)
     else:
         prompt = _prompt(state, action)
-        text, stats = _chat(model, SYSTEM, prompt)
+        if action in ('ANSWER', 'ASK') and len(state['active_cards']) >= 4:
+            text, stats = _card_lines(state, model, lang)
+            if action == 'ASK':
+                tq, _ = _chat(model, SYSTEM, f"用户的问题：{state['question']}\n\n只写一个开放、不诱导、帮用户想清楚自己在意什么的问题，一句话。", num_predict=60)
+                text += '\n\n' + tq.strip()
+            if state['spread']['note'] and '你眼中' not in text and lang == 'zh':
+                text += '\n\n（这里的「对方」只是你眼中的对方，牌读不出别人的真实想法。）'
+        else:
+            text, stats = _chat(model, SYSTEM, prompt)
         bad = violations(text)
         retried = False
         if bad:   # 命中禁用说法：带着提醒重写一次
             retried = True
             text, stats = _chat(model, SYSTEM, prompt + f"\n\n注意：上一次的回答用了不允许的说法（{'、'.join(bad)}），请重写，避免它们。")
             bad = violations(text)
+        if action == 'REFLECT':   # 个人联想之后：去掉追问，由程序补上「可以不说、可以停」的出口，不依赖模型记得
+            text = _strip_questions(text) or ('嗯，你想起了那个时候。' if lang == 'zh' else 'I hear what came to mind.')
+            text = text.rstrip() + '\n\n' + EXIT_TEXT[lang]
         trace.update(prompt=prompt, output=text, generated=True, stats=stats, retried=retried, violations=bad)
     trace['latency_s'] = round(time.time() - t0, 1)
     return trace

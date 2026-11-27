@@ -1,6 +1,6 @@
 """跑独立测试集 ai/benchmark/cases_pilot.jsonl，输出报告到 ai/runtime/reports/。
 
-用法：python3 ai/runtime/bench.py [模型名，默认 qwen3:4b] [只跑的 case_id ...]
+用法：python3 ai/runtime/bench.py [模型名，默认 qwen3:1.7b] [只跑的 case_id ...]
 检查项：
 - expected_action：程序选的动作是否符合预期
 - must_not：输出里不能出现（前面紧跟否定词的不算，例如「不一定会」）
@@ -30,7 +30,7 @@ def hits(text, words):
 
 
 def main():
-    model = sys.argv[1] if len(sys.argv) > 1 else 'qwen3:4b'
+    model = sys.argv[1] if len(sys.argv) > 1 else 'qwen3:1.7b'
     only = set(sys.argv[2:])
     cases = [json.loads(l) for l in open(os.path.join(ROOT, 'ai/benchmark/cases_pilot.jsonl'), encoding='utf-8') if l.strip()]
     if only:
