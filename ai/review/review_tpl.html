@@ -98,7 +98,7 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid var(--gold); o
     <div>
       <div class="eyebrow">NAIWA · SLM PILOT</div>
       <h1>奶蛙语义试点审核</h1>
-      <p class="lede">7 张试点大牌的命题、矛盾、语义种子、追问树，以及 10 个测试样例。哥特和风格化夜晚的元素已经去掉，每张牌顶部是与韦特传统意象的对照；「多出的部分」请你决定去留，其余条目 Claude 已自查，标「已修改」的是这次改过的。每条选一个结果，要改的写一句怎么改，改动自动保存。</p>
+      <p class="lede">7 张试点大牌的命题、矛盾、语义种子、追问树，以及 10 个测试样例。哥特和风格化夜晚的元素已经去掉，每张牌顶部是与韦特传统意象的对照；「多出的部分」已决定全部保留，其余条目 Claude 已自查，标「已修改」的是这次改过的。每条选一个结果，要改的写一句怎么改，改动自动保存。</p>
     </div>
     <div class="progress" aria-live="polite">
       <div id="prog-text">正在读取审核记录……</div>
@@ -133,7 +133,7 @@ const itemsOf = (key) => key === 'bench' ? D.cases.map((c) => c.case_id) : [
 const CHG = Object.fromEntries(D.changes.map((c) => [c.id, c.why]));
 const changedNote = (id) => CHG[id] ? `<p class="why">已修改：${esc(CHG[id])}</p>` : '';
 const changedTag = (id) => CHG[id] ? '<span class="changed">已修改</span>' : '';
-const extraUse = (refs, k) => { const ex = (refs || []).filter((s) => (k.extras || []).some((x) => x.id === s)); return ex.length ? `<p class="extra-use">用到了多出的画面元素：${esc(ex.join('、'))}——等你对「多出的部分」的决定</p>` : ''; };
+const extraUse = (refs, k) => { const ex = (refs || []).filter((s) => (k.extras || []).some((x) => x.id === s)); return ex.length ? `<p class="extra-use">依据奶蛙版特有象征（传统没有）：${esc(ex.join('、'))}</p>` : ''; };
 const ALL = groups.flatMap((g) => itemsOf(g.key));
 
 const R = {};          // 审核记录：id -> {status, note}
@@ -184,7 +184,7 @@ function renderCard(g) {
     </tbody></table></div>
     <div class="removed">已从 AI 数据去掉的哥特 / 风格化夜晚元素：<span class="chips">${k.removed.map((x) => `<span class="chip">${esc(x.zh)}</span>`).join('') || '—'}</span></div>
   </div>
-  ${(k.extras || []).length ? `<section class="group"><h3>多出的部分</h3><p class="hint">传统牌面里没有、我们画面多出来的元素。选「保留」的会作为奶蛙版特有的象征进入 AI 数据，「去掉」的不再被引用。</p>
+  ${(k.extras || []).length ? `<section class="group"><h3>多出的部分</h3><p class="hint">传统牌面里没有、我们画面多出来的元素。已决定全部保留，作为奶蛙版特有的象征使用，和传统意象分开标注。</p>
     ${k.extras.map((x) => item(`extra.${g.key}.${x.id}`, `<div class="id">${esc(x.id)}</div><p class="zh">${esc(x.zh)}</p>${x.note ? `<p class="en">${esc(x.note)}</p>` : ''}`, ['保留', '要改', '去掉'])).join('')}
   </section>` : ''}
   <section class="group"><h3>命题</h3><p class="hint">这张牌可以讨论的核心观点，不是事实。看看是否站得住、反例是否够。</p>

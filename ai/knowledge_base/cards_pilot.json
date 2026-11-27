@@ -50,7 +50,7 @@
         "bindle",
         "small_dog"
       ],
-      "extra_symbol_refs": [
+      "naiwa_symbol_refs": [
         "waterfalls",
         "gnarled_tree"
       ],
@@ -167,7 +167,7 @@
         "barren_mountains",
         "red_sky"
       ],
-      "extra_symbol_refs": [
+      "naiwa_symbol_refs": [
         "eagle_mantle"
       ],
       "style_removed_refs": [
@@ -299,7 +299,7 @@
         "halo",
         "ancient_tree"
       ],
-      "extra_symbol_refs": [
+      "naiwa_symbol_refs": [
         "loose_arms",
         "stream",
         "white_lilies"
@@ -413,7 +413,7 @@
         "bat_wings",
         "black_pedestal"
       ],
-      "extra_symbol_refs": [
+      "naiwa_symbol_refs": [
         "pentagram_clasp"
       ],
       "style_removed_refs": [
@@ -541,7 +541,7 @@
         "storm_clouds",
         "aqueducts"
       ],
-      "extra_symbol_refs": [
+      "naiwa_symbol_refs": [
         "naiwa_on_stairs",
         "falling_debris"
       ],
@@ -653,7 +653,7 @@
         "black_bird",
         "pond"
       ],
-      "extra_symbol_refs": [],
+      "naiwa_symbol_refs": [],
       "style_removed_refs": [
         "black_roses",
         "milky_way",
@@ -777,7 +777,7 @@
         "winding_path",
         "pool"
       ],
-      "extra_symbol_refs": [
+      "naiwa_symbol_refs": [
         "rabbit_plush",
         "purple_irises"
       ],

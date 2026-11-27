@@ -16,10 +16,10 @@ const FRAMEWORKS = ['traditional_rws', 'hermetic', 'jungian_extension', 'existen
 
 const kb = read('ai/knowledge_base/cards_pilot.json').cards;
 const cardIds = new Set(kb.map((c) => c.card_id));
-const symbolsOf = Object.fromEntries(kb.map((c) => [c.card_id, new Set([...c.visual_symbol_refs, ...(c.extra_symbol_refs || [])])]));
-const extraOf = Object.fromEntries(kb.map((c) => [c.card_id, new Set(c.extra_symbol_refs || [])]));
+const symbolsOf = Object.fromEntries(kb.map((c) => [c.card_id, new Set([...c.visual_symbol_refs, ...(c.naiwa_symbol_refs || [])])]));
+const extraOf = Object.fromEntries(kb.map((c) => [c.card_id, new Set(c.naiwa_symbol_refs || [])]));
 const removedOf = Object.fromEntries(kb.map((c) => [c.card_id, new Set(c.style_removed_refs || [])]));
-const usesExtra = [];   // 用到「多出元素」的条目：不算错，列出来等用户看
+const usesExtra = [];   // 用到奶蛙版特有象征的条目：合法，列出来便于区分「传统依据」与「奶蛙版依据」
 const allCards = new Set(read('data/cards.json').cards.map((c) => c.id));
 for (const c of kb) if (!allCards.has(c.card_id)) err(`知识库：${c.card_id} 不是站内的牌`);
 
@@ -124,5 +124,5 @@ if (errors.length) {
   console.error(`AI 数据校验失败（${errors.length} 项）：\n  - ${errors.join('\n  - ')}`);
   process.exit(1);
 }
-if (usesExtra.length) console.log(`用到「多出元素」、等待审核的引用（${usesExtra.length}）：\n  - ${usesExtra.join('\n  - ')}`);
+if (usesExtra.length) console.log(`用到奶蛙版特有象征的引用（${usesExtra.length}）：\n  - ${usesExtra.join('\n  - ')}`);
 console.log(`AI 数据校验通过：知识库 ${kb.length} 张、命题 ${props.length}、矛盾 ${contras.length}、种子 ${seeds.length}、追问树 ${trees.length}、测试样例 ${cases.length}`);

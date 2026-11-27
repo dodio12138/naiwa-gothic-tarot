@@ -1,5 +1,5 @@
 {
-  "$comment": "7 张试点牌：韦特传统意象与我们实际牌面的对照（人工整理）。traditional.status：present 一致 / altered 有改动 / absent 画面没有。style_removed：哥特与风格化夜晚元素，不进入 AI 数据。extra_for_review：传统没有、我们多出的其它元素，等用户决定是否采用。",
+  "$comment": "7 张试点牌：韦特传统意象与我们实际牌面的对照（人工整理）。traditional.status：present 一致 / altered 有改动 / absent 画面没有。style_removed：哥特与风格化夜晚元素，不进入 AI 数据。naiwa_kept：传统没有、我们多出的其它元素，用户已决定保留（2026-11-27），作为奶蛙版特有的象征使用，与传统意象分开标注。",
   "cards": {
     "major_00": {
       "traditional": [
@@ -70,7 +70,7 @@
           "note": ""
         }
       ],
-      "extra_for_review": [
+      "naiwa_kept": [
         {
           "id": "waterfalls",
           "zh": "云雾中的瀑布",
@@ -163,7 +163,7 @@
           "note": ""
         }
       ],
-      "extra_for_review": [
+      "naiwa_kept": [
         {
           "id": "eagle_mantle",
           "zh": "绣鹰纹的红斗篷",
@@ -235,7 +235,7 @@
           "note": ""
         }
       ],
-      "extra_for_review": [
+      "naiwa_kept": [
         {
           "id": "loose_arms",
           "zh": "双手自然下垂、没有被绑",
@@ -336,7 +336,7 @@
           "note": ""
         }
       ],
-      "extra_for_review": [
+      "naiwa_kept": [
         {
           "id": "pentagram_clasp",
           "zh": "五芒星斗篷扣",
@@ -403,7 +403,7 @@
           "note": ""
         }
       ],
-      "extra_for_review": [
+      "naiwa_kept": [
         {
           "id": "naiwa_on_stairs",
           "zh": "奶蛙站在前景石阶上旁观",
@@ -499,7 +499,7 @@
           "note": ""
         }
       ],
-      "extra_for_review": []
+      "naiwa_kept": []
     },
     "major_18": {
       "traditional": [
@@ -560,7 +560,7 @@
           "note": ""
         }
       ],
-      "extra_for_review": [
+      "naiwa_kept": [
         {
           "id": "rabbit_plush",
           "zh": "怀里抱着黑兔玩偶",

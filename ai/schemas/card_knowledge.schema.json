@@ -163,6 +163,59 @@
         "reviewed",
         "quarantined"
       ]
+    },
+    "naiwa_symbol_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": "传统没有、用户决定保留的奶蛙版特有象征"
+    },
+    "style_removed_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": "哥特与风格化夜晚元素：不得被引用"
+    },
+    "imagery_compare": {
+      "type": "array",
+      "description": "与韦特传统意象的逐项对照",
+      "items": {
+        "type": "object",
+        "required": [
+          "rws",
+          "zh",
+          "status"
+        ],
+        "properties": {
+          "rws": {
+            "type": "string"
+          },
+          "zh": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "present",
+              "altered",
+              "absent"
+            ]
+          },
+          "symbol_ref": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
     }
   },
   "additionalProperties": false

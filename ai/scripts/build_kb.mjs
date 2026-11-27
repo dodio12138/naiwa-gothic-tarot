@@ -4,7 +4,7 @@
 //   与传统意象的对照：ai/knowledge_base/imagery_compare_pilot.json（人工整理）
 //     · 只有对应传统意象的符号进入 visual_symbol_refs
 //     · 哥特与风格化夜晚元素（style_removed）完全不进入 AI 数据
-//     · 传统没有、我们多出的其它元素放在 extra_symbol_refs，等用户审核后决定去留
+//     · 传统没有、我们多出的其它元素（用户已决定保留）放在 naiwa_symbol_refs，作为奶蛙版特有的象征，与传统意象分开
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -35,7 +35,7 @@ const out = PILOT.map((id) => {
     },
     artwork_ref: a.artwork_id,
     visual_symbol_refs: compare[id].traditional.filter((t) => t.symbol_ref && t.status !== 'absent').map((t) => t.symbol_ref),
-    extra_symbol_refs: compare[id].extra_for_review.map((x) => x.id),
+    naiwa_symbol_refs: compare[id].naiwa_kept.map((x) => x.id),
     style_removed_refs: compare[id].style_removed.map((x) => x.id),
     rws_absent: compare[id].traditional.filter((t) => t.status === 'absent').map((t) => t.rws),
     imagery_compare: compare[id].traditional,
