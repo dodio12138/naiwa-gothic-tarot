@@ -10,8 +10,15 @@ CRISIS = ['活着没意思', '活着真没意思', '不想活', '想死', '去�
 STOP = ['不想聊了', '不聊了', '别问了', '不想说了', '算了吧', '结束吧', "don't want to talk", 'stop asking']
 MEANING_ONLY = ['只想知道牌义', '只要牌义', '直接说牌义', '别分析', '不要分析', 'just the meaning']
 PLAY = ['玩梗', '来玩的', '就是来玩', '开玩笑', '逗你', 'just kidding', 'for the meme']
+GRIEF = ['去世', '离世', '过世', '病逝', '不在了', '刚走', 'passed away', 'died']
 ASSOCIATION = ['让我想到', '让我想起', '我想到', '我想起', 'reminds me']
+# 问的是另一个人（会不会、是不是、心里怎么想）：牌读不出他人的想法
+THIRD_PARTY = re.compile(r'(他|她|对方|ta|TA)(会不会|是不是|还爱|爱不爱|喜欢|心里|在想|怎么想|会选|会回来)')
 DECISION = ['该不该', '要不要', '应不应该', '应该怎么选', 'should i']
+
+
+def about_other(question):
+    return bool(THIRD_PARTY.search(question or ''))
 
 
 def _has(text, words):
@@ -30,6 +37,9 @@ def decide(question, user_turns):
     hit = _has(latest, STOP)
     if hit:
         return 'CLOSE', f'用户要求停止：{hit}'
+    hit = _has(everything, GRIEF)
+    if hit:   # 哀悼：先接住，不解读死亡、不急着找意义（v0.6 第 26.3 节）
+        return 'REFLECT', f'哀悼：{hit}'
     hit = _has(latest or question, MEANING_ONLY)
     if hit:
         return 'ANSWER_MEANING', f'只要牌义：{hit}'

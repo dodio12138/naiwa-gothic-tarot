@@ -11,7 +11,9 @@ import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const read = (f) => JSON.parse(fs.readFileSync(path.join(root, f), 'utf8'));
-export const PILOT = ['major_00', 'major_04', 'major_12', 'major_15', 'major_16', 'major_17', 'major_18'];
+// 全部 22 张大阿卡纳（试点 7 张起步，2026-11-27 扩到 22 张）；只处理已有对照表的牌
+const compareAll = JSON.parse(fs.readFileSync(path.join(root, 'ai/knowledge_base/imagery_compare_pilot.json'), 'utf8')).cards;
+export const PILOT = Array.from({ length: 22 }, (_, i) => `major_${String(i).padStart(2, '0')}`).filter((id) => compareAll[id]);
 
 const { cards } = read('data/cards.json');
 const { artworks } = read('data/visual_symbols.json');

@@ -2,12 +2,27 @@
   "$comment": "试点语义框架（draft，待人工审核）。格式见 ai/schemas/。",
   "pilot_cards": [
     "major_00",
+    "major_01",
+    "major_02",
+    "major_03",
     "major_04",
+    "major_05",
+    "major_06",
+    "major_07",
+    "major_08",
+    "major_09",
+    "major_10",
+    "major_11",
     "major_12",
+    "major_13",
+    "major_14",
     "major_15",
     "major_16",
     "major_17",
-    "major_18"
+    "major_18",
+    "major_19",
+    "major_20",
+    "major_21"
   ],
   "trees": [
     {
@@ -170,6 +185,690 @@
           "text": {
             "zh": "愚者正位：开始、纯真、未知；逆位：鲁莽、迟疑，或不敢出发。这是象征，不是预言。",
             "en": "The Fool upright: beginnings, innocence, the unknown; reversed: recklessness, hesitation, or not daring to start. A symbol, not a prophecy."
+          },
+          "branches": [
+            {
+              "when": "asks_more",
+              "to": "n4"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "soften",
+          "action": "ASK",
+          "text": {
+            "zh": "那就不往下问了。想听牌义，还是就停在这里？",
+            "en": "Then I won't ask further. Would you like the card's meaning, or shall we stop here?"
+          },
+          "branches": [
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "close",
+          "action": "CLOSE",
+          "text": {
+            "zh": "好。这张牌就留在这里。",
+            "en": "All right. This card can stay here."
+          }
+        },
+        {
+          "id": "safety",
+          "action": "SAFETY_REDIRECT",
+          "text": {
+            "zh": "听起来你现在挺难受的。牌先放一放。如果你有伤害自己的念头，或正身处危险，请马上联系身边信任的人、当地的心理援助热线或急救电话。愿意的话，也可以说说发生了什么。",
+            "en": "It sounds like you're having a hard time. Let's set the cards aside. If you're thinking of hurting yourself or you're in danger, please reach out right away to someone you trust, a local crisis line, or emergency services. If you'd like, you can also tell me what's happening."
+          }
+        }
+      ],
+      "stop_rules": [
+        "用户拒绝、说想停止时立即结束，不追加问题",
+        "同一方向被否定两次后不再追问，改为直述牌义或结束",
+        "出现危机信号时退出塔罗语境，直接提供现实支持",
+        "用户表示有点不舒服但不是危机时，先停止追问、降低强度，询问想听牌义还是结束（soften 节点）；明确危机信号才走安全转向",
+        "每轮最多一个问题；用户只要牌义时直接回答"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "tree_id": "inq.major_01",
+      "card_refs": [
+        "major_01"
+      ],
+      "root": "n1",
+      "nodes": [
+        {
+          "id": "n1",
+          "action": "ASK",
+          "text": {
+            "zh": "画面里，你的目光先停在哪里？举起的权杖、桌上的四件道具、头顶的无限符号，还是别的地方？",
+            "en": "Where does your eye stop first — the raised wand, the four tools on the table, the infinity sign overhead, or somewhere else?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n2"
+            },
+            {
+              "when": "no_association",
+              "to": "n3"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n2",
+          "action": "ASK",
+          "text": {
+            "zh": "最近有没有一件事，你想让它从念头变成真的？没有也没关系。",
+            "en": "Is there something lately you would like to turn from a thought into something real? It's all right if there isn't."
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n3",
+          "action": "HINT",
+          "text": {
+            "zh": "没有特别的感觉也没关系。魔术师常与意志、把想法落到行动有关。最近有没有什么想法，还停在心里？",
+            "en": "It's fine to feel nothing in particular. The Magician is often about will and turning ideas into action. Is there an idea lately that is still waiting inside you?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n4",
+          "action": "ASK",
+          "text": {
+            "zh": "如果那件事要从桌上拿起一样东西开始，你会先拿什么？还没想好也没关系。",
+            "en": "If that thing began with picking up one item from the table, what would you take first? It's fine if you don't know yet."
+          },
+          "seed_refs": [
+            "seed.major_01.02"
+          ],
+          "branches": [
+            {
+              "when": "associates",
+              "to": "close"
+            },
+            {
+              "when": "asks_more",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "meaning",
+          "action": "ANSWER",
+          "text": {
+            "zh": "魔术师正位：意志、创造、行动，把想法落到现实；逆位：才能分散或误用、空有技巧缺少方向，或被话术迷惑。这是象征，不是预言。",
+            "en": "The Magician upright: will, creation, action — bringing ideas into reality; reversed: talent scattered or misused, skill without direction, or being dazzled by clever words. A symbol, not a prophecy."
+          },
+          "branches": [
+            {
+              "when": "asks_more",
+              "to": "n4"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "soften",
+          "action": "ASK",
+          "text": {
+            "zh": "那就不往下问了。想听牌义，还是就停在这里？",
+            "en": "Then I won't ask further. Would you like the card's meaning, or shall we stop here?"
+          },
+          "branches": [
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "close",
+          "action": "CLOSE",
+          "text": {
+            "zh": "好。这张牌就留在这里。",
+            "en": "All right. This card can stay here."
+          }
+        },
+        {
+          "id": "safety",
+          "action": "SAFETY_REDIRECT",
+          "text": {
+            "zh": "听起来你现在挺难受的。牌先放一放。如果你有伤害自己的念头，或正身处危险，请马上联系身边信任的人、当地的心理援助热线或急救电话。愿意的话，也可以说说发生了什么。",
+            "en": "It sounds like you're having a hard time. Let's set the cards aside. If you're thinking of hurting yourself or you're in danger, please reach out right away to someone you trust, a local crisis line, or emergency services. If you'd like, you can also tell me what's happening."
+          }
+        }
+      ],
+      "stop_rules": [
+        "用户拒绝、说想停止时立即结束，不追加问题",
+        "同一方向被否定两次后不再追问，改为直述牌义或结束",
+        "出现危机信号时退出塔罗语境，直接提供现实支持",
+        "用户表示有点不舒服但不是危机时，先停止追问、降低强度，询问想听牌义还是结束（soften 节点）；明确危机信号才走安全转向",
+        "每轮最多一个问题；用户只要牌义时直接回答"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "tree_id": "inq.major_02",
+      "card_refs": [
+        "major_02"
+      ],
+      "root": "n1",
+      "nodes": [
+        {
+          "id": "n1",
+          "action": "ASK",
+          "text": {
+            "zh": "这张牌里，哪一部分最让你停留：黑白两根柱子、身后的石榴帷幕、脚边的新月，或者别的地方？",
+            "en": "Which part of this card holds you most — the black and white pillars, the pomegranate veil behind, the crescent at the feet, or somewhere else?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n2"
+            },
+            {
+              "when": "no_association",
+              "to": "n3"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n2",
+          "action": "ASK",
+          "text": {
+            "zh": "最近有没有一件事，你心里隐约知道点什么，却还说不清？没有也没关系。",
+            "en": "Is there something lately you sense a little about but can't yet put into words? It's all right if there isn't."
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n3",
+          "action": "HINT",
+          "text": {
+            "zh": "女祭司常与直觉、安静和还没显露的东西有关。最近有没有哪个时刻，你更想先安静一下？",
+            "en": "The High Priestess is often about intuition, stillness and what has not yet shown itself. Has there been a moment lately when you wanted some quiet first?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n4",
+          "action": "ASK",
+          "text": {
+            "zh": "愿意的话说说：在那件事里，有没有你已经知道的部分，或者还想再看清的部分？说不上来也没关系。",
+            "en": "Only if you'd like to say: in that matter, is there a part you already know, or a part you'd still like to see more clearly? It's fine if you can't say."
+          },
+          "seed_refs": [
+            "seed.major_02.02"
+          ],
+          "branches": [
+            {
+              "when": "associates",
+              "to": "close"
+            },
+            {
+              "when": "asks_more",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "meaning",
+          "action": "ANSWER",
+          "text": {
+            "zh": "女祭司正位：直觉、静默、隐秘的知识与潜意识；逆位：忽视直觉、秘密尚未浮现，或急于下结论。这是象征，不是预言。",
+            "en": "The High Priestess upright: intuition, silence, hidden knowledge and the subconscious; reversed: ignoring intuition, secrets not yet surfaced, or rushing to conclusions. A symbol, not a prophecy."
+          },
+          "branches": [
+            {
+              "when": "asks_more",
+              "to": "n4"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "soften",
+          "action": "ASK",
+          "text": {
+            "zh": "那就不往下问了。想听牌义，还是就停在这里？",
+            "en": "Then I won't ask further. Would you like the card's meaning, or shall we stop here?"
+          },
+          "branches": [
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "close",
+          "action": "CLOSE",
+          "text": {
+            "zh": "好。这张牌就留在这里。",
+            "en": "All right. This card can stay here."
+          }
+        },
+        {
+          "id": "safety",
+          "action": "SAFETY_REDIRECT",
+          "text": {
+            "zh": "听起来你现在挺难受的。牌先放一放。如果你有伤害自己的念头，或正身处危险，请马上联系身边信任的人、当地的心理援助热线或急救电话。愿意的话，也可以说说发生了什么。",
+            "en": "It sounds like you're having a hard time. Let's set the cards aside. If you're thinking of hurting yourself or you're in danger, please reach out right away to someone you trust, a local crisis line, or emergency services. If you'd like, you can also tell me what's happening."
+          }
+        }
+      ],
+      "stop_rules": [
+        "用户拒绝、说想停止时立即结束，不追加问题",
+        "同一方向被否定两次后不再追问，改为直述牌义或结束",
+        "出现危机信号时退出塔罗语境，直接提供现实支持",
+        "用户表示有点不舒服但不是危机时，先停止追问、降低强度，询问想听牌义还是结束（soften 节点）；明确危机信号才走安全转向",
+        "每轮最多一个问题；用户只要牌义时直接回答"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "tree_id": "inq.major_03",
+      "card_refs": [
+        "major_03"
+      ],
+      "root": "n1",
+      "nodes": [
+        {
+          "id": "n1",
+          "action": "ASK",
+          "text": {
+            "zh": "这张牌里，哪一部分最让你停留：金色的麦穗、石榴、宽大的宝座，或者别的地方？",
+            "en": "Which part of this card holds you most — the golden wheat, the pomegranates, the wide throne, or somewhere else?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n2"
+            },
+            {
+              "when": "no_association",
+              "to": "n3"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n2",
+          "action": "ASK",
+          "text": {
+            "zh": "最近有没有什么，是你在慢慢照顾、等它长大的？没有也没关系。",
+            "en": "Is there something lately you have been tending slowly, waiting for it to grow? It's all right if there isn't."
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n3",
+          "action": "HINT",
+          "text": {
+            "zh": "皇后常与滋养、生长和身体的舒适有关。最近在照顾自己这件事上，你有什么感觉？",
+            "en": "The Empress is often about nourishment, growth and bodily comfort. Lately, how does looking after yourself feel to you?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n4",
+          "action": "ASK",
+          "text": {
+            "zh": "如果那样东西需要一点养分，你会想给它什么？还说不上来也没关系。",
+            "en": "If that thing needed a little nourishment, what would you want to give it? It's fine if you can't say yet."
+          },
+          "seed_refs": [
+            "seed.major_03.01"
+          ],
+          "branches": [
+            {
+              "when": "associates",
+              "to": "close"
+            },
+            {
+              "when": "asks_more",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "meaning",
+          "action": "ANSWER",
+          "text": {
+            "zh": "皇后正位：丰饶、养育、生命力与感官的享受；逆位：付出过度、疏于照顾自己，或生长暂时停滞。这是象征，不是预言。",
+            "en": "The Empress upright: abundance, nurture, vitality and the pleasures of the senses; reversed: giving too much, neglecting oneself, or growth stalled for now. A symbol, not a prophecy."
           },
           "branches": [
             {
@@ -467,6 +1166,1602 @@
       "review_status": "reviewed"
     },
     {
+      "tree_id": "inq.major_05",
+      "card_refs": [
+        "major_05"
+      ],
+      "root": "n1",
+      "nodes": [
+        {
+          "id": "n1",
+          "action": "ASK",
+          "text": {
+            "zh": "这张牌里，哪一部分最让你停留：举起的手、交叉的两把钥匙、跪着的两位侍者，或者别的地方？",
+            "en": "Which part of this card holds you most — the raised hand, the two crossed keys, the two kneeling acolytes, or somewhere else?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n2"
+            },
+            {
+              "when": "no_association",
+              "to": "n3"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n2",
+          "action": "ASK",
+          "text": {
+            "zh": "最近有没有一个人、一种传统或一套做法，是你在跟着学，或者在想要不要跟的？没有也没关系。",
+            "en": "Is there a person, a tradition or a way of doing things lately that you are learning from — or wondering whether to follow? It's all right if there isn't."
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n3",
+          "action": "HINT",
+          "text": {
+            "zh": "教皇常与传统、教导和共同的规矩有关。在你身边，有没有哪种经验或习惯，是从别人那里传下来的？",
+            "en": "The Hierophant is often about tradition, teaching and shared rules. Around you, is there some experience or habit that was handed down from others?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n4",
+          "action": "ASK",
+          "text": {
+            "zh": "那些传下来的东西里，有没有你想留着的，或者想换个做法的？都没有也可以。",
+            "en": "Among what was handed down, is there anything you want to keep, or anything you'd do differently? Neither is fine too."
+          },
+          "seed_refs": [
+            "seed.major_05.01"
+          ],
+          "branches": [
+            {
+              "when": "associates",
+              "to": "close"
+            },
+            {
+              "when": "asks_more",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "meaning",
+          "action": "ANSWER",
+          "text": {
+            "zh": "教皇正位：传统、仪式、教导与可靠的指引；逆位：旧规矩不再适用、质疑教条，或走自己的路。这是象征，不是预言。",
+            "en": "The Hierophant upright: tradition, ritual, teaching and reliable guidance; reversed: old rules no longer fitting, questioning dogma, or walking one's own road. A symbol, not a prophecy."
+          },
+          "branches": [
+            {
+              "when": "asks_more",
+              "to": "n4"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "soften",
+          "action": "ASK",
+          "text": {
+            "zh": "那就不往下问了。想听牌义，还是就停在这里？",
+            "en": "Then I won't ask further. Would you like the card's meaning, or shall we stop here?"
+          },
+          "branches": [
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "close",
+          "action": "CLOSE",
+          "text": {
+            "zh": "好。这张牌就留在这里。",
+            "en": "All right. This card can stay here."
+          }
+        },
+        {
+          "id": "safety",
+          "action": "SAFETY_REDIRECT",
+          "text": {
+            "zh": "听起来你现在挺难受的。牌先放一放。如果你有伤害自己的念头，或正身处危险，请马上联系身边信任的人、当地的心理援助热线或急救电话。愿意的话，也可以说说发生了什么。",
+            "en": "It sounds like you're having a hard time. Let's set the cards aside. If you're thinking of hurting yourself or you're in danger, please reach out right away to someone you trust, a local crisis line, or emergency services. If you'd like, you can also tell me what's happening."
+          }
+        }
+      ],
+      "stop_rules": [
+        "用户拒绝、说想停止时立即结束，不追加问题",
+        "同一方向被否定两次后不再追问，改为直述牌义或结束",
+        "出现危机信号时退出塔罗语境，直接提供现实支持",
+        "用户表示有点不舒服但不是危机时，先停止追问、降低强度，询问想听牌义还是结束（soften 节点）；明确危机信号才走安全转向",
+        "每轮最多一个问题；用户只要牌义时直接回答"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "tree_id": "inq.major_06",
+      "card_refs": [
+        "major_06"
+      ],
+      "root": "n1",
+      "nodes": [
+        {
+          "id": "n1",
+          "action": "ASK",
+          "text": {
+            "zh": "这张牌里，哪一部分最让你停留：手牵手的两只奶蛙、上方的天使、树上的蛇，或者别的地方？",
+            "en": "Which part of this card holds you most — the two Naiwas holding hands, the angel above, the serpent in the tree, or somewhere else?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n2"
+            },
+            {
+              "when": "no_association",
+              "to": "n3"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n2",
+          "action": "ASK",
+          "text": {
+            "zh": "最近有没有一段关系，或者一个选择，让你常常想起？没有也没关系。",
+            "en": "Is there a relationship, or a choice, that has been on your mind lately? It's all right if there isn't."
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n3",
+          "action": "HINT",
+          "text": {
+            "zh": "恋人常与联结和选择有关。最近有没有什么事，让你在想自己真正看重的是什么？",
+            "en": "The Lovers is often about union and choice. Has anything lately made you think about what you truly value?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n4",
+          "action": "ASK",
+          "text": {
+            "zh": "愿意的话说说：在那段关系或那个选择里，你自己看重的是什么？",
+            "en": "Only if you'd like to say: in that relationship or that choice, what is it that you yourself value?"
+          },
+          "seed_refs": [
+            "seed.major_06.02"
+          ],
+          "branches": [
+            {
+              "when": "associates",
+              "to": "close"
+            },
+            {
+              "when": "asks_more",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "meaning",
+          "action": "ANSWER",
+          "text": {
+            "zh": "恋人正位：真诚的联结、信任，与忠于内心的选择；逆位：关系失衡、沟通不畅，或在选择之间摇摆。这是象征，不是预言，也不能替对方说出心里的想法。",
+            "en": "The Lovers upright: a sincere bond, trust, and a choice true to the heart; reversed: imbalance, poor communication, or wavering between choices. A symbol, not a prophecy — and it cannot speak for what the other person thinks."
+          },
+          "branches": [
+            {
+              "when": "asks_more",
+              "to": "n4"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "soften",
+          "action": "ASK",
+          "text": {
+            "zh": "那就不往下问了。想听牌义，还是就停在这里？",
+            "en": "Then I won't ask further. Would you like the card's meaning, or shall we stop here?"
+          },
+          "branches": [
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "close",
+          "action": "CLOSE",
+          "text": {
+            "zh": "好。这张牌就留在这里。",
+            "en": "All right. This card can stay here."
+          }
+        },
+        {
+          "id": "safety",
+          "action": "SAFETY_REDIRECT",
+          "text": {
+            "zh": "听起来你现在挺难受的。牌先放一放。如果你有伤害自己的念头，或正身处危险，请马上联系身边信任的人、当地的心理援助热线或急救电话。愿意的话，也可以说说发生了什么。",
+            "en": "It sounds like you're having a hard time. Let's set the cards aside. If you're thinking of hurting yourself or you're in danger, please reach out right away to someone you trust, a local crisis line, or emergency services. If you'd like, you can also tell me what's happening."
+          }
+        }
+      ],
+      "stop_rules": [
+        "用户拒绝、说想停止时立即结束，不追加问题",
+        "同一方向被否定两次后不再追问，改为直述牌义或结束",
+        "出现危机信号时退出塔罗语境，直接提供现实支持",
+        "用户表示有点不舒服但不是危机时，先停止追问、降低强度，询问想听牌义还是结束（soften 节点）；明确危机信号才走安全转向",
+        "每轮最多一个问题；用户只要牌义时直接回答"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "tree_id": "inq.major_07",
+      "card_refs": [
+        "major_07"
+      ],
+      "root": "n1",
+      "nodes": [
+        {
+          "id": "n1",
+          "action": "ASK",
+          "text": {
+            "zh": "画面里，你的目光先停在哪里？两只狮身兽、头顶的星篷、奶蛙手里的权杖，还是别的地方？",
+            "en": "Where does your eye land first — the two sphinxes, the starry canopy, the sceptre in Naiwa's hand, or somewhere else?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n2"
+            },
+            {
+              "when": "no_association",
+              "to": "n3"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n2",
+          "action": "ASK",
+          "text": {
+            "zh": "如果这两只望着不同方向的狮身兽，代表你生活里的某件事，会是什么？",
+            "en": "If the two sphinxes looking different ways stood for something in your life, what might it be?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n3",
+          "action": "HINT",
+          "text": {
+            "zh": "战车常与意志、方向和向前推进有关。最近有没有一件你想往前推的事？",
+            "en": "The Chariot is often about will, direction and moving forward. Is there something lately you'd like to move forward?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n4",
+          "action": "ASK",
+          "text": {
+            "zh": "在那件事里，有没有往两边拉的力量？如果有，它们各自想去哪里？",
+            "en": "In that matter, is anything pulling two ways? If so, where does each side want to go?"
+          },
+          "seed_refs": [
+            "seed.major_07.02"
+          ],
+          "branches": [
+            {
+              "when": "associates",
+              "to": "close"
+            },
+            {
+              "when": "asks_more",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "meaning",
+          "action": "ANSWER",
+          "text": {
+            "zh": "战车正位：意志、驾驭、专注与胜利；逆位：方向分散、内耗拉扯，或冲得太快而失去控制。这是象征，不是预言。",
+            "en": "The Chariot upright: will, control, focus and victory; reversed: scattered direction, inner tug-of-war, or losing control by rushing. This is a symbol, not a prediction."
+          },
+          "branches": [
+            {
+              "when": "asks_more",
+              "to": "n4"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "soften",
+          "action": "ASK",
+          "text": {
+            "zh": "那就不往下问了。想听牌义，还是就停在这里？",
+            "en": "Then I won't ask further. Would you like the card's meaning, or shall we stop here?"
+          },
+          "branches": [
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "close",
+          "action": "CLOSE",
+          "text": {
+            "zh": "好。这张牌就留在这里。",
+            "en": "All right. This card can stay here."
+          }
+        },
+        {
+          "id": "safety",
+          "action": "SAFETY_REDIRECT",
+          "text": {
+            "zh": "听起来你现在挺难受的。牌先放一放。如果你有伤害自己的念头，或正身处危险，请马上联系身边信任的人、当地的心理援助热线或急救电话。愿意的话，也可以说说发生了什么。",
+            "en": "It sounds like you're having a hard time. Let's set the cards aside. If you're thinking of hurting yourself or you're in danger, please reach out right away to someone you trust, a local crisis line, or emergency services. If you'd like, you can also tell me what's happening."
+          }
+        }
+      ],
+      "stop_rules": [
+        "用户拒绝、说想停止时立即结束，不追加问题",
+        "同一方向被否定两次后不再追问，改为直述牌义或结束",
+        "出现危机信号时退出塔罗语境，直接提供现实支持",
+        "用户表示有点不舒服但不是危机时，先停止追问、降低强度，询问想听牌义还是结束（soften 节点）；明确危机信号才走安全转向",
+        "每轮最多一个问题；用户只要牌义时直接回答"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "tree_id": "inq.major_08",
+      "card_refs": [
+        "major_08"
+      ],
+      "root": "n1",
+      "nodes": [
+        {
+          "id": "n1",
+          "action": "ASK",
+          "text": {
+            "zh": "看着奶蛙和这头狮子，你最先感觉到什么？安心、紧张、好奇，或者别的，都可以。",
+            "en": "Looking at Naiwa and the lion, what do you feel first? Calm, tense, curious — or something else, any of these is fine."
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n2"
+            },
+            {
+              "when": "no_association",
+              "to": "n3"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n2",
+          "action": "ASK",
+          "text": {
+            "zh": "如果画里的狮子代表你生活里的某样东西，会是什么？",
+            "en": "If the lion in the picture stood for something in your life, what might it be?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n3",
+          "action": "HINT",
+          "text": {
+            "zh": "力量常与温柔和耐心有关，而不是蛮力。最近有没有一件事，你在用自己的方式慢慢对待？",
+            "en": "Strength is often about gentleness and patience rather than force. Is there something lately you've been handling slowly, in your own way?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n4",
+          "action": "ASK",
+          "text": {
+            "zh": "对那件事，你想用多大的力气？用力一点、轻一点，或者还没想好，都可以。",
+            "en": "How much force would you like to use on it? More, less, or not sure yet — any of these is fine."
+          },
+          "seed_refs": [
+            "seed.major_08.04"
+          ],
+          "branches": [
+            {
+              "when": "associates",
+              "to": "close"
+            },
+            {
+              "when": "asks_more",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "meaning",
+          "action": "ANSWER",
+          "text": {
+            "zh": "力量正位：温柔、勇气、耐心与自我掌控；逆位：自我怀疑、情绪起伏，或想用蛮力解决。这是象征，不是预言。",
+            "en": "Strength upright: gentleness, courage, patience and self-mastery; reversed: self-doubt, swinging emotions, or reaching for brute force. This is a symbol, not a prediction."
+          },
+          "branches": [
+            {
+              "when": "asks_more",
+              "to": "n4"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "soften",
+          "action": "ASK",
+          "text": {
+            "zh": "那就不往下问了。想听牌义，还是就停在这里？",
+            "en": "Then I won't ask further. Would you like the card's meaning, or shall we stop here?"
+          },
+          "branches": [
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "close",
+          "action": "CLOSE",
+          "text": {
+            "zh": "好。这张牌就留在这里。",
+            "en": "All right. This card can stay here."
+          }
+        },
+        {
+          "id": "safety",
+          "action": "SAFETY_REDIRECT",
+          "text": {
+            "zh": "听起来你现在挺难受的。牌先放一放。如果你有伤害自己的念头，或正身处危险，请马上联系身边信任的人、当地的心理援助热线或急救电话。愿意的话，也可以说说发生了什么。",
+            "en": "It sounds like you're having a hard time. Let's set the cards aside. If you're thinking of hurting yourself or you're in danger, please reach out right away to someone you trust, a local crisis line, or emergency services. If you'd like, you can also tell me what's happening."
+          }
+        }
+      ],
+      "stop_rules": [
+        "用户拒绝、说想停止时立即结束，不追加问题",
+        "同一方向被否定两次后不再追问，改为直述牌义或结束",
+        "出现危机信号时退出塔罗语境，直接提供现实支持",
+        "用户表示有点不舒服但不是危机时，先停止追问、降低强度，询问想听牌义还是结束（soften 节点）；明确危机信号才走安全转向",
+        "每轮最多一个问题；用户只要牌义时直接回答"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "tree_id": "inq.major_09",
+      "card_refs": [
+        "major_09"
+      ],
+      "root": "n1",
+      "nodes": [
+        {
+          "id": "n1",
+          "action": "ASK",
+          "text": {
+            "zh": "画面里，你的目光先停在哪里？那盏灯、手里的杖、积雪的山顶，还是别的地方？",
+            "en": "Where does your eye land first — the lantern, the staff, the snowy summit, or somewhere else?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n2"
+            },
+            {
+              "when": "no_association",
+              "to": "n3"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n2",
+          "action": "ASK",
+          "text": {
+            "zh": "如果这盏灯代表你生活里的某样东西，会是什么？",
+            "en": "If this lantern stood for something in your life, what might it be?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n3",
+          "action": "HINT",
+          "text": {
+            "zh": "隐者常与独处和向内寻找有关。最近有没有一件事，你想一个人静下来想想？",
+            "en": "The Hermit is often about solitude and searching inward. Is there something lately you'd like to think over quietly on your own?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n4",
+          "action": "ASK",
+          "text": {
+            "zh": "愿意的话说说：在那件事上，你现在更想要一段自己的时间，还是更想有人在旁边？都想、都不是，也可以。",
+            "en": "If you'd like to share: with that matter, would you rather have some time to yourself right now, or someone beside you? Both, or neither, is fine too."
+          },
+          "seed_refs": [
+            "seed.major_09.01"
+          ],
+          "branches": [
+            {
+              "when": "associates",
+              "to": "close"
+            },
+            {
+              "when": "asks_more",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "meaning",
+          "action": "ANSWER",
+          "text": {
+            "zh": "隐者正位：内省、独处、寻找与智慧；逆位：过度孤立、与人疏远，或不愿向内看。这是象征，不是预言。",
+            "en": "The Hermit upright: introspection, solitude, searching and wisdom; reversed: too much isolation, drifting from others, or not wanting to look inward. This is a symbol, not a prediction."
+          },
+          "branches": [
+            {
+              "when": "asks_more",
+              "to": "n4"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "soften",
+          "action": "ASK",
+          "text": {
+            "zh": "那就不往下问了。想听牌义，还是就停在这里？",
+            "en": "Then I won't ask further. Would you like the card's meaning, or shall we stop here?"
+          },
+          "branches": [
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "close",
+          "action": "CLOSE",
+          "text": {
+            "zh": "好。这张牌就留在这里。",
+            "en": "All right. This card can stay here."
+          }
+        },
+        {
+          "id": "safety",
+          "action": "SAFETY_REDIRECT",
+          "text": {
+            "zh": "听起来你现在挺难受的。牌先放一放。如果你有伤害自己的念头，或正身处危险，请马上联系身边信任的人、当地的心理援助热线或急救电话。愿意的话，也可以说说发生了什么。",
+            "en": "It sounds like you're having a hard time. Let's set the cards aside. If you're thinking of hurting yourself or you're in danger, please reach out right away to someone you trust, a local crisis line, or emergency services. If you'd like, you can also tell me what's happening."
+          }
+        }
+      ],
+      "stop_rules": [
+        "用户拒绝、说想停止时立即结束，不追加问题",
+        "同一方向被否定两次后不再追问，改为直述牌义或结束",
+        "出现危机信号时退出塔罗语境，直接提供现实支持",
+        "用户表示有点不舒服但不是危机时，先停止追问、降低强度，询问想听牌义还是结束（soften 节点）；明确危机信号才走安全转向",
+        "每轮最多一个问题；用户只要牌义时直接回答"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "tree_id": "inq.major_10",
+      "card_refs": [
+        "major_10"
+      ],
+      "root": "n1",
+      "nodes": [
+        {
+          "id": "n1",
+          "action": "ASK",
+          "text": {
+            "zh": "看着这个轮子，你最先感觉到什么？晕、好奇、平静，或者别的，都可以。",
+            "en": "Looking at this wheel, what do you feel first? Dizzy, curious, calm — or something else entirely."
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n2"
+            },
+            {
+              "when": "no_association",
+              "to": "n3"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n2",
+          "action": "ASK",
+          "text": {
+            "zh": "如果你生活里也有一件事像轮子一样在转，那会是什么？",
+            "en": "If something in your life were turning like this wheel, what might it be?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n3",
+          "action": "HINT",
+          "text": {
+            "zh": "命运之轮常与循环、变化和时机有关。它不预言好运或厄运。最近有没有什么，让你觉得在变？",
+            "en": "The Wheel of Fortune is often about cycles, change and timing. It doesn't foretell good or bad luck. Is there anything lately that feels like it's shifting?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n4",
+          "action": "ASK",
+          "text": {
+            "zh": "在那件事里，哪部分是你能照看的，哪部分不由你决定？说不清也没关系。",
+            "en": "In that matter, which part can you tend, and which part isn't up to you? It's fine if that's hard to say."
+          },
+          "seed_refs": [
+            "seed.major_10.04"
+          ],
+          "branches": [
+            {
+              "when": "associates",
+              "to": "close"
+            },
+            {
+              "when": "asks_more",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "meaning",
+          "action": "ANSWER",
+          "text": {
+            "zh": "命运之轮正位：循环、变化、转折与时机；逆位：抗拒变化、时机不合，或处在起伏的低处。这是象征，不是预言。",
+            "en": "The Wheel of Fortune upright: cycles, change, turning points and timing; reversed: resisting change, poor timing, or being at a low point of the cycle. This is a symbol, not a prediction."
+          },
+          "branches": [
+            {
+              "when": "asks_more",
+              "to": "n4"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "soften",
+          "action": "ASK",
+          "text": {
+            "zh": "那就不往下问了。想听牌义，还是就停在这里？",
+            "en": "Then I won't ask further. Would you like the card's meaning, or shall we stop here?"
+          },
+          "branches": [
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "close",
+          "action": "CLOSE",
+          "text": {
+            "zh": "好。这张牌就留在这里。",
+            "en": "All right. This card can stay here."
+          }
+        },
+        {
+          "id": "safety",
+          "action": "SAFETY_REDIRECT",
+          "text": {
+            "zh": "听起来你现在挺难受的。牌先放一放。如果你有伤害自己的念头，或正身处危险，请马上联系身边信任的人、当地的心理援助热线或急救电话。愿意的话，也可以说说发生了什么。",
+            "en": "It sounds like you're having a hard time. Let's set the cards aside. If you're thinking of hurting yourself or you're in danger, please reach out right away to someone you trust, a local crisis line, or emergency services. If you'd like, you can also tell me what's happening."
+          }
+        }
+      ],
+      "stop_rules": [
+        "用户拒绝、说想停止时立即结束，不追加问题",
+        "同一方向被否定两次后不再追问，改为直述牌义或结束",
+        "出现危机信号时退出塔罗语境，直接提供现实支持",
+        "用户表示有点不舒服但不是危机时，先停止追问、降低强度，询问想听牌义还是结束（soften 节点）；明确危机信号才走安全转向",
+        "每轮最多一个问题；用户只要牌义时直接回答"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "tree_id": "inq.major_11",
+      "card_refs": [
+        "major_11"
+      ],
+      "root": "n1",
+      "nodes": [
+        {
+          "id": "n1",
+          "action": "ASK",
+          "text": {
+            "zh": "画面里，你的目光先停在哪里？天平、竖起的剑、身后的帷幕，还是别的地方？",
+            "en": "Where does your eye land first — the scales, the upright sword, the curtain behind, or somewhere else?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n2"
+            },
+            {
+              "when": "no_association",
+              "to": "n3"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n2",
+          "action": "ASK",
+          "text": {
+            "zh": "如果它代表你生活里正在掂量的某件事，会是什么？没有也可以。",
+            "en": "If it stood for something you're weighing in your life, what might it be? It's fine if nothing comes to mind."
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n3",
+          "action": "HINT",
+          "text": {
+            "zh": "正义常与看清事实、权衡和公平有关。最近有没有一件事，你想把它看得更清楚一点？",
+            "en": "Justice is often about seeing the facts, weighing and fairness. Is there something lately you'd like to see a little more clearly?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n4",
+          "action": "ASK",
+          "text": {
+            "zh": "愿意的话说说：如果把那件事放上天平，你会在两边各放上什么？",
+            "en": "If you'd like to share: if you put that matter on the scales, what would you place on each side?"
+          },
+          "seed_refs": [
+            "seed.major_11.01"
+          ],
+          "branches": [
+            {
+              "when": "associates",
+              "to": "close"
+            },
+            {
+              "when": "asks_more",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "meaning",
+          "action": "ANSWER",
+          "text": {
+            "zh": "正义正位：公正、平衡、诚实与因果；逆位：不公、偏见，或责任没有被看清。这是象征，不是预言，也不预测任何纠纷或判决的结果。",
+            "en": "Justice upright: fairness, balance, honesty, cause and effect; reversed: injustice, bias, or responsibility left unclear. This is a symbol, not a prediction, and it does not foretell the outcome of any dispute or ruling."
+          },
+          "branches": [
+            {
+              "when": "asks_more",
+              "to": "n4"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "soften",
+          "action": "ASK",
+          "text": {
+            "zh": "那就不往下问了。想听牌义，还是就停在这里？",
+            "en": "Then I won't ask further. Would you like the card's meaning, or shall we stop here?"
+          },
+          "branches": [
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "close",
+          "action": "CLOSE",
+          "text": {
+            "zh": "好。这张牌就留在这里。",
+            "en": "All right. This card can stay here."
+          }
+        },
+        {
+          "id": "safety",
+          "action": "SAFETY_REDIRECT",
+          "text": {
+            "zh": "听起来你现在挺难受的。牌先放一放。如果你有伤害自己的念头，或正身处危险，请马上联系身边信任的人、当地的心理援助热线或急救电话。愿意的话，也可以说说发生了什么。",
+            "en": "It sounds like you're having a hard time. Let's set the cards aside. If you're thinking of hurting yourself or you're in danger, please reach out right away to someone you trust, a local crisis line, or emergency services. If you'd like, you can also tell me what's happening."
+          }
+        }
+      ],
+      "stop_rules": [
+        "用户拒绝、说想停止时立即结束，不追加问题",
+        "同一方向被否定两次后不再追问，改为直述牌义或结束",
+        "出现危机信号时退出塔罗语境，直接提供现实支持",
+        "用户表示有点不舒服但不是危机时，先停止追问、降低强度，询问想听牌义还是结束（soften 节点）；明确危机信号才走安全转向",
+        "每轮最多一个问题；用户只要牌义时直接回答"
+      ],
+      "review_status": "reviewed"
+    },
+    {
       "tree_id": "inq.major_12",
       "card_refs": [
         "major_12"
@@ -626,6 +2921,455 @@
           "text": {
             "zh": "倒吊人正位：暂停、换视角、放下与牺牲；逆位：拖延、无谓的牺牲，或不愿换个角度。",
             "en": "The Hanged Man upright: pause, a new perspective, surrender and sacrifice; reversed: delay, needless sacrifice, or refusing a new angle."
+          },
+          "branches": [
+            {
+              "when": "asks_more",
+              "to": "n4"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "soften",
+          "action": "ASK",
+          "text": {
+            "zh": "那就不往下问了。想听牌义，还是就停在这里？",
+            "en": "Then I won't ask further. Would you like the card's meaning, or shall we stop here?"
+          },
+          "branches": [
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "close",
+          "action": "CLOSE",
+          "text": {
+            "zh": "好。这张牌就留在这里。",
+            "en": "All right. This card can stay here."
+          }
+        },
+        {
+          "id": "safety",
+          "action": "SAFETY_REDIRECT",
+          "text": {
+            "zh": "听起来你现在挺难受的。牌先放一放。如果你有伤害自己的念头，或正身处危险，请马上联系身边信任的人、当地的心理援助热线或急救电话。愿意的话，也可以说说发生了什么。",
+            "en": "It sounds like you're having a hard time. Let's set the cards aside. If you're thinking of hurting yourself or you're in danger, please reach out right away to someone you trust, a local crisis line, or emergency services. If you'd like, you can also tell me what's happening."
+          }
+        }
+      ],
+      "stop_rules": [
+        "用户拒绝、说想停止时立即结束，不追加问题",
+        "同一方向被否定两次后不再追问，改为直述牌义或结束",
+        "出现危机信号时退出塔罗语境，直接提供现实支持",
+        "用户表示有点不舒服但不是危机时，先停止追问、降低强度，询问想听牌义还是结束（soften 节点）；明确危机信号才走安全转向",
+        "每轮最多一个问题；用户只要牌义时直接回答"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "tree_id": "inq.major_13",
+      "card_refs": [
+        "major_13"
+      ],
+      "root": "n1",
+      "nodes": [
+        {
+          "id": "n1",
+          "action": "ASK",
+          "text": {
+            "zh": "这张牌里，你的目光先停在哪里？白马、那面旗、地上的王冠、远处的太阳，或者别的地方？",
+            "en": "Where does your eye stop first in this card — the white horse, the banner, the crown on the ground, the distant sun, or somewhere else?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n2"
+            },
+            {
+              "when": "no_association",
+              "to": "n3"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n2",
+          "action": "ASK",
+          "text": {
+            "zh": "如果它对应你生活里的某个阶段，会是哪一段？想不到也没关系。",
+            "en": "If it matched some stretch of your life, which one would it be? It's fine if nothing comes to mind."
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n3",
+          "action": "HINT",
+          "text": {
+            "zh": "死神常与一个阶段的结束和转变有关，不指真实的死亡，也不预言什么。最近有没有什么，让你觉得在换一个样子？",
+            "en": "Death is often about a phase ending and changing form; it does not mean literal death, and it predicts nothing. Has anything lately felt like it is taking a new shape?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n4",
+          "action": "ASK",
+          "text": {
+            "zh": "愿意的话说说：在这段转变里，有没有什么是你想好好告别的，或者还想留着的？没有也可以。",
+            "en": "Only if you'd like to say: in this change, is there anything you want to say a proper goodbye to, or anything you'd still like to keep? It's fine if there isn't."
+          },
+          "seed_refs": [
+            "seed.major_13.04"
+          ],
+          "branches": [
+            {
+              "when": "asks_more",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "meaning",
+          "action": "ANSWER",
+          "text": {
+            "zh": "死神正位：一个阶段的结束、转变与新生；逆位：抗拒结束、困在旧模式里，或转变来得很慢。它讲的是转变，不是真实的死亡；这是象征，不是预言。",
+            "en": "Death upright: the end of a phase, transformation, renewal; reversed: resisting an ending, being stuck in old patterns, or change coming slowly. It is about transformation, not literal death — a symbol, not a prophecy."
+          },
+          "branches": [
+            {
+              "when": "asks_more",
+              "to": "n4"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "soften",
+          "action": "ASK",
+          "text": {
+            "zh": "那就不往下问了。想听牌义，还是就停在这里？",
+            "en": "Then I won't ask further. Would you like the card's meaning, or shall we stop here?"
+          },
+          "branches": [
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "close",
+          "action": "CLOSE",
+          "text": {
+            "zh": "好。这张牌就留在这里。",
+            "en": "All right. This card can stay here."
+          }
+        },
+        {
+          "id": "safety",
+          "action": "SAFETY_REDIRECT",
+          "text": {
+            "zh": "听起来你现在挺难受的。牌先放一放。如果你有伤害自己的念头，或正身处危险，请马上联系身边信任的人、当地的心理援助热线或急救电话。愿意的话，也可以说说发生了什么。",
+            "en": "It sounds like you're having a hard time. Let's set the cards aside. If you're thinking of hurting yourself or you're in danger, please reach out right away to someone you trust, a local crisis line, or emergency services. If you'd like, you can also tell me what's happening."
+          }
+        }
+      ],
+      "stop_rules": [
+        "用户拒绝、说想停止时立即结束，不追加问题",
+        "同一方向被否定两次后不再追问，改为直述牌义或结束",
+        "出现危机信号时退出塔罗语境，直接提供现实支持",
+        "用户表示有点不舒服但不是危机时，先停止追问、降低强度，询问想听牌义还是结束（soften 节点）；明确危机信号才走安全转向",
+        "每轮最多一个问题；用户只要牌义时直接回答",
+        "用户提到亲友离世、重病或自己的健康问题时，不用这张牌谈论任何人的生死，也不把真实的失去说成转变或新生；停止追问，只接住感受，不急着找意义"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "tree_id": "inq.major_14",
+      "card_refs": [
+        "major_14"
+      ],
+      "root": "n1",
+      "nodes": [
+        {
+          "id": "n1",
+          "action": "ASK",
+          "text": {
+            "zh": "这张牌里，你先注意到什么？两只杯子之间的水、踩在水里的那只脚、远处的路，或者别的？",
+            "en": "What do you notice first in this card — the water between the two cups, the foot in the water, the distant road, or something else?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n2"
+            },
+            {
+              "when": "no_association",
+              "to": "n3"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n2",
+          "action": "ASK",
+          "text": {
+            "zh": "你生活里有没有两样东西，最近在来回调整、想找到一个刚好的量？没有也可以。",
+            "en": "Are there two things in your life you've been adjusting back and forth lately, looking for just the right amount? It's fine if not."
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n3",
+          "action": "HINT",
+          "text": {
+            "zh": "节制常与调和、耐心和适度有关。最近有没有哪件事，你想让它慢一点，或者匀一点？",
+            "en": "Temperance is often about blending, patience and measure. Is there something lately you'd like to go a little slower, or a little more evenly?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n4",
+          "action": "ASK",
+          "text": {
+            "zh": "在那件事里，你觉得现在更靠近哪一头，还是在中间？说不上来也可以。",
+            "en": "In that matter, which end do you feel closer to right now — or somewhere in the middle? It's fine if you can't say."
+          },
+          "seed_refs": [
+            "seed.major_14.02"
+          ],
+          "branches": [
+            {
+              "when": "asks_more",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "meaning",
+          "action": "ANSWER",
+          "text": {
+            "zh": "节制正位：调和、平衡、耐心与修复；逆位：失衡、过度或急躁。这是象征，不是预言。",
+            "en": "Temperance upright: blending, balance, patience and healing; reversed: imbalance, excess or impatience. A symbol, not a prophecy."
           },
           "branches": [
             {
@@ -1592,6 +4336,680 @@
         "用户表示有点不舒服但不是危机时，先停止追问、降低强度，询问想听牌义还是结束（soften 节点）；明确危机信号才走安全转向",
         "每轮最多一个问题；用户只要牌义时直接回答",
         "用户提到梦时只接住内容，不追问细节，不把梦解读为诊断或被压抑创伤的证据"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "tree_id": "inq.major_19",
+      "card_refs": [
+        "major_19"
+      ],
+      "root": "n1",
+      "nodes": [
+        {
+          "id": "n1",
+          "action": "ASK",
+          "text": {
+            "zh": "这张牌里，哪一处最先抓住你？太阳的脸、向日葵、白马和红旗，或者别的？",
+            "en": "What catches you first in this card — the sun's face, the sunflowers, the white horse and red banner, or something else?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n2"
+            },
+            {
+              "when": "no_association",
+              "to": "n3"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n2",
+          "action": "ASK",
+          "text": {
+            "zh": "最近有没有一个时刻，哪怕很短，让你觉得轻松，或者亮了一下？没有也没关系。",
+            "en": "Has there been a moment lately, however short, that felt light or bright? It's all right if there hasn't."
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n3",
+          "action": "HINT",
+          "text": {
+            "zh": "太阳常与清晰、活力和单纯的快乐有关，它不保证结果。最近有没有什么事，你看得比以前清楚一点？",
+            "en": "The Sun is often about clarity, vitality and simple joy; it doesn't guarantee outcomes. Is there anything lately you see a little more clearly than before?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n4",
+          "action": "ASK",
+          "text": {
+            "zh": "那件事或那一刻里，是什么让你觉得亮了一点？说不上来也可以。",
+            "en": "In that matter or moment, what made it feel a little brighter? It's fine if you can't say."
+          },
+          "seed_refs": [
+            "seed.major_19.02"
+          ],
+          "branches": [
+            {
+              "when": "asks_more",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "meaning",
+          "action": "ANSWER",
+          "text": {
+            "zh": "太阳正位：快乐、清明、活力与成功；逆位：快乐被暂时遮住、过度乐观，或进展比预期慢。这是象征，不是预言。",
+            "en": "The Sun upright: joy, clarity, vitality and success; reversed: joy briefly clouded, over-optimism, or progress slower than hoped. A symbol, not a prophecy."
+          },
+          "branches": [
+            {
+              "when": "asks_more",
+              "to": "n4"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "soften",
+          "action": "ASK",
+          "text": {
+            "zh": "那就不往下问了。想听牌义，还是就停在这里？",
+            "en": "Then I won't ask further. Would you like the card's meaning, or shall we stop here?"
+          },
+          "branches": [
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "close",
+          "action": "CLOSE",
+          "text": {
+            "zh": "好。这张牌就留在这里。",
+            "en": "All right. This card can stay here."
+          }
+        },
+        {
+          "id": "safety",
+          "action": "SAFETY_REDIRECT",
+          "text": {
+            "zh": "听起来你现在挺难受的。牌先放一放。如果你有伤害自己的念头，或正身处危险，请马上联系身边信任的人、当地的心理援助热线或急救电话。愿意的话，也可以说说发生了什么。",
+            "en": "It sounds like you're having a hard time. Let's set the cards aside. If you're thinking of hurting yourself or you're in danger, please reach out right away to someone you trust, a local crisis line, or emergency services. If you'd like, you can also tell me what's happening."
+          }
+        }
+      ],
+      "stop_rules": [
+        "用户拒绝、说想停止时立即结束，不追加问题",
+        "同一方向被否定两次后不再追问，改为直述牌义或结束",
+        "出现危机信号时退出塔罗语境，直接提供现实支持",
+        "用户表示有点不舒服但不是危机时，先停止追问、降低强度，询问想听牌义还是结束（soften 节点）；明确危机信号才走安全转向",
+        "每轮最多一个问题；用户只要牌义时直接回答"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "tree_id": "inq.major_20",
+      "card_refs": [
+        "major_20"
+      ],
+      "root": "n1",
+      "nodes": [
+        {
+          "id": "n1",
+          "action": "ASK",
+          "text": {
+            "zh": "这张牌里，你先注意到哪里？号角、那面旗、打开的石匣、往上升的光，或者别的？",
+            "en": "Where do you look first in this card — the trumpet, the banner, the open stone chests, the rising light, or somewhere else?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n2"
+            },
+            {
+              "when": "no_association",
+              "to": "n3"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n2",
+          "action": "ASK",
+          "text": {
+            "zh": "最近有没有一件事，一直在提醒你回头看看，或者往前走？没有也可以。",
+            "en": "Is there something lately that keeps reminding you to look back, or to move on? It's fine if not."
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n3",
+          "action": "HINT",
+          "text": {
+            "zh": "审判常与觉醒、回顾和重新开始有关，不是对谁的判决，也不预言什么。最近有没有什么，让你想重新看一看？",
+            "en": "Judgement is often about awakening, review and starting again; it is no verdict on anyone, and it predicts nothing. Is there anything lately you'd like to look at again?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n4",
+          "action": "ASK",
+          "text": {
+            "zh": "回头看那件事的时候，有没有哪一部分，你想换一种眼光重新看？没有也可以。",
+            "en": "Looking back at it, is there any part you'd like to see with different eyes? It's fine if there isn't."
+          },
+          "seed_refs": [
+            "seed.major_20.04"
+          ],
+          "branches": [
+            {
+              "when": "asks_more",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "meaning",
+          "action": "ANSWER",
+          "text": {
+            "zh": "审判正位：觉醒、召唤、回顾与重新开始；逆位：过度自我批判、犹豫，或忽视内心的召唤。这是象征，不是对任何人的判决，也不是预言。",
+            "en": "Judgement upright: awakening, a calling, review and renewal; reversed: harsh self-judgement, hesitation, or ignoring the inner call. A symbol — not a verdict on anyone, and not a prophecy."
+          },
+          "branches": [
+            {
+              "when": "asks_more",
+              "to": "n4"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "soften",
+          "action": "ASK",
+          "text": {
+            "zh": "那就不往下问了。想听牌义，还是就停在这里？",
+            "en": "Then I won't ask further. Would you like the card's meaning, or shall we stop here?"
+          },
+          "branches": [
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "close",
+          "action": "CLOSE",
+          "text": {
+            "zh": "好。这张牌就留在这里。",
+            "en": "All right. This card can stay here."
+          }
+        },
+        {
+          "id": "safety",
+          "action": "SAFETY_REDIRECT",
+          "text": {
+            "zh": "听起来你现在挺难受的。牌先放一放。如果你有伤害自己的念头，或正身处危险，请马上联系身边信任的人、当地的心理援助热线或急救电话。愿意的话，也可以说说发生了什么。",
+            "en": "It sounds like you're having a hard time. Let's set the cards aside. If you're thinking of hurting yourself or you're in danger, please reach out right away to someone you trust, a local crisis line, or emergency services. If you'd like, you can also tell me what's happening."
+          }
+        }
+      ],
+      "stop_rules": [
+        "用户拒绝、说想停止时立即结束，不追加问题",
+        "同一方向被否定两次后不再追问，改为直述牌义或结束",
+        "出现危机信号时退出塔罗语境，直接提供现实支持",
+        "用户表示有点不舒服但不是危机时，先停止追问、降低强度，询问想听牌义还是结束（soften 节点）；明确危机信号才走安全转向",
+        "每轮最多一个问题；用户只要牌义时直接回答",
+        "用户提到亲友离世或正在哀悼时，不用复活、重逢、召唤这类意象安慰，也不谈论逝者的去向；停止追问，只接住感受",
+        "用户说听到有声音在命令自己做某事时，不用「召唤」接话，转为现实支持"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "tree_id": "inq.major_21",
+      "card_refs": [
+        "major_21"
+      ],
+      "root": "n1",
+      "nodes": [
+        {
+          "id": "n1",
+          "action": "ASK",
+          "text": {
+            "zh": "这张牌里，你先看到什么？花环、中间漂浮的奶蛙、手里的两支杖、四个角的守护者，或者别的？",
+            "en": "What do you see first in this card — the wreath, Naiwa floating in the middle, the two wands, the guardians in the corners, or something else?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n2"
+            },
+            {
+              "when": "no_association",
+              "to": "n3"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n2",
+          "action": "ASK",
+          "text": {
+            "zh": "最近有没有一件事，你觉得快要完成了，或者刚刚完成？没有也没关系。",
+            "en": "Is there something lately you feel is nearly finished, or just finished? It's all right if not."
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n3",
+          "action": "HINT",
+          "text": {
+            "zh": "世界常与完成、整合和一个循环的段落有关，它不预言结果。回头看，最近有没有哪段路，你觉得走了挺远？",
+            "en": "The World is often about completion, integration and the close of a cycle; it does not predict outcomes. Looking back, is there a stretch of road lately you feel you've come a long way on?"
+          },
+          "branches": [
+            {
+              "when": "associates",
+              "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "n4",
+          "action": "ASK",
+          "text": {
+            "zh": "走到这里，有没有什么是你想带在身边的？没有、或者还不想去想，都可以。",
+            "en": "Having come this far, is there anything you'd like to keep with you? It's fine if there isn't, or if you'd rather not think about it yet."
+          },
+          "seed_refs": [
+            "seed.major_21.04"
+          ],
+          "branches": [
+            {
+              "when": "asks_more",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
+            }
+          ]
+        },
+        {
+          "id": "meaning",
+          "action": "ANSWER",
+          "text": {
+            "zh": "世界正位：完成、整合、圆满与一个循环的段落；逆位：还差最后一步、迟迟无法收尾，或害怕结束后的空白。这是象征，不是预言。",
+            "en": "The World upright: completion, integration, wholeness and the close of a cycle; reversed: one last step remaining, trouble finishing, or fear of the emptiness after. A symbol, not a prophecy."
+          },
+          "branches": [
+            {
+              "when": "asks_more",
+              "to": "n4"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "soften",
+          "action": "ASK",
+          "text": {
+            "zh": "那就不往下问了。想听牌义，还是就停在这里？",
+            "en": "Then I won't ask further. Would you like the card's meaning, or shall we stop here?"
+          },
+          "branches": [
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "close",
+          "action": "CLOSE",
+          "text": {
+            "zh": "好。这张牌就留在这里。",
+            "en": "All right. This card can stay here."
+          }
+        },
+        {
+          "id": "safety",
+          "action": "SAFETY_REDIRECT",
+          "text": {
+            "zh": "听起来你现在挺难受的。牌先放一放。如果你有伤害自己的念头，或正身处危险，请马上联系身边信任的人、当地的心理援助热线或急救电话。愿意的话，也可以说说发生了什么。",
+            "en": "It sounds like you're having a hard time. Let's set the cards aside. If you're thinking of hurting yourself or you're in danger, please reach out right away to someone you trust, a local crisis line, or emergency services. If you'd like, you can also tell me what's happening."
+          }
+        }
+      ],
+      "stop_rules": [
+        "用户拒绝、说想停止时立即结束，不追加问题",
+        "同一方向被否定两次后不再追问，改为直述牌义或结束",
+        "出现危机信号时退出塔罗语境，直接提供现实支持",
+        "用户表示有点不舒服但不是危机时，先停止追问、降低强度，询问想听牌义还是结束（soften 节点）；明确危机信号才走安全转向",
+        "每轮最多一个问题；用户只要牌义时直接回答"
       ],
       "review_status": "reviewed"
     }

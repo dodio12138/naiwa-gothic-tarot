@@ -120,6 +120,385 @@
       "review_status": "draft"
     },
     {
+      "card_id": "major_01",
+      "tradition_card_ref": "rws.major.01",
+      "tradition_id": "rws",
+      "name": {
+        "zh": "魔术师",
+        "en": "THE MAGICIAN"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "意志",
+            "创造",
+            "行动"
+          ],
+          "en": [
+            "Will",
+            "Creation",
+            "Action"
+          ]
+        },
+        "upright": {
+          "zh": "你手里已经握着四种元素。专注意志，把想法变成现实的时刻到了。",
+          "en": "All four elements are already in your hands. Focus your will — it is time to turn ideas into reality."
+        },
+        "reversed": {
+          "zh": "才能被分散或误用，小心空有技巧却缺少方向，或被话术迷惑。",
+          "en": "Talent scattered or misused. Beware of skill without direction, or of being dazzled by clever words."
+        },
+        "correspondence": {
+          "zh": "水星",
+          "en": "Mercury"
+        },
+        "archetype": {
+          "zh": "韦特牌中的魔术师一手举杖指天、一手指地，象征「如其在上，如其在下」；桌上的权杖、圣杯、宝剑、星币代表四元素，也就是小阿尔卡那的四个花色。他是愚者遇到的第一位老师：教会他把意念变成行动。",
+          "en": "The Rider–Waite Magician points a wand to the sky and a hand to the earth — \"as above, so below\". On his table lie wand, cup, sword and pentacle: the four elements, and the four suits of the Minor Arcana. He is the Fool's first teacher, showing how will becomes action."
+        }
+      },
+      "artwork_ref": "naiwa.classic.major_01",
+      "visual_symbol_refs": [
+        "raised_wand",
+        "open_hand_outward",
+        "infinity_sign",
+        "four_suit_tools",
+        "stone_altar",
+        "dark_red_roses",
+        "white_lilies"
+      ],
+      "naiwa_symbol_refs": [],
+      "style_removed_refs": [
+        "rose_window",
+        "candelabras",
+        "moon_window"
+      ],
+      "rws_absent": [
+        "ouroboros_belt",
+        "red_robe_white_tunic",
+        "yellow_sky"
+      ],
+      "imagery_compare": [
+        {
+          "rws": "raised_wand",
+          "zh": "举向天空的权杖",
+          "status": "present",
+          "symbol_ref": "raised_wand",
+          "note": "传统是两端圆头的白杖；我们的杖尖带星光，高举向上的姿势一致"
+        },
+        {
+          "rws": "hand_pointing_down",
+          "zh": "指向大地的手",
+          "status": "altered",
+          "symbol_ref": "open_hand_outward",
+          "note": "传统是食指明确指地；我们是张开手掌向外下方伸出，「指地」不明显"
+        },
+        {
+          "rws": "lemniscate",
+          "zh": "头顶的无限符号",
+          "status": "present",
+          "symbol_ref": "infinity_sign",
+          "note": ""
+        },
+        {
+          "rws": "four_suit_tools",
+          "zh": "桌上的权杖、圣杯、宝剑、星币",
+          "status": "present",
+          "symbol_ref": "four_suit_tools",
+          "note": ""
+        },
+        {
+          "rws": "table",
+          "zh": "摆放道具的桌子",
+          "status": "altered",
+          "symbol_ref": "stone_altar",
+          "note": "传统是一张桌子；我们是石祭坛（祭坛上的尖拱雕饰和深红布属风格，不作意义）"
+        },
+        {
+          "rws": "red_roses",
+          "zh": "红玫瑰",
+          "status": "altered",
+          "symbol_ref": "dark_red_roses",
+          "note": "传统是鲜红玫瑰；我们画成黑红色，颜色属风格化，只取传统「红玫瑰」的含义"
+        },
+        {
+          "rws": "white_lilies",
+          "zh": "白百合",
+          "status": "present",
+          "symbol_ref": "white_lilies",
+          "note": ""
+        },
+        {
+          "rws": "ouroboros_belt",
+          "zh": "衔尾蛇腰带",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "red_robe_white_tunic",
+          "zh": "红袍罩白衣",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "yellow_sky",
+          "zh": "明亮的黄色天空（白天）",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "我们画成室内礼拜堂与窗外满月（风格化，已从 AI 数据去掉）"
+        }
+      ],
+      "source_refs": [],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "major_02",
+      "tradition_card_ref": "rws.major.02",
+      "tradition_id": "rws",
+      "name": {
+        "zh": "女祭司",
+        "en": "THE HIGH PRIESTESS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "直觉",
+            "隐秘",
+            "潜意识"
+          ],
+          "en": [
+            "Intuition",
+            "Secrets",
+            "Subconscious"
+          ]
+        },
+        "upright": {
+          "zh": "答案不在喧嚣里。安静下来，倾听内心的低语，直觉会为你揭开帷幕。",
+          "en": "The answer isn't in the noise. Be still and listen to the whisper within; intuition will draw back the veil."
+        },
+        "reversed": {
+          "zh": "你在忽视自己的直觉，或有秘密尚未浮出水面。别急着下结论。",
+          "en": "You're ignoring your intuition, or a secret has yet to surface. Don't rush to conclusions."
+        },
+        "correspondence": {
+          "zh": "月亮",
+          "en": "The Moon"
+        },
+        "archetype": {
+          "zh": "女祭司坐在神殿的黑白双柱之间，柱上刻着 B 与 J，取自所罗门圣殿的两根柱子。她手持律法卷轴、脚踏新月，身后的石榴帷幕遮住了奥秘。她代表不言而喻的知识，是与魔术师相对的「静」。",
+          "en": "The High Priestess sits between the black and white pillars of a temple, marked B and J after the pillars of Solomon's Temple. She holds a scroll of law with a crescent moon at her feet, and a pomegranate veil hides the mysteries. She is wordless knowing — the stillness that answers the Magician's action."
+        }
+      },
+      "artwork_ref": "naiwa.classic.major_02",
+      "visual_symbol_refs": [
+        "black_white_pillars",
+        "scroll",
+        "pomegranate_veil",
+        "crescent_at_feet",
+        "crescent_crown",
+        "moonlit_pool",
+        "purple_mantle"
+      ],
+      "naiwa_symbol_refs": [],
+      "style_removed_refs": [
+        "moon_window",
+        "lilies_and_roses"
+      ],
+      "rws_absent": [
+        "solar_cross"
+      ],
+      "imagery_compare": [
+        {
+          "rws": "pillars_boaz_jachin",
+          "zh": "黑白双柱（刻 B 与 J）",
+          "status": "altered",
+          "symbol_ref": "black_white_pillars",
+          "note": "传统柱上刻 B、J 字母；我们没有字母，左黑柱刻新月、右白柱刻太阳"
+        },
+        {
+          "rws": "tora_scroll",
+          "zh": "半掩在袍中的 TORA 卷轴",
+          "status": "altered",
+          "symbol_ref": "scroll",
+          "note": "传统卷轴上写 TORA、一半藏在袍里；我们是怀抱的古卷，画着星盘与月相，没有字样"
+        },
+        {
+          "rws": "pomegranate_veil",
+          "zh": "身后的石榴帷幕",
+          "status": "present",
+          "symbol_ref": "pomegranate_veil",
+          "note": ""
+        },
+        {
+          "rws": "crescent_moon_at_feet",
+          "zh": "脚边的新月",
+          "status": "present",
+          "symbol_ref": "crescent_at_feet",
+          "note": ""
+        },
+        {
+          "rws": "triple_moon_crown",
+          "zh": "三相月冠",
+          "status": "altered",
+          "symbol_ref": "crescent_crown",
+          "note": "传统是满月夹在两弯月牙之间；我们是镶紫宝石的新月头冠"
+        },
+        {
+          "rws": "water",
+          "zh": "帷幕后隐约的水",
+          "status": "altered",
+          "symbol_ref": "moonlit_pool",
+          "note": "传统的水藏在帷幕后、只露一点；我们是座前一池水，漂着睡莲叶"
+        },
+        {
+          "rws": "blue_robe",
+          "zh": "如流水般的蓝袍",
+          "status": "altered",
+          "symbol_ref": "purple_mantle",
+          "note": "传统是蓝袍；我们是绣金纹的深紫斗篷"
+        },
+        {
+          "rws": "solar_cross",
+          "zh": "胸前的等臂十字",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        }
+      ],
+      "source_refs": [],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "major_03",
+      "tradition_card_ref": "rws.major.03",
+      "tradition_id": "rws",
+      "name": {
+        "zh": "皇后",
+        "en": "THE EMPRESS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "丰饶",
+            "养育",
+            "生命"
+          ],
+          "en": [
+            "Abundance",
+            "Nurture",
+            "Life"
+          ]
+        },
+        "upright": {
+          "zh": "丰盛正在生长。照顾好自己与身边的人，创造力和美好会自然结果。",
+          "en": "Abundance is growing. Care for yourself and those around you, and creativity and beauty will bear fruit."
+        },
+        "reversed": {
+          "zh": "付出过度或疏于自我照顾，生长被卡住了。先给自己一点养分。",
+          "en": "Giving too much or neglecting yourself has stalled your growth. Nourish yourself first."
+        },
+        "correspondence": {
+          "zh": "金星",
+          "en": "Venus"
+        },
+        "archetype": {
+          "zh": "传统的皇后是大地之母：坐在麦田与森林之间，头戴十二星冠，身旁心形盾牌上刻着金星符号。她象征自然、感官与孕育，是一切「生长」的原型。",
+          "en": "The traditional Empress is the Earth Mother: seated among wheat and forest, crowned with twelve stars, beside a heart-shaped shield bearing the sign of Venus. She embodies nature, the senses and fertility — the archetype of all growing things."
+        }
+      },
+      "artwork_ref": "naiwa.classic.major_03",
+      "visual_symbol_refs": [
+        "star_crown",
+        "venus_shield",
+        "golden_wheat",
+        "pomegranates",
+        "lily_sceptre",
+        "velvet_throne"
+      ],
+      "naiwa_symbol_refs": [
+        "sunbeam",
+        "cream_mantle"
+      ],
+      "style_removed_refs": [
+        "dark_red_roses",
+        "gothic_ruins"
+      ],
+      "rws_absent": [
+        "waterfall",
+        "cypress_trees",
+        "golden_sky"
+      ],
+      "imagery_compare": [
+        {
+          "rws": "crown_of_twelve_stars",
+          "zh": "十二星冠",
+          "status": "present",
+          "symbol_ref": "star_crown",
+          "note": "可辨约 9～10 颗，数量待人工数"
+        },
+        {
+          "rws": "venus_heart_shield",
+          "zh": "刻金星符号的心形盾牌",
+          "status": "altered",
+          "symbol_ref": "venus_shield",
+          "note": "金星符号一致；我们另加了月桂纹，心形不明确"
+        },
+        {
+          "rws": "wheat",
+          "zh": "脚下成片的麦田",
+          "status": "altered",
+          "symbol_ref": "golden_wheat",
+          "note": "传统是一片麦田；我们是右下方的一丛麦穗"
+        },
+        {
+          "rws": "pomegranate_robe",
+          "zh": "长袍上的石榴纹",
+          "status": "altered",
+          "symbol_ref": "pomegranates",
+          "note": "传统石榴印在长袍上；我们是散在花丛里的完整和剖开的石榴"
+        },
+        {
+          "rws": "scepter",
+          "zh": "顶端是宝球的权杖",
+          "status": "altered",
+          "symbol_ref": "lily_sceptre",
+          "note": "传统权杖顶端是宝球；我们顶端开着白百合"
+        },
+        {
+          "rws": "cushioned_throne",
+          "zh": "铺软垫的宝座",
+          "status": "present",
+          "symbol_ref": "velvet_throne",
+          "note": ""
+        },
+        {
+          "rws": "waterfall",
+          "zh": "瀑布与溪流",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "cypress_trees",
+          "zh": "身后的柏树林",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "golden_sky",
+          "zh": "金黄明亮的天空（白天）",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "我们只有一束斜射的暖阳（见多出的部分）"
+        }
+      ],
+      "source_refs": [],
+      "review_status": "draft"
+    },
+    {
       "card_id": "major_04",
       "tradition_card_ref": "rws.major.04",
       "tradition_id": "rws",
@@ -254,6 +633,850 @@
       "review_status": "draft"
     },
     {
+      "card_id": "major_05",
+      "tradition_card_ref": "rws.major.05",
+      "tradition_id": "rws",
+      "name": {
+        "zh": "教皇",
+        "en": "THE HIEROPHANT"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "传统",
+            "仪式",
+            "教导"
+          ],
+          "en": [
+            "Tradition",
+            "Ritual",
+            "Teaching"
+          ]
+        },
+        "upright": {
+          "zh": "向经验与传统求教。导师、制度或信仰能为你提供可靠的指引。",
+          "en": "Seek guidance from experience and tradition. A mentor, an institution or a faith can show you a reliable path."
+        },
+        "reversed": {
+          "zh": "旧规矩不再适用。是时候质疑教条，走出属于自己的路。",
+          "en": "The old rules no longer fit. Time to question dogma and walk your own road."
+        },
+        "correspondence": {
+          "zh": "金牛座",
+          "en": "Taurus"
+        },
+        "archetype": {
+          "zh": "教皇（又称祭司长）头戴三重冠，举手赐福，脚下两把交叉的钥匙象征通往天上与人间的门，两位侍从跪在座前。他代表制度化的信仰、传承与教育——知识从老师传到学生的那条链。",
+          "en": "The Hierophant wears a triple crown and raises a hand in blessing; two crossed keys at his feet open heaven and earth, and two acolytes kneel before him. He stands for institutional faith, tradition and teaching — the chain by which knowledge passes from master to student."
+        }
+      },
+      "artwork_ref": "naiwa.classic.major_05",
+      "visual_symbol_refs": [
+        "blessing_hand",
+        "crossed_keys",
+        "kneeling_acolytes",
+        "triple_tiara",
+        "triple_cross_staff",
+        "crimson_vestments",
+        "cathedral_pillars"
+      ],
+      "naiwa_symbol_refs": [
+        "censer_smoke"
+      ],
+      "style_removed_refs": [
+        "stained_glass",
+        "candelabras_carpet"
+      ],
+      "rws_absent": [
+        "rose_and_lily_robes"
+      ],
+      "imagery_compare": [
+        {
+          "rws": "benediction_hand",
+          "zh": "举起赐福的手",
+          "status": "present",
+          "symbol_ref": "blessing_hand",
+          "note": ""
+        },
+        {
+          "rws": "crossed_keys",
+          "zh": "交叉的两把钥匙",
+          "status": "present",
+          "symbol_ref": "crossed_keys",
+          "note": "传统在脚下；我们放在座前台阶上"
+        },
+        {
+          "rws": "two_acolytes",
+          "zh": "跪在座前的两位侍从",
+          "status": "altered",
+          "symbol_ref": "kneeling_acolytes",
+          "note": "传统露出剃发的头顶；我们披兜帽、低头，脸被遮住"
+        },
+        {
+          "rws": "triple_crown",
+          "zh": "三重冠",
+          "status": "present",
+          "symbol_ref": "triple_tiara",
+          "note": ""
+        },
+        {
+          "rws": "papal_cross",
+          "zh": "三重十字杖",
+          "status": "present",
+          "symbol_ref": "triple_cross_staff",
+          "note": ""
+        },
+        {
+          "rws": "red_robe",
+          "zh": "红色祭袍",
+          "status": "present",
+          "symbol_ref": "crimson_vestments",
+          "note": ""
+        },
+        {
+          "rws": "two_pillars",
+          "zh": "两侧的灰色石柱",
+          "status": "altered",
+          "symbol_ref": "cathedral_pillars",
+          "note": "传统是素净的石柱；我们的柱上有壁龛和圣像（教堂装饰属风格，不作意义）"
+        },
+        {
+          "rws": "rose_and_lily_robes",
+          "zh": "侍从袍上的玫瑰与百合",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "我们的侍者是米白兜帽袍配红十字圣带"
+        }
+      ],
+      "source_refs": [],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "major_06",
+      "tradition_card_ref": "rws.major.06",
+      "tradition_id": "rws",
+      "name": {
+        "zh": "恋人",
+        "en": "THE LOVERS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "联结",
+            "信任",
+            "抉择"
+          ],
+          "en": [
+            "Union",
+            "Trust",
+            "Choice"
+          ]
+        },
+        "upright": {
+          "zh": "一段真诚的联结，或一个忠于内心的重要选择。价值观一致才是关键。",
+          "en": "A sincere bond, or an important choice made from the heart. Shared values are what matter."
+        },
+        "reversed": {
+          "zh": "关系失衡或选择摇摆。先问清自己真正想要什么。",
+          "en": "An unbalanced relationship or a wavering choice. First ask yourself what you truly want."
+        },
+        "correspondence": {
+          "zh": "双子座",
+          "en": "Gemini"
+        },
+        "archetype": {
+          "zh": "韦特版的恋人画着伊甸园中的一男一女，天使拉斐尔在上方祝福，女子身后是缠着蛇的知识之树。更古老的马赛版画的是一个人站在两位女子之间——所以这张牌既讲爱，也讲选择。",
+          "en": "The Rider–Waite Lovers shows a man and a woman in Eden, blessed by the angel Raphael, with the serpent's Tree of Knowledge behind her. The older Marseille card shows a man between two women — so this card speaks of love and of choice alike."
+        }
+      },
+      "artwork_ref": "naiwa.classic.major_06",
+      "visual_symbol_refs": [
+        "two_naiwas",
+        "angel",
+        "serpent",
+        "pomegranate_tree",
+        "rose_tree"
+      ],
+      "naiwa_symbol_refs": [
+        "forking_path",
+        "white_lilies",
+        "rose_petals"
+      ],
+      "style_removed_refs": [
+        "castle_waterfall"
+      ],
+      "rws_absent": [
+        "mountain",
+        "sun",
+        "gaze_hierarchy"
+      ],
+      "imagery_compare": [
+        {
+          "rws": "two_lovers",
+          "zh": "伊甸园中的一男一女",
+          "status": "altered",
+          "symbol_ref": "two_naiwas",
+          "note": "传统是赤裸的一男一女、各站一边；我们是两只一模一样的奶蛙并肩手牵手"
+        },
+        {
+          "rws": "angel_raphael",
+          "zh": "上方的天使拉斐尔",
+          "status": "present",
+          "symbol_ref": "angel",
+          "note": ""
+        },
+        {
+          "rws": "serpent",
+          "zh": "缠在知识之树上的蛇",
+          "status": "present",
+          "symbol_ref": "serpent",
+          "note": ""
+        },
+        {
+          "rws": "tree_of_knowledge",
+          "zh": "结果实的知识之树",
+          "status": "altered",
+          "symbol_ref": "pomegranate_tree",
+          "note": "传统结的是苹果（禁果）；我们结的是石榴"
+        },
+        {
+          "rws": "tree_of_life",
+          "zh": "燃着火焰的生命之树",
+          "status": "altered",
+          "symbol_ref": "rose_tree",
+          "note": "传统树上是十二簇火焰；我们是开满玫瑰的树（玫瑰的暗红色属风格，不作意义）"
+        },
+        {
+          "rws": "mountain",
+          "zh": "两人之间的高山",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "我们远处是山谷里的哥特城堡、拱桥与瀑布（风格化，已去掉），没有明确的中央高山"
+        },
+        {
+          "rws": "sun",
+          "zh": "高处的太阳",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "我们是天使身后的金光与紫色暮色（暮色属风格化）"
+        },
+        {
+          "rws": "gaze_hierarchy",
+          "zh": "男人望向女人、女人望向天使",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "我们的两只奶蛙并肩手牵手，没有这种视线层次"
+        }
+      ],
+      "source_refs": [],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "major_07",
+      "tradition_card_ref": "rws.major.07",
+      "tradition_id": "rws",
+      "name": {
+        "zh": "战车",
+        "en": "THE CHARIOT"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "驾驭",
+            "意志",
+            "胜利"
+          ],
+          "en": [
+            "Control",
+            "Willpower",
+            "Victory"
+          ]
+        },
+        "upright": {
+          "zh": "驾驭相反的力量，以坚定意志向前推进，胜利属于专注的人。",
+          "en": "Harness opposing forces and drive forward with firm will. Victory belongs to the focused."
+        },
+        "reversed": {
+          "zh": "方向失控、内耗拉扯。先让两只狮身兽朝同一个方向。",
+          "en": "Losing direction, pulled apart from within. First get both sphinxes facing the same way."
+        },
+        "correspondence": {
+          "zh": "巨蟹座",
+          "en": "Cancer"
+        },
+        "archetype": {
+          "zh": "战车上的王子头戴星冠，车前一黑一白两只狮身人面兽代表相反的力量；他没有缰绳，全凭意志驾驭。这是愚者第一次凭自己赢得的胜利。",
+          "en": "A star-crowned prince rides a chariot drawn by a black and a white sphinx — opposing forces. He holds no reins; he steers by will alone. It is the Fool's first victory won on his own."
+        }
+      },
+      "artwork_ref": "naiwa.classic.major_07",
+      "visual_symbol_refs": [
+        "black_white_sphinxes",
+        "star_canopy",
+        "crown",
+        "star_sceptre",
+        "star_emblem"
+      ],
+      "naiwa_symbol_refs": [
+        "chains_crossbar",
+        "star_banner"
+      ],
+      "style_removed_refs": [
+        "castle_city",
+        "stormy_sky"
+      ],
+      "rws_absent": [
+        "city_walls",
+        "chariot_wheels",
+        "river",
+        "crescent_moon_epaulettes",
+        "breastplate_square",
+        "yellow_sky"
+      ],
+      "imagery_compare": [
+        {
+          "rws": "black_white_sphinxes",
+          "zh": "一黑一白两只狮身兽",
+          "status": "present",
+          "symbol_ref": "black_white_sphinxes",
+          "note": "我们的两只朝向不同：黑的朝前、白的望向右方"
+        },
+        {
+          "rws": "starry_canopy",
+          "zh": "头顶的星篷",
+          "status": "present",
+          "symbol_ref": "star_canopy",
+          "note": ""
+        },
+        {
+          "rws": "crown_with_star",
+          "zh": "带星的王冠",
+          "status": "present",
+          "symbol_ref": "crown",
+          "note": ""
+        },
+        {
+          "rws": "wand",
+          "zh": "手中的权杖",
+          "status": "altered",
+          "symbol_ref": "star_sceptre",
+          "note": "传统是一根短杖；我们是顶端带星形轮盘的金色权杖"
+        },
+        {
+          "rws": "winged_disk",
+          "zh": "车前的带翼圆盘",
+          "status": "altered",
+          "symbol_ref": "star_emblem",
+          "note": "我们是座前月桂环绕的八芒星徽，位置相同、形态完全不同"
+        },
+        {
+          "rws": "city_walls",
+          "zh": "身后的城墙与城镇",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "画面右后方是亮灯的哥特城堡和城门（风格化，已去掉）"
+        },
+        {
+          "rws": "chariot_wheels",
+          "zh": "石车与车轮",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "画面看不到车身和车轮，更像立在台阶上的华盖宝座"
+        },
+        {
+          "rws": "river",
+          "zh": "身后的河流",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "crescent_moon_epaulettes",
+          "zh": "肩上的新月肩饰",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "breastplate_square",
+          "zh": "胸甲上的方形",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "yellow_sky",
+          "zh": "明亮的黄色天空（白天）",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "我们画成蓝黑风暴夜空（风格化，已去掉）"
+        }
+      ],
+      "source_refs": [],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "major_08",
+      "tradition_card_ref": "rws.major.08",
+      "tradition_id": "rws",
+      "name": {
+        "zh": "力量",
+        "en": "STRENGTH"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "温柔",
+            "勇气",
+            "自我掌控"
+          ],
+          "en": [
+            "Gentleness",
+            "Courage",
+            "Self-mastery"
+          ]
+        },
+        "upright": {
+          "zh": "真正的力量是温柔。以耐心和慈悲驯服内心的猛兽。",
+          "en": "True strength is gentleness. Tame the beast within through patience and compassion."
+        },
+        "reversed": {
+          "zh": "自我怀疑或情绪失控。别用蛮力，先安抚自己。",
+          "en": "Self-doubt or runaway emotions. Don't use force — soothe yourself first."
+        },
+        "correspondence": {
+          "zh": "狮子座",
+          "en": "Leo"
+        },
+        "archetype": {
+          "zh": "一位女子轻轻合上狮子的嘴，头顶有无限符号。韦特与黄金黎明把它排在第八、把正义排在第十一，以对应狮子座与天秤座；更早的马赛版顺序正好相反。它讲的不是蛮力，而是驯服本能的温柔。",
+          "en": "A woman gently closes a lion's jaws, an infinity sign above her head. Waite and the Golden Dawn placed Strength at VIII and Justice at XI to match Leo and Libra; the older Marseille order is the reverse. Its power isn't force but the gentleness that tames instinct."
+        }
+      },
+      "artwork_ref": "naiwa.classic.major_08",
+      "visual_symbol_refs": [
+        "black_lion",
+        "hand_on_lion",
+        "infinity_sign"
+      ],
+      "naiwa_symbol_refs": [
+        "lion_collar",
+        "stone_steps"
+      ],
+      "style_removed_refs": [
+        "dark_red_roses",
+        "full_moon",
+        "gothic_ruins"
+      ],
+      "rws_absent": [
+        "white_robe",
+        "rose_garland",
+        "mountain",
+        "bright_sky"
+      ],
+      "imagery_compare": [
+        {
+          "rws": "lion",
+          "zh": "狮子",
+          "status": "altered",
+          "symbol_ref": "black_lion",
+          "note": "传统是黄褐色、张着嘴的狮子；我们是闭眼低头趴着的黑狮，颜色不作意义"
+        },
+        {
+          "rws": "hands_on_lion",
+          "zh": "双手合上狮子的嘴",
+          "status": "altered",
+          "symbol_ref": "hand_on_lion",
+          "note": "我们是一只手掌轻按在狮子额头上，没有合嘴的动作"
+        },
+        {
+          "rws": "lemniscate",
+          "zh": "头顶的无限符号",
+          "status": "present",
+          "symbol_ref": "infinity_sign",
+          "note": ""
+        },
+        {
+          "rws": "white_robe",
+          "zh": "白袍",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "rose_garland",
+          "zh": "身上的玫瑰花环与花腰带",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "画面四周的暗红玫瑰与常春藤属于哥特风格，已去掉"
+        },
+        {
+          "rws": "mountain",
+          "zh": "远处的山",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "bright_sky",
+          "zh": "明亮的黄色天空（白天）",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "我们画成了满月夜晚（风格化，已去掉）"
+        }
+      ],
+      "source_refs": [],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "major_09",
+      "tradition_card_ref": "rws.major.09",
+      "tradition_id": "rws",
+      "name": {
+        "zh": "隐者",
+        "en": "THE HERMIT"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "内省",
+            "探索",
+            "智慧"
+          ],
+          "en": [
+            "Introspection",
+            "Search",
+            "Wisdom"
+          ]
+        },
+        "upright": {
+          "zh": "暂时离开人群，提灯向内寻找。独处会带来清明的智慧。",
+          "en": "Step away from the crowd for a while and search inward by lantern light. Solitude brings clear wisdom."
+        },
+        "reversed": {
+          "zh": "过度孤立或拒绝反思。灯还亮着，记得回来。",
+          "en": "Too much isolation, or refusing to reflect. The lamp is still lit — remember to come back."
+        },
+        "correspondence": {
+          "zh": "处女座",
+          "en": "Virgo"
+        },
+        "archetype": {
+          "zh": "一位长须老人独立雪峰，提着装有六芒星的灯，手拄长杖。他已经走过了外面的世界，现在转向内心，用自己的光为后来的人照路。",
+          "en": "A bearded old man stands alone on a snowy peak, holding a lantern with a six-pointed star and leaning on a staff. Having walked the outer world, he turns inward, and his light guides those who come after."
+        }
+      },
+      "artwork_ref": "naiwa.classic.major_09",
+      "visual_symbol_refs": [
+        "star_lantern",
+        "staff",
+        "snowy_peak",
+        "dark_cloak"
+      ],
+      "naiwa_symbol_refs": [
+        "falling_snow",
+        "bare_trees"
+      ],
+      "style_removed_refs": [
+        "full_moon",
+        "gothic_ruins"
+      ],
+      "rws_absent": [
+        "grey_beard"
+      ],
+      "imagery_compare": [
+        {
+          "rws": "lantern_with_star",
+          "zh": "装着六芒星的提灯",
+          "status": "present",
+          "symbol_ref": "star_lantern",
+          "note": ""
+        },
+        {
+          "rws": "staff",
+          "zh": "长杖",
+          "status": "altered",
+          "symbol_ref": "staff",
+          "note": "传统是一根笔直的长杖；我们是顶端弯曲的扭曲木杖"
+        },
+        {
+          "rws": "snowy_peak",
+          "zh": "雪峰顶",
+          "status": "present",
+          "symbol_ref": "snowy_peak",
+          "note": ""
+        },
+        {
+          "rws": "hooded_cloak",
+          "zh": "灰色兜帽长袍",
+          "status": "altered",
+          "symbol_ref": "dark_cloak",
+          "note": "我们是没有兜帽的深色破边短斗篷，扣着六芒星扣"
+        },
+        {
+          "rws": "grey_beard",
+          "zh": "灰白长须",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "奶蛙没有胡子，属于角色化"
+        },
+        {
+          "rws": "dark_sky",
+          "zh": "昏暗的天色",
+          "status": "present",
+          "symbol_ref": null,
+          "note": "传统隐者的背景本来就昏暗（常被读作夜晚或黄昏）；画面里的满月是风格化，已去掉"
+        }
+      ],
+      "source_refs": [],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "major_10",
+      "tradition_card_ref": "rws.major.10",
+      "tradition_id": "rws",
+      "name": {
+        "zh": "命运之轮",
+        "en": "WHEEL OF FORTUNE"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "循环",
+            "变化",
+            "命运"
+          ],
+          "en": [
+            "Cycles",
+            "Change",
+            "Fate"
+          ]
+        },
+        "upright": {
+          "zh": "命运之轮正在转动，转机将至。顺势而为，抓住时机。",
+          "en": "The wheel of fortune is turning and a change of luck is near. Go with the flow and seize the moment."
+        },
+        "reversed": {
+          "zh": "暂时的低谷或抗拒变化。轮子总会再转上来。",
+          "en": "A temporary low, or resisting change. The wheel will come back up."
+        },
+        "correspondence": {
+          "zh": "木星",
+          "en": "Jupiter"
+        },
+        "archetype": {
+          "zh": "轮盘上刻着 TARO（也可读作 ROTA、TORA）和炼金符号，顶端是持剑的狮身人面兽，一侧蛇在下滑，一侧阿努比斯在上升。四角的天使、鹰、狮、牛对应四个固定星座与四福音书。它位于大阿尔卡那的中段：没有人能永远在顶上。",
+          "en": "The wheel bears the letters TARO (also ROTA, TORA) and alchemical signs; a sword-bearing sphinx sits on top, a serpent descends and Anubis rises. Angel, eagle, lion and bull in the corners echo the four fixed signs and the four Evangelists. It sits mid-journey: no one stays on top forever."
+        }
+      },
+      "artwork_ref": "naiwa.classic.major_10",
+      "visual_symbol_refs": [
+        "golden_wheel",
+        "sphinx",
+        "serpent",
+        "anubis",
+        "four_living_creatures"
+      ],
+      "naiwa_symbol_refs": [
+        "naiwa_on_platform"
+      ],
+      "style_removed_refs": [
+        "cosmic_sky",
+        "ruins"
+      ],
+      "rws_absent": [
+        "taro_letters",
+        "tetragrammaton",
+        "clouds"
+      ],
+      "imagery_compare": [
+        {
+          "rws": "wheel",
+          "zh": "刻着符号的轮盘",
+          "status": "altered",
+          "symbol_ref": "golden_wheel",
+          "note": "我们是带齿轮的古金轮盘，中心八芒星，外圈有日、月、沙漏与炼金三角；传统轮上的炼金符号保留，齿轮与沙漏是多出的"
+        },
+        {
+          "rws": "taro_letters",
+          "zh": "轮上的 TARO 字母",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "tetragrammaton",
+          "zh": "轮上的希伯来字母",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "sphinx",
+          "zh": "轮顶持剑的狮身人面兽",
+          "status": "altered",
+          "symbol_ref": "sphinx",
+          "note": "我们的狮身兽带翅膀、戴埃及头巾，看不出持剑"
+        },
+        {
+          "rws": "typhon_serpent",
+          "zh": "沿轮下滑的蛇",
+          "status": "present",
+          "symbol_ref": "serpent",
+          "note": ""
+        },
+        {
+          "rws": "anubis",
+          "zh": "向上攀升的阿努比斯",
+          "status": "present",
+          "symbol_ref": "anubis",
+          "note": "我们是胡狼头人形攀在轮盘右侧"
+        },
+        {
+          "rws": "four_living_creatures",
+          "zh": "四角的天使、鹰、狮、牛",
+          "status": "altered",
+          "symbol_ref": "four_living_creatures",
+          "note": "传统四者都捧着书；我们只有天使拿书，狮和牛带翅膀"
+        },
+        {
+          "rws": "clouds",
+          "zh": "四角的云与蓝天",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "我们是紫色星云、旋涡星系与行星（风格化，已去掉）"
+        }
+      ],
+      "source_refs": [],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "major_11",
+      "tradition_card_ref": "rws.major.11",
+      "tradition_id": "rws",
+      "name": {
+        "zh": "正义",
+        "en": "JUSTICE"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "平衡",
+            "因果",
+            "公正"
+          ],
+          "en": [
+            "Balance",
+            "Cause & effect",
+            "Fairness"
+          ]
+        },
+        "upright": {
+          "zh": "因果自有衡量。诚实面对事实，做出公正的决定。",
+          "en": "Cause and effect keep their own accounts. Face the facts honestly and decide fairly."
+        },
+        "reversed": {
+          "zh": "不公、逃避责任或偏见。天平倾斜了，需要校正。",
+          "en": "Injustice, dodging responsibility or bias. The scales are tipped and need correcting."
+        },
+        "correspondence": {
+          "zh": "天秤座",
+          "en": "Libra"
+        },
+        "archetype": {
+          "zh": "正义女神坐在两柱之间，右手直剑、左手天平。和常见的蒙眼正义女神不同，她睁着眼——塔罗里的正义要看清事实。在韦特体系中它与「力量」互换了位置，排在第十一，正好落在大阿尔卡那的中央。",
+          "en": "Justice sits between two pillars, sword in her right hand and scales in her left. Unlike the blindfolded Lady Justice, her eyes are open — tarot justice must see the truth. In the Waite system she swapped places with Strength and became XI, right at the centre of the Major Arcana."
+        }
+      },
+      "artwork_ref": "naiwa.classic.major_11",
+      "visual_symbol_refs": [
+        "upright_sword",
+        "scales",
+        "two_pillars",
+        "crimson_curtain",
+        "stone_throne"
+      ],
+      "naiwa_symbol_refs": [
+        "radiant_halo",
+        "justice_statues"
+      ],
+      "style_removed_refs": [
+        "candelabras",
+        "moon_ruins"
+      ],
+      "rws_absent": [
+        "crown_with_square",
+        "white_shoe"
+      ],
+      "imagery_compare": [
+        {
+          "rws": "upright_sword",
+          "zh": "竖起的双刃剑",
+          "status": "present",
+          "symbol_ref": "upright_sword",
+          "note": ""
+        },
+        {
+          "rws": "scales",
+          "zh": "天平",
+          "status": "present",
+          "symbol_ref": "scales",
+          "note": ""
+        },
+        {
+          "rws": "two_pillars",
+          "zh": "两根柱子",
+          "status": "present",
+          "symbol_ref": "two_pillars",
+          "note": ""
+        },
+        {
+          "rws": "veil",
+          "zh": "两柱之间的帷幕",
+          "status": "altered",
+          "symbol_ref": "crimson_curtain",
+          "note": "传统是紫色的帷幕；我们是厚重的深红丝绒帷幕"
+        },
+        {
+          "rws": "throne",
+          "zh": "宝座",
+          "status": "altered",
+          "symbol_ref": "stone_throne",
+          "note": "我们是带尖拱的石座，立在台阶上；尖拱的哥特样式不作意义"
+        },
+        {
+          "rws": "red_robe",
+          "zh": "红袍",
+          "status": "present",
+          "symbol_ref": null,
+          "note": "奶蛙披深红斗篷，visual_symbols 里没有单列"
+        },
+        {
+          "rws": "open_eyes",
+          "zh": "睁开的眼睛（不蒙眼）",
+          "status": "present",
+          "symbol_ref": null,
+          "note": "奶蛙眼睛平视、没有蒙眼；但两侧柱上的雕像是蒙眼的（见多出的部分）"
+        },
+        {
+          "rws": "crown_with_square",
+          "zh": "带方形饰的王冠",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "white_shoe",
+          "zh": "袍下露出的白鞋",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        }
+      ],
+      "source_refs": [],
+      "review_status": "draft"
+    },
+    {
       "card_id": "major_12",
       "tradition_card_ref": "rws.major.12",
       "tradition_id": "rws",
@@ -361,6 +1584,252 @@
           "status": "absent",
           "symbol_ref": null,
           "note": ""
+        }
+      ],
+      "source_refs": [],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "major_13",
+      "tradition_card_ref": "rws.major.13",
+      "tradition_id": "rws",
+      "name": {
+        "zh": "死神",
+        "en": "DEATH"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "终结",
+            "转化",
+            "新生"
+          ],
+          "en": [
+            "Endings",
+            "Transformation",
+            "Rebirth"
+          ]
+        },
+        "upright": {
+          "zh": "一个阶段正在结束，为新生腾出空间。不必害怕，这是蜕变。",
+          "en": "A chapter is ending to make room for new life. Don't be afraid — this is transformation."
+        },
+        "reversed": {
+          "zh": "抗拒结束，困在旧模式里。放手才能重生。",
+          "en": "Resisting the end, stuck in old patterns. Let go in order to be reborn."
+        },
+        "correspondence": {
+          "zh": "天蝎座",
+          "en": "Scorpio"
+        },
+        "archetype": {
+          "zh": "骑白马的骷髅骑士举着绘有白玫瑰的黑旗，国王倒地、主教祈祷、孩童仰望，远方两座塔之间太阳升起。在塔罗里它几乎从不指肉体的死亡，而是一个阶段的终结与转化。",
+          "en": "A skeletal knight on a white horse carries a black banner with a white rose; a king has fallen, a bishop prays, a child looks up, and the sun rises between two distant towers. In tarot it almost never means physical death, but the end and transformation of a phase."
+        }
+      },
+      "artwork_ref": "naiwa.classic.major_13",
+      "visual_symbol_refs": [
+        "white_horse",
+        "white_rose_banner",
+        "fallen_crown",
+        "sun_between_towers"
+      ],
+      "naiwa_symbol_refs": [
+        "white_roses"
+      ],
+      "style_removed_refs": [
+        "black_hooded_cloak",
+        "red_roses_petals",
+        "full_moon",
+        "gothic_ruins"
+      ],
+      "rws_absent": [
+        "skeleton_in_armor",
+        "bishop",
+        "child_and_maiden",
+        "river_with_boat"
+      ],
+      "imagery_compare": [
+        {
+          "rws": "skeleton_in_armor",
+          "zh": "身披黑甲的骷髅骑士",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "我们的骑手是奶蛙，披黑色兜帽斗篷（风格化装扮，已从 AI 数据去掉），不是骷髅"
+        },
+        {
+          "rws": "white_horse",
+          "zh": "白马",
+          "status": "present",
+          "symbol_ref": "white_horse",
+          "note": ""
+        },
+        {
+          "rws": "black_banner_white_rose",
+          "zh": "绘有白玫瑰的黑旗",
+          "status": "present",
+          "symbol_ref": "white_rose_banner",
+          "note": "我们的旗边缘破损"
+        },
+        {
+          "rws": "fallen_king",
+          "zh": "倒在地上的国王",
+          "status": "altered",
+          "symbol_ref": "fallen_crown",
+          "note": "传统是国王倒地、王冠落下；我们只画了地上的一顶金冠，没有国王"
+        },
+        {
+          "rws": "bishop",
+          "zh": "双手合十的主教",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "child_and_maiden",
+          "zh": "仰望的孩子与别过脸的少女",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "river_with_boat",
+          "zh": "远处的河与小船",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "sun_between_towers",
+          "zh": "两座塔之间升起的太阳",
+          "status": "altered",
+          "symbol_ref": "sun_between_towers",
+          "note": "传统是两座塔之间的日出；我们的塔画成哥特尖塔（尖塔造型属风格化，不作意义），太阳贴着地平线，看不出是升是落，站内文案写「天正在亮」"
+        }
+      ],
+      "source_refs": [],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "major_14",
+      "tradition_card_ref": "rws.major.14",
+      "tradition_id": "rws",
+      "name": {
+        "zh": "节制",
+        "en": "TEMPERANCE"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "调和",
+            "节制",
+            "疗愈"
+          ],
+          "en": [
+            "Harmony",
+            "Moderation",
+            "Healing"
+          ]
+        },
+        "upright": {
+          "zh": "在两端之间找到平衡。耐心调和，事情会慢慢变好。",
+          "en": "Find balance between the extremes. Blend patiently, and things will slowly get better."
+        },
+        "reversed": {
+          "zh": "失衡、过度或急躁。放慢倒水的速度。",
+          "en": "Imbalance, excess or impatience. Pour a little more slowly."
+        },
+        "correspondence": {
+          "zh": "射手座",
+          "en": "Sagittarius"
+        },
+        "archetype": {
+          "zh": "有翼天使一足踏水、一足踏岸，在两只杯子之间倒水，胸前有三角形标记，远方小路通往升起的太阳。它是「死神」之后的疗愈：把对立的东西调和成新的平衡。",
+          "en": "A winged angel stands with one foot in water and one on land, pouring between two cups, a triangle on its breast, a path leading to a rising sun. It is the healing after Death: blending opposites into a new balance."
+        }
+      },
+      "artwork_ref": "naiwa.classic.major_14",
+      "visual_symbol_refs": [
+        "white_wings",
+        "pouring_cups",
+        "one_foot_in_water",
+        "pool",
+        "white_robe",
+        "winding_road_sun",
+        "white_lilies"
+      ],
+      "naiwa_symbol_refs": [],
+      "style_removed_refs": [
+        "full_moon",
+        "ruined_arches"
+      ],
+      "rws_absent": [
+        "triangle_in_square",
+        "solar_disc_on_forehead"
+      ],
+      "imagery_compare": [
+        {
+          "rws": "angel_wings",
+          "zh": "天使的翅膀",
+          "status": "altered",
+          "symbol_ref": "white_wings",
+          "note": "传统天使是红色翅膀；我们是白色羽翼，背在奶蛙身上"
+        },
+        {
+          "rws": "two_cups_pouring",
+          "zh": "在两只杯子之间倒水",
+          "status": "altered",
+          "symbol_ref": "pouring_cups",
+          "note": "传统是两只相同的金杯；我们是一只铜杯和一只高脚杯，水流泛银光"
+        },
+        {
+          "rws": "one_foot_in_water",
+          "zh": "一足踏水、一足踏岸",
+          "status": "present",
+          "symbol_ref": "one_foot_in_water",
+          "note": ""
+        },
+        {
+          "rws": "pool",
+          "zh": "水池",
+          "status": "present",
+          "symbol_ref": "pool",
+          "note": ""
+        },
+        {
+          "rws": "white_robe",
+          "zh": "白色长袍",
+          "status": "present",
+          "symbol_ref": "white_robe",
+          "note": "我们的长袍绣金纹，胸前是三枚星纹圆扣"
+        },
+        {
+          "rws": "triangle_in_square",
+          "zh": "胸前方框里的三角形",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "胸前位置画的是三枚星纹圆扣"
+        },
+        {
+          "rws": "solar_disc_on_forehead",
+          "zh": "额头的太阳圆点",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "path_to_crown_sun",
+          "zh": "通往远山、尽头有王冠般光芒的小路",
+          "status": "altered",
+          "symbol_ref": "winding_road_sun",
+          "note": "我们是蜿蜒小路通向群山间的太阳，没有王冠形状；太阳是升是落看不出"
+        },
+        {
+          "rws": "irises",
+          "zh": "岸边的鸢尾花",
+          "status": "altered",
+          "symbol_ref": "white_lilies",
+          "note": "我们画的是白百合，只是位置与传统的鸢尾对应"
         }
       ],
       "source_refs": [],
@@ -836,6 +2305,377 @@
           "status": "absent",
           "symbol_ref": null,
           "note": ""
+        }
+      ],
+      "source_refs": [],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "major_19",
+      "tradition_card_ref": "rws.major.19",
+      "tradition_id": "rws",
+      "name": {
+        "zh": "太阳",
+        "en": "THE SUN"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "快乐",
+            "清明",
+            "活力"
+          ],
+          "en": [
+            "Joy",
+            "Clarity",
+            "Vitality"
+          ]
+        },
+        "upright": {
+          "zh": "光明、成功与纯粹的快乐。一切都清晰起来了。",
+          "en": "Light, success and pure joy. Everything is becoming clear."
+        },
+        "reversed": {
+          "zh": "快乐被暂时遮蔽，或过度乐观。太阳仍在，只是需要等云散。",
+          "en": "Joy is briefly clouded, or you're over-optimistic. The sun is still there; wait for the clouds to pass."
+        },
+        "correspondence": {
+          "zh": "太阳",
+          "en": "The Sun"
+        },
+        "archetype": {
+          "zh": "一个孩子赤身骑在白马上，举着红旗，身后是向日葵与矮墙，上方一张大大的太阳脸。走出「月亮」的迷雾之后，一切都清楚了：这是大阿尔卡那里最明亮、最纯粹的快乐。",
+          "en": "A naked child rides a white horse holding a red banner, sunflowers and a low wall behind, a great sun face above. Out of the Moon's fog, everything is clear: the brightest, purest joy in the Major Arcana."
+        }
+      },
+      "artwork_ref": "naiwa.classic.major_19",
+      "visual_symbol_refs": [
+        "sun_face",
+        "white_pony",
+        "red_banner",
+        "sunflowers",
+        "stone_wall"
+      ],
+      "naiwa_symbol_refs": [
+        "red_cape",
+        "flowers_foreground"
+      ],
+      "style_removed_refs": [
+        "gothic_spires"
+      ],
+      "rws_absent": [
+        "nude_child",
+        "red_feather",
+        "flower_wreath"
+      ],
+      "imagery_compare": [
+        {
+          "rws": "sun_with_face",
+          "zh": "带人脸的大太阳",
+          "status": "present",
+          "symbol_ref": "sun_face",
+          "note": ""
+        },
+        {
+          "rws": "nude_child",
+          "zh": "赤身骑马的孩子",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "骑马的是披红斗篷的奶蛙（见多出的部分）"
+        },
+        {
+          "rws": "white_horse",
+          "zh": "白马",
+          "status": "present",
+          "symbol_ref": "white_pony",
+          "note": "我们是一匹毛茸茸的小白马"
+        },
+        {
+          "rws": "red_banner",
+          "zh": "红旗",
+          "status": "altered",
+          "symbol_ref": "red_banner",
+          "note": "我们的红旗上多了金色太阳纹"
+        },
+        {
+          "rws": "sunflowers",
+          "zh": "墙后的向日葵",
+          "status": "present",
+          "symbol_ref": "sunflowers",
+          "note": "站内文案写「黑向日葵」，实际是金黄花瓣、深色花心"
+        },
+        {
+          "rws": "wall",
+          "zh": "矮墙",
+          "status": "altered",
+          "symbol_ref": "stone_wall",
+          "note": "传统是朴素的矮墙；我们的墙爬满藤蔓、带哥特拱饰（拱饰属风格化，不作意义）"
+        },
+        {
+          "rws": "red_feather",
+          "zh": "孩子头上的红羽毛",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "flower_wreath",
+          "zh": "孩子头上的花环",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "bright_daylight",
+          "zh": "明亮的白天",
+          "status": "present",
+          "symbol_ref": null,
+          "note": "满画面暖金色阳光，本来就是这张牌的传统"
+        }
+      ],
+      "source_refs": [],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "major_20",
+      "tradition_card_ref": "rws.major.20",
+      "tradition_id": "rws",
+      "name": {
+        "zh": "审判",
+        "en": "JUDGEMENT"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "觉醒",
+            "呼唤",
+            "重生"
+          ],
+          "en": [
+            "Awakening",
+            "Calling",
+            "Renewal"
+          ]
+        },
+        "upright": {
+          "zh": "号角响起，是觉醒与清算的时刻。回应内心的召唤。",
+          "en": "The trumpet sounds — a time of awakening and reckoning. Answer the call within."
+        },
+        "reversed": {
+          "zh": "自我批判过重，或忽视了召唤。原谅过去，才能重生。",
+          "en": "Too much self-judgment, or ignoring the call. Forgive the past in order to be reborn."
+        },
+        "correspondence": {
+          "zh": "火元素（现代：冥王星）",
+          "en": "Fire (modern: Pluto)"
+        },
+        "archetype": {
+          "zh": "天使加百列吹响挂着红十字旗的号角，下方棺木中的人们张开双臂站起来。它取自「最后的审判」的意象，在塔罗里代表觉醒、清算，以及被召唤去过一种新的生活。",
+          "en": "The angel Gabriel sounds a trumpet hung with a red-cross banner, and below, people rise from their coffins with open arms. Drawn from the Last Judgement, in tarot it means awakening, reckoning, and being called to a new life."
+        }
+      },
+      "artwork_ref": "naiwa.classic.major_20",
+      "visual_symbol_refs": [
+        "wings",
+        "golden_trumpet",
+        "red_cross_banner",
+        "cloud",
+        "open_coffins",
+        "rising_spirits",
+        "mountains_ruins"
+      ],
+      "naiwa_symbol_refs": [
+        "halo",
+        "white_lilies"
+      ],
+      "style_removed_refs": [
+        "gothic_arcade_castle"
+      ],
+      "rws_absent": [
+        "nude_family",
+        "open_arms",
+        "sea"
+      ],
+      "imagery_compare": [
+        {
+          "rws": "angel_wings",
+          "zh": "天使（加百列）的翅膀",
+          "status": "altered",
+          "symbol_ref": "wings",
+          "note": "吹号的是奶蛙；两只翅膀都是上白下黑的混色羽毛（站内文案写「一黑一白」，与画面不符）"
+        },
+        {
+          "rws": "trumpet",
+          "zh": "号角",
+          "status": "present",
+          "symbol_ref": "golden_trumpet",
+          "note": ""
+        },
+        {
+          "rws": "cross_banner",
+          "zh": "号角上挂的红十字旗",
+          "status": "present",
+          "symbol_ref": "red_cross_banner",
+          "note": ""
+        },
+        {
+          "rws": "clouds",
+          "zh": "天使所在的云",
+          "status": "present",
+          "symbol_ref": "cloud",
+          "note": ""
+        },
+        {
+          "rws": "open_coffins",
+          "zh": "打开的棺木",
+          "status": "altered",
+          "symbol_ref": "open_coffins",
+          "note": "传统棺木漂在水上；我们是刻十字的石棺（哥特造型属风格化，不作意义），立在云雾地面上，站内文案称「石匣」"
+        },
+        {
+          "rws": "rising_dead",
+          "zh": "从棺中站起的人",
+          "status": "altered",
+          "symbol_ref": "rising_spirits",
+          "note": "传统是张开双臂站起来的人；我们是半透明的人形光灵顺着光束升起"
+        },
+        {
+          "rws": "nude_family",
+          "zh": "男人、女人与孩子一家",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "open_arms",
+          "zh": "张开双臂的姿势",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "光灵的姿势看不清"
+        },
+        {
+          "rws": "sea",
+          "zh": "棺木下的海水",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "snowy_mountains",
+          "zh": "远处的雪山",
+          "status": "altered",
+          "symbol_ref": "mountains_ruins",
+          "note": "图上雪山与瀑布、哥特拱廊废墟和山顶城堡画在一起；只取雪山，废墟与城堡不作意义"
+        }
+      ],
+      "source_refs": [],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "major_21",
+      "tradition_card_ref": "rws.major.21",
+      "tradition_id": "rws",
+      "name": {
+        "zh": "世界",
+        "en": "THE WORLD"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "完成",
+            "统一",
+            "圆满"
+          ],
+          "en": [
+            "Completion",
+            "Unity",
+            "Wholeness"
+          ]
+        },
+        "upright": {
+          "zh": "一个循环圆满完成。你已抵达，享受这份完整。",
+          "en": "A cycle is complete. You have arrived — enjoy the wholeness."
+        },
+        "reversed": {
+          "zh": "还差最后一步，或迟迟无法收尾。把未竟之事画上句号。",
+          "en": "One last step remains, or you can't quite finish. Put a full stop on what's undone."
+        },
+        "correspondence": {
+          "zh": "土星",
+          "en": "Saturn"
+        },
+        "archetype": {
+          "zh": "一位手持双杖的舞者在椭圆月桂花环中央起舞，四角与「命运之轮」一样是天使、鹰、狮、牛。它是愚者之旅的终点，也是下一轮的起点：完整、统一、圆满。",
+          "en": "A dancer holding two wands moves inside an oval laurel wreath, with angel, eagle, lion and bull in the corners as on the Wheel. It's the end of the Fool's Journey and the start of the next: wholeness, unity, completion."
+        }
+      },
+      "artwork_ref": "naiwa.classic.major_21",
+      "visual_symbol_refs": [
+        "oval_wreath",
+        "floating_naiwa",
+        "two_wands",
+        "four_living_creatures",
+        "gold_ribbon"
+      ],
+      "naiwa_symbol_refs": [],
+      "style_removed_refs": [
+        "black_roses",
+        "nebula_swirl",
+        "golden_stars"
+      ],
+      "rws_absent": [
+        "purple_sash",
+        "crossed_legs"
+      ],
+      "imagery_compare": [
+        {
+          "rws": "laurel_wreath",
+          "zh": "椭圆形的月桂花环",
+          "status": "altered",
+          "symbol_ref": "oval_wreath",
+          "note": "我们的花环点缀了黑玫瑰（风格化，不作意义），缠金丝带，底部打蝴蝶结"
+        },
+        {
+          "rws": "dancing_figure",
+          "zh": "花环中央起舞的人",
+          "status": "altered",
+          "symbol_ref": "floating_naiwa",
+          "note": "传统是起舞的舞者；我们是奶蛙双脚并拢、失重般悬浮"
+        },
+        {
+          "rws": "two_wands",
+          "zh": "两手各持一杖",
+          "status": "present",
+          "symbol_ref": "two_wands",
+          "note": "我们是顶端带星光的金色礼杖"
+        },
+        {
+          "rws": "four_living_creatures",
+          "zh": "四角的天使、鹰、狮、牛",
+          "status": "present",
+          "symbol_ref": "four_living_creatures",
+          "note": "我们画在四角的圆形徽章里"
+        },
+        {
+          "rws": "red_lemniscate_ribbons",
+          "zh": "花环上下的红色无限结丝带",
+          "status": "altered",
+          "symbol_ref": "gold_ribbon",
+          "note": "我们是缠绕花环的金色丝带，没有无限结"
+        },
+        {
+          "rws": "purple_sash",
+          "zh": "舞者身上的紫色长巾",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "crossed_legs",
+          "zh": "一条腿交叉在另一条腿后",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "奶蛙双脚并拢"
         }
       ],
       "source_refs": [],

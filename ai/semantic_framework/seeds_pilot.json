@@ -2,12 +2,27 @@
   "$comment": "试点语义框架（draft，待人工审核）。格式见 ai/schemas/。",
   "pilot_cards": [
     "major_00",
+    "major_01",
+    "major_02",
+    "major_03",
     "major_04",
+    "major_05",
+    "major_06",
+    "major_07",
+    "major_08",
+    "major_09",
+    "major_10",
+    "major_11",
     "major_12",
+    "major_13",
+    "major_14",
     "major_15",
     "major_16",
     "major_17",
-    "major_18"
+    "major_18",
+    "major_19",
+    "major_20",
+    "major_21"
   ],
   "seeds": [
     {
@@ -110,6 +125,308 @@
       "review_status": "reviewed"
     },
     {
+      "seed_id": "seed.major_01.01",
+      "card_refs": [
+        "major_01"
+      ],
+      "symbol_refs": [
+        "infinity_sign"
+      ],
+      "proposition_ref": "prop.major_01.03",
+      "framework": "existential_extension",
+      "aphorism": {
+        "zh": "无限符号一直在转，手里一次只拿得住一样。",
+        "en": "The infinity sign keeps turning; a hand can hold only one thing at a time."
+      },
+      "expansion_topics": [
+        "专注",
+        "取舍"
+      ],
+      "counterexamples": [
+        "用户需要同时兼顾多项责任时，不用来评判其不专注",
+        "用户只要牌义时，直接说明而不只给意象"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_01.02",
+      "card_refs": [
+        "major_01"
+      ],
+      "symbol_refs": [
+        "four_suit_tools"
+      ],
+      "proposition_ref": "prop.major_01.02",
+      "framework": "traditional_rws",
+      "aphorism": {
+        "zh": "四样东西都摆在桌上了，一样一样，都看得见。",
+        "en": "All four things are on the table, each one in plain sight."
+      },
+      "expansion_topics": [
+        "资源",
+        "准备"
+      ],
+      "counterexamples": [
+        "用户确实缺少资源时，不暗示「其实你什么都有」",
+        "不用来催促用户马上行动"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_01.03",
+      "card_refs": [
+        "major_01"
+      ],
+      "symbol_refs": [
+        "raised_wand",
+        "open_hand_outward"
+      ],
+      "proposition_ref": "prop.major_01.01",
+      "framework": "traditional_rws",
+      "aphorism": {
+        "zh": "一只手向上，一只手向下，站在中间的那个，负责动手。",
+        "en": "One hand up, one hand down; the one standing between them is the one who acts."
+      },
+      "expansion_topics": [
+        "意志",
+        "行动"
+      ],
+      "counterexamples": [
+        "用户因疾病、经济困难或他人控制而无法行动时不使用",
+        "不暗示事情没成是因为意志不够"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_01.04",
+      "card_refs": [
+        "major_01"
+      ],
+      "symbol_refs": [
+        "white_lilies",
+        "dark_red_roses"
+      ],
+      "proposition_ref": "prop.major_01.01",
+      "framework": "traditional_rws",
+      "aphorism": {
+        "zh": "百合和玫瑰开在一处：清醒的念头和想要的心，可以一起用上。",
+        "en": "Lilies and roses bloom together: a clear mind and a wanting heart can both be put to use."
+      },
+      "expansion_topics": [
+        "欲望",
+        "意图"
+      ],
+      "counterexamples": [
+        "用户想要的事涉及伤害自己或他人时不使用",
+        "不评判用户的欲望或性"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_02.01",
+      "card_refs": [
+        "major_02"
+      ],
+      "symbol_refs": [
+        "crescent_at_feet"
+      ],
+      "proposition_ref": "prop.major_02.01",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "月亮在脚边，不说话，也一直在。",
+        "en": "The moon rests at my feet. It says nothing, and it stays."
+      },
+      "expansion_topics": [
+        "直觉",
+        "安静"
+      ],
+      "counterexamples": [
+        "用户需要具体建议时，不只给意象",
+        "用户只要牌义时，直接说明"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_02.02",
+      "card_refs": [
+        "major_02"
+      ],
+      "symbol_refs": [
+        "pomegranate_veil"
+      ],
+      "proposition_ref": "prop.major_02.02",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "帷幕不是墙，只是还没被掀开。",
+        "en": "A veil is not a wall; it just hasn't been lifted yet."
+      },
+      "expansion_topics": [
+        "未知",
+        "耐心"
+      ],
+      "counterexamples": [
+        "用户怀疑伴侣或他人隐瞒时不使用，避免被听成对他人的判断",
+        "用户需要马上获得关键信息（医疗、法律、安全）时不使用"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_02.03",
+      "card_refs": [
+        "major_02"
+      ],
+      "symbol_refs": [
+        "black_white_pillars"
+      ],
+      "proposition_ref": "prop.major_02.03",
+      "framework": "dialectical_extension",
+      "aphorism": {
+        "zh": "黑柱子和白柱子都立着，坐在中间的，不用替它们分输赢。",
+        "en": "The black pillar and the white both stand; the one sitting between them needn't pick a winner."
+      },
+      "expansion_topics": [
+        "矛盾",
+        "并存"
+      ],
+      "counterexamples": [
+        "用户必须做出现实决定时，不用来拖延",
+        "用户没有矛盾时不制造矛盾"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_02.04",
+      "card_refs": [
+        "major_02"
+      ],
+      "symbol_refs": [
+        "moonlit_pool"
+      ],
+      "proposition_ref": "prop.major_02.01",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "水面静下来，才照得出东西。",
+        "en": "Only when the water is still does it show a reflection."
+      },
+      "expansion_topics": [
+        "安静",
+        "观察"
+      ],
+      "counterexamples": [
+        "用户正处在混乱或危机中时，不暗示「先静下来」就能解决",
+        "不把用户情绪激动评判为不够冷静"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_03.01",
+      "card_refs": [
+        "major_03"
+      ],
+      "symbol_refs": [
+        "golden_wheat"
+      ],
+      "proposition_ref": "prop.major_03.01",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "麦子熟得很慢，没有人催它。",
+        "en": "Wheat ripens slowly, and no one hurries it."
+      },
+      "expansion_topics": [
+        "生长",
+        "耐心"
+      ],
+      "counterexamples": [
+        "用户面对有期限的现实压力（考试、病情、工作）时，不用来劝其慢下来",
+        "用户谈到备孕、不孕或失去孩子时不使用"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_03.02",
+      "card_refs": [
+        "major_03"
+      ],
+      "symbol_refs": [
+        "velvet_throne"
+      ],
+      "proposition_ref": "prop.major_03.02",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "靠着坐一会儿，也算在做事。",
+        "en": "Leaning back for a while counts as doing something too."
+      },
+      "expansion_topics": [
+        "休息",
+        "身体"
+      ],
+      "counterexamples": [
+        "不把休息说成懒惰，也不用来否认用户确实需要处理的事",
+        "用户没有休息条件（多份工作、照护责任）时，不暗示「是你不肯休息」"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_03.03",
+      "card_refs": [
+        "major_03"
+      ],
+      "symbol_refs": [
+        "sunbeam"
+      ],
+      "proposition_ref": "prop.major_03.03",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "光落在这里，没有问我做了什么。",
+        "en": "The light lands here without asking what I have done."
+      },
+      "expansion_topics": [
+        "被照顾",
+        "自我价值"
+      ],
+      "counterexamples": [
+        "用户身处需要证明自己的现实处境（考核、诉讼）时，不用来否认现实要求",
+        "用户只要牌义时，直接说明"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_03.04",
+      "card_refs": [
+        "major_03"
+      ],
+      "symbol_refs": [
+        "pomegranates"
+      ],
+      "proposition_ref": "prop.major_03.01",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "石榴里有很多籽，不是每一颗都要现在发芽。",
+        "en": "A pomegranate holds many seeds; not every one has to sprout now."
+      },
+      "expansion_topics": [
+        "可能性",
+        "时机"
+      ],
+      "counterexamples": [
+        "用户谈到备孕、不孕、流产或失去孩子时绝不使用",
+        "不用来劝用户放弃想做的事"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
       "seed_id": "seed.major_04.01",
       "card_refs": [
         "major_04"
@@ -207,6 +524,710 @@
       "review_status": "reviewed"
     },
     {
+      "seed_id": "seed.major_05.01",
+      "card_refs": [
+        "major_05"
+      ],
+      "symbol_refs": [
+        "crossed_keys"
+      ],
+      "proposition_ref": "prop.major_05.03",
+      "framework": "existential_extension",
+      "aphorism": {
+        "zh": "两把钥匙交叉放着，没写哪一把开哪扇门。",
+        "en": "Two keys lie crossed; neither says which door it opens."
+      },
+      "expansion_topics": [
+        "传统与自我",
+        "选择"
+      ],
+      "counterexamples": [
+        "用户需要明确的现实指引（法律、医疗流程）时，不只给意象",
+        "不暗示用户必须背离家人或信仰"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_05.02",
+      "card_refs": [
+        "major_05"
+      ],
+      "symbol_refs": [
+        "blessing_hand"
+      ],
+      "proposition_ref": "prop.major_05.01",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "手举起来是祝福，不是命令。",
+        "en": "A raised hand is a blessing, not an order."
+      },
+      "expansion_topics": [
+        "指引",
+        "权威"
+      ],
+      "counterexamples": [
+        "用户正被以宗教或权威之名控制时，不用来美化施控者",
+        "不评判用户的信仰"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_05.03",
+      "card_refs": [
+        "major_05"
+      ],
+      "symbol_refs": [
+        "kneeling_acolytes"
+      ],
+      "proposition_ref": "prop.major_05.01",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "听的人和讲的人之间，问题可以来回。",
+        "en": "Between the one who listens and the one who teaches, questions can go both ways."
+      },
+      "expansion_topics": [
+        "学习",
+        "提问"
+      ],
+      "counterexamples": [
+        "不评判用户的宗教仪式或礼节",
+        "用户在师徒、上下级关系中处于弱势、提问可能受罚时，不暗示「是你不敢问」"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_05.04",
+      "card_refs": [
+        "major_05"
+      ],
+      "symbol_refs": [
+        "censer_smoke"
+      ],
+      "proposition_ref": "prop.major_05.02",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "烟慢慢往上走。仪式不用很大，重复的小事也算。",
+        "en": "The smoke drifts slowly up. A ritual needn't be grand; small things repeated count too."
+      },
+      "expansion_topics": [
+        "仪式",
+        "日常"
+      ],
+      "counterexamples": [
+        "用户描述难以停下的重复行为时，不把它美化成仪式，也不作诊断",
+        "不评判用户的宗教或文化习俗"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_06.01",
+      "card_refs": [
+        "major_06"
+      ],
+      "symbol_refs": [
+        "two_naiwas"
+      ],
+      "proposition_ref": "prop.major_06.03",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "我们长得一样，手还是两只。",
+        "en": "We look the same, yet there are still two hands."
+      },
+      "expansion_topics": [
+        "亲密",
+        "各自"
+      ],
+      "counterexamples": [
+        "不据此推断对方的真实想法",
+        "用户刚经历分手或失去伴侣时不使用"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_06.02",
+      "card_refs": [
+        "major_06"
+      ],
+      "symbol_refs": [
+        "angel"
+      ],
+      "proposition_ref": "prop.major_06.02",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "天使在上面张开手，没有替谁选。",
+        "en": "The angel opens its arms above, choosing for no one."
+      },
+      "expansion_topics": [
+        "选择",
+        "自主"
+      ],
+      "counterexamples": [
+        "用户希望得到明确建议时，直接说明这张牌不替人做决定，而不只给意象",
+        "用户处在被胁迫的处境时，不暗示「只能自己选」"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_06.03",
+      "card_refs": [
+        "major_06"
+      ],
+      "symbol_refs": [
+        "forking_path"
+      ],
+      "proposition_ref": "prop.major_06.02",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "路在这里分开了。先不走，也可以。",
+        "en": "The path divides here. Not walking on yet is all right too."
+      },
+      "expansion_topics": [
+        "犹豫",
+        "停留"
+      ],
+      "counterexamples": [
+        "用户面临有期限的现实决定（签约、就医、人身安全）时，不用来劝其拖延",
+        "用户流露轻生、自伤念头或处于危机时不使用，转为现实支持"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_06.04",
+      "card_refs": [
+        "major_06"
+      ],
+      "symbol_refs": [
+        "serpent",
+        "pomegranate_tree"
+      ],
+      "proposition_ref": "prop.major_06.02",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "蛇缠在结果的树上：知道得多一点，选起来就没那么轻松。",
+        "en": "The serpent coils around the fruiting tree: knowing a little more makes choosing less easy."
+      },
+      "expansion_topics": [
+        "诱惑",
+        "知情的选择"
+      ],
+      "counterexamples": [
+        "不把用户的欲望说成罪过，也不评判用户的性",
+        "不据此暗示伴侣或他人在引诱、欺骗用户"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_07.01",
+      "card_refs": [
+        "major_07"
+      ],
+      "symbol_refs": [
+        "black_white_sphinxes"
+      ],
+      "proposition_ref": "prop.major_07.01",
+      "framework": "traditional_rws",
+      "aphorism": {
+        "zh": "一黑一白，望着不同的地方，也还是可以一起往前。",
+        "en": "One black, one white, looking different ways — they can still move forward together."
+      },
+      "expansion_topics": [
+        "方向",
+        "意志"
+      ],
+      "counterexamples": [
+        "用户已经精疲力竭、需要休息时不使用",
+        "用户需要具体计划时，不只给意象"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_07.02",
+      "card_refs": [
+        "major_07"
+      ],
+      "symbol_refs": [
+        "black_white_sphinxes"
+      ],
+      "proposition_ref": "prop.major_07.02",
+      "framework": "dialectical_extension",
+      "aphorism": {
+        "zh": "黑的不用变成白的，它们只是一起走一段。",
+        "en": "The black one need not turn white; they just walk a stretch together."
+      },
+      "expansion_topics": [
+        "内心拉扯",
+        "接纳两面"
+      ],
+      "counterexamples": [
+        "其中一方是外部压力、控制或胁迫时不使用，不把伤害说成需要接纳的一面",
+        "用户没有提到内心拉扯时不使用"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_07.03",
+      "card_refs": [
+        "major_07"
+      ],
+      "symbol_refs": [
+        "star_sceptre"
+      ],
+      "proposition_ref": "prop.major_07.03",
+      "framework": "stoic_extension",
+      "aphorism": {
+        "zh": "手里握着的是方向，不是整条路。",
+        "en": "What you hold is a direction, not the whole road."
+      },
+      "expansion_topics": [
+        "可控与不可控",
+        "结果焦虑"
+      ],
+      "counterexamples": [
+        "用户刚经历失败或挫折时，不用来暗示『是方向没选对』",
+        "用户需要具体办法时，不只给比喻"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_07.04",
+      "card_refs": [
+        "major_07"
+      ],
+      "symbol_refs": [
+        "crown"
+      ],
+      "proposition_ref": "prop.major_07.01",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "星冠是出发时戴上的，不是赢了才有的。",
+        "en": "The star crown is worn when setting out, not only after winning."
+      },
+      "expansion_topics": [
+        "出发",
+        "决心"
+      ],
+      "counterexamples": [
+        "用户在为落选、失败难过时，不用来淡化结果",
+        "不暗示『只要下定决心就能成功』"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_08.01",
+      "card_refs": [
+        "major_08"
+      ],
+      "symbol_refs": [
+        "hand_on_lion"
+      ],
+      "proposition_ref": "prop.major_08.01",
+      "framework": "traditional_rws",
+      "aphorism": {
+        "zh": "手放上去很轻。狮子低下了头。",
+        "en": "The hand rests lightly. The lion lowers its head."
+      },
+      "expansion_topics": [
+        "温柔",
+        "耐心"
+      ],
+      "counterexamples": [
+        "用户面对暴力、控制或胁迫时不使用，不暗示『对方可以被你的温柔感化』",
+        "用户需要设立边界、表达愤怒时不使用"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_08.02",
+      "card_refs": [
+        "major_08"
+      ],
+      "symbol_refs": [
+        "black_lion",
+        "hand_on_lion"
+      ],
+      "proposition_ref": "prop.major_08.02",
+      "framework": "jungian_extension",
+      "aphorism": {
+        "zh": "狮子不用被赶走。有一只手搭着，它也能安静一会儿。",
+        "en": "The lion need not be driven off. With a hand resting on it, it can be still for a while."
+      },
+      "expansion_topics": [
+        "强烈的情绪",
+        "陪伴自己"
+      ],
+      "counterexamples": [
+        "不把『心里的狮子』说成用户的心理问题",
+        "用户说到想伤害自己或他人时不使用，转为现实支持"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_08.03",
+      "card_refs": [
+        "major_08"
+      ],
+      "symbol_refs": [
+        "infinity_sign"
+      ],
+      "proposition_ref": "prop.major_08.03",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "无限符号绕了一圈又一圈，不着急。",
+        "en": "The infinity sign loops round and round, in no hurry."
+      },
+      "expansion_topics": [
+        "耐力",
+        "长久"
+      ],
+      "counterexamples": [
+        "用户处在不公平或伤害中时，不用来劝其继续忍",
+        "长期照护、已经透支的用户不使用"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_08.04",
+      "card_refs": [
+        "major_08"
+      ],
+      "symbol_refs": [
+        "black_lion"
+      ],
+      "proposition_ref": "prop.major_08.01",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "狮子闭着眼。力气还在，只是这会儿不用。",
+        "en": "The lion's eyes are closed. The strength is still there; it just isn't needed right now."
+      },
+      "expansion_topics": [
+        "克制",
+        "力量"
+      ],
+      "counterexamples": [
+        "用户需要坚持自己、做出反抗时，不用来劝其收起力量",
+        "不把用户的退让解读为成熟或修养"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_09.01",
+      "card_refs": [
+        "major_09"
+      ],
+      "symbol_refs": [
+        "star_lantern"
+      ],
+      "proposition_ref": "prop.major_09.01",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "灯照得不远，刚好够看清脚下这一段。",
+        "en": "The lantern doesn't reach far — just far enough to see the stretch underfoot."
+      },
+      "expansion_topics": [
+        "内省",
+        "一步一步"
+      ],
+      "counterexamples": [
+        "用户需要长远规划或具体信息时，不只给意象",
+        "用户处于危机时不使用"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_09.02",
+      "card_refs": [
+        "major_09"
+      ],
+      "symbol_refs": [
+        "snowy_peak"
+      ],
+      "proposition_ref": "prop.major_09.01",
+      "framework": "traditional_rws",
+      "aphorism": {
+        "zh": "山顶很安静，安静到听得见自己。",
+        "en": "The summit is quiet — quiet enough to hear yourself."
+      },
+      "expansion_topics": [
+        "独处",
+        "清明"
+      ],
+      "counterexamples": [
+        "用户感到孤单、被孤立时不使用，不把孤立美化成清静",
+        "用户流露轻生、自伤念头或处于危机时不使用，转为现实支持"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_09.03",
+      "card_refs": [
+        "major_09"
+      ],
+      "symbol_refs": [
+        "star_lantern"
+      ],
+      "proposition_ref": "prop.major_09.02",
+      "framework": "traditional_rws",
+      "aphorism": {
+        "zh": "提灯的人不一定知道，身后有人借着这点光走路。",
+        "en": "The one holding the lantern may not know someone behind is walking by its light."
+      },
+      "expansion_topics": [
+        "经验",
+        "照亮他人"
+      ],
+      "counterexamples": [
+        "不要求用户在自己很吃力时去照亮别人",
+        "不把用户的痛苦经历说成必须对别人有意义"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_09.04",
+      "card_refs": [
+        "major_09"
+      ],
+      "symbol_refs": [
+        "falling_snow"
+      ],
+      "proposition_ref": "prop.major_09.01",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "雪落得很慢，走得慢一点也行。",
+        "en": "Snow falls slowly; walking a little slowly is fine too."
+      },
+      "expansion_topics": [
+        "节奏",
+        "向内"
+      ],
+      "counterexamples": [
+        "用户有紧急的事需要处理时，不用来劝其放慢",
+        "不把用户的停滞说成『慢慢来就好』"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_10.01",
+      "card_refs": [
+        "major_10"
+      ],
+      "symbol_refs": [
+        "golden_wheel"
+      ],
+      "proposition_ref": "prop.major_10.01",
+      "framework": "traditional_rws",
+      "aphorism": {
+        "zh": "轮子一直在转。现在这一格，只是其中一格。",
+        "en": "The wheel keeps turning. This spot is just one of many."
+      },
+      "expansion_topics": [
+        "循环",
+        "变化"
+      ],
+      "counterexamples": [
+        "用户正经历失去或重大打击时不使用，不用『会过去的』淡化",
+        "不用来预测好转的时间"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_10.02",
+      "card_refs": [
+        "major_10"
+      ],
+      "symbol_refs": [
+        "serpent",
+        "anubis"
+      ],
+      "proposition_ref": "prop.major_10.01",
+      "framework": "traditional_rws",
+      "aphorism": {
+        "zh": "左边的蛇往下，右边的胡狼往上。它们在同一个轮子上。",
+        "en": "On the left the serpent goes down; on the right the jackal climbs. They are on the same wheel."
+      },
+      "expansion_topics": [
+        "起落",
+        "位置"
+      ],
+      "counterexamples": [
+        "不用来暗示用户『就要走下坡』或『就要上去了』",
+        "用户处在长期困境中时不使用"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_10.03",
+      "card_refs": [
+        "major_10"
+      ],
+      "symbol_refs": [
+        "sphinx"
+      ],
+      "proposition_ref": "prop.major_10.02",
+      "framework": "traditional_rws",
+      "aphorism": {
+        "zh": "狮身兽坐在顶上，没有跟着轮子跑。",
+        "en": "The sphinx sits on top and doesn't run with the wheel."
+      },
+      "expansion_topics": [
+        "平衡",
+        "稳定"
+      ],
+      "counterexamples": [
+        "用户在剧变中感到痛苦时，不用来要求其保持平静",
+        "不把用户的慌乱说成不够稳"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_10.04",
+      "card_refs": [
+        "major_10"
+      ],
+      "symbol_refs": [
+        "naiwa_on_platform"
+      ],
+      "proposition_ref": "prop.major_10.03",
+      "framework": "stoic_extension",
+      "aphorism": {
+        "zh": "轮子很大。奶蛙站的那一小块地方，是它自己的。",
+        "en": "The wheel is huge. The small spot where Naiwa stands is its own."
+      },
+      "expansion_topics": [
+        "可控的部分",
+        "立足"
+      ],
+      "counterexamples": [
+        "用户遭遇不公、需要争取权益时，不用来劝其『只管好自己』",
+        "不暗示用户的处境是自己没站稳造成的"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_11.01",
+      "card_refs": [
+        "major_11"
+      ],
+      "symbol_refs": [
+        "scales"
+      ],
+      "proposition_ref": "prop.major_11.01",
+      "framework": "traditional_rws",
+      "aphorism": {
+        "zh": "两边都放上去，才看得出哪边重。",
+        "en": "Put something on both pans; only then can you see which is heavier."
+      },
+      "expansion_topics": [
+        "权衡",
+        "决定"
+      ],
+      "counterexamples": [
+        "用户已经反复权衡、难以做决定时不使用",
+        "用户需要法律或其他专业意见时，不以此代替"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_11.02",
+      "card_refs": [
+        "major_11"
+      ],
+      "symbol_refs": [
+        "upright_sword"
+      ],
+      "proposition_ref": "prop.major_11.03",
+      "framework": "dialectical_extension",
+      "aphorism": {
+        "zh": "剑有两面刃。分开的时候，两边都碰得到。",
+        "en": "The sword has two edges. When it divides, both sides are touched."
+      },
+      "expansion_topics": [
+        "分辨",
+        "代价"
+      ],
+      "counterexamples": [
+        "不用来劝用户原谅或体谅伤害自己的人",
+        "用户在考虑离开有伤害的关系时不使用",
+        "用户流露自伤念头或处于危机时不使用刀刃、切开这类意象，转为现实支持"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_11.03",
+      "card_refs": [
+        "major_11"
+      ],
+      "symbol_refs": [
+        "scales"
+      ],
+      "proposition_ref": "prop.major_11.02",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "天平上，放自己的那一份就够了。",
+        "en": "On the scales, your own share is enough."
+      },
+      "expansion_topics": [
+        "责任",
+        "边界"
+      ],
+      "counterexamples": [
+        "用户是受伤害的一方时不使用，不暗示其也有一份责任",
+        "不把疾病、意外、失去说成因果"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_11.04",
+      "card_refs": [
+        "major_11"
+      ],
+      "symbol_refs": [
+        "crimson_curtain"
+      ],
+      "proposition_ref": "prop.major_11.01",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "帷幕垂在身后。先看清眼前的，再称。",
+        "en": "The curtain hangs behind. See what's in front first, then weigh."
+      },
+      "expansion_topics": [
+        "看清事实",
+        "耐心"
+      ],
+      "counterexamples": [
+        "不暗示用户身边的人隐瞒了什么、在骗他",
+        "用户已经掌握事实、只需要做决定时不使用"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
       "seed_id": "seed.major_12.01",
       "card_refs": [
         "major_12"
@@ -299,6 +1320,210 @@
       ],
       "counterexamples": [
         "不把痛苦说成必须的修行"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_13.01",
+      "card_refs": [
+        "major_13"
+      ],
+      "symbol_refs": [
+        "white_rose_banner"
+      ],
+      "proposition_ref": "prop.major_13.01",
+      "framework": "traditional_rws",
+      "aphorism": {
+        "zh": "旗是黑的，上面的玫瑰是白的。",
+        "en": "The banner is black; the rose on it is white."
+      },
+      "expansion_topics": [
+        "结束与新生",
+        "转变"
+      ],
+      "counterexamples": [
+        "用户流露轻生、自伤念头或处于危机时不使用这类说法，转为现实支持",
+        "用户正在面对亲友离世、重病或自身的健康问题时，不用这张牌谈论任何人的生死，也不把真实的失去说成「转变」「新生」"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_13.02",
+      "card_refs": [
+        "major_13"
+      ],
+      "symbol_refs": [
+        "fallen_crown"
+      ],
+      "proposition_ref": "prop.major_13.02",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "王冠掉在地上。它没有说谁对谁错。",
+        "en": "The crown lies on the ground. It doesn't say who was right."
+      },
+      "expansion_topics": [
+        "身份变化",
+        "失去位置"
+      ],
+      "counterexamples": [
+        "用户流露轻生、自伤念头或处于危机时不使用这类说法，转为现实支持",
+        "用户刚失去工作、地位或关系时，不用来暗示「本来就该失去」",
+        "用户正在面对亲友离世、重病或自身的健康问题时，不用这张牌谈论任何人的生死，也不把真实的失去说成「转变」「新生」"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_13.03",
+      "card_refs": [
+        "major_13"
+      ],
+      "symbol_refs": [
+        "sun_between_towers"
+      ],
+      "proposition_ref": "prop.major_13.01",
+      "framework": "traditional_rws",
+      "aphorism": {
+        "zh": "两座塔中间，天在变亮。",
+        "en": "Between the two towers, the sky is getting lighter."
+      },
+      "expansion_topics": [
+        "结束之后",
+        "新的阶段"
+      ],
+      "counterexamples": [
+        "用户流露轻生、自伤念头或处于危机时不使用这类说法，转为现实支持",
+        "不用来保证「之后一定会好」",
+        "用户正在面对亲友离世、重病或自身的健康问题时，不用这张牌谈论任何人的生死，也不把真实的失去说成「转变」「新生」"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_13.04",
+      "card_refs": [
+        "major_13"
+      ],
+      "symbol_refs": [
+        "white_horse"
+      ],
+      "proposition_ref": "prop.major_13.03",
+      "framework": "existential_extension",
+      "aphorism": {
+        "zh": "白马不赶路。告别也可以慢一点。",
+        "en": "The white horse isn't in a hurry. A goodbye can take its time too."
+      },
+      "expansion_topics": [
+        "告别的节奏",
+        "不舍"
+      ],
+      "counterexamples": [
+        "用户流露轻生、自伤念头或处于危机时不使用这类说法，转为现实支持",
+        "用户正在面对亲友离世、重病或自身的健康问题时，不用这张牌谈论任何人的生死，也不把真实的失去说成「转变」「新生」",
+        "用户处在被控制、被胁迫或不安全的关系里、需要尽快离开时，不使用这句",
+        "不把用户的不舍说成「抗拒」"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_14.01",
+      "card_refs": [
+        "major_14"
+      ],
+      "symbol_refs": [
+        "pouring_cups"
+      ],
+      "proposition_ref": "prop.major_14.01",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "两只杯子不一样。水还是能来回。",
+        "en": "The two cups don't match. The water still goes back and forth."
+      },
+      "expansion_topics": [
+        "差异",
+        "磨合"
+      ],
+      "counterexamples": [
+        "不用来劝用户与伤害自己的人继续「磨合」",
+        "用户明确想结束一段关系时，不用来劝和"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_14.02",
+      "card_refs": [
+        "major_14"
+      ],
+      "symbol_refs": [
+        "one_foot_in_water"
+      ],
+      "proposition_ref": "prop.major_14.03",
+      "framework": "dialectical_extension",
+      "aphorism": {
+        "zh": "一只脚凉，一只脚暖。两边都算数。",
+        "en": "One foot cool, one foot warm. Both of them count."
+      },
+      "expansion_topics": [
+        "两种状态",
+        "连接"
+      ],
+      "counterexamples": [
+        "用户需要尽快做出选择时，不用来回避选择",
+        "不暗示用户必须两头都顾到"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_14.03",
+      "card_refs": [
+        "major_14"
+      ],
+      "symbol_refs": [
+        "winding_road_sun"
+      ],
+      "proposition_ref": "prop.major_14.02",
+      "framework": "traditional_rws",
+      "aphorism": {
+        "zh": "路是弯的，通向远处的太阳。走得慢不算走错。",
+        "en": "The road bends toward the far-off sun. Going slowly is not going wrong."
+      },
+      "expansion_topics": [
+        "耐心",
+        "恢复"
+      ],
+      "counterexamples": [
+        "用户面临紧急的安全、健康或期限问题时，不用来劝其放慢",
+        "不承诺「慢慢就会到」"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_14.04",
+      "card_refs": [
+        "major_14"
+      ],
+      "symbol_refs": [
+        "pouring_cups"
+      ],
+      "proposition_ref": "prop.major_14.02",
+      "framework": "traditional_rws",
+      "aphorism": {
+        "zh": "一次倒一点。不用一下子倒满。",
+        "en": "A little at a time. No need to fill it all at once."
+      },
+      "expansion_topics": [
+        "适度",
+        "节奏"
+      ],
+      "counterexamples": [
+        "涉及饮食、药物、酒精等具体的量时，不用这句给建议",
+        "用户需要马上处理某件事时，不用来劝慢"
       ],
       "source_kind": "original_interpretation",
       "review_status": "reviewed"
@@ -692,6 +1917,309 @@
       "counterexamples": [
         "不用来否定用户已知的事实",
         "用户担心被他人欺骗时不使用，避免被听成对他人的判断"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_19.01",
+      "card_refs": [
+        "major_19"
+      ],
+      "symbol_refs": [
+        "sun_face"
+      ],
+      "proposition_ref": "prop.major_19.01",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "太阳在笑。你不用跟着笑。",
+        "en": "The sun is smiling. You don't have to smile back."
+      },
+      "expansion_topics": [
+        "不被要求的快乐",
+        "情绪的自由"
+      ],
+      "counterexamples": [
+        "用户想分享开心的事时，不用这句泼冷水",
+        "不把这句当作对用户情绪的判断"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_19.02",
+      "card_refs": [
+        "major_19"
+      ],
+      "symbol_refs": [
+        "sunflowers"
+      ],
+      "proposition_ref": "prop.major_19.01",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "向日葵朝着光，不用谁教。",
+        "en": "Sunflowers turn toward the light; nobody has to teach them."
+      },
+      "expansion_topics": [
+        "自然的生长",
+        "光"
+      ],
+      "counterexamples": [
+        "用户正处在低落中时，不用来暗示「你也该自然地好起来」",
+        "不用来评价用户「不够积极」"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_19.03",
+      "card_refs": [
+        "major_19"
+      ],
+      "symbol_refs": [
+        "red_banner"
+      ],
+      "proposition_ref": "prop.major_19.02",
+      "framework": "traditional_rws",
+      "aphorism": {
+        "zh": "红旗举得很高。被看见，也可以是轻松的事。",
+        "en": "The red banner is held high. Being seen can be an easy thing too."
+      },
+      "expansion_topics": [
+        "坦然",
+        "表达"
+      ],
+      "counterexamples": [
+        "公开会给用户带来风险时，不使用这句",
+        "用户不想被关注时，不用来劝其表现自己"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_19.04",
+      "card_refs": [
+        "major_19"
+      ],
+      "symbol_refs": [
+        "red_cape"
+      ],
+      "proposition_ref": "prop.major_19.03",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "披着斗篷，也晒得到太阳。",
+        "en": "Even in a cape, the sun still reaches you."
+      },
+      "expansion_topics": [
+        "保留",
+        "温暖"
+      ],
+      "counterexamples": [
+        "不用来劝用户隐藏真实的自己或身份认同",
+        "用户想要坦白、公开时，不用这句劝阻"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_20.01",
+      "card_refs": [
+        "major_20"
+      ],
+      "symbol_refs": [
+        "golden_trumpet"
+      ],
+      "proposition_ref": "prop.major_20.01",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "号角响了。听见了，也可以先坐一会儿再起来。",
+        "en": "The trumpet has sounded. You can hear it and still sit a while before you rise."
+      },
+      "expansion_topics": [
+        "召唤",
+        "自己的节奏"
+      ],
+      "counterexamples": [
+        "用户面临紧急、需要立即行动的处境时，不用来劝其等待",
+        "用户流露轻生、自伤念头或处于危机时不使用这类说法，转为现实支持",
+        "用户说觉得有声音在命令自己做某事时，不使用这句，转为现实支持"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_20.02",
+      "card_refs": [
+        "major_20"
+      ],
+      "symbol_refs": [
+        "open_coffins",
+        "rising_spirits"
+      ],
+      "proposition_ref": "prop.major_20.02",
+      "framework": "traditional_rws",
+      "aphorism": {
+        "zh": "盖子开了，光自己出来了。",
+        "en": "The lid is open, and the light comes out on its own."
+      },
+      "expansion_topics": [
+        "醒来",
+        "重新开始"
+      ],
+      "counterexamples": [
+        "用户流露轻生、自伤念头或处于危机时不使用这类说法，转为现实支持",
+        "用户在哀悼亲友时，不使用这句，也不谈论亡者的去向"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_20.03",
+      "card_refs": [
+        "major_20"
+      ],
+      "symbol_refs": [
+        "wings"
+      ],
+      "proposition_ref": "prop.major_20.03",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "翅膀上面白，下面黑。还是同一双翅膀。",
+        "en": "White above, black below. Still the same pair of wings."
+      },
+      "expansion_topics": [
+        "接纳过去",
+        "整合"
+      ],
+      "counterexamples": [
+        "不用来淡化用户对他人造成的伤害",
+        "不暗示用户「有黑暗面」，也不推断其性格或心理问题"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_20.04",
+      "card_refs": [
+        "major_20"
+      ],
+      "symbol_refs": [
+        "golden_trumpet"
+      ],
+      "proposition_ref": "prop.major_20.03",
+      "framework": "existential_extension",
+      "aphorism": {
+        "zh": "号角是叫人醒来的，不是叫人认错的。",
+        "en": "The trumpet calls people awake, not to confess."
+      },
+      "expansion_topics": [
+        "自责",
+        "回顾"
+      ],
+      "counterexamples": [
+        "用户确实需要为某件事道歉、承担后果时，不用来回避",
+        "用户被他人指责时，不据此判断谁对谁错"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_21.01",
+      "card_refs": [
+        "major_21"
+      ],
+      "symbol_refs": [
+        "oval_wreath"
+      ],
+      "proposition_ref": "prop.major_21.01",
+      "framework": "traditional_rws",
+      "aphorism": {
+        "zh": "花环是闭合的。走完一圈，也回到了起点。",
+        "en": "The wreath is closed. Going all the way round brings you back to the start."
+      },
+      "expansion_topics": [
+        "循环",
+        "完成"
+      ],
+      "counterexamples": [
+        "用户流露轻生、自伤念头或处于危机时不使用这类说法，转为现实支持",
+        "用户自述在原地打转、很挫败时，不用「回到起点」形容其处境"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_21.02",
+      "card_refs": [
+        "major_21"
+      ],
+      "symbol_refs": [
+        "four_living_creatures"
+      ],
+      "proposition_ref": "prop.major_21.02",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "四个角各有一位，各自待在自己的位置上。",
+        "en": "Each corner has its own guardian, each staying in its own place."
+      },
+      "expansion_topics": [
+        "各得其所",
+        "完整"
+      ],
+      "counterexamples": [
+        "不用来要求用户「各方面都要顾到」",
+        "不把用户现在的处境评为「缺了一角」"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_21.03",
+      "card_refs": [
+        "major_21"
+      ],
+      "symbol_refs": [
+        "floating_naiwa"
+      ],
+      "proposition_ref": "prop.major_21.03",
+      "framework": "daoist_extension",
+      "aphorism": {
+        "zh": "悬在花环中间，暂时什么也不用抓。",
+        "en": "Floating in the wreath, with nothing to grab for now."
+      },
+      "expansion_topics": [
+        "完成之后",
+        "不急"
+      ],
+      "counterexamples": [
+        "用户流露轻生、自伤念头或处于危机时不使用这类说法，转为现实支持",
+        "用户需要抓紧处理经济、健康等现实事务时，不使用这句",
+        "用户自述失去依靠、无所依时，不用「不用抓」回应，先倾听"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "reviewed"
+    },
+    {
+      "seed_id": "seed.major_21.04",
+      "card_refs": [
+        "major_21"
+      ],
+      "symbol_refs": [
+        "two_wands"
+      ],
+      "proposition_ref": "prop.major_21.01",
+      "framework": "traditional_rws",
+      "aphorism": {
+        "zh": "两只手各拿一支杖。走到这里，两边都带上了。",
+        "en": "A wand in each hand. Having come this far, both sides came along."
+      },
+      "expansion_topics": [
+        "整合",
+        "对立的两端"
+      ],
+      "counterexamples": [
+        "不用来暗示用户「必须把过去的一切都整合好」才算完成",
+        "不据此预测结果圆满"
       ],
       "source_kind": "original_interpretation",
       "review_status": "reviewed"

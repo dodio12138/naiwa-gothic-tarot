@@ -2,12 +2,27 @@
   "$comment": "试点语义框架（draft，待人工审核）。格式见 ai/schemas/。",
   "pilot_cards": [
     "major_00",
+    "major_01",
+    "major_02",
+    "major_03",
     "major_04",
+    "major_05",
+    "major_06",
+    "major_07",
+    "major_08",
+    "major_09",
+    "major_10",
+    "major_11",
     "major_12",
+    "major_13",
+    "major_14",
     "major_15",
     "major_16",
     "major_17",
-    "major_18"
+    "major_18",
+    "major_19",
+    "major_20",
+    "major_21"
   ],
   "contradictions": [
     {
@@ -56,6 +71,155 @@
       },
       "proposition_refs": [
         "prop.major_00.01"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "contradiction_id": "contra.major_01.01",
+      "card_refs": [
+        "major_01"
+      ],
+      "poles": [
+        {
+          "zh": "意志",
+          "en": "Will"
+        },
+        {
+          "zh": "条件",
+          "en": "Circumstance"
+        }
+      ],
+      "description": {
+        "zh": "意念可以推动事情，但不是所有结果都由意念决定。",
+        "en": "Will can move things, but not every outcome is decided by will."
+      },
+      "proposition_refs": [
+        "prop.major_01.01",
+        "prop.major_01.02"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "contradiction_id": "contra.major_01.02",
+      "card_refs": [
+        "major_01"
+      ],
+      "poles": [
+        {
+          "zh": "可能",
+          "en": "Possibility"
+        },
+        {
+          "zh": "专注",
+          "en": "Focus"
+        }
+      ],
+      "description": {
+        "zh": "可能性越多越自由，可一次只能把一件变成真的。",
+        "en": "More possibilities bring more freedom, yet only one can be made real at a time."
+      },
+      "proposition_refs": [
+        "prop.major_01.03",
+        "prop.major_01.01"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "contradiction_id": "contra.major_02.01",
+      "card_refs": [
+        "major_02"
+      ],
+      "poles": [
+        {
+          "zh": "直觉",
+          "en": "Intuition"
+        },
+        {
+          "zh": "求证",
+          "en": "Verification"
+        }
+      ],
+      "description": {
+        "zh": "直觉可以先一步察觉，也需要和事实对照。",
+        "en": "Intuition can sense things first, and it still needs checking against facts."
+      },
+      "proposition_refs": [
+        "prop.major_02.01",
+        "prop.major_02.02"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "contradiction_id": "contra.major_02.02",
+      "card_refs": [
+        "major_02"
+      ],
+      "poles": [
+        {
+          "zh": "隐藏",
+          "en": "Concealment"
+        },
+        {
+          "zh": "揭示",
+          "en": "Revelation"
+        }
+      ],
+      "description": {
+        "zh": "帷幕可以护住还没成形的东西，也可能挡住需要被看见的事。",
+        "en": "A veil can shelter what has not yet taken shape, and it can also hide what needs to be seen."
+      },
+      "proposition_refs": [
+        "prop.major_02.02",
+        "prop.major_02.01"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "contradiction_id": "contra.major_03.01",
+      "card_refs": [
+        "major_03"
+      ],
+      "poles": [
+        {
+          "zh": "养育",
+          "en": "Nurture"
+        },
+        {
+          "zh": "控制",
+          "en": "Control"
+        }
+      ],
+      "description": {
+        "zh": "照顾可以让人生长，照顾得太紧也可能让人透不过气。",
+        "en": "Care can help someone grow; care held too tight can leave them short of air."
+      },
+      "proposition_refs": [
+        "prop.major_03.01"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "contradiction_id": "contra.major_03.02",
+      "card_refs": [
+        "major_03"
+      ],
+      "poles": [
+        {
+          "zh": "给予",
+          "en": "Giving"
+        },
+        {
+          "zh": "留给自己",
+          "en": "Keeping some for oneself"
+        }
+      ],
+      "description": {
+        "zh": "付出让生长发生，一直只给出去，自己也可能被掏空。",
+        "en": "Giving lets things grow; giving only outward can leave oneself empty."
+      },
+      "proposition_refs": [
+        "prop.major_03.01",
+        "prop.major_03.03"
       ],
       "review_status": "reviewed"
     },
@@ -110,6 +274,351 @@
       "review_status": "reviewed"
     },
     {
+      "contradiction_id": "contra.major_05.01",
+      "card_refs": [
+        "major_05"
+      ],
+      "poles": [
+        {
+          "zh": "传承",
+          "en": "Tradition"
+        },
+        {
+          "zh": "自主",
+          "en": "Autonomy"
+        }
+      ],
+      "description": {
+        "zh": "前人的经验可以指路，但不能替人做决定。",
+        "en": "The experience of those before can point the way, but it cannot decide for you."
+      },
+      "proposition_refs": [
+        "prop.major_05.01",
+        "prop.major_05.03"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "contradiction_id": "contra.major_05.02",
+      "card_refs": [
+        "major_05"
+      ],
+      "poles": [
+        {
+          "zh": "归属",
+          "en": "Belonging"
+        },
+        {
+          "zh": "顺从",
+          "en": "Conformity"
+        }
+      ],
+      "description": {
+        "zh": "被一个群体接纳让人安心，代价有时是不能问为什么。",
+        "en": "Being accepted by a group is reassuring; sometimes the price is not being able to ask why."
+      },
+      "proposition_refs": [
+        "prop.major_05.02",
+        "prop.major_05.03"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "contradiction_id": "contra.major_06.01",
+      "card_refs": [
+        "major_06"
+      ],
+      "poles": [
+        {
+          "zh": "联结",
+          "en": "Union"
+        },
+        {
+          "zh": "独立",
+          "en": "Individuality"
+        }
+      ],
+      "description": {
+        "zh": "靠得很近的两个人，也各自是完整的一个。",
+        "en": "Two people standing close are still each a whole person."
+      },
+      "proposition_refs": [
+        "prop.major_06.01",
+        "prop.major_06.03"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "contradiction_id": "contra.major_06.02",
+      "card_refs": [
+        "major_06"
+      ],
+      "poles": [
+        {
+          "zh": "想要",
+          "en": "Desire"
+        },
+        {
+          "zh": "看重",
+          "en": "Values"
+        }
+      ],
+      "description": {
+        "zh": "想要的和看重的，有时一致，有时把人往两个方向拉。",
+        "en": "What we want and what we value sometimes agree, and sometimes pull in two directions."
+      },
+      "proposition_refs": [
+        "prop.major_06.02",
+        "prop.major_06.01"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "contradiction_id": "contra.major_07.01",
+      "card_refs": [
+        "major_07"
+      ],
+      "poles": [
+        {
+          "zh": "推进",
+          "en": "Momentum"
+        },
+        {
+          "zh": "停歇",
+          "en": "Rest"
+        }
+      ],
+      "description": {
+        "zh": "冲劲带人往前，也可能让人错过该停下检修的时候。",
+        "en": "Momentum carries you forward, and can also make you miss the time to stop for repairs."
+      },
+      "proposition_refs": [
+        "prop.major_07.01"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "contradiction_id": "contra.major_07.02",
+      "card_refs": [
+        "major_07"
+      ],
+      "poles": [
+        {
+          "zh": "驾驭",
+          "en": "Mastery"
+        },
+        {
+          "zh": "压制",
+          "en": "Suppression"
+        }
+      ],
+      "description": {
+        "zh": "把两股力量拉到同一方向，可以是协调，也可能只是压住了其中一方的声音。",
+        "en": "Pulling two forces the same way can be harmony — or only silencing one of them."
+      },
+      "proposition_refs": [
+        "prop.major_07.01",
+        "prop.major_07.02"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "contradiction_id": "contra.major_08.01",
+      "card_refs": [
+        "major_08"
+      ],
+      "poles": [
+        {
+          "zh": "温柔",
+          "en": "Gentleness"
+        },
+        {
+          "zh": "退让",
+          "en": "Yielding"
+        }
+      ],
+      "description": {
+        "zh": "温柔可以是力量，也可能被当成不敢拒绝。",
+        "en": "Gentleness can be strength, and it can also be mistaken for being unable to say no."
+      },
+      "proposition_refs": [
+        "prop.major_08.01",
+        "prop.major_08.03"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "contradiction_id": "contra.major_08.02",
+      "card_refs": [
+        "major_08"
+      ],
+      "poles": [
+        {
+          "zh": "安抚",
+          "en": "Soothing"
+        },
+        {
+          "zh": "压抑",
+          "en": "Suppressing"
+        }
+      ],
+      "description": {
+        "zh": "安抚一种情绪，可以是照顾它，也可能只是想让它快点安静。",
+        "en": "Soothing a feeling can be caring for it — or only wanting it quiet sooner."
+      },
+      "proposition_refs": [
+        "prop.major_08.02"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "contradiction_id": "contra.major_09.01",
+      "card_refs": [
+        "major_09"
+      ],
+      "poles": [
+        {
+          "zh": "独处",
+          "en": "Solitude"
+        },
+        {
+          "zh": "联结",
+          "en": "Connection"
+        }
+      ],
+      "description": {
+        "zh": "离开人群可以看清自己；离得太久，回来也需要力气。",
+        "en": "Stepping away can help you see yourself; stay away too long, and coming back takes strength too."
+      },
+      "proposition_refs": [
+        "prop.major_09.01",
+        "prop.major_09.03"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "contradiction_id": "contra.major_09.02",
+      "card_refs": [
+        "major_09"
+      ],
+      "poles": [
+        {
+          "zh": "照己",
+          "en": "Lighting one's own way"
+        },
+        {
+          "zh": "照人",
+          "en": "Lighting the way for others"
+        }
+      ],
+      "description": {
+        "zh": "灯可以只照自己脚下，也可以举高一点照给后来的人。",
+        "en": "A lamp can light only your own feet, or be lifted a little for those who come after."
+      },
+      "proposition_refs": [
+        "prop.major_09.02"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "contradiction_id": "contra.major_10.01",
+      "card_refs": [
+        "major_10"
+      ],
+      "poles": [
+        {
+          "zh": "命运",
+          "en": "Fate"
+        },
+        {
+          "zh": "选择",
+          "en": "Choice"
+        }
+      ],
+      "description": {
+        "zh": "轮子不由人转，人仍然可以选择怎么站。",
+        "en": "No one turns the wheel by hand, yet one can still choose how to stand."
+      },
+      "proposition_refs": [
+        "prop.major_10.01",
+        "prop.major_10.03"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "contradiction_id": "contra.major_10.02",
+      "card_refs": [
+        "major_10"
+      ],
+      "poles": [
+        {
+          "zh": "上升",
+          "en": "Rising"
+        },
+        {
+          "zh": "下降",
+          "en": "Falling"
+        }
+      ],
+      "description": {
+        "zh": "同一次转动里，一边在下降，另一边在上升；位置不是固定的。",
+        "en": "In the same turn, one side descends while the other rises; no position is fixed."
+      },
+      "proposition_refs": [
+        "prop.major_10.01"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "contradiction_id": "contra.major_11.01",
+      "card_refs": [
+        "major_11"
+      ],
+      "poles": [
+        {
+          "zh": "公正",
+          "en": "Justice"
+        },
+        {
+          "zh": "宽容",
+          "en": "Mercy"
+        }
+      ],
+      "description": {
+        "zh": "剑是笔直的，人心未必；公正与宽容之间，常常要来回称。",
+        "en": "The sword is straight; hearts may not be. Between justice and mercy, the weighing goes back and forth."
+      },
+      "proposition_refs": [
+        "prop.major_11.01",
+        "prop.major_11.03"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "contradiction_id": "contra.major_11.02",
+      "card_refs": [
+        "major_11"
+      ],
+      "poles": [
+        {
+          "zh": "责任",
+          "en": "Responsibility"
+        },
+        {
+          "zh": "自责",
+          "en": "Self-blame"
+        }
+      ],
+      "description": {
+        "zh": "看清自己的那一份是诚实；把不属于自己的也放上天平，就成了自责。",
+        "en": "Seeing your own share is honesty; putting what isn't yours on the scales too becomes self-blame."
+      },
+      "proposition_refs": [
+        "prop.major_11.02"
+      ],
+      "review_status": "reviewed"
+    },
+    {
       "contradiction_id": "contra.major_12.01",
       "card_refs": [
         "major_12"
@@ -155,6 +664,104 @@
       },
       "proposition_refs": [
         "prop.major_12.02"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "contradiction_id": "contra.major_13.01",
+      "card_refs": [
+        "major_13"
+      ],
+      "poles": [
+        {
+          "zh": "结束",
+          "en": "Ending"
+        },
+        {
+          "zh": "开始",
+          "en": "Beginning"
+        }
+      ],
+      "description": {
+        "zh": "同一个转折，从这头看是告别，从那头看是开端；两种感受可以同时在。",
+        "en": "The same turning point is a farewell from one side and a beginning from the other; both feelings can be there at once."
+      },
+      "proposition_refs": [
+        "prop.major_13.01",
+        "prop.major_13.03"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "contradiction_id": "contra.major_13.02",
+      "card_refs": [
+        "major_13"
+      ],
+      "poles": [
+        {
+          "zh": "不舍",
+          "en": "Holding on"
+        },
+        {
+          "zh": "告别",
+          "en": "Saying goodbye"
+        }
+      ],
+      "description": {
+        "zh": "舍不得不等于做错；告别也不必假装不难过。",
+        "en": "Not wanting to let go is not a mistake; saying goodbye need not mean pretending it doesn't hurt."
+      },
+      "proposition_refs": [
+        "prop.major_13.01",
+        "prop.major_13.03"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "contradiction_id": "contra.major_14.01",
+      "card_refs": [
+        "major_14"
+      ],
+      "poles": [
+        {
+          "zh": "调和",
+          "en": "Blending"
+        },
+        {
+          "zh": "坚持",
+          "en": "Standing firm"
+        }
+      ],
+      "description": {
+        "zh": "调和可以带来平衡，但有些事不该被折中。",
+        "en": "Blending can bring balance, but some things should not be met halfway."
+      },
+      "proposition_refs": [
+        "prop.major_14.01"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "contradiction_id": "contra.major_14.02",
+      "card_refs": [
+        "major_14"
+      ],
+      "poles": [
+        {
+          "zh": "耐心",
+          "en": "Patience"
+        },
+        {
+          "zh": "急迫",
+          "en": "Urgency"
+        }
+      ],
+      "description": {
+        "zh": "慢慢来适合修复，不一定适合火烧眉毛的事。",
+        "en": "Going slowly suits mending; it may not suit what is urgent."
+      },
+      "proposition_refs": [
+        "prop.major_14.02"
       ],
       "review_status": "reviewed"
     },
@@ -350,6 +957,155 @@
       },
       "proposition_refs": [
         "prop.major_18.01"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "contradiction_id": "contra.major_19.01",
+      "card_refs": [
+        "major_19"
+      ],
+      "poles": [
+        {
+          "zh": "快乐",
+          "en": "Joy"
+        },
+        {
+          "zh": "勉强",
+          "en": "Forced cheer"
+        }
+      ],
+      "description": {
+        "zh": "自然而来的快乐让人轻松；被要求的快乐可能更累。",
+        "en": "Joy that comes on its own feels light; joy that is demanded can be more tiring."
+      },
+      "proposition_refs": [
+        "prop.major_19.01"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "contradiction_id": "contra.major_19.02",
+      "card_refs": [
+        "major_19"
+      ],
+      "poles": [
+        {
+          "zh": "敞开",
+          "en": "Openness"
+        },
+        {
+          "zh": "保留",
+          "en": "Reserve"
+        }
+      ],
+      "description": {
+        "zh": "坦然被看见是一种温暖，给自己留一点也是。",
+        "en": "Being openly seen is one kind of warmth; keeping a little for yourself is another."
+      },
+      "proposition_refs": [
+        "prop.major_19.02",
+        "prop.major_19.03"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "contradiction_id": "contra.major_20.01",
+      "card_refs": [
+        "major_20"
+      ],
+      "poles": [
+        {
+          "zh": "回顾",
+          "en": "Looking back"
+        },
+        {
+          "zh": "自责",
+          "en": "Self-blame"
+        }
+      ],
+      "description": {
+        "zh": "回头看可以看清来路，但不必变成对自己的审判。",
+        "en": "Looking back can show the road you came by, but it need not turn into a trial of yourself."
+      },
+      "proposition_refs": [
+        "prop.major_20.01",
+        "prop.major_20.03"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "contradiction_id": "contra.major_20.02",
+      "card_refs": [
+        "major_20"
+      ],
+      "poles": [
+        {
+          "zh": "召唤",
+          "en": "The call"
+        },
+        {
+          "zh": "自己的节奏",
+          "en": "Your own pace"
+        }
+      ],
+      "description": {
+        "zh": "听见召唤不等于要立刻起身；回应也可以按自己的节奏。",
+        "en": "Hearing the call does not mean rising at once; you can answer at your own pace."
+      },
+      "proposition_refs": [
+        "prop.major_20.01",
+        "prop.major_20.02"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "contradiction_id": "contra.major_21.01",
+      "card_refs": [
+        "major_21"
+      ],
+      "poles": [
+        {
+          "zh": "完成",
+          "en": "Completion"
+        },
+        {
+          "zh": "开始",
+          "en": "Beginning"
+        }
+      ],
+      "description": {
+        "zh": "圆闭合的地方，也是下一圈的起点；可以先停在完成里，不急着开始。",
+        "en": "Where the circle closes, the next round begins; you can rest in the finish before starting again."
+      },
+      "proposition_refs": [
+        "prop.major_21.01",
+        "prop.major_21.03"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "contradiction_id": "contra.major_21.02",
+      "card_refs": [
+        "major_21"
+      ],
+      "poles": [
+        {
+          "zh": "圆满",
+          "en": "Wholeness"
+        },
+        {
+          "zh": "未竟",
+          "en": "The unfinished"
+        }
+      ],
+      "description": {
+        "zh": "完整不一定是什么都不缺；带着没做完的事，也可以走到一个段落。",
+        "en": "Wholeness need not mean nothing is missing; you can reach the end of a stretch with things still undone."
+      },
+      "proposition_refs": [
+        "prop.major_21.01",
+        "prop.major_21.02"
       ],
       "review_status": "reviewed"
     }

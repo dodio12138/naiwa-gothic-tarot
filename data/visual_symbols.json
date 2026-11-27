@@ -569,7 +569,10 @@
         { "id": "nebula_swirl", "region": "背景", "zh": "身后旋转的紫色星云旋涡", "en": "a swirling violet nebula behind", "rws_ref": null },
         { "id": "golden_stars", "region": "背景", "zh": "散落的金色四芒星", "en": "scattered golden four-pointed stars", "rws_ref": null }
       ],
-      "rws_absent": ["purple_sash", "crossed_legs", "red_lemniscate_ribbons"],
+      "rws_absent": [
+        "purple_sash",
+        "crossed_legs"
+      ],
       "naiwa_specific": ["黑玫瑰花环", "金丝带蝴蝶结", "星云旋涡", "圆形徽章"],
       "lighting": { "zh": "紫色星空，金色星光与暖金反光", "en": "violet starry sky with golden starlight and warm gold highlights" },
       "notes": "与 scene 基本一致。奶蛙双脚并拢，没有 RWS 的交叉腿姿势；丝带为金色，没有红色无限结。",

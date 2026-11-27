@@ -83,6 +83,262 @@
         }
       ]
     },
+    "major_01": {
+      "traditional": [
+        {
+          "rws": "raised_wand",
+          "zh": "举向天空的权杖",
+          "status": "present",
+          "symbol_ref": "raised_wand",
+          "note": "传统是两端圆头的白杖；我们的杖尖带星光，高举向上的姿势一致"
+        },
+        {
+          "rws": "hand_pointing_down",
+          "zh": "指向大地的手",
+          "status": "altered",
+          "symbol_ref": "open_hand_outward",
+          "note": "传统是食指明确指地；我们是张开手掌向外下方伸出，「指地」不明显"
+        },
+        {
+          "rws": "lemniscate",
+          "zh": "头顶的无限符号",
+          "status": "present",
+          "symbol_ref": "infinity_sign",
+          "note": ""
+        },
+        {
+          "rws": "four_suit_tools",
+          "zh": "桌上的权杖、圣杯、宝剑、星币",
+          "status": "present",
+          "symbol_ref": "four_suit_tools",
+          "note": ""
+        },
+        {
+          "rws": "table",
+          "zh": "摆放道具的桌子",
+          "status": "altered",
+          "symbol_ref": "stone_altar",
+          "note": "传统是一张桌子；我们是石祭坛（祭坛上的尖拱雕饰和深红布属风格，不作意义）"
+        },
+        {
+          "rws": "red_roses",
+          "zh": "红玫瑰",
+          "status": "altered",
+          "symbol_ref": "dark_red_roses",
+          "note": "传统是鲜红玫瑰；我们画成黑红色，颜色属风格化，只取传统「红玫瑰」的含义"
+        },
+        {
+          "rws": "white_lilies",
+          "zh": "白百合",
+          "status": "present",
+          "symbol_ref": "white_lilies",
+          "note": ""
+        },
+        {
+          "rws": "ouroboros_belt",
+          "zh": "衔尾蛇腰带",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "red_robe_white_tunic",
+          "zh": "红袍罩白衣",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "yellow_sky",
+          "zh": "明亮的黄色天空（白天）",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "我们画成室内礼拜堂与窗外满月（风格化，已从 AI 数据去掉）"
+        }
+      ],
+      "style_removed": [
+        {
+          "id": "rose_window",
+          "zh": "红色彩绘玫瑰窗（哥特礼拜堂）",
+          "note": ""
+        },
+        {
+          "id": "candelabras",
+          "zh": "两侧点燃的烛台",
+          "note": ""
+        },
+        {
+          "id": "moon_window",
+          "zh": "窗外的满月、拱桥与城堡",
+          "note": ""
+        }
+      ],
+      "naiwa_kept": []
+    },
+    "major_02": {
+      "traditional": [
+        {
+          "rws": "pillars_boaz_jachin",
+          "zh": "黑白双柱（刻 B 与 J）",
+          "status": "altered",
+          "symbol_ref": "black_white_pillars",
+          "note": "传统柱上刻 B、J 字母；我们没有字母，左黑柱刻新月、右白柱刻太阳"
+        },
+        {
+          "rws": "tora_scroll",
+          "zh": "半掩在袍中的 TORA 卷轴",
+          "status": "altered",
+          "symbol_ref": "scroll",
+          "note": "传统卷轴上写 TORA、一半藏在袍里；我们是怀抱的古卷，画着星盘与月相，没有字样"
+        },
+        {
+          "rws": "pomegranate_veil",
+          "zh": "身后的石榴帷幕",
+          "status": "present",
+          "symbol_ref": "pomegranate_veil",
+          "note": ""
+        },
+        {
+          "rws": "crescent_moon_at_feet",
+          "zh": "脚边的新月",
+          "status": "present",
+          "symbol_ref": "crescent_at_feet",
+          "note": ""
+        },
+        {
+          "rws": "triple_moon_crown",
+          "zh": "三相月冠",
+          "status": "altered",
+          "symbol_ref": "crescent_crown",
+          "note": "传统是满月夹在两弯月牙之间；我们是镶紫宝石的新月头冠"
+        },
+        {
+          "rws": "water",
+          "zh": "帷幕后隐约的水",
+          "status": "altered",
+          "symbol_ref": "moonlit_pool",
+          "note": "传统的水藏在帷幕后、只露一点；我们是座前一池水，漂着睡莲叶"
+        },
+        {
+          "rws": "blue_robe",
+          "zh": "如流水般的蓝袍",
+          "status": "altered",
+          "symbol_ref": "purple_mantle",
+          "note": "传统是蓝袍；我们是绣金纹的深紫斗篷"
+        },
+        {
+          "rws": "solar_cross",
+          "zh": "胸前的等臂十字",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        }
+      ],
+      "style_removed": [
+        {
+          "id": "moon_window",
+          "zh": "哥特尖窗外的满月与尖塔",
+          "note": ""
+        },
+        {
+          "id": "lilies_and_roses",
+          "zh": "两侧的紫黑玫瑰（与白百合混在一起）",
+          "note": "白百合与紫黑玫瑰标成同一个元素，因含哥特玫瑰整体去掉，百合不单独作依据"
+        }
+      ],
+      "naiwa_kept": []
+    },
+    "major_03": {
+      "traditional": [
+        {
+          "rws": "crown_of_twelve_stars",
+          "zh": "十二星冠",
+          "status": "present",
+          "symbol_ref": "star_crown",
+          "note": "可辨约 9～10 颗，数量待人工数"
+        },
+        {
+          "rws": "venus_heart_shield",
+          "zh": "刻金星符号的心形盾牌",
+          "status": "altered",
+          "symbol_ref": "venus_shield",
+          "note": "金星符号一致；我们另加了月桂纹，心形不明确"
+        },
+        {
+          "rws": "wheat",
+          "zh": "脚下成片的麦田",
+          "status": "altered",
+          "symbol_ref": "golden_wheat",
+          "note": "传统是一片麦田；我们是右下方的一丛麦穗"
+        },
+        {
+          "rws": "pomegranate_robe",
+          "zh": "长袍上的石榴纹",
+          "status": "altered",
+          "symbol_ref": "pomegranates",
+          "note": "传统石榴印在长袍上；我们是散在花丛里的完整和剖开的石榴"
+        },
+        {
+          "rws": "scepter",
+          "zh": "顶端是宝球的权杖",
+          "status": "altered",
+          "symbol_ref": "lily_sceptre",
+          "note": "传统权杖顶端是宝球；我们顶端开着白百合"
+        },
+        {
+          "rws": "cushioned_throne",
+          "zh": "铺软垫的宝座",
+          "status": "present",
+          "symbol_ref": "velvet_throne",
+          "note": ""
+        },
+        {
+          "rws": "waterfall",
+          "zh": "瀑布与溪流",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "cypress_trees",
+          "zh": "身后的柏树林",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "golden_sky",
+          "zh": "金黄明亮的天空（白天）",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "我们只有一束斜射的暖阳（见多出的部分）"
+        }
+      ],
+      "style_removed": [
+        {
+          "id": "dark_red_roses",
+          "zh": "四周暗红近黑的玫瑰",
+          "note": ""
+        },
+        {
+          "id": "gothic_ruins",
+          "zh": "爬满藤蔓的哥特拱廊废墟",
+          "note": ""
+        }
+      ],
+      "naiwa_kept": [
+        {
+          "id": "sunbeam",
+          "zh": "从右上斜射下来的一束暖阳",
+          "note": "传统皇后是明亮的白天；这束光接近那种氛围，但属于奶蛙版元素"
+        },
+        {
+          "id": "cream_mantle",
+          "zh": "米白绣金斗篷与红宝石扣",
+          "note": "传统长袍上印石榴纹；我们是米白绣金花纹"
+        }
+      ]
+    },
     "major_04": {
       "traditional": [
         {
@@ -171,6 +427,596 @@
         }
       ]
     },
+    "major_05": {
+      "traditional": [
+        {
+          "rws": "benediction_hand",
+          "zh": "举起赐福的手",
+          "status": "present",
+          "symbol_ref": "blessing_hand",
+          "note": ""
+        },
+        {
+          "rws": "crossed_keys",
+          "zh": "交叉的两把钥匙",
+          "status": "present",
+          "symbol_ref": "crossed_keys",
+          "note": "传统在脚下；我们放在座前台阶上"
+        },
+        {
+          "rws": "two_acolytes",
+          "zh": "跪在座前的两位侍从",
+          "status": "altered",
+          "symbol_ref": "kneeling_acolytes",
+          "note": "传统露出剃发的头顶；我们披兜帽、低头，脸被遮住"
+        },
+        {
+          "rws": "triple_crown",
+          "zh": "三重冠",
+          "status": "present",
+          "symbol_ref": "triple_tiara",
+          "note": ""
+        },
+        {
+          "rws": "papal_cross",
+          "zh": "三重十字杖",
+          "status": "present",
+          "symbol_ref": "triple_cross_staff",
+          "note": ""
+        },
+        {
+          "rws": "red_robe",
+          "zh": "红色祭袍",
+          "status": "present",
+          "symbol_ref": "crimson_vestments",
+          "note": ""
+        },
+        {
+          "rws": "two_pillars",
+          "zh": "两侧的灰色石柱",
+          "status": "altered",
+          "symbol_ref": "cathedral_pillars",
+          "note": "传统是素净的石柱；我们的柱上有壁龛和圣像（教堂装饰属风格，不作意义）"
+        },
+        {
+          "rws": "rose_and_lily_robes",
+          "zh": "侍从袍上的玫瑰与百合",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "我们的侍者是米白兜帽袍配红十字圣带"
+        }
+      ],
+      "style_removed": [
+        {
+          "id": "stained_glass",
+          "zh": "身后的紫红色哥特彩窗",
+          "note": ""
+        },
+        {
+          "id": "candelabras_carpet",
+          "zh": "两侧的烛台蜡烛与红地毯",
+          "note": ""
+        }
+      ],
+      "naiwa_kept": [
+        {
+          "id": "censer_smoke",
+          "zh": "左侧金色香炉冒出的烟",
+          "note": "传统没有香炉；与「仪式」主题相近，但属于奶蛙版元素"
+        }
+      ]
+    },
+    "major_06": {
+      "traditional": [
+        {
+          "rws": "two_lovers",
+          "zh": "伊甸园中的一男一女",
+          "status": "altered",
+          "symbol_ref": "two_naiwas",
+          "note": "传统是赤裸的一男一女、各站一边；我们是两只一模一样的奶蛙并肩手牵手"
+        },
+        {
+          "rws": "angel_raphael",
+          "zh": "上方的天使拉斐尔",
+          "status": "present",
+          "symbol_ref": "angel",
+          "note": ""
+        },
+        {
+          "rws": "serpent",
+          "zh": "缠在知识之树上的蛇",
+          "status": "present",
+          "symbol_ref": "serpent",
+          "note": ""
+        },
+        {
+          "rws": "tree_of_knowledge",
+          "zh": "结果实的知识之树",
+          "status": "altered",
+          "symbol_ref": "pomegranate_tree",
+          "note": "传统结的是苹果（禁果）；我们结的是石榴"
+        },
+        {
+          "rws": "tree_of_life",
+          "zh": "燃着火焰的生命之树",
+          "status": "altered",
+          "symbol_ref": "rose_tree",
+          "note": "传统树上是十二簇火焰；我们是开满玫瑰的树（玫瑰的暗红色属风格，不作意义）"
+        },
+        {
+          "rws": "mountain",
+          "zh": "两人之间的高山",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "我们远处是山谷里的哥特城堡、拱桥与瀑布（风格化，已去掉），没有明确的中央高山"
+        },
+        {
+          "rws": "sun",
+          "zh": "高处的太阳",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "我们是天使身后的金光与紫色暮色（暮色属风格化）"
+        },
+        {
+          "rws": "gaze_hierarchy",
+          "zh": "男人望向女人、女人望向天使",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "我们的两只奶蛙并肩手牵手，没有这种视线层次"
+        }
+      ],
+      "style_removed": [
+        {
+          "id": "castle_waterfall",
+          "zh": "远处山谷里的哥特城堡、拱桥与瀑布",
+          "note": "瀑布与城堡同属一个元素，整体去掉"
+        }
+      ],
+      "naiwa_kept": [
+        {
+          "id": "forking_path",
+          "zh": "脚下分成两条、围成心形的石径",
+          "note": "传统韦特画面没有岔路；它把「在两者之间选择」画了出来，但属于奶蛙版元素"
+        },
+        {
+          "id": "white_lilies",
+          "zh": "右下角的白百合",
+          "note": ""
+        },
+        {
+          "id": "rose_petals",
+          "zh": "地上散落的红色花瓣",
+          "note": ""
+        }
+      ]
+    },
+    "major_07": {
+      "traditional": [
+        {
+          "rws": "black_white_sphinxes",
+          "zh": "一黑一白两只狮身兽",
+          "status": "present",
+          "symbol_ref": "black_white_sphinxes",
+          "note": "我们的两只朝向不同：黑的朝前、白的望向右方"
+        },
+        {
+          "rws": "starry_canopy",
+          "zh": "头顶的星篷",
+          "status": "present",
+          "symbol_ref": "star_canopy",
+          "note": ""
+        },
+        {
+          "rws": "crown_with_star",
+          "zh": "带星的王冠",
+          "status": "present",
+          "symbol_ref": "crown",
+          "note": ""
+        },
+        {
+          "rws": "wand",
+          "zh": "手中的权杖",
+          "status": "altered",
+          "symbol_ref": "star_sceptre",
+          "note": "传统是一根短杖；我们是顶端带星形轮盘的金色权杖"
+        },
+        {
+          "rws": "winged_disk",
+          "zh": "车前的带翼圆盘",
+          "status": "altered",
+          "symbol_ref": "star_emblem",
+          "note": "我们是座前月桂环绕的八芒星徽，位置相同、形态完全不同"
+        },
+        {
+          "rws": "city_walls",
+          "zh": "身后的城墙与城镇",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "画面右后方是亮灯的哥特城堡和城门（风格化，已去掉）"
+        },
+        {
+          "rws": "chariot_wheels",
+          "zh": "石车与车轮",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "画面看不到车身和车轮，更像立在台阶上的华盖宝座"
+        },
+        {
+          "rws": "river",
+          "zh": "身后的河流",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "crescent_moon_epaulettes",
+          "zh": "肩上的新月肩饰",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "breastplate_square",
+          "zh": "胸甲上的方形",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "yellow_sky",
+          "zh": "明亮的黄色天空（白天）",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "我们画成蓝黑风暴夜空（风格化，已去掉）"
+        }
+      ],
+      "style_removed": [
+        {
+          "id": "castle_city",
+          "zh": "亮灯的哥特城堡与城门",
+          "note": ""
+        },
+        {
+          "id": "stormy_sky",
+          "zh": "蓝黑风暴夜空（夜晚化）",
+          "note": ""
+        }
+      ],
+      "naiwa_kept": [
+        {
+          "id": "chains_crossbar",
+          "zh": "狮身兽被金链连在带星徽的横杆上",
+          "note": "传统里没有缰绳、全凭意志驾驭；金链可能改变『无缰驾驭』的含义，命题和低语暂不使用"
+        },
+        {
+          "id": "star_banner",
+          "zh": "左侧绣八芒星的蓝色旗帜",
+          "note": ""
+        }
+      ]
+    },
+    "major_08": {
+      "traditional": [
+        {
+          "rws": "lion",
+          "zh": "狮子",
+          "status": "altered",
+          "symbol_ref": "black_lion",
+          "note": "传统是黄褐色、张着嘴的狮子；我们是闭眼低头趴着的黑狮，颜色不作意义"
+        },
+        {
+          "rws": "hands_on_lion",
+          "zh": "双手合上狮子的嘴",
+          "status": "altered",
+          "symbol_ref": "hand_on_lion",
+          "note": "我们是一只手掌轻按在狮子额头上，没有合嘴的动作"
+        },
+        {
+          "rws": "lemniscate",
+          "zh": "头顶的无限符号",
+          "status": "present",
+          "symbol_ref": "infinity_sign",
+          "note": ""
+        },
+        {
+          "rws": "white_robe",
+          "zh": "白袍",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "rose_garland",
+          "zh": "身上的玫瑰花环与花腰带",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "画面四周的暗红玫瑰与常春藤属于哥特风格，已去掉"
+        },
+        {
+          "rws": "mountain",
+          "zh": "远处的山",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "bright_sky",
+          "zh": "明亮的黄色天空（白天）",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "我们画成了满月夜晚（风格化，已去掉）"
+        }
+      ],
+      "style_removed": [
+        {
+          "id": "dark_red_roses",
+          "zh": "暗红玫瑰与常春藤",
+          "note": ""
+        },
+        {
+          "id": "full_moon",
+          "zh": "满月（夜晚化）",
+          "note": ""
+        },
+        {
+          "id": "gothic_ruins",
+          "zh": "哥特拱门、废墟与柏树",
+          "note": ""
+        }
+      ],
+      "naiwa_kept": [
+        {
+          "id": "lion_collar",
+          "zh": "狮子颈上的宝石金项圈",
+          "note": "传统的狮子没有项圈；项圈可能带来『被驯养 / 被约束』的联想，命题和低语暂不使用"
+        },
+        {
+          "id": "stone_steps",
+          "zh": "落着花瓣的石阶",
+          "note": ""
+        }
+      ]
+    },
+    "major_09": {
+      "traditional": [
+        {
+          "rws": "lantern_with_star",
+          "zh": "装着六芒星的提灯",
+          "status": "present",
+          "symbol_ref": "star_lantern",
+          "note": ""
+        },
+        {
+          "rws": "staff",
+          "zh": "长杖",
+          "status": "altered",
+          "symbol_ref": "staff",
+          "note": "传统是一根笔直的长杖；我们是顶端弯曲的扭曲木杖"
+        },
+        {
+          "rws": "snowy_peak",
+          "zh": "雪峰顶",
+          "status": "present",
+          "symbol_ref": "snowy_peak",
+          "note": ""
+        },
+        {
+          "rws": "hooded_cloak",
+          "zh": "灰色兜帽长袍",
+          "status": "altered",
+          "symbol_ref": "dark_cloak",
+          "note": "我们是没有兜帽的深色破边短斗篷，扣着六芒星扣"
+        },
+        {
+          "rws": "grey_beard",
+          "zh": "灰白长须",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "奶蛙没有胡子，属于角色化"
+        },
+        {
+          "rws": "dark_sky",
+          "zh": "昏暗的天色",
+          "status": "present",
+          "symbol_ref": null,
+          "note": "传统隐者的背景本来就昏暗（常被读作夜晚或黄昏）；画面里的满月是风格化，已去掉"
+        }
+      ],
+      "style_removed": [
+        {
+          "id": "full_moon",
+          "zh": "满月",
+          "note": ""
+        },
+        {
+          "id": "gothic_ruins",
+          "zh": "远山上的哥特废墟",
+          "note": ""
+        }
+      ],
+      "naiwa_kept": [
+        {
+          "id": "falling_snow",
+          "zh": "从夜空落下的雪",
+          "note": ""
+        },
+        {
+          "id": "bare_trees",
+          "zh": "山坡上的光秃枯树",
+          "note": ""
+        }
+      ]
+    },
+    "major_10": {
+      "traditional": [
+        {
+          "rws": "wheel",
+          "zh": "刻着符号的轮盘",
+          "status": "altered",
+          "symbol_ref": "golden_wheel",
+          "note": "我们是带齿轮的古金轮盘，中心八芒星，外圈有日、月、沙漏与炼金三角；传统轮上的炼金符号保留，齿轮与沙漏是多出的"
+        },
+        {
+          "rws": "taro_letters",
+          "zh": "轮上的 TARO 字母",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "tetragrammaton",
+          "zh": "轮上的希伯来字母",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "sphinx",
+          "zh": "轮顶持剑的狮身人面兽",
+          "status": "altered",
+          "symbol_ref": "sphinx",
+          "note": "我们的狮身兽带翅膀、戴埃及头巾，看不出持剑"
+        },
+        {
+          "rws": "typhon_serpent",
+          "zh": "沿轮下滑的蛇",
+          "status": "present",
+          "symbol_ref": "serpent",
+          "note": ""
+        },
+        {
+          "rws": "anubis",
+          "zh": "向上攀升的阿努比斯",
+          "status": "present",
+          "symbol_ref": "anubis",
+          "note": "我们是胡狼头人形攀在轮盘右侧"
+        },
+        {
+          "rws": "four_living_creatures",
+          "zh": "四角的天使、鹰、狮、牛",
+          "status": "altered",
+          "symbol_ref": "four_living_creatures",
+          "note": "传统四者都捧着书；我们只有天使拿书，狮和牛带翅膀"
+        },
+        {
+          "rws": "clouds",
+          "zh": "四角的云与蓝天",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "我们是紫色星云、旋涡星系与行星（风格化，已去掉）"
+        }
+      ],
+      "style_removed": [
+        {
+          "id": "cosmic_sky",
+          "zh": "紫色星云、旋涡星系与行星",
+          "note": ""
+        },
+        {
+          "id": "ruins",
+          "zh": "云雾中的古柱与哥特拱门废墟",
+          "note": ""
+        }
+      ],
+      "naiwa_kept": [
+        {
+          "id": "naiwa_on_platform",
+          "zh": "奶蛙站在轮下的圆形石台上，正面朝外",
+          "note": "传统没有站在轮下的人物；命题和低语里有两条用到它"
+        }
+      ]
+    },
+    "major_11": {
+      "traditional": [
+        {
+          "rws": "upright_sword",
+          "zh": "竖起的双刃剑",
+          "status": "present",
+          "symbol_ref": "upright_sword",
+          "note": ""
+        },
+        {
+          "rws": "scales",
+          "zh": "天平",
+          "status": "present",
+          "symbol_ref": "scales",
+          "note": ""
+        },
+        {
+          "rws": "two_pillars",
+          "zh": "两根柱子",
+          "status": "present",
+          "symbol_ref": "two_pillars",
+          "note": ""
+        },
+        {
+          "rws": "veil",
+          "zh": "两柱之间的帷幕",
+          "status": "altered",
+          "symbol_ref": "crimson_curtain",
+          "note": "传统是紫色的帷幕；我们是厚重的深红丝绒帷幕"
+        },
+        {
+          "rws": "throne",
+          "zh": "宝座",
+          "status": "altered",
+          "symbol_ref": "stone_throne",
+          "note": "我们是带尖拱的石座，立在台阶上；尖拱的哥特样式不作意义"
+        },
+        {
+          "rws": "red_robe",
+          "zh": "红袍",
+          "status": "present",
+          "symbol_ref": null,
+          "note": "奶蛙披深红斗篷，visual_symbols 里没有单列"
+        },
+        {
+          "rws": "open_eyes",
+          "zh": "睁开的眼睛（不蒙眼）",
+          "status": "present",
+          "symbol_ref": null,
+          "note": "奶蛙眼睛平视、没有蒙眼；但两侧柱上的雕像是蒙眼的（见多出的部分）"
+        },
+        {
+          "rws": "crown_with_square",
+          "zh": "带方形饰的王冠",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "white_shoe",
+          "zh": "袍下露出的白鞋",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        }
+      ],
+      "style_removed": [
+        {
+          "id": "candelabras",
+          "zh": "点着蜡烛的金色烛台",
+          "note": ""
+        },
+        {
+          "id": "moon_ruins",
+          "zh": "帷幕开口处的满月与废墟",
+          "note": ""
+        }
+      ],
+      "naiwa_kept": [
+        {
+          "id": "radiant_halo",
+          "zh": "头后的金色放射光环",
+          "note": ""
+        },
+        {
+          "id": "justice_statues",
+          "zh": "柱上手持月桂枝、蒙着眼的女神雕像",
+          "note": "塔罗的正义本来睁着眼；蒙眼雕像与传统相反，可能引入『不看事实』的含义，命题和低语暂不使用"
+        }
+      ]
+    },
     "major_12": {
       "traditional": [
         {
@@ -252,6 +1098,175 @@
           "note": ""
         }
       ]
+    },
+    "major_13": {
+      "traditional": [
+        {
+          "rws": "skeleton_in_armor",
+          "zh": "身披黑甲的骷髅骑士",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "我们的骑手是奶蛙，披黑色兜帽斗篷（风格化装扮，已从 AI 数据去掉），不是骷髅"
+        },
+        {
+          "rws": "white_horse",
+          "zh": "白马",
+          "status": "present",
+          "symbol_ref": "white_horse",
+          "note": ""
+        },
+        {
+          "rws": "black_banner_white_rose",
+          "zh": "绘有白玫瑰的黑旗",
+          "status": "present",
+          "symbol_ref": "white_rose_banner",
+          "note": "我们的旗边缘破损"
+        },
+        {
+          "rws": "fallen_king",
+          "zh": "倒在地上的国王",
+          "status": "altered",
+          "symbol_ref": "fallen_crown",
+          "note": "传统是国王倒地、王冠落下；我们只画了地上的一顶金冠，没有国王"
+        },
+        {
+          "rws": "bishop",
+          "zh": "双手合十的主教",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "child_and_maiden",
+          "zh": "仰望的孩子与别过脸的少女",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "river_with_boat",
+          "zh": "远处的河与小船",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "sun_between_towers",
+          "zh": "两座塔之间升起的太阳",
+          "status": "altered",
+          "symbol_ref": "sun_between_towers",
+          "note": "传统是两座塔之间的日出；我们的塔画成哥特尖塔（尖塔造型属风格化，不作意义），太阳贴着地平线，看不出是升是落，站内文案写「天正在亮」"
+        }
+      ],
+      "style_removed": [
+        {
+          "id": "black_hooded_cloak",
+          "zh": "绣金玫瑰纹的黑色兜帽斗篷",
+          "note": ""
+        },
+        {
+          "id": "red_roses_petals",
+          "zh": "满园红玫瑰与散落的红花瓣（玫瑰废园）",
+          "note": ""
+        },
+        {
+          "id": "full_moon",
+          "zh": "满月（夜晚化）",
+          "note": "传统是日出时分"
+        },
+        {
+          "id": "gothic_ruins",
+          "zh": "哥特拱门与断柱废墟",
+          "note": ""
+        }
+      ],
+      "naiwa_kept": [
+        {
+          "id": "white_roses",
+          "zh": "背景里的一丛白玫瑰",
+          "note": "传统的白玫瑰只在旗上；这丛是我们多画的，和旗上的白玫瑰呼应"
+        }
+      ]
+    },
+    "major_14": {
+      "traditional": [
+        {
+          "rws": "angel_wings",
+          "zh": "天使的翅膀",
+          "status": "altered",
+          "symbol_ref": "white_wings",
+          "note": "传统天使是红色翅膀；我们是白色羽翼，背在奶蛙身上"
+        },
+        {
+          "rws": "two_cups_pouring",
+          "zh": "在两只杯子之间倒水",
+          "status": "altered",
+          "symbol_ref": "pouring_cups",
+          "note": "传统是两只相同的金杯；我们是一只铜杯和一只高脚杯，水流泛银光"
+        },
+        {
+          "rws": "one_foot_in_water",
+          "zh": "一足踏水、一足踏岸",
+          "status": "present",
+          "symbol_ref": "one_foot_in_water",
+          "note": ""
+        },
+        {
+          "rws": "pool",
+          "zh": "水池",
+          "status": "present",
+          "symbol_ref": "pool",
+          "note": ""
+        },
+        {
+          "rws": "white_robe",
+          "zh": "白色长袍",
+          "status": "present",
+          "symbol_ref": "white_robe",
+          "note": "我们的长袍绣金纹，胸前是三枚星纹圆扣"
+        },
+        {
+          "rws": "triangle_in_square",
+          "zh": "胸前方框里的三角形",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "胸前位置画的是三枚星纹圆扣"
+        },
+        {
+          "rws": "solar_disc_on_forehead",
+          "zh": "额头的太阳圆点",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "path_to_crown_sun",
+          "zh": "通往远山、尽头有王冠般光芒的小路",
+          "status": "altered",
+          "symbol_ref": "winding_road_sun",
+          "note": "我们是蜿蜒小路通向群山间的太阳，没有王冠形状；太阳是升是落看不出"
+        },
+        {
+          "rws": "irises",
+          "zh": "岸边的鸢尾花",
+          "status": "altered",
+          "symbol_ref": "white_lilies",
+          "note": "我们画的是白百合，只是位置与传统的鸢尾对应"
+        }
+      ],
+      "style_removed": [
+        {
+          "id": "full_moon",
+          "zh": "满月（夜晚化）",
+          "note": "传统是白天，远处有太阳"
+        },
+        {
+          "id": "ruined_arches",
+          "zh": "爬满白花藤蔓的残破拱门",
+          "note": ""
+        }
+      ],
+      "naiwa_kept": []
     },
     "major_15": {
       "traditional": [
@@ -572,6 +1587,256 @@
           "note": ""
         }
       ]
+    },
+    "major_19": {
+      "traditional": [
+        {
+          "rws": "sun_with_face",
+          "zh": "带人脸的大太阳",
+          "status": "present",
+          "symbol_ref": "sun_face",
+          "note": ""
+        },
+        {
+          "rws": "nude_child",
+          "zh": "赤身骑马的孩子",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "骑马的是披红斗篷的奶蛙（见多出的部分）"
+        },
+        {
+          "rws": "white_horse",
+          "zh": "白马",
+          "status": "present",
+          "symbol_ref": "white_pony",
+          "note": "我们是一匹毛茸茸的小白马"
+        },
+        {
+          "rws": "red_banner",
+          "zh": "红旗",
+          "status": "altered",
+          "symbol_ref": "red_banner",
+          "note": "我们的红旗上多了金色太阳纹"
+        },
+        {
+          "rws": "sunflowers",
+          "zh": "墙后的向日葵",
+          "status": "present",
+          "symbol_ref": "sunflowers",
+          "note": "站内文案写「黑向日葵」，实际是金黄花瓣、深色花心"
+        },
+        {
+          "rws": "wall",
+          "zh": "矮墙",
+          "status": "altered",
+          "symbol_ref": "stone_wall",
+          "note": "传统是朴素的矮墙；我们的墙爬满藤蔓、带哥特拱饰（拱饰属风格化，不作意义）"
+        },
+        {
+          "rws": "red_feather",
+          "zh": "孩子头上的红羽毛",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "flower_wreath",
+          "zh": "孩子头上的花环",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "bright_daylight",
+          "zh": "明亮的白天",
+          "status": "present",
+          "symbol_ref": null,
+          "note": "满画面暖金色阳光，本来就是这张牌的传统"
+        }
+      ],
+      "style_removed": [
+        {
+          "id": "gothic_spires",
+          "zh": "远处的哥特尖塔与柏树",
+          "note": ""
+        }
+      ],
+      "naiwa_kept": [
+        {
+          "id": "red_cape",
+          "zh": "奶蛙披着的深红绣金斗篷",
+          "note": "传统孩子是赤身的，象征纯真、无遮掩；我们披着斗篷，不能拿它讲「赤裸 / 毫无隐藏」"
+        },
+        {
+          "id": "flowers_foreground",
+          "zh": "路边的红花与白百合",
+          "note": ""
+        }
+      ]
+    },
+    "major_20": {
+      "traditional": [
+        {
+          "rws": "angel_wings",
+          "zh": "天使（加百列）的翅膀",
+          "status": "altered",
+          "symbol_ref": "wings",
+          "note": "吹号的是奶蛙；两只翅膀都是上白下黑的混色羽毛（站内文案写「一黑一白」，与画面不符）"
+        },
+        {
+          "rws": "trumpet",
+          "zh": "号角",
+          "status": "present",
+          "symbol_ref": "golden_trumpet",
+          "note": ""
+        },
+        {
+          "rws": "cross_banner",
+          "zh": "号角上挂的红十字旗",
+          "status": "present",
+          "symbol_ref": "red_cross_banner",
+          "note": ""
+        },
+        {
+          "rws": "clouds",
+          "zh": "天使所在的云",
+          "status": "present",
+          "symbol_ref": "cloud",
+          "note": ""
+        },
+        {
+          "rws": "open_coffins",
+          "zh": "打开的棺木",
+          "status": "altered",
+          "symbol_ref": "open_coffins",
+          "note": "传统棺木漂在水上；我们是刻十字的石棺（哥特造型属风格化，不作意义），立在云雾地面上，站内文案称「石匣」"
+        },
+        {
+          "rws": "rising_dead",
+          "zh": "从棺中站起的人",
+          "status": "altered",
+          "symbol_ref": "rising_spirits",
+          "note": "传统是张开双臂站起来的人；我们是半透明的人形光灵顺着光束升起"
+        },
+        {
+          "rws": "nude_family",
+          "zh": "男人、女人与孩子一家",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "open_arms",
+          "zh": "张开双臂的姿势",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "光灵的姿势看不清"
+        },
+        {
+          "rws": "sea",
+          "zh": "棺木下的海水",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "snowy_mountains",
+          "zh": "远处的雪山",
+          "status": "altered",
+          "symbol_ref": "mountains_ruins",
+          "note": "图上雪山与瀑布、哥特拱廊废墟和山顶城堡画在一起；只取雪山，废墟与城堡不作意义"
+        }
+      ],
+      "style_removed": [
+        {
+          "id": "gothic_arcade_castle",
+          "zh": "雪山间的哥特拱廊废墟与山顶城堡",
+          "note": "和雪山画在同一个标注（mountains_ruins）里；只去掉废墟与城堡，雪山保留"
+        }
+      ],
+      "naiwa_kept": [
+        {
+          "id": "halo",
+          "zh": "奶蛙头后的金色放射光环",
+          "note": "传统这张牌没有把光环作为标志性意象"
+        },
+        {
+          "id": "white_lilies",
+          "zh": "四周的白百合",
+          "note": ""
+        }
+      ]
+    },
+    "major_21": {
+      "traditional": [
+        {
+          "rws": "laurel_wreath",
+          "zh": "椭圆形的月桂花环",
+          "status": "altered",
+          "symbol_ref": "oval_wreath",
+          "note": "我们的花环点缀了黑玫瑰（风格化，不作意义），缠金丝带，底部打蝴蝶结"
+        },
+        {
+          "rws": "dancing_figure",
+          "zh": "花环中央起舞的人",
+          "status": "altered",
+          "symbol_ref": "floating_naiwa",
+          "note": "传统是起舞的舞者；我们是奶蛙双脚并拢、失重般悬浮"
+        },
+        {
+          "rws": "two_wands",
+          "zh": "两手各持一杖",
+          "status": "present",
+          "symbol_ref": "two_wands",
+          "note": "我们是顶端带星光的金色礼杖"
+        },
+        {
+          "rws": "four_living_creatures",
+          "zh": "四角的天使、鹰、狮、牛",
+          "status": "present",
+          "symbol_ref": "four_living_creatures",
+          "note": "我们画在四角的圆形徽章里"
+        },
+        {
+          "rws": "red_lemniscate_ribbons",
+          "zh": "花环上下的红色无限结丝带",
+          "status": "altered",
+          "symbol_ref": "gold_ribbon",
+          "note": "我们是缠绕花环的金色丝带，没有无限结"
+        },
+        {
+          "rws": "purple_sash",
+          "zh": "舞者身上的紫色长巾",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "crossed_legs",
+          "zh": "一条腿交叉在另一条腿后",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "奶蛙双脚并拢"
+        }
+      ],
+      "style_removed": [
+        {
+          "id": "black_roses",
+          "zh": "花环上的黑玫瑰",
+          "note": ""
+        },
+        {
+          "id": "nebula_swirl",
+          "zh": "紫色星云旋涡",
+          "note": ""
+        },
+        {
+          "id": "golden_stars",
+          "zh": "深紫夜空里的金色星星",
+          "note": "传统这张牌是天空与云，不是星夜"
+        }
+      ],
+      "naiwa_kept": []
     }
   }
 }

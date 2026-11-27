@@ -2,12 +2,27 @@
   "$comment": "试点语义框架（draft，待人工审核）。格式见 ai/schemas/。",
   "pilot_cards": [
     "major_00",
+    "major_01",
+    "major_02",
+    "major_03",
     "major_04",
+    "major_05",
+    "major_06",
+    "major_07",
+    "major_08",
+    "major_09",
+    "major_10",
+    "major_11",
     "major_12",
+    "major_13",
+    "major_14",
     "major_15",
     "major_16",
     "major_17",
-    "major_18"
+    "major_18",
+    "major_19",
+    "major_20",
+    "major_21"
   ],
   "propositions": [
     {
@@ -81,6 +96,243 @@
       "counterexamples": [
         "提醒来自可信的专业意见时，应当认真对待",
         "用户想做的事有明显的人身或安全风险时，不用这句为其开脱"
+      ],
+      "source_kind": "original_interpretation",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_01.01",
+      "card_refs": [
+        "major_01"
+      ],
+      "text": {
+        "zh": "一手向上、一手向下：意志在念头与现实之间做连接，想法可以由此变成行动。",
+        "en": "One hand up, one hand down: will links thought and reality, and an idea can become action."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "raised_wand",
+        "open_hand_outward"
+      ],
+      "applicable_conditions": [
+        "有想法、想开始做一件事",
+        "需要把计划落到第一步"
+      ],
+      "counterexamples": [
+        "用户受疾病、经济困难或他人控制所限时，不暗示「只要有意志就能做到」",
+        "不把事情没有做成归为用户意志不够"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_01.02",
+      "card_refs": [
+        "major_01"
+      ],
+      "text": {
+        "zh": "四件道具都已摆在桌上：开始所需的东西，可能已经在手边。",
+        "en": "All four tools are already on the table: what you need to begin may already be at hand."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "four_suit_tools",
+        "stone_altar"
+      ],
+      "applicable_conditions": [
+        "觉得自己还没准备好",
+        "清点已有的能力与资源"
+      ],
+      "counterexamples": [
+        "用户确实缺少钱、时间或支持时，不用「你已经拥有一切」否认现实困难",
+        "不用来催促用户马上开始"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_01.03",
+      "card_refs": [
+        "major_01"
+      ],
+      "text": {
+        "zh": "无限符号悬在头顶：可能性有很多，真正落到手里的，一次是一件。",
+        "en": "The infinity sign hangs overhead: possibilities are many, but what reaches the hand is one at a time."
+      },
+      "framework": "existential_extension",
+      "symbol_refs": [
+        "infinity_sign",
+        "raised_wand"
+      ],
+      "applicable_conditions": [
+        "想法很多、迟迟没有落到一件事上"
+      ],
+      "counterexamples": [
+        "用户需要同时承担多项责任（照护、多份工作）时，不评判其「不专注」",
+        "不把精力分散解读为注意力障碍等心理状态"
+      ],
+      "source_kind": "original_interpretation",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_02.01",
+      "card_refs": [
+        "major_02"
+      ],
+      "text": {
+        "zh": "有些知道不靠说出来：安静下来时，直觉可能比解释先到。",
+        "en": "Some knowing is never spoken: in stillness, intuition may arrive before explanation."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "crescent_at_feet",
+        "moonlit_pool"
+      ],
+      "applicable_conditions": [
+        "信息不全、需要先观察",
+        "用户说有说不清的感觉"
+      ],
+      "counterexamples": [
+        "有可以核实的现实信息（检查结果、合同、证据）时，不用「相信直觉」代替核实",
+        "不用「直觉」去判断他人的真实想法，也不把直觉说成揭示用户潜意识的证据"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_02.02",
+      "card_refs": [
+        "major_02"
+      ],
+      "text": {
+        "zh": "帷幕后面的东西还没露出来：不是每件事都需要马上看清。",
+        "en": "What lies behind the veil has not shown itself yet: not everything needs to be seen at once."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "pomegranate_veil",
+        "scroll"
+      ],
+      "applicable_conditions": [
+        "事情还在发展、答案尚未出现",
+        "用户急着下结论"
+      ],
+      "counterexamples": [
+        "用户需要关键信息来保护自己（医疗、法律、人身安全）时，不劝其「不必急着看清」",
+        "不暗示用户身边的人在隐瞒什么"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_02.03",
+      "card_refs": [
+        "major_02"
+      ],
+      "text": {
+        "zh": "黑柱与白柱并立：两种看似相反的感受，可以同时是真的。",
+        "en": "The black pillar and the white stand side by side: two feelings that seem opposite can both be true."
+      },
+      "framework": "dialectical_extension",
+      "symbol_refs": [
+        "black_white_pillars"
+      ],
+      "applicable_conditions": [
+        "用户自述心情矛盾、两边都有道理"
+      ],
+      "counterexamples": [
+        "用户面临必须做出的现实决定（安全、健康）时，不用「两边都成立」拖延",
+        "用户没有表达矛盾时，不强行制造矛盾"
+      ],
+      "source_kind": "original_interpretation",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_03.01",
+      "card_refs": [
+        "major_03"
+      ],
+      "text": {
+        "zh": "生长需要时间和照料：被好好照顾的东西，可以慢慢结出果实。",
+        "en": "Growth takes time and care: what is well tended can slowly bear fruit."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "golden_wheat",
+        "pomegranates"
+      ],
+      "applicable_conditions": [
+        "在培养一件事、一段关系或一项创作"
+      ],
+      "counterexamples": [
+        "不承诺具体结果（怀孕、收获、关系好转）",
+        "用户谈到备孕、不孕、流产或失去孩子时，不使用「丰饶 / 结果」类说法",
+        "不把没有结果归为照顾得不够"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_03.02",
+      "card_refs": [
+        "major_03"
+      ],
+      "text": {
+        "zh": "身体与感官的舒适，也是一种滋养。",
+        "en": "Comfort of the body and the senses is a kind of nourishment too."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "velvet_throne",
+        "venus_shield"
+      ],
+      "applicable_conditions": [
+        "长期紧绷、忽略身体感受"
+      ],
+      "counterexamples": [
+        "用户因疾病、残障或经济困难难以获得舒适时，不暗示「是你没照顾好自己」",
+        "不评判用户的身体、体重或饮食"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_03.03",
+      "card_refs": [
+        "major_03"
+      ],
+      "text": {
+        "zh": "那束光落下来不需要理由：被照顾，不必先证明自己值得。",
+        "en": "That beam of light falls without a reason: being cared for need not be earned first."
+      },
+      "framework": "naiwa_original",
+      "symbol_refs": [
+        "sunbeam"
+      ],
+      "applicable_conditions": [
+        "用户自述觉得自己不配被照顾、总在付出"
+      ],
+      "counterexamples": [
+        "用户缺少现实支持时，不用比喻代替寻找现实帮助",
+        "不把用户的自我怀疑解读为心理问题"
       ],
       "source_kind": "original_interpretation",
       "source_refs": [],
@@ -163,6 +415,561 @@
       "version": 1
     },
     {
+      "proposition_id": "prop.major_05.01",
+      "card_refs": [
+        "major_05"
+      ],
+      "text": {
+        "zh": "经验可以被传下来：向走在前面的人请教，可能少走一些弯路。",
+        "en": "Experience can be passed on: asking those who walked ahead may spare some detours."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "blessing_hand",
+        "kneeling_acolytes"
+      ],
+      "applicable_conditions": [
+        "进入新领域、需要学习",
+        "在找导师或可靠的做法"
+      ],
+      "counterexamples": [
+        "用户正受到导师、长辈、宗教或机构权威的控制或伤害时，不劝其服从",
+        "不把某一种信仰或制度说成唯一正确的路，也不评判用户有无信仰"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_05.02",
+      "card_refs": [
+        "major_05"
+      ],
+      "text": {
+        "zh": "仪式与共同的规矩，可以让人感到归属和有所依靠。",
+        "en": "Rituals and shared rules can give a sense of belonging and something to lean on."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "triple_tiara",
+        "crimson_vestments",
+        "cathedral_pillars"
+      ],
+      "applicable_conditions": [
+        "婚礼、入学、入职等进入群体的时刻",
+        "在找稳定的生活节奏"
+      ],
+      "counterexamples": [
+        "用户因性取向、性别或信仰被所在群体排斥时，不用「归属」劝其回到让其受伤的地方",
+        "不把离开某个群体或信仰说成错误"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_05.03",
+      "card_refs": [
+        "major_05"
+      ],
+      "text": {
+        "zh": "钥匙有两把：别人交到手里的路，和自己找到的路，都可以认真看一看。",
+        "en": "There are two keys: the path handed to you and the path you find yourself can both be looked at with care."
+      },
+      "framework": "existential_extension",
+      "symbol_refs": [
+        "crossed_keys"
+      ],
+      "applicable_conditions": [
+        "在家人期待或传统做法与自己的想法之间犹豫"
+      ],
+      "counterexamples": [
+        "偏离传统可能带来现实危险（家庭暴力、被赶出家门）时，不鼓励贸然对抗",
+        "不暗示用户必须在传统和自我之间二选一"
+      ],
+      "source_kind": "original_interpretation",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_06.01",
+      "card_refs": [
+        "major_06"
+      ],
+      "text": {
+        "zh": "联结不只是吸引，也包括价值上的靠近与彼此信任。",
+        "en": "A bond is not only attraction; it also means closeness in values and mutual trust."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "two_naiwas",
+        "angel"
+      ],
+      "applicable_conditions": [
+        "恋爱、合作、友谊中的亲近与信任"
+      ],
+      "counterexamples": [
+        "不据此推断对方的真实想法，也不说「对方也爱你」",
+        "关系中存在控制、暴力或胁迫时，不用「联结 / 信任」劝用户留下"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_06.02",
+      "card_refs": [
+        "major_06"
+      ],
+      "text": {
+        "zh": "这也是一张关于选择的牌：选择可能让人看清自己真正看重什么。",
+        "en": "This is also a card of choice: choosing may show what one truly values."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "pomegranate_tree",
+        "rose_tree",
+        "serpent"
+      ],
+      "applicable_conditions": [
+        "在两个人、两条路或两种生活之间犹豫"
+      ],
+      "counterexamples": [
+        "用户在经济依赖、胁迫或照护责任下没有真正的选择余地时，不说「这是你的选择」",
+        "不替用户在两个人或两条路之间做决定",
+        "涉及分开、放手时，用户流露轻生、自伤念头或处于危机时不使用，转为现实支持"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_06.03",
+      "card_refs": [
+        "major_06"
+      ],
+      "text": {
+        "zh": "两只一模一样的奶蛙：在对方身上看见自己，也还可以看见彼此的不同。",
+        "en": "Two identical Naiwas: seeing yourself in the other, and still seeing where you differ."
+      },
+      "framework": "naiwa_original",
+      "symbol_refs": [
+        "two_naiwas"
+      ],
+      "applicable_conditions": [
+        "亲密关系中觉得「太像」或「不像」",
+        "用户想谈关系里的自我"
+      ],
+      "counterexamples": [
+        "不据此推断对方的真实想法或感受",
+        "用户刚经历分手或失去伴侣时，不急于引导其反思「不同」",
+        "不评判同性关系或任何关系形式"
+      ],
+      "source_kind": "original_interpretation",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_07.01",
+      "card_refs": [
+        "major_07"
+      ],
+      "text": {
+        "zh": "把方向不同的力量收拢到同一个方向，意志可以推动人往前走。",
+        "en": "Gathering forces that pull different ways into one direction, will can carry you forward."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "black_white_sphinxes",
+        "star_sceptre"
+      ],
+      "applicable_conditions": [
+        "目标明确、需要持续推进的阶段",
+        "考试、竞争、项目冲刺"
+      ],
+      "counterexamples": [
+        "用户身体或精力已经透支时，不用『意志』要求其继续硬撑",
+        "不承诺『坚持就能赢』，也不预测考试、比赛、官司等具体结果"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_07.02",
+      "card_refs": [
+        "major_07"
+      ],
+      "text": {
+        "zh": "驾驭不是消灭其中一方：黑与白都还在，只是暂时朝同一处走。",
+        "en": "Steering is not getting rid of one side: black and white both remain, only heading the same way for now."
+      },
+      "framework": "dialectical_extension",
+      "symbol_refs": [
+        "black_white_sphinxes"
+      ],
+      "applicable_conditions": [
+        "用户自述心里有两种想法在拉扯（想要 / 害怕、留下 / 离开）"
+      ],
+      "counterexamples": [
+        "用户没有提到内在拉扯时，不强行制造矛盾",
+        "不把两难说成用户『不够坚定』",
+        "其中一方是外部施压、控制或胁迫时，不把它当作需要『和解』的内心一面"
+      ],
+      "source_kind": "original_interpretation",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_07.03",
+      "card_refs": [
+        "major_07"
+      ],
+      "text": {
+        "zh": "权杖握在手里，路况不在手里：能掌握的是方向，不是所有结果。",
+        "en": "The sceptre is in your hand; the road is not: you can steer the direction, not every outcome."
+      },
+      "framework": "stoic_extension",
+      "symbol_refs": [
+        "star_sceptre"
+      ],
+      "applicable_conditions": [
+        "用户为结果焦虑，把成败全揽在自己身上"
+      ],
+      "counterexamples": [
+        "用户需要具体的行动计划时，不用『只管方向』代替",
+        "用户刚经历失败、落选或被淘汰时，不暗示是方向没握好、归咎于用户"
+      ],
+      "source_kind": "original_interpretation",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_08.01",
+      "card_refs": [
+        "major_08"
+      ],
+      "text": {
+        "zh": "力量可以是温柔与耐心，而不是蛮力。",
+        "en": "Strength can be gentleness and patience rather than force."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "hand_on_lion",
+        "black_lion"
+      ],
+      "applicable_conditions": [
+        "面对难缠的人或事、需要稳住局面",
+        "用户想用硬碰硬的方式解决问题"
+      ],
+      "counterexamples": [
+        "用户面对暴力、虐待、控制或胁迫时，不要求其对施害者温柔、忍耐，转为现实支持与人身安全",
+        "不把『温柔』说成应当压下合理的愤怒或拒绝"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_08.02",
+      "card_refs": [
+        "major_08"
+      ],
+      "text": {
+        "zh": "狮子可以象征本能与强烈的情绪：它们不必被消灭，可以被安抚、被陪着。",
+        "en": "The lion can stand for instinct and strong feeling: these need not be destroyed; they can be soothed and kept company."
+      },
+      "framework": "jungian_extension",
+      "symbol_refs": [
+        "black_lion",
+        "hand_on_lion"
+      ],
+      "applicable_conditions": [
+        "用户自述情绪很强烈，担心自己失控"
+      ],
+      "counterexamples": [
+        "不推断用户有情绪问题或心理疾病，不把『心里的狮子』当作诊断",
+        "用户说到可能伤害自己或他人时，不停留在象征，转为现实支持"
+      ],
+      "source_kind": "original_interpretation",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_08.03",
+      "card_refs": [
+        "major_08"
+      ],
+      "text": {
+        "zh": "头顶的无限符号：温柔的力量不只是一时，也可以是长久的耐力。",
+        "en": "The infinity sign overhead: gentle strength is not only a moment; it can be lasting endurance."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "infinity_sign"
+      ],
+      "applicable_conditions": [
+        "长期的照顾、恢复或坚持"
+      ],
+      "counterexamples": [
+        "不用『要有耐心』要求用户无限期忍受不公平或伤害",
+        "长期照护者已经透支时，不美化『一直撑下去』"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_09.01",
+      "card_refs": [
+        "major_09"
+      ],
+      "text": {
+        "zh": "暂时离开人群、向内寻找，独处可以带来清明。",
+        "en": "Stepping away from the crowd for a while and searching inward, solitude can bring clarity."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "star_lantern",
+        "snowy_peak"
+      ],
+      "applicable_conditions": [
+        "需要想清楚一件事",
+        "用户自述想一个人待一会儿"
+      ],
+      "counterexamples": [
+        "用户感到被孤立、被排挤或很孤单时，不把独处美化成『修行』",
+        "用户流露轻生、自伤念头或处于危机时，不鼓励其独处、远离他人，转为现实支持"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_09.02",
+      "card_refs": [
+        "major_09"
+      ],
+      "text": {
+        "zh": "隐者的灯也可以为后来的人照路：走过的路，可能成为别人的一点光。",
+        "en": "The Hermit's lamp can also light the way for those who follow: a road walked may become a little light for others."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "star_lantern"
+      ],
+      "applicable_conditions": [
+        "有经验可以分享；带人、教人、做前辈"
+      ],
+      "counterexamples": [
+        "不要求用户在自己还很吃力时去照顾别人",
+        "不把用户的经历（尤其是痛苦的经历）说成一定要变成对别人的意义"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_09.03",
+      "card_refs": [
+        "major_09"
+      ],
+      "text": {
+        "zh": "独处可以是选的，孤单常常不是；两者看起来相似，感受却不同。",
+        "en": "Solitude can be chosen; loneliness often isn't. They look alike but feel different."
+      },
+      "framework": "existential_extension",
+      "symbol_refs": [
+        "snowy_peak",
+        "staff"
+      ],
+      "applicable_conditions": [
+        "用户谈到自己一个人的状态"
+      ],
+      "counterexamples": [
+        "不推断用户『其实很孤单』或『其实喜欢独处』",
+        "不把用户的孤单说成『是你自己选的』",
+        "用户长期孤立、缺少支持时，提到现实中的联系与帮助，而不只做哲理讨论",
+        "用户流露轻生、自伤念头或处于危机时，不停留在独处与孤单的讨论，转为现实支持"
+      ],
+      "source_kind": "original_interpretation",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_10.01",
+      "card_refs": [
+        "major_10"
+      ],
+      "text": {
+        "zh": "事情处在循环与变化之中：起落都是轮子转动的一部分。",
+        "en": "Things move in cycles and change: rising and falling are both part of the wheel's turning."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "golden_wheel",
+        "serpent",
+        "anubis"
+      ],
+      "applicable_conditions": [
+        "处在转折点",
+        "起伏较大的时期"
+      ],
+      "counterexamples": [
+        "不预测『好运就要来了』或『低谷马上结束』，也不说变化会朝哪个方向走",
+        "用户正处在失去或重大打击中时，不用『都会过去』淡化其痛苦"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_10.02",
+      "card_refs": [
+        "major_10"
+      ],
+      "text": {
+        "zh": "轮顶的狮身兽象征转动之中的平衡：外面在变，看事情的眼睛可以保持稳定。",
+        "en": "The sphinx atop the wheel stands for balance within the turning: things outside change, and the eye that watches can stay steady."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "sphinx",
+        "golden_wheel"
+      ],
+      "applicable_conditions": [
+        "局面变化快、感到被推着走"
+      ],
+      "counterexamples": [
+        "不要求用户在剧变中『保持平静』，也不评判其难过",
+        "不把用户的焦虑或慌乱说成『不够稳』"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_10.03",
+      "card_refs": [
+        "major_10"
+      ],
+      "text": {
+        "zh": "奶蛙站在轮下的石台上：轮子怎么转不由它，脚下这一小块地方是它能照看的。",
+        "en": "Naiwa stands on the stone platform beneath the wheel: how it turns is not up to Naiwa, but this small patch underfoot is something it can tend."
+      },
+      "framework": "stoic_extension",
+      "symbol_refs": [
+        "naiwa_on_platform",
+        "golden_wheel"
+      ],
+      "applicable_conditions": [
+        "用户为无法控制的事焦虑"
+      ],
+      "counterexamples": [
+        "不用『这不由你』否认用户可以争取的权益",
+        "不把结构性的不公（如歧视、被裁员）说成只是命运起伏，也不归咎用户『没管好自己那一份』"
+      ],
+      "source_kind": "original_interpretation",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_11.01",
+      "card_refs": [
+        "major_11"
+      ],
+      "text": {
+        "zh": "看清事实、权衡两边，做出公正的决定。",
+        "en": "See the facts clearly, weigh both sides, and decide fairly."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "scales",
+        "upright_sword"
+      ],
+      "applicable_conditions": [
+        "需要做决定或评估",
+        "合同、纠纷、考核等事情"
+      ],
+      "counterexamples": [
+        "不预测官司、仲裁、考核或任何纠纷的结果",
+        "涉及法律纠纷时，建议寻求专业的法律意见，不以牌义代替"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_11.02",
+      "card_refs": [
+        "major_11"
+      ],
+      "text": {
+        "zh": "行动与后果相连：诚实面对属于自己的那一份责任。",
+        "en": "Actions are tied to consequences: honestly facing the share of responsibility that is one's own."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "scales"
+      ],
+      "applicable_conditions": [
+        "用户自己提出想弄清自己在一件事里的责任"
+      ],
+      "counterexamples": [
+        "不把用户遭遇的不幸、疾病、意外、伤害或被欺负说成『因果报应』或『是你应得的』",
+        "用户是受伤害的一方时，不引导其反思『自己的那一份』"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_11.03",
+      "card_refs": [
+        "major_11"
+      ],
+      "text": {
+        "zh": "剑有两面刃：分辨可以切开混乱，下得太重也可能伤到人。",
+        "en": "The sword has two edges: discernment can cut through confusion, and pressed too hard it may also wound."
+      },
+      "framework": "dialectical_extension",
+      "symbol_refs": [
+        "upright_sword"
+      ],
+      "applicable_conditions": [
+        "用户在评判自己或他人，或想做出切割"
+      ],
+      "counterexamples": [
+        "不用来劝用户对伤害过自己的人『手下留情』或原谅对方",
+        "不评判用户对他人的判断是否太严",
+        "用户流露自伤念头或处于危机时，不使用剑、刀刃、切开、伤到这类意象，转为现实支持"
+      ],
+      "source_kind": "original_interpretation",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
       "proposition_id": "prop.major_12.01",
       "card_refs": [
         "major_12"
@@ -231,6 +1038,171 @@
       ],
       "counterexamples": [
         "需要争取权益时，『不强求』可能变成放弃"
+      ],
+      "source_kind": "original_interpretation",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_13.01",
+      "card_refs": [
+        "major_13"
+      ],
+      "text": {
+        "zh": "一个阶段走到尽头，为下一个阶段腾出位置；这张牌讲的是转变，不是真实的死亡。",
+        "en": "One phase comes to its end and makes room for the next; this card is about transformation, not literal death."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "white_rose_banner",
+        "sun_between_towers"
+      ],
+      "applicable_conditions": [
+        "工作、关系、习惯或生活方式正在转换",
+        "用户自述某件事已经走到尾声"
+      ],
+      "counterexamples": [
+        "用户流露轻生、自伤念头或处于危机时不使用这类说法，转为现实支持",
+        "用户正在面对亲友离世、重病或自身的健康问题时，不用这张牌谈论任何人的生死，也不把真实的失去说成「转变」「新生」",
+        "不能据此预言任何人的死亡、疾病或意外",
+        "不能据此断言某段关系、某份工作「必须结束」或「已经结束」"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_13.02",
+      "card_refs": [
+        "major_13"
+      ],
+      "text": {
+        "zh": "变化不看身份：倒在地上的王冠是说，再稳固的位置也可能走到尽头。",
+        "en": "Change does not check rank: the crown on the ground says that even the most secure position may come to an end."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "fallen_crown"
+      ],
+      "applicable_conditions": [
+        "地位、角色或身份正在发生变化",
+        "原本以为不会变的事出现松动"
+      ],
+      "counterexamples": [
+        "用户流露轻生、自伤念头或处于危机时不使用这类说法，转为现实支持",
+        "用户正在面对亲友离世、重病或自身的健康问题时，不用这张牌谈论任何人的生死，也不把真实的失去说成「转变」「新生」",
+        "用户刚失去工作、地位或关系时，不用它暗示「本来就保不住」，也不归咎于用户的选择"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_13.03",
+      "card_refs": [
+        "major_13"
+      ],
+      "text": {
+        "zh": "结束有自己的节奏；不舍和告别都需要时间。",
+        "en": "Endings keep their own pace; both reluctance and farewell take time."
+      },
+      "framework": "existential_extension",
+      "symbol_refs": [
+        "white_horse"
+      ],
+      "applicable_conditions": [
+        "用户自述放不下、反复回头",
+        "一段告别拖了很久"
+      ],
+      "counterexamples": [
+        "用户流露轻生、自伤念头或处于危机时不使用这类说法，转为现实支持",
+        "不把用户的不舍、难过说成「抗拒」或「困在过去」",
+        "用户处在被控制、被胁迫或不安全的关系里、需要尽快离开时，不用「慢慢来」劝其拖延",
+        "用户正在面对亲友离世、重病或自身的健康问题时，不用这张牌谈论任何人的生死，也不把真实的失去说成「转变」「新生」"
+      ],
+      "source_kind": "original_interpretation",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_14.01",
+      "card_refs": [
+        "major_14"
+      ],
+      "text": {
+        "zh": "在两端之间慢慢调和，往往比一次走到底更接近平衡。",
+        "en": "Blending slowly between two ends often comes closer to balance than going all the way at once."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "pouring_cups",
+        "one_foot_in_water"
+      ],
+      "applicable_conditions": [
+        "两种需要、两种节奏之间的取舍",
+        "关系或工作里的磨合"
+      ],
+      "counterexamples": [
+        "面对不公正、暴力或胁迫时，「折中」「各退一步」不是美德，不用来劝用户妥协",
+        "用户明确想结束一段关系时，不用「调和」来劝和"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_14.02",
+      "card_refs": [
+        "major_14"
+      ],
+      "text": {
+        "zh": "节制常与耐心和修复相连：在适度里慢慢找回平衡，不求一步到位。",
+        "en": "Temperance is often tied to patience and mending: finding balance again, slowly, within measure, rather than all at once."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "pouring_cups",
+        "winding_road_sun"
+      ],
+      "applicable_conditions": [
+        "经历变动之后的恢复期",
+        "急于求成、过度用力"
+      ],
+      "counterexamples": [
+        "不承诺「事情会慢慢变好」，也不预测恢复要多久",
+        "涉及饮食、药物、酒精等具体的量时，不用「适度」给建议，交给专业意见",
+        "不能因为抽到节制，就推断用户有酗酒、暴食、成瘾等「过度」问题",
+        "用户面临需要马上处理的安全、健康或期限问题时，不用「慢慢来」劝其等待"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_14.03",
+      "card_refs": [
+        "major_14"
+      ],
+      "text": {
+        "zh": "一只脚在水里、一只脚在岸上：同时站在两种状态里，不一定是犹豫，也可以是连接。",
+        "en": "One foot in the water, one on the bank: standing in two states at once need not be indecision; it can also be a link."
+      },
+      "framework": "dialectical_extension",
+      "symbol_refs": [
+        "one_foot_in_water"
+      ],
+      "applicable_conditions": [
+        "用户自述夹在两种身份、两个环境或两种选择之间"
+      ],
+      "counterexamples": [
+        "用户需要尽快做出与安全相关的选择时，不用这句美化拖延",
+        "不要求用户在照顾他人与照顾自己之间做到完美平衡，也不把两难说成「你本该两边兼顾」"
       ],
       "source_kind": "original_interpretation",
       "source_refs": [],
@@ -537,6 +1509,250 @@
         "用户没有表达内在冲突时，不强行制造矛盾"
       ],
       "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_19.01",
+      "card_refs": [
+        "major_19"
+      ],
+      "text": {
+        "zh": "太阳代表清晰、活力与单纯的快乐：事情被照亮，可以看得更清楚。",
+        "en": "The Sun stands for clarity, vitality and simple joy: things are lit up and can be seen more clearly."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "sun_face",
+        "sunflowers"
+      ],
+      "applicable_conditions": [
+        "事情有了进展或头绪",
+        "用户自述最近有开心、轻松的时刻"
+      ],
+      "counterexamples": [
+        "用户正处在低落、哀伤或困境中时，不用「一切都会好起来」「开心点」来回应，也不要求用户感到快乐",
+        "不能据此预测考试、求职、关系等具体结果一定顺利"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_19.02",
+      "card_refs": [
+        "major_19"
+      ],
+      "text": {
+        "zh": "白马与高举的红旗常被看作活力与喜悦：快乐可以大大方方地举起来。",
+        "en": "The white horse and the raised red banner are often read as vitality and joy: gladness can be held up in plain view."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "white_pony",
+        "red_banner"
+      ],
+      "applicable_conditions": [
+        "想要表达、展示成果或公开某件事"
+      ],
+      "counterexamples": [
+        "公开会给用户带来风险时（如被骚扰、被跟踪、身份公开可能受到伤害），不鼓励「公开」「展示自己」",
+        "不把用户的内向、不想被关注说成需要改正的问题"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_19.03",
+      "card_refs": [
+        "major_19"
+      ],
+      "text": {
+        "zh": "披着斗篷也晒得到太阳：不必完全敞开，也可以感到温暖。",
+        "en": "Even in a cape, the sun still reaches you: you need not be fully open to feel warmth."
+      },
+      "framework": "naiwa_original",
+      "symbol_refs": [
+        "red_cape",
+        "sun_face"
+      ],
+      "applicable_conditions": [
+        "用户自述想要快乐，但还不想把一切都说出来"
+      ],
+      "counterexamples": [
+        "不用来劝用户隐藏真实的自己或身份认同",
+        "用户想要坦白、公开时，不用这句劝阻"
+      ],
+      "source_kind": "original_interpretation",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_20.01",
+      "card_refs": [
+        "major_20"
+      ],
+      "text": {
+        "zh": "号角响起，代表觉醒与回顾：听见某种召唤，重新看待过去，再决定往哪里走。",
+        "en": "The trumpet sounds for awakening and review: hearing some kind of call, looking at the past anew, then deciding where to go."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "golden_trumpet",
+        "red_cross_banner"
+      ],
+      "applicable_conditions": [
+        "转折点、复盘、重新评估方向",
+        "用户自述一直有件事想做却没去做"
+      ],
+      "counterexamples": [
+        "不把「召唤」说成必须立刻做出重大决定（辞职、分手、搬家）",
+        "用户流露轻生、自伤念头或处于危机时不使用这类说法，转为现实支持",
+        "用户说觉得有声音在命令自己做某事，尤其是伤害自己或他人时，不用「召唤」接话，转为现实支持",
+        "用户在哀悼亲友时，不把「召唤」说成来自逝者或另一个世界"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_20.02",
+      "card_refs": [
+        "major_20"
+      ],
+      "text": {
+        "zh": "从石匣中升起，象征从旧的状态里醒来、重新开始；这里讲的是心境与生活的更新，不是真实的生死。",
+        "en": "Rising from the stone chests stands for waking from an old state and starting again; it is about renewal of mind and life, not literal life and death."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "open_coffins",
+        "rising_spirits"
+      ],
+      "applicable_conditions": [
+        "长期停滞之后重新振作",
+        "用户自述想重新开始某件事"
+      ],
+      "counterexamples": [
+        "用户流露轻生、自伤念头或处于危机时不使用这类说法，转为现实支持",
+        "用户在哀悼亲友时，不用「复活」「重逢」「他们会醒来」之类的说法安慰，也不谈论亡者的去向",
+        "不承诺重新开始一定成功"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_20.03",
+      "card_refs": [
+        "major_20"
+      ],
+      "text": {
+        "zh": "审判不是给自己定罪：回头看，是为了理解，不是为了惩罚。",
+        "en": "Judgement is not a verdict on yourself: looking back is for understanding, not for punishment."
+      },
+      "framework": "existential_extension",
+      "symbol_refs": [
+        "golden_trumpet"
+      ],
+      "applicable_conditions": [
+        "用户自述反复自责、对过去的自己很苛刻"
+      ],
+      "counterexamples": [
+        "用户确实伤害过他人、需要承担责任时，不用这句免除责任",
+        "不据此推断用户有抑郁等心理问题，也不评判用户「太苛刻」",
+        "不把「放下审判」延伸成要求用户原谅伤害过自己的人",
+        "用户流露轻生、自伤念头，或说觉得自己该受惩罚时，不用这句开解，转为现实支持"
+      ],
+      "source_kind": "original_interpretation",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_21.01",
+      "card_refs": [
+        "major_21"
+      ],
+      "text": {
+        "zh": "一个循环走到完整：完成、整合，也是下一段的起点。",
+        "en": "A cycle comes round to wholeness: completion and integration, and also the start of the next stretch."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "oval_wreath",
+        "floating_naiwa"
+      ],
+      "applicable_conditions": [
+        "项目、学业或人生阶段告一段落",
+        "目标达成之后"
+      ],
+      "counterexamples": [
+        "不能据此预测某件事「一定圆满收场」",
+        "用户正在经历未完成的失去（分手、离职、亲友离世）时，不要求其「圆满」「画上句号」",
+        "用户流露轻生、自伤念头或处于危机时不使用这类说法，转为现实支持"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_21.02",
+      "card_refs": [
+        "major_21"
+      ],
+      "text": {
+        "zh": "四角的天使、鹰、狮、牛象征各方面齐全：完整意味着每个部分都有自己的位置。",
+        "en": "The angel, eagle, lion and bull in the corners stand for every side being present: wholeness means each part has its place."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "four_living_creatures"
+      ],
+      "applicable_conditions": [
+        "想把生活的不同部分整合起来"
+      ],
+      "counterexamples": [
+        "不要求用户样样兼顾才算完整",
+        "用户在疾病、残障或失去之后，不用「完整」暗示其现在是「不完整」的"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "reviewed",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_21.03",
+      "card_refs": [
+        "major_21"
+      ],
+      "text": {
+        "zh": "悬在花环中间，脚下什么也不踩：完成之后，可以先不急着抓住下一件事。",
+        "en": "Floating in the wreath with nothing underfoot: after finishing, there is no need to rush to grab the next thing."
+      },
+      "framework": "daoist_extension",
+      "symbol_refs": [
+        "floating_naiwa",
+        "oval_wreath"
+      ],
+      "applicable_conditions": [
+        "刚完成一件事，觉得空落或不知道接下来做什么"
+      ],
+      "counterexamples": [
+        "不把用户完成之后的空落、不安说成不对或需要纠正",
+        "有经济压力、必须马上找下一份工作的人，「不急」可能不现实",
+        "用户流露轻生、自伤念头或处于危机时不使用这类说法（悬着、脚下什么也不踩、不用抓），转为现实支持",
+        "用户自述失去依靠、无所依时，不用「不急着抓」回应，先倾听"
+      ],
+      "source_kind": "original_interpretation",
       "source_refs": [],
       "review_status": "reviewed",
       "version": 1

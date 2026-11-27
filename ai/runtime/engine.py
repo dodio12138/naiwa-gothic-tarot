@@ -9,7 +9,7 @@ import time
 import urllib.request
 
 from knowledge import Knowledge
-from policy import decide, violations
+from policy import about_other, decide, violations
 
 OLLAMA = 'http://localhost:11434/api/chat'
 
@@ -35,6 +35,11 @@ ACTION_GUIDE = {
 }
 
 EXIT_TEXT = {'zh': '不想多说也没关系，可以不说，也可以随时停下。', 'en': "You don't have to say more. You can stop whenever you like."}
+GRIEF_TEXT = {
+    'zh': '听到这个消息，很难过。这个时候，牌可以先放一放，它说不了关于离开的人的任何事。想说说那个人，或者只是安静待一会儿，都可以。',
+    'en': "I'm so sorry. Let's set the cards aside for now — they can't say anything about the one you lost. You can tell me about them, or just sit quietly for a while.",
+}
+OTHER_TEXT = {'zh': '（牌读不出对方心里怎么想；它能照见的，是你自己在意什么。）', 'en': "(The cards can't read the other person's mind; what they can show is what matters to you.)"}
 CLOSE_TEXT = {'zh': '好。这张牌就留在这里。', 'en': 'All right. This card can stay here.'}
 SAFETY_TEXT = {
     'zh': '听起来你现在挺难受的。牌先放一放。如果你有伤害自己的念头，或正身处危险，请马上联系身边信任的人、当地的心理援助热线或急救电话。愿意的话，也可以说说发生了什么。',
@@ -76,6 +81,8 @@ def _prompt(state, action):
     lines.append(f"用户的问题：{state['question'] or '（没有提问，做纯符号解读，不要追问私事）'}")
     if state['spread']['note']:
         lines.append(f"这个牌阵的边界（必须遵守）：{state['spread']['note']} 解读时用「在你眼中」来说对方，不替对方下结论。")
+    if about_other(state['question']):
+        lines.append("这个问题关于另一个人：不要猜对方会怎样、心里怎么想；把解读放回用户自己身上（用「在你眼中」「你在意的是」这样的说法）。")
     for f in state['known_facts'][1 if state['question'] else 0:]:
         lines.append(f"用户刚才说：{f['text']}")
     for c in state['active_cards']:
@@ -153,6 +160,8 @@ def run(inp, model='qwen3:1.7b', lang='zh'):
     trace = {'input': inp, 'model': model, 'action': action, 'action_reason': why, 'state': state}
     if action == 'SAFETY_REDIRECT':
         trace.update(output=SAFETY_TEXT[lang], generated=False)
+    elif action == 'REFLECT' and why.startswith('哀悼'):   # 哀悼不交给模型：小模型会把真实的死亡解读成「转变」
+        trace.update(output=GRIEF_TEXT[lang] + '\n\n' + EXIT_TEXT[lang], generated=False)
     elif action == 'CLOSE':
         trace.update(output=CLOSE_TEXT[lang], generated=False)
     else:
@@ -175,6 +184,8 @@ def run(inp, model='qwen3:1.7b', lang='zh'):
         if action == 'REFLECT':   # 个人联想之后：去掉追问，由程序补上「可以不说、可以停」的出口，不依赖模型记得
             text = _strip_questions(text) or ('嗯，你想起了那个时候。' if lang == 'zh' else 'I hear what came to mind.')
             text = text.rstrip() + '\n\n' + EXIT_TEXT[lang]
+        if about_other(inp.get('question', '')) and not any(w in text for w in ['你眼中', '你在意', '你自己']) and lang == 'zh':
+            text = text.rstrip() + '\n\n' + OTHER_TEXT[lang]
         trace.update(prompt=prompt, output=text, generated=True, stats=stats, retried=retried, violations=bad)
     trace['latency_s'] = round(time.time() - t0, 1)
     return trace
