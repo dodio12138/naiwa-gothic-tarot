@@ -87,3 +87,5 @@ B 站版（`src/bili.js`，只在 `--mode bili` 时启用）额外接入了 Toy 
 推送到 `main` 分支后，GitHub Actions（`.github/workflows/deploy.yml`）会自动构建并发布到 GitHub Pages。
 
 `assets-src/` 保存全部制作素材：设计文档、提示词、导入脚本，以及 ChatGPT 生成的原图（`chatgpt_art/`）、无字插画 JPG（`illustrations_jpg/`）、边框 / 牌背 / UI 素材原图。网站构建只用 `public/` 里压缩后的版本。
+
+> **出图规则**：要改某张牌面时，从头重新生成（只上传角色身份参考图，必要时加一张风格参考牌），不要把已生成的牌面图上传给 ChatGPT 做二次修改——整张会被重绘，画面发油、涂抹感重。
