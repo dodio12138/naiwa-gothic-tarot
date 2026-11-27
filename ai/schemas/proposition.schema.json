@@ -18,7 +18,7 @@
   "properties": {
     "proposition_id": {
       "type": "string",
-      "pattern": "^prop\\.major_\\d{2}\\.\\d{2}$"
+      "pattern": "^prop\\.(major_\\d{2}|(wands|cups|swords|pentacles)_\\d{2})\\.\\d{2}$"
     },
     "card_refs": {
       "type": "array",

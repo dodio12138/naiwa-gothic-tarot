@@ -14,7 +14,7 @@
   "properties": {
     "tree_id": {
       "type": "string",
-      "pattern": "^inq\\.major_\\d{2}$"
+      "pattern": "^inq\\.(major_\\d{2}|(wands|cups|swords|pentacles)_\\d{2})$"
     },
     "card_refs": {
       "type": "array",

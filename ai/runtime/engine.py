@@ -118,27 +118,35 @@ def _chat(model, system, user, num_predict=420):
                   'prompt_tokens': d.get('prompt_eval_count'), 'total_ms': (d.get('total_duration') or 0) / 1e6}
 
 
+def card_prompt(state, c):
+    """分步生成时单张牌的提示词（训练语料复用同一个函数）"""
+    o = '逆位' if c['orientation'] == 'reversed' else '正位'
+    vis = '；'.join((c.get('visible_traditional') or [])[:4])
+    return (f"位置：{c['position']['name']}（{c['position']['meaning']}）\n牌：{c['name']} · {o}\n关键词：{'、'.join(c['keywords'])}\n牌义：{c['meaning']}"
+            + (f"\n画面里看得见的传统意象：{vis}" if vis else '')
+            + (f"\n牌阵边界：{state['spread']['note']}" if state['spread']['note'] else '')
+            + f"\n\n用一两句话解读这张牌在这个位置上的意思，以「{c['position']['name']}·{c['name']}：」开头，不提问，不用列表，40～70 字。")
+
+
+def summary_prompt(state, lines):
+    """分步生成最后一句整体的提示词"""
+    q = state['question'] or '（没有提问）'
+    return ("用户的问题：" + q + "\n各位置的解读：\n" + '\n'.join(lines)
+            + (f"\n牌阵边界：{state['spread']['note']}" if state['spread']['note'] else '')
+            + "\n\n用一句话说整体（不预测结果，不替任何人下结论" + ("，用「在你眼中」来说对方" if state['spread']['note'] else '') + "），30～60 字。")
+
+
 def _card_lines(state, model, lang):
     """张数多（≥4）时分步生成：每张牌单独一两句，再单独写一句整体；小模型一次写不全 6～10 张"""
     lines, stats_all = [], []
     for c in state['active_cards']:
-        o = '逆位' if c['orientation'] == 'reversed' else '正位'
-        vis = '；'.join((c.get('visible_traditional') or [])[:4])
-        p = (f"位置：{c['position']['name']}（{c['position']['meaning']}）\n牌：{c['name']} · {o}\n关键词：{'、'.join(c['keywords'])}\n牌义：{c['meaning']}"
-             + (f"\n画面里看得见的传统意象：{vis}" if vis else '')
-             + (f"\n牌阵边界：{state['spread']['note']}" if state['spread']['note'] else '')
-             + f"\n\n用一两句话解读这张牌在这个位置上的意思，以「{c['position']['name']}·{c['name']}：」开头，不提问，不用列表，40～70 字。")
-        t, st = _chat(model, SYSTEM, p, num_predict=160)
+        t, st = _chat(model, SYSTEM, card_prompt(state, c), num_predict=160)
         head = f"{c['position']['name']}·{c['name']}"
         if not t.startswith(head):
             t = f"{head}：{t.split('：', 1)[-1] if '：' in t[:20] else t}"
         lines.append(t.strip())
         stats_all.append(st)
-    q = state['question'] or '（没有提问）'
-    p = ("用户的问题：" + q + "\n各位置的解读：\n" + '\n'.join(lines)
-         + (f"\n牌阵边界：{state['spread']['note']}" if state['spread']['note'] else '')
-         + "\n\n用一句话说整体（不预测结果，不替任何人下结论" + ("，用「在你眼中」来说对方" if state['spread']['note'] else '') + "），30～60 字。")
-    t, st = _chat(model, SYSTEM, p, num_predict=120)
+    t, st = _chat(model, SYSTEM, summary_prompt(state, lines), num_predict=120)
     stats_all.append(st)
     agg = {'eval_count': sum(x['eval_count'] or 0 for x in stats_all), 'eval_ms': sum(x['eval_ms'] for x in stats_all),
            'prompt_tokens': sum(x['prompt_tokens'] or 0 for x in stats_all), 'total_ms': sum(x['total_ms'] for x in stats_all), 'calls': len(stats_all)}

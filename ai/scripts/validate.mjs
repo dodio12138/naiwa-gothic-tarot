@@ -14,7 +14,7 @@ const nonEmpty = (a, w) => { if (!Array.isArray(a) || !a.length) err(`${w}：不
 const REVIEW = ['draft', 'reviewed', 'quarantined'];
 const FRAMEWORKS = ['traditional_rws', 'hermetic', 'jungian_extension', 'existential_extension', 'dialectical_extension', 'daoist_extension', 'stoic_extension', 'naiwa_original'];
 
-const kb = read('ai/knowledge_base/cards_pilot.json').cards;
+const kb = [...read('ai/knowledge_base/cards_pilot.json').cards, ...(exists('ai/knowledge_base/cards_minor.json') ? read('ai/knowledge_base/cards_minor.json').cards.filter((c) => c.visual_symbol_refs) : [])];
 const cardIds = new Set(kb.map((c) => c.card_id));
 const symbolsOf = Object.fromEntries(kb.map((c) => [c.card_id, new Set([...c.visual_symbol_refs, ...(c.naiwa_symbol_refs || [])])]));
 const extraOf = Object.fromEntries(kb.map((c) => [c.card_id, new Set(c.naiwa_symbol_refs || [])]));
@@ -54,7 +54,7 @@ const props = exists('ai/semantic_framework/propositions_pilot.json') ? read('ai
 const propIds = uniq(props, 'proposition_id', '命题');
 for (const p of props) {
   const w = p.proposition_id;
-  if (!/^prop\.major_\d{2}\.\d{2}$/.test(w)) err(`${w}：ID 格式应为 prop.major_15.01`);
+  if (!/^prop\.(major_\d{2}|(wands|cups|swords|pentacles)_\d{2})\.\d{2}$/.test(w)) err(`${w}：ID 格式应为 prop.major_15.01 或 prop.wands_02.01`);
   cardRefs(p.card_refs, w); zhen(p.text, `${w}.text`);
   if (!FRAMEWORKS.includes(p.framework)) err(`${w}：framework 不在允许列表`);
   symRefs(p.symbol_refs, p.card_refs, w);
