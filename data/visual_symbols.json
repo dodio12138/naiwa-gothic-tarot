@@ -25,7 +25,7 @@
       "rws_absent": ["sun", "white_rose", "snowy_mountains", "feather_cap"],
       "naiwa_specific": ["黑玫瑰", "哥特城堡", "满月", "瀑布"],
       "lighting": { "zh": "月夜冷光，云层发亮，局部金色高光", "en": "cold moonlight with glowing clouds and gold highlights" },
-      "notes": "scene 写「黑狗凑到脚边」，实际狗为深灰褐色，站在崖边离奶蛙有一段距离、仰头看它；scene 写「一朵黑玫瑰」，实际可见多朵；scene 写「废弃的城堡」，画面中城堡窗户亮灯，不太像废弃。（2026-11-27：cards.json 的 scene 已按画面修正）",
+      "notes": "scene 写「黑狗凑到脚边」，实际狗为深灰褐色，站在崖边离奶蛙有一段距离、仰头看它；scene 写「一朵黑玫瑰」，实际可见多朵；scene 写「废弃的城堡」，画面中城堡窗户亮灯，不太像废弃。",
       "review_status": "draft"
     },
     {
@@ -52,7 +52,7 @@
       "rws_absent": ["ouroboros_belt", "red_robe", "white_tunic", "headband"],
       "naiwa_specific": ["黑红玫瑰", "哥特礼拜堂", "红色玫瑰窗", "烛台", "窗外满月"],
       "lighting": { "zh": "烛光与红色彩窗的暖红光，权杖尖端发光", "en": "warm red light from candles and the stained-glass window, glowing wand tip" },
-      "notes": "scene 写「一手指地」，实际另一只手是张开手掌向外下方伸出，没有明确的手指指地动作；rws_ref 暂记 hand_pointing_down，需人工确认。玫瑰为黑红色，不是 RWS 的鲜红玫瑰。（2026-11-27：cards.json 的 scene 已按画面修正）",
+      "notes": "scene 写「一手指地」，实际另一只手是张开手掌向外下方伸出，没有明确的手指指地动作；rws_ref 暂记 hand_pointing_down，需人工确认。玫瑰为黑红色，不是 RWS 的鲜红玫瑰。",
       "review_status": "draft"
     },
     {
@@ -78,7 +78,7 @@
       "rws_absent": ["letters_b_j", "solar_cross", "tora_inscription", "blue_robe"],
       "naiwa_specific": ["紫黑玫瑰", "哥特尖窗与满月", "柱上的日月纹样", "睡莲水池"],
       "lighting": { "zh": "紫色调月光，冷而柔和", "en": "soft cool violet moonlight" },
-      "notes": "scene 写「低矮的石座」，实际是有扶手和高背的哥特石座；scene 未提新月头冠和水池。柱子上没有 B/J 字母；古卷上没有 TORA 字样，只是星盘与月相图。斗篷是紫色不是蓝色。（2026-11-27：cards.json 的 scene 已按画面修正）",
+      "notes": "scene 写「低矮的石座」，实际是有扶手和高背的哥特石座；scene 未提新月头冠和水池。柱子上没有 B/J 字母；古卷上没有 TORA 字样，只是星盘与月相图。斗篷是紫色不是蓝色。",
       "review_status": "draft"
     },
     {
@@ -105,7 +105,7 @@
       "rws_absent": ["waterfall", "cypress_trees", "pomegranate_robe"],
       "naiwa_specific": ["暗红玫瑰", "常春藤", "哥特拱廊废墟", "百合权杖"],
       "lighting": { "zh": "暖金色斜射阳光", "en": "warm golden slanting sunlight" },
-      "notes": "scene 写「十二星冠」，画面中星星大约 9～10 颗可辨，无法确认是 12 颗；scene 写「暖光刚好落在肚子上」，实际光束从右上照进画面，没有明确落在肚子上。scene 未提金星盾牌和百合权杖。（2026-11-27：cards.json 的 scene 已按画面修正）",
+      "notes": "scene 写「十二星冠」，画面中星星大约 9～10 颗可辨，无法确认是 12 颗；scene 写「暖光刚好落在肚子上」，实际光束从右上照进画面，没有明确落在肚子上。scene 未提金星盾牌和百合权杖。",
       "review_status": "draft"
     },
     {
@@ -158,7 +158,7 @@
       "rws_absent": ["rose_and_lily_robes"],
       "naiwa_specific": ["哥特大教堂彩窗", "香炉烟雾", "壁龛圣像", "红地毯"],
       "lighting": { "zh": "烛光暖金色，彩窗透出紫红光", "en": "warm gold candlelight with purple-red stained-glass glow" },
-      "notes": "scene 写「烛烟慢慢升起」，实际烟雾来自左侧的金色香炉，不是蜡烛；钥匙在座前台阶上而非地面。侍者袍上没有 RWS 的玫瑰/百合纹样，脸被兜帽遮住。（2026-11-27：cards.json 的 scene 已按画面修正）",
+      "notes": "scene 写「烛烟慢慢升起」，实际烟雾来自左侧的金色香炉，不是蜡烛；钥匙在座前台阶上而非地面。侍者袍上没有 RWS 的玫瑰/百合纹样，脸被兜帽遮住。",
       "review_status": "draft"
     },
     {
@@ -184,7 +184,7 @@
       "rws_absent": ["sun", "flame_tree", "nude_figures"],
       "naiwa_specific": ["两只相同的奶蛙", "暗红玫瑰树", "石榴树", "心形分岔小路", "哥特城堡"],
       "lighting": { "zh": "天使身后的暖金光晕，四周紫色暮色", "en": "warm golden glow behind the angel against violet dusk" },
-      "notes": "scene 写「轻轻碰着小手」，实际两只奶蛙是手牵手；scene 写「红果」，实际为石榴；scene 完全没提右边树上的蛇，这是画面中很显眼的元素。左树开的是暗红玫瑰而非 scene 说的「黑玫瑰」（颜色偏暗红）。（2026-11-27：cards.json 的 scene 已按画面修正）",
+      "notes": "scene 写「轻轻碰着小手」，实际两只奶蛙是手牵手；scene 写「红果」，实际为石榴；scene 完全没提右边树上的蛇，这是画面中很显眼的元素。左树开的是暗红玫瑰而非 scene 说的「黑玫瑰」（颜色偏暗红）。",
       "review_status": "draft"
     },
     {
@@ -210,7 +210,7 @@
       "rws_absent": ["chariot_wheels", "river", "crescent_moon_epaulettes", "lingam_shield", "breastplate_square"],
       "naiwa_specific": ["金链连接的狮身兽", "八芒星徽记", "星旗", "哥特城堡"],
       "lighting": { "zh": "风暴夜的冷蓝光，城堡灯火与金饰反光", "en": "cold blue storm light with castle lamps and gleaming gold" },
-      "notes": "画面中看不到车轮或车身，更像立在台阶上的华盖宝座；scene 写「站在小小的战车里，肚子顶着车沿」，实际奶蛙是坐着的，看不到车沿。scene 写「城门就在前方」，实际城堡在右后方背景。狮身兽被金链拴着，scene 未提。座前星徽对应 RWS 带翼圆盘的位置，但形态完全不同。（2026-11-27：cards.json 的 scene 已按画面修正）",
+      "notes": "画面中看不到车轮或车身，更像立在台阶上的华盖宝座；scene 写「站在小小的战车里，肚子顶着车沿」，实际奶蛙是坐着的，看不到车沿。scene 写「城门就在前方」，实际城堡在右后方背景。狮身兽被金链拴着，scene 未提。座前星徽对应 RWS 带翼圆盘的位置，但形态完全不同。",
       "review_status": "draft"
     },
     {
@@ -235,7 +235,7 @@
       "rws_absent": ["white_robe", "rose_garland_belt", "closing_lion_jaws", "mountain"],
       "naiwa_specific": ["黑狮", "狮子的宝石项圈", "满月", "哥特废墟"],
       "lighting": { "zh": "满月夜光加暖金色轮廓光", "en": "full-moon night light with warm gold rim light" },
-      "notes": "scene 写「用三根手指轻轻搭在它的鬃毛上」，实际是整只手掌按在狮子额头上，不是三根手指、也不在鬃毛上。狮子闭眼，不是在合拢下颌。（2026-11-27：cards.json 的 scene 已按画面修正）",
+      "notes": "scene 写「用三根手指轻轻搭在它的鬃毛上」，实际是整只手掌按在狮子额头上，不是三根手指、也不在鬃毛上。狮子闭眼，不是在合拢下颌。",
       "review_status": "draft"
     },
     {
@@ -285,7 +285,7 @@
       "rws_absent": ["taro_letters", "tetragrammaton", "books_for_all_four_creatures"],
       "naiwa_specific": ["齿轮轮盘", "旋涡星系", "古柱废墟", "沙漏符号"],
       "lighting": { "zh": "宇宙星云紫光，金色轮盘自身发光", "en": "violet nebula light with a self-luminous golden wheel" },
-      "notes": "scene 没提右侧的胡狼头人形（对应 RWS 的阿努比斯），也没提下方废墟；scene 写「奶蛙站在轮底仰望」，实际奶蛙正面朝向观者，并没有抬头。狮身兽带翅膀。四活物中只有天使拿着书。轮盘上看不到 TARO 字母或希伯来字母。（2026-11-27：cards.json 的 scene 已按画面修正）",
+      "notes": "scene 没提右侧的胡狼头人形（对应 RWS 的阿努比斯），也没提下方废墟；scene 写「奶蛙站在轮底仰望」，实际奶蛙正面朝向观者，并没有抬头。狮身兽带翅膀。四活物中只有天使拿着书。轮盘上看不到 TARO 字母或希伯来字母。",
       "review_status": "draft"
     },
     {
@@ -311,7 +311,7 @@
       "rws_absent": ["crown_with_square", "purple_veil", "white_shoe"],
       "naiwa_specific": ["蒙眼女神雕像", "金色光环", "满月", "八芒星徽"],
       "lighting": { "zh": "烛光与月光交织，深红暖调", "en": "candle and moonlight in warm crimson tones" },
-      "notes": "scene 未提光环、雕像和满月。雕像的眼部覆有布条，疑似蒙眼的正义女神造型（RWS 正义牌本身并不蒙眼），未写入 rws_ref。（2026-11-27：cards.json 的 scene 已按画面修正）",
+      "notes": "scene 未提光环、雕像和满月。雕像的眼部覆有布条，疑似蒙眼的正义女神造型（RWS 正义牌本身并不蒙眼），未写入 rws_ref。",
       "review_status": "draft"
     },
     {
@@ -364,7 +364,7 @@
       "rws_absent": ["skeleton_in_armor", "bishop", "child_and_maiden", "river_with_boat"],
       "naiwa_specific": ["黑色兜帽斗篷", "玫瑰废园", "满月与落日同框"],
       "lighting": { "zh": "月夜冷光与地平线橙色晨/暮光", "en": "cold moonlight with orange dawn or dusk on the horizon" },
-      "notes": "scene 写「王冠…散落一地」（复数），实际只看到一顶金冠；园中玫瑰多为鲜红色，另有白玫瑰。白马体型正常，不显得「小」。地平线的太阳无法判断是升起还是落下，scene 写「天正在亮」。（2026-11-27：cards.json 的 scene 已按画面修正）",
+      "notes": "scene 写「王冠…散落一地」（复数），实际只看到一顶金冠；园中玫瑰多为鲜红色，另有白玫瑰。白马体型正常，不显得「小」。地平线的太阳无法判断是升起还是落下，scene 写「天正在亮」。",
       "review_status": "draft"
     },
     {
@@ -390,7 +390,7 @@
       "rws_absent": ["triangle_in_square", "solar_disc_on_forehead", "crown_in_sun"],
       "naiwa_specific": ["满月", "白花藤蔓拱门废墟", "星纹圆扣"],
       "lighting": { "zh": "月夜冷光，远处太阳的暖光，倒出的水泛银光", "en": "cool moonlight, warm light from the distant sun, silvery glowing water" },
-      "notes": "scene 写「小小的灰白翅膀」，实际翅膀较大、为白色；两只杯子形制不同（一只铜杯、一只高脚杯）。前景是白百合，RWS 原版是鸢尾，rws_ref 记 irises 仅表示位置对应。远处太阳是升是落无法判断。（2026-11-27：cards.json 的 scene 已按画面修正）",
+      "notes": "scene 写「小小的灰白翅膀」，实际翅膀较大、为白色；两只杯子形制不同（一只铜杯、一只高脚杯）。前景是白百合，RWS 原版是鸢尾，rws_ref 记 irises 仅表示位置对应。远处太阳是升是落无法判断。",
       "review_status": "draft"
     },
     {
@@ -443,7 +443,7 @@
       "rws_absent": ["yod_drops", "human_figures_falling"],
       "naiwa_specific": ["红藤拱门", "幽灵光影", "古拱桥", "奶蛙作为旁观者"],
       "lighting": { "zh": "暴风雨夜，闪电与火光照亮", "en": "stormy night lit by lightning and fire" },
-      "notes": "scene 写「靛色的风暴」，实际云层是黑灰色带橙光；scene 写奶蛙「站在远处」，实际奶蛙在左前景、离观者很近；scene 没提两缕下坠的发光幽灵光影——它们对应 RWS 坠落的人，但并不是清晰的人形，rws_ref 暂记 falling_figures 待确认。空中只有火星碎屑，没有 RWS 的 Yod 火滴。（2026-11-27：cards.json 的 scene 已按画面修正）",
+      "notes": "scene 写「靛色的风暴」，实际云层是黑灰色带橙光；scene 写奶蛙「站在远处」，实际奶蛙在左前景、离观者很近；scene 没提两缕下坠的发光幽灵光影——它们对应 RWS 坠落的人，但并不是清晰的人形，rws_ref 暂记 falling_figures 待确认。空中只有火星碎屑，没有 RWS 的 Yod 火滴。",
       "review_status": "draft"
     },
     {
@@ -470,7 +470,7 @@
       "rws_absent": ["kneeling_figure", "foot_in_water", "nude_figure", "five_streams_on_land"],
       "naiwa_specific": ["黑玫瑰", "开白花的树", "哥特废墟", "瀑布", "银河"],
       "lighting": { "zh": "星光夜，银色星辉与紫色天幕", "en": "starlit night with silver glow and a violet sky" },
-      "notes": "scene 写「周围七颗小星」，画面中小星目测约 8 颗，难以确认为 7 颗，请人工数；奶蛙是站着的，双脚都在岸石上，没有 RWS 的跪姿和一脚踏水。树上的鸟是黑色鸦类，不是 RWS 的朱鹭，rws_ref 仅表示位置对应。（2026-11-27：cards.json 的 scene 已按画面修正）",
+      "notes": "scene 写「周围七颗小星」，画面中小星目测约 8 颗，难以确认为 7 颗，请人工数；奶蛙是站着的，双脚都在岸石上，没有 RWS 的跪姿和一脚踏水。树上的鸟是黑色鸦类，不是 RWS 的朱鹭，rws_ref 仅表示位置对应。",
       "review_status": "draft"
     },
     {
@@ -521,7 +521,7 @@
       "rws_absent": ["nude_child", "red_feather", "flower_wreath"],
       "naiwa_specific": ["红斗篷", "哥特尖塔", "白百合"],
       "lighting": { "zh": "满画面暖金色阳光", "en": "warm golden sunlight throughout" },
-      "notes": "scene 写「黑向日葵」，实际向日葵是金黄花瓣、深色花心，并不是黑色；scene 未提红旗上的太阳纹。（2026-11-27：cards.json 的 scene 已按画面修正）",
+      "notes": "scene 写「黑向日葵」，实际向日葵是金黄花瓣、深色花心，并不是黑色；scene 未提红旗上的太阳纹。",
       "review_status": "draft"
     },
     {
@@ -547,7 +547,7 @@
       "rws_absent": ["nude_family", "sea"],
       "naiwa_specific": ["黑白混色羽翼", "光灵", "哥特石棺", "白百合", "哥特废墟"],
       "lighting": { "zh": "云中逆光，金色圣光束向下照射", "en": "backlit clouds with golden beams shining down" },
-      "notes": "scene 写「一黑一白的羽翼」，实际两只翅膀都是白色与黑色羽毛混合（上白下黑），并非一边黑一边白。复活者是半透明光灵，不是 RWS 的一家三口；石棺在云雾地面上，不是漂在海上。（2026-11-27：cards.json 的 scene 已按画面修正）",
+      "notes": "scene 写「一黑一白的羽翼」，实际两只翅膀都是白色与黑色羽毛混合（上白下黑），并非一边黑一边白。复活者是半透明光灵，不是 RWS 的一家三口；石棺在云雾地面上，不是漂在海上。",
       "review_status": "draft"
     },
     {
