@@ -40,7 +40,7 @@ ai/
 - `waite_pkt_major.json`：A. E. Waite《The Pictorial Key to the Tarot》（1911，公有领域，取自 [Wikisource](https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot)）22 张大牌的英文原文：第二部分 §2 的象征解说、第三部分 §2 的占卜义。
 - 知识侧表的 `source_refs` 指向这里，`waite_1911` 是原文占卜义。
 - **注意**：韦特列出的大牌占卜义和今天的通行解读差别很大（例如愚者是 folly、mania；星星首先是 loss、theft，hope 只是「另一种读法」），他自己也说这些占卜义「人为而武断」。所以每条 `traditional_rws` 条目都要标 `tradition_basis`：`waite_divinatory`（韦特占卜义）/ `waite_symbolism`（韦特象征解说）/ `modern_convention`（今天 RWS 体系的通行解读），不把通行解读冒充成韦特原话。
-- 黄金黎明的占星对应目前只标到体系，原典（候选：Crowley《777》1909）待补。
+- 黄金黎明的占星 / 元素对应已对照 Crowley《777》（1909）Table I 逐张核实：`source_refs` 记到路径与栏目；因手头副本基于仍受版权保护的《777 Revised》，只记录书目、位置与对应事实，不收录原文。
 
 ## 数据原则（摘自 v0.6）
 - **知识库定义知识，语义框架定义思想**：牌义、画面符号、对应关系放在知识库；命题、矛盾、种子、追问树放在语义框架。
@@ -64,7 +64,7 @@ node ai/scripts/validate.mjs     # 校验
 ```
 
 ## 审核状态
-2026-11-27：先审 7 张试点（审稿人 A / B），再扩到 22 张——三个子代理分写其余 15 张，两个独立子代理（C / D）审查后修改。目前 22 张的命题 66、矛盾 44、种子 88、追问树 22、测试样例 16 均为 `reviewed`。原典已补：知识侧表的 `source_refs` 指向韦特 1911 原文，57 条传统条目都标了依据与原文证据；知识侧表本身仍为 `draft`（黄金黎明对应的原典待补）。修改记录见 `semantic_framework/changes_pilot.json`。
+2026-11-27：先审 7 张试点（审稿人 A / B），再扩到 22 张——三个子代理分写其余 15 张，两个独立子代理（C / D）审查后修改。目前 22 张的命题 66、矛盾 44、种子 88、追问树 22、测试样例 16 均为 `reviewed`。原典已补：知识侧表的 `source_refs` 指向韦特 1911 原文，57 条传统条目都标了依据与原文证据；知识侧表的对应关系已对照《777》核实。修改记录见 `semantic_framework/changes_pilot.json`。
 
 ## 本地闭环（`ai/runtime/`）
 只用 Python 标准库 + 本机 Ollama，模型未微调：
@@ -87,6 +87,6 @@ python3 ai/runtime/bench.py qwen3:1.7b      # 跑测试集，报告在 ai/runtim
 
 ## 下一步（未做）
 1. 在 Kaggle 上以 qwen3:1.7b 为基座做 LoRA：按第 7 章用本目录的种子、命题、追问树生成 SFT 语料（含上面列出的错误类型做对照），导出 GGUF 后放回本机 Ollama，用同一测试集对比微调前后。
-2. 补黄金黎明对应关系的公版原典（候选：Crowley《777》1909）。
+2. 小阿卡纳的原典与对应（韦特第三部分 §3～4、黄金黎明的旬星对应）。
 2. 用未微调的 Qwen3 + 检索 / 规则，在本地跑通「抽牌结果 → 结构化状态 → 回答」的最小闭环（v0.6 第 19.5 节第 3 步）。
 3. 闭环稳定后，再按第 7 章的流水线批量生产 SFT 语料，并在 Kaggle 上做 LoRA 训练与对照评估。

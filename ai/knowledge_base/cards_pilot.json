@@ -40,6 +40,7 @@
           "zh": "风元素（现代：天王星）",
           "en": "Air (modern: Uranus)"
         },
+        "correspondence_basis": "golden_dawn（《777》Table I 已核实）；括注的外行星为现代后加",
         "archetype": {
           "zh": "传统画面里，一个年轻人背着行囊、手拈白玫瑰走向悬崖，小白狗在脚边吠叫。编号 0 意味着他不在序列之内，又贯穿全部——整套大阿尔卡那常被读作「愚者之旅」，后面 21 张就是他一路遇见的风景。",
           "en": "In the classic image a young traveller with a bundle and a white rose strolls toward a cliff while a small dog yaps at his heels. Numbered 0, he stands outside the sequence yet runs through all of it — the Major Arcana is often read as \"the Fool's Journey\", and the other 21 cards are what he meets along the way."
@@ -124,7 +125,7 @@
       "source_refs": [
         "waite_pkt#part3_s2 · Part III § 2 · Zero. The Fool",
         "waite_pkt#part2_s2 · Part II § 2 · The Fool",
-        "golden_dawn_correspondences（对应关系，原典待补）"
+        "crowley_777#table1 · Path 11（Col. XIV 塔罗 · Col. VI/VII 天体）"
       ],
       "review_status": "draft"
     },
@@ -161,6 +162,7 @@
           "zh": "水星",
           "en": "Mercury"
         },
+        "correspondence_basis": "golden_dawn（《777》Table I 已核实）",
         "archetype": {
           "zh": "韦特牌中的魔术师一手举杖指天、一手指地，象征「如其在上，如其在下」；桌上的权杖、圣杯、宝剑、星币代表四元素，也就是小阿尔卡那的四个花色。他是愚者遇到的第一位老师：教会他把意念变成行动。",
           "en": "The Rider–Waite Magician points a wand to the sky and a hand to the earth — \"as above, so below\". On his table lie wand, cup, sword and pentacle: the four elements, and the four suits of the Minor Arcana. He is the Fool's first teacher, showing how will becomes action."
@@ -266,7 +268,7 @@
       "source_refs": [
         "waite_pkt#part3_s2 · Part III § 2 · 1. The Magician",
         "waite_pkt#part2_s2 · Part II § 2 · The Magician",
-        "golden_dawn_correspondences（对应关系，原典待补）"
+        "crowley_777#table1 · Path 12（Col. XIV 塔罗 · Col. VI/VII 天体）"
       ],
       "review_status": "draft"
     },
@@ -303,6 +305,7 @@
           "zh": "月亮",
           "en": "The Moon"
         },
+        "correspondence_basis": "golden_dawn（《777》Table I 已核实）",
         "archetype": {
           "zh": "女祭司坐在神殿的黑白双柱之间，柱上刻着 B 与 J，取自所罗门圣殿的两根柱子。她手持律法卷轴、脚踏新月，身后的石榴帷幕遮住了奥秘。她代表不言而喻的知识，是与魔术师相对的「静」。",
           "en": "The High Priestess sits between the black and white pillars of a temple, marked B and J after the pillars of Solomon's Temple. She holds a scroll of law with a crescent moon at her feet, and a pomegranate veil hides the mysteries. She is wordless knowing — the stillness that answers the Magician's action."
@@ -391,7 +394,7 @@
       "source_refs": [
         "waite_pkt#part3_s2 · Part III § 2 · 2. The High Priestess",
         "waite_pkt#part2_s2 · Part II § 2 · The High Priestess",
-        "golden_dawn_correspondences（对应关系，原典待补）"
+        "crowley_777#table1 · Path 13（Col. XIV 塔罗 · Col. VI/VII 天体）"
       ],
       "review_status": "draft"
     },
@@ -428,6 +431,7 @@
           "zh": "金星",
           "en": "Venus"
         },
+        "correspondence_basis": "golden_dawn（《777》Table I 已核实）",
         "archetype": {
           "zh": "传统的皇后是大地之母：坐在麦田与森林之间，头戴十二星冠，身旁心形盾牌上刻着金星符号。她象征自然、感官与孕育，是一切「生长」的原型。",
           "en": "The traditional Empress is the Earth Mother: seated among wheat and forest, crowned with twelve stars, beside a heart-shaped shield bearing the sign of Venus. She embodies nature, the senses and fertility — the archetype of all growing things."
@@ -527,7 +531,7 @@
       "source_refs": [
         "waite_pkt#part3_s2 · Part III § 2 · 3. The Empress",
         "waite_pkt#part2_s2 · Part II § 2 · The Empress",
-        "golden_dawn_correspondences（对应关系，原典待补）"
+        "crowley_777#table1 · Path 14（Col. XIV 塔罗 · Col. VI/VII 天体）"
       ],
       "review_status": "draft"
     },
@@ -564,6 +568,7 @@
           "zh": "白羊座",
           "en": "Aries"
         },
+        "correspondence_basis": "golden_dawn（《777》Table I 已核实）",
         "archetype": {
           "zh": "皇帝坐在刻有公羊头的石座上，公羊对应白羊座；他手握安卡十字权杖与宝球，背后是荒凉的山。与皇后的丰饶相对，他代表父性、法则与秩序——把世界整理成形的力量。",
           "en": "The Emperor sits on a stone throne carved with ram heads, the sign of Aries, holding an ankh scepter and an orb before barren mountains. Opposite the Empress's abundance, he is the father principle: law, order, the force that gives the world its shape."
@@ -669,7 +674,7 @@
       "source_refs": [
         "waite_pkt#part3_s2 · Part III § 2 · 4. The Emperor",
         "waite_pkt#part2_s2 · Part II § 2 · The Emperor",
-        "golden_dawn_correspondences（对应关系，原典待补）"
+        "crowley_777#table1 · Path 15（Col. XIV 塔罗 · Col. VI/VII 天体）"
       ],
       "review_status": "draft"
     },
@@ -706,6 +711,7 @@
           "zh": "金牛座",
           "en": "Taurus"
         },
+        "correspondence_basis": "golden_dawn（《777》Table I 已核实）",
         "archetype": {
           "zh": "教皇（又称祭司长）头戴三重冠，举手赐福，脚下两把交叉的钥匙象征通往天上与人间的门，两位侍从跪在座前。他代表制度化的信仰、传承与教育——知识从老师传到学生的那条链。",
           "en": "The Hierophant wears a triple crown and raises a hand in blessing; two crossed keys at his feet open heaven and earth, and two acolytes kneel before him. He stands for institutional faith, tradition and teaching — the chain by which knowledge passes from master to student."
@@ -796,7 +802,7 @@
       "source_refs": [
         "waite_pkt#part3_s2 · Part III § 2 · 5. The Hierophant",
         "waite_pkt#part2_s2 · Part II § 2 · The Hierophant",
-        "golden_dawn_correspondences（对应关系，原典待补）"
+        "crowley_777#table1 · Path 16（Col. XIV 塔罗 · Col. VI/VII 天体）"
       ],
       "review_status": "draft"
     },
@@ -833,6 +839,7 @@
           "zh": "双子座",
           "en": "Gemini"
         },
+        "correspondence_basis": "golden_dawn（《777》Table I 已核实）",
         "archetype": {
           "zh": "韦特版的恋人画着伊甸园中的一男一女，天使拉斐尔在上方祝福，女子身后是缠着蛇的知识之树。更古老的马赛版画的是一个人站在两位女子之间——所以这张牌既讲爱，也讲选择。",
           "en": "The Rider–Waite Lovers shows a man and a woman in Eden, blessed by the angel Raphael, with the serpent's Tree of Knowledge behind her. The older Marseille card shows a man between two women — so this card speaks of love and of choice alike."
@@ -924,7 +931,7 @@
       "source_refs": [
         "waite_pkt#part3_s2 · Part III § 2 · 6. The Lovers",
         "waite_pkt#part2_s2 · Part II § 2 · The Lovers",
-        "golden_dawn_correspondences（对应关系，原典待补）"
+        "crowley_777#table1 · Path 17（Col. XIV 塔罗 · Col. VI/VII 天体）"
       ],
       "review_status": "draft"
     },
@@ -961,6 +968,7 @@
           "zh": "巨蟹座",
           "en": "Cancer"
         },
+        "correspondence_basis": "golden_dawn（《777》Table I 已核实）",
         "archetype": {
           "zh": "战车上的王子头戴星冠，车前一黑一白两只狮身人面兽代表相反的力量；他没有缰绳，全凭意志驾驭。这是愚者第一次凭自己赢得的胜利。",
           "en": "A star-crowned prince rides a chariot drawn by a black and a white sphinx — opposing forces. He holds no reins; he steers by will alone. It is the Fool's first victory won on his own."
@@ -1076,7 +1084,7 @@
       "source_refs": [
         "waite_pkt#part3_s2 · Part III § 2 · 7. The Chariot",
         "waite_pkt#part2_s2 · Part II § 2 · The Chariot",
-        "golden_dawn_correspondences（对应关系，原典待补）"
+        "crowley_777#table1 · Path 18（Col. XIV 塔罗 · Col. VI/VII 天体）"
       ],
       "review_status": "draft"
     },
@@ -1113,6 +1121,7 @@
           "zh": "狮子座",
           "en": "Leo"
         },
+        "correspondence_basis": "golden_dawn（《777》Table I 已核实）",
         "archetype": {
           "zh": "一位女子轻轻合上狮子的嘴，头顶有无限符号。韦特与黄金黎明把它排在第八、把正义排在第十一，以对应狮子座与天秤座；更早的马赛版顺序正好相反。它讲的不是蛮力，而是驯服本能的温柔。",
           "en": "A woman gently closes a lion's jaws, an infinity sign above her head. Waite and the Golden Dawn placed Strength at VIII and Justice at XI to match Leo and Libra; the older Marseille order is the reverse. Its power isn't force but the gentleness that tames instinct."
@@ -1197,7 +1206,7 @@
       "source_refs": [
         "waite_pkt#part3_s2 · Part III § 2 · 8. Fortitude",
         "waite_pkt#part2_s2 · Part II § 2 · Strength, or Fortitude",
-        "golden_dawn_correspondences（对应关系，原典待补）"
+        "crowley_777#table1 · Path 19（Col. XIV 塔罗 · Col. VI/VII 天体）"
       ],
       "review_status": "draft"
     },
@@ -1234,6 +1243,7 @@
           "zh": "处女座",
           "en": "Virgo"
         },
+        "correspondence_basis": "golden_dawn（《777》Table I 已核实）",
         "archetype": {
           "zh": "一位长须老人独立雪峰，提着装有六芒星的灯，手拄长杖。他已经走过了外面的世界，现在转向内心，用自己的光为后来的人照路。",
           "en": "A bearded old man stands alone on a snowy peak, holding a lantern with a six-pointed star and leaning on a staff. Having walked the outer world, he turns inward, and his light guides those who come after."
@@ -1308,7 +1318,7 @@
       "source_refs": [
         "waite_pkt#part3_s2 · Part III § 2 · 9. The Hermit",
         "waite_pkt#part2_s2 · Part II § 2 · The Hermit",
-        "golden_dawn_correspondences（对应关系，原典待补）"
+        "crowley_777#table1 · Path 20（Col. XIV 塔罗 · Col. VI/VII 天体）"
       ],
       "review_status": "draft"
     },
@@ -1345,6 +1355,7 @@
           "zh": "木星",
           "en": "Jupiter"
         },
+        "correspondence_basis": "golden_dawn（《777》Table I 已核实）",
         "archetype": {
           "zh": "轮盘上刻着 TARO（也可读作 ROTA、TORA）和炼金符号，顶端是持剑的狮身人面兽，一侧蛇在下滑，一侧阿努比斯在上升。四角的天使、鹰、狮、牛对应四个固定星座与四福音书。它位于大阿尔卡那的中段：没有人能永远在顶上。",
           "en": "The wheel bears the letters TARO (also ROTA, TORA) and alchemical signs; a sword-bearing sphinx sits on top, a serpent descends and Anubis rises. Angel, eagle, lion and bull in the corners echo the four fixed signs and the four Evangelists. It sits mid-journey: no one stays on top forever."
@@ -1435,7 +1446,7 @@
       "source_refs": [
         "waite_pkt#part3_s2 · Part III § 2 · 10. Wheel of Fortune",
         "waite_pkt#part2_s2 · Part II § 2 · Wheel of Fortune",
-        "golden_dawn_correspondences（对应关系，原典待补）"
+        "crowley_777#table1 · Path 21（Col. XIV 塔罗 · Col. VI/VII 天体）"
       ],
       "review_status": "draft"
     },
@@ -1472,6 +1483,7 @@
           "zh": "天秤座",
           "en": "Libra"
         },
+        "correspondence_basis": "golden_dawn（《777》Table I 已核实）",
         "archetype": {
           "zh": "正义女神坐在两柱之间，右手直剑、左手天平。和常见的蒙眼正义女神不同，她睁着眼——塔罗里的正义要看清事实。在韦特体系中它与「力量」互换了位置，排在第十一，正好落在大阿尔卡那的中央。",
           "en": "Justice sits between two pillars, sword in her right hand and scales in her left. Unlike the blindfolded Lady Justice, her eyes are open — tarot justice must see the truth. In the Waite system she swapped places with Strength and became XI, right at the centre of the Major Arcana."
@@ -1569,7 +1581,7 @@
       "source_refs": [
         "waite_pkt#part3_s2 · Part III § 2 · 11. Justice",
         "waite_pkt#part2_s2 · Part II § 2 · Justice",
-        "golden_dawn_correspondences（对应关系，原典待补）"
+        "crowley_777#table1 · Path 22（Col. XIV 塔罗 · Col. VI/VII 天体）"
       ],
       "review_status": "draft"
     },
@@ -1606,6 +1618,7 @@
           "zh": "水元素（现代：海王星）",
           "en": "Water (modern: Neptune)"
         },
+        "correspondence_basis": "golden_dawn（《777》Table I 已核实）；括注的外行星为现代后加",
         "archetype": {
           "zh": "一个人头下脚上地倒挂在 T 形树上，一条腿弯成「4」字，神情平静，头后有光环。这不是刑罚，而是主动的暂停：通过放下与等待换来顿悟。",
           "en": "A man hangs upside down from a T-shaped tree, one leg crossed into a \"4\", face serene, a halo behind his head. It isn't punishment but a chosen pause: insight gained by letting go and waiting."
@@ -1690,7 +1703,7 @@
       "source_refs": [
         "waite_pkt#part3_s2 · Part III § 2 · 12. The Hanged Man",
         "waite_pkt#part2_s2 · Part II § 2 · The Hanged Man",
-        "golden_dawn_correspondences（对应关系，原典待补）"
+        "crowley_777#table1 · Path 23（Col. XIV 塔罗 · Col. VI/VII 天体）"
       ],
       "review_status": "draft"
     },
@@ -1727,6 +1740,7 @@
           "zh": "天蝎座",
           "en": "Scorpio"
         },
+        "correspondence_basis": "golden_dawn（《777》Table I 已核实）",
         "archetype": {
           "zh": "骑白马的骷髅骑士举着绘有白玫瑰的黑旗，国王倒地、主教祈祷、孩童仰望，远方两座塔之间太阳升起。在塔罗里它几乎从不指肉体的死亡，而是一个阶段的终结与转化。",
           "en": "A skeletal knight on a white horse carries a black banner with a white rose; a king has fallen, a bishop prays, a child looks up, and the sun rises between two distant towers. In tarot it almost never means physical death, but the end and transformation of a phase."
@@ -1819,7 +1833,7 @@
       "source_refs": [
         "waite_pkt#part3_s2 · Part III § 2 · 13. Death",
         "waite_pkt#part2_s2 · Part II § 2 · Death",
-        "golden_dawn_correspondences（对应关系，原典待补）"
+        "crowley_777#table1 · Path 24（Col. XIV 塔罗 · Col. VI/VII 天体）"
       ],
       "review_status": "draft"
     },
@@ -1856,6 +1870,7 @@
           "zh": "射手座",
           "en": "Sagittarius"
         },
+        "correspondence_basis": "golden_dawn（《777》Table I 已核实）",
         "archetype": {
           "zh": "有翼天使一足踏水、一足踏岸，在两只杯子之间倒水，胸前有三角形标记，远方小路通往升起的太阳。它是「死神」之后的疗愈：把对立的东西调和成新的平衡。",
           "en": "A winged angel stands with one foot in water and one on land, pouring between two cups, a triangle on its breast, a path leading to a rising sun. It is the healing after Death: blending opposites into a new balance."
@@ -1952,7 +1967,7 @@
       "source_refs": [
         "waite_pkt#part3_s2 · Part III § 2 · 14. Temperance",
         "waite_pkt#part2_s2 · Part II § 2 · Temperance",
-        "golden_dawn_correspondences（对应关系，原典待补）"
+        "crowley_777#table1 · Path 25（Col. XIV 塔罗 · Col. VI/VII 天体）"
       ],
       "review_status": "draft"
     },
@@ -1989,6 +2004,7 @@
           "zh": "摩羯座",
           "en": "Capricorn"
         },
+        "correspondence_basis": "golden_dawn（《777》Table I 已核实）",
         "archetype": {
           "zh": "长着山羊角和蝠翼的恶魔蹲在台座上，倒举火炬，台下一男一女戴着锁链——锁链很松，随时可以取下。这张牌的构图特意呼应「恋人」，讲的是被欲望与执念束缚的那一面。",
           "en": "A horned, bat-winged devil squats on a pedestal holding a torch downward; below, a man and a woman wear chains — loose enough to lift off. The composition deliberately mirrors the Lovers, showing the side of us bound by desire and attachment."
@@ -2088,7 +2104,7 @@
       "source_refs": [
         "waite_pkt#part3_s2 · Part III § 2 · 15. The Devil",
         "waite_pkt#part2_s2 · Part II § 2 · The Devil",
-        "golden_dawn_correspondences（对应关系，原典待补）"
+        "crowley_777#table1 · Path 26（Col. XIV 塔罗 · Col. VI/VII 天体）"
       ],
       "review_status": "draft"
     },
@@ -2125,6 +2141,7 @@
           "zh": "火星",
           "en": "Mars"
         },
+        "correspondence_basis": "golden_dawn（《777》Table I 已核实）",
         "archetype": {
           "zh": "闪电击中高塔，王冠形的塔顶被掀落，两个人从塔上坠下，火焰与二十二道光点散落空中。它是大阿尔卡那里最剧烈的一张：建立在错误基础上的东西，终究会倒。",
           "en": "Lightning strikes a tower, knocking off its crown-shaped roof; two figures fall amid flames and twenty-two drops of light. It's the most violent card of the Major Arcana: what's built on false foundations falls in the end."
@@ -2207,7 +2224,7 @@
       "source_refs": [
         "waite_pkt#part3_s2 · Part III § 2 · 16. The Tower",
         "waite_pkt#part2_s2 · Part II § 2 · The Tower",
-        "golden_dawn_correspondences（对应关系，原典待补）"
+        "crowley_777#table1 · Path 27（Col. XIV 塔罗 · Col. VI/VII 天体）"
       ],
       "review_status": "draft"
     },
@@ -2244,6 +2261,7 @@
           "zh": "水瓶座",
           "en": "Aquarius"
         },
+        "correspondence_basis": "golden_dawn（《777》Table I 已核实）",
         "archetype": {
           "zh": "一位女子跪在池边，一壶水倒回池中、一壶浇向大地，头顶一颗八芒大星与七颗小星，树上停着一只鸟。经历「高塔」之后，这是第一缕平静的希望。",
           "en": "A woman kneels by a pool, pouring one jug back into the water and one onto the land, beneath one great eight-pointed star and seven smaller ones; a bird perches in a tree. After the Tower, this is the first quiet hope."
@@ -2340,7 +2358,7 @@
       "source_refs": [
         "waite_pkt#part3_s2 · Part III § 2 · 17. The Star",
         "waite_pkt#part2_s2 · Part II § 2 · The Star",
-        "golden_dawn_correspondences（对应关系，原典待补）"
+        "crowley_777#table1 · Path 28（Col. XIV 塔罗 · Col. VI/VII 天体）"
       ],
       "review_status": "draft"
     },
@@ -2377,6 +2395,7 @@
           "zh": "双鱼座",
           "en": "Pisces"
         },
+        "correspondence_basis": "golden_dawn（《777》Table I 已核实）",
         "archetype": {
           "zh": "两座塔之间，一条小路从水池蜿蜒到远山，狗与狼对着月亮嚎叫，一只螯虾从水中爬出。月光下的一切都半真半假，它象征梦境、恐惧与潜意识。",
           "en": "Between two towers, a path winds from a pool to distant hills; a dog and a wolf howl at the moon and a crayfish crawls out of the water. Under moonlight everything is half-true — it stands for dreams, fear and the unconscious."
@@ -2459,7 +2478,7 @@
       "source_refs": [
         "waite_pkt#part3_s2 · Part III § 2 · 18. The Moon",
         "waite_pkt#part2_s2 · Part II § 2 · The Moon",
-        "golden_dawn_correspondences（对应关系，原典待补）"
+        "crowley_777#table1 · Path 29（Col. XIV 塔罗 · Col. VI/VII 天体）"
       ],
       "review_status": "draft"
     },
@@ -2496,6 +2515,7 @@
           "zh": "太阳",
           "en": "The Sun"
         },
+        "correspondence_basis": "golden_dawn（《777》Table I 已核实）",
         "archetype": {
           "zh": "一个孩子赤身骑在白马上，举着红旗，身后是向日葵与矮墙，上方一张大大的太阳脸。走出「月亮」的迷雾之后，一切都清楚了：这是大阿尔卡那里最明亮、最纯粹的快乐。",
           "en": "A naked child rides a white horse holding a red banner, sunflowers and a low wall behind, a great sun face above. Out of the Moon's fog, everything is clear: the brightest, purest joy in the Major Arcana."
@@ -2593,7 +2613,7 @@
       "source_refs": [
         "waite_pkt#part3_s2 · Part III § 2 · 19. The Sun",
         "waite_pkt#part2_s2 · Part II § 2 · The Sun",
-        "golden_dawn_correspondences（对应关系，原典待补）"
+        "crowley_777#table1 · Path 30（Col. XIV 塔罗 · Col. VI/VII 天体）"
       ],
       "review_status": "draft"
     },
@@ -2630,6 +2650,7 @@
           "zh": "火元素（现代：冥王星）",
           "en": "Fire (modern: Pluto)"
         },
+        "correspondence_basis": "golden_dawn（《777》Table I 已核实）；括注的外行星为现代后加",
         "archetype": {
           "zh": "天使加百列吹响挂着红十字旗的号角，下方棺木中的人们张开双臂站起来。它取自「最后的审判」的意象，在塔罗里代表觉醒、清算，以及被召唤去过一种新的生活。",
           "en": "The angel Gabriel sounds a trumpet hung with a red-cross banner, and below, people rise from their coffins with open arms. Drawn from the Last Judgement, in tarot it means awakening, reckoning, and being called to a new life."
@@ -2736,7 +2757,7 @@
       "source_refs": [
         "waite_pkt#part3_s2 · Part III § 2 · 20. The Last Judgment",
         "waite_pkt#part2_s2 · Part II § 2 · The Last Judgment",
-        "golden_dawn_correspondences（对应关系，原典待补）"
+        "crowley_777#table1 · Path 31（Col. XIV 塔罗 · Col. VI/VII 天体）"
       ],
       "review_status": "draft"
     },
@@ -2773,6 +2794,7 @@
           "zh": "土星",
           "en": "Saturn"
         },
+        "correspondence_basis": "golden_dawn（《777》Table I 已核实）",
         "archetype": {
           "zh": "一位手持双杖的舞者在椭圆月桂花环中央起舞，四角与「命运之轮」一样是天使、鹰、狮、牛。它是愚者之旅的终点，也是下一轮的起点：完整、统一、圆满。",
           "en": "A dancer holding two wands moves inside an oval laurel wreath, with angel, eagle, lion and bull in the corners as on the Wheel. It's the end of the Fool's Journey and the start of the next: wholeness, unity, completion."
@@ -2854,7 +2876,7 @@
       "source_refs": [
         "waite_pkt#part3_s2 · Part III § 2 · 21. The World",
         "waite_pkt#part2_s2 · Part II § 2 · The World",
-        "golden_dawn_correspondences（对应关系，原典待补）"
+        "crowley_777#table1 · Path 32（Col. XIV 塔罗 · Col. VI/VII 天体）"
       ],
       "review_status": "draft"
     }

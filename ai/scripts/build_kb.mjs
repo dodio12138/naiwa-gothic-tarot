@@ -34,6 +34,7 @@ const out = PILOT.map((id) => {
       upright: c.up,
       reversed: c.rev,
       correspondence: c.astro,
+      correspondence_basis: 'golden_dawn（《777》Table I 已核实）' + (c.astro.zh.includes('现代') ? '；括注的外行星为现代后加' : ''),
       archetype: c.origin,
     },
     artwork_ref: a.artwork_id,
@@ -42,11 +43,11 @@ const out = PILOT.map((id) => {
     style_removed_refs: compare[id].style_removed.map((x) => x.id),
     rws_absent: compare[id].traditional.filter((t) => t.status === 'absent').map((t) => t.rws),
     imagery_compare: compare[id].traditional,
-    // 原典：韦特 1911 原文的占卜义（英文原文）与出处；对应关系的体系出处待补原典
+    // 原典：韦特 1911 原文的占卜义（英文原文）与出处；对应关系出自黄金黎明体系，已对照《777》Table I 核实（只记位置，不收原文）
     waite_1911: waite[id] ? { upright: waite[id].divinatory.upright, reversed: waite[id].divinatory.reversed } : undefined,
     source_refs: [
       ...(waite[id] ? [waite[id].divinatory.ref, waite[id].symbolism.ref].map((r) => `${r.source}#${r.section} · ${r.locator}`) : []),
-      'golden_dawn_correspondences（对应关系，原典待补）',
+      `crowley_777#table1 · Path ${c.rank + 11}（Col. XIV 塔罗 · Col. VI/VII 天体）`,
     ],
     review_status: 'draft',
   };

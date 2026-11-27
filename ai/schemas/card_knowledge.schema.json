@@ -125,6 +125,9 @@
             }
           },
           "additionalProperties": false
+        },
+        "correspondence_basis": {
+          "type": "string"
         }
       },
       "additionalProperties": false
