@@ -118,8 +118,8 @@ function applyText() {
 // 牌宽：手机约 44px，桌面最大 70px；牌河放不下时可以滚动
 function sizeCards() {
   const w = innerWidth, h = innerHeight;
-  // 行与行重叠三分之一，每行实际只占 1 个牌宽的高度，所以纵向可以放得更大
-  const cw = Math.round(Math.max(42, Math.min(76, (w - 40) / 8, (h - 330) / 5.5)));
+  // 牌河竖着排，每张只占半个牌宽的高度：一列至少放得下 7 张，横向至少放得下 4 列
+  const cw = Math.round(Math.max(42, Math.min(76, (w - 40) / 4.6, (h - 330) / 4.5)));
   root.style.setProperty('--gw', `${cw}px`);
 }
 

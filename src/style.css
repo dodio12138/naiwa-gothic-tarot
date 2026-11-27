@@ -972,12 +972,13 @@ body.in-game #naiwa { z-index: 33; }
   50% { filter: drop-shadow(0 0 12px rgba(246, 217, 79, .75)); }
 }
 .g-river {
-  flex: 1; min-height: 0; width: min(100%, 980px); overflow-y: auto; overscroll-behavior: contain;
-  display: flex; flex-wrap: wrap; align-content: center; justify-content: center; gap: 0 6px;
-  padding: 10px 4px calc(10px + var(--gw) * .5);   /* 底部补回最后一行被「借走」的高度 */
+  /* 竖着排：新牌接在上一张下面并压住它，只露出顶部的点数角标；一列排满再往右起新的一列 */
+  flex: 1; min-height: 0; width: min(100%, 980px); overflow-x: auto; overflow-y: hidden; overscroll-behavior: contain;
+  display: flex; flex-direction: column; flex-wrap: wrap; align-content: center; justify-content: flex-start; gap: 0 10px;
+  padding: 6px 4px calc(6px + var(--gw) * 1);   /* 底部补回每列最后一张被「借走」的高度 */
   perspective: 900px;
 }
-.g-card { position: relative; width: var(--gw); aspect-ratio: 2 / 3; flex: none; margin-bottom: calc(var(--gw) * -.5); }   /* 上下两行稍微重叠：下一行压住上一行的下三分之一，左上角的点数仍露在外面 */
+.g-card { position: relative; width: var(--gw); aspect-ratio: 2 / 3; flex: none; margin-bottom: calc(var(--gw) * -1); }   /* 每张只露出顶部三分之一（点数角标在左上角） */
 .g-card .gc-in { position: absolute; inset: 0; transform-style: preserve-3d; }
 .g-card .gc-front, .g-card .gc-back { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 4px; overflow: hidden; }
 .g-card .gc-back { transform: rotateY(180deg); }
@@ -1014,6 +1015,6 @@ body.in-game #naiwa { z-index: 33; }
 body.lang-en .g-name, body.lang-en .g-banner b { font-family: 'Cinzel', serif; }
 @media (max-width: 760px) {
   #game { padding-top: calc(92px + var(--top-safe)); gap: 8px; }
-  .g-river { gap: 0 5px; }
+  .g-river { gap: 0 8px; }
   .g-banner b { font-size: 20px; }
 }
