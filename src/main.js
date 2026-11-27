@@ -384,7 +384,9 @@ function mbTick() {
     c.bx = nbx < 0.01 ? 0 : nbx; c.by = nby < 0.01 ? 0 : nby;
     c.mbx.style.opacity = c.bx.toFixed(3);
     c.mby.style.opacity = c.by.toFixed(3);
-    c.backFace.style.opacity = (1 - Math.max(c.bx, c.by) * 0.9).toFixed(3);
+    // 牌背只在模糊层接近不透明时才淡出：中间阶段两层都半透明会叠出透明感，透出背后的牌位框
+    const m = Math.max(c.bx, c.by);
+    c.backFace.style.opacity = (1 - clamp((m - 0.6) / 0.4, 0, 1) * 0.9).toFixed(3);
   }
 }
 gsap.ticker.add(mbTick);
@@ -840,6 +842,8 @@ function pick(c) {
   const g = pickSlotGeom(S.slots.length)[c.slot];
   const s = g.w / BASE;
   gsap.set(c.el, { zIndex: 300 + c.slot });
+  // 牌位层在牌之上（为了让标签不被遮住），所以牌飞过去之前先把目标框收掉，否则框会画在飞行中的牌上面
+  slot.el.classList.add('incoming');
   audio.pick();
   const tl = gsap.timeline();
   tl.to(c.el, { x: g.x, duration: 0.85, ease: 'power2.inOut' }, 0)

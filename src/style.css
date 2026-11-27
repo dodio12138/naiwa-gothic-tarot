@@ -322,6 +322,7 @@ body.picking { touch-action: none; }                       /* 选牌时手指滑
   transition: opacity .4s;
 }
 .slot.filled .ghost-frame { opacity: 0; }
+.slot.incoming .ghost-frame { opacity: 0; transition-duration: .25s; }   /* 牌开始飞向这个牌位时先收起目标框 */
 .slot .label {
   position: absolute; left: 50%; top: 100%; transform: translateX(-50%);
   margin-top: 8px; white-space: nowrap; text-align: center; line-height: 1.45;

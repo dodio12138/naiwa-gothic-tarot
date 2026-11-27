@@ -49,27 +49,27 @@
 
 来源：[奶蛙官网 milkyfrog.com](https://milkyfrog.com/) 的「奶氏家族」一节（北京奶蛙科技）。热度和点评来自用户提供的一张网友「奶家热度榜」，原图还没有存进仓库，需要另外保存为 `family-tier-list.png`。
 
-官网的图片 CDN 有防盗链，不能直接下载；下面只记录官方图片的地址，要用的时候在浏览器里打开官网保存。
+官网的图片 CDN 有防盗链，不能用脚本直接下载；下面只记录官方图片的地址，要用的时候在浏览器里打开官网另存。造型描述根据官网截图整理（2026-11-27）。
 
-| No. | 名字 | 热度（网友榜） | 网友点评 | 官方图 |
-|---|---|---|---|---|
-| 00 | 奶蛙 | 火山 | 奶家的开创者；几乎每个角色的粉丝都会同时喜欢奶蛙 | [fam-00](https://static.milkyfrog.com/assets/family/fam-00-42d724a9.webp) |
-| 01 | 小奶蛙 | 烫 | 可爱；用它表情包的人特别多（= 本项目说的「奶蛙幼体」） | [fam-01](https://static.milkyfrog.com/assets/family/fam-01-cacf4573.webp) |
-| 02 | 奶蛋 | 烫 | 可爱；有些投票里能和奶蛙掰手腕（= 没有手脚的蛋形，本项目牌背） | [fam-02](https://static.milkyfrog.com/assets/family/fam-02-1129e7f1.webp) |
-| 03 | 奶鼠 | 热 | 和奶粉是欢喜冤家；贪吃 | [fam-03](https://static.milkyfrog.com/assets/family/fam-03-76e07cb5.webp) |
-| 04 | 奶粉 | 温 | 粉色；和奶鼠是欢喜冤家，热度比奶鼠低 | [fam-04](https://static.milkyfrog.com/assets/family/fam-04-a89db901.webp) |
-| 05 | 奶狗 | 热 | 有点蠢萌，很乐观，一直在笑 | [fam-05](https://static.milkyfrog.com/assets/family/fam-05-32552764.webp) |
-| 06 | 奶豆 | 热 | 可爱，体型很小，最近热度飙升 | [fam-06](https://static.milkyfrog.com/assets/family/fam-06-d3d910e9.webp) |
-| 07 | 奶屎 | 冷 | 可爱，但因为是「答辩」，喜欢的人会很喜欢 | [fam-07](https://static.milkyfrog.com/assets/family/fam-07-af612edf.webp) |
-| 08 | 豆奶 | 冷 | 混血品种 | [fam-08](https://static.milkyfrog.com/assets/family/fam-08-2f0c3243.webp) |
-| 09 | 奶鸡 | 温 | 可以生出奶蛋 | [fam-09](https://static.milkyfrog.com/assets/family/fam-09-944fd7ec.webp) |
-| 10 | 奶格玛 | — | 网友榜里叫「西格玛奶蛙」（肌肉版） | [fam-10](https://static.milkyfrog.com/assets/family/fam-10-63efc8cc.webp) |
-| 11 | 奶猫 | 温 | 比较冷门，可爱 | [fam-11](https://static.milkyfrog.com/assets/family/fam-11-336879ba.webp) |
-| 12 | 奶鱼 | 冷 | — | [fam-12](https://static.milkyfrog.com/assets/family/fam-12-7037f469.webp) |
-| 13 | 大耳奶兜 | — | 网友榜里没有 | [fam-13](https://static.milkyfrog.com/assets/family/fam-13-6f3e9bfa.webp) |
-| 14 | 奶神 | — | 网友榜里没有 | [fam-14](https://static.milkyfrog.com/assets/family/fam-14-29938d38.webp) |
-| 15 | 奶天使 | — | 网友榜里没有 | [fam-15](https://static.milkyfrog.com/assets/family/fam-15-4da30746.webp) |
-| 16 | 奶跳蛙 | — | 网友榜里没有 | [fam-16](https://static.milkyfrog.com/assets/family/fam-16-f0af86b0.webp) |
+| No. | 名字 | 造型 | 热度（网友榜） | 网友点评 | 官方图 |
+|---|---|---|---|---|---|
+| 00 | 奶蛙 | 梨形，侧身双手捧肚 | 火山 | 奶家的开创者；几乎每个角色的粉丝都会同时喜欢奶蛙 | [fam-00](https://static.milkyfrog.com/assets/family/fam-00-42d724a9.webp) |
+| 01 | 小奶蛙 | 圆胖小身体，张嘴笑，单脚抬起，短手张开 | 烫 | 可爱；用它表情包的人特别多（= 本项目说的「奶蛙幼体」） | [fam-01](https://static.milkyfrog.com/assets/family/fam-01-cacf4573.webp) |
+| 02 | 奶蛋 | 蛋形，没有手脚，绿眼小嘴 | 烫 | 可爱；有些投票里能和奶蛙掰手腕（= 没有手脚的蛋形，本项目牌背） | [fam-02](https://static.milkyfrog.com/assets/family/fam-02-1129e7f1.webp) |
+| 03 | 奶鼠 | 黄色，大圆耳朵，细长尾巴，举手 | 热 | 和奶粉是欢喜冤家；贪吃 | [fam-03](https://static.milkyfrog.com/assets/family/fam-03-76e07cb5.webp) |
+| 04 | 奶粉 | 粉色的奶蛙，白肚皮，叉腰 | 温 | 粉色；和奶鼠是欢喜冤家，热度比奶鼠低 | [fam-04](https://static.milkyfrog.com/assets/family/fam-04-a89db901.webp) |
+| 05 | 奶狗 | 黄色小狗，棕色垂耳，张嘴大笑 | 热 | 有点蠢萌，很乐观，一直在笑 | [fam-05](https://static.milkyfrog.com/assets/family/fam-05-32552764.webp) |
+| 06 | 奶豆 | 圆球豆子，只有大眼睛和嘴，没有手脚 | 热 | 可爱，体型很小，最近热度飙升 | [fam-06](https://static.milkyfrog.com/assets/family/fam-06-d3d910e9.webp) |
+| 07 | 奶屎 | 盘旋的便便造型，顶上长眼睛 | 冷 | 可爱，但因为是「答辩」，喜欢的人会很喜欢 | [fam-07](https://static.milkyfrog.com/assets/family/fam-07-af612edf.webp) |
+| 08 | 豆奶 | 人类小女孩，抱着一碗豆奶 | 冷 | 混血品种 | [fam-08](https://static.milkyfrog.com/assets/family/fam-08-2f0c3243.webp) |
+| 09 | 奶鸡 | 黄色的鸡，红鸡冠，奶蛙眼 | 温 | 可以生出奶蛋 | [fam-09](https://static.milkyfrog.com/assets/family/fam-09-944fd7ec.webp) |
+| 10 | 奶格玛 | 肌肉发达的奶蛙，托腮思考 | — | 网友榜里叫「西格玛奶蛙」（肌肉版） | [fam-10](https://static.milkyfrog.com/assets/family/fam-10-63efc8cc.webp) |
+| 11 | 奶猫 | 猫耳，趴着，奶蛙脸 | 温 | 比较冷门，可爱 | [fam-11](https://static.milkyfrog.com/assets/family/fam-11-336879ba.webp) |
+| 12 | 奶鱼 | 海豹般的身体，有鱼尾 | 冷 | — | [fam-12](https://static.milkyfrog.com/assets/family/fam-12-7037f469.webp) |
+| 13 | 大耳奶兜 | 白色，粉色内衬的长兔耳，奶油色肚皮 | — | 网友榜里没有 | [fam-13](https://static.milkyfrog.com/assets/family/fam-13-6f3e9bfa.webp) |
+| 14 | 奶神 | 全身发光，张开双臂悬浮 | — | 网友榜里没有 | [fam-14](https://static.milkyfrog.com/assets/family/fam-14-29938d38.webp) |
+| 15 | 奶天使 | 背后有白色翅膀，挥手 | — | 网友榜里没有 | [fam-15](https://static.milkyfrog.com/assets/family/fam-15-4da30746.webp) |
+| 16 | 奶跳蛙 | 扁平的跳蛙，更像真实的青蛙 | — | 网友榜里没有 | [fam-16](https://static.milkyfrog.com/assets/family/fam-16-f0af86b0.webp) |
 
 网友榜里还有、官网没有收录的：奶兔（冷）、奶头、奶茶（茶杯造型）、奶瓶。
 
