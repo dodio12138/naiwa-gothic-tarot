@@ -1,0 +1,225 @@
+{
+  "$comment": "仪式低语库：抽牌各阶段奶蛙在气泡里说的短句（见 docs/tarot_slm_technical_design_v0.6.md 第 25、27 章）。每个阶段随机取一句，避免连续重复。语气：克制、哥特、简短、留白；不预测、不诊断。poke 是点奶蛙头像时的回应，laugh 是小概率彩蛋（致敬奶蛙原本的狂笑）。game_* 是牌局「小猫钓鱼」里的台词。",
+  "stages": {
+    "opening": [
+      {
+        "zh": "未命名的事物，也可以被看见。",
+        "en": "Unnamed things can be seen, too."
+      },
+      {
+        "zh": "不想说出问题也没关系。只抽一张也可以。",
+        "en": "You don't have to say the question. One card is enough."
+      },
+      {
+        "zh": "今晚的烛火很安静。",
+        "en": "The candles are quiet tonight."
+      },
+      {
+        "zh": "我在这里。牌也在。",
+        "en": "I'm here. So are the cards."
+      }
+    ],
+    "shuffle": [
+      {
+        "zh": "无须急着寻找答案。",
+        "en": "No need to hurry toward an answer."
+      },
+      {
+        "zh": "让牌自己走一会儿。",
+        "en": "Let the cards wander a while."
+      },
+      {
+        "zh": "洗牌的声音，像夜里的雨。",
+        "en": "Shuffling sounds like rain at night."
+      }
+    ],
+    "pick": [
+      {
+        "zh": "别想太久。手比心先知道。",
+        "en": "Don't think too long. Your hand knows first."
+      },
+      {
+        "zh": "哪一张在看你？",
+        "en": "Which one is looking at you?"
+      },
+      {
+        "zh": "慢慢来，牌不会跑。",
+        "en": "Take your time. The cards won't run away."
+      }
+    ],
+    "gather": [
+      {
+        "zh": "好。其余的，回到夜里去。",
+        "en": "Good. The rest return to the night."
+      },
+      {
+        "zh": "牌已经落下了。",
+        "en": "The cards have settled."
+      }
+    ],
+    "reveal": [
+      {
+        "zh": "先看看画面。有什么地方让你停留？",
+        "en": "Look at the picture first. Where does your eye stay?"
+      },
+      {
+        "zh": "不必马上懂它。",
+        "en": "You don't have to understand it right away."
+      },
+      {
+        "zh": "它只是一张牌，也不只是一张牌。",
+        "en": "It's only a card. And not only a card."
+      }
+    ],
+    "revealDark": [
+      {
+        "zh": "别怕。暗处的牌，也只是在说话。",
+        "en": "Don't be afraid. Dark cards are only speaking."
+      },
+      {
+        "zh": "有些画面重一点。我陪你看。",
+        "en": "Some pictures are heavier. I'll look with you."
+      }
+    ],
+    "done": [
+      {
+        "zh": "好。今天的牌就留在这里。",
+        "en": "Good. Today's cards stay here."
+      },
+      {
+        "zh": "牌说完了。剩下的，你来决定。",
+        "en": "The cards have spoken. The rest is yours to decide."
+      },
+      {
+        "zh": "想安静一会儿也可以。",
+        "en": "You can sit quietly for a while, too."
+      }
+    ],
+    "daily": [
+      {
+        "zh": "今天的这一张，陪你到夜里。",
+        "en": "Today's card will keep you company until night."
+      },
+      {
+        "zh": "明天，会有另一张。",
+        "en": "Tomorrow there will be another."
+      }
+    ],
+    "poke": [
+      {
+        "zh": "……？",
+        "en": "…?"
+      },
+      {
+        "zh": "我在听。",
+        "en": "I'm listening."
+      },
+      {
+        "zh": "奶蛙没有银行牌照。",
+        "en": "Naiwa has no banking license."
+      },
+      {
+        "zh": "月亮不在今日菜单上。",
+        "en": "The moon is not on today's menu."
+      },
+      {
+        "zh": "戳我也不会多给一张牌。",
+        "en": "Poking me won't get you an extra card."
+      }
+    ],
+    "laugh": [
+      {
+        "zh": "哈哈哈哈哈哈——咳。失态了。",
+        "en": "HAHAHAHAHA— ahem. Excuse me."
+      }
+    ],
+    "game_start": [
+      {
+        "zh": "来一局。输了不算命。",
+        "en": "One round. Losing tells no fortunes."
+      },
+      {
+        "zh": "小猫钓鱼。我先说好，我不会放水。",
+        "en": "Fishing it is. I won't go easy on you."
+      }
+    ],
+    "game_you": [
+      {
+        "zh": "……被你钓走了。",
+        "en": "…You fished that one out."
+      },
+      {
+        "zh": "运气不错。只是运气。",
+        "en": "Nice luck. Only luck."
+      },
+      {
+        "zh": "嗯。我记住了。",
+        "en": "Hm. I'll remember that."
+      }
+    ],
+    "game_naiwa": [
+      {
+        "zh": "这几张，归我了。",
+        "en": "These are mine now."
+      },
+      {
+        "zh": "钓到了。",
+        "en": "Got a bite."
+      },
+      {
+        "zh": "不好意思。",
+        "en": "Pardon me."
+      }
+    ],
+    "game_fool": [
+      {
+        "zh": "愚者：再来一张。",
+        "en": "The Fool: draw again."
+      }
+    ],
+    "game_wheel": [
+      {
+        "zh": "命运之轮转了。牌堆换手。",
+        "en": "The Wheel turns. Piles change hands."
+      }
+    ],
+    "game_death": [
+      {
+        "zh": "死神来过。河里什么也不剩。",
+        "en": "Death passed by. The river is empty."
+      }
+    ],
+    "game_tower": [
+      {
+        "zh": "高塔倒了。整条河都塌过去了。",
+        "en": "The Tower falls. The whole river goes with it."
+      }
+    ],
+    "game_win": [
+      {
+        "zh": "你赢了。我不难过，我只是面无表情。",
+        "en": "You win. I'm not sad. I'm just expressionless."
+      },
+      {
+        "zh": "你赢了。再来一局吗？",
+        "en": "You win. Another round?"
+      }
+    ],
+    "game_lose": [
+      {
+        "zh": "我赢了。这不代表任何运势。",
+        "en": "I win. It means nothing about your fortune."
+      },
+      {
+        "zh": "我赢了。牌只是牌。",
+        "en": "I win. Cards are only cards."
+      }
+    ],
+    "game_draw": [
+      {
+        "zh": "平局。夜还长。",
+        "en": "A draw. The night is long."
+      }
+    ]
+  }
+}

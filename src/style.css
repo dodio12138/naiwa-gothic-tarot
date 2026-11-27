@@ -908,3 +908,112 @@ html[data-q="low"] .daily-btn .daily-emblem { animation: none; }
   .plate.sm.icon { padding: 0 11px; }
   #lang { min-width: 40px; }
 }
+
+/* ════════ 奶蛙气泡（src/naiwa.js） ════════ */
+#naiwa {
+  position: fixed; z-index: 32; left: max(18px, var(--sa-l)); bottom: calc(22px + var(--sa-b));
+  display: flex; align-items: flex-end; gap: 10px; pointer-events: none; max-width: min(340px, calc(100vw - 36px));
+}
+#naiwa[hidden] { display: none; }
+#naiwa .nw-av {
+  pointer-events: auto; flex: none; width: 54px; height: 54px; padding: 0; border-radius: 50%; overflow: hidden; cursor: pointer;
+  border: 1px solid rgba(214, 170, 96, .75); background: #1a1018;
+  box-shadow: 0 0 0 3px rgba(20, 12, 18, .85), 0 0 0 4px rgba(214, 170, 96, .35), 0 6px 22px rgba(0, 0, 0, .55), 0 0 24px rgba(246, 217, 79, .18);
+}
+#naiwa .nw-av img { width: 100%; height: 100%; display: block; }
+#naiwa .nw-bubble {
+  position: relative; margin-bottom: 10px; padding: 10px 14px; border-radius: 10px 10px 10px 2px;
+  background: linear-gradient(180deg, rgba(38, 22, 32, .94), rgba(22, 13, 20, .94));
+  border: 1px solid rgba(214, 170, 96, .45); box-shadow: 0 8px 26px rgba(0, 0, 0, .5);
+  color: #efe2c6; font-family: 'Noto Serif SC', serif; font-size: 14px; line-height: 1.6; letter-spacing: .04em;
+  transform-origin: 0% 100%;
+}
+#naiwa .nw-bubble::before {   /* 指向头像的小尖角 */
+  content: ''; position: absolute; left: -6px; bottom: 8px; width: 10px; height: 10px; transform: rotate(45deg);
+  background: rgba(24, 14, 21, .96); border-left: 1px solid rgba(214, 170, 96, .45); border-bottom: 1px solid rgba(214, 170, 96, .45);
+}
+#naiwa .nw-bubble p { margin: 0; }
+body.lang-en #naiwa .nw-bubble { font-family: var(--serif-en, 'Cinzel', serif); font-size: 13px; letter-spacing: .02em; }
+@media (max-width: 760px) {
+  /* 手机：放到顶栏下方，避开底部弹出的解读面板 */
+  #naiwa { bottom: auto; top: calc(96px + var(--top-safe));   /* 让出顶栏第二行的提示文字 */ left: max(10px, var(--sa-l)); align-items: flex-start; }
+  #naiwa .nw-av { width: 44px; height: 44px; }
+  #naiwa .nw-bubble { margin: 6px 0 0; font-size: 13px; padding: 8px 12px; border-radius: 2px 10px 10px 10px; }
+  #naiwa .nw-bubble::before { bottom: auto; top: 10px; }
+}
+
+/* ════════ 奶蛙牌局 · 小猫钓鱼（src/game.js） ════════ */
+#game {
+  --gw: 64px;
+  position: fixed; inset: 0; z-index: 25;
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  padding: calc(70px + var(--top-safe)) max(16px, var(--sa-r)) calc(18px + var(--sa-b)) max(16px, var(--sa-l));
+  background: radial-gradient(ellipse at 50% 50%, rgba(40, 20, 34, .55), rgba(10, 7, 9, .82) 70%);
+}
+#game[hidden] { display: none; }
+body.in-game #naiwa { z-index: 33; }
+.g-side { display: flex; align-items: center; gap: 14px; }
+.g-name { font-size: 14px; letter-spacing: .3em; color: var(--gold-hi); }
+.g-pile {
+  position: relative; width: calc(var(--gw) * 1.2); aspect-ratio: 2 / 3; border-radius: 4px;
+  box-shadow: 2px 2px 0 #1a1018, 4px 4px 0 rgba(200, 138, 69, .35), 6px 6px 0 #140c12, 8px 8px 14px rgba(0, 0, 0, .6);
+}
+.g-pile img { width: 100%; height: 100%; display: block; border-radius: 4px; }
+.g-pile.empty { opacity: .25; box-shadow: none; }
+.g-count {
+  position: absolute; right: -10px; bottom: -8px; min-width: 26px; padding: 2px 6px; border-radius: 12px; text-align: center;
+  background: #1c1118; border: 1px solid rgba(214, 170, 96, .6); color: var(--gold-hi); font: 600 12px/1.3 'Cinzel', serif;
+}
+.g-you .g-pile { cursor: pointer; }
+.g-you .g-pile.ready { animation: g-ready 1.4s ease-in-out infinite; }
+.g-you .g-pile.ready:hover { transform: translateY(-3px); }
+@keyframes g-ready {
+  0%, 100% { filter: drop-shadow(0 0 0 rgba(246, 217, 79, 0)); }
+  50% { filter: drop-shadow(0 0 12px rgba(246, 217, 79, .75)); }
+}
+.g-river {
+  flex: 1; min-height: 0; width: min(100%, 980px); overflow-y: auto; overscroll-behavior: contain;
+  display: flex; flex-wrap: wrap; align-content: center; justify-content: center; gap: 0 6px;
+  padding: 10px 4px calc(10px + var(--gw) * .5);   /* 底部补回最后一行被「借走」的高度 */
+  perspective: 900px;
+}
+.g-card { position: relative; width: var(--gw); aspect-ratio: 2 / 3; flex: none; margin-bottom: calc(var(--gw) * -.5); }   /* 上下两行稍微重叠：下一行压住上一行的下三分之一，左上角的点数仍露在外面 */
+.g-card .gc-in { position: absolute; inset: 0; transform-style: preserve-3d; }
+.g-card .gc-front, .g-card .gc-back { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 4px; overflow: hidden; }
+.g-card .gc-back { transform: rotateY(180deg); }
+.g-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.g-card .gc-front { box-shadow: 0 0 0 1px rgba(214, 170, 96, .55), 0 4px 10px rgba(0, 0, 0, .55); }
+.gc-badge {
+  position: absolute; left: 3px; top: 3px; min-width: calc(var(--gw) * .34); padding: 2px 3px 3px; border-radius: 3px; text-align: center;
+  background: rgba(16, 9, 14, .86); border: 1px solid rgba(214, 170, 96, .5);
+  color: var(--gold-hi); font: 800 calc(var(--gw) * .24)/1 'Cinzel', serif;
+}
+.gc-badge small { display: block; margin-top: 2px; font: 600 calc(var(--gw) * .15)/1 'Noto Serif SC', serif; color: #d8b98a; white-space: nowrap; }
+.gc-badge.func { background: rgba(92, 22, 44, .92); border-color: rgba(246, 217, 79, .7); }
+.g-card.match .gc-front { box-shadow: 0 0 0 2px #f6d94f, 0 0 20px rgba(246, 217, 79, .8); }
+.g-status { margin: 0; min-height: 1.4em; font-size: 13px; letter-spacing: .14em; color: #d8c3a0; text-align: center; }
+.g-actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+.g-banner {
+  position: absolute; left: 50%; top: 50%; pointer-events: none; opacity: 0; text-align: center;
+  padding: 14px 30px; border-radius: 6px; background: rgba(18, 10, 16, .9); border: 1px solid rgba(214, 170, 96, .6);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, .6);
+}
+.g-banner b { display: block; font-size: 26px; letter-spacing: .3em; color: var(--gold-hi); font-weight: 900; }
+.g-banner small { display: block; margin-top: 6px; font-size: 13px; letter-spacing: .12em; color: #d8c3a0; }
+.g-rules {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: min(460px, calc(100% - 32px)); max-height: 80%; overflow-y: auto;
+  padding: 20px 22px; border-radius: 8px; background: rgba(20, 12, 18, .97); border: 1px solid rgba(214, 170, 96, .55);
+  color: #e6d6b8; font-size: 14px; line-height: 1.7; text-align: left; box-shadow: 0 16px 50px rgba(0, 0, 0, .7);
+}
+.g-rules[hidden] { display: none; }
+.g-rules h3 { margin: 0 0 8px; color: var(--gold-hi); letter-spacing: .2em; font-size: 16px; text-align: center; }
+.g-rules ul { margin: 0 0 14px; padding-left: 18px; }
+.g-rules li { margin: 4px 0; }
+.g-rules b { color: var(--gold-hi); }
+.g-rules > .plate { display: block; margin: 0 auto; }
+body.lang-en .g-name, body.lang-en .g-banner b { font-family: 'Cinzel', serif; }
+@media (max-width: 760px) {
+  #game { padding-top: calc(92px + var(--top-safe)); gap: 8px; }
+  .g-river { gap: 0 5px; }
+  .g-banner b { font-size: 20px; }
+}

@@ -43,6 +43,9 @@ npm run build    # 输出到 dist/，相对路径，可直接丢到任意静态�
 - `src/share.js` — 分享结果图的 Canvas 绘制（单张 / 三张 / 五张扇形三种版式，中英文）
 - `src/lights.js` — 22 张牌面的光源清单（月光 / 烛火 / 圣光 / 光环 / 星芒 / 闪电，位置与牌面绑定的动态光效）
 - `src/i18n.js` — 中英文界面文案与 22 张牌的英文牌义
+- `src/naiwa.js` — 奶蛙气泡（奶蛋头像 + 对话气泡），台词在 `data/ritual.json`
+- `src/game.js` — 奶蛙牌局 · 小猫钓鱼（52 张小牌 + 4 张大牌功能牌）
+- `data/visual_symbols.json` — 22 张大牌实际画面的可见符号标注（供以后 AI 解读）
 - `src/audio.js` — WebAudio 实时合成的仪式音效与环境底噪（右上角可静音）
 - `public/cards/art-{sm,full}/NN.webp` — **画面层**：ChatGPT 去掉原边框并向外补全的全幅插画（原图 `assets-src/chatgpt_art/`，导入脚本 `assets-src/import_art.sh`）
 - `public/ui/frame.webp` / `frame-sm.webp` — **统一边框层**：ChatGPT 生成的空边框，绿幕与花窗黑洞抠成透明，所有牌共用、静止不动

@@ -42,6 +42,16 @@ for (const c of cards) {
 const { LIGHTS } = await import(path.join(root, 'src/lights.js'));
 for (const id of Object.keys(LIGHTS)) if (!seen.has(id)) err(`lights.js：${id} 不是存在的牌`);
 
+/* ── 仪式低语库（奶蛙气泡） ── */
+{
+  const { stages } = read('data/ritual.json');
+  for (const st of ['opening', 'shuffle', 'pick', 'gather', 'reveal', 'revealDark', 'done', 'daily', 'poke', 'laugh',
+    'game_start', 'game_you', 'game_naiwa', 'game_fool', 'game_wheel', 'game_death', 'game_tower', 'game_win', 'game_lose', 'game_draw']) {
+    if (!Array.isArray(stages?.[st]) || !stages[st].length) err(`ritual.json：阶段 ${st} 没有句子`);
+    else stages[st].forEach((l, i) => zhen(l, `ritual.${st}[${i}]`));
+  }
+}
+
 /* ── 牌阵 ── */
 const { spreads } = read('data/spreads.json');
 const sIds = new Set();

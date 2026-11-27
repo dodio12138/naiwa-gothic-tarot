@@ -1,0 +1,579 @@
+{
+  "$comment": "22 张大阿卡纳实际画面的可见符号标注（奶蛙传统故事牌组 v1）。只记录画面中真实可见的元素；review_status 为 draft，待人工核对。",
+  "deck_id": "naiwa_classic",
+  "deck_version": 1,
+  "artworks": [
+    {
+      "artwork_id": "naiwa.classic.major_00",
+      "card_id": "major_00",
+      "artwork_version": 1,
+      "image": "public/cards/art-full/major_00.webp",
+      "visual_description": {
+        "zh": "满月下的悬崖石径上，奶蛙肩扛挂着布包袱的木棍站着，一只深色小狗在崖边仰头看它；远处山顶是亮着灯的哥特城堡和瀑布。",
+        "en": "On a cliff-top stone path under a full moon, Naiwa stands with a bindle on its shoulder while a small dark dog at the cliff edge looks up at it; a lit gothic castle and waterfalls rise in the distance."
+      },
+      "visual_symbols": [
+        { "id": "cliff_edge", "region": "前景", "zh": "奶蛙脚下的石径通向断崖边缘", "en": "the stone path under Naiwa runs out to a sheer cliff edge", "rws_ref": "cliff" },
+        { "id": "bindle", "region": "奶蛙手中", "zh": "肩上扛着木棍，棍头挂着扎口的布包袱", "en": "a stick over its shoulder with a tied cloth bundle", "rws_ref": "bindle" },
+        { "id": "small_dog", "region": "左侧", "zh": "一只深灰褐色小狗站在崖边，抬头望着奶蛙", "en": "a small dark grey-brown dog at the cliff edge looking up at Naiwa", "rws_ref": "dog" },
+        { "id": "black_roses", "region": "右侧与前景", "zh": "路旁和画面下方开着几朵黑玫瑰", "en": "several black roses grow by the path and along the bottom", "rws_ref": null },
+        { "id": "full_moon", "region": "左上", "zh": "一轮巨大的满月", "en": "a large full moon", "rws_ref": null },
+        { "id": "gothic_castle", "region": "背景", "zh": "远处山顶的哥特城堡，窗里亮着灯，旁有拱桥", "en": "a gothic castle with lit windows and arched bridges on a distant peak", "rws_ref": null },
+        { "id": "waterfalls", "region": "左侧背景", "zh": "云雾中的悬崖上挂着几道瀑布", "en": "waterfalls pour down misty cliffs", "rws_ref": null },
+        { "id": "gnarled_tree", "region": "右上", "zh": "右侧一棵枝叶带金色的扭曲老树", "en": "a gnarled tree with gold-tinged leaves on the right", "rws_ref": null }
+      ],
+      "rws_absent": ["sun", "white_rose", "snowy_mountains", "feather_cap"],
+      "naiwa_specific": ["黑玫瑰", "哥特城堡", "满月", "瀑布"],
+      "lighting": { "zh": "月夜冷光，云层发亮，局部金色高光", "en": "cold moonlight with glowing clouds and gold highlights" },
+      "notes": "scene 写「黑狗凑到脚边」，实际狗为深灰褐色，站在崖边离奶蛙有一段距离、仰头看它；scene 写「一朵黑玫瑰」，实际可见多朵；scene 写「废弃的城堡」，画面中城堡窗户亮灯，不太像废弃。",
+      "review_status": "draft"
+    },
+    {
+      "artwork_id": "naiwa.classic.major_01",
+      "card_id": "major_01",
+      "artwork_version": 1,
+      "image": "public/cards/art-full/major_01.webp",
+      "visual_description": {
+        "zh": "哥特礼拜堂的红色玫瑰窗前，奶蛙站在石祭坛后，一手高举发光的权杖，头顶浮着发光的无限符号；祭坛上摆着权杖、圣杯、短剑和五芒星金币。",
+        "en": "Before a red rose window in a gothic chapel, Naiwa stands behind a stone altar raising a glowing wand, a glowing infinity sign above its head; a wand, chalice, dagger and pentacle coin lie on the altar."
+      },
+      "visual_symbols": [
+        { "id": "raised_wand", "region": "奶蛙手中", "zh": "右手高举一根顶端闪着星光的权杖", "en": "one hand raises a wand with a star-like glint at its tip", "rws_ref": "raised_wand" },
+        { "id": "infinity_sign", "region": "中央上方", "zh": "头顶浮着发红橙光的无限符号", "en": "a glowing red-orange infinity sign floats above its head", "rws_ref": "lemniscate" },
+        { "id": "four_suit_tools", "region": "中央", "zh": "祭坛上依次摆着金色短杖、宝石圣杯、短剑和刻五芒星的金币", "en": "a golden rod, jewelled chalice, dagger and pentacle coin lie on the altar", "rws_ref": "four_suit_tools" },
+        { "id": "stone_altar", "region": "中央下方", "zh": "雕着哥特尖拱的石祭坛，搭着两条深红金纹布", "en": "a stone altar carved with gothic arches, draped with two crimson cloths", "rws_ref": "table" },
+        { "id": "open_hand_outward", "region": "中央右侧", "zh": "另一只手张开向外下方伸出", "en": "the other hand is open, reaching outward and downward", "rws_ref": "hand_pointing_down" },
+        { "id": "white_lilies", "region": "前景", "zh": "祭坛前开着白百合", "en": "white lilies bloom in front of the altar", "rws_ref": "white_lilies" },
+        { "id": "dark_red_roses", "region": "前景", "zh": "黑红色玫瑰与百合混在一起", "en": "dark red-black roses among the lilies", "rws_ref": "red_roses" },
+        { "id": "rose_window", "region": "背景", "zh": "身后是巨大的红色彩绘玫瑰窗", "en": "a large red stained-glass rose window behind", "rws_ref": null },
+        { "id": "candelabras", "region": "左右两侧", "zh": "两侧各有点燃的金色烛台", "en": "lit golden candelabras on both sides", "rws_ref": null },
+        { "id": "moon_window", "region": "右上", "zh": "右侧拱窗外可见满月与拱桥，左侧窗外是城堡", "en": "a full moon and arched bridge through the right window, a castle through the left", "rws_ref": null }
+      ],
+      "rws_absent": ["ouroboros_belt", "red_robe", "white_tunic", "headband"],
+      "naiwa_specific": ["黑红玫瑰", "哥特礼拜堂", "红色玫瑰窗", "烛台", "窗外满月"],
+      "lighting": { "zh": "烛光与红色彩窗的暖红光，权杖尖端发光", "en": "warm red light from candles and the stained-glass window, glowing wand tip" },
+      "notes": "scene 写「一手指地」，实际另一只手是张开手掌向外下方伸出，没有明确的手指指地动作；rws_ref 暂记 hand_pointing_down，需人工确认。玫瑰为黑红色，不是 RWS 的鲜红玫瑰。",
+      "review_status": "draft"
+    },
+    {
+      "artwork_id": "naiwa.classic.major_02",
+      "card_id": "major_02",
+      "artwork_version": 1,
+      "image": "public/cards/art-full/major_02.webp",
+      "visual_description": {
+        "zh": "黑白两根石柱之间，奶蛙披紫色斗篷、头戴银色新月冠，坐在哥特石座上抱着古卷；身后挂着石榴纹帷幕，座前有发光的新月和一池映着月光的水。",
+        "en": "Between a black and a white pillar, Naiwa in a purple mantle and silver crescent crown sits on a gothic stone throne holding a scroll; a pomegranate tapestry hangs behind, a glowing crescent rests before the seat above a moonlit pool."
+      },
+      "visual_symbols": [
+        { "id": "black_white_pillars", "region": "左右两侧", "zh": "左黑柱刻新月，右白柱刻太阳，都缠着金色藤纹", "en": "a black pillar with a crescent on the left, a white pillar with a sun on the right, both with gold vines", "rws_ref": "pillars_boaz_jachin" },
+        { "id": "scroll", "region": "奶蛙手中", "zh": "怀抱一卷画着星盘与月相的古卷", "en": "holds a scroll marked with a star compass and moon phases", "rws_ref": "tora_scroll" },
+        { "id": "pomegranate_veil", "region": "背景", "zh": "身后紫红帷幕上绣着裂开的石榴", "en": "a purple-red tapestry embroidered with split pomegranates behind", "rws_ref": "pomegranate_veil" },
+        { "id": "crescent_at_feet", "region": "中央下方", "zh": "座基前一弯发光的银色新月", "en": "a glowing silver crescent at the base of the seat", "rws_ref": "crescent_moon_at_feet" },
+        { "id": "crescent_crown", "region": "奶蛙头顶", "zh": "头戴镶紫宝石的银色新月头冠", "en": "a silver crescent crown set with a violet gem", "rws_ref": "triple_moon_crown" },
+        { "id": "moonlit_pool", "region": "前景", "zh": "座前一池水，漂着睡莲叶，倒映月光", "en": "a pool with lily pads reflecting moonlight", "rws_ref": "water" },
+        { "id": "purple_mantle", "region": "中央", "zh": "披着绣金纹的深紫色长斗篷", "en": "a long deep-purple mantle with gold embroidery", "rws_ref": "blue_robe" },
+        { "id": "lilies_and_roses", "region": "前景两侧", "zh": "两侧开着白百合与紫黑玫瑰", "en": "white lilies and purple-black roses on both sides", "rws_ref": null },
+        { "id": "moon_window", "region": "上方背景", "zh": "身后哥特尖窗外是满月和尖塔", "en": "a full moon and spires through the gothic window behind", "rws_ref": null }
+      ],
+      "rws_absent": ["letters_b_j", "solar_cross", "tora_inscription", "blue_robe"],
+      "naiwa_specific": ["紫黑玫瑰", "哥特尖窗与满月", "柱上的日月纹样", "睡莲水池"],
+      "lighting": { "zh": "紫色调月光，冷而柔和", "en": "soft cool violet moonlight" },
+      "notes": "scene 写「低矮的石座」，实际是有扶手和高背的哥特石座；scene 未提新月头冠和水池。柱子上没有 B/J 字母；古卷上没有 TORA 字样，只是星盘与月相图。斗篷是紫色不是蓝色。",
+      "review_status": "draft"
+    },
+    {
+      "artwork_id": "naiwa.classic.major_03",
+      "card_id": "major_03",
+      "artwork_version": 1,
+      "image": "public/cards/art-full/major_03.webp",
+      "visual_description": {
+        "zh": "常春藤与暗红玫瑰包围的花园里，奶蛙头戴缀星金冠，披米白绣金斗篷，靠坐在红丝绒金框宝座上，手持百合权杖；身旁是金星符号盾牌、石榴和金色麦穗。",
+        "en": "In a garden of ivy and dark red roses, Naiwa in a star-studded gold crown and cream embroidered mantle reclines on a red velvet gilded throne holding a lily sceptre; a Venus-symbol shield, pomegranates and golden wheat surround it."
+      },
+      "visual_symbols": [
+        { "id": "star_crown", "region": "奶蛙头顶", "zh": "金冠上方环绕着一圈金色星星", "en": "a gold crown ringed with golden stars", "rws_ref": "crown_of_twelve_stars" },
+        { "id": "venus_shield", "region": "右下", "zh": "宝座旁立着刻金星符号♀与月桂的盾牌", "en": "a shield bearing the Venus symbol and laurel beside the throne", "rws_ref": "venus_heart_shield" },
+        { "id": "golden_wheat", "region": "右下", "zh": "右下方一丛金色麦穗", "en": "a cluster of golden wheat at lower right", "rws_ref": "wheat" },
+        { "id": "pomegranates", "region": "左下与右侧", "zh": "完整和剖开的石榴散在花丛中", "en": "whole and split pomegranates among the plants", "rws_ref": "pomegranates" },
+        { "id": "lily_sceptre", "region": "奶蛙手中", "zh": "手持顶端开着白百合的金权杖", "en": "a gold sceptre topped with white lilies", "rws_ref": "scepter" },
+        { "id": "velvet_throne", "region": "中央", "zh": "红丝绒金框的宽大宝座", "en": "a wide red velvet throne with a gilded frame", "rws_ref": "cushioned_throne" },
+        { "id": "dark_red_roses", "region": "左侧与前景", "zh": "四周满是暗红近黑的玫瑰", "en": "dark red, near-black roses all around", "rws_ref": null },
+        { "id": "sunbeam", "region": "右上", "zh": "一束暖阳从右上方斜射下来", "en": "a warm sunbeam slants in from the upper right", "rws_ref": null },
+        { "id": "gothic_ruins", "region": "右上背景", "zh": "爬满藤蔓的哥特拱廊废墟", "en": "ivy-covered gothic arcade ruins", "rws_ref": null },
+        { "id": "cream_mantle", "region": "中央", "zh": "披着米白色绣金花纹斗篷，胸前红宝石扣", "en": "a cream mantle with gold floral embroidery and a ruby clasp", "rws_ref": null }
+      ],
+      "rws_absent": ["waterfall", "cypress_trees", "pomegranate_robe"],
+      "naiwa_specific": ["暗红玫瑰", "常春藤", "哥特拱廊废墟", "百合权杖"],
+      "lighting": { "zh": "暖金色斜射阳光", "en": "warm golden slanting sunlight" },
+      "notes": "scene 写「十二星冠」，画面中星星大约 9～10 颗可辨，无法确认是 12 颗；scene 写「暖光刚好落在肚子上」，实际光束从右上照进画面，没有明确落在肚子上。scene 未提金星盾牌和百合权杖。",
+      "review_status": "draft"
+    },
+    {
+      "artwork_id": "naiwa.classic.major_04",
+      "card_id": "major_04",
+      "artwork_version": 1,
+      "image": "public/cards/art-full/major_04.webp",
+      "visual_description": {
+        "zh": "血红色天空下，奶蛙戴红丝绒金冠，端坐在刻着四个公羊头的黑色石宝座上，一手十字顶权杖、一手金十字圆球；身后是锯齿状岩山和古拱桥。",
+        "en": "Under a blood-red sky, Naiwa in a gold crown sits upright on a black stone throne carved with four ram heads, cross-topped sceptre in one hand and gold orb in the other; jagged rock mountains and old aqueducts rise behind."
+      },
+      "visual_symbols": [
+        { "id": "ram_heads", "region": "宝座四角", "zh": "宝座顶端和扶手上共四个铜色公羊头", "en": "four bronze ram heads on the throne's top corners and armrests", "rws_ref": "ram_heads" },
+        { "id": "stone_throne", "region": "中央", "zh": "带尖顶装饰的黑色石宝座，立在台阶上", "en": "a spired black stone throne atop steps", "rws_ref": "stone_throne" },
+        { "id": "sceptre", "region": "奶蛙手中", "zh": "一手握顶端为十字花饰、镶红宝石的金权杖", "en": "holds a gold sceptre with a jewelled cross-fleury top", "rws_ref": "ankh_scepter" },
+        { "id": "orb", "region": "奶蛙手中", "zh": "另一手托着顶有十字的金色宝球", "en": "holds a gold orb topped with a cross", "rws_ref": "orb" },
+        { "id": "crown", "region": "奶蛙头顶", "zh": "戴着镶红宝石、内衬红丝绒的金冠", "en": "a gold crown with rubies and red velvet cap", "rws_ref": "crown" },
+        { "id": "barren_mountains", "region": "背景", "zh": "两侧是尖锐的灰色岩山，云雾缭绕", "en": "sharp grey rock mountains wrapped in mist", "rws_ref": "barren_mountains" },
+        { "id": "red_sky", "region": "上方背景", "zh": "翻涌的血红色天空", "en": "a churning blood-red sky", "rws_ref": "orange_sky" },
+        { "id": "eagle_mantle", "region": "左下", "zh": "红丝绒斗篷垂下，绣金色鹰纹", "en": "a red velvet mantle with gold eagle embroidery drapes down", "rws_ref": null },
+        { "id": "aqueducts", "region": "左右背景", "zh": "山间有几段古拱桥", "en": "old arched aqueducts among the mountains", "rws_ref": null }
+      ],
+      "rws_absent": ["armor", "white_beard", "river", "ankh"],
+      "naiwa_specific": ["哥特尖顶宝座", "鹰纹斗篷", "古拱桥"],
+      "lighting": { "zh": "血红天光与金色高光，对比强烈", "en": "blood-red skylight with strong gold highlights" },
+      "notes": "权杖顶端是十字花饰而非埃及安卡（ankh），rws_ref 只表示对应位置；宝座正面有鹰徽和鸢尾花纹。与 scene 基本一致。",
+      "review_status": "draft"
+    },
+    {
+      "artwork_id": "naiwa.classic.major_05",
+      "card_id": "major_05",
+      "artwork_version": 1,
+      "image": "public/cards/art-full/major_05.webp",
+      "visual_description": {
+        "zh": "哥特大教堂彩窗前，奶蛙戴三重冠、披深红绣金祭袍坐在石座上，举手祝福、手持三重十字杖；座前交叉两把金钥匙，两位戴兜帽的侍者跪在两侧。",
+        "en": "Before cathedral stained glass, Naiwa in a triple tiara and crimson gold-embroidered vestments sits on a stone throne, hand raised in blessing and holding a triple-cross staff; two golden keys cross before it and two hooded acolytes kneel at the sides."
+      },
+      "visual_symbols": [
+        { "id": "blessing_hand", "region": "左上", "zh": "一只手竖起两指做祝福手势", "en": "one hand raised with two fingers up in blessing", "rws_ref": "benediction_hand" },
+        { "id": "crossed_keys", "region": "中央下方", "zh": "座前台阶上交叉放着两把金钥匙", "en": "two golden keys crossed on the step before the throne", "rws_ref": "crossed_keys" },
+        { "id": "kneeling_acolytes", "region": "左下与右下", "zh": "两位披米白兜帽袍、红色十字圣带的侍者低头跪着", "en": "two acolytes in cream hooded robes with red cross stoles kneel, heads bowed", "rws_ref": "two_acolytes" },
+        { "id": "triple_tiara", "region": "奶蛙头顶", "zh": "戴着顶有十字的三重教冠", "en": "a triple tiara topped with a cross", "rws_ref": "triple_crown" },
+        { "id": "triple_cross_staff", "region": "奶蛙手中", "zh": "另一只手握金色三重十字杖", "en": "holds a gold triple-cross staff", "rws_ref": "papal_cross" },
+        { "id": "crimson_vestments", "region": "中央", "zh": "深红丝绒祭袍，圣带上绣金十字", "en": "crimson velvet vestments with gold crosses on the stole", "rws_ref": "red_robe" },
+        { "id": "cathedral_pillars", "region": "左右两侧", "zh": "两侧石柱壁龛里立着圣像", "en": "pillars on both sides with saint statues in niches", "rws_ref": "two_pillars" },
+        { "id": "censer_smoke", "region": "左侧", "zh": "左侧金色香炉冒出缕缕烟雾", "en": "smoke curls from a golden censer on the left", "rws_ref": null },
+        { "id": "stained_glass", "region": "背景", "zh": "身后是紫红色哥特彩窗", "en": "purple-red gothic stained glass behind", "rws_ref": null },
+        { "id": "candelabras_carpet", "region": "两侧与前景", "zh": "两侧烛台点着蜡烛，座前铺着红地毯", "en": "lit candelabras on both sides and a red carpet before the throne", "rws_ref": null }
+      ],
+      "rws_absent": ["rose_and_lily_robes"],
+      "naiwa_specific": ["哥特大教堂彩窗", "香炉烟雾", "壁龛圣像", "红地毯"],
+      "lighting": { "zh": "烛光暖金色，彩窗透出紫红光", "en": "warm gold candlelight with purple-red stained-glass glow" },
+      "notes": "scene 写「烛烟慢慢升起」，实际烟雾来自左侧的金色香炉，不是蜡烛；钥匙在座前台阶上而非地面。侍者袍上没有 RWS 的玫瑰/百合纹样，脸被兜帽遮住。",
+      "review_status": "draft"
+    },
+    {
+      "artwork_id": "naiwa.classic.major_06",
+      "card_id": "major_06",
+      "artwork_version": 1,
+      "image": "public/cards/art-full/major_06.webp",
+      "visual_description": {
+        "zh": "花园石径分岔处，两只一模一样的奶蛙手牵着手；左边是开暗红玫瑰的树，右边是结石榴、缠着一条蛇的树，长翼天使在高处云中张开双臂。",
+        "en": "Where a garden path forks, two identical Naiwas hold hands; on the left a tree of dark red roses, on the right a pomegranate tree with a serpent coiled around it, and a winged angel opens its arms in the clouds above."
+      },
+      "visual_symbols": [
+        { "id": "two_naiwas", "region": "中央", "zh": "两只一模一样的奶蛙并肩站立，手牵着手", "en": "two identical Naiwas stand side by side holding hands", "rws_ref": "two_lovers" },
+        { "id": "angel", "region": "上方", "zh": "带光环的长翼天使闭眼张开双臂，浮在云上", "en": "a haloed, winged angel with closed eyes opens its arms above the clouds", "rws_ref": "angel_raphael" },
+        { "id": "serpent", "region": "右侧", "zh": "右边树干上缠着一条吐信的蛇", "en": "a serpent coiled around the right tree, tongue out", "rws_ref": "serpent" },
+        { "id": "pomegranate_tree", "region": "右上", "zh": "右边的树结满红色石榴", "en": "the right tree is laden with red pomegranates", "rws_ref": "tree_of_knowledge" },
+        { "id": "rose_tree", "region": "左侧", "zh": "左边的树开满暗红玫瑰", "en": "the left tree is covered in dark red roses", "rws_ref": "tree_of_life" },
+        { "id": "forking_path", "region": "前景", "zh": "脚下石径分成左右两条，围成心形", "en": "the stone path splits left and right, forming a heart shape", "rws_ref": null },
+        { "id": "castle_waterfall", "region": "背景", "zh": "远处山谷里有哥特城堡、拱桥和瀑布", "en": "a gothic castle, arched bridge and waterfall in the distant valley", "rws_ref": "mountain" },
+        { "id": "white_lilies", "region": "右下", "zh": "右下角开着白百合", "en": "white lilies at lower right", "rws_ref": null },
+        { "id": "rose_petals", "region": "前景", "zh": "地上散落着红色花瓣", "en": "red petals scattered on the ground", "rws_ref": null }
+      ],
+      "rws_absent": ["sun", "flame_tree", "nude_figures"],
+      "naiwa_specific": ["两只相同的奶蛙", "暗红玫瑰树", "石榴树", "心形分岔小路", "哥特城堡"],
+      "lighting": { "zh": "天使身后的暖金光晕，四周紫色暮色", "en": "warm golden glow behind the angel against violet dusk" },
+      "notes": "scene 写「轻轻碰着小手」，实际两只奶蛙是手牵手；scene 写「红果」，实际为石榴；scene 完全没提右边树上的蛇，这是画面中很显眼的元素。左树开的是暗红玫瑰而非 scene 说的「黑玫瑰」（颜色偏暗红）。",
+      "review_status": "draft"
+    },
+    {
+      "artwork_id": "naiwa.classic.major_07",
+      "card_id": "major_07",
+      "artwork_version": 1,
+      "image": "public/cards/art-full/major_07.webp",
+      "visual_description": {
+        "zh": "风暴夜空下，奶蛙戴金冠、披星纹蓝斗篷，坐在缀满星星的蓝色华盖下，手握星轮权杖；前方一黑一白两只戴埃及头巾的狮身兽被金链连在一根横杆上，右后方是亮灯的城堡。",
+        "en": "Under a stormy night sky, Naiwa in a gold crown and star-patterned blue cape sits beneath a star-spangled blue canopy holding a star-wheel sceptre; a black and a white sphinx in Egyptian headdresses are chained to a crossbar in front, a lit castle behind to the right."
+      },
+      "visual_symbols": [
+        { "id": "black_white_sphinxes", "region": "左下与右下", "zh": "一黑一白两只戴蓝金条纹头巾的狮身兽卧在前方，黑的朝前、白的侧望右方", "en": "a black and a white sphinx in striped headdresses lie in front, the black facing forward, the white looking right", "rws_ref": "black_white_sphinxes" },
+        { "id": "star_canopy", "region": "上方", "zh": "头顶深蓝华盖上缀满金色星星", "en": "a deep blue canopy studded with gold stars overhead", "rws_ref": "starry_canopy" },
+        { "id": "star_sceptre", "region": "奶蛙手中", "zh": "手握顶端为星形轮盘的金色权杖", "en": "holds a gold sceptre topped with a star wheel", "rws_ref": "wand" },
+        { "id": "crown", "region": "奶蛙头顶", "zh": "戴着顶部有星形装饰的金冠", "en": "a gold crown with a star ornament", "rws_ref": "crown_with_star" },
+        { "id": "chains_crossbar", "region": "前景", "zh": "两只狮身兽之间用金链连在一根带星徽的横杆上", "en": "gold chains link the sphinxes to a star-emblem crossbar", "rws_ref": null },
+        { "id": "castle_city", "region": "右侧背景", "zh": "右后方是亮着灯火的哥特城堡和城门", "en": "a lit gothic castle and gate behind to the right", "rws_ref": "city_walls" },
+        { "id": "star_banner", "region": "左侧", "zh": "左侧竖着一面绣八芒星的蓝色旗帜", "en": "a blue banner with an eight-pointed star on the left", "rws_ref": null },
+        { "id": "star_emblem", "region": "中央下方", "zh": "座前镶着月桂环绕的八芒星徽", "en": "a laurel-wreathed eight-pointed star emblem on the front", "rws_ref": "winged_disk" },
+        { "id": "stormy_sky", "region": "背景", "zh": "翻涌的蓝黑风暴云", "en": "roiling blue-black storm clouds", "rws_ref": null }
+      ],
+      "rws_absent": ["chariot_wheels", "river", "crescent_moon_epaulettes", "lingam_shield", "breastplate_square"],
+      "naiwa_specific": ["金链连接的狮身兽", "八芒星徽记", "星旗", "哥特城堡"],
+      "lighting": { "zh": "风暴夜的冷蓝光，城堡灯火与金饰反光", "en": "cold blue storm light with castle lamps and gleaming gold" },
+      "notes": "画面中看不到车轮或车身，更像立在台阶上的华盖宝座；scene 写「站在小小的战车里，肚子顶着车沿」，实际奶蛙是坐着的，看不到车沿。scene 写「城门就在前方」，实际城堡在右后方背景。狮身兽被金链拴着，scene 未提。座前星徽对应 RWS 带翼圆盘的位置，但形态完全不同。",
+      "review_status": "draft"
+    },
+    {
+      "artwork_id": "naiwa.classic.major_08",
+      "card_id": "major_08",
+      "artwork_version": 1,
+      "image": "public/cards/art-full/major_08.webp",
+      "visual_description": {
+        "zh": "满月下的玫瑰废园里，一头巨大的黑狮闭着眼、低头趴着，奶蛙伸手轻按在它的额头上；奶蛙头顶浮着发光的无限符号。",
+        "en": "In a moonlit ruined rose garden, a huge black lion lies with eyes closed and head lowered as Naiwa rests a hand on its forehead; a glowing infinity sign floats above Naiwa."
+      },
+      "visual_symbols": [
+        { "id": "black_lion", "region": "右侧", "zh": "鬃毛浓密的巨大黑狮闭眼低头，神态安详", "en": "a huge black lion with a thick mane, eyes closed, head lowered and calm", "rws_ref": "lion" },
+        { "id": "hand_on_lion", "region": "中央", "zh": "奶蛙伸出一只手，整个手掌轻按在狮子额头", "en": "Naiwa reaches out and rests its whole palm on the lion's forehead", "rws_ref": "hands_on_lion" },
+        { "id": "infinity_sign", "region": "左上", "zh": "奶蛙头顶浮着发光的金色无限符号", "en": "a glowing golden infinity sign above Naiwa's head", "rws_ref": "lemniscate" },
+        { "id": "dark_red_roses", "region": "四周", "zh": "暗红玫瑰与常春藤爬满四周", "en": "dark red roses and ivy all around", "rws_ref": "roses" },
+        { "id": "lion_collar", "region": "右侧", "zh": "狮子颈上戴着镶红宝石的金饰项圈", "en": "the lion wears a gold collar set with a ruby", "rws_ref": null },
+        { "id": "full_moon", "region": "右上", "zh": "一轮满月", "en": "a full moon", "rws_ref": null },
+        { "id": "gothic_ruins", "region": "背景", "zh": "哥特拱门、废墟和柏树", "en": "gothic arches, ruins and cypress trees", "rws_ref": null },
+        { "id": "stone_steps", "region": "前景", "zh": "脚下是落着花瓣的石阶", "en": "petal-strewn stone steps underfoot", "rws_ref": null }
+      ],
+      "rws_absent": ["white_robe", "rose_garland_belt", "closing_lion_jaws", "mountain"],
+      "naiwa_specific": ["黑狮", "狮子的宝石项圈", "满月", "哥特废墟"],
+      "lighting": { "zh": "满月夜光加暖金色轮廓光", "en": "full-moon night light with warm gold rim light" },
+      "notes": "scene 写「用三根手指轻轻搭在它的鬃毛上」，实际是整只手掌按在狮子额头上，不是三根手指、也不在鬃毛上。狮子闭眼，不是在合拢下颌。",
+      "review_status": "draft"
+    },
+    {
+      "artwork_id": "naiwa.classic.major_09",
+      "card_id": "major_09",
+      "artwork_version": 1,
+      "image": "public/cards/art-full/major_09.webp",
+      "visual_description": {
+        "zh": "雪夜的岩峰顶上，奶蛙披着积雪的深色破斗篷，一手提着发光六芒星的提灯，一手拄扭曲木杖；满月高挂，远山上是哥特废墟。",
+        "en": "On a snowy rock summit at night, Naiwa wears a snow-dusted ragged dark cloak, holding a lantern with a glowing six-pointed star in one hand and a twisted wooden staff in the other; a full moon hangs above gothic ruins on distant peaks."
+      },
+      "visual_symbols": [
+        { "id": "star_lantern", "region": "奶蛙手中", "zh": "提着一盏铁艺提灯，灯里发光的六芒星", "en": "holds an iron lantern with a glowing six-pointed star inside", "rws_ref": "lantern_with_star" },
+        { "id": "staff", "region": "奶蛙手中", "zh": "另一手拄着顶端弯曲的扭曲木杖", "en": "leans on a twisted wooden staff with a curled top", "rws_ref": "staff" },
+        { "id": "snowy_peak", "region": "前景", "zh": "脚下是覆雪的岩石山顶", "en": "a snow-covered rocky summit underfoot", "rws_ref": "snowy_peak" },
+        { "id": "dark_cloak", "region": "中央", "zh": "披着积雪的深色破边短斗篷，扣着六芒星扣", "en": "a short ragged dark cloak dusted with snow, fastened with a hexagram clasp", "rws_ref": "hooded_cloak" },
+        { "id": "falling_snow", "region": "全画面", "zh": "雪花从夜空落下", "en": "snowflakes fall from the night sky", "rws_ref": null },
+        { "id": "full_moon", "region": "右上", "zh": "一轮满月", "en": "a full moon", "rws_ref": null },
+        { "id": "gothic_ruins", "region": "背景", "zh": "左右远山上各有哥特废墟", "en": "gothic ruins on distant peaks to both sides", "rws_ref": null },
+        { "id": "bare_trees", "region": "左下与右下", "zh": "山坡上几棵光秃枯树", "en": "a few bare dead trees on the slopes", "rws_ref": null }
+      ],
+      "rws_absent": ["grey_beard", "hood"],
+      "naiwa_specific": ["满月", "哥特废墟", "落雪", "六芒星斗篷扣"],
+      "lighting": { "zh": "雪夜冷月光，提灯暖光照亮脚下", "en": "cold snowy moonlight, the lantern's warm glow lighting the ground" },
+      "notes": "与 scene 基本一致。斗篷无兜帽、颜色为深灰黑色而非 RWS 的灰袍。左上云层带暗红色。",
+      "review_status": "draft"
+    },
+    {
+      "artwork_id": "naiwa.classic.major_10",
+      "card_id": "major_10",
+      "artwork_version": 1,
+      "image": "public/cards/art-full/major_10.webp",
+      "visual_description": {
+        "zh": "紫色星云中悬着一个满是齿轮和炼金符号的古金轮盘，顶上坐着带翼狮身兽，左侧一条蛇向下滑，右侧一个胡狼头人形向上攀；四角是天使、鹰、带翼狮和带翼牛，奶蛙站在下方废墟间的石台上。",
+        "en": "A gilded wheel full of gears and alchemical signs hangs in violet nebulae; a winged sphinx sits atop, a serpent slides down the left and a jackal-headed figure climbs the right; angel, eagle, winged lion and winged bull fill the corners while Naiwa stands on a stone platform among ruins below."
+      },
+      "visual_symbols": [
+        { "id": "golden_wheel", "region": "中央上方", "zh": "巨大的古金轮盘，内有齿轮、中心八芒星，外圈刻日、月、沙漏与炼金三角符号", "en": "a huge gilded wheel with gears, an eight-pointed star at its centre, and sun, moon, hourglass and alchemical triangle signs on its rim", "rws_ref": "wheel" },
+        { "id": "sphinx", "region": "上方", "zh": "轮顶坐着一只戴埃及头巾、带翅膀的狮身兽", "en": "a winged sphinx in an Egyptian headdress sits on top", "rws_ref": "sphinx" },
+        { "id": "serpent", "region": "左侧", "zh": "一条蛇沿轮盘左侧向下滑", "en": "a serpent slides down the left side of the wheel", "rws_ref": "typhon_serpent" },
+        { "id": "anubis", "region": "右侧", "zh": "一个胡狼头人形攀在轮盘右侧", "en": "a jackal-headed figure clings to the right side", "rws_ref": "anubis" },
+        { "id": "four_living_creatures", "region": "四角", "zh": "左上捧书的天使、右上鹰、左下咆哮的带翼狮、右下带翼牛", "en": "a book-holding angel top-left, eagle top-right, roaring winged lion bottom-left, winged bull bottom-right", "rws_ref": "four_living_creatures" },
+        { "id": "naiwa_on_platform", "region": "中央下方", "zh": "奶蛙站在下方圆形石台上，正面朝外", "en": "Naiwa stands on a round stone platform below, facing outward", "rws_ref": null },
+        { "id": "cosmic_sky", "region": "背景", "zh": "紫色星云、旋涡星系与一颗行星", "en": "violet nebulae, a spiral galaxy and a planet", "rws_ref": "clouds" },
+        { "id": "ruins", "region": "下方两侧", "zh": "云雾中的古柱和哥特拱门废墟", "en": "ancient columns and gothic arch ruins in mist", "rws_ref": null }
+      ],
+      "rws_absent": ["taro_letters", "tetragrammaton", "books_for_all_four_creatures"],
+      "naiwa_specific": ["齿轮轮盘", "旋涡星系", "古柱废墟", "沙漏符号"],
+      "lighting": { "zh": "宇宙星云紫光，金色轮盘自身发光", "en": "violet nebula light with a self-luminous golden wheel" },
+      "notes": "scene 没提右侧的胡狼头人形（对应 RWS 的阿努比斯），也没提下方废墟；scene 写「奶蛙站在轮底仰望」，实际奶蛙正面朝向观者，并没有抬头。狮身兽带翅膀。四活物中只有天使拿着书。轮盘上看不到 TARO 字母或希伯来字母。",
+      "review_status": "draft"
+    },
+    {
+      "artwork_id": "naiwa.classic.major_11",
+      "card_id": "major_11",
+      "artwork_version": 1,
+      "image": "public/cards/art-full/major_11.webp",
+      "visual_description": {
+        "zh": "深红丝绒帷幕与两根石柱之间，奶蛙披深红斗篷端坐在哥特石座上，一手竖举长剑、一手提天平，身后有金色放射光环；两侧柱上立着蒙眼的女神雕像。",
+        "en": "Between crimson velvet curtains and two stone pillars, Naiwa in a crimson cape sits on a gothic stone throne holding an upright sword and a pair of scales, a golden radiant halo behind; blindfolded goddess statues stand on the pillars."
+      },
+      "visual_symbols": [
+        { "id": "upright_sword", "region": "奶蛙手中", "zh": "一手竖直高举一把双刃长剑", "en": "one hand holds a double-edged sword upright", "rws_ref": "upright_sword" },
+        { "id": "scales", "region": "奶蛙手中", "zh": "另一手提着一架金色天平，两盘平衡", "en": "the other hand holds balanced golden scales", "rws_ref": "scales" },
+        { "id": "two_pillars", "region": "左右两侧", "zh": "两侧各一根深色石柱", "en": "a dark stone pillar on each side", "rws_ref": "two_pillars" },
+        { "id": "crimson_curtain", "region": "背景", "zh": "身后挂着厚重的深红丝绒帷幕", "en": "heavy crimson velvet curtains behind", "rws_ref": "veil" },
+        { "id": "radiant_halo", "region": "奶蛙头后", "zh": "头后一圈金色放射光环", "en": "a golden radiant halo behind the head", "rws_ref": null },
+        { "id": "justice_statues", "region": "左右两侧", "zh": "柱上立着手持月桂枝、双眼被布条遮住的女神雕像", "en": "goddess statues holding laurel sprigs with eyes covered by bands", "rws_ref": null },
+        { "id": "stone_throne", "region": "中央", "zh": "带尖拱的哥特石座，立在台阶上，基座刻月桂环绕的八芒星", "en": "a gothic stone throne on steps, its base carved with a laurel-wreathed eight-pointed star", "rws_ref": "throne" },
+        { "id": "candelabras", "region": "左右两侧", "zh": "两侧点着蜡烛的金色烛台", "en": "lit golden candelabras on both sides", "rws_ref": null },
+        { "id": "moon_ruins", "region": "上方背景", "zh": "帷幕开口处可见满月和废墟", "en": "a full moon and ruins visible through the curtain opening", "rws_ref": null }
+      ],
+      "rws_absent": ["crown_with_square", "purple_veil", "white_shoe"],
+      "naiwa_specific": ["蒙眼女神雕像", "金色光环", "满月", "八芒星徽"],
+      "lighting": { "zh": "烛光与月光交织，深红暖调", "en": "candle and moonlight in warm crimson tones" },
+      "notes": "scene 未提光环、雕像和满月。雕像的眼部覆有布条，疑似蒙眼的正义女神造型（RWS 正义牌本身并不蒙眼），未写入 rws_ref。",
+      "review_status": "draft"
+    },
+    {
+      "artwork_id": "naiwa.classic.major_12",
+      "card_id": "major_12",
+      "artwork_version": 1,
+      "image": "public/cards/art-full/major_12.webp",
+      "visual_description": {
+        "zh": "雾气弥漫的魔法森林里，一条发光的丝带把奶蛙的一只脚系在古树横枝上，奶蛙倒挂着、另一条腿弯在身后，双手自然下垂，头部周围亮起金色光环；树下是溪流、蜡烛和白百合。",
+        "en": "In a misty enchanted forest, a glowing ribbon ties one of Naiwa's feet to a great tree's horizontal bough; Naiwa hangs upside down, other leg bent behind, arms loose, a golden halo around its head, with a stream, candles and white lilies below."
+      },
+      "visual_symbols": [
+        { "id": "upside_down_naiwa", "region": "中央", "zh": "奶蛙头朝下倒挂，表情平静", "en": "Naiwa hangs upside down, expression calm", "rws_ref": "hanged_figure" },
+        { "id": "glowing_ribbon", "region": "中央上方", "zh": "一条发光的半透明丝带缠住一只脚，系在树枝上", "en": "a glowing translucent ribbon wraps one foot and ties to the branch", "rws_ref": "rope" },
+        { "id": "bent_leg", "region": "中央", "zh": "另一条腿弯曲架在身后", "en": "the other leg is bent behind", "rws_ref": "crossed_leg_figure_four" },
+        { "id": "halo", "region": "中央下方", "zh": "头部周围亮着金色放射光环", "en": "a golden radiant halo around the head", "rws_ref": "halo" },
+        { "id": "ancient_tree", "region": "上方", "zh": "长满苔藓和常春藤的巨大古树，横枝跨过画面上方", "en": "a huge mossy, ivy-covered tree whose bough spans the top", "rws_ref": "tau_tree" },
+        { "id": "loose_arms", "region": "中央", "zh": "双手自然下垂张开，没有被绑", "en": "arms hang loosely open, not bound", "rws_ref": null },
+        { "id": "candles", "region": "左右两侧", "zh": "两侧苔石上点着白蜡烛", "en": "white candles lit on mossy rocks on both sides", "rws_ref": null },
+        { "id": "stream", "region": "前景", "zh": "雾气中的林间溪流", "en": "a forest stream in mist", "rws_ref": null },
+        { "id": "white_lilies", "region": "左下与右下", "zh": "白百合", "en": "white lilies", "rws_ref": null },
+        { "id": "full_moon_ruins", "region": "背景", "zh": "树冠间可见满月，林中有哥特废墟", "en": "a full moon through the canopy and gothic ruins in the woods", "rws_ref": null }
+      ],
+      "rws_absent": ["hands_behind_back", "red_hose", "blue_tunic"],
+      "naiwa_specific": ["发光丝带", "蜡烛", "白百合", "哥特废墟", "满月"],
+      "lighting": { "zh": "森林雾气中的冷月光，光环与丝带发出暖金光", "en": "cold misty moonlight with warm gold from the halo and ribbon" },
+      "notes": "scene 写「T 形古树」，实际是一棵巨大古树的横枝，T 形结构不明显，rws_ref 暂记 tau_tree 待人工确认。双手垂下而非背在身后。",
+      "review_status": "draft"
+    },
+    {
+      "artwork_id": "naiwa.classic.major_13",
+      "card_id": "major_13",
+      "artwork_version": 1,
+      "image": "public/cards/art-full/major_13.webp",
+      "visual_description": {
+        "zh": "满月下的玫瑰废园里，奶蛙披着金纹黑色兜帽斗篷，骑白马、举着绣白玫瑰的黑色破旗；地上落着一顶金冠和红色花瓣，右侧两座哥特尖塔之间，太阳贴着地平线。",
+        "en": "In a moonlit ruined rose garden, Naiwa in a gold-trimmed black hooded cloak rides a white horse holding a tattered black banner with a white rose; a gold crown and red petals lie on the ground, and the sun sits on the horizon between gothic spires to the right."
+      },
+      "visual_symbols": [
+        { "id": "white_rose_banner", "region": "右上", "zh": "举着一面绣白玫瑰的黑色破边旗帜", "en": "a tattered black banner bearing a white rose", "rws_ref": "black_banner_white_rose" },
+        { "id": "white_horse", "region": "中央", "zh": "骑着一匹鬃毛卷曲、佩金饰马具的白马", "en": "rides a curly-maned white horse with ornate tack", "rws_ref": "white_horse" },
+        { "id": "black_hooded_cloak", "region": "中央", "zh": "披着绣金玫瑰纹的黑色兜帽斗篷", "en": "a black hooded cloak embroidered with gold roses", "rws_ref": null },
+        { "id": "fallen_crown", "region": "左下", "zh": "地上倒着一顶金冠", "en": "a gold crown lying on the ground", "rws_ref": "fallen_king" },
+        { "id": "sun_between_towers", "region": "右侧背景", "zh": "两座哥特尖塔之间，太阳贴着地平线发出橙光", "en": "the sun on the horizon between two gothic spires, glowing orange", "rws_ref": "sun_between_towers" },
+        { "id": "red_roses_petals", "region": "四周与前景", "zh": "四周爬满红玫瑰，地上散落红花瓣", "en": "red roses climb all around and red petals strew the ground", "rws_ref": null },
+        { "id": "white_roses", "region": "右侧", "zh": "右侧背景有一丛白玫瑰", "en": "a cluster of white roses on the right", "rws_ref": null },
+        { "id": "full_moon", "region": "左上", "zh": "一轮满月", "en": "a full moon", "rws_ref": null },
+        { "id": "gothic_ruins", "region": "背景", "zh": "爬满玫瑰的哥特拱门与断柱废墟", "en": "rose-covered gothic arches and broken columns", "rws_ref": null }
+      ],
+      "rws_absent": ["skeleton_in_armor", "bishop", "child_and_maiden", "river_with_boat"],
+      "naiwa_specific": ["黑色兜帽斗篷", "玫瑰废园", "满月与落日同框"],
+      "lighting": { "zh": "月夜冷光与地平线橙色晨/暮光", "en": "cold moonlight with orange dawn or dusk on the horizon" },
+      "notes": "scene 写「王冠…散落一地」（复数），实际只看到一顶金冠；园中玫瑰多为鲜红色，另有白玫瑰。白马体型正常，不显得「小」。地平线的太阳无法判断是升起还是落下，scene 写「天正在亮」。",
+      "review_status": "draft"
+    },
+    {
+      "artwork_id": "naiwa.classic.major_14",
+      "card_id": "major_14",
+      "artwork_version": 1,
+      "image": "public/cards/art-full/major_14.webp",
+      "visual_description": {
+        "zh": "月夜水池边，奶蛙背着一对白色羽翼、披白色绣金长袍，一只脚踏进水里、一只脚踩在岸石上，把银色的水从一只杯倒进另一只杯；远处蜿蜒小路通向群山间的太阳。",
+        "en": "By a moonlit pool, Naiwa with white feathered wings and a white gold-embroidered robe has one foot in the water and one on a rock, pouring silvery water from one cup into another; a winding road leads to a sun among distant mountains."
+      },
+      "visual_symbols": [
+        { "id": "pouring_cups", "region": "奶蛙手中", "zh": "从一只铜杯把发光的银色水流倒进另一只高脚杯", "en": "pours glowing silver water from one bronze cup into a goblet", "rws_ref": "two_cups_pouring" },
+        { "id": "one_foot_in_water", "region": "前景", "zh": "一只脚踩在水里，一只脚踏在岸边石上", "en": "one foot in the water, the other on a bank rock", "rws_ref": "one_foot_in_water" },
+        { "id": "white_wings", "region": "中央", "zh": "背后一对白色羽翼", "en": "a pair of white feathered wings", "rws_ref": "angel_wings" },
+        { "id": "winding_road_sun", "region": "右侧背景", "zh": "小路蜿蜒穿过山林，通向群山间的太阳", "en": "a road winds through the hills toward a sun among mountains", "rws_ref": "path_to_crown_sun" },
+        { "id": "white_lilies", "region": "左下与右下", "zh": "两侧开着白百合", "en": "white lilies on both sides", "rws_ref": "irises" },
+        { "id": "white_robe", "region": "中央", "zh": "白色绣金长袍，胸前三枚金色星纹圆扣", "en": "a white robe with gold embroidery and three gold star medallions", "rws_ref": "white_robe" },
+        { "id": "pool", "region": "前景", "zh": "泛着涟漪和光点的水池", "en": "a pool with ripples and glints of light", "rws_ref": "pool" },
+        { "id": "full_moon", "region": "左上", "zh": "一轮满月", "en": "a full moon", "rws_ref": null },
+        { "id": "ruined_arches", "region": "左右上方", "zh": "爬满开白花藤蔓的残破拱门", "en": "ruined arches covered with white-flowering vines", "rws_ref": null }
+      ],
+      "rws_absent": ["triangle_in_square", "solar_disc_on_forehead", "crown_in_sun"],
+      "naiwa_specific": ["满月", "白花藤蔓拱门废墟", "星纹圆扣"],
+      "lighting": { "zh": "月夜冷光，远处太阳的暖光，倒出的水泛银光", "en": "cool moonlight, warm light from the distant sun, silvery glowing water" },
+      "notes": "scene 写「小小的灰白翅膀」，实际翅膀较大、为白色；两只杯子形制不同（一只铜杯、一只高脚杯）。前景是白百合，RWS 原版是鸢尾，rws_ref 记 irises 仅表示位置对应。远处太阳是升是落无法判断。",
+      "review_status": "draft"
+    },
+    {
+      "artwork_id": "naiwa.classic.major_15",
+      "card_id": "major_15",
+      "artwork_version": 1,
+      "image": "public/cards/art-full/major_15.webp",
+      "visual_description": {
+        "zh": "血月下的哥特礼拜堂里，奶蛙戴着发箍式的小角、背着红色蝠翼、披深红斗篷，坐在刻五芒星和山羊头骨的黑石台上，手里倒持火炬；台下两个黑色小人影戴着项圈和锁链跪着，地上是打开的镣铐。",
+        "en": "In a gothic chapel under a blood moon, Naiwa wears headband horns, red bat wings and a crimson cape, sitting on a black stone pedestal carved with a pentagram and goat skull, holding a torch upside down; below, two small dark figures kneel in collars and chains beside open shackles."
+      },
+      "visual_symbols": [
+        { "id": "chained_figures", "region": "左下与右下", "zh": "台下两个低头跪着的黑色小人影，颈上戴金项圈连着锁链", "en": "two small dark figures kneel with bowed heads, gold collars linked to chains", "rws_ref": "chained_figures" },
+        { "id": "open_shackles", "region": "中央下方", "zh": "锁链末端的镣铐在地上张开着", "en": "the shackles at the chains' ends lie open on the floor", "rws_ref": "loose_chains" },
+        { "id": "inverted_torch", "region": "奶蛙手中", "zh": "一手倒持火炬，火焰朝下", "en": "holds a torch upside down, flame pointing downward", "rws_ref": "inverted_torch" },
+        { "id": "headband_horns", "region": "奶蛙头顶", "zh": "头上戴着一个带弯角的发箍", "en": "a headband with curved horns", "rws_ref": "horns" },
+        { "id": "bat_wings", "region": "奶蛙身后", "zh": "背后一对暗红色蝠翼", "en": "a pair of dark red bat wings", "rws_ref": "bat_wings" },
+        { "id": "black_pedestal", "region": "中央", "zh": "黑石台正面刻着五芒星和山羊头骨", "en": "a black stone pedestal carved with a pentagram and a goat skull", "rws_ref": "pedestal" },
+        { "id": "blood_moon", "region": "上方", "zh": "拱窗外一轮血红色月亮", "en": "a blood-red moon through the arch", "rws_ref": null },
+        { "id": "red_candles", "region": "左右两侧", "zh": "两侧点着淌蜡的红蜡烛", "en": "dripping red candles on both sides", "rws_ref": null },
+        { "id": "dark_roses", "region": "两侧与前景", "zh": "暗红玫瑰和散落的花瓣", "en": "dark red roses and scattered petals", "rws_ref": null },
+        { "id": "pentagram_clasp", "region": "中央", "zh": "斗篷扣是五芒星，胸前挂着金链", "en": "a pentagram cape clasp with a gold chain across the chest", "rws_ref": null }
+      ],
+      "rws_absent": ["inverted_pentagram_on_forehead", "raised_right_hand", "tails_on_figures", "horns_on_figures", "goat_legs"],
+      "naiwa_specific": ["发箍式小角", "血月", "哥特礼拜堂", "暗红玫瑰", "打开的镣铐"],
+      "lighting": { "zh": "血月红光与烛光，整体暗红", "en": "blood-moon red and candlelight, deep red overall" },
+      "notes": "与 scene 基本一致；「锁链是松的」在画面中体现为镣铐张开放在地上。石台与斗篷扣上的五芒星疑似正立（尖朝上），不是 RWS 额头的倒五芒星。小人影没有角和尾巴。",
+      "review_status": "draft"
+    },
+    {
+      "artwork_id": "naiwa.classic.major_16",
+      "card_id": "major_16",
+      "artwork_version": 1,
+      "image": "public/cards/art-full/major_16.webp",
+      "visual_description": {
+        "zh": "暴风雨夜，闪电劈中山顶的哥特高塔，塔顶起火，一顶金冠被掀上半空，石块四散；两缕发光的幽灵状光影坠落。奶蛙站在左前方爬满红藤的石阶上看着这一切。",
+        "en": "On a stormy night, lightning strikes a gothic tower on a hilltop; fire bursts from the top, a gold crown is flung into the air and stones scatter, while two glowing ghostly wisps fall. Naiwa stands on red-vined stone steps at front left, watching."
+      },
+      "visual_symbols": [
+        { "id": "lightning", "region": "右上", "zh": "一道橙色闪电劈中塔顶", "en": "an orange lightning bolt strikes the tower top", "rws_ref": "lightning" },
+        { "id": "burning_tower", "region": "右侧中央", "zh": "山顶的哥特高塔，塔顶和窗户里燃着火", "en": "a gothic tower on the summit with fire at the top and in its windows", "rws_ref": "tower" },
+        { "id": "flying_crown", "region": "上方中央", "zh": "一顶金冠被掀飞到半空", "en": "a gold crown flung into the air", "rws_ref": "falling_crown" },
+        { "id": "falling_debris", "region": "上方", "zh": "石块和火星四处飞散", "en": "stone blocks and sparks fly everywhere", "rws_ref": null },
+        { "id": "falling_wisps", "region": "中央左侧", "zh": "两缕发光的幽灵状光影向下坠落", "en": "two glowing ghost-like wisps falling downward", "rws_ref": "falling_figures" },
+        { "id": "naiwa_on_stairs", "region": "左下", "zh": "奶蛙站在前景石阶上，表情平静", "en": "Naiwa stands on the foreground stone steps, expression calm", "rws_ref": null },
+        { "id": "red_ivy_arch", "region": "左侧", "zh": "爬满红色藤叶的残破拱门", "en": "a ruined arch covered with red vine leaves", "rws_ref": null },
+        { "id": "storm_clouds", "region": "背景", "zh": "黑灰色风暴云，边缘透出橙光", "en": "black-grey storm clouds lit orange at the edges", "rws_ref": "dark_sky" },
+        { "id": "aqueducts", "region": "右下背景", "zh": "雾中的古拱桥和岩山", "en": "old aqueducts and crags in the mist", "rws_ref": "rocky_peak" }
+      ],
+      "rws_absent": ["yod_drops", "human_figures_falling"],
+      "naiwa_specific": ["红藤拱门", "幽灵光影", "古拱桥", "奶蛙作为旁观者"],
+      "lighting": { "zh": "暴风雨夜，闪电与火光照亮", "en": "stormy night lit by lightning and fire" },
+      "notes": "scene 写「靛色的风暴」，实际云层是黑灰色带橙光；scene 写奶蛙「站在远处」，实际奶蛙在左前景、离观者很近；scene 没提两缕下坠的发光幽灵光影——它们对应 RWS 坠落的人，但并不是清晰的人形，rws_ref 暂记 falling_figures 待确认。空中只有火星碎屑，没有 RWS 的 Yod 火滴。",
+      "review_status": "draft"
+    },
+    {
+      "artwork_id": "naiwa.classic.major_17",
+      "card_id": "major_17",
+      "artwork_version": 1,
+      "image": "public/cards/art-full/major_17.webp",
+      "visual_description": {
+        "zh": "星空下的池塘边，奶蛙站在岩石上，两手各提一只银壶：左边的壶把闪光的星水倒进池里，右边的壶浇在黑玫瑰上；头顶一颗八芒大星和一圈小星，左边开花的树上停着一只黑鸟。",
+        "en": "Under the stars by a pond, Naiwa stands on a rock with a silver pitcher in each hand: the left pours sparkling star-water into the pond, the right waters black roses; a great eight-pointed star and a ring of small stars shine above, and a black bird perches in a blossoming tree."
+      },
+      "visual_symbols": [
+        { "id": "eight_pointed_star", "region": "上方中央", "zh": "头顶一颗明亮的八芒大星", "en": "a bright large eight-pointed star overhead", "rws_ref": "great_star" },
+        { "id": "small_stars", "region": "上方", "zh": "大星周围环绕着一圈小星", "en": "a ring of small stars around the great star", "rws_ref": "seven_small_stars" },
+        { "id": "two_pitchers", "region": "奶蛙手中", "zh": "两手各提一只刻星纹的银壶", "en": "a star-engraved silver pitcher in each hand", "rws_ref": "two_pitchers" },
+        { "id": "pouring_into_pond", "region": "左下", "zh": "左壶的星光水流倒进池里，泛起光圈", "en": "the left pitcher pours starlit water into the pond, sending out rings of light", "rws_ref": "pouring_into_water" },
+        { "id": "watering_roses", "region": "右侧", "zh": "右壶的水浇在黑玫瑰丛上", "en": "the right pitcher waters a bush of black roses", "rws_ref": "pouring_onto_land" },
+        { "id": "black_bird", "region": "左上", "zh": "左侧开白花的树枝上停着一只黑鸟", "en": "a black bird perches on a white-blossomed branch at left", "rws_ref": "ibis_bird" },
+        { "id": "black_roses", "region": "右侧与前景", "zh": "黑玫瑰丛", "en": "black rose bushes", "rws_ref": null },
+        { "id": "pond", "region": "前景", "zh": "如镜的池塘倒映星光", "en": "a mirror-like pond reflecting starlight", "rws_ref": "pool" },
+        { "id": "waterfall_ruins", "region": "右侧背景", "zh": "瀑布、哥特拱门废墟和柏树", "en": "a waterfall, gothic arch ruins and cypress trees", "rws_ref": null },
+        { "id": "milky_way", "region": "背景", "zh": "紫色银河星空", "en": "a violet Milky Way sky", "rws_ref": null }
+      ],
+      "rws_absent": ["kneeling_figure", "foot_in_water", "nude_figure", "five_streams_on_land"],
+      "naiwa_specific": ["黑玫瑰", "开白花的树", "哥特废墟", "瀑布", "银河"],
+      "lighting": { "zh": "星光夜，银色星辉与紫色天幕", "en": "starlit night with silver glow and a violet sky" },
+      "notes": "scene 写「周围七颗小星」，画面中小星目测约 8 颗，难以确认为 7 颗，请人工数；奶蛙是站着的，双脚都在岸石上，没有 RWS 的跪姿和一脚踏水。树上的鸟是黑色鸦类，不是 RWS 的朱鹭，rws_ref 仅表示位置对应。",
+      "review_status": "draft"
+    },
+    {
+      "artwork_id": "naiwa.classic.major_18",
+      "card_id": "major_18",
+      "artwork_version": 1,
+      "image": "public/cards/art-full/major_18.webp",
+      "visual_description": {
+        "zh": "紫色雾气中，巨大的苍白满月挂在两座崖顶古塔之间，奶蛙站在蜿蜒小路上抱着戴红领结的黑兔玩偶；左边黑狗、右边白狼都仰头对月嚎叫，池里爬出一只小龙虾。",
+        "en": "In violet mist, an enormous pale full moon hangs between two clifftop towers; Naiwa stands on a winding path hugging a black rabbit plush with a red bow, a black dog on the left and a white wolf on the right howl at the moon, and a crayfish crawls from the pool."
+      },
+      "visual_symbols": [
+        { "id": "pale_moon", "region": "上方中央", "zh": "巨大的苍白满月", "en": "an enormous pale full moon", "rws_ref": "moon" },
+        { "id": "dog_and_wolf", "region": "左右两侧", "zh": "左边黑狗、右边白狼，都仰头对月嚎叫", "en": "a black dog on the left and a white wolf on the right, both howling at the moon", "rws_ref": "dog_and_wolf" },
+        { "id": "crayfish", "region": "左下", "zh": "一只红色小龙虾从池里爬出", "en": "a red crayfish crawls out of the pool", "rws_ref": "crayfish" },
+        { "id": "two_towers", "region": "左右上方", "zh": "两侧崖顶各有一座亮着窗灯的哥特古塔", "en": "a gothic tower with lit windows on each clifftop", "rws_ref": "two_towers" },
+        { "id": "winding_path", "region": "中央背景", "zh": "一条小路从脚下蜿蜒伸向远山", "en": "a path winds from underfoot into the distant hills", "rws_ref": "winding_path" },
+        { "id": "pool", "region": "前景", "zh": "倒映月亮的池塘，漂着睡莲", "en": "a pool reflecting the moon, with water lilies", "rws_ref": "pool" },
+        { "id": "rabbit_plush", "region": "奶蛙手中", "zh": "怀里抱着一只戴红领结的黑兔玩偶", "en": "hugs a black rabbit plush with a red bow", "rws_ref": null },
+        { "id": "purple_irises", "region": "左下与右下", "zh": "紫色鸢尾花", "en": "purple irises", "rws_ref": null },
+        { "id": "violet_clouds", "region": "背景", "zh": "紫色云雾", "en": "violet clouds and mist", "rws_ref": null }
+      ],
+      "rws_absent": ["moon_face", "yod_drops"],
+      "naiwa_specific": ["黑兔玩偶", "鸢尾与睡莲", "哥特古塔"],
+      "lighting": { "zh": "紫雾中的苍白月光", "en": "pale moonlight in violet mist" },
+      "notes": "与 scene 基本一致；scene 未提狗和狼都在对月嚎叫。黑狗毛色偏深褐黑。月亮没有人脸，也没有 RWS 的 Yod 光滴。",
+      "review_status": "draft"
+    },
+    {
+      "artwork_id": "naiwa.classic.major_19",
+      "card_id": "major_19",
+      "artwork_version": 1,
+      "image": "public/cards/art-full/major_19.webp",
+      "visual_description": {
+        "zh": "金色阳光下，奶蛙披红斗篷、骑着毛茸茸的小白马，举着绣太阳纹的红旗走过花园石径；身后矮石墙上方长着高大的向日葵，天上一张温和的金色太阳脸，远处是哥特尖塔。",
+        "en": "In golden sunlight, Naiwa in a red cape rides a fluffy white pony along a garden path holding a red banner with a sun emblem; tall sunflowers rise above a low stone wall, a gentle golden sun face shines above, and gothic spires stand in the distance."
+      },
+      "visual_symbols": [
+        { "id": "sun_face", "region": "右上", "zh": "放射光芒的金色太阳，带一张温和的人脸", "en": "a radiant golden sun with a gentle human face", "rws_ref": "sun_with_face" },
+        { "id": "white_pony", "region": "中央", "zh": "骑着一匹毛茸茸的小白马", "en": "rides a fluffy white pony", "rws_ref": "white_horse" },
+        { "id": "red_banner", "region": "左上", "zh": "举着一面绣金色太阳纹的红旗", "en": "holds a red banner with a gold sun emblem", "rws_ref": "red_banner" },
+        { "id": "sunflowers", "region": "背景", "zh": "墙后高大的向日葵，金黄花瓣、深色花心", "en": "tall sunflowers with golden petals and dark centres behind the wall", "rws_ref": "sunflowers" },
+        { "id": "stone_wall", "region": "中央背景", "zh": "爬满藤蔓、带哥特拱饰的矮石墙", "en": "a low vine-covered stone wall with gothic arches", "rws_ref": "wall" },
+        { "id": "red_cape", "region": "中央", "zh": "披着深红绣金斗篷", "en": "a crimson gold-embroidered cape", "rws_ref": null },
+        { "id": "flowers_foreground", "region": "前景", "zh": "路边是红色花朵和白百合", "en": "red flowers and white lilies line the path", "rws_ref": null },
+        { "id": "gothic_spires", "region": "背景", "zh": "远处的哥特尖塔与柏树", "en": "distant gothic spires and cypress trees", "rws_ref": null }
+      ],
+      "rws_absent": ["nude_child", "red_feather", "flower_wreath"],
+      "naiwa_specific": ["红斗篷", "哥特尖塔", "白百合"],
+      "lighting": { "zh": "满画面暖金色阳光", "en": "warm golden sunlight throughout" },
+      "notes": "scene 写「黑向日葵」，实际向日葵是金黄花瓣、深色花心，并不是黑色；scene 未提红旗上的太阳纹。",
+      "review_status": "draft"
+    },
+    {
+      "artwork_id": "naiwa.classic.major_20",
+      "card_id": "major_20",
+      "artwork_version": 1,
+      "image": "public/cards/art-full/major_20.webp",
+      "visual_description": {
+        "zh": "奶蛙背着黑白相间的羽翼、头后有金色放射光环，站在发光的云台上吹响金色号角，号角下挂着红十字白旗；云下的石棺纷纷打开，半透明的光灵顺着光束升起，周围开满白百合。",
+        "en": "With black-and-white feathered wings and a golden radiant halo, Naiwa stands on a glowing cloud blowing a golden trumpet hung with a white banner bearing a red cross; below, stone sarcophagi open and translucent spirits of light rise along the beams among white lilies."
+      },
+      "visual_symbols": [
+        { "id": "golden_trumpet", "region": "右上", "zh": "吹响一支金色号角", "en": "blows a golden trumpet", "rws_ref": "trumpet" },
+        { "id": "red_cross_banner", "region": "右上", "zh": "号角下挂着一面红十字白旗", "en": "a white banner with a red cross hangs from the trumpet", "rws_ref": "cross_banner" },
+        { "id": "open_coffins", "region": "下方", "zh": "刻十字的哥特石棺盖子掀开，里面透出光", "en": "gothic stone sarcophagi carved with crosses stand open, light spilling out", "rws_ref": "open_coffins" },
+        { "id": "rising_spirits", "region": "中央下方", "zh": "半透明的人形光灵顺着光束升起", "en": "translucent human-shaped spirits of light rise along the beams", "rws_ref": "rising_dead" },
+        { "id": "wings", "region": "奶蛙身后", "zh": "两侧翅膀都是白色上层、黑色下层的羽毛", "en": "both wings have white upper and black lower feathers", "rws_ref": "angel_wings" },
+        { "id": "cloud", "region": "中央", "zh": "脚下发光的云台，向下洒出光束", "en": "a glowing cloud underfoot casting beams downward", "rws_ref": "clouds" },
+        { "id": "halo", "region": "奶蛙头后", "zh": "头后一圈金色放射光环", "en": "a golden radiant halo behind the head", "rws_ref": null },
+        { "id": "white_lilies", "region": "前景", "zh": "四周开满白百合", "en": "white lilies all around", "rws_ref": null },
+        { "id": "mountains_ruins", "region": "背景", "zh": "雪山、瀑布、哥特拱廊废墟和山顶城堡", "en": "snowy mountains, waterfalls, gothic arcade ruins and a hilltop castle", "rws_ref": "snowy_mountains" }
+      ],
+      "rws_absent": ["nude_family", "sea"],
+      "naiwa_specific": ["黑白混色羽翼", "光灵", "哥特石棺", "白百合", "哥特废墟"],
+      "lighting": { "zh": "云中逆光，金色圣光束向下照射", "en": "backlit clouds with golden beams shining down" },
+      "notes": "scene 写「一黑一白的羽翼」，实际两只翅膀都是白色与黑色羽毛混合（上白下黑），并非一边黑一边白。复活者是半透明光灵，不是 RWS 的一家三口；石棺在云雾地面上，不是漂在海上。",
+      "review_status": "draft"
+    },
+    {
+      "artwork_id": "naiwa.classic.major_21",
+      "card_id": "major_21",
+      "artwork_version": 1,
+      "image": "public/cards/art-full/major_21.webp",
+      "visual_description": {
+        "zh": "紫色星云旋涡前，月桂叶、黑玫瑰和金丝带编成的椭圆花环中央，奶蛙失重般漂浮着，两手各握一支星顶礼杖；四角圆形徽章里分别是天使、鹰、狮和牛。",
+        "en": "Before a swirling violet nebula, at the centre of an oval wreath of laurel, black roses and gold ribbon, Naiwa floats weightlessly with a star-topped wand in each hand; round medallions in the four corners hold an angel, eagle, lion and bull."
+      },
+      "visual_symbols": [
+        { "id": "oval_wreath", "region": "中央", "zh": "月桂叶与黑玫瑰编成的椭圆花环，缠着金丝带，底部打蝴蝶结", "en": "an oval wreath of laurel and black roses wrapped in gold ribbon, tied with a bow at the bottom", "rws_ref": "laurel_wreath" },
+        { "id": "floating_naiwa", "region": "中央", "zh": "奶蛙悬浮在花环中央，双脚并拢", "en": "Naiwa floats in the centre of the wreath, feet together", "rws_ref": "dancing_figure" },
+        { "id": "two_wands", "region": "奶蛙手中", "zh": "两手各握一支顶端带星光的金色礼杖", "en": "a gold star-topped wand in each hand", "rws_ref": "two_wands" },
+        { "id": "four_living_creatures", "region": "四角", "zh": "四角圆形徽章：左上天使、右上鹰、左下狮、右下牛", "en": "round corner medallions: angel top-left, eagle top-right, lion bottom-left, bull bottom-right", "rws_ref": "four_living_creatures" },
+        { "id": "black_roses", "region": "花环上", "zh": "花环上点缀着多朵黑玫瑰", "en": "several black roses set into the wreath", "rws_ref": null },
+        { "id": "gold_ribbon", "region": "花环上", "zh": "缠绕花环的金色丝带", "en": "gold ribbon winding around the wreath", "rws_ref": "ribbons" },
+        { "id": "nebula_swirl", "region": "背景", "zh": "身后旋转的紫色星云旋涡", "en": "a swirling violet nebula behind", "rws_ref": null },
+        { "id": "golden_stars", "region": "背景", "zh": "散落的金色四芒星", "en": "scattered golden four-pointed stars", "rws_ref": null }
+      ],
+      "rws_absent": ["purple_sash", "crossed_legs", "red_lemniscate_ribbons"],
+      "naiwa_specific": ["黑玫瑰花环", "金丝带蝴蝶结", "星云旋涡", "圆形徽章"],
+      "lighting": { "zh": "紫色星空，金色星光与暖金反光", "en": "violet starry sky with golden starlight and warm gold highlights" },
+      "notes": "与 scene 基本一致。奶蛙双脚并拢，没有 RWS 的交叉腿姿势；丝带为金色，没有红色无限结。",
+      "review_status": "draft"
+    }
+  ]
+}

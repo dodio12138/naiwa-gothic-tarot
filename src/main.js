@@ -9,6 +9,8 @@ import { Q, onQuality, setQualityPick, tickFps } from './perf.js';
 import { renderShare } from './share.js';
 import { dailyFate, recordDaily, streak, drawnToday, collect, collected } from './journal.js';
 import { t, getLang, setLang, titleCase } from './i18n.js';
+import { sayStage, hush, setEnabled as setNaiwa } from './naiwa.js';
+import { openGame, closeGame, isGameOpen, relabelGame } from './game.js';
 
 /* ════════ 语言 ════════ */
 const isEn = () => getLang() === 'en';
@@ -89,6 +91,7 @@ const CFG = {
   autoDraw: false, autoReveal: false, skipIntro: false, reversed: true, revProb: 40,   // revProb：逆位概率（%）
   deck: 'full',   // full：完整 78 张；major：只用 22 张大阿卡纳
   parallax: true, lights: true, calm: false, sound: !audio.muted, ambient: true,
+  naiwa: true,   // 奶蛙气泡：仪式各阶段的低语
 };
 try { Object.assign(CFG, JSON.parse(localStorage.getItem(CFG_KEY) || '{}')); } catch { /* 无存储时用默认值 */ }
 // 当前牌组
@@ -235,7 +238,8 @@ function introIn() {
     }, 0.2)
     .from(['.lede', '.question'], { y: 20, opacity: 0, duration: 0.9, ease: 'power3.out', stagger: 0.1 }, 0.6)
     .from('.spread-btn', { y: 30, opacity: 0, scale: 0.94, duration: 0.9, ease: 'expo.out', stagger: 0.08 }, 0.8)
-    .from('.auto-toggle', { y: 30, opacity: 0, duration: 0.9, ease: 'expo.out' }, 0.96);
+    .from('.auto-toggle', { y: 30, opacity: 0, duration: 0.9, ease: 'expo.out' }, 0.96)
+    .add(() => { if (S.phase === 'intro') sayStage('opening'); }, 1.8);
   heroTl?.play();
   return tl;
 }
@@ -506,8 +510,10 @@ async function start(key) {
   S.fate = key === 'daily' ? dailyFate(deckCards().map((c) => c.id)) : null;
   S.replay = !!(S.fate && S.fate.drawn);   // 今天已经抽过：快速重放到揭示
   S.auto = CFG.autoDraw || S.replay;
+  hush();
   await introOut();
   hintBy(() => t(S.replay ? 'hDailyAgain' : S.auto ? 'hShuffleAuto' : 'hShuffle'));
+  if (!S.replay && !CFG.skipIntro) sayStage('shuffle');
   buildDeck();                       // 牌背立即可用；牌面在后台预载，翻牌前再确认
   motionBlur(true);
   if (CFG.skipIntro || S.replay) setSkipping(true);
@@ -690,6 +696,7 @@ function fanOut() {
   tl.add(() => {
     S.phase = 'pick';
     updatePickHint();
+    if (!S.auto) sayStage('pick');
     cards.forEach((c) => c.el.classList.add('in-fan'));
   }, 0.6);
   return tl;
@@ -871,6 +878,7 @@ async function afterPick() {
   rest.forEach((c) => c.el.classList.remove('in-fan'));
   const { W, H } = vp();
   audio.gather();
+  if (!S.replay) sayStage('gather');
   // 剩余牌收拢并沉没
   await gsap.timeline()
     .to(rest.map((c) => c.el), { x: W / 2, rotation: 0, duration: 0.5, ease: 'power3.in', stagger: { each: 0.01, from: 'edges' } })
@@ -938,6 +946,12 @@ function reveal(c) {
       c.el.dataset.tilt = 'on';
       gsap.set(c.el, { zIndex: 300 + c.slot });
       saveSession();
+      if (!S.replay) {
+        const first = S.picked.filter((x) => x.revealed).length === 1;
+        const left = S.picked.some((x) => !x.revealed);
+        if (c.data.dark && left) sayStage('revealDark');
+        else if (first && left) sayStage('reveal');
+      }
       onRevealed();
     },
   });
@@ -981,6 +995,7 @@ function onRevealed() {
   btnRevealAll.hidden = true;
   S.phase = 'done';
   hintBy(() => t(S.key === 'daily' ? 'hDailyDone' : 'hDone'));
+  sayStage(S.key === 'daily' ? 'daily' : S.picked.some((c) => c.data.dark) ? 'revealDark' : 'done');
   gsap.delayedCall(0.7, openReading);
 }
 
@@ -1228,6 +1243,24 @@ function closeCodex() {
 }
 $('#codex-btn').addEventListener('click', openCodex);
 $('#codex-link').addEventListener('click', openCodex);
+
+/* ════════ 奶蛙牌局（src/game.js） ════════ */
+async function enterGame() {
+  if (S.busy || S.phase !== 'intro') return;
+  S.busy = true;
+  S.phase = 'game';
+  audio.unlock(); audio.click();
+  hush();
+  await introOut();
+  S.busy = false;
+  openGame({ BACK, audio, fx }, async () => {
+    S.phase = 'intro';
+    S.busy = true;
+    await introIn();
+    S.busy = false;
+  });
+}
+$('#game-link').addEventListener('click', enterGame);
 codexEl.addEventListener('click', (e) => {
   if (e.target.closest('[data-close-codex]')) return closeCodex();
   const b = e.target.closest('.cx-card.got');
@@ -1326,8 +1359,9 @@ if (import.meta.env.DEV) window.__openShare = openShare;
 
 /* ════════ 重新开始 ════════ */
 async function restart() {
-  if (S.busy || S.phase === 'intro') return;
+  if (S.busy || S.phase === 'intro' || S.phase === 'game') return;
   S.busy = true;
+  hush();
   audio.restart();
   if (S.modalCard) closeModal();
   const { H } = vp();
@@ -1388,6 +1422,7 @@ function applyCfg() {
   applySpeed();
   document.body.classList.toggle('calm', CFG.calm);
   document.body.classList.toggle('no-lights', !CFG.lights);
+  setNaiwa(CFG.naiwa);
   if (!CFG.parallax) for (const t of tilts) t.set(0, 0);
   document.querySelectorAll('input[data-k]').forEach((i) => { i.checked = !!CFG[i.dataset.k]; });
   syncRevUI();
@@ -1477,6 +1512,8 @@ function applyLang(rerender = true) {
   $('.lede').innerHTML = t('lede');
   $('#question').placeholder = t('question');
   $('.auto-toggle span').textContent = t('autoToggle');
+  $('#game-link').textContent = t('gameLink');
+  relabelGame();
   btnRevealAll.textContent = t('revealAll');
   btnRestart.textContent = t('restart');
   btnSkip.textContent = t('skip');
@@ -1516,7 +1553,7 @@ btnLang.addEventListener('click', () => {
 });
 applyLang(false);
 renderHomeExtras();
-$('#brand').addEventListener('click', restart);
+$('#brand').addEventListener('click', () => (isGameOpen() ? closeGame() : restart()));
 btnRevealAll.addEventListener('click', revealAll);
 
 /* ════════ 窗口变化 ════════ */
