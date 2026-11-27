@@ -1,0 +1,2626 @@
+{
+  "$comment": "由 ai/scripts/build_minor.mjs 生成，请勿手改。traditional 是站内的通行解读；waite_1911 是韦特原文（英文）；golden_dawn_title 是黄金黎明称号。",
+  "generated_from": [
+    "data/cards.json",
+    "ai/sources/waite_pkt_minor.json",
+    "ai/sources/golden_dawn_minor_titles.json"
+  ],
+  "cards": [
+    {
+      "card_id": "wands_01",
+      "suit": "wands",
+      "rank": 1,
+      "name": {
+        "zh": "权杖王牌",
+        "en": "ACE OF WANDS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "灵感",
+            "创造",
+            "新的热情"
+          ],
+          "en": [
+            "Inspiration",
+            "Creation",
+            "New passion"
+          ]
+        },
+        "upright": {
+          "zh": "一束新的火苗刚刚点燃。灵感、勇气和想做点什么的冲动都在这里，抓住它，先动起来。",
+          "en": "A new spark has just caught. Inspiration, courage and the urge to make something are all here — seize it and start moving."
+        },
+        "reversed": {
+          "zh": "火点着了却烧不起来：拖延、方向不清，或热情被泼了冷水。先找回你为什么想做这件事。",
+          "en": "The spark won't catch: delay, unclear direction, or enthusiasm doused. Remember why you wanted to do this."
+        },
+        "correspondence": {
+          "zh": "火元素之根",
+          "en": "Root of Fire"
+        },
+        "correspondence_basis": "golden_dawn：元素力量之根（《777》已核对）"
+      },
+      "golden_dawn_title": "The Root of the Powers of Fire",
+      "waite_1911": {
+        "upright": "Creation, invention, enterprise, the powers which result in these; principle, beginning, source; birth, family, origin, and in a sense the virility which is behind them; the starting point of enterprises; according to another account, money, fortune, inheritance.",
+        "reversed": "Fall, decadence, ruin, perdition, to perish; also a certain clouded joy.",
+        "picture": "A hand issuing from a cloud grasps a stout wand or club."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Wands · Ace",
+        "crowley_777 · Col. CXXXIII（元素之根）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "wands_02",
+      "suit": "wands",
+      "rank": 2,
+      "name": {
+        "zh": "权杖二",
+        "en": "TWO OF WANDS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "规划",
+            "远见",
+            "抉择"
+          ],
+          "en": [
+            "Planning",
+            "Vision",
+            "Decision"
+          ]
+        },
+        "upright": {
+          "zh": "你站在城墙上看着更大的世界。机会在远方，现在是规划路线、决定要不要出发的时候。",
+          "en": "You stand on the battlements looking at a wider world. Opportunity lies far off; now is the time to plan the route and decide whether to go."
+        },
+        "reversed": {
+          "zh": "害怕离开熟悉的地方，或计划做了一半就停住。舒适区很安全，但也很小。",
+          "en": "Afraid to leave the familiar, or a plan stalled halfway. The comfort zone is safe — and small."
+        },
+        "correspondence": {
+          "zh": "白羊座第一旬 · 火星（0–10°）",
+          "en": "Mars in Aries · 1st decan (0–10°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Dominion",
+      "waite_1911": {
+        "upright": "Between the alternative readings there is no marriage possible; on the one hand, riches, fortune, magnificence; on the other, physical suffering, disease, chagrin, sadness, mortification. The design gives one suggestion; here is a lord overlooking his dominion and alternately contemplating a globe; it looks like the malady, the mortification, the sadness of Alexander amidst the grandeur of this world's wealth.",
+        "reversed": "Surprise, wonder, enchantment, emotion, trouble, fear.",
+        "picture": "A tall man looks from a battlemented roof over sea and shore; he holds a globe in his right hand, while a staff in his left rests on the battlement; another is fixed in a ring. The Rose and Cross and Lily should be noticed on the left side."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Wands · Two",
+        "crowley_777 · Col. CXXXIII（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "wands_03",
+      "suit": "wands",
+      "rank": 3,
+      "name": {
+        "zh": "权杖三",
+        "en": "THREE OF WANDS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "扩展",
+            "等待回报",
+            "远航"
+          ],
+          "en": [
+            "Expansion",
+            "Awaiting results",
+            "Setting sail"
+          ]
+        },
+        "upright": {
+          "zh": "船已经出发，你站在高处看它们远去。之前播下的努力正在向外扩展，耐心等待回音。",
+          "en": "The ships have sailed and you watch them go from high ground. What you set in motion is spreading outward — wait patiently for word back."
+        },
+        "reversed": {
+          "zh": "回报比预期来得慢，或者计划遇到阻滞。别急着撤回，检查一下航线。",
+          "en": "Returns are slower than hoped, or plans hit a snag. Don't recall the ships yet — check the course."
+        },
+        "correspondence": {
+          "zh": "白羊座第二旬 · 太阳（10–20°）",
+          "en": "the Sun in Aries · 2nd decan (10–20°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Established Strength",
+      "waite_1911": {
+        "upright": "He symbolizes established strength, enterprise, effort, trade, commerce, discovery; those are his ships, bearing his merchandise, which are sailing over the sea. The card also signifies able co-operation in business, as if the successful merchant prince were looking from his side towards yours with a view to help you.",
+        "reversed": "The end of troubles, suspension or cessation of adversity, toil and disappointment.",
+        "picture": "A calm, stately personage, with his back turned, looking from a cliff's edge at ships passing over the sea. Three staves are planted in the ground, and he leans slightly on one of them."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Wands · Three",
+        "crowley_777 · Col. CXXXIII（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "wands_04",
+      "suit": "wands",
+      "rank": 4,
+      "name": {
+        "zh": "权杖四",
+        "en": "FOUR OF WANDS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "庆祝",
+            "安定",
+            "归属"
+          ],
+          "en": [
+            "Celebration",
+            "Stability",
+            "Homecoming"
+          ]
+        },
+        "upright": {
+          "zh": "四根权杖搭成花门，到了值得庆祝的时刻：一段稳定、一次团聚，或一个阶段的圆满落成。",
+          "en": "Four wands form a garlanded gate — a time to celebrate: stability, a reunion, or a stage completed."
+        },
+        "reversed": {
+          "zh": "庆祝被打断，或者家里有些小摩擦。快乐还在，只是需要多一点包容。",
+          "en": "A celebration interrupted, or small frictions at home. The joy is still there; it needs a little patience."
+        },
+        "correspondence": {
+          "zh": "白羊座第三旬 · 金星（20–30°）",
+          "en": "Venus in Aries · 3rd decan (20–30°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Perfected Work",
+      "waite_1911": {
+        "upright": "They are for once almost on the surface—country life, haven of refuge, a species of domestic harvest-home, repose, concord, harmony, prosperity, peace, and the perfected work of these.",
+        "reversed": "The meaning remains unaltered; it is prosperity, increase, felicity, beauty, embellishment.",
+        "picture": "From the four great staves planted in the foreground there is a great garland suspended; two female figures uplift nose-gays; at their side is a bridge over a moat, leading to an old manorial house."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Wands · Four",
+        "crowley_777 · Col. CXXXIII（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "wands_05",
+      "suit": "wands",
+      "rank": 5,
+      "name": {
+        "zh": "权杖五",
+        "en": "FIVE OF WANDS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "竞争",
+            "摩擦",
+            "切磋"
+          ],
+          "en": [
+            "Competition",
+            "Friction",
+            "Sparring"
+          ]
+        },
+        "upright": {
+          "zh": "五根权杖乱作一团，大家都想表达自己。冲突不一定是坏事，它也可能是切磋和成长。",
+          "en": "Five wands clash at once — everyone wants to be heard. Conflict isn't always bad; it can be sparring that makes you grow."
+        },
+        "reversed": {
+          "zh": "回避冲突、憋着不说，或者争吵终于平息。也可能是该停止无意义的内耗了。",
+          "en": "Avoiding conflict and holding it in, or a quarrel finally dying down. Maybe it's time to stop pointless infighting."
+        },
+        "correspondence": {
+          "zh": "狮子座第一旬 · 土星（0–10°）",
+          "en": "Saturn in Leo · 1st decan (0–10°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Strife",
+      "waite_1911": {
+        "upright": "Imitation, as, for example, sham fight, but also the strenuous competition and struggle of the search after riches and fortune. In this sense it connects with the battle of life. Hence some attributions say that it is a card of gold, gain, opulence.",
+        "reversed": "Litigation, disputes, trickery, contradiction.",
+        "picture": "A posse of youths, who are brandishing staves, as if in sport or strife. It is mimic warfare, and hereto correspond the"
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Wands · Five",
+        "crowley_777 · Col. CXXXIII（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "wands_06",
+      "suit": "wands",
+      "rank": 6,
+      "name": {
+        "zh": "权杖六",
+        "en": "SIX OF WANDS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "胜利",
+            "认可",
+            "凯旋"
+          ],
+          "en": [
+            "Victory",
+            "Recognition",
+            "Triumph"
+          ]
+        },
+        "upright": {
+          "zh": "你骑着白马戴着桂冠回来了，大家在欢呼。努力被看见，此刻可以大方地接受掌声。",
+          "en": "You ride back on a white horse wearing laurels while people cheer. Your effort has been seen — accept the applause."
+        },
+        "reversed": {
+          "zh": "成功被延迟、没被认可，或者太在意别人的评价。也可能是骄傲让你跌了一跤。",
+          "en": "Success delayed or unrecognized, or too much concern for others' approval. Pride may also trip you up."
+        },
+        "correspondence": {
+          "zh": "狮子座第二旬 · 木星（10–20°）",
+          "en": "Jupiter in Leo · 2nd decan (10–20°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Victory",
+      "waite_1911": {
+        "upright": "The card has been so designed that it can cover several significations; on the surface, it is a victor triumphing, but it is also great news, such as might be carried in state by the King's courier; it is expectation crowned with its own desire, the crown of hope, and so forth.",
+        "reversed": "Apprehension, fear, as of a victorious enemy at the gate; treachery, disloyalty, as of gates being opened to the enemy; also indefinite delay.",
+        "picture": "A laurelled horseman bears one staff adorned with a laurel crown; footmen with staves are at his side."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Wands · Six",
+        "crowley_777 · Col. CXXXIII（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "wands_07",
+      "suit": "wands",
+      "rank": 7,
+      "name": {
+        "zh": "权杖七",
+        "en": "SEVEN OF WANDS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "坚守",
+            "捍卫",
+            "立场"
+          ],
+          "en": [
+            "Perseverance",
+            "Defence",
+            "Standing firm"
+          ]
+        },
+        "upright": {
+          "zh": "你站在高处，下面有六根权杖向你挑战。位置虽然有利但不轻松，坚持你的立场。",
+          "en": "You hold the high ground while six wands rise against you. The position is good but not easy — hold your stance."
+        },
+        "reversed": {
+          "zh": "感觉被围攻、精疲力尽，或者开始怀疑自己是否值得坚持。",
+          "en": "Feeling besieged and exhausted, or doubting whether it's worth holding on."
+        },
+        "correspondence": {
+          "zh": "狮子座第三旬 · 火星（20–30°）",
+          "en": "Mars in Leo · 3rd decan (20–30°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Valour",
+      "waite_1911": {
+        "upright": "It is a card of valour, for, on the surface, six are attacking one, who has, however, the vantage position. On the intellectual plane, it signifies discussion, wordy strife; in business—negotiations, war of trade, barter, competition. It is further a card of success, for the combatant is on the top and his enemies may be unable to reach him.",
+        "reversed": "Perplexity, embarrassments, anxiety. It is also a caution against indecision.",
+        "picture": "A young man on a craggy eminence brandishing a staff; six other staves are raised towards him from below."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Wands · Seven",
+        "crowley_777 · Col. CXXXIII（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "wands_08",
+      "suit": "wands",
+      "rank": 8,
+      "name": {
+        "zh": "权杖八",
+        "en": "EIGHT OF WANDS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "迅速",
+            "进展",
+            "消息"
+          ],
+          "en": [
+            "Speed",
+            "Momentum",
+            "News"
+          ]
+        },
+        "upright": {
+          "zh": "八根权杖划过晴空，事情突然快起来了：消息、行程和进展接踵而来。",
+          "en": "Eight wands streak across a clear sky — things suddenly speed up: news, travel and progress arrive in quick succession."
+        },
+        "reversed": {
+          "zh": "延误、误会或太着急。速度失控时，先停一下再出发。",
+          "en": "Delays, misunderstandings or haste. When speed runs away with you, pause before going again."
+        },
+        "correspondence": {
+          "zh": "射手座第一旬 · 水星（0–10°）",
+          "en": "Mercury in Sagittarius · 1st decan (0–10°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Swiftness",
+      "waite_1911": {
+        "upright": "Activity in undertakings, the path of such activity, swiftness, as that of an express messenger; great haste, great hope, speed towards an end which promises assured felicity; generally, that which is on the move; also the arrows of love.",
+        "reversed": "Arrows of jealousy, internal dispute, stingings of conscience, quarrels; and domestic disputes for persons who are married.",
+        "picture": "The card represents motion through the immovable—a flight of wands through an open country; but they draw to the term of their course. That which they signify is at hand; it may be even on the threshold."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Wands · Eight",
+        "crowley_777 · Col. CXXXIII（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "wands_09",
+      "suit": "wands",
+      "rank": 9,
+      "name": {
+        "zh": "权杖九",
+        "en": "NINE OF WANDS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "韧性",
+            "戒备",
+            "最后坚持"
+          ],
+          "en": [
+            "Resilience",
+            "Vigilance",
+            "Last stand"
+          ]
+        },
+        "upright": {
+          "zh": "你已经受过伤、很累了，但还站着。再撑一下，终点就在前面。",
+          "en": "You're bruised and tired, but still standing. Hold on a little longer — the finish is close."
+        },
+        "reversed": {
+          "zh": "戒备心太重、身心透支，或者终于决定放下防备休息。",
+          "en": "Too guarded, burned out, or finally deciding to lower your defences and rest."
+        },
+        "correspondence": {
+          "zh": "射手座第二旬 · 月亮（10–20°）",
+          "en": "the Moon in Sagittarius · 2nd decan (10–20°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Great Strength",
+      "waite_1911": {
+        "upright": "The card signifies strength in opposition. If attacked, the person will meet an onslaught boldly; and his build shews that he may prove a formidable antagonist. With this main significance there are all its possible adjuncts—delay, suspension, adjournment.",
+        "reversed": "Obstacles, adversity, calamity.",
+        "picture": "The figure leans upon his staff and has an expectant look, as if awaiting an enemy. Behind are eight other staves—erect, in orderly disposition, like a palisade."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Wands · Nine",
+        "crowley_777 · Col. CXXXIII（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "wands_10",
+      "suit": "wands",
+      "rank": 10,
+      "name": {
+        "zh": "权杖十",
+        "en": "TEN OF WANDS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "重担",
+            "责任",
+            "过度承担"
+          ],
+          "en": [
+            "Burden",
+            "Responsibility",
+            "Overload"
+          ]
+        },
+        "upright": {
+          "zh": "你抱着一大捆权杖走向远方的村庄，责任太多压得看不见前路。终点不远，但这样走太辛苦。",
+          "en": "You carry a huge bundle of wands toward a distant village, so loaded you can't see the road. The end is near, but this is too heavy."
+        },
+        "reversed": {
+          "zh": "终于学会放下一些担子，或者已经被压垮。分工、拒绝和休息都是能力。",
+          "en": "Finally setting some burdens down — or already crushed. Delegating, saying no and resting are skills too."
+        },
+        "correspondence": {
+          "zh": "射手座第三旬 · 土星（20–30°）",
+          "en": "Saturn in Sagittarius · 3rd decan (20–30°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Oppression",
+      "waite_1911": {
+        "upright": "A card of many significances, and some of the readings cannot be harmonized. I set aside that which connects it with honour and good faith. The chief meaning is oppression simply, but it is also fortune, gain, any kind of success, and then it is the oppression of these things. It is also a card of false-seeming, disguise, perfidy. The place which the figure is approaching may suffer from the rods that he carries. Success is stultified if the Nine of Swords follows, and if it is a question of a lawsuit, there will be certain loss.",
+        "reversed": "Contrarieties, difficulties, intrigues, and their analogies.",
+        "picture": "A man oppressed by the weight of the ten staves which he is carrying."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Wands · Ten",
+        "crowley_777 · Col. CXXXIII（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "wands_11",
+      "suit": "wands",
+      "rank": 11,
+      "name": {
+        "zh": "权杖侍从",
+        "en": "PAGE OF WANDS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "好奇",
+            "探索",
+            "新消息"
+          ],
+          "en": [
+            "Curiosity",
+            "Exploration",
+            "Fresh news"
+          ]
+        },
+        "upright": {
+          "zh": "一个充满好奇心的开始。新的兴趣、新的消息或一次说走就走的冒险正在召唤你。",
+          "en": "A curious beginning. A new interest, fresh news, or a spontaneous adventure is calling."
+        },
+        "reversed": {
+          "zh": "三分钟热度，或者有想法却不敢迈出第一步。",
+          "en": "Enthusiasm that fizzles fast, or ideas without the nerve to take the first step."
+        },
+        "correspondence": {
+          "zh": "火中之土（宫廷牌元素，现代常用对应）",
+          "en": "Earth of Fire (court element, common modern attribution)"
+        },
+        "correspondence_basis": "modern_convention：宫廷牌元素为现代常用对应（与黄金黎明的骑士火 / 王子风不同）"
+      },
+      "golden_dawn_title": null,
+      "waite_1911": {
+        "upright": "Dark young man, faithful, a lover, an envoy, a postman. Beside a man, he will bear favourable testimony concerning him. A dangerous rival, if followed by the Page of Cups. Has the chief qualities of his suit. He may signify family intelligence.",
+        "reversed": "Anecdotes, announcements, evil news. Also indecision and the instability which accompanies it.",
+        "picture": "In a scene similar to the former, a young man stands in the act of proclamation. He is unknown but faithful, and his tidings are strange."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Wands · Page"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "wands_12",
+      "suit": "wands",
+      "rank": 12,
+      "name": {
+        "zh": "权杖骑士",
+        "en": "KNIGHT OF WANDS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "冲劲",
+            "冒险",
+            "热烈"
+          ],
+          "en": [
+            "Energy",
+            "Adventure",
+            "Passion"
+          ]
+        },
+        "upright": {
+          "zh": "骑着前蹄扬起的骏马冲出去！行动力、热情和冒险精神正当时，适合大胆出击。",
+          "en": "Charge out on a rearing horse! Drive, passion and daring are at their peak — act boldly."
+        },
+        "reversed": {
+          "zh": "冲动鲁莽、半途而废，或者脾气急躁伤到了别人。",
+          "en": "Reckless, unfinished, or a short temper that hurts others."
+        },
+        "correspondence": {
+          "zh": "火中之风（宫廷牌元素，现代常用对应）",
+          "en": "Air of Fire (court element, common modern attribution)"
+        },
+        "correspondence_basis": "modern_convention：宫廷牌元素为现代常用对应（与黄金黎明的骑士火 / 王子风不同）"
+      },
+      "golden_dawn_title": null,
+      "waite_1911": {
+        "upright": "Departure, absence, flight, emigration. A dark young man, friendly. Change of residence.",
+        "reversed": "Rupture, division, interruption, discord.",
+        "picture": "He is shewn as if upon a journey, armed with a short wand, and although mailed is not on a warlike errand. He is passing mounds or pyramids. The motion of the horse is a key to the character of its rider, and suggests the precipitate mood, or things connected therewith."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Wands · Knight"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "wands_13",
+      "suit": "wands",
+      "rank": 13,
+      "name": {
+        "zh": "权杖王后",
+        "en": "QUEEN OF WANDS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "自信",
+            "魅力",
+            "热情"
+          ],
+          "en": [
+            "Confidence",
+            "Charisma",
+            "Warmth"
+          ]
+        },
+        "upright": {
+          "zh": "自信、温暖、有吸引力。你知道自己是谁，也敢让别人看见——像向日葵一样大方地朝向阳光。",
+          "en": "Confident, warm and magnetic. You know who you are and let others see it — turning toward the sun like a sunflower."
+        },
+        "reversed": {
+          "zh": "自信心动摇，或者用强势、嫉妒掩盖不安。",
+          "en": "Confidence shaken, or insecurity masked by domineering or jealousy."
+        },
+        "correspondence": {
+          "zh": "火中之水（宫廷牌元素，现代常用对应）",
+          "en": "Water of Fire (court element, common modern attribution)"
+        },
+        "correspondence_basis": "modern_convention：宫廷牌元素为现代常用对应（与黄金黎明的骑士火 / 王子风不同）"
+      },
+      "golden_dawn_title": null,
+      "waite_1911": {
+        "upright": "A dark woman, countrywoman, friendly, chaste, loving, honourable. If the card beside her signifies a man, she is well disposed towards him; if a woman, she is interested in the Querent. Also, love of money, or a certain success in business.",
+        "reversed": "Good, economical, obliging, serviceable. Signifies also—but in certain positions and in the neighbourhood of other cards tending in such directions—opposition, jealousy, even deceit and infidelity.",
+        "picture": "The Wands throughout this suit are always in leaf, as it is a suit of life and animation. Emotionally and otherwise, the Queen's personality corresponds to that of the King, but is more magnetic."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Wands · Queen"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "wands_14",
+      "suit": "wands",
+      "rank": 14,
+      "name": {
+        "zh": "权杖国王",
+        "en": "KING OF WANDS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "远见",
+            "领导",
+            "魄力"
+          ],
+          "en": [
+            "Vision",
+            "Leadership",
+            "Boldness"
+          ]
+        },
+        "upright": {
+          "zh": "有远见、有魄力的领导者。你看得到别人看不到的方向，并且能带着大家走过去。",
+          "en": "A visionary, bold leader. You see a direction others can't, and can lead them there."
+        },
+        "reversed": {
+          "zh": "独断专行、脾气暴躁，或空有愿景却不落地。",
+          "en": "Autocratic, hot-tempered, or full of vision with no follow-through."
+        },
+        "correspondence": {
+          "zh": "火中之火（宫廷牌元素，现代常用对应）",
+          "en": "Fire of Fire (court element, common modern attribution)"
+        },
+        "correspondence_basis": "modern_convention：宫廷牌元素为现代常用对应（与黄金黎明的骑士火 / 王子风不同）"
+      },
+      "golden_dawn_title": null,
+      "waite_1911": {
+        "upright": "Dark man, friendly, countryman, generally married, honest and conscientious. The card always signifies honesty, and may mean news concerning an unexpected heritage to fall in before very long.",
+        "reversed": "Good, but severe; austere, yet tolerant.",
+        "picture": "The physical and emotional nature to which this card is attributed is dark, ardent, lithe, animated, impassioned, noble. The King uplifts a flowering wand, and wears, like his three correspondences in the remaining suits, what is called a cap of maintenance beneath his crown. He connects with the symbol of the lion, which is emblazoned on the back of his throne."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Wands · King"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "cups_01",
+      "suit": "cups",
+      "rank": 1,
+      "name": {
+        "zh": "圣杯王牌",
+        "en": "ACE OF CUPS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "新的感情",
+            "满溢",
+            "接纳"
+          ],
+          "en": [
+            "New feelings",
+            "Overflow",
+            "Openness"
+          ]
+        },
+        "upright": {
+          "zh": "一只圣杯满溢而出，情感的源头被打开了。新的爱、新的友谊或一次深深的感动正在到来。",
+          "en": "A cup overflows — the wellspring of feeling opens. New love, friendship or a deep moment of being moved is arriving."
+        },
+        "reversed": {
+          "zh": "情感被压抑、心门紧闭，或者付出的爱没有被接住。",
+          "en": "Feelings held back, a closed heart, or love that wasn't received."
+        },
+        "correspondence": {
+          "zh": "水元素之根",
+          "en": "Root of Water"
+        },
+        "correspondence_basis": "golden_dawn：元素力量之根（《777》已核对）"
+      },
+      "golden_dawn_title": "The Root of the Powers of Water",
+      "waite_1911": {
+        "upright": "House of the true heart, joy, content, abode, nourishment, abun­dance, fertility; Holy Table, felicity hereof.",
+        "reversed": "House of the false heart, mutation, instability, revolution.",
+        "picture": "The waters are beneath, and thereon are water-lilies; the hand issues from the cloud, holding in its palm the cup, from which four streams are pouring; a dove, bearing in its bill a cross-marked Host, descends to place the Wafer in the Cup; the dew of water is falling on all sides. It is an intimation of that which may lie behind the Lesser Arcana"
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Cups · Ace",
+        "crowley_777 · Col. CXXXIV（元素之根）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "cups_02",
+      "suit": "cups",
+      "rank": 2,
+      "name": {
+        "zh": "圣杯二",
+        "en": "TWO OF CUPS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "结合",
+            "互相吸引",
+            "伙伴"
+          ],
+          "en": [
+            "Union",
+            "Mutual attraction",
+            "Partnership"
+          ]
+        },
+        "upright": {
+          "zh": "两个人举杯相对，心意互通。爱情、友情或合作中出现了平等而真诚的连结。",
+          "en": "Two people raise their cups to each other, hearts in tune. A balanced, sincere bond in love, friendship or partnership."
+        },
+        "reversed": {
+          "zh": "关系失衡、沟通不顺，或者一方开始退缩。",
+          "en": "An imbalanced bond, poor communication, or one side pulling back."
+        },
+        "correspondence": {
+          "zh": "巨蟹座第一旬 · 金星（0–10°）",
+          "en": "Venus in Cancer · 1st decan (0–10°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Love",
+      "waite_1911": {
+        "upright": "Love, passion, friendship, affinity, union, concord, sympathy, the interrelation of the sexes, and—as a suggestion apart from all offices of divination—that desire which is not in Nature, but by which Nature is sanctified.",
+        "reversed": null,
+        "picture": "A youth and maiden are pledging one another, and above their cups rises the Caduceus of Hermes, between the great wings of which there appears a lion's head. It is a variant of a sign which is found in a few old examples of this card. Some curious emblematical meanings are attached to it, but they do not concern us in this place."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Cups · Two",
+        "crowley_777 · Col. CXXXIV（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "cups_03",
+      "suit": "cups",
+      "rank": 3,
+      "name": {
+        "zh": "圣杯三",
+        "en": "THREE OF CUPS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "友谊",
+            "庆祝",
+            "相聚"
+          ],
+          "en": [
+            "Friendship",
+            "Celebration",
+            "Community"
+          ]
+        },
+        "upright": {
+          "zh": "朋友们举杯欢庆，丰收与喜悦一起分享。适合聚会、团聚和庆祝小小的成功。",
+          "en": "Friends raise their cups together, sharing harvest and joy. A time for gatherings, reunions and celebrating small wins."
+        },
+        "reversed": {
+          "zh": "聚会过度、八卦是非，或者在人群中感到孤单。",
+          "en": "Overindulgence, gossip, or feeling lonely in a crowd."
+        },
+        "correspondence": {
+          "zh": "巨蟹座第二旬 · 水星（10–20°）",
+          "en": "Mercury in Cancer · 2nd decan (10–20°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Abundance",
+      "waite_1911": {
+        "upright": "The conclusion of any matter in plenty, perfection and merriment; happy issue, victory, fulfilment, solace, healing.",
+        "reversed": "Expedition, dispatch, achievement, end. It signifies also the side of excess in physical enjoyment, and the pleasures of the senses.",
+        "picture": "Maidens in a garden-ground with cups uplifted, as if pledging one another."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Cups · Three",
+        "crowley_777 · Col. CXXXIV（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "cups_04",
+      "suit": "cups",
+      "rank": 4,
+      "name": {
+        "zh": "圣杯四",
+        "en": "FOUR OF CUPS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "倦怠",
+            "冷淡",
+            "忽视的机会"
+          ],
+          "en": [
+            "Apathy",
+            "Contemplation",
+            "Missed offer"
+          ]
+        },
+        "upright": {
+          "zh": "面前摆着三只杯子你都提不起兴趣，旁边递来的第四只也没注意到。也许不是没有好东西，而是你需要先休息。",
+          "en": "Three cups before you and none appeal; you don't even notice the fourth being offered. Perhaps good things exist — you just need rest first."
+        },
+        "reversed": {
+          "zh": "从低落中走出来，重新对生活产生兴趣，开始接住新的机会。",
+          "en": "Coming out of a slump, curious again, ready to accept new chances."
+        },
+        "correspondence": {
+          "zh": "巨蟹座第三旬 · 月亮（20–30°）",
+          "en": "the Moon in Cancer · 3rd decan (20–30°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Blended Pleasure",
+      "waite_1911": {
+        "upright": "Weariness, disgust, aversion, imaginary vexations, as if the wine of this world had caused satiety only; another wine, as if a fairy gift, is now offered the wastrel, but he sees no consolation therein. This is also a card of blended pleasure.",
+        "reversed": "Novelty, presage, new instruction, new relations.",
+        "picture": "A young man is seated under a tree and contemplates three cups set on the grass before him; an arm issuing from a cloud offers him another cup. His expression notwithstanding is one of discontent with his environment."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Cups · Four",
+        "crowley_777 · Col. CXXXIV（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "cups_05",
+      "suit": "cups",
+      "rank": 5,
+      "name": {
+        "zh": "圣杯五",
+        "en": "FIVE OF CUPS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "失落",
+            "遗憾",
+            "哀悼"
+          ],
+          "en": [
+            "Loss",
+            "Regret",
+            "Grief"
+          ]
+        },
+        "upright": {
+          "zh": "三只杯子倒了，你只顾看着洒掉的部分。悲伤是真实的，但身后还有两只杯子立着。",
+          "en": "Three cups have spilled and you only see the loss. The grief is real — but two cups still stand behind you."
+        },
+        "reversed": {
+          "zh": "慢慢从失落中走出来，开始接受、原谅，转身看向还剩下的。",
+          "en": "Slowly recovering from loss, accepting, forgiving, turning to what remains."
+        },
+        "correspondence": {
+          "zh": "天蝎座第一旬 · 火星（0–10°）",
+          "en": "Mars in Scorpio · 1st decan (0–10°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Loss in Pleasure",
+      "waite_1911": {
+        "upright": "It is a card of loss, but something remains over; three have been taken, but two are left; it is a card of inheritance, patrimony, transmission, but not corresponding to expectations; with some interpreters it is a card of marriage, but not without bitterness or frustration.",
+        "reversed": "News, alliances, affinity, consanguinity, ancestry, return, false projects.",
+        "picture": "A dark, cloaked figure, looking sideways at three prone cups; two others stand upright behind him; a bridge is in the background, leading to a small keep or holding."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Cups · Five",
+        "crowley_777 · Col. CXXXIV（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "cups_06",
+      "suit": "cups",
+      "rank": 6,
+      "name": {
+        "zh": "圣杯六",
+        "en": "SIX OF CUPS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "回忆",
+            "纯真",
+            "善意"
+          ],
+          "en": [
+            "Nostalgia",
+            "Innocence",
+            "Kindness"
+          ]
+        },
+        "upright": {
+          "zh": "小时候的花园、旧日的朋友、单纯的善意。回忆带来温暖，也提醒你保留那份纯真。",
+          "en": "A childhood garden, old friends, simple kindness. Memory brings warmth and reminds you to keep that innocence."
+        },
+        "reversed": {
+          "zh": "困在过去不肯往前，或者把回忆美化得太过。",
+          "en": "Stuck in the past, or remembering it as better than it was."
+        },
+        "correspondence": {
+          "zh": "天蝎座第二旬 · 太阳（10–20°）",
+          "en": "the Sun in Scorpio · 2nd decan (10–20°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Pleasure",
+      "waite_1911": {
+        "upright": "A card of the past and of memories, looking back, as—for example—on childhood; happiness, enjoyment, but coming rather from the past; things that have vanished. Another reading reverses this, giving new relations, new knowledge, new environment, and then the children are disporting in an unfamiliar precinct.",
+        "reversed": "The future, renewal, that which will come to pass presently.",
+        "picture": "Children in an old garden, their cups filled with flowers."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Cups · Six",
+        "crowley_777 · Col. CXXXIV（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "cups_07",
+      "suit": "cups",
+      "rank": 7,
+      "name": {
+        "zh": "圣杯七",
+        "en": "SEVEN OF CUPS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "幻想",
+            "选择太多",
+            "迷惑"
+          ],
+          "en": [
+            "Illusion",
+            "Too many choices",
+            "Daydreams"
+          ]
+        },
+        "upright": {
+          "zh": "七只杯子漂在云里，每只都装着诱人的幻象。想象力很美，但要分清哪些是真的、哪些只是梦。",
+          "en": "Seven cups float in the clouds, each holding a tempting vision. Imagination is lovely, but tell the real from the dream."
+        },
+        "reversed": {
+          "zh": "从幻想中醒来，看清现实并做出选择。",
+          "en": "Waking from fantasy, seeing clearly, and making a choice."
+        },
+        "correspondence": {
+          "zh": "天蝎座第三旬 · 金星（20–30°）",
+          "en": "Venus in Scorpio · 3rd decan (20–30°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Illusionary Success",
+      "waite_1911": {
+        "upright": "Fairy favours, images of reflection, sentiment, imagination, things seen in the glass of contemplation; some attainment in these degrees, but nothing permanent or substantial is suggested.",
+        "reversed": "Desire, will, determination, project.",
+        "picture": "Strange chalices of vision, but the images are more especially those of the fantastic spirit."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Cups · Seven",
+        "crowley_777 · Col. CXXXIV（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "cups_08",
+      "suit": "cups",
+      "rank": 8,
+      "name": {
+        "zh": "圣杯八",
+        "en": "EIGHT OF CUPS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "离开",
+            "寻找意义",
+            "放下"
+          ],
+          "en": [
+            "Walking away",
+            "Seeking meaning",
+            "Letting go"
+          ]
+        },
+        "upright": {
+          "zh": "八只杯子码得整整齐齐，你却选择离开。不是它们不好，而是你需要去寻找更深的东西。",
+          "en": "Eight cups stacked neatly — and you walk away. Not because they're bad, but because you need something deeper."
+        },
+        "reversed": {
+          "zh": "想走却走不了，或走了又回头；也可能是害怕面对内心的空缺。",
+          "en": "Wanting to leave but unable, or leaving and coming back; perhaps fearing the emptiness inside."
+        },
+        "correspondence": {
+          "zh": "双鱼座第一旬 · 土星（0–10°）",
+          "en": "Saturn in Pisces · 1st decan (0–10°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Abandoned Success",
+      "waite_1911": {
+        "upright": "The card speaks for itself on the surface, but other readings are entirely antithetical—giving joy, mildness, timidity, honour, modesty. In practice, it is usually found that the card shews the decline of a matter, or that a matter which has been thought to be important is really of slight consequence—either for good or evil.",
+        "reversed": "Great joy, happiness, feasting.",
+        "picture": "A man of dejected aspect is deserting the cups of his felicity, enterprise, under-taking or previous concern."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Cups · Eight",
+        "crowley_777 · Col. CXXXIV（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "cups_09",
+      "suit": "cups",
+      "rank": 9,
+      "name": {
+        "zh": "圣杯九",
+        "en": "NINE OF CUPS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "满足",
+            "愿望成真",
+            "享受"
+          ],
+          "en": [
+            "Contentment",
+            "Wish fulfilled",
+            "Pleasure"
+          ]
+        },
+        "upright": {
+          "zh": "俗称「愿望牌」。九只杯子摆成一排，你满意地坐着——想要的东西大多已经得到，好好享受吧。",
+          "en": "Known as the 'wish card'. Nine cups in a row and you sit contentedly — most of what you wanted is here. Enjoy it."
+        },
+        "reversed": {
+          "zh": "得到了却仍不满足，或者过度沉溺于享乐。",
+          "en": "Having it all yet still unsatisfied, or indulging too much."
+        },
+        "correspondence": {
+          "zh": "双鱼座第二旬 · 木星（10–20°）",
+          "en": "Jupiter in Pisces · 2nd decan (10–20°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Material Happiness",
+      "waite_1911": {
+        "upright": "Concord, contentment, physical bien-être; also victory, success, advantage; satisfaction for the Querent or person for whom the consultation is made.",
+        "reversed": "Truth, loyalty, liberty; but the readings vary and include mistakes, imperfections, etc.",
+        "picture": "A goodly personage has feasted to his heart's content, and abundant refreshment of wine is on the arched counter behind him, seeming to indicate that the future is also assured. The picture offers the material side only, but there are other aspects."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Cups · Nine",
+        "crowley_777 · Col. CXXXIV（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "cups_10",
+      "suit": "cups",
+      "rank": 10,
+      "name": {
+        "zh": "圣杯十",
+        "en": "TEN OF CUPS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "圆满",
+            "家庭",
+            "和睦"
+          ],
+          "en": [
+            "Harmony",
+            "Family",
+            "Lasting happiness"
+          ]
+        },
+        "upright": {
+          "zh": "彩虹上挂着十只杯子，一家人在河边欢欣起舞。情感上的圆满与长久的幸福。",
+          "en": "Ten cups arc across a rainbow while a family dances by the river. Emotional fulfilment and lasting happiness."
+        },
+        "reversed": {
+          "zh": "家庭不和、价值观冲突，或对「完美家庭」的期待太高。",
+          "en": "Family discord, clashing values, or too-high expectations of the perfect family."
+        },
+        "correspondence": {
+          "zh": "双鱼座第三旬 · 火星（20–30°）",
+          "en": "Mars in Pisces · 3rd decan (20–30°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Perfected Success",
+      "waite_1911": {
+        "upright": "Contentment, repose of the entire heart; the perfection of that state; also perfection of human love and friendship; if with several picture-cards, a person who is taking charge of the Querent's interests; also the town, village or country inhabited by the Querent.",
+        "reversed": "Repose of the false heart, indignation, violence.",
+        "picture": "Appearance of Cups in a rainbow; it is contemplated in wonder and ecstacy by a man and woman below, evidently husband and wife. His right arm is about her; his left is raised upward; she raises her right arm. The two children dancing near them have not observed the prodigy but are happy after their own manner. There is a home-scene beyond."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Cups · Ten",
+        "crowley_777 · Col. CXXXIV（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "cups_11",
+      "suit": "cups",
+      "rank": 11,
+      "name": {
+        "zh": "圣杯侍从",
+        "en": "PAGE OF CUPS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "感性",
+            "惊喜",
+            "创意萌芽"
+          ],
+          "en": [
+            "Sensitivity",
+            "Surprise",
+            "Creative spark"
+          ]
+        },
+        "upright": {
+          "zh": "杯子里探出一条小鱼——意想不到的惊喜、温柔的心意或一个创意的萌芽。保持一颗柔软好奇的心。",
+          "en": "A little fish peeks out of the cup — an unexpected surprise, a tender message, or a creative spark. Keep a soft, curious heart."
+        },
+        "reversed": {
+          "zh": "情绪化、不切实际，或者把心意藏着不敢表达。",
+          "en": "Moody, unrealistic, or hiding feelings out of shyness."
+        },
+        "correspondence": {
+          "zh": "水中之土（宫廷牌元素，现代常用对应）",
+          "en": "Earth of Water (court element, common modern attribution)"
+        },
+        "correspondence_basis": "modern_convention：宫廷牌元素为现代常用对应（与黄金黎明的骑士火 / 王子风不同）"
+      },
+      "golden_dawn_title": null,
+      "waite_1911": {
+        "upright": "Fair young man, one impelled to render service and with whom the Querent will be connected; a studious youth; news, message; application, reflection, meditation; also these things directed to business.",
+        "reversed": "Taste, inclination, attachment, seduction, deception, artifice.",
+        "picture": "A fair, pleasing, somewhat effeminate page, of studious and intent aspect, contemplates a fish rising from a cup to look at him. It is the pictures of the mind taking form."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Cups · Page"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "cups_12",
+      "suit": "cups",
+      "rank": 12,
+      "name": {
+        "zh": "圣杯骑士",
+        "en": "KNIGHT OF CUPS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "浪漫",
+            "邀请",
+            "追随内心"
+          ],
+          "en": [
+            "Romance",
+            "Invitation",
+            "Following the heart"
+          ]
+        },
+        "upright": {
+          "zh": "骑士捧着杯子缓缓渡河而来，带来浪漫的邀请或一个由心出发的提议。跟着感觉走。",
+          "en": "The knight crosses the river slowly, cup held forward — a romantic invitation or a heartfelt proposal. Follow your feelings."
+        },
+        "reversed": {
+          "zh": "甜言蜜语不可靠，或情绪化、不切实际的追求。",
+          "en": "Sweet talk you can't trust, or a moody, unrealistic pursuit."
+        },
+        "correspondence": {
+          "zh": "水中之风（宫廷牌元素，现代常用对应）",
+          "en": "Air of Water (court element, common modern attribution)"
+        },
+        "correspondence_basis": "modern_convention：宫廷牌元素为现代常用对应（与黄金黎明的骑士火 / 王子风不同）"
+      },
+      "golden_dawn_title": null,
+      "waite_1911": {
+        "upright": "Arrival, approach—sometimes that of a messenger; advances, proposition, demeanour, invitation, incitement.",
+        "reversed": "Trickery, artifice, subtlety, swindling, duplicity, fraud.",
+        "picture": "Graceful, but not warlike; riding quietly, wearing a winged helmet, referring to those higher graces of the imagination which sometimes characterize this card. He too is a dreamer, but the images of the side of sense haunt him in his vision."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Cups · Knight"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "cups_13",
+      "suit": "cups",
+      "rank": 13,
+      "name": {
+        "zh": "圣杯王后",
+        "en": "QUEEN OF CUPS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "共情",
+            "直觉",
+            "温柔"
+          ],
+          "en": [
+            "Empathy",
+            "Intuition",
+            "Compassion"
+          ]
+        },
+        "upright": {
+          "zh": "她坐在海边凝视着一只带盖的圣杯，读得懂别人没说出口的情绪。用共情和直觉去照顾人，也照顾自己。",
+          "en": "She sits by the sea gazing into a lidded cup, reading emotions no one has voiced. Care for others with empathy and intuition — and care for yourself."
+        },
+        "reversed": {
+          "zh": "情绪被别人带着走，过度付出，或者把感受藏得太深。",
+          "en": "Swept up by others' feelings, over-giving, or hiding emotions too deep."
+        },
+        "correspondence": {
+          "zh": "水中之水（宫廷牌元素，现代常用对应）",
+          "en": "Water of Water (court element, common modern attribution)"
+        },
+        "correspondence_basis": "modern_convention：宫廷牌元素为现代常用对应（与黄金黎明的骑士火 / 王子风不同）"
+      },
+      "golden_dawn_title": null,
+      "waite_1911": {
+        "upright": "Good, fair woman; honest, devoted woman, who will do service to the Querent; loving intelligence, and hence the gift of vision; success, happiness, pleasure; also wisdom, virtue; a perfect spouse and a good mother.",
+        "reversed": "The accounts vary; good woman; otherwise, distinguished woman but one not to be trusted; perverse woman; vice, dishonour, depravity.",
+        "picture": "Beautiful, fair, dreamy—as one who sees visions in a cup. This is, however, only one of her aspects; she sees, but she also acts, and her activity feeds her dream."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Cups · Queen"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "cups_14",
+      "suit": "cups",
+      "rank": 14,
+      "name": {
+        "zh": "圣杯国王",
+        "en": "KING OF CUPS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "情绪成熟",
+            "平静",
+            "包容"
+          ],
+          "en": [
+            "Emotional maturity",
+            "Calm",
+            "Diplomacy"
+          ]
+        },
+        "upright": {
+          "zh": "王座漂在汹涌的海上，他却平静地坐着。情绪成熟的人能感受一切，又不被淹没。",
+          "en": "The throne floats on a rough sea, yet he sits calmly. Emotional maturity means feeling everything without being drowned."
+        },
+        "reversed": {
+          "zh": "压抑情绪、冷漠疏离，或者表面平静内心翻涌。",
+          "en": "Repressed feelings, coldness, or calm on the surface with turmoil beneath."
+        },
+        "correspondence": {
+          "zh": "水中之火（宫廷牌元素，现代常用对应）",
+          "en": "Fire of Water (court element, common modern attribution)"
+        },
+        "correspondence_basis": "modern_convention：宫廷牌元素为现代常用对应（与黄金黎明的骑士火 / 王子风不同）"
+      },
+      "golden_dawn_title": null,
+      "waite_1911": {
+        "upright": "Fair man, man of business, law, or divinity; responsible, disposed to oblige the Querent; also equity, art and science, including those who profess science, law and art; creative intelligence.",
+        "reversed": "Dishonest, double-dealing man; roguery, exaction, injustice, vice, scandal, pillage, considerable loss.",
+        "picture": "He holds a short sceptre in his left hand and a great cup in his right; his throne is set upon the sea; on one side a ship is riding and on the other a dolphin is leaping. The implicit is that the Sign of the Cup naturally refers to water, which appears in all the court cards."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Cups · King"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "swords_01",
+      "suit": "swords",
+      "rank": 1,
+      "name": {
+        "zh": "宝剑王牌",
+        "en": "ACE OF SWORDS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "清晰",
+            "真相",
+            "突破"
+          ],
+          "en": [
+            "Clarity",
+            "Truth",
+            "Breakthrough"
+          ]
+        },
+        "upright": {
+          "zh": "一把剑劈开云层，思路突然清晰。真相、决断和新的想法像一道光，帮你斩断混乱。",
+          "en": "A sword cuts through the clouds and your mind clears. Truth, decisiveness and a new idea slice through confusion like light."
+        },
+        "reversed": {
+          "zh": "想法混乱、判断失准，或者用尖锐的言语伤了人。",
+          "en": "Muddled thinking, poor judgement, or sharp words that wound."
+        },
+        "correspondence": {
+          "zh": "风元素之根",
+          "en": "Root of Air"
+        },
+        "correspondence_basis": "golden_dawn：元素力量之根（《777》已核对）"
+      },
+      "golden_dawn_title": "The Root of the Powers of Air",
+      "waite_1911": {
+        "upright": "Triumph, the excessive degree in everything, conquest, triumph of force. It is a card of great force, in love as well as in hatred. The crown may carry a much higher significance than comes usually within the sphere of fortune-telling.",
+        "reversed": "The same, but the results are disastrous; another account says—conception, childbirth, augmentation, multiplicity.",
+        "picture": "A hand issues from a cloud, grasping a sword, the point of which is encircled by a crown."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Swords · Ace",
+        "crowley_777 · Col. CXXXV（元素之根）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "swords_02",
+      "suit": "swords",
+      "rank": 2,
+      "name": {
+        "zh": "宝剑二",
+        "en": "TWO OF SWORDS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "僵持",
+            "回避",
+            "两难"
+          ],
+          "en": [
+            "Stalemate",
+            "Avoidance",
+            "Dilemma"
+          ]
+        },
+        "upright": {
+          "zh": "你闭着眼睛、双剑交叉护在胸前，试图不去面对选择。平静只是暂时的，迟早需要睁眼。",
+          "en": "Eyes closed, two swords crossed over your heart, you try not to face the choice. The calm is temporary; sooner or later you must look."
+        },
+        "reversed": {
+          "zh": "终于睁开眼面对真相，或者被信息淹没、更加混乱。",
+          "en": "Finally opening your eyes to the truth — or overwhelmed by information and more confused."
+        },
+        "correspondence": {
+          "zh": "天秤座第一旬 · 月亮（0–10°）",
+          "en": "the Moon in Libra · 1st decan (0–10°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Peace Restored",
+      "waite_1911": {
+        "upright": "Conformity and the equipoise which it suggests, courage, friendship, concord in a state of arms; another reading gives tenderness, affection, intimacy. The suggestion of harmony and other favourable readings must be considered in a qualified manner, as Swords generally are not symbolical of beneficent forces in human affairs.",
+        "reversed": "Imposture, falsehood, duplicity, disloyalty.",
+        "picture": "A hoodwinked female figure balances two swords upon her shoulders."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Swords · Two",
+        "crowley_777 · Col. CXXXV（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "swords_03",
+      "suit": "swords",
+      "rank": 3,
+      "name": {
+        "zh": "宝剑三",
+        "en": "THREE OF SWORDS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "心碎",
+            "悲伤",
+            "释放"
+          ],
+          "en": [
+            "Heartbreak",
+            "Sorrow",
+            "Release"
+          ]
+        },
+        "upright": {
+          "zh": "三把剑穿过一颗心，大雨落下。心碎是真实的痛，但哭出来也是疗愈的开始。",
+          "en": "Three swords pierce a heart as rain falls. Heartbreak is real pain — but letting it out is where healing begins."
+        },
+        "reversed": {
+          "zh": "伤口在慢慢愈合，开始原谅和放下；也可能是一直压着不肯哭。",
+          "en": "The wound is slowly healing, forgiveness beginning — or tears you still refuse to shed."
+        },
+        "correspondence": {
+          "zh": "天秤座第二旬 · 土星（10–20°）",
+          "en": "Saturn in Libra · 2nd decan (10–20°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Sorrow",
+      "waite_1911": {
+        "upright": "Removal, absence, delay, division, rupture, dispersion, and all that the design signifies naturally, being too simple and obvious to call for specific enumeration.",
+        "reversed": "Mental alienation, error, loss, distraction, disorder, confusion.",
+        "picture": "Three swords piercing a heart; cloud and rain behind."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Swords · Three",
+        "crowley_777 · Col. CXXXV（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "swords_04",
+      "suit": "swords",
+      "rank": 4,
+      "name": {
+        "zh": "宝剑四",
+        "en": "FOUR OF SWORDS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "休息",
+            "恢复",
+            "静养"
+          ],
+          "en": [
+            "Rest",
+            "Recovery",
+            "Retreat"
+          ]
+        },
+        "upright": {
+          "zh": "奶蛙安静地躺在石凳上休息，剑挂在墙上。战斗之后需要停下来，好好恢复。",
+          "en": "Naiwa lies quietly resting on a stone bench, swords hung on the wall. After the fight comes a needed pause to recover."
+        },
+        "reversed": {
+          "zh": "该休息却停不下来，或者休息够了、准备重新出发。",
+          "en": "Unable to stop when you need rest — or rested enough and ready to return."
+        },
+        "correspondence": {
+          "zh": "天秤座第三旬 · 木星（20–30°）",
+          "en": "Jupiter in Libra · 3rd decan (20–30°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Rest from Strife",
+      "waite_1911": {
+        "upright": "Vigilance, retreat, solitude, hermit's repose, exile, tomb and coffin. It is these last that have suggested the design.",
+        "reversed": "Wise administration, circumspection, economy, avarice, precaution, testament.",
+        "picture": "The effigy of a knight in the attitude of prayer, at full length upon his tomb."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Swords · Four",
+        "crowley_777 · Col. CXXXV（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "swords_05",
+      "suit": "swords",
+      "rank": 5,
+      "name": {
+        "zh": "宝剑五",
+        "en": "FIVE OF SWORDS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "争胜",
+            "代价",
+            "不光彩的胜利"
+          ],
+          "en": [
+            "Conflict",
+            "Cost of winning",
+            "Hollow victory"
+          ]
+        },
+        "upright": {
+          "zh": "你赢了，收起了别人的剑，但对方垂头离开。这样的胜利值得吗？有时候赢了争吵，却输了关系。",
+          "en": "You won and gathered the swords, but the others walk off dejected. Was it worth it? Sometimes you win the argument and lose the relationship."
+        },
+        "reversed": {
+          "zh": "争执平息，愿意和解；或者终于承认自己也有错。",
+          "en": "The conflict settles and you're ready to reconcile — or you admit you were wrong too."
+        },
+        "correspondence": {
+          "zh": "水瓶座第一旬 · 金星（0–10°）",
+          "en": "Venus in Aquarius · 1st decan (0–10°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Defeat",
+      "waite_1911": {
+        "upright": "Degradation, destruction, revocation, infamy, dishonour, loss, with the variants and analogues of these.",
+        "reversed": "The same; burial and obsequies.",
+        "picture": "A disdainful man looks after two retreating and dejected figures. Their swords lie upon the ground. He carries two others on his left shoulder, and a third sword is in his right hand, point to earth. He is the master in possession of the field."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Swords · Five",
+        "crowley_777 · Col. CXXXV（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "swords_06",
+      "suit": "swords",
+      "rank": 6,
+      "name": {
+        "zh": "宝剑六",
+        "en": "SIX OF SWORDS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "过渡",
+            "离开困境",
+            "前往平静"
+          ],
+          "en": [
+            "Transition",
+            "Moving on",
+            "Toward calmer waters"
+          ]
+        },
+        "upright": {
+          "zh": "小船载着六把剑，从湍急的水面驶向平静的彼岸。离开困境的路虽然安静，却在一点点变好。",
+          "en": "A small boat carries six swords from rough water toward a calmer shore. The way out of trouble is quiet, but it's getting better bit by bit."
+        },
+        "reversed": {
+          "zh": "想离开却走不了，或者带着旧包袱上路。",
+          "en": "Wanting to leave but stuck, or carrying old baggage into the new place."
+        },
+        "correspondence": {
+          "zh": "水瓶座第二旬 · 水星（10–20°）",
+          "en": "Mercury in Aquarius · 2nd decan (10–20°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Earned Success",
+      "waite_1911": {
+        "upright": "Journey by water, route, way, envoy, commissionary, expedient.",
+        "reversed": "Declaration, confession, publicity; one account says that it is a proposal of love.",
+        "picture": "A ferryman carrying passengers in his punt to the further shore. The course is smooth, and seeing that the freight is light, it may be noted that the work is not beyond his strength."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Swords · Six",
+        "crowley_777 · Col. CXXXV（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "swords_07",
+      "suit": "swords",
+      "rank": 7,
+      "name": {
+        "zh": "宝剑七",
+        "en": "SEVEN OF SWORDS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "策略",
+            "隐瞒",
+            "独自行动"
+          ],
+          "en": [
+            "Strategy",
+            "Deception",
+            "Going it alone"
+          ]
+        },
+        "upright": {
+          "zh": "奶蛙抱着五把剑悄悄溜走，还回头看了一眼。也许是聪明的策略，也许是不太光彩的小动作——要看你是谁。",
+          "en": "Naiwa tiptoes off with five swords, glancing back. Clever strategy or a not-so-honest move — it depends on who you are."
+        },
+        "reversed": {
+          "zh": "秘密被揭穿、良心不安，或者决定坦白和归还。",
+          "en": "A secret exposed, a guilty conscience, or deciding to confess and give it back."
+        },
+        "correspondence": {
+          "zh": "水瓶座第三旬 · 月亮（20–30°）",
+          "en": "the Moon in Aquarius · 3rd decan (20–30°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Unstable Effort",
+      "waite_1911": {
+        "upright": "Design, attempt, wish, hope, confidence; also quarrelling, a plan that may fail, annoyance. The design is uncertain in its import, because the significations are widely at variance with each other.",
+        "reversed": "Good advice, counsel, instruction, slander, babbling.",
+        "picture": "A man in the act of carrying away five swords rapidly; the two others of the card remain stuck in the ground. A camp is close at hand."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Swords · Seven",
+        "crowley_777 · Col. CXXXV（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "swords_08",
+      "suit": "swords",
+      "rank": 8,
+      "name": {
+        "zh": "宝剑八",
+        "en": "EIGHT OF SWORDS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "受困",
+            "自我限制",
+            "无力感"
+          ],
+          "en": [
+            "Restriction",
+            "Self-limitation",
+            "Feeling trapped"
+          ]
+        },
+        "upright": {
+          "zh": "奶蛙被丝带松松地缠着，周围插着八把剑。看起来被困住了，其实丝带一挣就开——困住你的更多是想法。",
+          "en": "Naiwa is loosely wrapped in ribbon, ringed by eight swords. It looks trapped, yet the ribbon would slip with one shrug — what holds you is mostly thought."
+        },
+        "reversed": {
+          "zh": "意识到自己其实可以离开，开始一点点挣脱束缚。",
+          "en": "Realizing you can leave after all, and starting to slip free."
+        },
+        "correspondence": {
+          "zh": "双子座第一旬 · 木星（0–10°）",
+          "en": "Jupiter in Gemini · 1st decan (0–10°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Shortened Force",
+      "waite_1911": {
+        "upright": "Bad news, violent chagrin, crisis, censure, power in trammels, conflict, calumny; also sickness.",
+        "reversed": "Disquiet, difficulty, opposition, accident, treachery; what is unforeseen; fatality.",
+        "picture": "A woman, bound and hoodwinked, with the swords of the card about her. Yet it is rather a card of temporary durance than of irretrievable bondage."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Swords · Eight",
+        "crowley_777 · Col. CXXXV（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "swords_09",
+      "suit": "swords",
+      "rank": 9,
+      "name": {
+        "zh": "宝剑九",
+        "en": "NINE OF SWORDS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "焦虑",
+            "失眠",
+            "过度担忧"
+          ],
+          "en": [
+            "Anxiety",
+            "Sleeplessness",
+            "Worry"
+          ]
+        },
+        "upright": {
+          "zh": "深夜在床上坐起，双手捂脸，墙上挂着九把剑。很多恐惧在夜里会被放大，天亮后可能没那么可怕。",
+          "en": "Sitting up in bed at night, hands over your face, nine swords on the wall. Fears grow large at night; by daylight they may shrink."
+        },
+        "reversed": {
+          "zh": "焦虑开始减轻，或者终于愿意说出心里的担忧、寻求帮助。",
+          "en": "Anxiety easing, or finally voicing your worries and asking for help."
+        },
+        "correspondence": {
+          "zh": "双子座第二旬 · 火星（10–20°）",
+          "en": "Mars in Gemini · 2nd decan (10–20°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Despair and Cruelty",
+      "waite_1911": {
+        "upright": "Death, failure, miscarriage, delay, deception, disappointment, despair.",
+        "reversed": "Imprisonment, suspicion, doubt, reasonable fear, shame.",
+        "picture": "One seated on her couch in lamentation, with the swords over her. She is as one who knows no sorrow which is like unto hers. It is a card of utter desolation."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Swords · Nine",
+        "crowley_777 · Col. CXXXV（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "swords_10",
+      "suit": "swords",
+      "rank": 10,
+      "name": {
+        "zh": "宝剑十",
+        "en": "TEN OF SWORDS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "终结",
+            "触底",
+            "黎明前"
+          ],
+          "en": [
+            "Rock bottom",
+            "Ending",
+            "Before dawn"
+          ]
+        },
+        "upright": {
+          "zh": "奶蛙趴在岸边，十把剑插在身旁，天边已经透出金色的光。最糟的已经发生了——接下来只会往上走。",
+          "en": "Naiwa lies face-down on the shore with ten swords beside it, golden light already on the horizon. The worst has happened — from here, the only way is up."
+        },
+        "reversed": {
+          "zh": "从低谷慢慢爬起来，或者拒绝承认一件事已经结束。",
+          "en": "Slowly climbing out of the low point, or refusing to accept something has ended."
+        },
+        "correspondence": {
+          "zh": "双子座第三旬 · 太阳（20–30°）",
+          "en": "the Sun in Gemini · 3rd decan (20–30°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Ruin",
+      "waite_1911": {
+        "upright": "Whatsoever is intimated by the design; also pain, affliction, tears, sadness, desolation. It is not especially a card of violent death.",
+        "reversed": "Advantage, profit, success, favour, but none of these are permanent; also power and authority.",
+        "picture": "A prostrate figure, pierced by all the swords belonging to the card."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Swords · Ten",
+        "crowley_777 · Col. CXXXV（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "swords_11",
+      "suit": "swords",
+      "rank": 11,
+      "name": {
+        "zh": "宝剑侍从",
+        "en": "PAGE OF SWORDS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "好奇",
+            "警觉",
+            "求知"
+          ],
+          "en": [
+            "Curiosity",
+            "Vigilance",
+            "Eagerness to learn"
+          ]
+        },
+        "upright": {
+          "zh": "站在风大的山丘上，握剑警觉地看着天空。思维敏锐、求知欲强，适合学习、调查和提问。",
+          "en": "On a windy hill, sword in hand, watching the sky alertly. A sharp, curious mind — good for learning, investigating and asking questions."
+        },
+        "reversed": {
+          "zh": "说话尖刻、爱八卦，或者只有想法没有行动。",
+          "en": "Sharp-tongued, gossipy, or all ideas and no action."
+        },
+        "correspondence": {
+          "zh": "风中之土（宫廷牌元素，现代常用对应）",
+          "en": "Earth of Air (court element, common modern attribution)"
+        },
+        "correspondence_basis": "modern_convention：宫廷牌元素为现代常用对应（与黄金黎明的骑士火 / 王子风不同）"
+      },
+      "golden_dawn_title": null,
+      "waite_1911": {
+        "upright": "Authority, overseeing, secret service, vigilance, spying, examination, and the qualities thereto belonging.",
+        "reversed": "More evil side of these qualities; what is unforeseen, unprepared state; sickness is also intimated.",
+        "picture": "A lithe, active figure holds a sword upright in both hands, while in the act of swift walking. He is passing over rugged land, and about his way the clouds are collocated wildly. He is alert and lithe, looking this way and that, as if an expected enemy might appear at any moment."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Swords · Page"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "swords_12",
+      "suit": "swords",
+      "rank": 12,
+      "name": {
+        "zh": "宝剑骑士",
+        "en": "KNIGHT OF SWORDS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "果断",
+            "冲锋",
+            "直言"
+          ],
+          "en": [
+            "Decisiveness",
+            "Charging ahead",
+            "Bluntness"
+          ]
+        },
+        "upright": {
+          "zh": "骑着白马全速冲锋，剑高高举起。目标清楚、行动迅速，适合直面问题、一鼓作气。",
+          "en": "Charging full speed on a white horse, sword raised high. Clear aim and swift action — tackle the problem head-on."
+        },
+        "reversed": {
+          "zh": "太过急躁、不顾后果，或言辞锋利伤了人。",
+          "en": "Too hasty, heedless of consequences, or words that cut too deep."
+        },
+        "correspondence": {
+          "zh": "风中之风（宫廷牌元素，现代常用对应）",
+          "en": "Air of Air (court element, common modern attribution)"
+        },
+        "correspondence_basis": "modern_convention：宫廷牌元素为现代常用对应（与黄金黎明的骑士火 / 王子风不同）"
+      },
+      "golden_dawn_title": null,
+      "waite_1911": {
+        "upright": "Skill, bravery, capacity, defence, address, enmity, wrath, war, destruction, opposition, resistance, ruin. There is therefore a sense in which the card signifies death, but it carries this meaning only in its proximity to other cards of fatality.",
+        "reversed": "Imprudence, incapacity, extravagance.",
+        "picture": "He is riding in full course, as if scattering his enemies. In the design he is really a prototypical hero of romantic chivalry. He might almost be Galahad, whose sword is swift and sure because he is clean of heart."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Swords · Knight"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "swords_13",
+      "suit": "swords",
+      "rank": 13,
+      "name": {
+        "zh": "宝剑王后",
+        "en": "QUEEN OF SWORDS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "清醒",
+            "独立",
+            "坦率"
+          ],
+          "en": [
+            "Clear-sightedness",
+            "Independence",
+            "Honesty"
+          ]
+        },
+        "upright": {
+          "zh": "她坐在高处的石座上，一手握剑、一手抬起。清醒、独立、说话直接，用理性保护自己也帮助别人。",
+          "en": "She sits on a high stone throne, sword in one hand, the other raised. Clear-sighted, independent and direct — she uses reason to protect herself and help others."
+        },
+        "reversed": {
+          "zh": "过于冷淡、尖刻，或者被过去的伤痛困住，变得刻薄。",
+          "en": "Too cold or cutting, or embittered by old wounds."
+        },
+        "correspondence": {
+          "zh": "风中之水（宫廷牌元素，现代常用对应）",
+          "en": "Water of Air (court element, common modern attribution)"
+        },
+        "correspondence_basis": "modern_convention：宫廷牌元素为现代常用对应（与黄金黎明的骑士火 / 王子风不同）"
+      },
+      "golden_dawn_title": null,
+      "waite_1911": {
+        "upright": "Widowhood, female sadness and embarrassment, absence, sterility, mourning, privation, separation.",
+        "reversed": "Malice, bigotry, artifice, prudery, bale, deceit.",
+        "picture": "Her right hand raises the weapon vertically and the hilt rests on an arm of her royal chair; the left hand is extended, the arm raised; her countenance is severe but chastened; it suggests familiarity with sorrow. It does not represent mercy, and, her sword notwithstanding, she is scarcely a symbol of power."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Swords · Queen"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "swords_14",
+      "suit": "swords",
+      "rank": 14,
+      "name": {
+        "zh": "宝剑国王",
+        "en": "KING OF SWORDS"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "理性",
+            "权威",
+            "公正"
+          ],
+          "en": [
+            "Intellect",
+            "Authority",
+            "Judgement"
+          ]
+        },
+        "upright": {
+          "zh": "他正面端坐，剑竖得笔直。理性、公正、有原则，用清晰的判断做出决定。",
+          "en": "He faces forward with his sword perfectly upright. Rational, fair and principled — he decides with clear judgement."
+        },
+        "reversed": {
+          "zh": "冷酷、专断，或用权力和道理压人。",
+          "en": "Cold, authoritarian, or using power and logic to dominate."
+        },
+        "correspondence": {
+          "zh": "风中之火（宫廷牌元素，现代常用对应）",
+          "en": "Fire of Air (court element, common modern attribution)"
+        },
+        "correspondence_basis": "modern_convention：宫廷牌元素为现代常用对应（与黄金黎明的骑士火 / 王子风不同）"
+      },
+      "golden_dawn_title": null,
+      "waite_1911": {
+        "upright": "Whatsoever arises out of the idea of judgment and all its connexions—power, command, authority, militant intelligence, law, offices of the crown, and so forth.",
+        "reversed": "Cruelty, perversity, barbarity, perfidy, evil intention.",
+        "picture": "He sits in judgment, holding the un­sheathed sign of his suit. He recalls, of course, the conventional Symbol of Justice in the Trumps Major, and he may represent this virtue, but he is rather the power of life and death, in virtue of his office."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Swords · King"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "pentacles_01",
+      "suit": "pentacles",
+      "rank": 1,
+      "name": {
+        "zh": "星币王牌",
+        "en": "ACE OF PENTACLES"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "新机会",
+            "物质基础",
+            "落地"
+          ],
+          "en": [
+            "New opportunity",
+            "Material foundation",
+            "Manifestation"
+          ]
+        },
+        "upright": {
+          "zh": "一枚金色星币从云中递来，下方是盛开的花园。一个实实在在的机会：新工作、新收入或一个可以落地的计划。",
+          "en": "A golden coin is offered from the clouds above a blooming garden. A tangible opportunity: a new job, new income, or a plan you can make real."
+        },
+        "reversed": {
+          "zh": "机会错过、计划不落地，或者把钱和精力花在了不对的地方。",
+          "en": "A missed chance, plans that never land, or money and energy spent in the wrong place."
+        },
+        "correspondence": {
+          "zh": "土元素之根",
+          "en": "Root of Earth"
+        },
+        "correspondence_basis": "golden_dawn：元素力量之根（《777》已核对）"
+      },
+      "golden_dawn_title": "The Root of the Powers of Earth",
+      "waite_1911": {
+        "upright": "Perfect contentment, felicity, ecstasy; also speedy intelligence; gold.",
+        "reversed": "The evil side of wealth, bad intelligence; also great riches. In any case it shews prosperity, comfortable material conditions, but whether these are of advantage to the possessor will depend on whether the card is reversed or not.",
+        "picture": "A hand—issuing, as usual, from a cloud—holds up a pentacle."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Pentacles · Ace",
+        "crowley_777 · Col. CXXXVI（元素之根）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "pentacles_02",
+      "suit": "pentacles",
+      "rank": 2,
+      "name": {
+        "zh": "星币二",
+        "en": "TWO OF PENTACLES"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "平衡",
+            "灵活",
+            "多线并行"
+          ],
+          "en": [
+            "Balance",
+            "Adaptability",
+            "Juggling"
+          ]
+        },
+        "upright": {
+          "zh": "一边跳舞一边抛接两枚星币，身后船只在大浪里起伏。生活很忙，但你还应付得来，保持灵活和节奏。",
+          "en": "Dancing while juggling two coins as ships ride big waves behind. Life is busy, but you're keeping up — stay flexible and keep the rhythm."
+        },
+        "reversed": {
+          "zh": "事情太多手忙脚乱，或者财务和时间失去平衡。",
+          "en": "Too much at once, or money and time out of balance."
+        },
+        "correspondence": {
+          "zh": "摩羯座第一旬 · 木星（0–10°）",
+          "en": "Jupiter in Capricorn · 1st decan (0–10°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Harmonious Change",
+      "waite_1911": {
+        "upright": "On the one hand it is represented as a card of gaiety, recreation and its connexions, which is the subject of the design; but it is read also as news and messages in writing, as obstacles, agitation, trouble, embroilment.",
+        "reversed": "Enforced gaiety, simulated enjoyment, literal sense, handwriting, composition, letters of exchange.",
+        "picture": "A young man, in the act of dancing, has a pentacle in either hand, and they are joined by that endless cord which is like the number 8 reversed."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Pentacles · Two",
+        "crowley_777 · Col. CXXXVI（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "pentacles_03",
+      "suit": "pentacles",
+      "rank": 3,
+      "name": {
+        "zh": "星币三",
+        "en": "THREE OF PENTACLES"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "合作",
+            "手艺",
+            "被认可"
+          ],
+          "en": [
+            "Teamwork",
+            "Craftsmanship",
+            "Recognition"
+          ]
+        },
+        "upright": {
+          "zh": "石匠奶蛙在拱门上精雕细琢，另外两人拿着图纸讨论。专业能力被看见，团队合作带来好作品。",
+          "en": "Stonemason Naiwa carves the arch with care while two others study the plans. Skill is noticed; teamwork makes good work."
+        },
+        "reversed": {
+          "zh": "合作不顺、各说各话，或者手艺没被重视。",
+          "en": "Poor teamwork, everyone talking past each other, or skill undervalued."
+        },
+        "correspondence": {
+          "zh": "摩羯座第二旬 · 火星（10–20°）",
+          "en": "Mars in Capricorn · 2nd decan (10–20°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Material Works",
+      "waite_1911": {
+        "upright": "Métier, trade, skilled labour; usually, how-ever, regarded as a card of nobility, aristocracy, renown, glory.",
+        "reversed": "Mediocrity, in work and otherwise, puerility, pettiness, weakness.",
+        "picture": "A sculptor at his work in a monastery. Compare the design which illustrates the Eight of Pentacles. The apprentice or amateur therein has received his reward and is now at work in earnest."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Pentacles · Three",
+        "crowley_777 · Col. CXXXVI（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "pentacles_04",
+      "suit": "pentacles",
+      "rank": 4,
+      "name": {
+        "zh": "星币四",
+        "en": "FOUR OF PENTACLES"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "守护",
+            "安全感",
+            "吝啬"
+          ],
+          "en": [
+            "Security",
+            "Holding on",
+            "Possessiveness"
+          ]
+        },
+        "upright": {
+          "zh": "紧紧抱着星币、头上顶一枚、脚下踩两枚。守住已有的东西很重要，但抓得太紧也会失去流动。",
+          "en": "Hugging one coin, one on the head, two under the feet. Protecting what you have matters — but grip too hard and nothing can flow."
+        },
+        "reversed": {
+          "zh": "学会放手与分享，或者因为过度紧张反而失去。",
+          "en": "Learning to let go and share — or losing it all by clutching too tight."
+        },
+        "correspondence": {
+          "zh": "摩羯座第三旬 · 太阳（20–30°）",
+          "en": "the Sun in Capricorn · 3rd decan (20–30°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Earthly Power",
+      "waite_1911": {
+        "upright": "The surety of possessions, cleaving to that which one has, gift, legacy, inheritance.",
+        "reversed": "Suspense, delay, opposition.",
+        "picture": "A crowned figure, having a pentacle over his crown, clasps another with hands and arms; two pentacles are under his feet. He holds to that which he has."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Pentacles · Four",
+        "crowley_777 · Col. CXXXVI（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "pentacles_05",
+      "suit": "pentacles",
+      "rank": 5,
+      "name": {
+        "zh": "星币五",
+        "en": "FIVE OF PENTACLES"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "困顿",
+            "匮乏",
+            "被冷落"
+          ],
+          "en": [
+            "Hardship",
+            "Scarcity",
+            "Feeling left out"
+          ]
+        },
+        "upright": {
+          "zh": "两只奶蛙在雪夜里艰难前行，经过一扇透着暖光的窗。困难是真的，但帮助可能就在旁边，只是你还没敲门。",
+          "en": "Two Naiwas trudge through a snowy night past a warmly lit window. The hardship is real — but help may be right beside you, if you knock."
+        },
+        "reversed": {
+          "zh": "最难的时候过去了，开始接受帮助、慢慢恢复。",
+          "en": "The worst is over; you begin accepting help and recovering."
+        },
+        "correspondence": {
+          "zh": "金牛座第一旬 · 水星（0–10°）",
+          "en": "Mercury in Taurus · 1st decan (0–10°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Material Trouble",
+      "waite_1911": {
+        "upright": "The card foretells material trouble above all, whether in the form illustrated—that is, destitution—or otherwise. For some cartomancists, it is a card of love and lovers—wife, husband, friend, mistress; also concordance, affinities. These alternatives cannot be harmonized.",
+        "reversed": "Disorder, chaos, ruin, discord, profligacy.",
+        "picture": "Two mendicants in a snow-storm pass a lighted casement."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Pentacles · Five",
+        "crowley_777 · Col. CXXXVI（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "pentacles_06",
+      "suit": "pentacles",
+      "rank": 6,
+      "name": {
+        "zh": "星币六",
+        "en": "SIX OF PENTACLES"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "给予",
+            "分享",
+            "互惠"
+          ],
+          "en": [
+            "Generosity",
+            "Sharing",
+            "Give and take"
+          ]
+        },
+        "upright": {
+          "zh": "奶蛙一手拿着天平，一手把星币分给需要的人。有给有收，资源在流动中变得公平。",
+          "en": "Naiwa holds a balance in one hand and gives coins with the other. Giving and receiving keep resources flowing fairly."
+        },
+        "reversed": {
+          "zh": "给予带着条件，或者付出与回报严重失衡。",
+          "en": "Strings attached to giving, or a badly lopsided give-and-take."
+        },
+        "correspondence": {
+          "zh": "金牛座第二旬 · 月亮（10–20°）",
+          "en": "the Moon in Taurus · 2nd decan (10–20°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Material Success",
+      "waite_1911": {
+        "upright": "Presents, gifts, gratification; another account says attention, vigilance; now is the accepted time, present prosperity, etc.",
+        "reversed": "Desire, cupidity, envy, jealousy, illusion.",
+        "picture": "A person in the guise of a merchant weighs money in a pair of scales and distributes it to the needy and distressed. It is a testimony to his own success in life, as well as to his goodness of heart."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Pentacles · Six",
+        "crowley_777 · Col. CXXXVI（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "pentacles_07",
+      "suit": "pentacles",
+      "rank": 7,
+      "name": {
+        "zh": "星币七",
+        "en": "SEVEN OF PENTACLES"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "耐心",
+            "评估",
+            "长期投资"
+          ],
+          "en": [
+            "Patience",
+            "Assessment",
+            "Long-term investment"
+          ]
+        },
+        "upright": {
+          "zh": "奶蛙拄着锄头看灌木上长出的星币。收获需要时间，现在是停下来评估、调整方向的时候。",
+          "en": "Naiwa leans on a hoe watching coins grow on a bush. Harvest takes time; now is the moment to pause, assess and adjust."
+        },
+        "reversed": {
+          "zh": "急于求成、看不到回报而灰心，或者投入方向不对。",
+          "en": "Impatient for results, discouraged by slow returns, or investing in the wrong place."
+        },
+        "correspondence": {
+          "zh": "金牛座第三旬 · 土星（20–30°）",
+          "en": "Saturn in Taurus · 3rd decan (20–30°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Success Unfulfilled",
+      "waite_1911": {
+        "upright": "These are exceedingly contradictory; in the main, it is a card of money, business, barter; but one reading gives altercation, quarrel—and another innocence, ingenuity, purgation.",
+        "reversed": "Cause for anxiety regarding money which it may be proposed to lend.",
+        "picture": "A young man, leaning on his staff, looks intently at seven pentacles attached to a clump of greenery on his right; one would say that these were his treasures and that his heart was there."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Pentacles · Seven",
+        "crowley_777 · Col. CXXXVI（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "pentacles_08",
+      "suit": "pentacles",
+      "rank": 8,
+      "name": {
+        "zh": "星币八",
+        "en": "EIGHT OF PENTACLES"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "专注",
+            "练习",
+            "精进"
+          ],
+          "en": [
+            "Diligence",
+            "Practice",
+            "Mastery"
+          ]
+        },
+        "upright": {
+          "zh": "系着皮围裙在工作台前一枚一枚地雕刻星币。专注、重复、精益求精——手艺就是这样练成的。",
+          "en": "In a leather apron at the workbench, carving coins one by one. Focus, repetition, refinement — that's how craft is built."
+        },
+        "reversed": {
+          "zh": "敷衍了事、追求速度忽视质量，或者陷入重复失去意义。",
+          "en": "Cutting corners, speed over quality, or stuck in meaningless repetition."
+        },
+        "correspondence": {
+          "zh": "处女座第一旬 · 太阳（0–10°）",
+          "en": "the Sun in Virgo · 1st decan (0–10°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Prudence",
+      "waite_1911": {
+        "upright": "Work, employment, commission, craftsmanship, skill in craft and business, perhaps in the preparatory stage.",
+        "reversed": "Voided ambition, vanity, cupidity, exaction, usury. It may also signify the possession of skill, in the sense of the ingenious mind turned to cunning and intrigue.",
+        "picture": "An artist in stone at his work, which he exhibits in the form of trophies."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Pentacles · Eight",
+        "crowley_777 · Col. CXXXVI（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "pentacles_09",
+      "suit": "pentacles",
+      "rank": 9,
+      "name": {
+        "zh": "星币九",
+        "en": "NINE OF PENTACLES"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "独立",
+            "富足",
+            "自我价值"
+          ],
+          "en": [
+            "Independence",
+            "Abundance",
+            "Self-worth"
+          ]
+        },
+        "upright": {
+          "zh": "穿着华服站在葡萄园里，手上停着一只猎鹰。靠自己的努力获得了富足与自在，可以好好享受。",
+          "en": "In fine robes in a vineyard, a falcon on your hand. Abundance and ease earned through your own work — enjoy it."
+        },
+        "reversed": {
+          "zh": "表面风光内心空虚，或过度依赖他人、花钱失度。",
+          "en": "Fine on the outside, empty inside, or overdependent and overspending."
+        },
+        "correspondence": {
+          "zh": "处女座第二旬 · 金星（10–20°）",
+          "en": "Venus in Virgo · 2nd decan (10–20°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Material Gain",
+      "waite_1911": {
+        "upright": "Prudence, safety, success, accomplishment, certitude, discernment.",
+        "reversed": "Roguery, deception, voided project, bad faith.",
+        "picture": "A woman, with a bird upon her wrist, stands amidst a great abundance of grapevines in the garden of a manorial house. It is a wide domain, suggesting plenty in all things. Possibly it is her own possession and testifies to material well-being."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Pentacles · Nine",
+        "crowley_777 · Col. CXXXVI（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "pentacles_10",
+      "suit": "pentacles",
+      "rank": 10,
+      "name": {
+        "zh": "星币十",
+        "en": "TEN OF PENTACLES"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "传承",
+            "家族",
+            "长久富足"
+          ],
+          "en": [
+            "Legacy",
+            "Family",
+            "Lasting wealth"
+          ]
+        },
+        "upright": {
+          "zh": "拱门上嵌着十枚星币，三代奶蛙和两只白狗在庭院里。长久的富足、家族的传承与稳固的根基。",
+          "en": "Ten coins set into the archway; three generations of Naiwas and two white dogs in the courtyard. Lasting wealth, family legacy and solid roots."
+        },
+        "reversed": {
+          "zh": "家族纠纷、遗产问题，或者被传统和责任束缚。",
+          "en": "Family disputes, inheritance issues, or feeling bound by tradition and duty."
+        },
+        "correspondence": {
+          "zh": "处女座第三旬 · 水星（20–30°）",
+          "en": "Mercury in Virgo · 3rd decan (20–30°)"
+        },
+        "correspondence_basis": "golden_dawn：旬星（按黄金黎明规则逐张验证，并见《777》）"
+      },
+      "golden_dawn_title": "The Lord of Wealth",
+      "waite_1911": {
+        "upright": "Gain, riches; family matters, archives, extraction, the abode of a family.",
+        "reversed": "Chance, fatality, loss, robbery, games of hazard; sometimes gift, dowry, pension.",
+        "picture": "A man and woman beneath an archway which gives entrance to a house and domain. They are accompanied by a child, who looks curiously at two dogs accosting an ancient personage seated in the foreground. The child's hand is on one of them."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Pentacles · Ten",
+        "crowley_777 · Col. CXXXVI（称号与旬星）"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "pentacles_11",
+      "suit": "pentacles",
+      "rank": 11,
+      "name": {
+        "zh": "星币侍从",
+        "en": "PAGE OF PENTACLES"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "学习",
+            "踏实",
+            "新计划"
+          ],
+          "en": [
+            "Study",
+            "Diligence",
+            "New plans"
+          ]
+        },
+        "upright": {
+          "zh": "在春天的草地上双手举着一枚星币仔细端详。一个踏实的学生：认真学习、规划未来、从小处开始。",
+          "en": "In a spring meadow, holding up a coin and studying it closely. A diligent student: learning carefully, planning ahead, starting small."
+        },
+        "reversed": {
+          "zh": "只想不做、拖延，或者对学习失去兴趣。",
+          "en": "All plans and no action, procrastination, or losing interest in learning."
+        },
+        "correspondence": {
+          "zh": "土中之土（宫廷牌元素，现代常用对应）",
+          "en": "Earth of Earth (court element, common modern attribution)"
+        },
+        "correspondence_basis": "modern_convention：宫廷牌元素为现代常用对应（与黄金黎明的骑士火 / 王子风不同）"
+      },
+      "golden_dawn_title": null,
+      "waite_1911": {
+        "upright": "Application, study, scholarship, reflection; another reading says news, messages and the bringer thereof; also rule, management.",
+        "reversed": "Prodigality, dissipation, liberality. luxury; unfavourable news.",
+        "picture": "A youthful figure, looking intently at the pentacle which hovers over his raised hands. He moves slowly, insensible of that which is about him."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Pentacles · Page"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "pentacles_12",
+      "suit": "pentacles",
+      "rank": 12,
+      "name": {
+        "zh": "星币骑士",
+        "en": "KNIGHT OF PENTACLES"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "稳重",
+            "可靠",
+            "坚持"
+          ],
+          "en": [
+            "Reliability",
+            "Steadiness",
+            "Persistence"
+          ]
+        },
+        "upright": {
+          "zh": "骑着一匹纹丝不动的黑色重挽马，手捧星币望着犁好的田。不急不躁，一步一个脚印，最可靠的骑士。",
+          "en": "On a stock-still black draft horse, holding a coin and gazing at ploughed fields. Unhurried, step by step — the most dependable knight."
+        },
+        "reversed": {
+          "zh": "太过保守、固执，或者因为太慢而错过时机。",
+          "en": "Too cautious, stubborn, or so slow you miss the moment."
+        },
+        "correspondence": {
+          "zh": "土中之风（宫廷牌元素，现代常用对应）",
+          "en": "Air of Earth (court element, common modern attribution)"
+        },
+        "correspondence_basis": "modern_convention：宫廷牌元素为现代常用对应（与黄金黎明的骑士火 / 王子风不同）"
+      },
+      "golden_dawn_title": null,
+      "waite_1911": {
+        "upright": "Utility, serviceableness, interest, responsibility, rectitude—all on the normal and external plane.",
+        "reversed": "inertia, idleness, repose of that kind, stagnation; also placidity, discouragement, carelessness.",
+        "picture": "He rides a slow, enduring, heavy horse, to which his own aspect corresponds. He exhibits his symbol, but does not look therein."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Pentacles · Knight"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "pentacles_13",
+      "suit": "pentacles",
+      "rank": 13,
+      "name": {
+        "zh": "星币王后",
+        "en": "QUEEN OF PENTACLES"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "滋养",
+            "务实",
+            "温暖富足"
+          ],
+          "en": [
+            "Nurturing",
+            "Practicality",
+            "Warm abundance"
+          ]
+        },
+        "upright": {
+          "zh": "坐在玫瑰花园里的王座上，温柔地捧着一枚星币，脚边一只小白兔。务实又温暖，把生活照顾得井井有条。",
+          "en": "On a throne in a rose garden, tenderly cradling a coin, a little white rabbit at her feet. Practical and warm, she keeps life well tended."
+        },
+        "reversed": {
+          "zh": "过度操劳、只顾照顾别人，或者被物质和琐事淹没。",
+          "en": "Overworked, caring for everyone but yourself, or buried in chores and things."
+        },
+        "correspondence": {
+          "zh": "土中之水（宫廷牌元素，现代常用对应）",
+          "en": "Water of Earth (court element, common modern attribution)"
+        },
+        "correspondence_basis": "modern_convention：宫廷牌元素为现代常用对应（与黄金黎明的骑士火 / 王子风不同）"
+      },
+      "golden_dawn_title": null,
+      "waite_1911": {
+        "upright": "Opulence, generosity, magnificence, security, liberty.",
+        "reversed": "Evil, suspicion, suspense, fear, mistrust.",
+        "picture": "The face suggests that of a dark woman, whose qualities might be summed up in the idea of greatness of soul; she has also the serious cast of intelligence; she contemplates her symbol and may see worlds therein."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Pentacles · Queen"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "pentacles_14",
+      "suit": "pentacles",
+      "rank": 14,
+      "name": {
+        "zh": "星币国王",
+        "en": "KING OF PENTACLES"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "成功",
+            "稳固",
+            "财富掌控"
+          ],
+          "en": [
+            "Success",
+            "Stability",
+            "Mastery of wealth"
+          ]
+        },
+        "upright": {
+          "zh": "坐在刻着公牛头的王座上，长袍绣满葡萄，一手星币一手权杖。事业有成、财务稳固，有能力照顾好身边的人。",
+          "en": "On a bull-carved throne, robe embroidered with grapes, coin in one hand and sceptre in the other. Success, financial security, and the means to care for those around him."
+        },
+        "reversed": {
+          "zh": "贪婪、固执，或者用金钱衡量一切。",
+          "en": "Greed, stubbornness, or measuring everything by money."
+        },
+        "correspondence": {
+          "zh": "土中之火（宫廷牌元素，现代常用对应）",
+          "en": "Fire of Earth (court element, common modern attribution)"
+        },
+        "correspondence_basis": "modern_convention：宫廷牌元素为现代常用对应（与黄金黎明的骑士火 / 王子风不同）"
+      },
+      "golden_dawn_title": null,
+      "waite_1911": {
+        "upright": "Valour, realizing intelligence, business and normal intellectual aptitude, sometimes mathematical gifts and attainments of this kind; success in these paths.",
+        "reversed": "Vice, weakness, ugliness, perversity, corruption, peril.",
+        "picture": "The figure calls for no special description; the face is rather dark, suggesting also courage, but somewhat lethargic in tendency. The bull's head should be noted as a recurrent symbol on the throne. The sign of this suit is represented throughout as engraved or blazoned with the pentagram, typifying the correspondence of the four elements in human nature and that by which they may be governed. In many old Tarot packs this suit stood for current coin, money, deniers. I have not invented the substitution of pentacles and I have no special cause to sustain in respect of the alternative. But the consensus of divinatory meanings is on the side of some change, because the cards do not happen to deal especially with questions of money."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2_lesser · Part III § 2 · Pentacles · King"
+      ],
+      "review_status": "draft"
+    }
+  ]
+}

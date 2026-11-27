@@ -19,7 +19,9 @@
 ```text
 ai/
 ├── schemas/                  # JSON Schema：每类记录的格式（见下）
+├── sources/                  # 原典：来源清单、韦特原文（大牌 / 小牌）、黄金黎明小牌称号
 ├── knowledge_base/
+│   ├── cards_minor.json      # 56 张小牌的知识表（脚本生成：站内牌义 + 韦特原文 + 黄金黎明称号与旬星）
 │   ├── imagery_compare_pilot.json  # 与韦特传统意象的对照（人工整理）
 │   └── cards_pilot.json      # 7 张牌的知识侧表（脚本生成，不手改）
 ├── semantic_framework/
@@ -40,6 +42,9 @@ ai/
 - `waite_pkt_major.json`：A. E. Waite《The Pictorial Key to the Tarot》（1911，公有领域，取自 [Wikisource](https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot)）22 张大牌的英文原文：第二部分 §2 的象征解说、第三部分 §2 的占卜义。
 - 知识侧表的 `source_refs` 指向这里，`waite_1911` 是原文占卜义。
 - **注意**：韦特列出的大牌占卜义和今天的通行解读差别很大（例如愚者是 folly、mania；星星首先是 loss、theft，hope 只是「另一种读法」），他自己也说这些占卜义「人为而武断」。所以每条 `traditional_rws` 条目都要标 `tradition_basis`：`waite_divinatory`（韦特占卜义）/ `waite_symbolism`（韦特象征解说）/ `modern_convention`（今天 RWS 体系的通行解读），不把通行解读冒充成韦特原话。
+- `waite_pkt_minor.json`：56 张小牌的韦特原文（第三部分 §2 的画面描述与占卜义；圣杯二在原文里没有逆位义）。
+- `golden_dawn_minor_titles.json`：40 张王牌与数字牌的黄金黎明称号（如 The Lord of Dominion），出自《777》Col. CXXXIII–CXXXVI。
+- 小牌对应：36 张数字牌的旬星按黄金黎明规则逐张验证（36/36 一致），王牌为「元素力量之根」；宫廷牌的元素是现代常用对应（国王火、骑士风），与黄金黎明（骑士火、王子风）不同，已标为 modern_convention。
 - 黄金黎明的占星 / 元素对应已对照 Crowley《777》（1909）Table I 逐张核实：`source_refs` 记到路径与栏目；因手头副本基于仍受版权保护的《777 Revised》，只记录书目、位置与对应事实，不收录原文。
 
 ## 数据原则（摘自 v0.6）
@@ -59,7 +64,8 @@ ai/
 
 ## 常用命令
 ```bash
-node ai/scripts/build_kb.mjs     # 重新生成知识侧表
+node ai/scripts/build_kb.mjs     # 重新生成大牌知识侧表
+node ai/scripts/build_minor.mjs  # 重新生成小牌知识表
 node ai/scripts/validate.mjs     # 校验
 ```
 
@@ -87,6 +93,6 @@ python3 ai/runtime/bench.py qwen3:1.7b      # 跑测试集，报告在 ai/runtim
 
 ## 下一步（未做）
 1. 在 Kaggle 上以 qwen3:1.7b 为基座做 LoRA：按第 7 章用本目录的种子、命题、追问树生成 SFT 语料（含上面列出的错误类型做对照），导出 GGUF 后放回本机 Ollama，用同一测试集对比微调前后。
-2. 小阿卡纳的原典与对应（韦特第三部分 §3～4、黄金黎明的旬星对应）。
+2. 小阿卡纳的语义框架（命题、种子、追问树），可按大牌的做法分批写、再审查。
 2. 用未微调的 Qwen3 + 检索 / 规则，在本地跑通「抽牌结果 → 结构化状态 → 回答」的最小闭环（v0.6 第 19.5 节第 3 步）。
 3. 闭环稳定后，再按第 7 章的流水线批量生产 SFT 语料，并在 Kaggle 上做 LoRA 训练与对照评估。

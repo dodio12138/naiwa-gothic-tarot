@@ -37,6 +37,18 @@ const symRefs = (refs, cards, w) => (refs || []).forEach((s) => {
 });
 const review = (x, w) => { if (!REVIEW.includes(x.review_status)) err(`${w}：review_status 只能是 ${REVIEW.join(' / ')}`); };
 
+/* ── 小阿卡纳知识表：56 张、韦特原文、黄金黎明称号 ── */
+if (exists('ai/knowledge_base/cards_minor.json')) {
+  const minor = read('ai/knowledge_base/cards_minor.json').cards;
+  if (minor.length !== 56) err(`小牌知识表应有 56 张，实际 ${minor.length}`);
+  for (const c of minor) {
+    if (!allCards.has(c.card_id)) err(`小牌知识表：${c.card_id} 不是站内的牌`);
+    if (!c.waite_1911?.upright) err(`${c.card_id}：缺韦特原文占卜义`);
+    if (c.rank <= 10 && !c.golden_dawn_title) err(`${c.card_id}：缺黄金黎明称号`);
+    if (!c.source_refs?.length) err(`${c.card_id}：缺 source_refs`);
+  }
+}
+
 /* ── 命题 ── */
 const props = exists('ai/semantic_framework/propositions_pilot.json') ? read('ai/semantic_framework/propositions_pilot.json').propositions : [];
 const propIds = uniq(props, 'proposition_id', '命题');

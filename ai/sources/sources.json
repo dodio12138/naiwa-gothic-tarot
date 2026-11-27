@@ -19,6 +19,10 @@
         "part3_s2": {
           "title": "Part III § 2 · The Greater Arcana and their Divinatory Meanings",
           "url": "https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_3"
+        },
+        "part3_s2_lesser": {
+          "title": "Part III § 2 · The Lesser Arcana（每张小牌的画面描述与占卜义）",
+          "url": "https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_3"
         }
       },
       "notes": "韦特在第三部分自己说，大牌的占卜义「人为而武断」，与第二部分的象征解说差别很大；今天通行的 RWS 解读多取自第二部分的象征与后人的整理，不等于韦特列出的占卜义。"
@@ -47,9 +51,10 @@
       "locators": {
         "tarot": "Table I, Col. XIV「General Attribution of Tarot」",
         "heavens": "Table I, Col. VI / VII「The Heavens of Assiah」及其英文",
-        "paths": "路径 11～32 依次对应大牌 0～21（RWS 编号：力量 8 = 路径 19，正义 11 = 路径 22）"
+        "paths": "路径 11～32 依次对应大牌 0～21（RWS 编号：力量 8 = 路径 19，正义 11 = 路径 22）",
+        "minor": "Table, Col. CXXXIII–CXXXVI「Titles and Attributions of the Wand / Cup / Sword / Coin Suit」：王牌为「元素力量之根」，2～10 为黄金黎明称号与旬星（行星 + 星座）"
       },
-      "notes": "OCR 中路径 13、14、27、30、32 的天体一栏字迹不清，已用《777 Revised》的栏目注释交叉确认（Luna、Venus、Mars、Sol、Saturn）。"
+      "notes": "OCR 中路径 13、14、27、30、32 的天体一栏字迹不清，已用《777 Revised》的栏目注释交叉确认（Luna、Venus、Mars、Sol、Saturn）。小牌：站内 36 张数字牌（2～10）的旬星已按黄金黎明规则（自白羊座 0° 起，行星按迦勒底次序轮转）逐张验证，36/36 一致；王牌「元素之根」与 777 一致。宫廷牌的元素对应（国王火、王后水、骑士风、侍从土）是现代常用对应，与黄金黎明（骑士火、王后水、王子风、公主土）不同。"
     }
   ]
 }
