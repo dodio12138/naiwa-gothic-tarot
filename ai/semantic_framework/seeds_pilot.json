@@ -1,0 +1,690 @@
+{
+  "$comment": "试点语义框架（draft，待人工审核）。格式见 ai/schemas/。",
+  "pilot_cards": [
+    "major_00",
+    "major_04",
+    "major_12",
+    "major_15",
+    "major_16",
+    "major_17",
+    "major_18"
+  ],
+  "seeds": [
+    {
+      "seed_id": "seed.major_00.01",
+      "card_refs": [
+        "major_00"
+      ],
+      "symbol_refs": [
+        "cliff_edge"
+      ],
+      "proposition_ref": "prop.major_00.01",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "每一条路，都是从还不认识它开始的。",
+        "en": "Every road begins before you know it."
+      },
+      "expansion_topics": [
+        "开始",
+        "不确定"
+      ],
+      "counterexamples": [
+        "用户明确需要具体风险分析时，不以诗意代替"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "draft"
+    },
+    {
+      "seed_id": "seed.major_00.02",
+      "card_refs": [
+        "major_00"
+      ],
+      "symbol_refs": [
+        "bindle"
+      ],
+      "proposition_ref": "prop.major_00.02",
+      "framework": "existential_extension",
+      "aphorism": {
+        "zh": "包袱越小，脚越轻；可也装不下太多退路。",
+        "en": "The smaller the bundle, the lighter the step — and the fewer the ways back."
+      },
+      "expansion_topics": [
+        "取舍",
+        "安全感"
+      ],
+      "counterexamples": [
+        "用户没有选择余地时，不暗示『是你背得太多』"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "draft"
+    },
+    {
+      "seed_id": "seed.major_00.03",
+      "card_refs": [
+        "major_00"
+      ],
+      "symbol_refs": [
+        "small_dog",
+        "cliff_edge"
+      ],
+      "proposition_ref": "prop.major_00.03",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "小狗叫了一声，不是为了拦你，是想让你看清脚下。",
+        "en": "The little dog barks not to stop you, but so you see where you step."
+      },
+      "expansion_topics": [
+        "他人的担心",
+        "谨慎"
+      ],
+      "counterexamples": [
+        "劝阻来自控制或伤害时，不把它美化成善意"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "draft"
+    },
+    {
+      "seed_id": "seed.major_00.04",
+      "card_refs": [
+        "major_00"
+      ],
+      "symbol_refs": [
+        "full_moon",
+        "cliff_edge"
+      ],
+      "proposition_ref": "prop.major_00.01",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "崖边的月亮，也是第一次照这条路。",
+        "en": "The moon at the cliff is lighting this path for the first time too."
+      },
+      "expansion_topics": [
+        "陪伴",
+        "未知"
+      ],
+      "counterexamples": [
+        "用户只要牌义时，直接说明而不只给意象"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "draft"
+    },
+    {
+      "seed_id": "seed.major_04.01",
+      "card_refs": [
+        "major_04"
+      ],
+      "symbol_refs": [
+        "stone_throne"
+      ],
+      "proposition_ref": "prop.major_04.01",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "围墙让人安心，也让人看不见外面。",
+        "en": "Walls bring comfort, and also hide the view."
+      },
+      "expansion_topics": [
+        "结构",
+        "边界"
+      ],
+      "counterexamples": [
+        "用户需要安全感时，不贬低结构的价值"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "draft"
+    },
+    {
+      "seed_id": "seed.major_04.02",
+      "card_refs": [
+        "major_04"
+      ],
+      "symbol_refs": [
+        "crown"
+      ],
+      "proposition_ref": "prop.major_04.02",
+      "framework": "dialectical_extension",
+      "aphorism": {
+        "zh": "王冠很重，它压着的那颗头也有自己的规矩。",
+        "en": "The crown is heavy; the head beneath it keeps rules of its own."
+      },
+      "expansion_topics": [
+        "责任",
+        "权力的代价"
+      ],
+      "counterexamples": [
+        "不以此为施控者开脱"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "draft"
+    },
+    {
+      "seed_id": "seed.major_04.03",
+      "card_refs": [
+        "major_04"
+      ],
+      "symbol_refs": [
+        "barren_mountains"
+      ],
+      "proposition_ref": "prop.major_04.03",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "山越高越安静，也越少有人能上来。",
+        "en": "The higher the mountain, the quieter — and the fewer who can climb it."
+      },
+      "expansion_topics": [
+        "孤独",
+        "承担"
+      ],
+      "counterexamples": [
+        "用户没有提到孤独时，不强加"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "draft"
+    },
+    {
+      "seed_id": "seed.major_04.04",
+      "card_refs": [
+        "major_04"
+      ],
+      "symbol_refs": [
+        "sceptre"
+      ],
+      "proposition_ref": "prop.major_04.01",
+      "framework": "traditional_rws",
+      "aphorism": {
+        "zh": "权杖是用来指路的，不是用来打人的。",
+        "en": "A sceptre is for pointing the way, not for striking."
+      },
+      "expansion_topics": [
+        "领导",
+        "方向"
+      ],
+      "counterexamples": [
+        "用户正在被权威伤害时，先关注其处境而非『好权威』的理想"
+      ],
+      "source_kind": "traditional",
+      "review_status": "draft"
+    },
+    {
+      "seed_id": "seed.major_12.01",
+      "card_refs": [
+        "major_12"
+      ],
+      "symbol_refs": [
+        "upside_down_naiwa"
+      ],
+      "proposition_ref": "prop.major_12.01",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "倒过来看，月亮也许就在脚下。",
+        "en": "Upside down, the moon may be right beneath your feet."
+      },
+      "expansion_topics": [
+        "换视角",
+        "暂停"
+      ],
+      "counterexamples": [
+        "用户急需具体办法时，不只给比喻"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "draft"
+    },
+    {
+      "seed_id": "seed.major_12.02",
+      "card_refs": [
+        "major_12"
+      ],
+      "symbol_refs": [
+        "glowing_ribbon"
+      ],
+      "proposition_ref": "prop.major_12.02",
+      "framework": "existential_extension",
+      "aphorism": {
+        "zh": "绳子是自己系上的，还是别人系的？答案会改变这张牌。",
+        "en": "Did you tie the rope, or did someone else? The answer changes this card."
+      },
+      "expansion_topics": [
+        "主动与被动",
+        "牺牲"
+      ],
+      "counterexamples": [
+        "不暗示用户该为被迫的处境负责"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "draft"
+    },
+    {
+      "seed_id": "seed.major_12.03",
+      "card_refs": [
+        "major_12"
+      ],
+      "symbol_refs": [
+        "loose_arms"
+      ],
+      "proposition_ref": "prop.major_12.03",
+      "framework": "daoist_extension",
+      "aphorism": {
+        "zh": "手垂下来的时候，才发现原来一直握着拳。",
+        "en": "Only when the hands hang loose do you notice you were clenching them."
+      },
+      "expansion_topics": [
+        "放松",
+        "不强求"
+      ],
+      "counterexamples": [
+        "用户需要坚持争取时，不劝其放手"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "draft"
+    },
+    {
+      "seed_id": "seed.major_12.04",
+      "card_refs": [
+        "major_12"
+      ],
+      "symbol_refs": [
+        "halo"
+      ],
+      "proposition_ref": "prop.major_12.01",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "光环不是奖励，只是换了个角度才看见的东西。",
+        "en": "The halo is no reward — just what you see from a new angle."
+      },
+      "expansion_topics": [
+        "领悟",
+        "视角"
+      ],
+      "counterexamples": [
+        "不把痛苦说成必须的修行"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "draft"
+    },
+    {
+      "seed_id": "seed.major_15.01",
+      "card_refs": [
+        "major_15"
+      ],
+      "symbol_refs": [
+        "chained_figures"
+      ],
+      "proposition_ref": "prop.major_15.02",
+      "framework": "dialectical_extension",
+      "aphorism": {
+        "zh": "有些锁链的另一端，系着人所珍视的东西。",
+        "en": "The other end of some chains is tied to something we cherish."
+      },
+      "expansion_topics": [
+        "安全感",
+        "依附",
+        "选择条件"
+      ],
+      "counterexamples": [
+        "外部强制导致无法离开，不应归咎于当事人"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "draft"
+    },
+    {
+      "seed_id": "seed.major_15.02",
+      "card_refs": [
+        "major_15"
+      ],
+      "symbol_refs": [
+        "open_shackles"
+      ],
+      "proposition_ref": "prop.major_15.03",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "锁是开着的，只是还没人伸手。",
+        "en": "The lock is open; no one has reached for it yet."
+      },
+      "expansion_topics": [
+        "改变的可能",
+        "觉察"
+      ],
+      "counterexamples": [
+        "现实条件不允许离开时不使用"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "draft"
+    },
+    {
+      "seed_id": "seed.major_15.03",
+      "card_refs": [
+        "major_15"
+      ],
+      "symbol_refs": [
+        "inverted_torch"
+      ],
+      "proposition_ref": "prop.major_15.01",
+      "framework": "traditional_rws",
+      "aphorism": {
+        "zh": "倒举的火炬照着地面，照不清前路。",
+        "en": "An upside-down torch lights the ground, not the road ahead."
+      },
+      "expansion_topics": [
+        "短视",
+        "欲望"
+      ],
+      "counterexamples": [
+        "不把用户的选择评判为短视"
+      ],
+      "source_kind": "traditional",
+      "review_status": "draft"
+    },
+    {
+      "seed_id": "seed.major_15.04",
+      "card_refs": [
+        "major_15"
+      ],
+      "symbol_refs": [
+        "headband_horns"
+      ],
+      "proposition_ref": "prop.major_15.01",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "角是戴上去的，头带也可以摘下来。",
+        "en": "The horns are worn; a headband can come off."
+      },
+      "expansion_topics": [
+        "身份",
+        "面具"
+      ],
+      "counterexamples": [
+        "用户正处于危机时不玩比喻"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "draft"
+    },
+    {
+      "seed_id": "seed.major_16.01",
+      "card_refs": [
+        "major_16"
+      ],
+      "symbol_refs": [
+        "burning_tower"
+      ],
+      "proposition_ref": "prop.major_16.01",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "塔倒塌之后，天空并没有消失。",
+        "en": "After the tower falls, the sky is still there."
+      },
+      "expansion_topics": [
+        "重建",
+        "失去之后"
+      ],
+      "counterexamples": [
+        "不能强加给仍处于痛苦中的用户"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "draft"
+    },
+    {
+      "seed_id": "seed.major_16.02",
+      "card_refs": [
+        "major_16"
+      ],
+      "symbol_refs": [
+        "flying_crown"
+      ],
+      "proposition_ref": "prop.major_16.02",
+      "framework": "existential_extension",
+      "aphorism": {
+        "zh": "王冠飞走的时候，才看清它从来没有长在头上。",
+        "en": "Only when the crown flies off do you see it never grew on your head."
+      },
+      "expansion_topics": [
+        "身份",
+        "失去地位"
+      ],
+      "counterexamples": [
+        "用户正在哀悼时，不急于『看清』"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "draft"
+    },
+    {
+      "seed_id": "seed.major_16.03",
+      "card_refs": [
+        "major_16"
+      ],
+      "symbol_refs": [
+        "lightning"
+      ],
+      "proposition_ref": "prop.major_16.01",
+      "framework": "traditional_rws",
+      "aphorism": {
+        "zh": "闪电不问你准备好了没有。",
+        "en": "Lightning doesn't ask whether you're ready."
+      },
+      "expansion_topics": [
+        "突变",
+        "不可控"
+      ],
+      "counterexamples": [
+        "不把它说成即将发生的灾难"
+      ],
+      "source_kind": "traditional",
+      "review_status": "draft"
+    },
+    {
+      "seed_id": "seed.major_16.04",
+      "card_refs": [
+        "major_16"
+      ],
+      "symbol_refs": [
+        "naiwa_on_stairs"
+      ],
+      "proposition_ref": "prop.major_16.03",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "站远一点，也是一种看清。",
+        "en": "Standing a little farther away is also a way of seeing."
+      },
+      "expansion_topics": [
+        "距离",
+        "冷静"
+      ],
+      "counterexamples": [
+        "用户需要表达情绪时，不催促其抽离"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "draft"
+    },
+    {
+      "seed_id": "seed.major_17.01",
+      "card_refs": [
+        "major_17"
+      ],
+      "symbol_refs": [
+        "eight_pointed_star"
+      ],
+      "proposition_ref": "prop.major_17.01",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "星光要走很久才到这里，修复也是。",
+        "en": "Starlight travels a long way to get here; so does healing."
+      },
+      "expansion_topics": [
+        "修复",
+        "耐心"
+      ],
+      "counterexamples": [
+        "不用来催促恢复"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "draft"
+    },
+    {
+      "seed_id": "seed.major_17.02",
+      "card_refs": [
+        "major_17"
+      ],
+      "symbol_refs": [
+        "two_pitchers",
+        "watering_roses"
+      ],
+      "proposition_ref": "prop.major_17.02",
+      "framework": "jungian_extension",
+      "aphorism": {
+        "zh": "一壶给池塘，一壶给玫瑰；别忘了你也是其中一朵。",
+        "en": "One pitcher for the pond, one for the roses — don't forget you're one of them."
+      },
+      "expansion_topics": [
+        "自我照顾",
+        "给予"
+      ],
+      "counterexamples": [
+        "用户缺乏现实资源时，不把问题归为不会照顾自己"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "draft"
+    },
+    {
+      "seed_id": "seed.major_17.03",
+      "card_refs": [
+        "major_17"
+      ],
+      "symbol_refs": [
+        "black_roses"
+      ],
+      "proposition_ref": "prop.major_17.03",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "黑玫瑰也会开，只是开得安静。",
+        "en": "Black roses bloom too, just quietly."
+      },
+      "expansion_topics": [
+        "自我价值",
+        "安静的成长"
+      ],
+      "counterexamples": [
+        "用户只要牌义时不展开"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "draft"
+    },
+    {
+      "seed_id": "seed.major_17.04",
+      "card_refs": [
+        "major_17"
+      ],
+      "symbol_refs": [
+        "black_bird"
+      ],
+      "proposition_ref": "prop.major_17.01",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "黑鸟停在枝头，像在等天亮，也像只是在休息。",
+        "en": "The black bird on the branch might be waiting for dawn — or simply resting."
+      },
+      "expansion_topics": [
+        "休息",
+        "等待"
+      ],
+      "counterexamples": [
+        "不把休息说成懒惰或逃避"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "draft"
+    },
+    {
+      "seed_id": "seed.major_18.01",
+      "card_refs": [
+        "major_18"
+      ],
+      "symbol_refs": [
+        "winding_path"
+      ],
+      "proposition_ref": "prop.major_18.01",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "月光下的路都是弯的，走着走着才看得清。",
+        "en": "Every path bends under moonlight; you see it by walking."
+      },
+      "expansion_topics": [
+        "不确定",
+        "前行"
+      ],
+      "counterexamples": [
+        "用户需要具体信息时，不只给意象"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "draft"
+    },
+    {
+      "seed_id": "seed.major_18.02",
+      "card_refs": [
+        "major_18"
+      ],
+      "symbol_refs": [
+        "crayfish"
+      ],
+      "proposition_ref": "prop.major_18.02",
+      "framework": "jungian_extension",
+      "aphorism": {
+        "zh": "从水里爬出来的东西，先让它晒晒月亮。",
+        "en": "Let what crawls out of the water rest in the moonlight first."
+      },
+      "expansion_topics": [
+        "浮现的情绪",
+        "梦"
+      ],
+      "counterexamples": [
+        "不做心理诊断，不暗示创伤"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "draft"
+    },
+    {
+      "seed_id": "seed.major_18.03",
+      "card_refs": [
+        "major_18"
+      ],
+      "symbol_refs": [
+        "two_towers"
+      ],
+      "proposition_ref": "prop.major_18.03",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "两座塔之间只有一条路，害怕和好奇都得从这里走。",
+        "en": "Between the two towers there is one road; fear and curiosity both walk it."
+      },
+      "expansion_topics": [
+        "矛盾",
+        "好奇"
+      ],
+      "counterexamples": [
+        "用户没有矛盾时不制造矛盾"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "draft"
+    },
+    {
+      "seed_id": "seed.major_18.04",
+      "card_refs": [
+        "major_18"
+      ],
+      "symbol_refs": [
+        "pale_moon"
+      ],
+      "proposition_ref": "prop.major_18.01",
+      "framework": "naiwa_original",
+      "aphorism": {
+        "zh": "月亮没有骗你，它只是没把话说完。",
+        "en": "The moon isn't lying to you; it just hasn't finished speaking."
+      },
+      "expansion_topics": [
+        "模糊",
+        "耐心"
+      ],
+      "counterexamples": [
+        "不用来否定用户已知的事实"
+      ],
+      "source_kind": "original_interpretation",
+      "review_status": "draft"
+    }
+  ]
+}

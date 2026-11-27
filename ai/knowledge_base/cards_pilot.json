@@ -1,0 +1,420 @@
+{
+  "$comment": "由 ai/scripts/build_kb.mjs 生成，请勿手改。传统牌义暂取站内文案，原典出处待补（source_refs）。",
+  "generated_from": [
+    "data/cards.json",
+    "data/visual_symbols.json"
+  ],
+  "cards": [
+    {
+      "card_id": "major_00",
+      "tradition_card_ref": "rws.major.00",
+      "tradition_id": "rws",
+      "name": {
+        "zh": "愚者",
+        "en": "THE FOOL"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "开始",
+            "纯真",
+            "未知"
+          ],
+          "en": [
+            "Beginnings",
+            "Innocence",
+            "The unknown"
+          ]
+        },
+        "upright": {
+          "zh": "新的旅程正在悬崖边等你。不必想清楚每一步，带上小包袱，先迈出那只短短的脚。",
+          "en": "A new journey waits at the cliff's edge. You don't need every step figured out — pick up your little bundle and take that first short step."
+        },
+        "reversed": {
+          "zh": "冲动或犹豫都在拖住你。看清脚下的路，再决定是跳还是等。",
+          "en": "Recklessness or hesitation is holding you back. Look at the ground beneath you, then decide whether to leap or wait."
+        },
+        "correspondence": {
+          "zh": "风元素（现代：天王星）",
+          "en": "Air (modern: Uranus)"
+        },
+        "archetype": {
+          "zh": "传统画面里，一个年轻人背着行囊、手拈白玫瑰走向悬崖，小白狗在脚边吠叫。编号 0 意味着他不在序列之内，又贯穿全部——整套大阿尔卡那常被读作「愚者之旅」，后面 21 张就是他一路遇见的风景。",
+          "en": "In the classic image a young traveller with a bundle and a white rose strolls toward a cliff while a small dog yaps at his heels. Numbered 0, he stands outside the sequence yet runs through all of it — the Major Arcana is often read as \"the Fool's Journey\", and the other 21 cards are what he meets along the way."
+        }
+      },
+      "artwork_ref": "naiwa.classic.major_00",
+      "visual_symbol_refs": [
+        "cliff_edge",
+        "bindle",
+        "small_dog",
+        "black_roses",
+        "full_moon",
+        "gothic_castle",
+        "waterfalls",
+        "gnarled_tree"
+      ],
+      "rws_absent": [
+        "sun",
+        "white_rose",
+        "snowy_mountains",
+        "feather_cap"
+      ],
+      "source_refs": [],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "major_04",
+      "tradition_card_ref": "rws.major.04",
+      "tradition_id": "rws",
+      "name": {
+        "zh": "皇帝",
+        "en": "THE EMPEROR"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "秩序",
+            "结构",
+            "权威"
+          ],
+          "en": [
+            "Order",
+            "Structure",
+            "Authority"
+          ]
+        },
+        "upright": {
+          "zh": "建立规则与边界，以稳定的结构掌控局面。责任感会带来真正的力量。",
+          "en": "Set rules and boundaries, and command the situation with steady structure. Responsibility brings real power."
+        },
+        "reversed": {
+          "zh": "控制欲过强或秩序崩塌。僵化的规则需要松动，失控的局面需要框架。",
+          "en": "Too much control, or order collapsing. Rigid rules need loosening; chaos needs a frame."
+        },
+        "correspondence": {
+          "zh": "白羊座",
+          "en": "Aries"
+        },
+        "archetype": {
+          "zh": "皇帝坐在刻有公羊头的石座上，公羊对应白羊座；他手握安卡十字权杖与宝球，背后是荒凉的山。与皇后的丰饶相对，他代表父性、法则与秩序——把世界整理成形的力量。",
+          "en": "The Emperor sits on a stone throne carved with ram heads, the sign of Aries, holding an ankh scepter and an orb before barren mountains. Opposite the Empress's abundance, he is the father principle: law, order, the force that gives the world its shape."
+        }
+      },
+      "artwork_ref": "naiwa.classic.major_04",
+      "visual_symbol_refs": [
+        "ram_heads",
+        "stone_throne",
+        "sceptre",
+        "orb",
+        "crown",
+        "barren_mountains",
+        "red_sky",
+        "eagle_mantle",
+        "aqueducts"
+      ],
+      "rws_absent": [
+        "armor",
+        "white_beard",
+        "river",
+        "ankh"
+      ],
+      "source_refs": [],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "major_12",
+      "tradition_card_ref": "rws.major.12",
+      "tradition_id": "rws",
+      "name": {
+        "zh": "倒吊人",
+        "en": "THE HANGED MAN"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "等待",
+            "换位",
+            "顿悟"
+          ],
+          "en": [
+            "Pause",
+            "New perspective",
+            "Insight"
+          ]
+        },
+        "upright": {
+          "zh": "暂停并换个角度看世界。看似停滞，其实是在酝酿顿悟。",
+          "en": "Pause and see the world from another angle. What looks like stagnation is insight ripening."
+        },
+        "reversed": {
+          "zh": "无谓的牺牲或拖延。该放下的执念就放下吧。",
+          "en": "Pointless sacrifice or procrastination. Let go of what you should let go."
+        },
+        "correspondence": {
+          "zh": "水元素（现代：海王星）",
+          "en": "Water (modern: Neptune)"
+        },
+        "archetype": {
+          "zh": "一个人头下脚上地倒挂在 T 形树上，一条腿弯成「4」字，神情平静，头后有光环。这不是刑罚，而是主动的暂停：通过放下与等待换来顿悟。",
+          "en": "A man hangs upside down from a T-shaped tree, one leg crossed into a \"4\", face serene, a halo behind his head. It isn't punishment but a chosen pause: insight gained by letting go and waiting."
+        }
+      },
+      "artwork_ref": "naiwa.classic.major_12",
+      "visual_symbol_refs": [
+        "upside_down_naiwa",
+        "glowing_ribbon",
+        "bent_leg",
+        "halo",
+        "ancient_tree",
+        "loose_arms",
+        "candles",
+        "stream",
+        "white_lilies",
+        "full_moon_ruins"
+      ],
+      "rws_absent": [
+        "hands_behind_back",
+        "red_hose",
+        "blue_tunic"
+      ],
+      "source_refs": [],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "major_15",
+      "tradition_card_ref": "rws.major.15",
+      "tradition_id": "rws",
+      "name": {
+        "zh": "恶魔",
+        "en": "THE DEVIL"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "诱惑",
+            "执念",
+            "束缚"
+          ],
+          "en": [
+            "Temptation",
+            "Attachment",
+            "Bondage"
+          ]
+        },
+        "upright": {
+          "zh": "你被某种欲望或执念束缚。看清它——锁链其实是松的。",
+          "en": "A desire or obsession has you bound. Look closely — the chains are actually loose."
+        },
+        "reversed": {
+          "zh": "正在挣脱束缚，重获自由。觉察就是解放的开始。",
+          "en": "You're breaking free and regaining your freedom. Awareness is where liberation begins."
+        },
+        "correspondence": {
+          "zh": "摩羯座",
+          "en": "Capricorn"
+        },
+        "archetype": {
+          "zh": "长着山羊角和蝠翼的恶魔蹲在台座上，倒举火炬，台下一男一女戴着锁链——锁链很松，随时可以取下。这张牌的构图特意呼应「恋人」，讲的是被欲望与执念束缚的那一面。",
+          "en": "A horned, bat-winged devil squats on a pedestal holding a torch downward; below, a man and a woman wear chains — loose enough to lift off. The composition deliberately mirrors the Lovers, showing the side of us bound by desire and attachment."
+        }
+      },
+      "artwork_ref": "naiwa.classic.major_15",
+      "visual_symbol_refs": [
+        "chained_figures",
+        "open_shackles",
+        "inverted_torch",
+        "headband_horns",
+        "bat_wings",
+        "black_pedestal",
+        "blood_moon",
+        "red_candles",
+        "dark_roses",
+        "pentagram_clasp"
+      ],
+      "rws_absent": [
+        "inverted_pentagram_on_forehead",
+        "raised_right_hand",
+        "tails_on_figures",
+        "horns_on_figures",
+        "goat_legs"
+      ],
+      "source_refs": [],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "major_16",
+      "tradition_card_ref": "rws.major.16",
+      "tradition_id": "rws",
+      "name": {
+        "zh": "高塔",
+        "en": "THE TOWER"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "崩塌",
+            "惊醒",
+            "突变"
+          ],
+          "en": [
+            "Collapse",
+            "Awakening",
+            "Upheaval"
+          ]
+        },
+        "upright": {
+          "zh": "虚假的确定正在崩塌。突如其来的变化，是让真相显露的闪电。",
+          "en": "False certainty is crumbling. Sudden change is the lightning that reveals the truth."
+        },
+        "reversed": {
+          "zh": "在逃避必然的改变，或余震未平。早点面对，损失更小。",
+          "en": "Avoiding an inevitable change, or aftershocks still rumbling. Face it sooner and lose less."
+        },
+        "correspondence": {
+          "zh": "火星",
+          "en": "Mars"
+        },
+        "archetype": {
+          "zh": "闪电击中高塔，王冠形的塔顶被掀落，两个人从塔上坠下，火焰与二十二道光点散落空中。它是大阿尔卡那里最剧烈的一张：建立在错误基础上的东西，终究会倒。",
+          "en": "Lightning strikes a tower, knocking off its crown-shaped roof; two figures fall amid flames and twenty-two drops of light. It's the most violent card of the Major Arcana: what's built on false foundations falls in the end."
+        }
+      },
+      "artwork_ref": "naiwa.classic.major_16",
+      "visual_symbol_refs": [
+        "lightning",
+        "burning_tower",
+        "flying_crown",
+        "falling_debris",
+        "falling_wisps",
+        "naiwa_on_stairs",
+        "red_ivy_arch",
+        "storm_clouds",
+        "aqueducts"
+      ],
+      "rws_absent": [
+        "yod_drops",
+        "human_figures_falling"
+      ],
+      "source_refs": [],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "major_17",
+      "tradition_card_ref": "rws.major.17",
+      "tradition_id": "rws",
+      "name": {
+        "zh": "星星",
+        "en": "THE STAR"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "希望",
+            "疗愈",
+            "灵感"
+          ],
+          "en": [
+            "Hope",
+            "Healing",
+            "Inspiration"
+          ]
+        },
+        "upright": {
+          "zh": "风暴之后，星光降临。保持希望，你正在被疗愈。",
+          "en": "After the storm, starlight descends. Keep hope — you are healing."
+        },
+        "reversed": {
+          "zh": "失去信心或灵感枯竭。星星还在，只是被云遮住了。",
+          "en": "Lost faith or dried-up inspiration. The stars are still there, only behind the clouds."
+        },
+        "correspondence": {
+          "zh": "水瓶座",
+          "en": "Aquarius"
+        },
+        "archetype": {
+          "zh": "一位女子跪在池边，一壶水倒回池中、一壶浇向大地，头顶一颗八芒大星与七颗小星，树上停着一只鸟。经历「高塔」之后，这是第一缕平静的希望。",
+          "en": "A woman kneels by a pool, pouring one jug back into the water and one onto the land, beneath one great eight-pointed star and seven smaller ones; a bird perches in a tree. After the Tower, this is the first quiet hope."
+        }
+      },
+      "artwork_ref": "naiwa.classic.major_17",
+      "visual_symbol_refs": [
+        "eight_pointed_star",
+        "small_stars",
+        "two_pitchers",
+        "pouring_into_pond",
+        "watering_roses",
+        "black_bird",
+        "black_roses",
+        "pond",
+        "waterfall_ruins",
+        "milky_way"
+      ],
+      "rws_absent": [
+        "kneeling_figure",
+        "foot_in_water",
+        "nude_figure",
+        "five_streams_on_land"
+      ],
+      "source_refs": [],
+      "review_status": "draft"
+    },
+    {
+      "card_id": "major_18",
+      "tradition_card_ref": "rws.major.18",
+      "tradition_id": "rws",
+      "name": {
+        "zh": "月亮",
+        "en": "THE MOON"
+      },
+      "traditional": {
+        "keywords": {
+          "zh": [
+            "潜意识",
+            "迷惘",
+            "直觉"
+          ],
+          "en": [
+            "Subconscious",
+            "Illusion",
+            "Intuition"
+          ]
+        },
+        "upright": {
+          "zh": "前路朦胧，幻象与恐惧交织。相信直觉，慢慢走过月下小径。",
+          "en": "The road is hazy; illusion and fear intertwine. Trust your intuition and walk the moonlit path slowly."
+        },
+        "reversed": {
+          "zh": "迷雾渐散，真相浮现。被压抑的情绪正在释放。",
+          "en": "The fog is lifting and the truth emerging. Repressed feelings are being released."
+        },
+        "correspondence": {
+          "zh": "双鱼座",
+          "en": "Pisces"
+        },
+        "archetype": {
+          "zh": "两座塔之间，一条小路从水池蜿蜒到远山，狗与狼对着月亮嚎叫，一只螯虾从水中爬出。月光下的一切都半真半假，它象征梦境、恐惧与潜意识。",
+          "en": "Between two towers, a path winds from a pool to distant hills; a dog and a wolf howl at the moon and a crayfish crawls out of the water. Under moonlight everything is half-true — it stands for dreams, fear and the unconscious."
+        }
+      },
+      "artwork_ref": "naiwa.classic.major_18",
+      "visual_symbol_refs": [
+        "pale_moon",
+        "dog_and_wolf",
+        "crayfish",
+        "two_towers",
+        "winding_path",
+        "pool",
+        "rabbit_plush",
+        "purple_irises",
+        "violet_clouds"
+      ],
+      "rws_absent": [
+        "moon_face",
+        "yod_drops"
+      ],
+      "source_refs": [],
+      "review_status": "draft"
+    }
+  ]
+}

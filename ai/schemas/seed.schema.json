@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SemanticSeed",
+  "description": "语义种子：可压缩成一句低语、也可展开的最小思想单元",
+  "type": "object",
+  "required": [
+    "seed_id",
+    "card_refs",
+    "symbol_refs",
+    "proposition_ref",
+    "framework",
+    "aphorism",
+    "expansion_topics",
+    "counterexamples",
+    "source_kind",
+    "review_status"
+  ],
+  "properties": {
+    "seed_id": {
+      "type": "string",
+      "pattern": "^seed\\.major_\\d{2}\\.\\d{2}$"
+    },
+    "card_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^major_\\d{2}$|^(wands|cups|swords|pentacles)_\\d{2}$"
+      },
+      "minItems": 1
+    },
+    "symbol_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "proposition_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "framework": {
+      "enum": [
+        "traditional_rws",
+        "hermetic",
+        "jungian_extension",
+        "existential_extension",
+        "dialectical_extension",
+        "daoist_extension",
+        "stoic_extension",
+        "naiwa_original"
+      ]
+    },
+    "aphorism": {
+      "type": "object",
+      "required": [
+        "zh",
+        "en"
+      ],
+      "properties": {
+        "zh": {
+          "type": "string",
+          "minLength": 1
+        },
+        "en": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "expansion_topics": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "counterexamples": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "source_kind": {
+      "enum": [
+        "traditional",
+        "original_interpretation"
+      ]
+    },
+    "review_status": {
+      "enum": [
+        "draft",
+        "reviewed",
+        "quarantined"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

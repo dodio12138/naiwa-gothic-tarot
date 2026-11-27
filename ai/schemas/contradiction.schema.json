@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Contradiction",
+  "description": "语义框架：牌内或牌间的张力（两极）",
+  "type": "object",
+  "required": [
+    "contradiction_id",
+    "card_refs",
+    "poles",
+    "description",
+    "proposition_refs",
+    "review_status"
+  ],
+  "properties": {
+    "contradiction_id": {
+      "type": "string",
+      "pattern": "^contra\\.major_\\d{2}\\.\\d{2}$"
+    },
+    "card_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^major_\\d{2}$|^(wands|cups|swords|pentacles)_\\d{2}$"
+      },
+      "minItems": 1
+    },
+    "poles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "zh",
+          "en"
+        ],
+        "properties": {
+          "zh": {
+            "type": "string",
+            "minLength": 1
+          },
+          "en": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "description": {
+      "type": "object",
+      "required": [
+        "zh",
+        "en"
+      ],
+      "properties": {
+        "zh": {
+          "type": "string",
+          "minLength": 1
+        },
+        "en": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "proposition_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "review_status": {
+      "enum": [
+        "draft",
+        "reviewed",
+        "quarantined"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

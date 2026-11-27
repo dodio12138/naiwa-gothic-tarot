@@ -1,0 +1,536 @@
+{
+  "$comment": "试点语义框架（draft，待人工审核）。格式见 ai/schemas/。",
+  "pilot_cards": [
+    "major_00",
+    "major_04",
+    "major_12",
+    "major_15",
+    "major_16",
+    "major_17",
+    "major_18"
+  ],
+  "propositions": [
+    {
+      "proposition_id": "prop.major_00.01",
+      "card_refs": [
+        "major_00"
+      ],
+      "text": {
+        "zh": "开始往往发生在还没准备好的时候；未知本身就是旅程的一部分。",
+        "en": "Beginnings often come before we feel ready; the unknown is part of the journey."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "cliff_edge",
+        "bindle"
+      ],
+      "applicable_conditions": [
+        "新开始、转换期",
+        "面对没有经验的处境"
+      ],
+      "counterexamples": [
+        "需要谨慎评估风险的决定（如财务、健康），不能用『勇敢迈一步』代替准备"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "draft",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_00.02",
+      "card_refs": [
+        "major_00"
+      ],
+      "text": {
+        "zh": "轻装上路意味着放下一部分安全感，自由与风险同时到来。",
+        "en": "Traveling light means letting go of some security; freedom and risk arrive together."
+      },
+      "framework": "existential_extension",
+      "symbol_refs": [
+        "bindle",
+        "cliff_edge"
+      ],
+      "applicable_conditions": [
+        "犹豫要不要离开熟悉的环境"
+      ],
+      "counterexamples": [
+        "对承担照护责任的人，『放下』可能并不现实"
+      ],
+      "source_kind": "original_interpretation",
+      "source_refs": [],
+      "review_status": "draft",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_00.03",
+      "card_refs": [
+        "major_00"
+      ],
+      "text": {
+        "zh": "有人在旁边提醒（小狗），并不等于你不能出发。",
+        "en": "A companion's warning (the little dog) does not mean you cannot set out."
+      },
+      "framework": "naiwa_original",
+      "symbol_refs": [
+        "small_dog"
+      ],
+      "applicable_conditions": [
+        "身边有人担心或劝阻"
+      ],
+      "counterexamples": [
+        "提醒来自可信的专业意见时，应当认真对待"
+      ],
+      "source_kind": "original_interpretation",
+      "source_refs": [],
+      "review_status": "draft",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_04.01",
+      "card_refs": [
+        "major_04"
+      ],
+      "text": {
+        "zh": "秩序与规则可以提供保护和方向。",
+        "en": "Order and rules can offer protection and direction."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "stone_throne",
+        "sceptre"
+      ],
+      "applicable_conditions": [
+        "需要建立结构、做决定、承担责任"
+      ],
+      "counterexamples": [
+        "规则本身不公正时，服从不是美德"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "draft",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_04.02",
+      "card_refs": [
+        "major_04"
+      ],
+      "text": {
+        "zh": "掌控者也被自己建立的秩序约束。",
+        "en": "Those who hold control are bound by the order they build."
+      },
+      "framework": "dialectical_extension",
+      "symbol_refs": [
+        "crown",
+        "stone_throne"
+      ],
+      "applicable_conditions": [
+        "管理者、家长、负责人"
+      ],
+      "counterexamples": [
+        "处在权力弱势一方的人，不应被引导去体谅对方的控制"
+      ],
+      "source_kind": "original_interpretation",
+      "source_refs": [],
+      "review_status": "draft",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_04.03",
+      "card_refs": [
+        "major_04"
+      ],
+      "text": {
+        "zh": "荒山上的王座：稳固有时伴随着孤独与干涸。",
+        "en": "A throne above barren mountains: steadiness can come with loneliness and dryness."
+      },
+      "framework": "naiwa_original",
+      "symbol_refs": [
+        "barren_mountains",
+        "stone_throne"
+      ],
+      "applicable_conditions": [
+        "长期独自扛事"
+      ],
+      "counterexamples": [
+        "用户感到被支持时，不必强调孤独"
+      ],
+      "source_kind": "original_interpretation",
+      "source_refs": [],
+      "review_status": "draft",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_12.01",
+      "card_refs": [
+        "major_12"
+      ],
+      "text": {
+        "zh": "暂停、倒转视角，可能带来新的理解。",
+        "en": "Pausing and turning your view upside down may bring new understanding."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "upside_down_naiwa",
+        "halo"
+      ],
+      "applicable_conditions": [
+        "卡住、无法推进的阶段"
+      ],
+      "counterexamples": [
+        "对处在紧急处境、必须马上行动的人，不宜美化等待"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "draft",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_12.02",
+      "card_refs": [
+        "major_12"
+      ],
+      "text": {
+        "zh": "主动的放下与被迫的停滞看起来相似，意义却不同。",
+        "en": "Chosen surrender and forced stagnation can look alike but mean different things."
+      },
+      "framework": "existential_extension",
+      "symbol_refs": [
+        "glowing_ribbon",
+        "loose_arms"
+      ],
+      "applicable_conditions": [
+        "被迫停下（生病、失业、等待结果）"
+      ],
+      "counterexamples": [
+        "不能把用户的困境说成『是你选择了这样』"
+      ],
+      "source_kind": "original_interpretation",
+      "source_refs": [],
+      "review_status": "draft",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_12.03",
+      "card_refs": [
+        "major_12"
+      ],
+      "text": {
+        "zh": "无为不是什么都不做，而是不强求。",
+        "en": "Non-action is not doing nothing; it is not forcing."
+      },
+      "framework": "daoist_extension",
+      "symbol_refs": [
+        "loose_arms",
+        "ancient_tree"
+      ],
+      "applicable_conditions": [
+        "过度用力、焦虑地推进"
+      ],
+      "counterexamples": [
+        "需要争取权益时，『不强求』可能变成放弃"
+      ],
+      "source_kind": "original_interpretation",
+      "source_refs": [],
+      "review_status": "draft",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_15.01",
+      "card_refs": [
+        "major_15"
+      ],
+      "text": {
+        "zh": "欲望与执念可能形成束缚。",
+        "en": "Desire and attachment can become bondage."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "chained_figures"
+      ],
+      "applicable_conditions": [
+        "反复的模式、依赖、成瘾倾向"
+      ],
+      "counterexamples": [
+        "不能把成瘾或依赖简单归为意志力问题；需要现实支持时应建议专业帮助"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "draft",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_15.02",
+      "card_refs": [
+        "major_15"
+      ],
+      "text": {
+        "zh": "某些约束同时提供安全感，但外部强制也可能独立存在。",
+        "en": "Some constraints also provide safety — but outside coercion can exist on its own."
+      },
+      "framework": "dialectical_extension",
+      "symbol_refs": [
+        "chained_figures",
+        "open_shackles"
+      ],
+      "applicable_conditions": [
+        "关系、工作中的依附"
+      ],
+      "counterexamples": [
+        "外部强制导致无法离开时，不应归咎于当事人",
+        "家暴、胁迫等情况需要现实帮助，不是象征探索"
+      ],
+      "source_kind": "original_interpretation",
+      "source_refs": [],
+      "review_status": "draft",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_15.03",
+      "card_refs": [
+        "major_15"
+      ],
+      "text": {
+        "zh": "镣铐是松的：看见它能被取下，是改变的第一步。",
+        "en": "The shackles are loose: seeing they can come off is the first step."
+      },
+      "framework": "naiwa_original",
+      "symbol_refs": [
+        "open_shackles"
+      ],
+      "applicable_conditions": [
+        "感到被困、但仍有选择余地"
+      ],
+      "counterexamples": [
+        "用户确实没有离开条件时，不能说『你随时可以走』"
+      ],
+      "source_kind": "original_interpretation",
+      "source_refs": [],
+      "review_status": "draft",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_16.01",
+      "card_refs": [
+        "major_16"
+      ],
+      "text": {
+        "zh": "突如其来的变化会打破旧结构。",
+        "en": "Sudden change can break old structures."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "lightning",
+        "burning_tower"
+      ],
+      "applicable_conditions": [
+        "意外、剧变、计划被打乱"
+      ],
+      "counterexamples": [
+        "不能据此预测灾难或事故"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "draft",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_16.02",
+      "card_refs": [
+        "major_16"
+      ],
+      "text": {
+        "zh": "崩塌暴露了原本不稳的地基，也让真相显形。",
+        "en": "Collapse exposes a foundation that was never steady, and lets the truth show."
+      },
+      "framework": "existential_extension",
+      "symbol_refs": [
+        "falling_debris",
+        "flying_crown"
+      ],
+      "applicable_conditions": [
+        "关系或事业突然破裂之后的反思"
+      ],
+      "counterexamples": [
+        "失去刚刚发生时，不急着要求用户从中找到意义"
+      ],
+      "source_kind": "original_interpretation",
+      "source_refs": [],
+      "review_status": "draft",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_16.03",
+      "card_refs": [
+        "major_16"
+      ],
+      "text": {
+        "zh": "站在台阶上看塔倒：旁观不等于无动于衷。",
+        "en": "Watching the tower fall from the steps: standing apart is not the same as not caring."
+      },
+      "framework": "naiwa_original",
+      "symbol_refs": [
+        "naiwa_on_stairs"
+      ],
+      "applicable_conditions": [
+        "冲击之后的麻木或抽离"
+      ],
+      "counterexamples": [
+        "用户表达强烈痛苦时，不用『平静』来示范压抑情绪"
+      ],
+      "source_kind": "original_interpretation",
+      "source_refs": [],
+      "review_status": "draft",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_17.01",
+      "card_refs": [
+        "major_17"
+      ],
+      "text": {
+        "zh": "风暴之后，希望与修复会慢慢回来。",
+        "en": "After the storm, hope and healing return slowly."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "eight_pointed_star",
+        "pouring_into_pond"
+      ],
+      "applicable_conditions": [
+        "经历困难后的恢复期"
+      ],
+      "counterexamples": [
+        "不能催促用户『该好起来了』"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "draft",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_17.02",
+      "card_refs": [
+        "major_17"
+      ],
+      "text": {
+        "zh": "向外给予与向内滋养需要同时发生。",
+        "en": "Giving outward and nourishing inward need to happen together."
+      },
+      "framework": "jungian_extension",
+      "symbol_refs": [
+        "two_pitchers",
+        "watering_roses"
+      ],
+      "applicable_conditions": [
+        "照顾者、长期付出的人"
+      ],
+      "counterexamples": [
+        "资源确实匮乏时，『滋养自己』不能代替现实帮助"
+      ],
+      "source_kind": "original_interpretation",
+      "source_refs": [],
+      "review_status": "draft",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_17.03",
+      "card_refs": [
+        "major_17"
+      ],
+      "text": {
+        "zh": "浇灌黑玫瑰：不必先变得明亮，才值得被照顾。",
+        "en": "Watering black roses: you need not become bright first to deserve care."
+      },
+      "framework": "naiwa_original",
+      "symbol_refs": [
+        "watering_roses",
+        "black_roses"
+      ],
+      "applicable_conditions": [
+        "自我否定、觉得自己不配"
+      ],
+      "counterexamples": [
+        "用户只想听传统牌义时，不展开自我价值的讨论"
+      ],
+      "source_kind": "original_interpretation",
+      "source_refs": [],
+      "review_status": "draft",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_18.01",
+      "card_refs": [
+        "major_18"
+      ],
+      "text": {
+        "zh": "在不确定与模糊中，恐惧和想象会被放大。",
+        "en": "In uncertainty and haze, fear and imagination grow larger."
+      },
+      "framework": "traditional_rws",
+      "symbol_refs": [
+        "pale_moon",
+        "winding_path"
+      ],
+      "applicable_conditions": [
+        "信息不足、焦虑、多梦"
+      ],
+      "counterexamples": [
+        "用户的担忧有现实依据时，不能说『只是想象』"
+      ],
+      "source_kind": "traditional",
+      "source_refs": [],
+      "review_status": "draft",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_18.02",
+      "card_refs": [
+        "major_18"
+      ],
+      "text": {
+        "zh": "从深处浮上来的东西（池中的龙虾），需要先被看见，而不是立刻被解释。",
+        "en": "What surfaces from the depths (the crayfish in the pool) needs to be seen before it is explained."
+      },
+      "framework": "jungian_extension",
+      "symbol_refs": [
+        "crayfish",
+        "pool"
+      ],
+      "applicable_conditions": [
+        "用户提到梦或说不清的情绪"
+      ],
+      "counterexamples": [
+        "不得把梦境解读为心理诊断或被压抑创伤的证据"
+      ],
+      "source_kind": "original_interpretation",
+      "source_refs": [],
+      "review_status": "draft",
+      "version": 1
+    },
+    {
+      "proposition_id": "prop.major_18.03",
+      "card_refs": [
+        "major_18"
+      ],
+      "text": {
+        "zh": "狗与狼都对着月亮叫：驯服的和野性的部分同时醒着。",
+        "en": "Dog and wolf both cry to the moon: the tame and the wild in you are both awake."
+      },
+      "framework": "naiwa_original",
+      "symbol_refs": [
+        "dog_and_wolf"
+      ],
+      "applicable_conditions": [
+        "内在冲突、矛盾的心情"
+      ],
+      "counterexamples": [
+        "用户没有表达内在冲突时，不强行制造矛盾"
+      ],
+      "source_kind": "original_interpretation",
+      "source_refs": [],
+      "review_status": "draft",
+      "version": 1
+    }
+  ]
+}

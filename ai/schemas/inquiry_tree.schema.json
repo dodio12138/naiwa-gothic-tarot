@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "InquiryTree",
+  "description": "追问树：基于符号与命题的可选追问路径，必须有拒绝 / 只要牌义 / 不适的出口",
+  "type": "object",
+  "required": [
+    "tree_id",
+    "card_refs",
+    "root",
+    "nodes",
+    "stop_rules",
+    "review_status"
+  ],
+  "properties": {
+    "tree_id": {
+      "type": "string",
+      "pattern": "^inq\\.major_\\d{2}$"
+    },
+    "card_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^major_\\d{2}$|^(wands|cups|swords|pentacles)_\\d{2}$"
+      },
+      "minItems": 1
+    },
+    "root": {
+      "type": "string",
+      "minLength": 1
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "action",
+          "text"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "action": {
+            "enum": [
+              "ASK",
+              "REFLECT",
+              "HINT",
+              "PARABLE",
+              "REFRAME",
+              "EXPAND",
+              "ANSWER",
+              "CLOSE",
+              "SAFETY_REDIRECT"
+            ]
+          },
+          "text": {
+            "type": "object",
+            "required": [
+              "zh",
+              "en"
+            ],
+            "properties": {
+              "zh": {
+                "type": "string",
+                "minLength": 1
+              },
+              "en": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "additionalProperties": false
+          },
+          "seed_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0
+          },
+          "branches": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "when",
+                "to"
+              ],
+              "properties": {
+                "when": {
+                  "enum": [
+                    "associates",
+                    "no_association",
+                    "declines",
+                    "wants_meaning",
+                    "wants_to_stop",
+                    "distress",
+                    "asks_more"
+                  ]
+                },
+                "to": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "additionalProperties": false
+            },
+            "minItems": 0
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 2
+    },
+    "stop_rules": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "review_status": {
+      "enum": [
+        "draft",
+        "reviewed",
+        "quarantined"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

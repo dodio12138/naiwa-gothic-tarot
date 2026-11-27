@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BenchmarkCase",
+  "description": "独立测试样例（不参与训练）：输入 + 可程序检查的要求",
+  "type": "object",
+  "required": [
+    "case_id",
+    "input",
+    "checks",
+    "review_status"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "pattern": "^bench\\.\\d{3}$"
+    },
+    "input": {
+      "type": "object",
+      "required": [
+        "spread_id",
+        "cards"
+      ],
+      "properties": {
+        "question": {
+          "type": "string"
+        },
+        "spread_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "user_turns": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "cards": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "card_id",
+              "orientation",
+              "position_id"
+            ],
+            "properties": {
+              "card_id": {
+                "type": "string",
+                "pattern": "^major_\\d{2}$|^(wands|cups|swords|pentacles)_\\d{2}$"
+              },
+              "orientation": {
+                "enum": [
+                  "upright",
+                  "reversed"
+                ]
+              },
+              "position_id": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "additionalProperties": false
+          },
+          "minItems": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "checks": {
+      "type": "object",
+      "properties": {
+        "expected_action": {
+          "type": "string"
+        },
+        "must_mention_any": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "must_not": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "review_status": {
+      "enum": [
+        "draft",
+        "reviewed",
+        "quarantined"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

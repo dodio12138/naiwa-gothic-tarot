@@ -1,0 +1,169 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CardKnowledge",
+  "description": "知识库：一张牌在某个传统下的知识侧表（由 build_kb.mjs 生成）",
+  "type": "object",
+  "required": [
+    "card_id",
+    "tradition_card_ref",
+    "tradition_id",
+    "name",
+    "traditional",
+    "artwork_ref",
+    "visual_symbol_refs",
+    "review_status"
+  ],
+  "properties": {
+    "card_id": {
+      "type": "string",
+      "pattern": "^major_\\d{2}$|^(wands|cups|swords|pentacles)_\\d{2}$"
+    },
+    "tradition_card_ref": {
+      "type": "string",
+      "pattern": "^rws\\.(major|minor)\\..+$"
+    },
+    "tradition_id": {
+      "const": "rws"
+    },
+    "name": {
+      "type": "object",
+      "required": [
+        "zh",
+        "en"
+      ],
+      "properties": {
+        "zh": {
+          "type": "string",
+          "minLength": 1
+        },
+        "en": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "traditional": {
+      "type": "object",
+      "required": [
+        "keywords",
+        "upright",
+        "reversed"
+      ],
+      "properties": {
+        "keywords": {
+          "type": "object"
+        },
+        "upright": {
+          "type": "object",
+          "required": [
+            "zh",
+            "en"
+          ],
+          "properties": {
+            "zh": {
+              "type": "string",
+              "minLength": 1
+            },
+            "en": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "additionalProperties": false
+        },
+        "reversed": {
+          "type": "object",
+          "required": [
+            "zh",
+            "en"
+          ],
+          "properties": {
+            "zh": {
+              "type": "string",
+              "minLength": 1
+            },
+            "en": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "additionalProperties": false
+        },
+        "correspondence": {
+          "type": "object",
+          "required": [
+            "zh",
+            "en"
+          ],
+          "properties": {
+            "zh": {
+              "type": "string",
+              "minLength": 1
+            },
+            "en": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "additionalProperties": false
+        },
+        "archetype": {
+          "type": "object",
+          "required": [
+            "zh",
+            "en"
+          ],
+          "properties": {
+            "zh": {
+              "type": "string",
+              "minLength": 1
+            },
+            "en": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "artwork_ref": {
+      "type": "string",
+      "pattern": "^naiwa\\.classic\\."
+    },
+    "visual_symbol_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "rws_absent": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "review_status": {
+      "enum": [
+        "draft",
+        "reviewed",
+        "quarantined"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

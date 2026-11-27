@@ -1,0 +1,358 @@
+{
+  "$comment": "试点语义框架（draft，待人工审核）。格式见 ai/schemas/。",
+  "pilot_cards": [
+    "major_00",
+    "major_04",
+    "major_12",
+    "major_15",
+    "major_16",
+    "major_17",
+    "major_18"
+  ],
+  "contradictions": [
+    {
+      "contradiction_id": "contra.major_00.01",
+      "card_refs": [
+        "major_00"
+      ],
+      "poles": [
+        {
+          "zh": "自由",
+          "en": "Freedom"
+        },
+        {
+          "zh": "安全",
+          "en": "Safety"
+        }
+      ],
+      "description": {
+        "zh": "出发带来自由，也意味着离开熟悉的安全。",
+        "en": "Setting out brings freedom and also means leaving familiar safety."
+      },
+      "proposition_refs": [
+        "prop.major_00.01",
+        "prop.major_00.02"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "contradiction_id": "contra.major_00.02",
+      "card_refs": [
+        "major_00"
+      ],
+      "poles": [
+        {
+          "zh": "纯真",
+          "en": "Innocence"
+        },
+        {
+          "zh": "鲁莽",
+          "en": "Recklessness"
+        }
+      ],
+      "description": {
+        "zh": "愚者的纯真可以是开放，也可能是对风险视而不见。",
+        "en": "The Fool's innocence can be openness — or blindness to risk."
+      },
+      "proposition_refs": [
+        "prop.major_00.01"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "contradiction_id": "contra.major_04.01",
+      "card_refs": [
+        "major_04"
+      ],
+      "poles": [
+        {
+          "zh": "保护",
+          "en": "Protection"
+        },
+        {
+          "zh": "控制",
+          "en": "Control"
+        }
+      ],
+      "description": {
+        "zh": "同一套规矩，可以是庇护，也可以是牢笼。",
+        "en": "The same rules can be a shelter or a cage."
+      },
+      "proposition_refs": [
+        "prop.major_04.01",
+        "prop.major_04.02"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "contradiction_id": "contra.major_04.02",
+      "card_refs": [
+        "major_04"
+      ],
+      "poles": [
+        {
+          "zh": "稳定",
+          "en": "Stability"
+        },
+        {
+          "zh": "僵化",
+          "en": "Rigidity"
+        }
+      ],
+      "description": {
+        "zh": "稳定让人安心，过度的稳定会让人无法改变。",
+        "en": "Stability reassures; too much of it makes change impossible."
+      },
+      "proposition_refs": [
+        "prop.major_04.01",
+        "prop.major_04.03"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "contradiction_id": "contra.major_12.01",
+      "card_refs": [
+        "major_12"
+      ],
+      "poles": [
+        {
+          "zh": "等待",
+          "en": "Waiting"
+        },
+        {
+          "zh": "行动",
+          "en": "Action"
+        }
+      ],
+      "description": {
+        "zh": "有时停下才看得清，有时停下只是在拖。",
+        "en": "Sometimes stopping brings clarity; sometimes it is only delay."
+      },
+      "proposition_refs": [
+        "prop.major_12.01",
+        "prop.major_12.03"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "contradiction_id": "contra.major_12.02",
+      "card_refs": [
+        "major_12"
+      ],
+      "poles": [
+        {
+          "zh": "牺牲",
+          "en": "Sacrifice"
+        },
+        {
+          "zh": "自我",
+          "en": "Self-worth"
+        }
+      ],
+      "description": {
+        "zh": "付出可以有意义，但不必以失去自己为代价。",
+        "en": "Giving can be meaningful, but it need not cost you yourself."
+      },
+      "proposition_refs": [
+        "prop.major_12.02"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "contradiction_id": "contra.major_15.01",
+      "card_refs": [
+        "major_15"
+      ],
+      "poles": [
+        {
+          "zh": "安全",
+          "en": "Safety"
+        },
+        {
+          "zh": "自由",
+          "en": "Freedom"
+        }
+      ],
+      "description": {
+        "zh": "让人离不开的东西，往往也在提供某种安全。",
+        "en": "What we cannot leave often also gives us some kind of safety."
+      },
+      "proposition_refs": [
+        "prop.major_15.02"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "contradiction_id": "contra.major_15.02",
+      "card_refs": [
+        "major_15"
+      ],
+      "poles": [
+        {
+          "zh": "欲望",
+          "en": "Desire"
+        },
+        {
+          "zh": "掌控",
+          "en": "Mastery"
+        }
+      ],
+      "description": {
+        "zh": "欲望让人活着，也可能让人被牵着走。",
+        "en": "Desire keeps us alive — and can lead us by the nose."
+      },
+      "proposition_refs": [
+        "prop.major_15.01",
+        "prop.major_15.03"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "contradiction_id": "contra.major_16.01",
+      "card_refs": [
+        "major_16"
+      ],
+      "poles": [
+        {
+          "zh": "毁灭",
+          "en": "Destruction"
+        },
+        {
+          "zh": "解放",
+          "en": "Liberation"
+        }
+      ],
+      "description": {
+        "zh": "倒下的是牢笼还是家，取决于你在塔里住了多久、住得怎样。",
+        "en": "Whether what fell was a cage or a home depends on how you lived in the tower."
+      },
+      "proposition_refs": [
+        "prop.major_16.01",
+        "prop.major_16.02"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "contradiction_id": "contra.major_16.02",
+      "card_refs": [
+        "major_16"
+      ],
+      "poles": [
+        {
+          "zh": "掌控",
+          "en": "Control"
+        },
+        {
+          "zh": "失控",
+          "en": "Losing control"
+        }
+      ],
+      "description": {
+        "zh": "高塔提醒，有些事无论怎样计划都会发生。",
+        "en": "The Tower reminds us some things happen however we plan."
+      },
+      "proposition_refs": [
+        "prop.major_16.01"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "contradiction_id": "contra.major_17.01",
+      "card_refs": [
+        "major_17"
+      ],
+      "poles": [
+        {
+          "zh": "希望",
+          "en": "Hope"
+        },
+        {
+          "zh": "失望",
+          "en": "Disappointment"
+        }
+      ],
+      "description": {
+        "zh": "希望让人继续走，过高的期待也可能带来失落。",
+        "en": "Hope keeps us walking; expectations set too high can bring letdown."
+      },
+      "proposition_refs": [
+        "prop.major_17.01"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "contradiction_id": "contra.major_17.02",
+      "card_refs": [
+        "major_17"
+      ],
+      "poles": [
+        {
+          "zh": "给予",
+          "en": "Giving"
+        },
+        {
+          "zh": "保留",
+          "en": "Keeping"
+        }
+      ],
+      "description": {
+        "zh": "一只壶给出去，另一只留给自己，并不自私。",
+        "en": "One pitcher poured out, one kept for yourself — that is not selfish."
+      },
+      "proposition_refs": [
+        "prop.major_17.02",
+        "prop.major_17.03"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "contradiction_id": "contra.major_18.01",
+      "card_refs": [
+        "major_18"
+      ],
+      "poles": [
+        {
+          "zh": "直觉",
+          "en": "Intuition"
+        },
+        {
+          "zh": "错觉",
+          "en": "Illusion"
+        }
+      ],
+      "description": {
+        "zh": "月光下的感觉可能是直觉，也可能是恐惧投下的影子。",
+        "en": "A feeling under moonlight may be intuition — or a shadow cast by fear."
+      },
+      "proposition_refs": [
+        "prop.major_18.01",
+        "prop.major_18.02"
+      ],
+      "review_status": "draft"
+    },
+    {
+      "contradiction_id": "contra.major_18.02",
+      "card_refs": [
+        "major_18"
+      ],
+      "poles": [
+        {
+          "zh": "已知",
+          "en": "Known"
+        },
+        {
+          "zh": "未知",
+          "en": "Unknown"
+        }
+      ],
+      "description": {
+        "zh": "路只亮一段，剩下的要走着看。",
+        "en": "Only part of the path is lit; the rest is seen by walking."
+      },
+      "proposition_refs": [
+        "prop.major_18.01"
+      ],
+      "review_status": "draft"
+    }
+  ]
+}
