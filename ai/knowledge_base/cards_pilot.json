@@ -1,9 +1,10 @@
 {
-  "$comment": "由 ai/scripts/build_kb.mjs 生成，请勿手改。传统牌义暂取站内文案，原典出处待补（source_refs）。",
+  "$comment": "由 ai/scripts/build_kb.mjs 生成，请勿手改。traditional 是站内的通行解读；waite_1911 是韦特 1911 原文的占卜义（英文），二者常有出入；source_refs 指向 ai/sources/。",
   "generated_from": [
     "data/cards.json",
     "data/visual_symbols.json",
-    "ai/knowledge_base/imagery_compare_pilot.json"
+    "ai/knowledge_base/imagery_compare_pilot.json",
+    "ai/sources/waite_pkt_major.json"
   ],
   "cards": [
     {
@@ -116,7 +117,15 @@
           "note": ""
         }
       ],
-      "source_refs": [],
+      "waite_1911": {
+        "upright": "Folly, mania, extravagance, intoxication, delirium, frenzy, bewrayment.",
+        "reversed": "Negligence, absence, distribution, carelessness, apathy, nullity, vanity."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2 · Part III § 2 · Zero. The Fool",
+        "waite_pkt#part2_s2 · Part II § 2 · The Fool",
+        "golden_dawn_correspondences（对应关系，原典待补）"
+      ],
       "review_status": "draft"
     },
     {
@@ -250,7 +259,15 @@
           "note": "我们画成室内礼拜堂与窗外满月（风格化，已从 AI 数据去掉）"
         }
       ],
-      "source_refs": [],
+      "waite_1911": {
+        "upright": "Skill, diplomacy, address, subtlety; sickness, pain, loss, disaster, snares of enemies; self-confidence, will; the Querent, if male.",
+        "reversed": "Physician, Magus, mental disease, disgrace, disquiet."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2 · Part III § 2 · 1. The Magician",
+        "waite_pkt#part2_s2 · Part II § 2 · The Magician",
+        "golden_dawn_correspondences（对应关系，原典待补）"
+      ],
       "review_status": "draft"
     },
     {
@@ -367,7 +384,15 @@
           "note": ""
         }
       ],
-      "source_refs": [],
+      "waite_1911": {
+        "upright": "Secrets, mystery, the future as yet unrevealed; the woman who interests the Querent, if male; the Querent herself, if female; silence, tenacity; mystery, wisdom, science.",
+        "reversed": "Passion, moral or physical ardour, conceit, surface knowledge."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2 · Part III § 2 · 2. The High Priestess",
+        "waite_pkt#part2_s2 · Part II § 2 · The High Priestess",
+        "golden_dawn_correspondences（对应关系，原典待补）"
+      ],
       "review_status": "draft"
     },
     {
@@ -495,7 +520,15 @@
           "note": "我们只有一束斜射的暖阳（见多出的部分）"
         }
       ],
-      "source_refs": [],
+      "waite_1911": {
+        "upright": "Fruitfulness, action, initiative, length of days; the unknown, clandestine; also difficulty, doubt, ignorance.",
+        "reversed": "Light, truth, the unravelling of involved matters, public rejoicings; according to another reading, vacillation."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2 · Part III § 2 · 3. The Empress",
+        "waite_pkt#part2_s2 · Part II § 2 · The Empress",
+        "golden_dawn_correspondences（对应关系，原典待补）"
+      ],
       "review_status": "draft"
     },
     {
@@ -629,7 +662,15 @@
           "note": ""
         }
       ],
-      "source_refs": [],
+      "waite_1911": {
+        "upright": "Stability, power, protection, realization; a great person; aid, reason, conviction; also authority and will.",
+        "reversed": "Benevolence, compassion, credit; also confusion to enemies, obstruction, immaturity."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2 · Part III § 2 · 4. The Emperor",
+        "waite_pkt#part2_s2 · Part II § 2 · The Emperor",
+        "golden_dawn_correspondences（对应关系，原典待补）"
+      ],
       "review_status": "draft"
     },
     {
@@ -748,7 +789,15 @@
           "note": "我们的侍者是米白兜帽袍配红十字圣带"
         }
       ],
-      "source_refs": [],
+      "waite_1911": {
+        "upright": "Marriage, alliance, captivity, servitude; by another account, mercy and goodness; inspiration; the man to whom the Querent has recourse.",
+        "reversed": "Society, good understanding, concord, over-kindness, weakness."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2 · Part III § 2 · 5. The Hierophant",
+        "waite_pkt#part2_s2 · Part II § 2 · The Hierophant",
+        "golden_dawn_correspondences（对应关系，原典待补）"
+      ],
       "review_status": "draft"
     },
     {
@@ -868,7 +917,15 @@
           "note": "我们的两只奶蛙并肩手牵手，没有这种视线层次"
         }
       ],
-      "source_refs": [],
+      "waite_1911": {
+        "upright": "Attraction, love, beauty, trials overcome.",
+        "reversed": "Failure, foolish designs. Another account speaks of marriage frustrated and contrarieties of all kinds."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2 · Part III § 2 · 6. The Lovers",
+        "waite_pkt#part2_s2 · Part II § 2 · The Lovers",
+        "golden_dawn_correspondences（对应关系，原典待补）"
+      ],
       "review_status": "draft"
     },
     {
@@ -1012,7 +1069,15 @@
           "note": "我们画成蓝黑风暴夜空（风格化，已去掉）"
         }
       ],
-      "source_refs": [],
+      "waite_1911": {
+        "upright": "Succour, providence; also war, triumph, presumption, vengeance, trouble.",
+        "reversed": "Riot, quarrel, dispute, litigation, defeat."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2 · Part III § 2 · 7. The Chariot",
+        "waite_pkt#part2_s2 · Part II § 2 · The Chariot",
+        "golden_dawn_correspondences（对应关系，原典待补）"
+      ],
       "review_status": "draft"
     },
     {
@@ -1125,7 +1190,15 @@
           "note": "我们画成了满月夜晚（风格化，已去掉）"
         }
       ],
-      "source_refs": [],
+      "waite_1911": {
+        "upright": "Power, energy, action, courage, magnanimity; also complete success and honours.",
+        "reversed": "Despotism, abuse of power, weakness, discord, sometimes even disgrace."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2 · Part III § 2 · 8. Fortitude",
+        "waite_pkt#part2_s2 · Part II § 2 · Strength, or Fortitude",
+        "golden_dawn_correspondences（对应关系，原典待补）"
+      ],
       "review_status": "draft"
     },
     {
@@ -1228,7 +1301,15 @@
           "note": "传统隐者的背景本来就昏暗（常被读作夜晚或黄昏）；画面里的满月是风格化，已去掉"
         }
       ],
-      "source_refs": [],
+      "waite_1911": {
+        "upright": "Prudence, circumspection; also and especially treason, dissimulation, roguery, corruption.",
+        "reversed": "Concealment, disguise, policy, fear, unreasoned caution."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2 · Part III § 2 · 9. The Hermit",
+        "waite_pkt#part2_s2 · Part II § 2 · The Hermit",
+        "golden_dawn_correspondences（对应关系，原典待补）"
+      ],
       "review_status": "draft"
     },
     {
@@ -1347,7 +1428,15 @@
           "note": "我们是紫色星云、旋涡星系与行星（风格化，已去掉）"
         }
       ],
-      "source_refs": [],
+      "waite_1911": {
+        "upright": "Destiny, fortune, success, elevation, luck, felicity.",
+        "reversed": "Increase, abundance, superfluity."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2 · Part III § 2 · 10. Wheel of Fortune",
+        "waite_pkt#part2_s2 · Part II § 2 · Wheel of Fortune",
+        "golden_dawn_correspondences（对应关系，原典待补）"
+      ],
       "review_status": "draft"
     },
     {
@@ -1473,7 +1562,15 @@
           "note": ""
         }
       ],
-      "source_refs": [],
+      "waite_1911": {
+        "upright": "Equity, rightness, probity, executive; triumph of the deserving side in law.",
+        "reversed": "Law in all its departments, legal complications, bigotry, bias, excessive severity."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2 · Part III § 2 · 11. Justice",
+        "waite_pkt#part2_s2 · Part II § 2 · Justice",
+        "golden_dawn_correspondences（对应关系，原典待补）"
+      ],
       "review_status": "draft"
     },
     {
@@ -1586,7 +1683,15 @@
           "note": ""
         }
       ],
-      "source_refs": [],
+      "waite_1911": {
+        "upright": "Wisdom, circumspection, discernment, trials, sacrifice, intuition, divination, prophecy.",
+        "reversed": "Selfishness, the crowd, body politic."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2 · Part III § 2 · 12. The Hanged Man",
+        "waite_pkt#part2_s2 · Part II § 2 · The Hanged Man",
+        "golden_dawn_correspondences（对应关系，原典待补）"
+      ],
       "review_status": "draft"
     },
     {
@@ -1707,7 +1812,15 @@
           "note": "传统是两座塔之间的日出；我们的塔画成哥特尖塔（尖塔造型属风格化，不作意义），太阳贴着地平线，看不出是升是落，站内文案写「天正在亮」"
         }
       ],
-      "source_refs": [],
+      "waite_1911": {
+        "upright": "End, mortality, destruction, corruption; also, for a man, the loss of a benefactor; for a woman, many contrarieties; for a maid, failure of marriage projects.",
+        "reversed": "Inertia, sleep, lethargy, petrifaction, somnambulism; hope destroyed."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2 · Part III § 2 · 13. Death",
+        "waite_pkt#part2_s2 · Part II § 2 · Death",
+        "golden_dawn_correspondences（对应关系，原典待补）"
+      ],
       "review_status": "draft"
     },
     {
@@ -1832,7 +1945,15 @@
           "note": "我们画的是白百合，只是位置与传统的鸢尾对应"
         }
       ],
-      "source_refs": [],
+      "waite_1911": {
+        "upright": "Economy, moderation, frugality, management, accommodation.",
+        "reversed": "Things connected with churches, religions, sects, the priesthood, sometimes even the priest who will marry the Querent; also disunion, unfortunate combinations, competing interests."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2 · Part III § 2 · 14. Temperance",
+        "waite_pkt#part2_s2 · Part II § 2 · Temperance",
+        "golden_dawn_correspondences（对应关系，原典待补）"
+      ],
       "review_status": "draft"
     },
     {
@@ -1960,7 +2081,15 @@
           "note": ""
         }
       ],
-      "source_refs": [],
+      "waite_1911": {
+        "upright": "Ravage, violence, vehemence, extraordinary efforts, force, fatality; that which is predestined but is not for this reason evil.",
+        "reversed": "Evil fatality, weakness, pettiness, blindness."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2 · Part III § 2 · 15. The Devil",
+        "waite_pkt#part2_s2 · Part II § 2 · The Devil",
+        "golden_dawn_correspondences（对应关系，原典待补）"
+      ],
       "review_status": "draft"
     },
     {
@@ -2071,7 +2200,15 @@
           "note": ""
         }
       ],
-      "source_refs": [],
+      "waite_1911": {
+        "upright": "Misery, distress, indigence, adversity, calamity, disgrace, deception, ruin. It is a card in particular of unforeseen catastrophe.",
+        "reversed": "According to one account, the same in a lesser degree; also oppression, imprisonment, tyranny."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2 · Part III § 2 · 16. The Tower",
+        "waite_pkt#part2_s2 · Part II § 2 · The Tower",
+        "golden_dawn_correspondences（对应关系，原典待补）"
+      ],
       "review_status": "draft"
     },
     {
@@ -2196,7 +2333,15 @@
           "note": "星夜本来就是这张牌的传统"
         }
       ],
-      "source_refs": [],
+      "waite_1911": {
+        "upright": "Loss, theft, privation, abandonment; another reading says—hope and bright prospects,",
+        "reversed": "Arrogance, haughtiness, impotence."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2 · Part III § 2 · 17. The Star",
+        "waite_pkt#part2_s2 · Part II § 2 · The Star",
+        "golden_dawn_correspondences（对应关系，原典待补）"
+      ],
       "review_status": "draft"
     },
     {
@@ -2307,7 +2452,15 @@
           "note": ""
         }
       ],
-      "source_refs": [],
+      "waite_1911": {
+        "upright": "Hidden enemies, danger, calumny, darkness, terror, deception, occult forces, error.",
+        "reversed": "Instability, inconstancy, silence, lesser degrees of deception and error."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2 · Part III § 2 · 18. The Moon",
+        "waite_pkt#part2_s2 · Part II § 2 · The Moon",
+        "golden_dawn_correspondences（对应关系，原典待补）"
+      ],
       "review_status": "draft"
     },
     {
@@ -2433,7 +2586,15 @@
           "note": "满画面暖金色阳光，本来就是这张牌的传统"
         }
       ],
-      "source_refs": [],
+      "waite_1911": {
+        "upright": "Material happiness, fortunate marriage, contentment.",
+        "reversed": "The same in a lesser sense."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2 · Part III § 2 · 19. The Sun",
+        "waite_pkt#part2_s2 · Part II § 2 · The Sun",
+        "golden_dawn_correspondences（对应关系，原典待补）"
+      ],
       "review_status": "draft"
     },
     {
@@ -2568,7 +2729,15 @@
           "note": "图上雪山与瀑布、哥特拱廊废墟和山顶城堡画在一起；只取雪山，废墟与城堡不作意义"
         }
       ],
-      "source_refs": [],
+      "waite_1911": {
+        "upright": "Change of position, renewal, outcome. Another account specifies total loss though lawsuit.",
+        "reversed": "Weakness, pusillanimity, simplicity; also deliberation, decision, sentence."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2 · Part III § 2 · 20. The Last Judgment",
+        "waite_pkt#part2_s2 · Part II § 2 · The Last Judgment",
+        "golden_dawn_correspondences（对应关系，原典待补）"
+      ],
       "review_status": "draft"
     },
     {
@@ -2678,7 +2847,15 @@
           "note": "奶蛙双脚并拢"
         }
       ],
-      "source_refs": [],
+      "waite_1911": {
+        "upright": "Assured success, recompense, voyage, route, emigration, flight, change of place.",
+        "reversed": "Inertia, fixity, stagnation, permanence."
+      },
+      "source_refs": [
+        "waite_pkt#part3_s2 · Part III § 2 · 21. The World",
+        "waite_pkt#part2_s2 · Part II § 2 · The World",
+        "golden_dawn_correspondences（对应关系，原典待补）"
+      ],
       "review_status": "draft"
     }
   ]

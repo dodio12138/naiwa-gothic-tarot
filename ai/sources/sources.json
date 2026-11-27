@@ -1,0 +1,38 @@
+{
+  "$comment": "原典与来源清单（v0.6 第 4.1 节：作者、版本、章节、语言、版权许可、来源 URL）。只收录公版或许可明确的文本。",
+  "sources": [
+    {
+      "id": "waite_pkt",
+      "title": "The Pictorial Key to the Tarot: Being Fragments of a Secret Tradition under the Veil of Divination",
+      "author": "Arthur Edward Waite",
+      "illustrator": "Pamela Colman Smith",
+      "edition": "London: William Rider & Son, 1911（1910 年初版的插图本）；文本取自 Wikisource 转录版",
+      "language": "en",
+      "license": "公有领域（Wikisource 标注 PD-US；作者 1942 年去世）",
+      "url": "https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot",
+      "retrieved": "2026-11-27",
+      "sections": {
+        "part2_s2": {
+          "title": "Part II § 2 · The Trumps Major and their Inner Symbolism",
+          "url": "https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_2"
+        },
+        "part3_s2": {
+          "title": "Part III § 2 · The Greater Arcana and their Divinatory Meanings",
+          "url": "https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_3"
+        }
+      },
+      "notes": "韦特在第三部分自己说，大牌的占卜义「人为而武断」，与第二部分的象征解说差别很大；今天通行的 RWS 解读多取自第二部分的象征与后人的整理，不等于韦特列出的占卜义。"
+    },
+    {
+      "id": "golden_dawn_correspondences",
+      "title": "黄金黎明体系的大牌与希伯来字母 / 占星对应",
+      "author": "Hermetic Order of the Golden Dawn（S. L. MacGregor Mathers 等）",
+      "edition": "站内 data/cards.json 的 astro 字段沿用此体系",
+      "language": "en",
+      "license": "待核：原始会内文献的公开转录版本与许可尚未确认",
+      "url": null,
+      "retrieved": null,
+      "notes": "待补可引用的公版原典（候选：Crowley《777》1909 年版）。在补齐之前，对应关系的 source_refs 只标到体系，不标页码。"
+    }
+  ]
+}

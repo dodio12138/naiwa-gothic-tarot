@@ -18,6 +18,7 @@ export const PILOT = Array.from({ length: 22 }, (_, i) => `major_${String(i).pad
 const { cards } = read('data/cards.json');
 const { artworks } = read('data/visual_symbols.json');
 const compare = read('ai/knowledge_base/imagery_compare_pilot.json').cards;
+const waite = Object.fromEntries(read('ai/sources/waite_pkt_major.json').cards.map((c) => [c.card_id, c]));
 
 const out = PILOT.map((id) => {
   const c = cards.find((x) => x.id === id);
@@ -41,15 +42,20 @@ const out = PILOT.map((id) => {
     style_removed_refs: compare[id].style_removed.map((x) => x.id),
     rws_absent: compare[id].traditional.filter((t) => t.status === 'absent').map((t) => t.rws),
     imagery_compare: compare[id].traditional,
-    source_refs: [],
+    // 原典：韦特 1911 原文的占卜义（英文原文）与出处；对应关系的体系出处待补原典
+    waite_1911: waite[id] ? { upright: waite[id].divinatory.upright, reversed: waite[id].divinatory.reversed } : undefined,
+    source_refs: [
+      ...(waite[id] ? [waite[id].divinatory.ref, waite[id].symbolism.ref].map((r) => `${r.source}#${r.section} · ${r.locator}`) : []),
+      'golden_dawn_correspondences（对应关系，原典待补）',
+    ],
     review_status: 'draft',
   };
 });
 
 const dst = path.join(root, 'ai/knowledge_base/cards_pilot.json');
 fs.writeFileSync(dst, JSON.stringify({
-  $comment: '由 ai/scripts/build_kb.mjs 生成，请勿手改。传统牌义暂取站内文案，原典出处待补（source_refs）。',
-  generated_from: ['data/cards.json', 'data/visual_symbols.json', 'ai/knowledge_base/imagery_compare_pilot.json'],
+  $comment: '由 ai/scripts/build_kb.mjs 生成，请勿手改。traditional 是站内的通行解读；waite_1911 是韦特 1911 原文的占卜义（英文），二者常有出入；source_refs 指向 ai/sources/。',
+  generated_from: ['data/cards.json', 'data/visual_symbols.json', 'ai/knowledge_base/imagery_compare_pilot.json', 'ai/sources/waite_pkt_major.json'],
   cards: out,
 }, null, 2) + '\n');
 console.log(`已生成 ${path.relative(root, dst)}：${out.length} 张`);

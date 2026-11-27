@@ -50,7 +50,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "waite_symbolism",
+      "tradition_evidence": "He is the spirit in search of experience.",
+      "tradition_note": "“走入未知的旅程”对应韦特的象征解说；“新开始、还没准备好”是现代通行读法，韦特第三部分的占卜义是 Folly, mania 等，并不支持“开始”。"
     },
     {
       "proposition_id": "prop.major_00.02",
@@ -127,7 +130,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "waite_symbolism",
+      "tradition_evidence": "drawn from things above and derived to things below",
+      "tradition_note": "韦特原意是恩典从上而下降临（descent of grace），条目世俗化为“意志把念头落成行动”，方向一致，并不相反；“thought, in the fixation thereof”也支持“念头被固定下来”。"
     },
     {
       "proposition_id": "prop.major_01.02",
@@ -154,7 +160,9 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "waite_symbolism",
+      "tradition_evidence": "lie like counters before the adept, and he adapts them as he wills"
     },
     {
       "proposition_id": "prop.major_01.03",
@@ -207,7 +215,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "waite_symbolism",
+      "tradition_evidence": "to shew that some things are implied and some spoken",
+      "tradition_note": "“不说出来的知道”有原文依据，占卜义里也有 silence；“直觉”这个说法是现代通行读法。"
     },
     {
       "proposition_id": "prop.major_02.02",
@@ -234,7 +245,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "waite_divinatory",
+      "tradition_evidence": "Secrets, mystery, the future as yet unrevealed",
+      "tradition_note": "帷幕（veil of the Temple）在象征解说里也有。"
     },
     {
       "proposition_id": "prop.major_02.03",
@@ -286,7 +300,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "waite_symbolism",
+      "tradition_evidence": "A field of corn is ripening in front of her",
+      "tradition_note": "占卜义里也有 Fruitfulness；“照料”是现代通行的养育读法。韦特写皇后时没有提到石榴（石榴出现在女祭司的帷幕上）。"
     },
     {
       "proposition_id": "prop.major_03.02",
@@ -312,7 +329,9 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "modern_convention",
+      "tradition_note": "韦特提到金星盾牌、说她是 Earthly Paradise，但没有把她讲成“感官舒适即滋养”，这一层是现代自我照顾的读法。"
     },
     {
       "proposition_id": "prop.major_03.03",
@@ -362,7 +381,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "waite_divinatory",
+      "tradition_evidence": "Stability, power, protection, realization; a great person; aid, reason",
+      "tradition_note": "韦特说皇帝有时被画成坐在方石上，这“混淆了一些问题”；我们用的是石座，但不影响这条命题。"
     },
     {
       "proposition_id": "prop.major_04.02",
@@ -439,7 +461,9 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "waite_divinatory",
+      "tradition_evidence": "the man to whom the Querent has recourse"
     },
     {
       "proposition_id": "prop.major_05.02",
@@ -467,7 +491,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "waite_symbolism",
+      "tradition_evidence": "the channel of grace belonging to the world of institution",
+      "tradition_note": "占卜义里的 Marriage, alliance 支持“婚礼”这一情境；但韦特同时说他是“utmost rigidity of expression”，占卜义也有 captivity, servitude，条目只讲了正面，偏一边但不相反。"
     },
     {
       "proposition_id": "prop.major_05.03",
@@ -518,7 +545,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "modern_convention",
+      "tradition_evidence": "Attraction, love, beauty, trials overcome.",
+      "tradition_note": "“吸引与爱”在占卜义里有直接依据；条目的重点“价值上的靠近与信任”是现代通行读法。"
     },
     {
       "proposition_id": "prop.major_06.02",
@@ -546,7 +576,9 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "modern_convention",
+      "tradition_note": "和韦特明显相反：韦特明说这张图换掉了“later follies which depicted man between vice and virtue”，有意去掉“选择”的旧读法；“选择”是现代通行读法。另外石榴树、玫瑰树是我们改过的画面，韦特写的是生命之树和知识之树。"
     },
     {
       "proposition_id": "prop.major_06.03",
@@ -600,7 +632,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "modern_convention",
+      "tradition_evidence": "two sphinxes thus draw his chariot",
+      "tradition_note": "韦特只说两只狮身人面兽拉车、讲的是 triumph in the mind，没提黑白，也没说“收拢相反的力量”，这一层是现代通行读法；韦特还特别指出这种胜利只在外部，会让他困在 logical understanding 里，条目没讲这一面。星形权杖是我们的改动（原文是 drawn sword）。"
     },
     {
       "proposition_id": "prop.major_07.02",
@@ -678,7 +713,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "waite_symbolism",
+      "tradition_evidence": "her beneficent fortitude has already subdued the lion, which is being led by a chain of flowers",
+      "tradition_note": "原文还有 the sweet yoke and the light burden；韦特明说这张牌“nothing to do with self-confidence in the ordinary sense”，条目没有违背这一点。"
     },
     {
       "proposition_id": "prop.major_08.02",
@@ -729,7 +767,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "modern_convention",
+      "tradition_evidence": "there broods the same symbol of life",
+      "tradition_note": "韦特把头顶的 ∞ 叫作“symbol of life”（与魔术师同一个符号），没有说成“长久的耐力”；“耐力”是现代通行引申。"
     },
     {
       "proposition_id": "prop.major_09.01",
@@ -756,7 +797,9 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "modern_convention",
+      "tradition_note": "和韦特明显相反：韦特说这是一张“card of attainment”，不是“a wise man in search of truth”，并说把它和“occult isolation”联系起来是“quite incorrectly”。“独处、向内寻找”是现代通行读法；占卜义只有 Prudence, circumspection。"
     },
     {
       "proposition_id": "prop.major_09.02",
@@ -781,7 +824,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "waite_symbolism",
+      "tradition_evidence": "His beacon intimates that \"where I am, you also may be.\"",
+      "tradition_note": "情境写了“有经验可以分享”，但韦特否认隐者是“an especial example of experience”，这一点有点出入；“照亮后来的人”这一核心有原文依据。"
     },
     {
       "proposition_id": "prop.major_09.03",
@@ -837,7 +883,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "waite_symbolism",
+      "tradition_evidence": "the perpetual motion of a fluidic universe and for the flux of human life",
+      "tradition_note": "韦特还强调“the denial of chance”，在他那里，轮子的转动不是随机的。"
     },
     {
       "proposition_id": "prop.major_10.02",
@@ -863,7 +912,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "waite_symbolism",
+      "tradition_evidence": "The Sphinx is the equilibrium therein.",
+      "tradition_note": "原文还有“stability amidst movement”。"
     },
     {
       "proposition_id": "prop.major_10.03",
@@ -916,7 +968,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "waite_divinatory",
+      "tradition_evidence": "Equity, rightness, probity, executive; triumph of the deserving side in law.",
+      "tradition_note": "「公正决定」直接对应正位占卜义；天平、剑在韦特 §2 文字里未逐一点名（他说本牌沿用传统象征、取其显义）。"
     },
     {
       "proposition_id": "prop.major_11.02",
@@ -941,7 +996,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "waite_symbolism",
+      "tradition_evidence": "the moral principle which deals unto every man according to his works",
+      "tradition_note": "「行动与后果相连」正是韦特对正义牌的解说；条目把它落到天平上，天平本身韦特没有点名。"
     },
     {
       "proposition_id": "prop.major_11.03",
@@ -992,7 +1050,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "waite_symbolism",
+      "tradition_evidence": "the figure, as a whole, suggests life in suspension, but life and not death",
+      "tradition_note": "「暂停」对应 life in suspension，「新的理解」可对应 great awakening 及正位 Wisdom, discernment；「倒转视角」的说法本身是现代通行解读。"
     },
     {
       "proposition_id": "prop.major_12.02",
@@ -1071,7 +1132,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "modern_convention",
+      "tradition_evidence": "perpetuated in change, transformation and passage from lower to higher",
+      "tradition_note": "安全规则下的有意偏离：韦特原文的占卜义包括 mortality（死亡），本项目只把死神解读为转变与结束，绝不联系真实死亡。"
     },
     {
       "proposition_id": "prop.major_13.02",
@@ -1098,7 +1162,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "waite_symbolism",
+      "tradition_evidence": "king and child and maiden fall before him",
+      "tradition_note": "原典是国王本人倒下；我们只画了地上的王冠，读法一致。"
     },
     {
       "proposition_id": "prop.major_13.03",
@@ -1153,7 +1220,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "waite_symbolism",
+      "tradition_evidence": "it tempers, combines and harmonises the psychic and material natures",
+      "tradition_note": "两端调和对应一脚在地、一脚在水及调和心灵与物质；正位 moderation, accommodation 也支持。"
     },
     {
       "proposition_id": "prop.major_14.02",
@@ -1182,7 +1252,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "modern_convention",
+      "tradition_evidence": "Economy, moderation, frugality, management, accommodation.",
+      "tradition_note": "「适度」有韦特占卜义依据；「耐心、修复」是现代通行解读，韦特原文没有。"
     },
     {
       "proposition_id": "prop.major_14.03",
@@ -1232,7 +1305,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "waite_symbolism",
+      "tradition_evidence": "Hereof is the chain and fatality of the material life.",
+      "tradition_note": "韦特讲的是物质生活的锁链与兽性（tailed, to signify the animal nature）；「欲望与执念」是现代通行的具体化说法，与原文方向一致。"
     },
     {
       "proposition_id": "prop.major_15.02",
@@ -1283,7 +1359,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "modern_convention",
+      "tradition_evidence": "he who is exalted above them is not to be their master for ever",
+      "tradition_note": "「锁链松、可自行取下」是现代通行读法，韦特原文没提锁链松；他只说魔鬼不会永远支配他们，且更强调 fatality。"
     },
     {
       "proposition_id": "prop.major_16.01",
@@ -1308,7 +1387,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "waite_divinatory",
+      "tradition_evidence": "It is a card in particular of unforeseen catastrophe.",
+      "tradition_note": "韦特的语气是灾难、毁灭（Misery, distress... ruin），条目把它温和化为「变化」，方向一致。"
     },
     {
       "proposition_id": "prop.major_16.02",
@@ -1335,7 +1417,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "waite_symbolism",
+      "tradition_evidence": "I understand that the reference is, however, to a House of Falsehood.",
+      "tradition_note": "倒塌的是虚假之屋，对应「暴露不稳、真相显形」；「真相显形」的措辞偏现代。"
     },
     {
       "proposition_id": "prop.major_16.03",
@@ -1386,7 +1471,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "waite_divinatory",
+      "tradition_evidence": "another reading says—hope and bright prospects",
+      "tradition_note": "希望只是韦特列出的「另一读法」：他的第一义是 Loss, theft, privation, abandonment，象征解说里还称「希望」之说为 tawdry explanations；「风暴之后」接在高塔后的读法是现代通行的。"
     },
     {
       "proposition_id": "prop.major_17.02",
@@ -1462,7 +1550,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "waite_symbolism",
+      "tradition_evidence": "The card represents life of the imagination apart from life of the spirit.",
+      "tradition_note": "恐惧也有依据：the fears of the natural mind... when there is only reflected light to guide it。"
     },
     {
       "proposition_id": "prop.major_18.02",
@@ -1511,7 +1602,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "modern_convention",
+      "tradition_evidence": "It illuminates our animal nature, types of which are represented below—the dog, the wolf",
+      "tradition_note": "「驯服与野性」的二分是现代通行解读；韦特说狗与狼是 the fears of the natural mind，属动物本性，并不分驯野。"
     },
     {
       "proposition_id": "prop.major_19.01",
@@ -1538,7 +1632,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "waite_divinatory",
+      "tradition_evidence": "Material happiness, fortunate marriage, contentment.",
+      "tradition_note": "「快乐」出自占卜义；「清晰、照亮」可对应象征解说 the direct as the antithesis of the reflected light。"
     },
     {
       "proposition_id": "prop.major_19.02",
@@ -1564,7 +1661,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "modern_convention",
+      "tradition_evidence": "The naked child mounted on a white horse and displaying a red standard",
+      "tradition_note": "画面有依据，但韦特把它解作走向来世之光、复原的世界（restored world），「活力与喜悦」是现代通行读法。"
     },
     {
       "proposition_id": "prop.major_19.03",
@@ -1619,7 +1719,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "waite_symbolism",
+      "tradition_evidence": "in answer to the summons of the Supernal—which summons is heard and answered from within",
+      "tradition_note": "「召唤、觉醒」有依据，「再决定」可对应逆位 deliberation, decision；「回顾过去」是现代通行引申。"
     },
     {
       "proposition_id": "prop.major_20.02",
@@ -1647,7 +1750,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "waite_symbolism",
+      "tradition_evidence": "It is the card which registers the accomplishment of the great work of transformation",
+      "tradition_note": "非字面读法也有依据：韦特说字面的复活只留给 those who can see no further；正位 renewal 亦支持。原文是 tombs（坟墓）。"
     },
     {
       "proposition_id": "prop.major_20.03",
@@ -1702,7 +1808,10 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "waite_symbolism",
+      "tradition_evidence": "It represents also the perfection and end of the Cosmos",
+      "tradition_note": "「完成」有依据（亦见正位 Assured success, recompense）；「整合」「也是下一段起点」是现代通行解读。"
     },
     {
       "proposition_id": "prop.major_21.02",
@@ -1727,7 +1836,9 @@
       "source_kind": "traditional",
       "source_refs": [],
       "review_status": "reviewed",
-      "version": 1
+      "version": 1,
+      "tradition_basis": "modern_convention",
+      "tradition_note": "韦特本牌 §2 文字没有提到四活物；以其代表四元素/四方齐全是现代通行解读。"
     },
     {
       "proposition_id": "prop.major_21.03",

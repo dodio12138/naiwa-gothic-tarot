@@ -172,7 +172,9 @@
         "不用来催促用户马上行动"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "reviewed"
+      "review_status": "reviewed",
+      "tradition_basis": "waite_symbolism",
+      "tradition_evidence": "On the table in front of the Magician are the symbols of the four Tarot suits"
     },
     {
       "seed_id": "seed.major_01.03",
@@ -198,7 +200,9 @@
         "不暗示事情没成是因为意志不够"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "reviewed"
+      "review_status": "reviewed",
+      "tradition_basis": "waite_symbolism",
+      "tradition_evidence": "a wand raised towards heaven, while the left hand is pointing to the earth"
     },
     {
       "seed_id": "seed.major_01.04",
@@ -224,7 +228,10 @@
         "不评判用户的欲望或性"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "reviewed"
+      "review_status": "reviewed",
+      "tradition_basis": "modern_convention",
+      "tradition_evidence": "roses and lilies ... to shew the culture of aspiration",
+      "tradition_note": "韦特只说玫瑰和百合表示“culture of aspiration”；把百合读成清醒的念头、玫瑰读成欲望，是现代通行读法。evidence 中间有省略。"
     },
     {
       "seed_id": "seed.major_02.01",
@@ -747,7 +754,10 @@
         "用户需要具体计划时，不只给意象"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "reviewed"
+      "review_status": "reviewed",
+      "tradition_basis": "modern_convention",
+      "tradition_evidence": "two sphinxes thus draw his chariot",
+      "tradition_note": "原文没提一黑一白、望向不同方向；“对立的力量一起前进”是现代通行读法。"
     },
     {
       "seed_id": "seed.major_07.02",
@@ -847,7 +857,9 @@
         "用户需要设立边界、表达愤怒时不使用"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "reviewed"
+      "review_status": "reviewed",
+      "tradition_basis": "waite_symbolism",
+      "tradition_evidence": "her beneficent fortitude has already subdued the lion"
     },
     {
       "seed_id": "seed.major_08.02",
@@ -973,7 +985,9 @@
         "用户流露轻生、自伤念头或处于危机时不使用，转为现实支持"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "reviewed"
+      "review_status": "reviewed",
+      "tradition_basis": "modern_convention",
+      "tradition_note": "韦特写的高处是为了举起灯（holding up his beacon on an eminence），并且明确否定“isolation”的读法；“安静到听得见自己”是现代通行的内省读法，与韦特的侧重不同。"
     },
     {
       "seed_id": "seed.major_09.03",
@@ -998,7 +1012,9 @@
         "不把用户的痛苦经历说成必须对别人有意义"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "reviewed"
+      "review_status": "reviewed",
+      "tradition_basis": "waite_symbolism",
+      "tradition_evidence": "His beacon intimates that \"where I am, you also may be.\""
     },
     {
       "seed_id": "seed.major_09.04",
@@ -1048,7 +1064,9 @@
         "不用来预测好转的时间"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "reviewed"
+      "review_status": "reviewed",
+      "tradition_basis": "waite_symbolism",
+      "tradition_evidence": "the perpetual motion of a fluidic universe and for the flux of human life"
     },
     {
       "seed_id": "seed.major_10.02",
@@ -1074,7 +1092,10 @@
         "用户处在长期困境中时不使用"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "reviewed"
+      "review_status": "reviewed",
+      "tradition_basis": "modern_convention",
+      "tradition_evidence": "I have, however, presented Typhon in his serpent form.",
+      "tradition_note": "原文只说蛇是 Typhon，没讲一降一升，也没提胡狼（阿努比斯）；一升一降的读法来自 RWS 画面和现代教材。"
     },
     {
       "seed_id": "seed.major_10.03",
@@ -1099,7 +1120,10 @@
         "不把用户的慌乱说成不够稳"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "reviewed"
+      "review_status": "reviewed",
+      "tradition_basis": "waite_symbolism",
+      "tradition_evidence": "stability amidst movement",
+      "tradition_note": "韦特批评把狮身兽画成卧在轮子上方的台座上，因为那样就“stultifying”了“动中有静”的本意；我们的狮身兽坐在轮顶，与韦特一致。"
     },
     {
       "seed_id": "seed.major_10.04",
@@ -1149,7 +1173,10 @@
         "用户需要法律或其他专业意见时，不以此代替"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "reviewed"
+      "review_status": "reviewed",
+      "tradition_basis": "waite_divinatory",
+      "tradition_evidence": "Equity, rightness, probity",
+      "tradition_note": "两边都称、看哪边重即公平权衡；天平本身在韦特 §2 文字里未点名。"
     },
     {
       "seed_id": "seed.major_11.02",
@@ -1347,7 +1374,9 @@
         "用户正在面对亲友离世、重病或自身的健康问题时，不用这张牌谈论任何人的生死，也不把真实的失去说成「转变」「新生」"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "reviewed"
+      "review_status": "reviewed",
+      "tradition_basis": "waite_symbolism",
+      "tradition_evidence": "bearing a black banner emblazoned with the Mystic Rose, which signifies life"
     },
     {
       "seed_id": "seed.major_13.02",
@@ -1399,7 +1428,10 @@
         "用户正在面对亲友离世、重病或自身的健康问题时，不用这张牌谈论任何人的生死，也不把真实的失去说成「转变」「新生」"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "reviewed"
+      "review_status": "reviewed",
+      "tradition_basis": "waite_symbolism",
+      "tradition_evidence": "Between two pillars on the verge of the horizon there shines the sun of immortality.",
+      "tradition_note": "原文是两根柱子（pillars）而非塔，太阳是「不朽之日」；「天在变亮」是对日出的现代通行读法。"
     },
     {
       "seed_id": "seed.major_13.04",
@@ -1487,7 +1519,7 @@
         "winding_road_sun"
       ],
       "proposition_ref": "prop.major_14.02",
-      "framework": "traditional_rws",
+      "framework": "naiwa_original",
       "aphorism": {
         "zh": "路是弯的，通向远处的太阳。走得慢不算走错。",
         "en": "The road bends toward the far-off sun. Going slowly is not going wrong."
@@ -1501,7 +1533,8 @@
         "不承诺「慢慢就会到」"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "reviewed"
+      "review_status": "reviewed",
+      "tradition_note": "依据我们画面里蜿蜒的小路；韦特原文是 direct path，故不标传统。"
     },
     {
       "seed_id": "seed.major_14.04",
@@ -1526,7 +1559,10 @@
         "用户需要马上处理某件事时，不用来劝慢"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "reviewed"
+      "review_status": "reviewed",
+      "tradition_basis": "waite_symbolism",
+      "tradition_evidence": "It is held to be pouring the essences of life from chalice to chalice.",
+      "tradition_note": "倒水画面出自象征解说，「一次一点」的适度之意对应正位 moderation。"
     },
     {
       "seed_id": "seed.major_15.01",
@@ -1699,7 +1735,9 @@
         "用户在担心某件具体的事会不会出事时，不使用这句"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "reviewed"
+      "review_status": "reviewed",
+      "tradition_basis": "waite_divinatory",
+      "tradition_evidence": "It is a card in particular of unforeseen catastrophe."
     },
     {
       "seed_id": "seed.major_16.04",
@@ -1980,7 +2018,7 @@
         "red_banner"
       ],
       "proposition_ref": "prop.major_19.02",
-      "framework": "traditional_rws",
+      "framework": "naiwa_original",
       "aphorism": {
         "zh": "红旗举得很高。被看见，也可以是轻松的事。",
         "en": "The red banner is held high. Being seen can be an easy thing too."
@@ -1994,7 +2032,8 @@
         "用户不想被关注时，不用来劝其表现自己"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "reviewed"
+      "review_status": "reviewed",
+      "tradition_note": "红旗高举对应现代的活力/喜悦读法，但「被看见也可以轻松」既非韦特原文，也不是通行 RWS 解读，属站内引申。"
     },
     {
       "seed_id": "seed.major_19.04",
@@ -2071,7 +2110,10 @@
         "用户在哀悼亲友时，不使用这句，也不谈论亡者的去向"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "reviewed"
+      "review_status": "reviewed",
+      "tradition_basis": "waite_symbolism",
+      "tradition_evidence": "The dead are rising from their tombs",
+      "tradition_note": "「自己出来」可呼应 heard and answered from within；「光」是我们的画面表现。"
     },
     {
       "seed_id": "seed.major_20.03",
@@ -2146,7 +2188,9 @@
         "用户自述在原地打转、很挫败时，不用「回到起点」形容其处境"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "reviewed"
+      "review_status": "reviewed",
+      "tradition_basis": "modern_convention",
+      "tradition_note": "韦特本牌文字没提花环；花环象征循环、世界接回愚者是现代通行读法。"
     },
     {
       "seed_id": "seed.major_21.02",
@@ -2222,7 +2266,9 @@
         "不据此预测结果圆满"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "reviewed"
+      "review_status": "reviewed",
+      "tradition_basis": "modern_convention",
+      "tradition_note": "韦特本牌文字没提两支杖；两杖代表对立两端的平衡与整合是现代通行读法。"
     }
   ]
 }

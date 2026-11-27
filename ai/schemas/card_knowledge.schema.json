@@ -216,6 +216,19 @@
         },
         "additionalProperties": false
       }
+    },
+    "waite_1911": {
+      "type": "object",
+      "description": "韦特 1911 原文的占卜义（英文原文）",
+      "properties": {
+        "upright": {
+          "type": "string"
+        },
+        "reversed": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
     }
   },
   "additionalProperties": false

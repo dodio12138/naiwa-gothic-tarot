@@ -49,6 +49,7 @@ for (const p of props) {
   nonEmpty(p.applicable_conditions, `${w}.applicable_conditions`); nonEmpty(p.counterexamples, `${w}.counterexamples`);
   if (!['traditional', 'original_interpretation'].includes(p.source_kind)) err(`${w}：source_kind 不对`);
   if (p.framework !== 'traditional_rws' && p.source_kind === 'traditional') err(`${w}：现代扩展框架不能标成 traditional`);
+  if (p.framework === 'traditional_rws' && !['waite_divinatory', 'waite_symbolism', 'modern_convention'].includes(p.tradition_basis)) err(`${w}：传统条目要写明依据 tradition_basis（韦特占卜义 / 韦特象征解说 / 通行解读）`);
   review(p, w);
 }
 
@@ -73,6 +74,7 @@ for (const s of seeds) {
   if (!propIds.has(s.proposition_ref)) err(`${w}：命题 ${s.proposition_ref} 不存在`);
   if (!FRAMEWORKS.includes(s.framework)) err(`${w}：framework 不在允许列表`);
   zhen(s.aphorism, `${w}.aphorism`);
+  if (s.framework === 'traditional_rws' && !['waite_divinatory', 'waite_symbolism', 'modern_convention'].includes(s.tradition_basis)) err(`${w}：传统条目要写明依据 tradition_basis`);
   nonEmpty(s.expansion_topics, `${w}.expansion_topics`); nonEmpty(s.counterexamples, `${w}.counterexamples`);
   review(s, w);
 }

@@ -98,6 +98,22 @@
         "reviewed",
         "quarantined"
       ]
+    },
+    "tradition_basis": {
+      "enum": [
+        "waite_divinatory",
+        "waite_symbolism",
+        "modern_convention"
+      ],
+      "description": "framework 为 traditional_rws 时必填：韦特 1911 原文的占卜义 / 韦特的象征解说 / 今天 RWS 体系的通行解读"
+    },
+    "tradition_evidence": {
+      "type": "string",
+      "description": "韦特原文里的关键短语（英文，≤20 词）"
+    },
+    "tradition_note": {
+      "type": "string",
+      "description": "与韦特原文的出入或说明"
     }
   },
   "additionalProperties": false
