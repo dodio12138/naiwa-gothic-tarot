@@ -1,0 +1,293 @@
+<title>奶蛙语义试点审核</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;900&family=Noto+Sans+SC:wght@400;500;700&family=Cinzel:wght@600&display=swap">
+<style>
+/* Layout: a reading desk — sticky card tabs on top, one card's material per page, review controls on the right edge of every item */
+:root {
+  --bg: #f6f1ea; --surface: #fffdf9; --ink: #2a1f24; --muted: #7a6a66; --line: #e4d9cc;
+  --gold: #9a6a2c; --plum: #5b2b46; --ok: #2f7a4d; --revise: #b0711b; --drop: #a63a4a;
+  --chip: #f1e7da;
+  --f-display: "Noto Serif SC", "Songti SC", serif; --f-body: "Noto Sans SC", "PingFang SC", system-ui, sans-serif; --f-latin: "Cinzel", Georgia, serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #141015; --surface: #1d171c; --ink: #efe4d6; --muted: #a8988f; --line: #342a31;
+  --gold: #e0b36e; --plum: #c99ab5; --ok: #6cc28f; --revise: #e3a650; --drop: #e7808f; --chip: #2a2127; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #141015; --surface: #1d171c; --ink: #efe4d6; --muted: #a8988f; --line: #342a31;
+  --gold: #e0b36e; --plum: #c99ab5; --ok: #6cc28f; --revise: #e3a650; --drop: #e7808f; --chip: #2a2127; color-scheme: dark }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-body); line-height: 1.65; }
+.wrap { max-width: 980px; margin: 0 auto; padding-block: 28px 80px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header.top { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px 24px; }
+h1 { margin: 0; font-family: var(--f-display); font-weight: 900; font-size: clamp(24px, 4vw, 32px); letter-spacing: .08em; text-wrap: balance; }
+.eyebrow { font-family: var(--f-latin); font-size: 11px; letter-spacing: .4em; color: var(--gold); }
+.lede { margin: 6px 0 0; color: var(--muted); font-size: 14px; max-width: 62ch; }
+.progress { min-width: 220px; font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.bar { height: 6px; margin-top: 6px; border-radius: 3px; background: var(--line); overflow: hidden; display: flex; }
+.bar i { display: block; height: 100%; }
+.bar .ok { background: var(--ok); } .bar .revise { background: var(--revise); } .bar .drop { background: var(--drop); }
+.status-line { margin-top: 4px; font-size: 12px; }
+nav.tabs { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; margin: 22px 0 18px; padding: 10px 0; background: var(--bg); border-bottom: 1px solid var(--line); display: flex; gap: 6px; overflow-x: auto; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+nav.tabs button { flex: none; border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 6px 14px; font: 500 14px var(--f-body); cursor: pointer; }
+nav.tabs button small { margin-left: 6px; color: var(--muted); font-variant-numeric: tabular-nums; }
+nav.tabs button[aria-selected="true"] { background: var(--plum); border-color: var(--plum); color: var(--surface); }
+nav.tabs button[aria-selected="true"] small { color: inherit; opacity: .8; }
+.ref { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px 24px; padding: 16px 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; font-size: 13.5px; }
+.ref h2 { grid-column: 1 / -1; margin: 0; font-family: var(--f-display); font-size: 22px; letter-spacing: .12em; }
+.ref h2 span { margin-left: 8px; font-family: var(--f-latin); font-size: 12px; letter-spacing: .2em; color: var(--muted); }
+.ref dt { font-size: 11px; letter-spacing: .2em; color: var(--gold); }
+.ref dd { margin: 2px 0 0; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px 6px; }
+.chip { font-size: 12px; padding: 1px 8px; border-radius: 4px; background: var(--chip); color: var(--ink); }
+.chip code { font-size: 11px; color: var(--muted); margin-left: 4px; }
+section.group { margin-top: 26px; }
+section.group > h3 { margin: 0 0 4px; font-family: var(--f-display); font-size: 17px; letter-spacing: .14em; }
+section.group > p.hint { margin: 0 0 10px; font-size: 12.5px; color: var(--muted); }
+.item { display: grid; grid-template-columns: minmax(0, 1fr) 230px; gap: 14px; padding: 14px 16px; margin-top: 10px; background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--line); border-radius: 8px; }
+.item[data-status="ok"] { border-left-color: var(--ok); }
+.item[data-status="revise"] { border-left-color: var(--revise); }
+.item[data-status="drop"] { border-left-color: var(--drop); opacity: .72; }
+.item .id { font: 11px ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--muted); }
+.item .zh { margin: 4px 0 2px; font-size: 15.5px; font-weight: 500; }
+.item .en { margin: 0; font-size: 13px; color: var(--muted); }
+.aph { font-family: var(--f-display); font-size: 18px; font-weight: 600; letter-spacing: .04em; }
+.meta { margin-top: 8px; display: grid; gap: 4px; font-size: 12.5px; }
+.meta b { font-weight: 500; color: var(--gold); margin-right: 6px; letter-spacing: .1em; }
+.meta .counter { color: var(--drop); }
+.poles { font-family: var(--f-display); font-size: 17px; font-weight: 600; }
+.poles i { font-style: normal; color: var(--gold); margin: 0 8px; }
+.tree { margin-top: 6px; display: grid; gap: 6px; }
+.node { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 8px; font-size: 13.5px; }
+.node .act { font: 600 11px ui-monospace, Menlo, monospace; color: var(--plum); padding-top: 2px; }
+.node .act span { display: block; color: var(--muted); font-weight: 400; }
+.node .br { font-size: 12px; color: var(--muted); }
+.review { display: flex; flex-direction: column; gap: 8px; }
+.seg { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+.seg button { border: 0; border-right: 1px solid var(--line); background: transparent; color: var(--ink); padding: 7px 0; font: 500 13px var(--f-body); cursor: pointer; }
+.seg button:last-child { border-right: 0; }
+.seg button[aria-pressed="true"][data-v="ok"] { background: var(--ok); color: var(--surface); }
+.seg button[aria-pressed="true"][data-v="revise"] { background: var(--revise); color: var(--surface); }
+.seg button[aria-pressed="true"][data-v="drop"] { background: var(--drop); color: var(--surface); }
+.seg button:disabled { cursor: not-allowed; opacity: .5; }
+textarea { width: 100%; box-sizing: border-box; min-height: 64px; resize: vertical; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink); font: 13px/1.5 var(--f-body); padding: 6px 8px; }
+.saved { font-size: 11.5px; color: var(--muted); min-height: 1em; }
+button:focus-visible, textarea:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.cmp { width: 100%; border-collapse: collapse; font-size: 13px; }
+.cmp-wrap { grid-column: 1 / -1; overflow-x: auto; }
+.cmp th, .cmp td { text-align: left; padding: 5px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.cmp th { font-weight: 500; font-size: 11px; letter-spacing: .14em; color: var(--gold); }
+.st { display: inline-block; min-width: 3.5em; font-size: 12px; font-weight: 700; }
+.st.present { color: var(--ok); } .st.altered { color: var(--revise); } .st.absent { color: var(--muted); }
+.removed { grid-column: 1 / -1; font-size: 12.5px; color: var(--muted); }
+.removed .chip { text-decoration: line-through; opacity: .75; }
+.changed { display: inline-block; margin-left: 6px; padding: 0 6px; border-radius: 4px; background: var(--revise); color: var(--surface); font-size: 11px; font-weight: 700; letter-spacing: .06em; }
+.why { margin: 4px 0 0; font-size: 12.5px; color: var(--revise); }
+.extra-use { margin: 4px 0 0; font-size: 12.5px; color: var(--plum); }
+.case-cards { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
+.notice { margin-top: 14px; padding: 10px 14px; border-radius: 6px; background: var(--chip); font-size: 13px; }
+@media (max-width: 720px) {
+  .ref { grid-template-columns: minmax(0, 1fr); }
+  .item { grid-template-columns: minmax(0, 1fr); }
+  .node { grid-template-columns: 70px minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div>
+      <div class="eyebrow">NAIWA · SLM PILOT</div>
+      <h1>奶蛙语义试点审核</h1>
+      <p class="lede">7 张试点大牌的命题、矛盾、语义种子、追问树，以及 10 个测试样例。哥特和风格化夜晚的元素已经去掉，每张牌顶部是与韦特传统意象的对照；「多出的部分」请你决定去留，其余条目 Claude 已自查，标「已修改」的是这次改过的。每条选一个结果，要改的写一句怎么改，改动自动保存。</p>
+    </div>
+    <div class="progress" aria-live="polite">
+      <div id="prog-text">正在读取审核记录……</div>
+      <div class="bar" id="bar"><i class="ok"></i><i class="revise"></i><i class="drop"></i></div>
+      <div class="status-line" id="status-line"></div>
+    </div>
+  </header>
+  <nav class="tabs" id="tabs" role="tablist" aria-label="按牌查看"></nav>
+  <main id="view"></main>
+</div>
+
+<script type="application/json" id="data">__DATA__</script>
+<script>
+const D = JSON.parse(document.getElementById('data').textContent);
+const FW = { traditional_rws: '韦特传统', hermetic: '赫尔墨斯', jungian_extension: '荣格（现代扩展）', existential_extension: '存在主义（现代扩展）', dialectical_extension: '辩证（现代扩展）', daoist_extension: '道家（现代扩展）', stoic_extension: '斯多葛（现代扩展）', naiwa_original: '奶蛙原创' };
+const ACT = { ASK: '追问', REFLECT: '镜像', HINT: '提示', ANSWER: '直述牌义', CLOSE: '结束', SAFETY_REDIRECT: '安全转向', PARABLE: '寓言', REFRAME: '换角度', EXPAND: '展开' };
+const WHEN = { associates: '有联想', no_association: '没有联想', declines: '拒绝', wants_meaning: '只要牌义', wants_to_stop: '想停下', distress: '明显不适', asks_more: '想多聊' };
+const POS = { message: '此刻的启示', past: '过去', present: '现在', future: '未来', situation: '现状', obstacle: '阻碍', support: '助力', advice: '建议', potential: '可能的发展', self: '我的需要', other: '对方（我眼中）', common: '共同基础', conflict: '冲突', communication: '沟通', action: '行动建议' };
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const cardName = (id) => D.names[id] || id;
+
+// 所有待审条目，按牌分组
+const groups = D.kb.map((k) => ({ key: k.card_id, label: k.name.zh, kb: k }));
+groups.push({ key: 'bench', label: '测试样例' });
+const itemsOf = (key) => key === 'bench' ? D.cases.map((c) => c.case_id) : [
+  ...D.props.filter((p) => p.card_refs[0] === key).map((p) => p.proposition_id),
+  ...D.contras.filter((p) => p.card_refs[0] === key).map((p) => p.contradiction_id),
+  ...D.seeds.filter((p) => p.card_refs[0] === key).map((p) => p.seed_id),
+  ...D.trees.filter((p) => p.card_refs[0] === key).map((p) => p.tree_id),
+  ...(D.kb.find((k) => k.card_id === key)?.extras || []).map((x) => `extra.${key}.${x.id}`),
+];
+const CHG = Object.fromEntries(D.changes.map((c) => [c.id, c.why]));
+const changedNote = (id) => CHG[id] ? `<p class="why">已修改：${esc(CHG[id])}</p>` : '';
+const changedTag = (id) => CHG[id] ? '<span class="changed">已修改</span>' : '';
+const extraUse = (refs, k) => { const ex = (refs || []).filter((s) => (k.extras || []).some((x) => x.id === s)); return ex.length ? `<p class="extra-use">用到了多出的画面元素：${esc(ex.join('、'))}——等你对「多出的部分」的决定</p>` : ''; };
+const ALL = groups.flatMap((g) => itemsOf(g.key));
+
+const R = {};          // 审核记录：id -> {status, note}
+let db = null, canWrite = true, current = groups[0].key;
+try { const t = localStorage.getItem('naiwa-review-tab'); if (t && groups.some((g) => g.key === t)) current = t; } catch {}
+
+function counts(ids) {
+  const c = { ok: 0, revise: 0, drop: 0 };
+  for (const id of ids) if (R[id]?.status) c[R[id].status]++;
+  return c;
+}
+function renderProgress() {
+  const c = counts(ALL), n = ALL.length, done = c.ok + c.revise + c.drop;
+  document.getElementById('prog-text').textContent = `已审 ${done} / ${n}　通过 ${c.ok} · 要改 ${c.revise} · 删掉 ${c.drop}`;
+  const bar = document.getElementById('bar').children;
+  bar[0].style.width = `${c.ok / n * 100}%`; bar[1].style.width = `${c.revise / n * 100}%`; bar[2].style.width = `${c.drop / n * 100}%`;
+  document.querySelectorAll('#tabs button').forEach((b) => {
+    const ids = itemsOf(b.dataset.key), k = counts(ids);
+    b.querySelector('small').textContent = `${k.ok + k.revise + k.drop}/${ids.length}`;
+  });
+}
+function renderTabs() {
+  document.getElementById('tabs').innerHTML = groups.map((g) => `<button type="button" role="tab" id="tab-${g.key}" data-key="${g.key}" aria-selected="${g.key === current}">${esc(g.label)}<small></small></button>`).join('');
+}
+function reviewBox(id, labels = ['通过', '要改', '删掉']) {
+  const r = R[id] || {};
+  return `<div class="review" data-id="${esc(id)}">
+    <div class="seg" role="group" aria-label="审核结果">
+      ${[['ok', labels[0]], ['revise', labels[1]], ['drop', labels[2]]].map(([v, t]) => `<button type="button" data-v="${v}" aria-pressed="${r.status === v}" ${canWrite ? '' : 'disabled'}>${t}</button>`).join('')}
+    </div>
+    <textarea id="note-${esc(id)}" placeholder="要改的话写在这里，比如换一句、去掉某个符号……" ${canWrite ? '' : 'disabled'}>${esc(r.note || '')}</textarea>
+    <div class="saved"></div>
+  </div>`;
+}
+const item = (id, body, labels) => `<article class="item" data-item="${esc(id)}" data-status="${R[id]?.status || ''}"><div>${body}</div>${reviewBox(id, labels)}</article>`;
+const symChips = (refs, kb) => refs.length ? `<span class="chips">${refs.map((s) => { const m = kb?.symbols.find((x) => x.id === s); return `<span class="chip">${esc(m ? m.zh.slice(0, 18) : s)}<code>${esc(s)}</code></span>`; }).join('')}</span>` : '—';
+
+function renderCard(g) {
+  const k = g.kb, P = D.props.filter((p) => p.card_refs[0] === g.key), C = D.contras.filter((p) => p.card_refs[0] === g.key),
+    Sd = D.seeds.filter((p) => p.card_refs[0] === g.key), T = D.trees.filter((p) => p.card_refs[0] === g.key);
+  return `
+  <div class="ref">
+    <h2>${esc(k.name.zh)}<span>${esc(k.name.en)}</span></h2>
+    <dl><dt>关键词</dt><dd>${esc(k.traditional.keywords.zh.join(' · '))}</dd><dt>正位</dt><dd>${esc(k.traditional.upright.zh)}</dd><dt>逆位</dt><dd>${esc(k.traditional.reversed.zh)}</dd></dl>
+    <dl><dt>对应</dt><dd>${esc(k.traditional.correspondence.zh)}</dd><dt>传统原型</dt><dd>${esc(k.traditional.archetype.zh)}</dd></dl>
+    <div class="cmp-wrap"><table class="cmp"><thead><tr><th>韦特传统意象</th><th>我们的牌面</th><th>说明</th></tr></thead><tbody>
+      ${k.imagery_compare.map((c) => `<tr><td>${esc(c.zh)}</td><td><span class="st ${c.status}">${{ present: '一致', altered: '有改动', absent: '没有' }[c.status]}</span>${c.symbol_ref ? ` <code>${esc(c.symbol_ref)}</code>` : ''}</td><td>${esc(c.note || '')}</td></tr>`).join('')}
+    </tbody></table></div>
+    <div class="removed">已从 AI 数据去掉的哥特 / 风格化夜晚元素：<span class="chips">${k.removed.map((x) => `<span class="chip">${esc(x.zh)}</span>`).join('') || '—'}</span></div>
+  </div>
+  ${(k.extras || []).length ? `<section class="group"><h3>多出的部分</h3><p class="hint">传统牌面里没有、我们画面多出来的元素。选「保留」的会作为奶蛙版特有的象征进入 AI 数据，「去掉」的不再被引用。</p>
+    ${k.extras.map((x) => item(`extra.${g.key}.${x.id}`, `<div class="id">${esc(x.id)}</div><p class="zh">${esc(x.zh)}</p>${x.note ? `<p class="en">${esc(x.note)}</p>` : ''}`, ['保留', '要改', '去掉'])).join('')}
+  </section>` : ''}
+  <section class="group"><h3>命题</h3><p class="hint">这张牌可以讨论的核心观点，不是事实。看看是否站得住、反例是否够。</p>
+    ${P.map((p) => item(p.proposition_id, `<div class="id">${esc(p.proposition_id)} · ${esc(FW[p.framework])}${changedTag(p.proposition_id)}</div>${changedNote(p.proposition_id)}${extraUse(p.symbol_refs, k)}
+      <p class="zh">${esc(p.text.zh)}</p><p class="en">${esc(p.text.en)}</p>
+      <div class="meta"><div><b>符号</b>${symChips(p.symbol_refs, k)}</div><div><b>适用</b>${esc(p.applicable_conditions.join('；'))}</div><div class="counter"><b>反例</b>${esc(p.counterexamples.join('；'))}</div></div>`)).join('')}
+  </section>
+  <section class="group"><h3>矛盾</h3><p class="hint">牌里的两极张力，用来帮助展开而不是下结论。</p>
+    ${C.map((c) => item(c.contradiction_id, `<div class="id">${esc(c.contradiction_id)}</div>
+      <p class="poles">${esc(c.poles[0].zh)}<i>⟷</i>${esc(c.poles[1].zh)}</p><p class="zh">${esc(c.description.zh)}</p><p class="en">${esc(c.description.en)}</p>`)).join('')}
+  </section>
+  <section class="group"><h3>语义种子</h3><p class="hint">可以直接当「奶蛙低语」说出口的一句话。重点看语气像不像奶蛙、会不会冒犯人。</p>
+    ${Sd.map((s) => item(s.seed_id, `<div class="id">${esc(s.seed_id)} · ${esc(FW[s.framework])} · 对应 ${esc(s.proposition_ref)}${changedTag(s.seed_id)}</div>${changedNote(s.seed_id)}${extraUse(s.symbol_refs, k)}
+      <p class="zh aph">${esc(s.aphorism.zh)}</p><p class="en">${esc(s.aphorism.en)}</p>
+      <div class="meta"><div><b>符号</b>${symChips(s.symbol_refs, k)}</div><div><b>可展开</b>${esc(s.expansion_topics.join('、'))}</div><div class="counter"><b>不要用于</b>${esc(s.counterexamples.join('；'))}</div></div>`)).join('')}
+  </section>
+  <section class="group"><h3>追问树</h3><p class="hint">奶蛙可选的追问路线。每个节点都有「拒绝 / 只要牌义 / 不适」的出口。</p>
+    ${T.map((t) => item(t.tree_id, `<div class="id">${esc(t.tree_id)}${changedTag(t.tree_id)}</div>${changedNote(t.tree_id)}<div class="tree">${t.nodes.map((n) => `<div class="node"><div class="act">${esc(n.id)}<span>${esc(ACT[n.action] || n.action)}</span></div>
+      <div>${esc(n.text.zh)}${n.branches?.length ? `<div class="br">→ ${n.branches.map((b) => `${esc(WHEN[b.when] || b.when)}：${esc(b.to)}`).join('　')}</div>` : ''}</div></div>`).join('')}</div>
+      <div class="meta"><div><b>停止规则</b>${esc(t.stop_rules.join('；'))}</div></div>`)).join('')}
+  </section>`;
+}
+function renderBench() {
+  return `<section class="group"><h3>测试样例</h3><p class="hint">不参与训练，用来检查模型是否守住边界：不预测、不诊断、尊重拒绝、危机时转向现实支持。</p>
+    ${D.cases.map((c) => item(c.case_id, `<div class="id">${esc(c.case_id)} · ${esc((c.tags || []).join(' · '))}</div>
+      <p class="zh">${c.input.question ? `「${esc(c.input.question)}」` : '（没有提问）'}</p>
+      ${c.input.user_turns ? `<p class="en">用户说：${esc(c.input.user_turns.join(' / '))}</p>` : ''}
+      <div class="case-cards">${c.input.cards.map((k) => `<span class="chip">${esc(POS[k.position_id] || k.position_id)} · ${esc(cardName(k.card_id))}${k.orientation === 'reversed' ? '（逆）' : ''}</span>`).join('')}</div>
+      <div class="meta">${c.checks.expected_action ? `<div><b>期望动作</b>${esc(ACT[c.checks.expected_action] || c.checks.expected_action)}</div>` : ''}
+        ${c.checks.must_mention_any ? `<div><b>应提到其一</b>${esc(c.checks.must_mention_any.join('、'))}</div>` : ''}
+        ${c.checks.must_not ? `<div class="counter"><b>不能说</b>${esc(c.checks.must_not.join('、'))}</div>` : ''}
+        ${c.checks.notes ? `<div><b>说明</b>${esc(c.checks.notes)}</div>` : ''}</div>`)).join('')}
+  </section>`;
+}
+function renderView() {
+  const g = groups.find((x) => x.key === current);
+  document.getElementById('view').innerHTML = g.key === 'bench' ? renderBench() : renderCard(g);
+}
+function refreshItem(id) {
+  const el = document.querySelector(`[data-item="${CSS.escape(id)}"]`);
+  if (!el) return;
+  const r = R[id] || {};
+  el.dataset.status = r.status || '';
+  el.querySelectorAll('.seg button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.v === r.status)));
+  const ta = el.querySelector('textarea');
+  if (document.activeElement !== ta) ta.value = r.note || '';
+}
+
+// 写入：每条一个文档，一次只写一个；备注停顿后再存
+const busy = {}, pending = {};
+async function save(id, patch) {
+  R[id] = { ...(R[id] || {}), ...patch };
+  refreshItem(id); renderProgress();
+  const box = document.querySelector(`.review[data-id="${CSS.escape(id)}"] .saved`);
+  if (!db) { if (box) box.textContent = '审核记录服务未连接，这次改动不会保存'; return; }
+  if (busy[id]) { pending[id] = true; return; }
+  busy[id] = true;
+  try {
+    if (box) box.textContent = '保存中……';
+    await db.collection('reviews').doc(id).set({ status: R[id].status || '', note: R[id].note || '', at: new Date().toISOString() });
+    if (box) box.textContent = '已保存';
+  } catch (e) {
+    if (e?.code === 'invalid_argument') { canWrite = false; renderView(); setStatus('你只有查看权限，审核结果无法保存。'); }
+    else if (box) box.textContent = '保存失败，请再点一次';
+  } finally {
+    busy[id] = false;
+    if (pending[id]) { pending[id] = false; save(id, {}); }
+  }
+}
+function setStatus(t) { document.getElementById('status-line').textContent = t; }
+
+document.getElementById('tabs').addEventListener('click', (e) => {
+  const b = e.target.closest('button[data-key]'); if (!b) return;
+  current = b.dataset.key;
+  try { localStorage.setItem('naiwa-review-tab', current); } catch {}
+  renderTabs(); renderView(); renderProgress();
+  window.scrollTo({ top: 0 });
+});
+document.getElementById('view').addEventListener('click', (e) => {
+  const b = e.target.closest('.seg button'); if (!b || b.disabled) return;
+  const id = b.closest('.review').dataset.id;
+  save(id, { status: R[id]?.status === b.dataset.v ? '' : b.dataset.v });
+});
+const noteTimers = {};
+document.getElementById('view').addEventListener('input', (e) => {
+  const ta = e.target.closest('textarea'); if (!ta) return;
+  const id = ta.closest('.review').dataset.id;
+  clearTimeout(noteTimers[id]);
+  ta.closest('.review').querySelector('.saved').textContent = '…';
+  noteTimers[id] = setTimeout(() => save(id, { note: ta.value.trim(), status: R[id]?.status || (ta.value.trim() ? 'revise' : '') }), 700);
+});
+
+renderTabs(); renderView(); renderProgress();
+document.getElementById('prog-text').textContent = '正在读取审核记录……';
+
+(async () => {
+  const timer = setTimeout(() => setStatus('审核记录暂时连不上，标记可能无法保存。'), 10000);
+  db = await (window.claude?.use ? window.claude.use('db') : Promise.resolve(null));
+  if (!db) { clearTimeout(timer); setStatus('这里打不开审核记录（可能未登录）。可以浏览，但标记不会保存。'); renderProgress(); return; }
+  db.collection('reviews').onSnapshot((snap) => {
+    if (!snap.metadata.fromCache) { clearTimeout(timer); setStatus(''); }
+    for (const d of snap.docs) { const v = d.data(); R[d.id] = { status: v.status || '', note: v.note || '' }; refreshItem(d.id); }
+    renderProgress();
+  }, (err) => { clearTimeout(timer); setStatus(err.code === 'revoked' ? '访问权限已变化，审核记录不再更新。' : '审核记录读取失败，标记可能无法保存。'); });
+})();
+</script>

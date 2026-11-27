@@ -89,18 +89,17 @@
         "major_00"
       ],
       "symbol_refs": [
-        "full_moon",
         "cliff_edge"
       ],
       "proposition_ref": "prop.major_00.01",
       "framework": "naiwa_original",
       "aphorism": {
-        "zh": "崖边的月亮，也是第一次照这条路。",
-        "en": "The moon at the cliff is lighting this path for the first time too."
+        "zh": "下一步落在哪里，要等脚落下去才知道。",
+        "en": "Where the next step lands, you only know once your foot comes down."
       },
       "expansion_topics": [
-        "陪伴",
-        "未知"
+        "开始",
+        "不确定"
       ],
       "counterexamples": [
         "用户只要牌义时，直接说明而不只给意象"
@@ -189,7 +188,7 @@
         "sceptre"
       ],
       "proposition_ref": "prop.major_04.01",
-      "framework": "traditional_rws",
+      "framework": "naiwa_original",
       "aphorism": {
         "zh": "权杖是用来指路的，不是用来打人的。",
         "en": "A sceptre is for pointing the way, not for striking."
@@ -201,7 +200,7 @@
       "counterexamples": [
         "用户正在被权威伤害时，先关注其处境而非『好权威』的理想"
       ],
-      "source_kind": "traditional",
+      "source_kind": "original_interpretation",
       "review_status": "draft"
     },
     {
@@ -258,13 +257,14 @@
         "major_12"
       ],
       "symbol_refs": [
-        "loose_arms"
+        "ancient_tree",
+        "upside_down_naiwa"
       ],
       "proposition_ref": "prop.major_12.03",
       "framework": "daoist_extension",
       "aphorism": {
-        "zh": "手垂下来的时候，才发现原来一直握着拳。",
-        "en": "Only when the hands hang loose do you notice you were clenching them."
+        "zh": "倒挂的人没有用力，是树在撑着他。",
+        "en": "The hanging one is not straining; the tree is holding him."
       },
       "expansion_topics": [
         "放松",
@@ -370,7 +370,7 @@
       "counterexamples": [
         "不把用户的选择评判为短视"
       ],
-      "source_kind": "traditional",
+      "source_kind": "original_interpretation",
       "review_status": "draft"
     },
     {
@@ -466,7 +466,7 @@
       "counterexamples": [
         "不把它说成即将发生的灾难"
       ],
-      "source_kind": "traditional",
+      "source_kind": "original_interpretation",
       "review_status": "draft"
     },
     {
@@ -529,8 +529,8 @@
       "proposition_ref": "prop.major_17.02",
       "framework": "jungian_extension",
       "aphorism": {
-        "zh": "一壶给池塘，一壶给玫瑰；别忘了你也是其中一朵。",
-        "en": "One pitcher for the pond, one for the roses — don't forget you're one of them."
+        "zh": "一壶还给水，一壶留给土地；别忘了你自己也需要被浇灌。",
+        "en": "One pitcher back to the water, one for the land — don't forget you need watering too."
       },
       "expansion_topics": [
         "自我照顾",
@@ -548,17 +548,17 @@
         "major_17"
       ],
       "symbol_refs": [
-        "black_roses"
+        "small_stars"
       ],
       "proposition_ref": "prop.major_17.03",
       "framework": "naiwa_original",
       "aphorism": {
-        "zh": "黑玫瑰也会开，只是开得安静。",
-        "en": "Black roses bloom too, just quietly."
+        "zh": "小星星也算数，它们只是离得远一点。",
+        "en": "Small stars count too; they are just a little farther away."
       },
       "expansion_topics": [
-        "自我价值",
-        "安静的成长"
+        "微小的希望",
+        "耐心"
       ],
       "counterexamples": [
         "用户只要牌义时不展开"
@@ -577,8 +577,8 @@
       "proposition_ref": "prop.major_17.01",
       "framework": "naiwa_original",
       "aphorism": {
-        "zh": "黑鸟停在枝头，像在等天亮，也像只是在休息。",
-        "en": "The black bird on the branch might be waiting for dawn — or simply resting."
+        "zh": "树上停着一只鸟，像在等天亮，也像只是在休息。",
+        "en": "A bird rests in the tree — waiting for dawn, or simply resting."
       },
       "expansion_topics": [
         "休息",

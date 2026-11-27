@@ -906,8 +906,8 @@
           "id": "n1",
           "action": "ASK",
           "text": {
-            "zh": "这张牌里，你最想成为哪一部分：星星、池水，还是被浇灌的玫瑰？",
-            "en": "In this card, which part would you most like to be — the star, the pond, or the watered rose?"
+            "zh": "这张牌里，你最想成为哪一部分：星星、池水，还是倒向土地的那壶水？",
+            "en": "In this card, which part would you most like to be — the star, the pool, or the water poured onto the land?"
           },
           "branches": [
             {

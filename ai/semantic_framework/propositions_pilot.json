@@ -196,8 +196,7 @@
       },
       "framework": "existential_extension",
       "symbol_refs": [
-        "glowing_ribbon",
-        "loose_arms"
+        "glowing_ribbon"
       ],
       "applicable_conditions": [
         "被迫停下（生病、失业、等待结果）"
@@ -221,7 +220,7 @@
       },
       "framework": "daoist_extension",
       "symbol_refs": [
-        "loose_arms",
+        "upside_down_naiwa",
         "ancient_tree"
       ],
       "applicable_conditions": [
@@ -439,19 +438,19 @@
         "major_17"
       ],
       "text": {
-        "zh": "浇灌黑玫瑰：不必先变得明亮，才值得被照顾。",
-        "en": "Watering black roses: you need not become bright first to deserve care."
+        "zh": "希望不必耀眼：大星之外，那些小星也算数。",
+        "en": "Hope need not dazzle: beside the great star, the small ones count too."
       },
       "framework": "naiwa_original",
       "symbol_refs": [
-        "watering_roses",
-        "black_roses"
+        "small_stars",
+        "eight_pointed_star"
       ],
       "applicable_conditions": [
-        "自我否定、觉得自己不配"
+        "觉得自己的进展太小、不值一提"
       ],
       "counterexamples": [
-        "用户只想听传统牌义时，不展开自我价值的讨论"
+        "用户确实需要现实层面的帮助时，不用「小小的希望」搪塞"
       ],
       "source_kind": "original_interpretation",
       "source_refs": [],

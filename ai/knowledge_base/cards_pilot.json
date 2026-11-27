@@ -2,7 +2,8 @@
   "$comment": "由 ai/scripts/build_kb.mjs 生成，请勿手改。传统牌义暂取站内文案，原典出处待补（source_refs）。",
   "generated_from": [
     "data/cards.json",
-    "data/visual_symbols.json"
+    "data/visual_symbols.json",
+    "ai/knowledge_base/imagery_compare_pilot.json"
   ],
   "cards": [
     {
@@ -47,18 +48,73 @@
       "visual_symbol_refs": [
         "cliff_edge",
         "bindle",
-        "small_dog",
-        "black_roses",
-        "full_moon",
-        "gothic_castle",
+        "small_dog"
+      ],
+      "extra_symbol_refs": [
         "waterfalls",
         "gnarled_tree"
       ],
+      "style_removed_refs": [
+        "black_roses",
+        "full_moon",
+        "gothic_castle"
+      ],
       "rws_absent": [
-        "sun",
         "white_rose",
+        "sun",
         "snowy_mountains",
         "feather_cap"
+      ],
+      "imagery_compare": [
+        {
+          "rws": "cliff",
+          "zh": "悬崖边",
+          "status": "present",
+          "symbol_ref": "cliff_edge",
+          "note": ""
+        },
+        {
+          "rws": "bindle",
+          "zh": "扛在肩上的小包袱",
+          "status": "present",
+          "symbol_ref": "bindle",
+          "note": ""
+        },
+        {
+          "rws": "dog",
+          "zh": "脚边的小狗",
+          "status": "altered",
+          "symbol_ref": "small_dog",
+          "note": "传统是白色小狗、在脚边跳跃；我们是深灰褐色、站在崖边仰头看"
+        },
+        {
+          "rws": "white_rose",
+          "zh": "手里的白玫瑰",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "sun",
+          "zh": "白色太阳与明亮的白天",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "我们画成了满月夜晚（风格化，已从 AI 数据去掉）"
+        },
+        {
+          "rws": "snowy_mountains",
+          "zh": "远处雪山",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "feather_cap",
+          "zh": "帽上的羽毛",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        }
       ],
       "source_refs": [],
       "review_status": "draft"
@@ -109,15 +165,90 @@
         "orb",
         "crown",
         "barren_mountains",
-        "red_sky",
-        "eagle_mantle",
+        "red_sky"
+      ],
+      "extra_symbol_refs": [
+        "eagle_mantle"
+      ],
+      "style_removed_refs": [
         "aqueducts"
       ],
       "rws_absent": [
         "armor",
         "white_beard",
-        "river",
-        "ankh"
+        "river"
+      ],
+      "imagery_compare": [
+        {
+          "rws": "ram_heads",
+          "zh": "宝座上的公羊头",
+          "status": "present",
+          "symbol_ref": "ram_heads",
+          "note": ""
+        },
+        {
+          "rws": "stone_throne",
+          "zh": "方正的石宝座",
+          "status": "present",
+          "symbol_ref": "stone_throne",
+          "note": ""
+        },
+        {
+          "rws": "ankh_scepter",
+          "zh": "安卡（生命之符）权杖",
+          "status": "altered",
+          "symbol_ref": "sceptre",
+          "note": "我们是十字花饰的权杖"
+        },
+        {
+          "rws": "orb",
+          "zh": "宝球",
+          "status": "present",
+          "symbol_ref": "orb",
+          "note": ""
+        },
+        {
+          "rws": "crown",
+          "zh": "王冠",
+          "status": "present",
+          "symbol_ref": "crown",
+          "note": ""
+        },
+        {
+          "rws": "barren_mountains",
+          "zh": "身后的荒山",
+          "status": "present",
+          "symbol_ref": "barren_mountains",
+          "note": ""
+        },
+        {
+          "rws": "orange_sky",
+          "zh": "橙色天空",
+          "status": "altered",
+          "symbol_ref": "red_sky",
+          "note": "我们是更浓的血红色"
+        },
+        {
+          "rws": "armor",
+          "zh": "长袍下的铠甲",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "white_beard",
+          "zh": "白胡子",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "奶蛙没有胡子，属于角色化"
+        },
+        {
+          "rws": "river",
+          "zh": "山脚的小河",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        }
       ],
       "source_refs": [],
       "review_status": "draft"
@@ -166,17 +297,71 @@
         "glowing_ribbon",
         "bent_leg",
         "halo",
-        "ancient_tree",
+        "ancient_tree"
+      ],
+      "extra_symbol_refs": [
         "loose_arms",
-        "candles",
         "stream",
-        "white_lilies",
+        "white_lilies"
+      ],
+      "style_removed_refs": [
+        "candles",
         "full_moon_ruins"
       ],
       "rws_absent": [
         "hands_behind_back",
-        "red_hose",
-        "blue_tunic"
+        "red_hose_blue_tunic"
+      ],
+      "imagery_compare": [
+        {
+          "rws": "hanged_figure",
+          "zh": "倒挂的人",
+          "status": "present",
+          "symbol_ref": "upside_down_naiwa",
+          "note": ""
+        },
+        {
+          "rws": "rope",
+          "zh": "系在一只脚上的绳",
+          "status": "altered",
+          "symbol_ref": "glowing_ribbon",
+          "note": "我们是发光的丝带"
+        },
+        {
+          "rws": "crossed_leg",
+          "zh": "另一条腿弯成「4」字",
+          "status": "present",
+          "symbol_ref": "bent_leg",
+          "note": ""
+        },
+        {
+          "rws": "halo",
+          "zh": "头部光环",
+          "status": "present",
+          "symbol_ref": "halo",
+          "note": ""
+        },
+        {
+          "rws": "tau_tree",
+          "zh": "T 字形的活树",
+          "status": "altered",
+          "symbol_ref": "ancient_tree",
+          "note": "我们是古树横枝，T 形不明显"
+        },
+        {
+          "rws": "hands_behind_back",
+          "zh": "双手背在身后",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "我们画成双手自然下垂（见多出的部分）"
+        },
+        {
+          "rws": "red_hose_blue_tunic",
+          "zh": "红裤与蓝衣",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        }
       ],
       "source_refs": [],
       "review_status": "draft"
@@ -226,18 +411,85 @@
         "inverted_torch",
         "headband_horns",
         "bat_wings",
-        "black_pedestal",
-        "blood_moon",
-        "red_candles",
-        "dark_roses",
+        "black_pedestal"
+      ],
+      "extra_symbol_refs": [
         "pentagram_clasp"
       ],
+      "style_removed_refs": [
+        "blood_moon",
+        "red_candles",
+        "dark_roses"
+      ],
       "rws_absent": [
-        "inverted_pentagram_on_forehead",
-        "raised_right_hand",
-        "tails_on_figures",
-        "horns_on_figures",
+        "inverted_pentagram",
+        "raised_hand",
         "goat_legs"
+      ],
+      "imagery_compare": [
+        {
+          "rws": "chained_figures",
+          "zh": "台下戴锁链的一男一女",
+          "status": "altered",
+          "symbol_ref": "chained_figures",
+          "note": "传统是长着角和尾巴的裸身男女；我们是两个黑色小人影"
+        },
+        {
+          "rws": "loose_chains",
+          "zh": "松松套在脖子上的锁链",
+          "status": "present",
+          "symbol_ref": "open_shackles",
+          "note": ""
+        },
+        {
+          "rws": "inverted_torch",
+          "zh": "倒持的火炬",
+          "status": "present",
+          "symbol_ref": "inverted_torch",
+          "note": ""
+        },
+        {
+          "rws": "horns",
+          "zh": "头上的角",
+          "status": "altered",
+          "symbol_ref": "headband_horns",
+          "note": "我们是发箍上的角"
+        },
+        {
+          "rws": "bat_wings",
+          "zh": "蝠翼",
+          "status": "present",
+          "symbol_ref": "bat_wings",
+          "note": ""
+        },
+        {
+          "rws": "pedestal",
+          "zh": "方形台座",
+          "status": "present",
+          "symbol_ref": "black_pedestal",
+          "note": ""
+        },
+        {
+          "rws": "inverted_pentagram",
+          "zh": "额头的倒五芒星",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "我们的五芒星在台座和斗篷扣上，看起来是正立的"
+        },
+        {
+          "rws": "raised_hand",
+          "zh": "举起的右手",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        },
+        {
+          "rws": "goat_legs",
+          "zh": "山羊腿",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        }
       ],
       "source_refs": [],
       "review_status": "draft"
@@ -285,16 +537,70 @@
         "lightning",
         "burning_tower",
         "flying_crown",
-        "falling_debris",
         "falling_wisps",
-        "naiwa_on_stairs",
-        "red_ivy_arch",
         "storm_clouds",
         "aqueducts"
       ],
+      "extra_symbol_refs": [
+        "naiwa_on_stairs",
+        "falling_debris"
+      ],
+      "style_removed_refs": [
+        "red_ivy_arch"
+      ],
       "rws_absent": [
-        "yod_drops",
-        "human_figures_falling"
+        "yod_drops"
+      ],
+      "imagery_compare": [
+        {
+          "rws": "lightning",
+          "zh": "闪电",
+          "status": "present",
+          "symbol_ref": "lightning",
+          "note": ""
+        },
+        {
+          "rws": "tower",
+          "zh": "山顶高塔",
+          "status": "present",
+          "symbol_ref": "burning_tower",
+          "note": ""
+        },
+        {
+          "rws": "falling_crown",
+          "zh": "被掀飞的王冠",
+          "status": "present",
+          "symbol_ref": "flying_crown",
+          "note": ""
+        },
+        {
+          "rws": "falling_figures",
+          "zh": "两个坠落的人",
+          "status": "altered",
+          "symbol_ref": "falling_wisps",
+          "note": "我们是两缕发光的光影"
+        },
+        {
+          "rws": "dark_sky",
+          "zh": "漆黑的天空",
+          "status": "present",
+          "symbol_ref": "storm_clouds",
+          "note": "暗夜本来就是这张牌的传统"
+        },
+        {
+          "rws": "rocky_peak",
+          "zh": "陡峭的岩山",
+          "status": "present",
+          "symbol_ref": "aqueducts",
+          "note": "图上岩山和古拱桥画在一起"
+        },
+        {
+          "rws": "yod_drops",
+          "zh": "空中的火滴（Yod）",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        }
       ],
       "source_refs": [],
       "review_status": "draft"
@@ -345,16 +651,81 @@
         "pouring_into_pond",
         "watering_roses",
         "black_bird",
+        "pond"
+      ],
+      "extra_symbol_refs": [],
+      "style_removed_refs": [
         "black_roses",
-        "pond",
-        "waterfall_ruins",
-        "milky_way"
+        "milky_way",
+        "waterfall_ruins"
       ],
       "rws_absent": [
-        "kneeling_figure",
-        "foot_in_water",
-        "nude_figure",
-        "five_streams_on_land"
+        "kneeling_figure"
+      ],
+      "imagery_compare": [
+        {
+          "rws": "great_star",
+          "zh": "八芒大星",
+          "status": "present",
+          "symbol_ref": "eight_pointed_star",
+          "note": ""
+        },
+        {
+          "rws": "seven_small_stars",
+          "zh": "七颗小星",
+          "status": "present",
+          "symbol_ref": "small_stars",
+          "note": "数量待人工数"
+        },
+        {
+          "rws": "two_pitchers",
+          "zh": "两只水壶",
+          "status": "present",
+          "symbol_ref": "two_pitchers",
+          "note": ""
+        },
+        {
+          "rws": "pouring_into_water",
+          "zh": "一壶倒进水里",
+          "status": "present",
+          "symbol_ref": "pouring_into_pond",
+          "note": ""
+        },
+        {
+          "rws": "pouring_onto_land",
+          "zh": "一壶倒在地上（分成五股）",
+          "status": "altered",
+          "symbol_ref": "watering_roses",
+          "note": "我们是浇在玫瑰丛上"
+        },
+        {
+          "rws": "ibis",
+          "zh": "树上的朱鹭",
+          "status": "altered",
+          "symbol_ref": "black_bird",
+          "note": "我们是一只黑色的鸟"
+        },
+        {
+          "rws": "pool",
+          "zh": "池塘",
+          "status": "present",
+          "symbol_ref": "pond",
+          "note": ""
+        },
+        {
+          "rws": "kneeling_figure",
+          "zh": "跪着、一只脚踏在水里",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": "我们的奶蛙站在岸石上"
+        },
+        {
+          "rws": "starry_night",
+          "zh": "星夜",
+          "status": "present",
+          "symbol_ref": null,
+          "note": "星夜本来就是这张牌的传统"
+        }
       ],
       "source_refs": [],
       "review_status": "draft"
@@ -404,14 +775,68 @@
         "crayfish",
         "two_towers",
         "winding_path",
-        "pool",
+        "pool"
+      ],
+      "extra_symbol_refs": [
         "rabbit_plush",
-        "purple_irises",
+        "purple_irises"
+      ],
+      "style_removed_refs": [
         "violet_clouds"
       ],
       "rws_absent": [
-        "moon_face",
         "yod_drops"
+      ],
+      "imagery_compare": [
+        {
+          "rws": "moon",
+          "zh": "月亮",
+          "status": "altered",
+          "symbol_ref": "pale_moon",
+          "note": "传统的月亮里有一张侧脸"
+        },
+        {
+          "rws": "dog_and_wolf",
+          "zh": "狗与狼",
+          "status": "present",
+          "symbol_ref": "dog_and_wolf",
+          "note": ""
+        },
+        {
+          "rws": "crayfish",
+          "zh": "从水里爬出的龙虾",
+          "status": "present",
+          "symbol_ref": "crayfish",
+          "note": ""
+        },
+        {
+          "rws": "two_towers",
+          "zh": "两座塔",
+          "status": "present",
+          "symbol_ref": "two_towers",
+          "note": ""
+        },
+        {
+          "rws": "winding_path",
+          "zh": "蜿蜒的小路",
+          "status": "present",
+          "symbol_ref": "winding_path",
+          "note": ""
+        },
+        {
+          "rws": "pool",
+          "zh": "池水",
+          "status": "present",
+          "symbol_ref": "pool",
+          "note": ""
+        },
+        {
+          "rws": "yod_drops",
+          "zh": "飘落的光滴",
+          "status": "absent",
+          "symbol_ref": null,
+          "note": ""
+        }
       ],
       "source_refs": [],
       "review_status": "draft"
