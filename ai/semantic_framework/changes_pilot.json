@@ -413,6 +413,10 @@
     {
       "id": "sources.waite",
       "why": "补原典：韦特 1911《The Pictorial Key to the Tarot》大牌原文（ai/sources/），知识侧表加 waite_1911 与 source_refs；两个子代理逐条对照原文，为 59 条 traditional_rws 条目标注 tradition_basis 与原文证据；seed.major_19.03、seed.major_14.03 改为奶蛙原创；死神「不是真实死亡」标为安全规则下的有意偏离"
+    },
+    {
+      "id": "sources.golden_dawn",
+      "why": "核对站内 22 张大牌的占星 / 元素对应与黄金黎明标准体系一致；标明天王星 / 海王星 / 冥王星为现代后加；《777》1909 年版暂未取得可核验的公版文本"
     }
   ]
 }
