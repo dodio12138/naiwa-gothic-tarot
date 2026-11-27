@@ -21,8 +21,8 @@
           "id": "n1",
           "action": "ASK",
           "text": {
-            "zh": "画面里，你的目光先停在哪里？崖边、包袱，还是那只小狗？",
-            "en": "Where does your eye stop first — the cliff, the bundle, or the little dog?"
+            "zh": "画面里，你的目光先停在哪里？崖边、包袱、那只小狗，还是别的地方？",
+            "en": "Where does your eye stop first — the cliff, the bundle, the little dog, or somewhere else?"
           },
           "branches": [
             {
@@ -44,12 +44,16 @@
             {
               "when": "distress",
               "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
             }
           ]
         },
         {
           "id": "n2",
-          "action": "REFLECT",
+          "action": "ASK",
           "text": {
             "zh": "如果它代表你生活里的某件事，会是什么？",
             "en": "If it stood for something in your life, what would it be?"
@@ -58,6 +62,10 @@
             {
               "when": "associates",
               "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
             },
             {
               "when": "wants_to_stop",
@@ -74,6 +82,10 @@
             {
               "when": "distress",
               "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
             }
           ]
         },
@@ -104,6 +116,10 @@
             {
               "when": "distress",
               "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
             }
           ]
         },
@@ -118,6 +134,10 @@
             "seed.major_00.02"
           ],
           "branches": [
+            {
+              "when": "associates",
+              "to": "close"
+            },
             {
               "when": "asks_more",
               "to": "meaning"
@@ -137,6 +157,10 @@
             {
               "when": "distress",
               "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
             }
           ]
         },
@@ -163,6 +187,32 @@
           ]
         },
         {
+          "id": "soften",
+          "action": "ASK",
+          "text": {
+            "zh": "那就不往下问了。想听牌义，还是就停在这里？",
+            "en": "Then I won't ask further. Would you like the card's meaning, or shall we stop here?"
+          },
+          "branches": [
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
           "id": "close",
           "action": "CLOSE",
           "text": {
@@ -174,8 +224,8 @@
           "id": "safety",
           "action": "SAFETY_REDIRECT",
           "text": {
-            "zh": "听起来你现在挺难受的。牌可以先放一放——如果你愿意，说说正在发生的事；如果感到不安全，请联系身边信任的人或当地的心理援助热线。",
-            "en": "It sounds like you're having a hard time. We can set the cards aside — tell me what's happening if you like; if you feel unsafe, please reach out to someone you trust or a local crisis line."
+            "zh": "听起来你现在挺难受的。牌先放一放。如果你有伤害自己的念头，或正身处危险，请马上联系身边信任的人、当地的心理援助热线或急救电话。愿意的话，也可以说说发生了什么。",
+            "en": "It sounds like you're having a hard time. Let's set the cards aside. If you're thinking of hurting yourself or you're in danger, please reach out right away to someone you trust, a local crisis line, or emergency services. If you'd like, you can also tell me what's happening."
           }
         }
       ],
@@ -183,9 +233,10 @@
         "用户拒绝、说想停止时立即结束，不追加问题",
         "同一方向被否定两次后不再追问，改为直述牌义或结束",
         "出现危机信号时退出塔罗语境，直接提供现实支持",
+        "用户表示有点不舒服但不是危机时，先停止追问、降低强度，询问想听牌义还是结束（soften 节点）；明确危机信号才走安全转向",
         "每轮最多一个问题；用户只要牌义时直接回答"
       ],
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "tree_id": "inq.major_04",
@@ -198,8 +249,8 @@
           "id": "n1",
           "action": "ASK",
           "text": {
-            "zh": "这张牌里，你觉得自己更像坐在王座上的人，还是站在王座前的人？",
-            "en": "In this card, are you more the one on the throne, or the one standing before it?"
+            "zh": "看着这张牌，你更像坐在王座上的那位，还是在看着它的人？或者都不像？",
+            "en": "Looking at this card, do you feel more like the one on the throne, or the one looking at it — or neither?"
           },
           "branches": [
             {
@@ -221,12 +272,16 @@
             {
               "when": "distress",
               "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
             }
           ]
         },
         {
           "id": "n2",
-          "action": "REFLECT",
+          "action": "ASK",
           "text": {
             "zh": "最近你在哪里需要『定规矩』，或者被规矩管着？",
             "en": "Where lately do you need to set the rules — or are you ruled by them?"
@@ -235,6 +290,10 @@
             {
               "when": "associates",
               "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
             },
             {
               "when": "wants_to_stop",
@@ -251,6 +310,10 @@
             {
               "when": "distress",
               "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
             }
           ]
         },
@@ -281,6 +344,10 @@
             {
               "when": "distress",
               "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
             }
           ]
         },
@@ -288,13 +355,17 @@
           "id": "n4",
           "action": "ASK",
           "text": {
-            "zh": "这些规矩里，哪一条在保护你，哪一条已经有点紧了？",
-            "en": "Among these rules, which one protects you, and which has grown a little tight?"
+            "zh": "这些规矩里，有没有哪条在保护你？又有没有哪条已经有点紧了？",
+            "en": "Among these rules, is there one that protects you — and is there one that has grown a little tight?"
           },
           "seed_refs": [
             "seed.major_04.01"
           ],
           "branches": [
+            {
+              "when": "associates",
+              "to": "close"
+            },
             {
               "when": "asks_more",
               "to": "meaning"
@@ -314,6 +385,10 @@
             {
               "when": "distress",
               "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
             }
           ]
         },
@@ -340,6 +415,32 @@
           ]
         },
         {
+          "id": "soften",
+          "action": "ASK",
+          "text": {
+            "zh": "那就不往下问了。想听牌义，还是就停在这里？",
+            "en": "Then I won't ask further. Would you like the card's meaning, or shall we stop here?"
+          },
+          "branches": [
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
           "id": "close",
           "action": "CLOSE",
           "text": {
@@ -351,8 +452,8 @@
           "id": "safety",
           "action": "SAFETY_REDIRECT",
           "text": {
-            "zh": "听起来你现在挺难受的。牌可以先放一放——如果你愿意，说说正在发生的事；如果感到不安全，请联系身边信任的人或当地的心理援助热线。",
-            "en": "It sounds like you're having a hard time. We can set the cards aside — tell me what's happening if you like; if you feel unsafe, please reach out to someone you trust or a local crisis line."
+            "zh": "听起来你现在挺难受的。牌先放一放。如果你有伤害自己的念头，或正身处危险，请马上联系身边信任的人、当地的心理援助热线或急救电话。愿意的话，也可以说说发生了什么。",
+            "en": "It sounds like you're having a hard time. Let's set the cards aside. If you're thinking of hurting yourself or you're in danger, please reach out right away to someone you trust, a local crisis line, or emergency services. If you'd like, you can also tell me what's happening."
           }
         }
       ],
@@ -360,9 +461,10 @@
         "用户拒绝、说想停止时立即结束，不追加问题",
         "同一方向被否定两次后不再追问，改为直述牌义或结束",
         "出现危机信号时退出塔罗语境，直接提供现实支持",
+        "用户表示有点不舒服但不是危机时，先停止追问、降低强度，询问想听牌义还是结束（soften 节点）；明确危机信号才走安全转向",
         "每轮最多一个问题；用户只要牌义时直接回答"
       ],
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "tree_id": "inq.major_12",
@@ -375,8 +477,8 @@
           "id": "n1",
           "action": "ASK",
           "text": {
-            "zh": "倒过来看世界，你觉得奶蛙此刻是难受，还是平静？",
-            "en": "Seeing the world upside down — does Naiwa look uncomfortable to you, or calm?"
+            "zh": "倒过来看世界，你觉得奶蛙此刻是难受、平静，还是别的什么？",
+            "en": "Seeing the world upside down — does Naiwa look uncomfortable to you, calm, or something else?"
           },
           "branches": [
             {
@@ -398,20 +500,28 @@
             {
               "when": "distress",
               "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
             }
           ]
         },
         {
           "id": "n2",
-          "action": "REFLECT",
+          "action": "ASK",
           "text": {
-            "zh": "如果你也被『吊』在某个地方，那会是哪件事？",
-            "en": "If you were 'hanging' somewhere too, what would it be?"
+            "zh": "如果你生活里也有一件事，让你像这样悬着、停在半空，那会是什么？",
+            "en": "If something in your life has you suspended like this, mid-air, what would it be?"
           },
           "branches": [
             {
               "when": "associates",
               "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
             },
             {
               "when": "wants_to_stop",
@@ -428,6 +538,10 @@
             {
               "when": "distress",
               "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
             }
           ]
         },
@@ -436,7 +550,7 @@
           "action": "HINT",
           "text": {
             "zh": "倒吊人常与暂停、换个角度有关。最近有什么事，是你只能等的？",
-            "en": "The Hanged One is often about pausing and a new angle. Is there something lately you can only wait for?"
+            "en": "The Hanged Man is often about pausing and a new angle. Is there something lately you can only wait for?"
           },
           "branches": [
             {
@@ -458,6 +572,10 @@
             {
               "when": "distress",
               "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
             }
           ]
         },
@@ -473,6 +591,10 @@
           ],
           "branches": [
             {
+              "when": "associates",
+              "to": "close"
+            },
+            {
               "when": "asks_more",
               "to": "meaning"
             },
@@ -491,6 +613,10 @@
             {
               "when": "distress",
               "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
             }
           ]
         },
@@ -499,7 +625,7 @@
           "action": "ANSWER",
           "text": {
             "zh": "倒吊人正位：暂停、换视角、放下与牺牲；逆位：拖延、无谓的牺牲，或不愿换个角度。",
-            "en": "The Hanged One upright: pause, a new perspective, surrender and sacrifice; reversed: delay, needless sacrifice, or refusing a new angle."
+            "en": "The Hanged Man upright: pause, a new perspective, surrender and sacrifice; reversed: delay, needless sacrifice, or refusing a new angle."
           },
           "branches": [
             {
@@ -508,6 +634,32 @@
             },
             {
               "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
+          "id": "soften",
+          "action": "ASK",
+          "text": {
+            "zh": "那就不往下问了。想听牌义，还是就停在这里？",
+            "en": "Then I won't ask further. Would you like the card's meaning, or shall we stop here?"
+          },
+          "branches": [
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
               "to": "close"
             },
             {
@@ -528,8 +680,8 @@
           "id": "safety",
           "action": "SAFETY_REDIRECT",
           "text": {
-            "zh": "听起来你现在挺难受的。牌可以先放一放——如果你愿意，说说正在发生的事；如果感到不安全，请联系身边信任的人或当地的心理援助热线。",
-            "en": "It sounds like you're having a hard time. We can set the cards aside — tell me what's happening if you like; if you feel unsafe, please reach out to someone you trust or a local crisis line."
+            "zh": "听起来你现在挺难受的。牌先放一放。如果你有伤害自己的念头，或正身处危险，请马上联系身边信任的人、当地的心理援助热线或急救电话。愿意的话，也可以说说发生了什么。",
+            "en": "It sounds like you're having a hard time. Let's set the cards aside. If you're thinking of hurting yourself or you're in danger, please reach out right away to someone you trust, a local crisis line, or emergency services. If you'd like, you can also tell me what's happening."
           }
         }
       ],
@@ -537,9 +689,10 @@
         "用户拒绝、说想停止时立即结束，不追加问题",
         "同一方向被否定两次后不再追问，改为直述牌义或结束",
         "出现危机信号时退出塔罗语境，直接提供现实支持",
+        "用户表示有点不舒服但不是危机时，先停止追问、降低强度，询问想听牌义还是结束（soften 节点）；明确危机信号才走安全转向",
         "每轮最多一个问题；用户只要牌义时直接回答"
       ],
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "tree_id": "inq.major_15",
@@ -552,8 +705,8 @@
           "id": "n1",
           "action": "ASK",
           "text": {
-            "zh": "画里的锁链，你觉得是紧的还是松的？",
-            "en": "The chains in the picture — do they look tight or loose to you?"
+            "zh": "画里的锁链，你觉得是紧的、松的，还是别的样子？",
+            "en": "The chains in the picture — do they look tight to you, loose, or something else?"
           },
           "branches": [
             {
@@ -575,12 +728,16 @@
             {
               "when": "distress",
               "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
             }
           ]
         },
         {
           "id": "n2",
-          "action": "REFLECT",
+          "action": "ASK",
           "text": {
             "zh": "你生活里有没有一样东西，你既离不开，又有点想离开？",
             "en": "Is there something in your life you can't leave, yet partly want to?"
@@ -589,6 +746,10 @@
             {
               "when": "associates",
               "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
             },
             {
               "when": "wants_to_stop",
@@ -605,6 +766,10 @@
             {
               "when": "distress",
               "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
             }
           ]
         },
@@ -613,7 +778,7 @@
           "action": "HINT",
           "text": {
             "zh": "恶魔常与执念和依附有关。有没有一个习惯或一段关系，让你觉得被牵着走？",
-            "en": "The Devil is often about attachment. Is there a habit or relationship that seems to lead you along?"
+            "en": "The Devil is often about fixation and attachment. Is there a habit or relationship that seems to lead you along?"
           },
           "branches": [
             {
@@ -635,6 +800,10 @@
             {
               "when": "distress",
               "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
             }
           ]
         },
@@ -642,13 +811,17 @@
           "id": "n4",
           "action": "ASK",
           "text": {
-            "zh": "如果那根链子另一端系着的东西对你很重要，它重要在哪里？",
-            "en": "If what's tied to the other end of that chain matters to you, how does it matter?"
+            "zh": "愿意的话说说：如果那根链子另一端系着的东西对你很重要，它重要在哪里？",
+            "en": "Only if you'd like to say: if what's tied to the other end of that chain matters to you, how does it matter?"
           },
           "seed_refs": [
             "seed.major_15.01"
           ],
           "branches": [
+            {
+              "when": "associates",
+              "to": "close"
+            },
             {
               "when": "asks_more",
               "to": "meaning"
@@ -668,6 +841,10 @@
             {
               "when": "distress",
               "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
             }
           ]
         },
@@ -694,6 +871,32 @@
           ]
         },
         {
+          "id": "soften",
+          "action": "ASK",
+          "text": {
+            "zh": "那就不往下问了。想听牌义，还是就停在这里？",
+            "en": "Then I won't ask further. Would you like the card's meaning, or shall we stop here?"
+          },
+          "branches": [
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
           "id": "close",
           "action": "CLOSE",
           "text": {
@@ -705,8 +908,8 @@
           "id": "safety",
           "action": "SAFETY_REDIRECT",
           "text": {
-            "zh": "听起来你现在挺难受的。牌可以先放一放——如果你愿意，说说正在发生的事；如果感到不安全，请联系身边信任的人或当地的心理援助热线。",
-            "en": "It sounds like you're having a hard time. We can set the cards aside — tell me what's happening if you like; if you feel unsafe, please reach out to someone you trust or a local crisis line."
+            "zh": "听起来你现在挺难受的。牌先放一放。如果你有伤害自己的念头，或正身处危险，请马上联系身边信任的人、当地的心理援助热线或急救电话。愿意的话，也可以说说发生了什么。",
+            "en": "It sounds like you're having a hard time. Let's set the cards aside. If you're thinking of hurting yourself or you're in danger, please reach out right away to someone you trust, a local crisis line, or emergency services. If you'd like, you can also tell me what's happening."
           }
         }
       ],
@@ -714,9 +917,10 @@
         "用户拒绝、说想停止时立即结束，不追加问题",
         "同一方向被否定两次后不再追问，改为直述牌义或结束",
         "出现危机信号时退出塔罗语境，直接提供现实支持",
+        "用户表示有点不舒服但不是危机时，先停止追问、降低强度，询问想听牌义还是结束（soften 节点）；明确危机信号才走安全转向",
         "每轮最多一个问题；用户只要牌义时直接回答"
       ],
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "tree_id": "inq.major_16",
@@ -729,8 +933,8 @@
           "id": "n1",
           "action": "ASK",
           "text": {
-            "zh": "看着这座塔，你的第一感觉是害怕、可惜，还是松了一口气？",
-            "en": "Looking at this tower, is your first feeling fear, regret, or relief?"
+            "zh": "看着这座塔，你最先感觉到什么？害怕、可惜、松一口气，或者别的，都可以。",
+            "en": "Looking at this tower, what do you feel first? Fear, regret, relief — or something else entirely."
           },
           "branches": [
             {
@@ -752,12 +956,16 @@
             {
               "when": "distress",
               "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
             }
           ]
         },
         {
           "id": "n2",
-          "action": "REFLECT",
+          "action": "ASK",
           "text": {
             "zh": "最近有没有什么『塔』，是你一直担心会倒的，或者已经倒了？",
             "en": "Is there a 'tower' lately that you've feared would fall — or that already has?"
@@ -766,6 +974,10 @@
             {
               "when": "associates",
               "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
             },
             {
               "when": "wants_to_stop",
@@ -782,6 +994,10 @@
             {
               "when": "distress",
               "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
             }
           ]
         },
@@ -789,8 +1005,8 @@
           "id": "n3",
           "action": "HINT",
           "text": {
-            "zh": "高塔常与突变和旧结构崩塌有关。它不是预言灾难，更像在问：哪里本来就不稳？",
-            "en": "The Tower is often about sudden change. It doesn't predict disaster; it asks what was never steady."
+            "zh": "高塔常与突变、旧结构松动有关。它不预言灾难。最近有没有什么，让你觉得在变？",
+            "en": "The Tower is often about sudden change and old structures giving way. It doesn't predict disaster. Has anything felt like it's shifting lately?"
           },
           "branches": [
             {
@@ -812,6 +1028,10 @@
             {
               "when": "distress",
               "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
             }
           ]
         },
@@ -819,8 +1039,8 @@
           "id": "n4",
           "action": "ASK",
           "text": {
-            "zh": "如果那座塔真的倒了，你最想从废墟里留下什么？",
-            "en": "If that tower did fall, what would you most want to keep from the ruins?"
+            "zh": "如果那座塔已经倒了，或者真的倒下，你最想留下的是什么？",
+            "en": "If that tower has fallen, or does fall, what would you most want to keep?"
           },
           "seed_refs": [
             "seed.major_16.01"
@@ -845,6 +1065,10 @@
             {
               "when": "distress",
               "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
             }
           ]
         },
@@ -871,6 +1095,32 @@
           ]
         },
         {
+          "id": "soften",
+          "action": "ASK",
+          "text": {
+            "zh": "那就不往下问了。想听牌义，还是就停在这里？",
+            "en": "Then I won't ask further. Would you like the card's meaning, or shall we stop here?"
+          },
+          "branches": [
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
           "id": "close",
           "action": "CLOSE",
           "text": {
@@ -882,8 +1132,8 @@
           "id": "safety",
           "action": "SAFETY_REDIRECT",
           "text": {
-            "zh": "听起来你现在挺难受的。牌可以先放一放——如果你愿意，说说正在发生的事；如果感到不安全，请联系身边信任的人或当地的心理援助热线。",
-            "en": "It sounds like you're having a hard time. We can set the cards aside — tell me what's happening if you like; if you feel unsafe, please reach out to someone you trust or a local crisis line."
+            "zh": "听起来你现在挺难受的。牌先放一放。如果你有伤害自己的念头，或正身处危险，请马上联系身边信任的人、当地的心理援助热线或急救电话。愿意的话，也可以说说发生了什么。",
+            "en": "It sounds like you're having a hard time. Let's set the cards aside. If you're thinking of hurting yourself or you're in danger, please reach out right away to someone you trust, a local crisis line, or emergency services. If you'd like, you can also tell me what's happening."
           }
         }
       ],
@@ -891,9 +1141,10 @@
         "用户拒绝、说想停止时立即结束，不追加问题",
         "同一方向被否定两次后不再追问，改为直述牌义或结束",
         "出现危机信号时退出塔罗语境，直接提供现实支持",
+        "用户表示有点不舒服但不是危机时，先停止追问、降低强度，询问想听牌义还是结束（soften 节点）；明确危机信号才走安全转向",
         "每轮最多一个问题；用户只要牌义时直接回答"
       ],
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "tree_id": "inq.major_17",
@@ -906,8 +1157,8 @@
           "id": "n1",
           "action": "ASK",
           "text": {
-            "zh": "这张牌里，你最想成为哪一部分：星星、池水，还是倒向土地的那壶水？",
-            "en": "In this card, which part would you most like to be — the star, the pool, or the water poured onto the land?"
+            "zh": "这张牌里，哪一部分最让你停留：星星、池水、倒向土地的那壶水，或者别的地方？",
+            "en": "Which part of this card holds you most — the star, the pool, the water poured onto the land, or somewhere else?"
           },
           "branches": [
             {
@@ -929,20 +1180,28 @@
             {
               "when": "distress",
               "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
             }
           ]
         },
         {
           "id": "n2",
-          "action": "REFLECT",
+          "action": "ASK",
           "text": {
-            "zh": "最近有什么东西，在慢慢回到你身边？",
-            "en": "What has been slowly coming back to you lately?"
+            "zh": "最近有没有什么，在慢慢回来？没有也没关系。",
+            "en": "Has anything been slowly coming back lately? It's all right if nothing has."
           },
           "branches": [
             {
               "when": "associates",
               "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
             },
             {
               "when": "wants_to_stop",
@@ -959,6 +1218,10 @@
             {
               "when": "distress",
               "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
             }
           ]
         },
@@ -989,6 +1252,10 @@
             {
               "when": "distress",
               "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
             }
           ]
         },
@@ -996,8 +1263,8 @@
           "id": "n4",
           "action": "ASK",
           "text": {
-            "zh": "如果你手里也有两只壶，一只给别人，另一只你想给谁？",
-            "en": "If you held two pitchers too, one for others — who would the other be for?"
+            "zh": "如果你手里也有两只壶，你想把水倒向哪里？",
+            "en": "If you held two pitchers too, where would you pour them?"
           },
           "seed_refs": [
             "seed.major_17.02"
@@ -1022,6 +1289,10 @@
             {
               "when": "distress",
               "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
             }
           ]
         },
@@ -1048,6 +1319,32 @@
           ]
         },
         {
+          "id": "soften",
+          "action": "ASK",
+          "text": {
+            "zh": "那就不往下问了。想听牌义，还是就停在这里？",
+            "en": "Then I won't ask further. Would you like the card's meaning, or shall we stop here?"
+          },
+          "branches": [
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
           "id": "close",
           "action": "CLOSE",
           "text": {
@@ -1059,8 +1356,8 @@
           "id": "safety",
           "action": "SAFETY_REDIRECT",
           "text": {
-            "zh": "听起来你现在挺难受的。牌可以先放一放——如果你愿意，说说正在发生的事；如果感到不安全，请联系身边信任的人或当地的心理援助热线。",
-            "en": "It sounds like you're having a hard time. We can set the cards aside — tell me what's happening if you like; if you feel unsafe, please reach out to someone you trust or a local crisis line."
+            "zh": "听起来你现在挺难受的。牌先放一放。如果你有伤害自己的念头，或正身处危险，请马上联系身边信任的人、当地的心理援助热线或急救电话。愿意的话，也可以说说发生了什么。",
+            "en": "It sounds like you're having a hard time. Let's set the cards aside. If you're thinking of hurting yourself or you're in danger, please reach out right away to someone you trust, a local crisis line, or emergency services. If you'd like, you can also tell me what's happening."
           }
         }
       ],
@@ -1068,9 +1365,10 @@
         "用户拒绝、说想停止时立即结束，不追加问题",
         "同一方向被否定两次后不再追问，改为直述牌义或结束",
         "出现危机信号时退出塔罗语境，直接提供现实支持",
+        "用户表示有点不舒服但不是危机时，先停止追问、降低强度，询问想听牌义还是结束（soften 节点）；明确危机信号才走安全转向",
         "每轮最多一个问题；用户只要牌义时直接回答"
       ],
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "tree_id": "inq.major_18",
@@ -1083,8 +1381,8 @@
           "id": "n1",
           "action": "ASK",
           "text": {
-            "zh": "这幅画让你觉得安心，还是有点不安？",
-            "en": "Does this picture feel calming to you, or a little uneasy?"
+            "zh": "这幅画让你觉得安心、有点不安，还是都不是？",
+            "en": "Does this picture feel calming, a little uneasy — or neither?"
           },
           "branches": [
             {
@@ -1106,12 +1404,16 @@
             {
               "when": "distress",
               "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
             }
           ]
         },
         {
           "id": "n2",
-          "action": "REFLECT",
+          "action": "ASK",
           "text": {
             "zh": "有没有一件事，你现在还看不清，只能凭感觉往前走？",
             "en": "Is there something you can't see clearly yet, and can only feel your way through?"
@@ -1120,6 +1422,10 @@
             {
               "when": "associates",
               "to": "n4"
+            },
+            {
+              "when": "no_association",
+              "to": "meaning"
             },
             {
               "when": "wants_to_stop",
@@ -1136,6 +1442,10 @@
             {
               "when": "distress",
               "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
             }
           ]
         },
@@ -1143,8 +1453,8 @@
           "id": "n3",
           "action": "HINT",
           "text": {
-            "zh": "月亮常与不确定、梦和直觉有关。最近有没有让你记得的梦，或说不清的感觉？",
-            "en": "The Moon is often about uncertainty, dreams and intuition. Any dream you remember lately, or a feeling you can't name?"
+            "zh": "月亮常与不确定、梦和直觉有关。最近有没有什么说不清的感觉？想提梦也可以，不提也没关系。",
+            "en": "The Moon is often about uncertainty, dreams and intuition. Is there a feeling you can't quite name lately? You can mention a dream if you like, or not."
           },
           "branches": [
             {
@@ -1166,6 +1476,10 @@
             {
               "when": "distress",
               "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
             }
           ]
         },
@@ -1173,11 +1487,11 @@
           "id": "n4",
           "action": "ASK",
           "text": {
-            "zh": "在那件看不清的事里，哪部分是你知道的，哪部分是你猜的？",
-            "en": "In that unclear matter, which part do you know, and which part are you guessing?"
+            "zh": "在那件事或那种感觉里，哪部分是你确定的，哪部分还只是猜测？",
+            "en": "In that matter or feeling, which part are you sure of, and which part is still a guess?"
           },
           "seed_refs": [
-            "seed.major_18.02"
+            "seed.major_18.01"
           ],
           "branches": [
             {
@@ -1199,6 +1513,10 @@
             {
               "when": "distress",
               "to": "safety"
+            },
+            {
+              "when": "discomfort",
+              "to": "soften"
             }
           ]
         },
@@ -1225,6 +1543,32 @@
           ]
         },
         {
+          "id": "soften",
+          "action": "ASK",
+          "text": {
+            "zh": "那就不往下问了。想听牌义，还是就停在这里？",
+            "en": "Then I won't ask further. Would you like the card's meaning, or shall we stop here?"
+          },
+          "branches": [
+            {
+              "when": "wants_meaning",
+              "to": "meaning"
+            },
+            {
+              "when": "wants_to_stop",
+              "to": "close"
+            },
+            {
+              "when": "declines",
+              "to": "close"
+            },
+            {
+              "when": "distress",
+              "to": "safety"
+            }
+          ]
+        },
+        {
           "id": "close",
           "action": "CLOSE",
           "text": {
@@ -1236,8 +1580,8 @@
           "id": "safety",
           "action": "SAFETY_REDIRECT",
           "text": {
-            "zh": "听起来你现在挺难受的。牌可以先放一放——如果你愿意，说说正在发生的事；如果感到不安全，请联系身边信任的人或当地的心理援助热线。",
-            "en": "It sounds like you're having a hard time. We can set the cards aside — tell me what's happening if you like; if you feel unsafe, please reach out to someone you trust or a local crisis line."
+            "zh": "听起来你现在挺难受的。牌先放一放。如果你有伤害自己的念头，或正身处危险，请马上联系身边信任的人、当地的心理援助热线或急救电话。愿意的话，也可以说说发生了什么。",
+            "en": "It sounds like you're having a hard time. Let's set the cards aside. If you're thinking of hurting yourself or you're in danger, please reach out right away to someone you trust, a local crisis line, or emergency services. If you'd like, you can also tell me what's happening."
           }
         }
       ],
@@ -1245,9 +1589,11 @@
         "用户拒绝、说想停止时立即结束，不追加问题",
         "同一方向被否定两次后不再追问，改为直述牌义或结束",
         "出现危机信号时退出塔罗语境，直接提供现实支持",
-        "每轮最多一个问题；用户只要牌义时直接回答"
+        "用户表示有点不舒服但不是危机时，先停止追问、降低强度，询问想听牌义还是结束（soften 节点）；明确危机信号才走安全转向",
+        "每轮最多一个问题；用户只要牌义时直接回答",
+        "用户提到梦时只接住内容，不追问细节，不把梦解读为诊断或被压抑创伤的证据"
       ],
-      "review_status": "draft"
+      "review_status": "reviewed"
     }
   ]
 }

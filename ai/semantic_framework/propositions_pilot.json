@@ -29,11 +29,12 @@
         "面对没有经验的处境"
       ],
       "counterexamples": [
-        "需要谨慎评估风险的决定（如财务、健康），不能用『勇敢迈一步』代替准备"
+        "需要谨慎评估风险的决定（如财务、健康），不能用『勇敢迈一步』代替准备",
+        "用户流露轻生、自伤念头或处于危机时，不使用『出发 / 迈出一步 / 悬崖』这类说法，转为现实支持"
       ],
       "source_kind": "traditional",
       "source_refs": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "version": 1
     },
     {
@@ -58,7 +59,7 @@
       ],
       "source_kind": "original_interpretation",
       "source_refs": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "version": 1
     },
     {
@@ -67,8 +68,8 @@
         "major_00"
       ],
       "text": {
-        "zh": "有人在旁边提醒（小狗），并不等于你不能出发。",
-        "en": "A companion's warning (the little dog) does not mean you cannot set out."
+        "zh": "身边的提醒（小狗）值得听，但不一定等于『不能出发』。",
+        "en": "A companion's warning (the little dog) is worth hearing, though it need not mean you cannot set out."
       },
       "framework": "naiwa_original",
       "symbol_refs": [
@@ -78,11 +79,12 @@
         "身边有人担心或劝阻"
       ],
       "counterexamples": [
-        "提醒来自可信的专业意见时，应当认真对待"
+        "提醒来自可信的专业意见时，应当认真对待",
+        "用户想做的事有明显的人身或安全风险时，不用这句为其开脱"
       ],
       "source_kind": "original_interpretation",
       "source_refs": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "version": 1
     },
     {
@@ -107,7 +109,7 @@
       ],
       "source_kind": "traditional",
       "source_refs": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "version": 1
     },
     {
@@ -132,7 +134,7 @@
       ],
       "source_kind": "original_interpretation",
       "source_refs": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "version": 1
     },
     {
@@ -141,8 +143,8 @@
         "major_04"
       ],
       "text": {
-        "zh": "荒山上的王座：稳固有时伴随着孤独与干涸。",
-        "en": "A throne above barren mountains: steadiness can come with loneliness and dryness."
+        "zh": "荒山前的王座：稳固有时伴随着孤独与干涸。",
+        "en": "A throne set against barren mountains: steadiness can come with loneliness and dryness."
       },
       "framework": "naiwa_original",
       "symbol_refs": [
@@ -157,7 +159,7 @@
       ],
       "source_kind": "original_interpretation",
       "source_refs": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "version": 1
     },
     {
@@ -182,7 +184,7 @@
       ],
       "source_kind": "traditional",
       "source_refs": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "version": 1
     },
     {
@@ -202,11 +204,12 @@
         "被迫停下（生病、失业、等待结果）"
       ],
       "counterexamples": [
-        "不能把用户的困境说成『是你选择了这样』"
+        "不能把用户的困境说成『是你选择了这样』",
+        "不要求被迫停下的人（生病、失业等）从中找出意义、收获或顿悟"
       ],
       "source_kind": "original_interpretation",
       "source_refs": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "version": 1
     },
     {
@@ -231,7 +234,7 @@
       ],
       "source_kind": "original_interpretation",
       "source_refs": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "version": 1
     },
     {
@@ -251,11 +254,12 @@
         "反复的模式、依赖、成瘾倾向"
       ],
       "counterexamples": [
-        "不能把成瘾或依赖简单归为意志力问题；需要现实支持时应建议专业帮助"
+        "不能把成瘾或依赖简单归为意志力问题；需要现实支持时应建议专业帮助",
+        "不能因为抽到这张牌，就推断用户有成瘾、依赖或『见不得人』的欲望，也不评判用户的性与身体"
       ],
       "source_kind": "traditional",
       "source_refs": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "version": 1
     },
     {
@@ -281,7 +285,7 @@
       ],
       "source_kind": "original_interpretation",
       "source_refs": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "version": 1
     },
     {
@@ -290,10 +294,10 @@
         "major_15"
       ],
       "text": {
-        "zh": "镣铐是松的：看见它能被取下，是改变的第一步。",
-        "en": "The shackles are loose: seeing they can come off is the first step."
+        "zh": "锁链并没有锁死：看见它能被取下，是改变的第一步。",
+        "en": "The chains are not locked tight: seeing they can come off is the first step."
       },
-      "framework": "naiwa_original",
+      "framework": "traditional_rws",
       "symbol_refs": [
         "open_shackles"
       ],
@@ -301,11 +305,12 @@
         "感到被困、但仍有选择余地"
       ],
       "counterexamples": [
-        "用户确实没有离开条件时，不能说『你随时可以走』"
+        "用户确实没有离开条件时，不能说『你随时可以走』",
+        "成瘾、经济依赖、胁迫等处境下，『看见』不等于能马上离开，不暗示『看清了还不走是你的问题』"
       ],
-      "source_kind": "original_interpretation",
+      "source_kind": "traditional",
       "source_refs": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "version": 1
     },
     {
@@ -330,7 +335,7 @@
       ],
       "source_kind": "traditional",
       "source_refs": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "version": 1
     },
     {
@@ -339,23 +344,25 @@
         "major_16"
       ],
       "text": {
-        "zh": "崩塌暴露了原本不稳的地基，也让真相显形。",
-        "en": "Collapse exposes a foundation that was never steady, and lets the truth show."
+        "zh": "崩塌会暴露原本不稳的地方，也让被遮住的真相显形。",
+        "en": "Collapse exposes what was never steady, and lets hidden truth show."
       },
-      "framework": "existential_extension",
+      "framework": "traditional_rws",
       "symbol_refs": [
-        "falling_debris",
-        "flying_crown"
+        "lightning",
+        "flying_crown",
+        "burning_tower"
       ],
       "applicable_conditions": [
         "关系或事业突然破裂之后的反思"
       ],
       "counterexamples": [
-        "失去刚刚发生时，不急着要求用户从中找到意义"
+        "失去刚刚发生时，不急着要求用户从中找到意义",
+        "不能据此断言用户失去的东西『本来就是错的』，或归咎于用户的选择"
       ],
-      "source_kind": "original_interpretation",
+      "source_kind": "traditional",
       "source_refs": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "version": 1
     },
     {
@@ -372,14 +379,15 @@
         "naiwa_on_stairs"
       ],
       "applicable_conditions": [
-        "冲击之后的麻木或抽离"
+        "用户自述在冲击之后觉得自己像旁观者，或暂时感觉不到什么"
       ],
       "counterexamples": [
-        "用户表达强烈痛苦时，不用『平静』来示范压抑情绪"
+        "用户表达强烈痛苦时，不用『平静』来示范压抑情绪",
+        "不把用户的平静或沉默解读为麻木、解离等心理状态"
       ],
       "source_kind": "original_interpretation",
       "source_refs": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "version": 1
     },
     {
@@ -388,8 +396,8 @@
         "major_17"
       ],
       "text": {
-        "zh": "风暴之后，希望与修复会慢慢回来。",
-        "en": "After the storm, hope and healing return slowly."
+        "zh": "风暴之后，希望与修复可以慢慢回来。",
+        "en": "After the storm, hope and healing can slowly return."
       },
       "framework": "traditional_rws",
       "symbol_refs": [
@@ -400,11 +408,12 @@
         "经历困难后的恢复期"
       ],
       "counterexamples": [
-        "不能催促用户『该好起来了』"
+        "不能催促用户『该好起来了』",
+        "不承诺具体结果（如一定会好起来、关系会恢复）"
       ],
       "source_kind": "traditional",
       "source_refs": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "version": 1
     },
     {
@@ -413,12 +422,13 @@
         "major_17"
       ],
       "text": {
-        "zh": "向外给予与向内滋养需要同时发生。",
-        "en": "Giving outward and nourishing inward need to happen together."
+        "zh": "一壶浇向土地，一壶还给池水：给出去的时候，源头也值得被补回来。",
+        "en": "One pitcher to the land, one back to the pool: while giving out, the source deserves replenishing too."
       },
-      "framework": "jungian_extension",
+      "framework": "naiwa_original",
       "symbol_refs": [
         "two_pitchers",
+        "pouring_into_pond",
         "watering_roses"
       ],
       "applicable_conditions": [
@@ -429,7 +439,7 @@
       ],
       "source_kind": "original_interpretation",
       "source_refs": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "version": 1
     },
     {
@@ -454,7 +464,7 @@
       ],
       "source_kind": "original_interpretation",
       "source_refs": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "version": 1
     },
     {
@@ -479,7 +489,7 @@
       ],
       "source_kind": "traditional",
       "source_refs": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "version": 1
     },
     {
@@ -504,7 +514,7 @@
       ],
       "source_kind": "original_interpretation",
       "source_refs": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "version": 1
     },
     {
@@ -514,9 +524,9 @@
       ],
       "text": {
         "zh": "狗与狼都对着月亮叫：驯服的和野性的部分同时醒着。",
-        "en": "Dog and wolf both cry to the moon: the tame and the wild in you are both awake."
+        "en": "Dog and wolf both cry to the moon: the tame and the wild are both awake."
       },
-      "framework": "naiwa_original",
+      "framework": "traditional_rws",
       "symbol_refs": [
         "dog_and_wolf"
       ],
@@ -526,9 +536,9 @@
       "counterexamples": [
         "用户没有表达内在冲突时，不强行制造矛盾"
       ],
-      "source_kind": "original_interpretation",
+      "source_kind": "traditional",
       "source_refs": [],
-      "review_status": "draft",
+      "review_status": "reviewed",
       "version": 1
     }
   ]

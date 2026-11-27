@@ -22,7 +22,7 @@
       "framework": "naiwa_original",
       "aphorism": {
         "zh": "每一条路，都是从还不认识它开始的。",
-        "en": "Every road begins before you know it."
+        "en": "Every road begins as one you don't yet know."
       },
       "expansion_topics": [
         "开始",
@@ -32,7 +32,7 @@
         "用户明确需要具体风险分析时，不以诗意代替"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "seed_id": "seed.major_00.02",
@@ -56,7 +56,7 @@
         "用户没有选择余地时，不暗示『是你背得太多』"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "seed_id": "seed.major_00.03",
@@ -70,8 +70,8 @@
       "proposition_ref": "prop.major_00.03",
       "framework": "naiwa_original",
       "aphorism": {
-        "zh": "小狗叫了一声，不是为了拦你，是想让你看清脚下。",
-        "en": "The little dog barks not to stop you, but so you see where you step."
+        "zh": "小狗抬头望着你，不是为了拦你，是想让你看清脚下。",
+        "en": "The little dog looks up at you — not to stop you, but so you see where you step."
       },
       "expansion_topics": [
         "他人的担心",
@@ -81,7 +81,7 @@
         "劝阻来自控制或伤害时，不把它美化成善意"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "seed_id": "seed.major_00.04",
@@ -102,10 +102,12 @@
         "不确定"
       ],
       "counterexamples": [
-        "用户只要牌义时，直接说明而不只给意象"
+        "用户只要牌义时，直接说明而不只给意象",
+        "用户流露轻生、自伤念头或处于危机时绝不使用",
+        "用户面临需要先评估风险的决定（财务、健康、安全）时不使用"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "seed_id": "seed.major_04.01",
@@ -118,18 +120,18 @@
       "proposition_ref": "prop.major_04.01",
       "framework": "naiwa_original",
       "aphorism": {
-        "zh": "围墙让人安心，也让人看不见外面。",
-        "en": "Walls bring comfort, and also hide the view."
+        "zh": "石座不会动，所以有人可以靠着它。",
+        "en": "The stone throne does not move; that is why someone can lean on it."
       },
       "expansion_topics": [
         "结构",
         "边界"
       ],
       "counterexamples": [
-        "用户需要安全感时，不贬低结构的价值"
+        "规则或权威正在伤害用户时不使用，避免美化控制"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "seed_id": "seed.major_04.02",
@@ -142,18 +144,19 @@
       "proposition_ref": "prop.major_04.02",
       "framework": "dialectical_extension",
       "aphorism": {
-        "zh": "王冠很重，它压着的那颗头也有自己的规矩。",
-        "en": "The crown is heavy; the head beneath it keeps rules of its own."
+        "zh": "王冠很重，戴它的头也得守它定下的规矩。",
+        "en": "The crown is heavy; the head that wears it must keep the rules it made."
       },
       "expansion_topics": [
         "责任",
         "权力的代价"
       ],
       "counterexamples": [
-        "不以此为施控者开脱"
+        "不以此为施控者开脱",
+        "用户处在被控制、被管束的一方时不使用"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "seed_id": "seed.major_04.03",
@@ -177,7 +180,7 @@
         "用户没有提到孤独时，不强加"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "seed_id": "seed.major_04.04",
@@ -190,8 +193,8 @@
       "proposition_ref": "prop.major_04.01",
       "framework": "naiwa_original",
       "aphorism": {
-        "zh": "权杖是用来指路的，不是用来打人的。",
-        "en": "A sceptre is for pointing the way, not for striking."
+        "zh": "权杖指着方向，不是指着人。",
+        "en": "A sceptre points the way, not at people."
       },
       "expansion_topics": [
         "领导",
@@ -201,7 +204,7 @@
         "用户正在被权威伤害时，先关注其处境而非『好权威』的理想"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "seed_id": "seed.major_12.01",
@@ -214,8 +217,8 @@
       "proposition_ref": "prop.major_12.01",
       "framework": "naiwa_original",
       "aphorism": {
-        "zh": "倒过来看，月亮也许就在脚下。",
-        "en": "Upside down, the moon may be right beneath your feet."
+        "zh": "倒过来看，天空也许就在脚下。",
+        "en": "Upside down, the sky may be right beneath your feet."
       },
       "expansion_topics": [
         "换视角",
@@ -225,7 +228,7 @@
         "用户急需具体办法时，不只给比喻"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "seed_id": "seed.major_12.02",
@@ -249,7 +252,7 @@
         "不暗示用户该为被迫的处境负责"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "seed_id": "seed.major_12.03",
@@ -274,7 +277,7 @@
         "用户需要坚持争取时，不劝其放手"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "seed_id": "seed.major_12.04",
@@ -298,7 +301,7 @@
         "不把痛苦说成必须的修行"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "seed_id": "seed.major_15.01",
@@ -323,7 +326,7 @@
         "外部强制导致无法离开，不应归咎于当事人"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "seed_id": "seed.major_15.02",
@@ -344,10 +347,11 @@
         "觉察"
       ],
       "counterexamples": [
-        "现实条件不允许离开时不使用"
+        "现实条件不允许离开时不使用",
+        "用户谈到成瘾、家暴、胁迫或经济依赖时不使用，避免暗示『是你自己不走』"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "seed_id": "seed.major_15.03",
@@ -358,20 +362,20 @@
         "inverted_torch"
       ],
       "proposition_ref": "prop.major_15.01",
-      "framework": "traditional_rws",
+      "framework": "naiwa_original",
       "aphorism": {
         "zh": "倒举的火炬照着地面，照不清前路。",
         "en": "An upside-down torch lights the ground, not the road ahead."
       },
       "expansion_topics": [
-        "短视",
-        "欲望"
+        "欲望",
+        "注意力的方向"
       ],
       "counterexamples": [
         "不把用户的选择评判为短视"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "seed_id": "seed.major_15.04",
@@ -381,10 +385,10 @@
       "symbol_refs": [
         "headband_horns"
       ],
-      "proposition_ref": "prop.major_15.01",
+      "proposition_ref": "prop.major_15.03",
       "framework": "naiwa_original",
       "aphorism": {
-        "zh": "角是戴上去的，头带也可以摘下来。",
+        "zh": "角是戴上去的，发箍也可以摘下来。",
         "en": "The horns are worn; a headband can come off."
       },
       "expansion_topics": [
@@ -392,10 +396,11 @@
         "面具"
       ],
       "counterexamples": [
-        "用户正处于危机时不玩比喻"
+        "用户正处于危机时不玩比喻",
+        "不把用户的身份认同（性别、性取向、信仰等）说成可以摘下的『角』或面具"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "seed_id": "seed.major_16.01",
@@ -419,7 +424,7 @@
         "不能强加给仍处于痛苦中的用户"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "seed_id": "seed.major_16.02",
@@ -440,10 +445,11 @@
         "失去地位"
       ],
       "counterexamples": [
-        "用户正在哀悼时，不急于『看清』"
+        "用户正在哀悼时，不急于『看清』",
+        "不用来暗示用户失去的东西本不该属于他"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "seed_id": "seed.major_16.03",
@@ -464,10 +470,11 @@
         "不可控"
       ],
       "counterexamples": [
-        "不把它说成即将发生的灾难"
+        "不把它说成即将发生的灾难",
+        "用户在担心某件具体的事会不会出事时，不使用这句"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "seed_id": "seed.major_16.04",
@@ -491,7 +498,7 @@
         "用户需要表达情绪时，不催促其抽离"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "seed_id": "seed.major_17.01",
@@ -515,7 +522,7 @@
         "不用来催促恢复"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "seed_id": "seed.major_17.02",
@@ -527,10 +534,10 @@
         "watering_roses"
       ],
       "proposition_ref": "prop.major_17.02",
-      "framework": "jungian_extension",
+      "framework": "naiwa_original",
       "aphorism": {
-        "zh": "一壶还给水，一壶留给土地；别忘了你自己也需要被浇灌。",
-        "en": "One pitcher back to the water, one for the land — don't forget you need watering too."
+        "zh": "一壶浇给土地，一壶还给池水。源头也要有人照看。",
+        "en": "One pitcher for the land, one back to the pool. The source needs tending too."
       },
       "expansion_topics": [
         "自我照顾",
@@ -540,7 +547,7 @@
         "用户缺乏现实资源时，不把问题归为不会照顾自己"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "seed_id": "seed.major_17.03",
@@ -561,10 +568,11 @@
         "耐心"
       ],
       "counterexamples": [
-        "用户只要牌义时不展开"
+        "用户只要牌义时不展开",
+        "用户需要现实层面的帮助时，不用『小星星也算数』搪塞"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "seed_id": "seed.major_17.04",
@@ -588,7 +596,7 @@
         "不把休息说成懒惰或逃避"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "seed_id": "seed.major_18.01",
@@ -612,7 +620,7 @@
         "用户需要具体信息时，不只给意象"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "seed_id": "seed.major_18.02",
@@ -636,7 +644,7 @@
         "不做心理诊断，不暗示创伤"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "seed_id": "seed.major_18.03",
@@ -644,9 +652,10 @@
         "major_18"
       ],
       "symbol_refs": [
-        "two_towers"
+        "two_towers",
+        "winding_path"
       ],
-      "proposition_ref": "prop.major_18.03",
+      "proposition_ref": "prop.major_18.01",
       "framework": "naiwa_original",
       "aphorism": {
         "zh": "两座塔之间只有一条路，害怕和好奇都得从这里走。",
@@ -660,7 +669,7 @@
         "用户没有矛盾时不制造矛盾"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "seed_id": "seed.major_18.04",
@@ -673,18 +682,19 @@
       "proposition_ref": "prop.major_18.01",
       "framework": "naiwa_original",
       "aphorism": {
-        "zh": "月亮没有骗你，它只是没把话说完。",
-        "en": "The moon isn't lying to you; it just hasn't finished speaking."
+        "zh": "月亮只照亮了一半，另一半还没被看见。",
+        "en": "The moon lights only half; the other half hasn't been seen yet."
       },
       "expansion_topics": [
         "模糊",
         "耐心"
       ],
       "counterexamples": [
-        "不用来否定用户已知的事实"
+        "不用来否定用户已知的事实",
+        "用户担心被他人欺骗时不使用，避免被听成对他人的判断"
       ],
       "source_kind": "original_interpretation",
-      "review_status": "draft"
+      "review_status": "reviewed"
     }
   ]
 }

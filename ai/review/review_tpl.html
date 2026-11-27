@@ -98,7 +98,7 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid var(--gold); o
     <div>
       <div class="eyebrow">NAIWA · SLM PILOT</div>
       <h1>奶蛙语义试点审核</h1>
-      <p class="lede">7 张试点大牌的命题、矛盾、语义种子、追问树，以及 10 个测试样例。哥特和风格化夜晚的元素已经去掉，每张牌顶部是与韦特传统意象的对照；「多出的部分」已决定全部保留，其余条目 Claude 已自查，标「已修改」的是这次改过的。每条选一个结果，要改的写一句怎么改，改动自动保存。</p>
+      <p class="lede">7 张试点大牌的命题、矛盾、语义种子、追问树，以及 10 个测试样例。哥特和风格化夜晚的元素已经去掉，每张牌顶部是与韦特传统意象的对照；「多出的部分」已决定全部保留；其余条目已由两个独立子代理审查并按意见修改，现在都标为「通过」，备注里写了审查结论。你仍可以改任何一条的标记，改动自动保存。</p>
     </div>
     <div class="progress" aria-live="polite">
       <div id="prog-text">正在读取审核记录……</div>
@@ -115,7 +115,7 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid var(--gold); o
 const D = JSON.parse(document.getElementById('data').textContent);
 const FW = { traditional_rws: '韦特传统', hermetic: '赫尔墨斯', jungian_extension: '荣格（现代扩展）', existential_extension: '存在主义（现代扩展）', dialectical_extension: '辩证（现代扩展）', daoist_extension: '道家（现代扩展）', stoic_extension: '斯多葛（现代扩展）', naiwa_original: '奶蛙原创' };
 const ACT = { ASK: '追问', REFLECT: '镜像', HINT: '提示', ANSWER: '直述牌义', CLOSE: '结束', SAFETY_REDIRECT: '安全转向', PARABLE: '寓言', REFRAME: '换角度', EXPAND: '展开' };
-const WHEN = { associates: '有联想', no_association: '没有联想', declines: '拒绝', wants_meaning: '只要牌义', wants_to_stop: '想停下', distress: '明显不适', asks_more: '想多聊' };
+const WHEN = { associates: '有联想', no_association: '没有联想', declines: '拒绝', wants_meaning: '只要牌义', wants_to_stop: '想停下', distress: '明显危机', discomfort: '有点不舒服', asks_more: '想多聊' };
 const POS = { message: '此刻的启示', past: '过去', present: '现在', future: '未来', situation: '现状', obstacle: '阻碍', support: '助力', advice: '建议', potential: '可能的发展', self: '我的需要', other: '对方（我眼中）', common: '共同基础', conflict: '冲突', communication: '沟通', action: '行动建议' };
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const cardName = (id) => D.names[id] || id;
@@ -136,7 +136,7 @@ const changedTag = (id) => CHG[id] ? '<span class="changed">已修改</span>' : 
 const extraUse = (refs, k) => { const ex = (refs || []).filter((s) => (k.extras || []).some((x) => x.id === s)); return ex.length ? `<p class="extra-use">依据奶蛙版特有象征（传统没有）：${esc(ex.join('、'))}</p>` : ''; };
 const ALL = groups.flatMap((g) => itemsOf(g.key));
 
-const R = {};          // 审核记录：id -> {status, note}
+const R = Object.assign({}, D.prefill || {});   // 审核记录：id -> {status, note}；先用子代理审查结果预填，页面数据库里的标记会覆盖它
 let db = null, canWrite = true, current = groups[0].key;
 try { const t = localStorage.getItem('naiwa-review-tab'); if (t && groups.some((g) => g.key === t)) current = t; } catch {}
 

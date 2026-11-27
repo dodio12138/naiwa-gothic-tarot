@@ -47,13 +47,19 @@ ai/
 ## 审核
 审核页（claude.ai 私有页面，标记存在页面的数据库里）：https://claude.ai/artifact/2KicWT8o96YF2TdMHMn9pK ，模板在 `ai/review/review_tpl.html`。
 
+## 测试集的检查方式
+`must_not` 写成带主语的短语（如「你们一定会复合」而不是「一定会复合」），避免「不一定会复合」这类正确的否定句被子串匹配误判；以后的评测脚本仍应识别否定词，`must_mention_any` 命中任一即可。
+
 ## 常用命令
 ```bash
 node ai/scripts/build_kb.mjs     # 重新生成知识侧表
 node ai/scripts/validate.mjs     # 校验
 ```
 
+## 审核状态
+2026-11-27：两个独立子代理按 v0.6 标准审查全部条目，修改后命题、矛盾、种子、追问树、测试样例均已标为 `reviewed`；知识侧表仍为 `draft`（原典出处 source_refs 待补）。修改记录见 `semantic_framework/changes_pilot.json`。
+
 ## 下一步（未做）
-1. 人工审核本批 draft 条目。
+1. 补知识侧表的原典出处。
 2. 用未微调的 Qwen3 + 检索 / 规则，在本地跑通「抽牌结果 → 结构化状态 → 回答」的最小闭环（v0.6 第 19.5 节第 3 步）。
 3. 闭环稳定后，再按第 7 章的流水线批量生产 SFT 语料，并在 Kaggle 上做 LoRA 训练与对照评估。

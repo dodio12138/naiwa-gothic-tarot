@@ -98,7 +98,8 @@
                     "wants_meaning",
                     "wants_to_stop",
                     "distress",
-                    "asks_more"
+                    "asks_more",
+                    "discomfort"
                   ]
                 },
                 "to": {

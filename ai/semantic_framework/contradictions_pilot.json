@@ -33,7 +33,7 @@
         "prop.major_00.01",
         "prop.major_00.02"
       ],
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "contradiction_id": "contra.major_00.02",
@@ -57,7 +57,7 @@
       "proposition_refs": [
         "prop.major_00.01"
       ],
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "contradiction_id": "contra.major_04.01",
@@ -82,7 +82,7 @@
         "prop.major_04.01",
         "prop.major_04.02"
       ],
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "contradiction_id": "contra.major_04.02",
@@ -105,9 +105,9 @@
       },
       "proposition_refs": [
         "prop.major_04.01",
-        "prop.major_04.03"
+        "prop.major_04.02"
       ],
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "contradiction_id": "contra.major_12.01",
@@ -132,7 +132,7 @@
         "prop.major_12.01",
         "prop.major_12.03"
       ],
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "contradiction_id": "contra.major_12.02",
@@ -146,7 +146,7 @@
         },
         {
           "zh": "自我",
-          "en": "Self-worth"
+          "en": "Self"
         }
       ],
       "description": {
@@ -156,7 +156,7 @@
       "proposition_refs": [
         "prop.major_12.02"
       ],
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "contradiction_id": "contra.major_15.01",
@@ -174,13 +174,13 @@
         }
       ],
       "description": {
-        "zh": "让人离不开的东西，往往也在提供某种安全。",
-        "en": "What we cannot leave often also gives us some kind of safety."
+        "zh": "让人离不开的东西，有时也在提供某种安全。",
+        "en": "What we cannot leave sometimes also gives us some kind of safety."
       },
       "proposition_refs": [
         "prop.major_15.02"
       ],
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "contradiction_id": "contra.major_15.02",
@@ -205,7 +205,7 @@
         "prop.major_15.01",
         "prop.major_15.03"
       ],
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "contradiction_id": "contra.major_16.01",
@@ -223,14 +223,14 @@
         }
       ],
       "description": {
-        "zh": "倒下的是牢笼还是家，取决于你在塔里住了多久、住得怎样。",
-        "en": "Whether what fell was a cage or a home depends on how you lived in the tower."
+        "zh": "倒下的可能是牢笼，也可能是家；同一场崩塌，可以既是失去，也是松绑。",
+        "en": "What fell may have been a cage, or a home; the same collapse can be both a loss and a release."
       },
       "proposition_refs": [
         "prop.major_16.01",
         "prop.major_16.02"
       ],
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "contradiction_id": "contra.major_16.02",
@@ -248,13 +248,13 @@
         }
       ],
       "description": {
-        "zh": "高塔提醒，有些事无论怎样计划都会发生。",
-        "en": "The Tower reminds us some things happen however we plan."
+        "zh": "高塔提醒，并不是所有事都在计划之内。",
+        "en": "The Tower is a reminder that not everything stays inside the plan."
       },
       "proposition_refs": [
         "prop.major_16.01"
       ],
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "contradiction_id": "contra.major_17.01",
@@ -278,7 +278,7 @@
       "proposition_refs": [
         "prop.major_17.01"
       ],
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "contradiction_id": "contra.major_17.02",
@@ -291,19 +291,18 @@
           "en": "Giving"
         },
         {
-          "zh": "保留",
-          "en": "Keeping"
+          "zh": "回补",
+          "en": "Replenishing"
         }
       ],
       "description": {
-        "zh": "一只壶给出去，另一只留给自己，并不自私。",
-        "en": "One pitcher poured out, one kept for yourself — that is not selfish."
+        "zh": "一壶浇向土地，一壶还给池水；给出去和补回来，可以同时发生。",
+        "en": "One pitcher to the land, one back to the pool; giving out and filling back up can happen together."
       },
       "proposition_refs": [
-        "prop.major_17.02",
-        "prop.major_17.03"
+        "prop.major_17.02"
       ],
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "contradiction_id": "contra.major_18.01",
@@ -328,7 +327,7 @@
         "prop.major_18.01",
         "prop.major_18.02"
       ],
-      "review_status": "draft"
+      "review_status": "reviewed"
     },
     {
       "contradiction_id": "contra.major_18.02",
@@ -352,7 +351,7 @@
       "proposition_refs": [
         "prop.major_18.01"
       ],
-      "review_status": "draft"
+      "review_status": "reviewed"
     }
   ]
 }
