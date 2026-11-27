@@ -1018,3 +1018,59 @@ body.lang-en .g-name, body.lang-en .g-banner b { font-family: 'Cinzel', serif; }
   .g-river { gap: 0 8px; }
   .g-banner b { font-size: 20px; }
 }
+
+/* ════════ 牌阵扩展：横放牌位、分层解读、牌阵选择面板 ════════ */
+.slot.cross .ghost-frame { transform: rotate(90deg); }
+.slot.cross .label { display: none; }   /* 横放的牌压在下面那张上，标签会撞在一起；位置名看解读面板 */
+.r-pm { display: block; margin-top: 3px; font-size: 11.5px; letter-spacing: .04em; color: var(--muted); }
+.r-layer { margin-top: 6px; padding: 16px 0 4px; border-top: 1px solid var(--line); }
+.r-layer h3 { margin: 0 0 10px; font-size: 13px; font-weight: 600; letter-spacing: .3em; color: var(--gold); }
+body.lang-en .r-layer h3 { font-family: var(--serif-en); letter-spacing: .14em; }
+.r-link { margin: 0 0 14px; }
+.r-pair { font-size: 13.5px; line-height: 1.6; color: var(--text); }
+.r-pair b { margin-right: 5px; font-weight: 400; font-size: 11px; letter-spacing: .14em; color: var(--gold); }
+.r-pair small { margin-left: 4px; font-size: 10px; color: var(--rev); }
+.r-pair i { margin: 0 8px; font-style: normal; color: var(--gold); opacity: .7; }
+.r-link p { margin: 4px 0 0; font-size: 13.5px; line-height: 1.75; color: #ddd0c4; }
+.r-link .r-sub { font-size: 12.5px; color: #b3a493; }
+.r-link .r-sub::before { content: '· '; color: var(--gold); }
+.r-overall, .r-qs { margin: 0; padding-left: 18px; }
+.r-overall li, .r-qs li { margin: 0 0 8px; font-size: 13.5px; line-height: 1.75; color: #ddd0c4; }
+.r-qs li { color: var(--iris); }
+.r-spread-note { margin: 10px 0 0; font-size: 12px; line-height: 1.7; color: var(--muted); }
+
+#picker {
+  position: fixed; inset: 0; z-index: 45; overflow-y: auto; overscroll-behavior: contain;
+  background: radial-gradient(120% 80% at 50% 0%, rgba(42,20,32,.96), rgba(13,9,12,.98) 60%);
+  backdrop-filter: blur(8px);
+}
+#picker[hidden] { display: none; }
+.picker-inner { max-width: 880px; margin: 0 auto; padding: calc(70px + var(--top-safe)) 20px calc(50px + var(--sa-b)); }
+.pk-cat { margin: 24px 0 12px; text-align: center; font-size: 13px; font-weight: 600; letter-spacing: .4em; color: var(--gold); }
+body.lang-en .pk-cat { font-family: var(--serif-en); letter-spacing: .16em; }
+.pk-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 14px; }
+.pk-item {
+  display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 16px 12px 14px; cursor: pointer;
+  border: 1px solid rgba(200,138,69,.3); border-radius: 6px; background: rgba(28,16,24,.6); color: var(--text); font: inherit;
+  transition: border-color .3s, transform .4s var(--ease-out), background .3s;
+}
+.pk-item:hover, .pk-item:focus-visible { border-color: var(--gold-hi); background: rgba(44,24,36,.75); transform: translateY(-3px); }
+.pk-item b { font-size: 17px; letter-spacing: .24em; color: var(--gold-hi); font-weight: 600; }
+body.lang-en .pk-item b { font-family: var(--serif-en); letter-spacing: .08em; font-size: 15px; }
+.pk-item small { font-size: 12px; letter-spacing: .06em; color: var(--muted); text-align: center; line-height: 1.6; }
+.pk-item .mini { position: relative; width: 120px; height: 84px; margin-bottom: 4px; }
+.pk-item .mini i {
+  position: absolute; border-radius: 2px; border: 1px solid rgba(214,170,96,.65);
+  background: linear-gradient(160deg, rgba(90,48,70,.9), rgba(40,22,34,.9)); box-shadow: 0 2px 6px rgba(0,0,0,.5);
+}
+.pk-item .mini i::after {
+  content: attr(data-n); position: absolute; inset: 0; display: grid; place-items: center;
+  font: 600 9px/1 var(--serif-en); color: rgba(236,201,138,.85);
+}
+.pk-item:hover .mini i { border-color: var(--gold-hi); }
+.more-link { color: var(--gold-hi); border-color: rgba(214,170,96,.55); }
+@media (max-width: 760px) {
+  .pk-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .pk-item { padding: 12px 8px; }
+  .pk-item b { font-size: 15px; letter-spacing: .14em; }
+}

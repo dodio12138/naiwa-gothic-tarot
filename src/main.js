@@ -11,6 +11,7 @@ import { dailyFate, recordDaily, streak, drawnToday, collect, collected } from '
 import { t, getLang, setLang, titleCase } from './i18n.js';
 import { sayStage, hush, setEnabled as setNaiwa } from './naiwa.js';
 import { openGame, closeGame, isGameOpen, relabelGame } from './game.js';
+import { layers } from './reading.js';
 
 /* ════════ 语言 ════════ */
 const isEn = () => getLang() === 'en';
@@ -454,12 +455,19 @@ function pickSlotGeom(n) {
   const y1 = f.top - (mobile ? 30 : 46);
   const availH = Math.max(80, y1 - y0);
   const gap = mobile ? 12 : 28;
-  let h = Math.min(availH, mobile ? 230 : 340);
+  // 张数多时分两排（凯尔特十字 10 张、马蹄 7 张……），排间留出标签的高度
+  const rows = n > (mobile ? 4 : 6) ? 2 : 1;
+  const per = Math.ceil(n / rows);
+  const rgap = mobile ? 22 : 34;
+  let h = Math.min((availH - rgap * (rows - 1)) / rows, mobile ? 230 : 340);
   let w = h / 1.5;
-  const maxW = (W * 0.92 - gap * (n - 1)) / n;
+  const maxW = (W * 0.92 - gap * (per - 1)) / per;
   if (w > maxW) { w = maxW; h = w * 1.5; }
   const cy = y0 + availH / 2;
-  return Array.from({ length: n }, (_, i) => ({ x: W / 2 + (i - (n - 1) / 2) * (w + gap), y: cy, w, h }));
+  return Array.from({ length: n }, (_, i) => {
+    const r = Math.floor(i / per), k = i - r * per, cnt = Math.min(per, n - r * per);
+    return { x: W / 2 + (k - (cnt - 1) / 2) * (w + gap), y: cy + (r - (rows - 1) / 2) * (h + rgap), w, h };
+  });
 }
 
 
@@ -469,9 +477,21 @@ function revealSlotGeom() {
   const grid = GRID[S.key];
   const a = slotGeomFor(grid);
   if (grid.length < 4) return a;
-  const row = grid.map((_, i) => [i - (grid.length - 1) / 2, 0]);
-  const b = slotGeomFor(row);
-  return b[0].w > a[0].w * 1.25 ? b : a;   // 横排按牌位顺序，和解读面板的顺序一致
+  // 备选：按牌位顺序排成 1～3 排；明显更大时才用（牌名标签照常跟着牌位，横放的牌改回竖放）
+  let best = null;
+  for (const rows of [1, 2, 3]) {
+    if (rows > 1 && grid.length < rows * 2) continue;
+    const per = Math.ceil(grid.length / rows);
+    const g = grid.map((_, i) => {
+      const r = Math.floor(i / per), k = i - r * per, cnt = Math.min(per, grid.length - r * per);
+      return [k - (cnt - 1) / 2, r - (rows - 1) / 2, false];
+    });
+    const b = slotGeomFor(g);
+    if (!best || b[0].w > best[0].w) best = b;
+  }
+  // 优先保留牌阵本身的形状（十字、马蹄、凯尔特十字）；只有牌被挤得太小、或排成几排能大一倍时才改排
+  const small = a[0].w < (vp().mobile ? 56 : 72);
+  return (small && best[0].w > a[0].w * 1.15) || best[0].w > a[0].w * 2 ? best : a;
 }
 function slotGeomFor(g) {
   const { W, H, mobile, sheet } = vp();
@@ -480,23 +500,25 @@ function slotGeomFor(g) {
     if (sheet) area.y1 = H * 0.44 - 4;
     else area.x1 = W - Math.min(440, W * 0.38);
   }
-  const cols = Math.max(...g.map(([x]) => Math.abs(x))) * 2 + 1;
-  const rows = Math.max(...g.map(([, y]) => Math.abs(y))) * 2 + 1;
+  // 按外接框排版：牌阵可以不对称（凯尔特十字右侧那一列），坐标也可以是小数
+  const xs = g.map(([x]) => x), ys = g.map(([, y]) => y);
+  const minX = Math.min(...xs), maxX = Math.max(...xs), minY = Math.min(...ys), maxY = Math.max(...ys);
+  const spanX = maxX - minX, spanY = maxY - minY;
   const sx = 1.14;
   const label = mobile ? 40 : 54;   // 标签两行：位置 + 牌名
-  const byW = ((area.x1 - area.x0) * 0.92) / ((cols - 1) * sx + 1);
+  const byW = ((area.x1 - area.x0) * 0.92) / (spanX * sx + 1);
   // 行距至少要容得下牌下方的标签，否则上一排的标签会被下一排的牌盖住
   let sy = 1.16, w = 0;
   for (let k = 0; k < 3; k++) {
-    const byH = ((area.y1 - area.y0 - label) * 0.94) / (((rows - 1) * sy + 1) * 1.5);
+    const byH = ((area.y1 - area.y0 - label) * 0.94) / ((spanY * sy + 1) * 1.5);
     w = Math.min(byW, byH, mobile ? 260 : 330);
-    if (rows === 1) break;
+    if (spanY === 0) break;
     sy = Math.max(1.16, 1 + (label + 10) / (w * 1.5));
   }
   const h = w * 1.5;
-  const cx = (area.x0 + area.x1) / 2;
-  const cy = (area.y0 + area.y1) / 2 - label / 2;
-  return g.map(([gx, gy]) => ({ x: cx + gx * w * sx, y: cy + gy * h * sy, w, h }));
+  const cx = (area.x0 + area.x1) / 2 - ((minX + maxX) / 2) * w * sx;
+  const cy = (area.y0 + area.y1) / 2 - label / 2 - ((minY + maxY) / 2) * h * sy;
+  return g.map(([gx, gy, cross]) => ({ x: cx + gx * w * sx, y: cy + gy * h * sy, w, h, rot: cross ? 90 : 0 }));
 }
 
 /* ════════ 流程 ════════ */
@@ -907,11 +929,12 @@ function layoutReveal(d = 0.8) {
   tl.to(stage.querySelectorAll('.slot .label'), { opacity: compact ? 0 : 1, duration: 0.3 }, 0);
   S.slots.forEach((s, i) => {
     const g = geo[i];
+    s.el.classList.toggle('cross', !!g.rot);   // 横放的牌位：目标框转 90°，标签隐藏（被压在下面的牌位标签里写明）
     tl.to(s.el, { x: g.x, y: g.y, width: g.w, height: g.h, duration: d, ease: 'expo.inOut' }, i * 0.04);
   });
   S.picked.forEach((c) => {
     const g = geo[c.slot];
-    tl.to(c.el, { x: g.x, y: g.y, scale: g.w / BASE, rotation: 0, duration: d, ease: 'expo.inOut' }, c.slot * 0.04);
+    tl.to(c.el, { x: g.x, y: g.y, scale: g.w / BASE, rotation: g.rot, duration: d, ease: 'expo.inOut' }, c.slot * 0.04);
   });
   return tl;
 }
@@ -1034,7 +1057,7 @@ function readingHTML() {
       <div class="r-item" data-slot="${c.slot}">
         <div class="r-thumb ${c.reversed ? 'rev' : ''}"><img src="${artSrc(d.id)}" alt=""></div>
         <div>
-          <div class="r-pos">${posName(c.slot)}</div>
+          <div class="r-pos">${posName(c.slot)}<span class="r-pm">${spreadText(S.key).meanings[c.slot]}</span></div>
           <div class="r-name">${cardName(d)}<small>${d.num}${isEn() ? '' : ` · ${d.en}`}</small>
             <span class="badge ${c.reversed ? 'rev' : 'up'}">${t(c.reversed ? 'reversed' : 'upright')}</span></div>
           <p class="r-text">${c.reversed ? d.rev : d.up}</p>
@@ -1043,11 +1066,28 @@ function readingHTML() {
         </div>
       </div>`;
     }).join('')}
+    ${layersHTML()}
     <div class="r-foot">
       <button class="plate sm" type="button" data-share>${t('share')}</button>
       <button class="plate sm" type="button" data-again>${t('again')}</button>
     </div>
     <p class="r-note">${t('disclaimer')}</p>`;
+}
+
+// 分层解读：牌与牌之间 → 整体 → 留给你的问题（src/reading.js，模板化，不预测）
+function layersHTML() {
+  const cards = S.picked.slice().sort((a, b) => a.slot - b.slot);
+  const label = (c) => `<b>${posName(c.slot)}</b>${cardName(c.data)}${c.reversed ? `<small>${t('revTag')}</small>` : ''}`;
+  const L = layers(cards, spreadText(S.key), isEn(), label);
+  const sec = (title, body) => `<section class="r-layer"><h3>${title}</h3>${body}</section>`;
+  return [
+    L.links.length ? sec(t('rLinks'), L.links.map((l) => `
+      <div class="r-link"><div class="r-pair">${l.a}<i>↔</i>${l.b}</div><p>${l.text}</p>
+        ${l.notes.map((x) => `<p class="r-sub">${x}</p>`).join('')}</div>`).join('')) : '',
+    L.overall.length ? sec(t('rOverall'), `<ul class="r-overall">${L.overall.map((x) => `<li>${x}</li>`).join('')}</ul>`) : '',
+    L.questions.length ? sec(t('rQuestions'), `<ul class="r-qs">${L.questions.map((x) => `<li>${x}</li>`).join('')}</ul>`) : '',
+    L.note ? `<p class="r-spread-note">${L.note}</p>` : '',
+  ].join('');
 }
 
 function openReading() {
@@ -1244,6 +1284,53 @@ function closeCodex() {
 $('#codex-btn').addEventListener('click', openCodex);
 $('#codex-link').addEventListener('click', openCodex);
 
+/* ════════ 更多牌阵：选择面板 ════════ */
+const pickerEl = $('#picker');
+// 迷你布局图：按牌阵坐标画小牌位，横放的牌转 90°
+function miniLayout(key) {
+  const g = GRID[key];
+  const xs = g.map(([x]) => x), ys = g.map(([, y]) => y);
+  const minX = Math.min(...xs), minY = Math.min(...ys);
+  const spanX = Math.max(...xs) - minX, spanY = Math.max(...ys) - minY;
+  const BW = 120, BH = 84;
+  const u = Math.min(BW / (spanX * 1.15 + 1), BH / ((spanY * 1.15 + 1) * 1.5), 30);
+  const ox = (BW - (spanX * 1.15 + 1) * u) / 2, oy = (BH - (spanY * 1.15 + 1) * u * 1.5) / 2;
+  return `<span class="mini" aria-hidden="true">${g.map(([x, y, cross], i) => `<i style="left:${ox + (x - minX) * 1.15 * u}px;top:${oy + (y - minY) * 1.15 * u * 1.5}px;width:${u}px;height:${u * 1.5}px${cross ? ';transform:rotate(90deg)' : ''}" data-n="${i + 1}"></i>`).join('')}</span>`;
+}
+function renderPicker() {
+  $('#picker-title').textContent = t('pickerTitle');
+  const keys = Object.keys(SPREADS).filter((k) => SPREADS[k].menu);
+  const group = (cat) => {
+    const ks = keys.filter((k) => SPREADS[k].category === cat);
+    return `<h3 class="pk-cat">${t(cat === 'original' ? 'catOriginal' : 'catTraditional')}</h3>
+      <div class="pk-grid">${ks.map((k) => {
+        const sp = spreadText(k);
+        return `<button class="pk-item" type="button" data-spread="${k}">${miniLayout(k)}
+          <b>${sp.name}</b><small>${t('nCards')(sp.positions.length)} · ${sp.sub.replace(/^.+? · /, '')}</small></button>`;
+      }).join('')}</div>`;
+  };
+  $('#picker-list').innerHTML = group('traditional') + group('original');
+}
+function openPicker() {
+  if (S.busy || S.phase !== 'intro') return;
+  audio.unlock(); audio.click();
+  renderPicker();
+  pickerEl.hidden = false;
+  gsap.fromTo(pickerEl, { opacity: 0 }, { opacity: 1, duration: 0.35 });
+  gsap.from('#picker .pk-item', { y: 16, opacity: 0, duration: 0.5, ease: 'power3.out', stagger: 0.04 });
+}
+function closePicker(then) {
+  if (pickerEl.hidden) return;
+  gsap.to(pickerEl, { opacity: 0, duration: 0.25, onComplete: () => { pickerEl.hidden = true; then?.(); } });
+}
+$('#more-link').addEventListener('click', openPicker);
+pickerEl.addEventListener('click', (e) => {
+  if (e.target.closest('[data-close-picker]')) { audio.click(); return closePicker(); }
+  const b = e.target.closest('[data-spread]');
+  if (b) { audio.click(); closePicker(() => start(b.dataset.spread)); }
+});
+addEventListener('keydown', (e) => { if (e.key === 'Escape') closePicker(); });
+
 /* ════════ 奶蛙牌局（src/game.js） ════════ */
 async function enterGame() {
   if (S.busy || S.phase !== 'intro') return;
@@ -1308,7 +1395,7 @@ async function openShare() {
     const question = S.question && (await textIsSafe(S.question)) ? S.question : '';
     const qr = BILI ? await toyQr(264) : null;
     const cv = await renderShare({
-      lang: getLang(), layout: S.key === 'daily' ? 'one' : S.key, cards,
+      lang: getLang(), layout: ({ 1: 'one', 3: 'three', 5: 'five' })[S.picked.length] || 'grid', cards,
       head: { eyebrow: 'NAIWA · GOTHIC · TAROT', small: t('titleSmall'), big: t('titleBig'), spread: spreadText(S.key).name, date, question },
       footer: { cta: t('shareCta'), url: qr?.url || location.origin + location.pathname, qrImage: qr?.base64 },
       assets: {
@@ -1513,6 +1600,8 @@ function applyLang(rerender = true) {
   $('#question').placeholder = t('question');
   $('.auto-toggle span').textContent = t('autoToggle');
   $('#game-link').textContent = t('gameLink');
+  $('#more-link').textContent = `${t('moreSpreads')} ›`;
+  if (!pickerEl.hidden) renderPicker();
   relabelGame();
   btnRevealAll.textContent = t('revealAll');
   btnRestart.textContent = t('restart');
@@ -1632,8 +1721,8 @@ function restoreSession(d) {
   });
   S.cards = S.picked.slice();
   const geo = revealSlotGeom();
-  S.slots.forEach((s, i) => gsap.set(s.el, { x: geo[i].x, y: geo[i].y, width: geo[i].w, height: geo[i].h, xPercent: -50, yPercent: -50 }));
-  S.picked.forEach((c) => gsap.set(c.el, { x: geo[c.slot].x, y: geo[c.slot].y, scale: geo[c.slot].w / BASE, rotation: 0, zIndex: 300 + c.slot }));
+  S.slots.forEach((s, i) => { s.el.classList.toggle('cross', !!geo[i].rot); gsap.set(s.el, { x: geo[i].x, y: geo[i].y, width: geo[i].w, height: geo[i].h, xPercent: -50, yPercent: -50 }); });
+  S.picked.forEach((c) => gsap.set(c.el, { x: geo[c.slot].x, y: geo[c.slot].y, scale: geo[c.slot].w / BASE, rotation: geo[c.slot].rot, zIndex: 300 + c.slot }));
   if (geo[0].w < 84) gsap.set(stage.querySelectorAll('.slot .label'), { opacity: 0 });
   gsap.from(stage.children, { opacity: 0, duration: 0.6, stagger: 0.05 });
   btnRestart.hidden = false;

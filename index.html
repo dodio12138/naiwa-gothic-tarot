@@ -104,6 +104,7 @@
     </button>
     <div class="spreads" id="spreads"></div>
     <div class="intro-foot">
+      <button class="codex-link more-link" id="more-link" type="button">更多牌阵 ›</button>
       <button class="codex-link" id="codex-link" type="button"></button>
       <button class="codex-link" id="game-link" type="button">奶蛙牌局 · 小猫钓鱼</button>
       <label class="auto-toggle"><input type="checkbox" data-k="autoDraw"><i class="sw"></i><span>一键抽牌 · 自动洗牌并揭示</span></label>
@@ -118,6 +119,14 @@
   <aside id="reading" aria-label="解读" hidden>
     <div class="reading-inner" id="reading-inner"></div>
   </aside>
+
+  <section id="picker" role="dialog" aria-modal="true" aria-labelledby="picker-title" hidden>
+    <div class="picker-inner">
+      <header class="codex-head"><div class="r-eyebrow">SPREADS</div><h2 id="picker-title"></h2><i class="rule"></i></header>
+      <div id="picker-list"></div>
+    </div>
+    <button class="plate sm icon codex-close" type="button" data-close-picker aria-label="关闭">✕</button>
+  </section>
 
   <section id="codex" role="dialog" aria-modal="true" hidden>
     <div class="codex-inner">

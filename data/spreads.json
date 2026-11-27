@@ -1,62 +1,978 @@
 {
-  "$comment": "牌阵配置。positions 按抽牌顺序排列；x / y 是揭示时的格位（以牌宽为单位，0,0 为中心，y 向下为正）。home=false 的牌阵不出现在首页牌阵按钮里。",
+  "$comment": "牌阵配置。positions 按抽牌顺序排列；x / y 是揭示时的格位（以牌宽为单位，0,0 为中心，y 向下为正，可以是小数、可以不对称）；cross=true 表示这张横放压在同一格的牌上（凯尔特十字第 2 张，只是摆法，和逆位无关）。home=false 的牌阵不出现在首页的三个按钮里，而在「更多牌阵」里；menu=false 的不出现在任何选择列表里。links 是解读面板里「牌与牌之间」要对照看的位置；questions 是留给用户的开放式反思问题；note 是原创牌阵的说明。",
   "spreads": [
     {
-      "id": "daily", "home": false, "category": "traditional",
-      "name": { "zh": "今日一签", "en": "Daily Draw" },
-      "sub": { "zh": "每日一张 · 今日的提醒", "en": "One card a day · today's reminder" },
+      "id": "daily",
+      "home": false,
+      "category": "traditional",
+      "name": {
+        "zh": "今日一签",
+        "en": "Daily Draw"
+      },
+      "sub": {
+        "zh": "每日一张 · 今日的提醒",
+        "en": "One card a day · today's reminder"
+      },
       "positions": [
-        { "id": "today", "x": 0, "y": 0,
-          "name": { "zh": "今日一签", "en": "Today's Card" },
-          "meaning": { "zh": "今天值得留意的主题。", "en": "A theme worth noticing today." } }
+        {
+          "id": "today",
+          "x": 0,
+          "y": 0,
+          "name": {
+            "zh": "今日一签",
+            "en": "Today's Card"
+          },
+          "meaning": {
+            "zh": "今天值得留意的主题。",
+            "en": "A theme worth noticing today."
+          }
+        }
+      ],
+      "questions": [
+        {
+          "zh": "今天，你想把哪一个词带在身上？",
+          "en": "Which one word would you like to carry with you today?"
+        }
+      ],
+      "menu": false
+    },
+    {
+      "id": "one",
+      "home": true,
+      "category": "traditional",
+      "name": {
+        "zh": "单牌指引",
+        "en": "Single Card"
+      },
+      "sub": {
+        "zh": "一张牌 · 此刻的启示",
+        "en": "One card · A message for now"
+      },
+      "positions": [
+        {
+          "id": "message",
+          "x": 0,
+          "y": 0,
+          "name": {
+            "zh": "此刻的启示",
+            "en": "The Message"
+          },
+          "meaning": {
+            "zh": "当下的指引或值得反思的主题。",
+            "en": "Guidance for now, or a theme to reflect on."
+          }
+        }
+      ],
+      "questions": [
+        {
+          "zh": "这张牌最先让你注意到的是什么？",
+          "en": "What did you notice first on this card?"
+        },
+        {
+          "zh": "它让你想起最近的哪件事？",
+          "en": "Which recent moment does it bring to mind?"
+        }
       ]
     },
     {
-      "id": "one", "home": true, "category": "traditional",
-      "name": { "zh": "单牌指引", "en": "Single Card" },
-      "sub": { "zh": "一张牌 · 此刻的启示", "en": "One card · A message for now" },
+      "id": "three",
+      "home": true,
+      "category": "traditional",
+      "name": {
+        "zh": "时间之流",
+        "en": "Flow of Time"
+      },
+      "sub": {
+        "zh": "三张牌 · 过去 / 现在 / 未来",
+        "en": "Three cards · Past / Present / Future"
+      },
       "positions": [
-        { "id": "message", "x": 0, "y": 0,
-          "name": { "zh": "此刻的启示", "en": "The Message" },
-          "meaning": { "zh": "当下的指引或值得反思的主题。", "en": "Guidance for now, or a theme to reflect on." } }
+        {
+          "id": "past",
+          "x": -1,
+          "y": 0,
+          "name": {
+            "zh": "过去",
+            "en": "Past"
+          },
+          "meaning": {
+            "zh": "背景与既有的影响。",
+            "en": "Background and lingering influences."
+          }
+        },
+        {
+          "id": "present",
+          "x": 0,
+          "y": 0,
+          "name": {
+            "zh": "现在",
+            "en": "Present"
+          },
+          "meaning": {
+            "zh": "当前的状态。",
+            "en": "Where things stand now."
+          }
+        },
+        {
+          "id": "future",
+          "x": 1,
+          "y": 0,
+          "name": {
+            "zh": "未来",
+            "en": "Future"
+          },
+          "meaning": {
+            "zh": "可能的发展方向，而不是必然的结果。",
+            "en": "A possible direction — not a fixed outcome."
+          }
+        }
+      ],
+      "links": [
+        {
+          "from": "past",
+          "to": "present",
+          "text": {
+            "zh": "看看过去留下的东西，怎样变成了现在的样子。",
+            "en": "Notice how what came before has turned into how things are now."
+          }
+        },
+        {
+          "from": "present",
+          "to": "future",
+          "text": {
+            "zh": "如果现在的状态继续下去，它可能把你带向这里——方向仍然可以调整。",
+            "en": "If things continue as they are, they may lead here — the direction can still be adjusted."
+          }
+        }
+      ],
+      "questions": [
+        {
+          "zh": "过去的哪一部分，你愿意带着走？哪一部分可以放下？",
+          "en": "Which part of the past do you want to carry on, and which can you set down?"
+        },
+        {
+          "zh": "如果未来只是可能之一，你希望往哪个方向推一点？",
+          "en": "If the future is only one possibility, which way would you nudge it?"
+        }
       ]
     },
     {
-      "id": "three", "home": true, "category": "traditional",
-      "name": { "zh": "时间之流", "en": "Flow of Time" },
-      "sub": { "zh": "三张牌 · 过去 / 现在 / 未来", "en": "Three cards · Past / Present / Future" },
+      "id": "five",
+      "home": true,
+      "category": "traditional",
+      "name": {
+        "zh": "十字指引",
+        "en": "Cross of Guidance"
+      },
+      "sub": {
+        "zh": "五张牌 · 处境与指引",
+        "en": "Five cards · Situation & guidance"
+      },
       "positions": [
-        { "id": "past", "x": -1, "y": 0,
-          "name": { "zh": "过去", "en": "Past" },
-          "meaning": { "zh": "背景与既有的影响。", "en": "Background and lingering influences." } },
-        { "id": "present", "x": 0, "y": 0,
-          "name": { "zh": "现在", "en": "Present" },
-          "meaning": { "zh": "当前的状态。", "en": "Where things stand now." } },
-        { "id": "future", "x": 1, "y": 0,
-          "name": { "zh": "未来", "en": "Future" },
-          "meaning": { "zh": "可能的发展方向，而不是必然的结果。", "en": "A possible direction — not a fixed outcome." } }
+        {
+          "id": "situation",
+          "x": 0,
+          "y": 0,
+          "name": {
+            "zh": "现状",
+            "en": "Situation"
+          },
+          "meaning": {
+            "zh": "你此刻所处的位置。",
+            "en": "Where you are right now."
+          }
+        },
+        {
+          "id": "obstacle",
+          "x": -1,
+          "y": 0,
+          "name": {
+            "zh": "阻碍",
+            "en": "Obstacle"
+          },
+          "meaning": {
+            "zh": "正在拖住你的东西。",
+            "en": "What is holding you back."
+          }
+        },
+        {
+          "id": "support",
+          "x": 1,
+          "y": 0,
+          "name": {
+            "zh": "助力",
+            "en": "Support"
+          },
+          "meaning": {
+            "zh": "可以借用的力量。",
+            "en": "Strength you can draw on."
+          }
+        },
+        {
+          "id": "advice",
+          "x": 0,
+          "y": -1,
+          "name": {
+            "zh": "建议",
+            "en": "Advice"
+          },
+          "meaning": {
+            "zh": "可以尝试的方向。",
+            "en": "A direction worth trying."
+          }
+        },
+        {
+          "id": "potential",
+          "x": 0,
+          "y": 1,
+          "name": {
+            "zh": "可能的发展",
+            "en": "Potential"
+          },
+          "meaning": {
+            "zh": "顺着现在走下去可能出现的样子，而不是定数。",
+            "en": "Where things may lead if they continue — not a certainty."
+          }
+        }
+      ],
+      "links": [
+        {
+          "from": "situation",
+          "to": "obstacle",
+          "text": {
+            "zh": "处境与阻碍：卡住你的，往往就长在现状里面。",
+            "en": "Situation and obstacle: what holds you back often grows out of where you are."
+          }
+        },
+        {
+          "from": "situation",
+          "to": "support",
+          "text": {
+            "zh": "处境与助力：现状里也藏着可以借用的力量。",
+            "en": "Situation and support: where you are also holds strength you can borrow."
+          }
+        },
+        {
+          "from": "obstacle",
+          "to": "support",
+          "text": {
+            "zh": "阻碍与助力放在一起看：它们有时是同一件事的两面。",
+            "en": "Obstacle and support side by side: sometimes they are two sides of the same thing."
+          }
+        },
+        {
+          "from": "advice",
+          "to": "potential",
+          "text": {
+            "zh": "建议与可能的发展：试着照建议走一步，发展的样子也会跟着变。",
+            "en": "Advice and potential: take one step with the advice, and the potential shifts with it."
+          }
+        }
+      ],
+      "questions": [
+        {
+          "zh": "阻碍和助力之间，有没有其实是同一件事的两面？",
+          "en": "Are the obstacle and the support perhaps two sides of one thing?"
+        },
+        {
+          "zh": "建议那张牌，今天可以落实成哪个小动作？",
+          "en": "What small action today could the advice card become?"
+        }
       ]
     },
     {
-      "id": "five", "home": true, "category": "traditional",
-      "name": { "zh": "十字指引", "en": "Cross of Guidance" },
-      "sub": { "zh": "五张牌 · 处境与指引", "en": "Five cards · Situation & guidance" },
+      "id": "horseshoe",
+      "home": false,
+      "category": "traditional",
+      "name": {
+        "zh": "马蹄牌阵",
+        "en": "Horseshoe"
+      },
+      "sub": {
+        "zh": "七张牌 · 来路与去向",
+        "en": "Seven cards · Where you came from, where it may go"
+      },
       "positions": [
-        { "id": "situation", "x": 0, "y": 0,
-          "name": { "zh": "现状", "en": "Situation" },
-          "meaning": { "zh": "你此刻所处的位置。", "en": "Where you are right now." } },
-        { "id": "obstacle", "x": -1, "y": 0,
-          "name": { "zh": "阻碍", "en": "Obstacle" },
-          "meaning": { "zh": "正在拖住你的东西。", "en": "What is holding you back." } },
-        { "id": "support", "x": 1, "y": 0,
-          "name": { "zh": "助力", "en": "Support" },
-          "meaning": { "zh": "可以借用的力量。", "en": "Strength you can draw on." } },
-        { "id": "advice", "x": 0, "y": -1,
-          "name": { "zh": "建议", "en": "Advice" },
-          "meaning": { "zh": "可以尝试的方向。", "en": "A direction worth trying." } },
-        { "id": "potential", "x": 0, "y": 1,
-          "name": { "zh": "可能的发展", "en": "Potential" },
-          "meaning": { "zh": "顺着现在走下去可能出现的样子，而不是定数。", "en": "Where things may lead if they continue — not a certainty." } }
+        {
+          "id": "past",
+          "x": -3,
+          "y": -1,
+          "name": {
+            "zh": "过去",
+            "en": "Past"
+          },
+          "meaning": {
+            "zh": "仍在影响你的来路。",
+            "en": "The road behind that still shapes you."
+          }
+        },
+        {
+          "id": "present",
+          "x": -2,
+          "y": -0.35,
+          "name": {
+            "zh": "现在",
+            "en": "Present"
+          },
+          "meaning": {
+            "zh": "此刻的状态。",
+            "en": "Where you stand now."
+          }
+        },
+        {
+          "id": "hidden",
+          "x": -1,
+          "y": 0.3,
+          "name": {
+            "zh": "潜在影响",
+            "en": "Hidden Influence"
+          },
+          "meaning": {
+            "zh": "还没被看清、却在起作用的东西。",
+            "en": "What is at work beneath notice."
+          }
+        },
+        {
+          "id": "obstacle",
+          "x": 0,
+          "y": 0.95,
+          "name": {
+            "zh": "阻碍",
+            "en": "Obstacle"
+          },
+          "meaning": {
+            "zh": "最需要正视的卡点。",
+            "en": "The knot most worth facing."
+          }
+        },
+        {
+          "id": "environment",
+          "x": 1,
+          "y": 0.3,
+          "name": {
+            "zh": "外部环境",
+            "en": "Surroundings"
+          },
+          "meaning": {
+            "zh": "身边的人与处境。",
+            "en": "The people and circumstances around you."
+          }
+        },
+        {
+          "id": "advice",
+          "x": 2,
+          "y": -0.35,
+          "name": {
+            "zh": "建议",
+            "en": "Advice"
+          },
+          "meaning": {
+            "zh": "可以尝试的方向。",
+            "en": "A direction worth trying."
+          }
+        },
+        {
+          "id": "outcome",
+          "x": 3,
+          "y": -1,
+          "name": {
+            "zh": "可能结果",
+            "en": "Possible Outcome"
+          },
+          "meaning": {
+            "zh": "顺着现在走下去可能的样子，而不是定数。",
+            "en": "Where this may lead — not a certainty."
+          }
+        }
+      ],
+      "links": [
+        {
+          "from": "past",
+          "to": "present",
+          "text": {
+            "zh": "来路与此刻：过去留下的痕迹，正以现在的样子出现。",
+            "en": "Road and present: what the past left behind now shows up as the present."
+          }
+        },
+        {
+          "from": "hidden",
+          "to": "obstacle",
+          "text": {
+            "zh": "潜在影响与阻碍：卡住你的，可能是还没被看见的东西。",
+            "en": "Hidden influence and obstacle: what blocks you may be what hasn't been seen yet."
+          }
+        },
+        {
+          "from": "environment",
+          "to": "advice",
+          "text": {
+            "zh": "外部环境与建议：建议往往要放在身边的处境里才走得通。",
+            "en": "Surroundings and advice: advice works best when it fits the world around you."
+          }
+        },
+        {
+          "from": "obstacle",
+          "to": "outcome",
+          "text": {
+            "zh": "阻碍与可能结果：怎样对待阻碍，会改变结局的样子。",
+            "en": "Obstacle and outcome: how you meet the obstacle changes the shape of what follows."
+          }
+        }
+      ],
+      "questions": [
+        {
+          "zh": "潜在影响那张牌，是不是你一直没说出口的东西？",
+          "en": "Is the hidden-influence card something you have never said out loud?"
+        },
+        {
+          "zh": "如果只改变一件事，你会从阻碍下手，还是从建议下手？",
+          "en": "If you changed only one thing, would you start from the obstacle or from the advice?"
+        }
+      ]
+    },
+    {
+      "id": "celtic",
+      "home": false,
+      "category": "traditional",
+      "name": {
+        "zh": "凯尔特十字",
+        "en": "Celtic Cross"
+      },
+      "sub": {
+        "zh": "十张牌 · 全面看一件事",
+        "en": "Ten cards · A full look at one matter"
+      },
+      "positions": [
+        {
+          "id": "situation",
+          "x": 0,
+          "y": 0,
+          "name": {
+            "zh": "现状",
+            "en": "Situation"
+          },
+          "meaning": {
+            "zh": "当下的处境。",
+            "en": "Where things stand."
+          }
+        },
+        {
+          "id": "challenge",
+          "x": 0,
+          "y": 0,
+          "name": {
+            "zh": "挑战",
+            "en": "Challenge"
+          },
+          "meaning": {
+            "zh": "横在面前的力量，可能是阻碍，也可能是推动。",
+            "en": "The force across your path — a block, or a push."
+          },
+          "cross": true
+        },
+        {
+          "id": "foundation",
+          "x": 0,
+          "y": 1.05,
+          "name": {
+            "zh": "根基",
+            "en": "Foundation"
+          },
+          "meaning": {
+            "zh": "事情的基础，或潜意识里的东西。",
+            "en": "The ground beneath it, or what lies below awareness."
+          }
+        },
+        {
+          "id": "past",
+          "x": -1.35,
+          "y": 0,
+          "name": {
+            "zh": "过去",
+            "en": "Past"
+          },
+          "meaning": {
+            "zh": "正在离开的影响。",
+            "en": "An influence now passing."
+          }
+        },
+        {
+          "id": "conscious",
+          "x": 0,
+          "y": -1.05,
+          "name": {
+            "zh": "意识",
+            "en": "Conscious Aim"
+          },
+          "meaning": {
+            "zh": "你有意识在追求或在意的目标。",
+            "en": "What you consciously aim for or care about."
+          }
+        },
+        {
+          "id": "near",
+          "x": 1.35,
+          "y": 0,
+          "name": {
+            "zh": "近期发展",
+            "en": "Near Future"
+          },
+          "meaning": {
+            "zh": "不久之后可能出现的变化。",
+            "en": "A change that may come soon."
+          }
+        },
+        {
+          "id": "self",
+          "x": 2.75,
+          "y": 1.5,
+          "name": {
+            "zh": "自我态度",
+            "en": "Self"
+          },
+          "meaning": {
+            "zh": "你怎样看待自己在其中的位置。",
+            "en": "How you see your own place in it."
+          }
+        },
+        {
+          "id": "environment",
+          "x": 2.75,
+          "y": 0.5,
+          "name": {
+            "zh": "外部环境",
+            "en": "Environment"
+          },
+          "meaning": {
+            "zh": "他人与环境的影响。",
+            "en": "The influence of others and surroundings."
+          }
+        },
+        {
+          "id": "hopes",
+          "x": 2.75,
+          "y": -0.5,
+          "name": {
+            "zh": "希望与恐惧",
+            "en": "Hopes & Fears"
+          },
+          "meaning": {
+            "zh": "你期待的，和你害怕的——有时是同一件事。",
+            "en": "What you hope for and what you fear — sometimes the same thing."
+          }
+        },
+        {
+          "id": "outcome",
+          "x": 2.75,
+          "y": -1.5,
+          "name": {
+            "zh": "可能结果",
+            "en": "Possible Outcome"
+          },
+          "meaning": {
+            "zh": "顺着现在走下去可能的样子，而不是定数。",
+            "en": "Where this may lead — not a certainty."
+          }
+        }
+      ],
+      "links": [
+        {
+          "from": "situation",
+          "to": "challenge",
+          "text": {
+            "zh": "现状与横跨其上的挑战：这是整副牌阵的中心交叉。",
+            "en": "Situation and the challenge crossing it: the heart of the whole spread."
+          }
+        },
+        {
+          "from": "foundation",
+          "to": "conscious",
+          "text": {
+            "zh": "根基与意识：心里真正驱动你的，和你以为自己想要的，一样吗？",
+            "en": "Foundation and conscious aim: is what truly drives you the same as what you think you want?"
+          }
+        },
+        {
+          "from": "past",
+          "to": "near",
+          "text": {
+            "zh": "过去与近期发展：一股影响正在离开，另一股正在靠近。",
+            "en": "Past and near future: one influence leaving, another arriving."
+          }
+        },
+        {
+          "from": "self",
+          "to": "environment",
+          "text": {
+            "zh": "自我态度与外部环境：你怎么看自己，和别人怎么影响你。",
+            "en": "Self and environment: how you see yourself, and how others shape you."
+          }
+        },
+        {
+          "from": "hopes",
+          "to": "outcome",
+          "text": {
+            "zh": "希望与恐惧、可能结果：期待与担心，都会悄悄改变结局。",
+            "en": "Hopes & fears and outcome: both expectation and worry quietly bend the ending."
+          }
+        }
+      ],
+      "questions": [
+        {
+          "zh": "意识里想要的，和根基里真正驱动你的，一样吗？",
+          "en": "Is what you consciously want the same as what drives you underneath?"
+        },
+        {
+          "zh": "希望与恐惧那张牌，哪一面更像你现在的感觉？",
+          "en": "Which side of the hopes-and-fears card feels closer to you now?"
+        },
+        {
+          "zh": "可能的结果里，有多少是你还能改变的？",
+          "en": "How much of the possible outcome is still yours to change?"
+        }
+      ]
+    },
+    {
+      "id": "mirror",
+      "home": false,
+      "category": "original",
+      "name": {
+        "zh": "命运之镜",
+        "en": "Mirror of Self"
+      },
+      "sub": {
+        "zh": "三张牌 · 面具、阴影与自性",
+        "en": "Three cards · Persona, shadow, self"
+      },
+      "note": {
+        "zh": "原创牌阵：借用荣格的概念作反思的比喻，不是心理测评。",
+        "en": "An original spread that borrows Jungian ideas as metaphors for reflection — not a psychological assessment."
+      },
+      "positions": [
+        {
+          "id": "persona",
+          "x": -1.1,
+          "y": 0.35,
+          "name": {
+            "zh": "人格面具",
+            "en": "Persona"
+          },
+          "meaning": {
+            "zh": "你向外展示的样子。",
+            "en": "The face you show the world."
+          }
+        },
+        {
+          "id": "shadow",
+          "x": 1.1,
+          "y": 0.35,
+          "name": {
+            "zh": "阴影",
+            "en": "Shadow"
+          },
+          "meaning": {
+            "zh": "被你藏起、或不愿承认的部分。",
+            "en": "What you hide, or would rather not own."
+          }
+        },
+        {
+          "id": "self",
+          "x": 0,
+          "y": -0.45,
+          "name": {
+            "zh": "自性",
+            "en": "Self"
+          },
+          "meaning": {
+            "zh": "把两者都包含进来的、更完整的你。",
+            "en": "A fuller you that holds both."
+          }
+        }
+      ],
+      "links": [
+        {
+          "from": "persona",
+          "to": "shadow",
+          "text": {
+            "zh": "面具与阴影：一个被展示，一个被藏起，它们常常互为镜像。",
+            "en": "Persona and shadow: one shown, one hidden — often each other's mirror."
+          }
+        },
+        {
+          "from": "shadow",
+          "to": "self",
+          "text": {
+            "zh": "阴影与自性：被接纳的阴影，会成为完整的一部分。",
+            "en": "Shadow and self: a shadow that is accepted becomes part of the whole."
+          }
+        }
+      ],
+      "questions": [
+        {
+          "zh": "别人眼中的你，和你心里的自己，差在哪里？",
+          "en": "Where do the you others see and the you inside differ?"
+        },
+        {
+          "zh": "阴影那张牌里，有没有你其实需要的力量？",
+          "en": "Is there a strength you actually need inside the shadow card?"
+        }
+      ]
+    },
+    {
+      "id": "crossroads",
+      "home": false,
+      "category": "original",
+      "name": {
+        "zh": "命运岔路",
+        "en": "Crossroads"
+      },
+      "sub": {
+        "zh": "五张牌 · 两条路的得与失",
+        "en": "Five cards · What each path gives and takes"
+      },
+      "note": {
+        "zh": "原创牌阵：把两个选项摊开来看，不替你做决定。",
+        "en": "An original spread that lays two options side by side — it does not choose for you."
+      },
+      "positions": [
+        {
+          "id": "situation",
+          "x": 0,
+          "y": 0.6,
+          "name": {
+            "zh": "现状",
+            "en": "Situation"
+          },
+          "meaning": {
+            "zh": "做选择时你所在的位置。",
+            "en": "Where you stand as you choose."
+          }
+        },
+        {
+          "id": "a_gain",
+          "x": -1.65,
+          "y": -0.6,
+          "name": {
+            "zh": "A · 机会",
+            "en": "Path A · Gain"
+          },
+          "meaning": {
+            "zh": "选 A 可能得到的。",
+            "en": "What path A may give."
+          }
+        },
+        {
+          "id": "a_cost",
+          "x": -0.55,
+          "y": -0.6,
+          "name": {
+            "zh": "A · 代价",
+            "en": "Path A · Cost"
+          },
+          "meaning": {
+            "zh": "选 A 可能付出的。",
+            "en": "What path A may cost."
+          }
+        },
+        {
+          "id": "b_gain",
+          "x": 0.55,
+          "y": -0.6,
+          "name": {
+            "zh": "B · 机会",
+            "en": "Path B · Gain"
+          },
+          "meaning": {
+            "zh": "选 B 可能得到的。",
+            "en": "What path B may give."
+          }
+        },
+        {
+          "id": "b_cost",
+          "x": 1.65,
+          "y": -0.6,
+          "name": {
+            "zh": "B · 代价",
+            "en": "Path B · Cost"
+          },
+          "meaning": {
+            "zh": "选 B 可能付出的。",
+            "en": "What path B may cost."
+          }
+        }
+      ],
+      "links": [
+        {
+          "from": "a_gain",
+          "to": "a_cost",
+          "text": {
+            "zh": "A 的得与失：这条路给你的，和它要你放下的。",
+            "en": "Path A, gain and cost: what it offers, and what it asks you to let go."
+          }
+        },
+        {
+          "from": "b_gain",
+          "to": "b_cost",
+          "text": {
+            "zh": "B 的得与失：这条路给你的，和它要你放下的。",
+            "en": "Path B, gain and cost: what it offers, and what it asks you to let go."
+          }
+        },
+        {
+          "from": "a_cost",
+          "to": "b_cost",
+          "text": {
+            "zh": "两种代价放在一起：你更愿意承担哪一种？",
+            "en": "The two costs side by side: which would you rather carry?"
+          }
+        }
+      ],
+      "questions": [
+        {
+          "zh": "如果两条路都没有标准答案，你更愿意承担哪一种代价？",
+          "en": "If neither path is the right answer, which cost would you rather bear?"
+        },
+        {
+          "zh": "做这个选择时，你最怕失去的是什么？",
+          "en": "In this choice, what are you most afraid to lose?"
+        }
+      ]
+    },
+    {
+      "id": "resonance",
+      "home": false,
+      "category": "original",
+      "name": {
+        "zh": "灵魂共鸣",
+        "en": "Resonance"
+      },
+      "sub": {
+        "zh": "六张牌 · 一段关系里的你和对方",
+        "en": "Six cards · You and the other in a relationship"
+      },
+      "note": {
+        "zh": "原创牌阵：「对方」只代表你眼中的对方，牌不能读出别人的真实想法。",
+        "en": "An original spread: 'the other' is only the other as you see them — cards cannot read another person's mind."
+      },
+      "positions": [
+        {
+          "id": "self",
+          "x": -1.2,
+          "y": -0.6,
+          "name": {
+            "zh": "我的需要",
+            "en": "My Needs"
+          },
+          "meaning": {
+            "zh": "你在这段关系里真正需要的。",
+            "en": "What you truly need in this relationship."
+          }
+        },
+        {
+          "id": "other",
+          "x": 1.2,
+          "y": -0.6,
+          "name": {
+            "zh": "对方（我眼中）",
+            "en": "The Other (as I see)"
+          },
+          "meaning": {
+            "zh": "你眼中的对方。",
+            "en": "The other, as you see them."
+          }
+        },
+        {
+          "id": "common",
+          "x": 0,
+          "y": 0.6,
+          "name": {
+            "zh": "共同基础",
+            "en": "Common Ground"
+          },
+          "meaning": {
+            "zh": "你们共有的东西。",
+            "en": "What you share."
+          }
+        },
+        {
+          "id": "conflict",
+          "x": 0,
+          "y": -0.6,
+          "name": {
+            "zh": "冲突",
+            "en": "Friction"
+          },
+          "meaning": {
+            "zh": "彼此摩擦的地方。",
+            "en": "Where you rub against each other."
+          }
+        },
+        {
+          "id": "communication",
+          "x": -1.2,
+          "y": 0.6,
+          "name": {
+            "zh": "沟通",
+            "en": "Communication"
+          },
+          "meaning": {
+            "zh": "话可以怎么说。",
+            "en": "How things could be said."
+          }
+        },
+        {
+          "id": "action",
+          "x": 1.2,
+          "y": 0.6,
+          "name": {
+            "zh": "行动建议",
+            "en": "Next Step"
+          },
+          "meaning": {
+            "zh": "可以先做的一件事。",
+            "en": "One thing you could do first."
+          }
+        }
+      ],
+      "links": [
+        {
+          "from": "self",
+          "to": "other",
+          "text": {
+            "zh": "我的需要与我眼中的对方：你看见的，也带着你自己的影子。",
+            "en": "My needs and the other as I see them: what you see carries your own shadow too."
+          }
+        },
+        {
+          "from": "conflict",
+          "to": "communication",
+          "text": {
+            "zh": "冲突与沟通：摩擦的地方，也是最需要说清楚的地方。",
+            "en": "Friction and communication: where you rub is where clarity is most needed."
+          }
+        },
+        {
+          "from": "common",
+          "to": "action",
+          "text": {
+            "zh": "共同基础与行动：从你们都有的东西出发，迈出第一步。",
+            "en": "Common ground and next step: start from what you both share."
+          }
+        }
+      ],
+      "questions": [
+        {
+          "zh": "你的需要，有没有被清楚地说出来过？",
+          "en": "Has your need ever been said clearly?"
+        },
+        {
+          "zh": "沟通那张牌，可以变成下一次对话里的哪一句话？",
+          "en": "Which sentence in your next conversation could the communication card become?"
+        },
+        {
+          "zh": "这些只是你眼中的对方；真正的答案，要问他本人。",
+          "en": "This is only the other as you see them; the real answer lies with them."
+        }
       ]
     }
   ]

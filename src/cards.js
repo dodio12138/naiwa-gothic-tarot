@@ -35,15 +35,25 @@ export function loreOf(id, en) {
   };
 }
 
-const spreadView = (s, k) => ({
-  name: s.name[k], sub: s.sub[k],
-  positions: s.positions.map((p) => p.name[k]),
-  meanings: s.positions.map((p) => p.meaning[k]),
-  home: s.home !== false,
-});
+const spreadView = (s, k) => {
+  const idx = Object.fromEntries(s.positions.map((p, i) => [p.id, i]));
+  return {
+    name: s.name[k], sub: s.sub[k],
+    positions: s.positions.map((p) => p.name[k]),
+    meanings: s.positions.map((p) => p.meaning[k]),
+    home: s.home !== false,
+    menu: s.menu !== false,
+    category: s.category || 'traditional',
+    note: s.note?.[k] || '',
+    // 「牌与牌之间」：按位置下标给出要对照看的两张牌
+    links: (s.links || []).map((l) => ({ a: idx[l.from], b: idx[l.to], text: l.text[k] })),
+    questions: (s.questions || []).map((q) => q[k]),
+  };
+};
 export const SPREADS = Object.fromEntries(SPREADS_DATA.spreads.map((s) => [s.id, spreadView(s, 'zh')]));
 export const SPREADS_EN = Object.fromEntries(SPREADS_DATA.spreads.map((s) => [s.id, spreadView(s, 'en')]));
-export const GRID = Object.fromEntries(SPREADS_DATA.spreads.map((s) => [s.id, s.positions.map((p) => [p.x, p.y])]));
+// 揭示格位：[x, y, 横放]；横放只是摆法（凯尔特十字第 2 张），与逆位无关
+export const GRID = Object.fromEntries(SPREADS_DATA.spreads.map((s) => [s.id, s.positions.map((p) => [p.x, p.y, !!p.cross])]));
 
 // 画面层：ChatGPT 去掉边框并向外补全的全幅插画（边框统一用 public/ui/frame.webp 叠加）
 export const artSrc = (id, size = 'sm') => `${import.meta.env.BASE_URL}cards/art-${size}/${id}.webp`;

@@ -67,10 +67,20 @@ for (const s of spreads) {
     pIds.add(p.id);
     const cell = `${p.x},${p.y}`;
     if (!Number.isFinite(p.x) || !Number.isFinite(p.y)) err(`${w}.positions[${i}]：缺少格位坐标`);
-    if (cells.has(cell)) err(`${w}：格位 ${cell} 重复`);
+    // 横放的牌（cross）压在同一格上，不算重复
+    if (!p.cross && cells.has(cell)) err(`${w}：格位 ${cell} 重复`);
     cells.add(cell);
     zhen(p.name, `${w}.positions[${i}].name`); zhen(p.meaning, `${w}.positions[${i}].meaning`);
   });
+  // 解读用的位置关系、反思问题、原创说明
+  (s.links || []).forEach((l, i) => {
+    if (!pIds.has(l.from) || !pIds.has(l.to)) err(`${w}.links[${i}]：位置 ${l.from} / ${l.to} 不存在`);
+    if (l.from === l.to) err(`${w}.links[${i}]：两端是同一个位置`);
+    zhen(l.text, `${w}.links[${i}].text`);
+  });
+  (s.questions || []).forEach((q, i) => zhen(q, `${w}.questions[${i}]`));
+  if (s.note) zhen(s.note, `${w}.note`);
+  if (!['traditional', 'original'].includes(s.category)) err(`${w}：category 只能是 traditional / original`);
 }
 for (const need of ['daily', 'one', 'three', 'five']) if (!sIds.has(need)) err(`缺少牌阵 ${need}（代码里直接用到）`);
 

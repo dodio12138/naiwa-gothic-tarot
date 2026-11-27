@@ -92,7 +92,7 @@ function drawCard(ctx, A, c, x, y, w, h) {
  * @param o.lang      'zh' | 'en'
  * @param o.head      { eyebrow, small, big, spread, date, question }
  * @param o.cards     [{ id, num, en, name, pos, reversed, badge, keys, text, whisper }]
- * @param o.layout    'one' | 'three' | 'five'
+ * @param o.layout    'one' | 'three' | 'five' | 'grid'（6 张以上：多排网格 + 两栏简要列表）
  * @param o.footer    { cta, url }
  * @param o.assets    { art(id), frame, plate, divider, starchart }
  */
@@ -183,6 +183,9 @@ export async function renderShare(o) {
     items.push({ type: 'name', c, h: 74 });
     items.push({ type: 'text', lines: l1, lh: 48, font: f1, color: COL.text, h: l1.length * 48 });
     items.push({ type: 'text', lines: l2, lh: 42, font: f2, color: COL.iris, h: l2.length * 42 + 20, gap: 20 });
+  } else if (o.layout === 'grid') {
+    // 张数多：每张只列「位置 · 牌名 · 正逆」，两栏排
+    for (let i = 0; i < o.cards.length; i += 2) items.push({ type: 'mini', cs: o.cards.slice(i, i + 2), h: 46 });
   } else {
     const five = o.layout === 'five';
     const fT = `400 ${five ? 25 : 27}px ${FONT_ZH}`, fW = `400 ${five ? 22 : 24}px ${FONT_ZH}`;
@@ -200,19 +203,34 @@ export async function renderShare(o) {
   let cw, ch, cols;
   if (o.layout === 'one') { cols = 1; ch = Math.min(820, contentBottom - headBottom - textH - 90); cw = ch / 1.5; }
   else if (o.layout === 'three') { cols = 3; cw = (W - 140 - 2 * 22) / 3; ch = cw * 1.5; }
+  else if (o.layout === 'grid') {
+    // 6 张 3 列、7～8 张 4 列、9～10 张 5 列；高度不够时整体缩小
+    const n = o.cards.length;
+    cols = n <= 6 ? 3 : n <= 8 ? 4 : 5;
+    const rows = Math.ceil(n / cols);
+    const byW = (W - 140 - (cols - 1) * 18) / cols;
+    const byH = ((contentBottom - headBottom - textH - 80) - rows * labelH - (rows - 1) * 14) / rows / 1.5;
+    cw = Math.min(byW, byH); ch = cw * 1.5;
+  }
   else { cols = 5; cw = 232; ch = cw * 1.5; }   // 五张：略微重叠的扇形，牌更大
   const fanDrop = 76;   // 扇形两端下沉 + 旋转后牌角伸出的高度
-  const cardsH = ch + labelH + (o.layout === 'five' ? fanDrop : 0);
+  const gridRows = o.layout === 'grid' ? Math.ceil(o.cards.length / cols) : 1;
+  const cardsH = gridRows * (ch + labelH) + (gridRows - 1) * 14 + (o.layout === 'five' ? fanDrop : 0);
   const leftover = Math.max(60, contentBottom - headBottom - cardsH - textH);
   const gapTop = leftover * 0.42, gapMid = leftover * 0.58;
   const cardsTop = headBottom + gapTop;
-  const gx = o.layout === 'five' ? 14 : 22;
+  const gx = o.layout === 'five' ? 14 : o.layout === 'grid' ? 18 : 22;
   const rowW = cols * cw + (cols - 1) * gx;
 
   /* ── 牌面 ── */
   const fan = o.layout === 'five';
   const fanStep = (W - 150 - cw) / 4;
   const place = (i) => {
+    if (o.layout === 'grid') {
+      const r = Math.floor(i / cols), k = i - r * cols, cnt = Math.min(cols, o.cards.length - r * cols);
+      const w = cnt * cw + (cnt - 1) * gx;
+      return { x: W / 2 - w / 2 + k * (cw + gx), y: cardsTop + r * (ch + labelH + 14), rot: 0 };
+    }
     if (!fan) return { x: W / 2 - rowW / 2 + i * (cw + gx), y: cardsTop, rot: 0 };
     const d = i - 2;
     return { x: W / 2 - cw / 2 + d * fanStep, y: cardsTop + d * d * 11, rot: d * 5 * Math.PI / 180 };
@@ -234,9 +252,10 @@ export async function renderShare(o) {
       ctx.textAlign = 'center';
       ctx.fillStyle = COL.gold; ctx.font = `400 ${en ? 18 : 21}px ${FT}`;
       spaced(ctx, c.pos, x + cw / 2, yy + ch + 28, en ? 2 : 6);
-      ctx.font = `600 ${o.layout === 'five' ? (en ? 17 : 22) : (en ? 21 : 25)}px ${FT}`;
+      const small = o.layout === 'five' || o.layout === 'grid';
+      ctx.font = `600 ${small ? (en ? 16 : 20) : (en ? 21 : 25)}px ${FT}`;
       ctx.fillStyle = c.reversed ? COL.rev : COL.goldHi;
-      const label = o.layout === 'five' || en ? c.name : (c.reversed ? `${c.name} · ${c.badge}` : c.name);
+      const label = small || en ? c.name : (c.reversed ? `${c.name} · ${c.badge}` : c.name);
       spaced(ctx, label, x + cw / 2, yy + ch + 58, en ? 0.5 : 3);
     }
   });
@@ -254,6 +273,17 @@ export async function renderShare(o) {
       ctx.textAlign = 'left';
       ctx.font = `600 26px ${FT}`; ctx.fillStyle = c.reversed ? COL.rev : COL.yellow;
       ctx.fillText(`◆ ${c.badge}`, W / 2 - 50 + hw / 2 + 24, ty2 + 40);
+      ty2 += it.h;
+    } else if (it.type === 'mini') {
+      ctx.textAlign = 'left';
+      it.cs.forEach((c, k) => {
+        const x = k ? W / 2 + 10 : x0;
+        ctx.font = `400 20px ${FT}`; ctx.fillStyle = COL.gold;
+        ctx.fillText(c.pos, x, ty2 + 32);
+        const pw = ctx.measureText(c.pos).width;
+        ctx.font = `600 24px ${FT}`; ctx.fillStyle = c.reversed ? COL.rev : COL.goldHi;
+        ctx.fillText(`${c.name}${c.reversed ? ` · ${c.badge}` : ''}`, x + pw + 12, ty2 + 33);
+      });
       ty2 += it.h;
     } else if (it.type === 'text') {
       ctx.textAlign = 'center';
