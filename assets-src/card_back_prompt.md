@@ -2,7 +2,8 @@
 
 ## 上传参考图（两张一起上传）
 
-1. `naidan_turnaround.jpg` —— 奶蛋三视图，**只用来锁定颜色、眼睛、嘴巴**
+1. `naiwa_refs/egg/naidan-reference.png` —— 奶蛋标准参考（没有手脚的蛋形），锁定蛋形、颜色、眼睛和嘴巴
+   （现在的牌背是当初用 `naiwa_juvenile_turnaround.jpg`，也就是原来的 `naidan_turnaround.jpg` 出的，那张其实是有手脚的幼体）
 2. 任意一张已完成的正面牌（推荐 `Naiwa_Tarot_21_THE_WORLD.png`，或总览图 `Naiwa_Tarot_overview.jpg`）—— **只用来锁定边框和画风**
 
 ## 主提示词（直接复制）
@@ -16,7 +17,7 @@ BACKGROUND: deep charcoal-violet (#17141F) fading to near-black at the edges, wi
 
 CENTER EMBLEM: a large circular gold medallion in the exact center, ringed by fine concentric circles, small star points, thin radiating rays and two mirrored crescent moons above and below. Inside the medallion sits the logo:
 
-LOGO: use the first uploaded image (the yellow character "Naidan") ONLY for its color, eyes and mouth. Simplify it into a pure EGG: a smooth upright egg shape, slightly wider at the bottom, matte soft-touch 3D surface, warm butter yellow (#F6D94F), lighter cream tone on the lower belly area. Near the top, two slightly protruding round eyes with pale green irises and glossy black pupils, set wide apart, looking straight at the viewer. Between them, a tiny thin gently curved dark-brown line mouth, calm and deadpan. NO arms, NO hands, NO legs, NO feet, NO tail — just the egg with eyes and mouth. The egg is the brightest element of the card and must read clearly even when the card is shown very small (60 px wide).
+LOGO: use the first uploaded image (the limbless egg character "Naidan") as the identity reference. Keep it a pure EGG: a smooth upright egg shape, slightly wider at the bottom, matte soft-touch 3D surface, warm butter yellow (#F6D94F), lighter cream tone on the lower belly area. Near the top, two slightly protruding round eyes with pale green irises and glossy black pupils, set wide apart, looking straight at the viewer. Between them, a tiny thin gently curved dark-brown line mouth, calm and deadpan. NO arms, NO hands, NO legs, NO feet, NO tail — just the egg with eyes and mouth. The egg is the brightest element of the card and must read clearly even when the card is shown very small (60 px wide).
 
 COMPOSITION: mirror-symmetric left/right, and the frame ornaments also symmetric top/bottom. Generous dark negative space between the medallion and the frame. Frame fills the canvas edge to edge like the front cards.
 
