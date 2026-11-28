@@ -16,6 +16,11 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 
 def main(keep_flagged=False):
     rows = [json.loads(l) for l in open(os.path.join(HERE, 'corpus.jsonl'), encoding='utf-8') if l.strip()]
+    # 行为测试集（benchmark）里出现过的问题原文不进训练，保证测试集完全留出
+    bench_q = {json.loads(l)['input'].get('question', '') for l in open(os.path.join(HERE, '..', 'benchmark', 'cases_pilot.jsonl'), encoding='utf-8')} - {''}
+    dropped = [r['case_id'] for r in rows if r['input'].get('question') in bench_q]
+    rows = [r for r in rows if r['input'].get('question') not in bench_q]
+    print('去掉与测试集同问题的样例', dropped)
     out = os.path.join(HERE, 'data')
     os.makedirs(out, exist_ok=True)
     files, cnt = {}, Counter()

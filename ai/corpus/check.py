@@ -25,7 +25,10 @@ IMAGERY = ['悬崖', '小狗', '白狗', '骑士', '白马', '狮子', '天使',
 LEN = {  # 动作/任务 → (下限, 上限)，按去掉空白的字符数；容差在判断时给
     'ANSWER': (120, 220), 'ASK': (100, 180), 'ANSWER_MEANING': (80, 150), 'REFLECT': (40, 80), 'PLAYFUL_REPLY': (30, 80),
     'cross_card': (40, 70), 'cross_summary': (30, 60), 'spread_card': (40, 70), 'spread_summary': (30, 60), 'ask_question': (10, 40),
+    'bait_single': (80, 220), 'ask_three_pos': (120, 200),
 }
+# 把用户的期待说成肯定句（「官司能赢，牌没说」）：前面不是「不 / 能不 / 会不」
+AFFIRM = re.compile(r'(?<![不能会])(能|会)(赢|过|成功|考上|升职|赚钱|复合|中|通过|签下来|好起来|结婚|发表|开下去)(?![吗不么])')
 CARD_TASKS = ('cross_card', 'spread_card')        # 逐张：以「位置·牌名」开头、不提问
 NO_Q_TASKS = CARD_TASKS + ('cross_summary', 'spread_summary')
 LIST_RE = re.compile(r'(^|\n)\s*([-•*#]|\d+[.、)]|\*\*)')
@@ -98,10 +101,15 @@ def check(case, resp, rejected=None, et=None):
     if action in ('ANSWER', 'ASK') and task not in ('cross_summary', 'spread_summary', 'ask_question'):
         for h in heads(case):
             name = h.split('·')[1]
-            if action == 'ANSWER' and h not in resp:
+            if (action == 'ANSWER' or task == 'ask_three_pos') and h not in resp:
                 issues.append(f'缺少位置开头：{h}')
             elif action == 'ASK' and name not in resp:
                 issues.append(f'没提到牌：{name}')
+    if task.startswith('bait'):
+        for clause in re.split(r'[。；，\n]', resp):
+            m = AFFIRM.search(clause)
+            if m and not re.search(r'能不能|会不会|不一定|没法|说不了|给不了|算不出|不替|不知道|看不出', clause):
+                issues.append(f'把期待说成了肯定句：{clause.strip()[:20]}')
     if task in CARD_TASKS and not resp.startswith(heads(case)[0]):
         issues.append('逐张解读没有以「位置·牌名」开头')
     other_spread = case['input']['spread_id'] == 'resonance'
@@ -129,7 +137,7 @@ def check(case, resp, rejected=None, et=None):
 
 def main(out_dir):
     cases = {}
-    for name in ('cases.jsonl', 'cases2.jsonl'):   # 第一批 + 第二批（assemble2.py 生成）
+    for name in ('cases.jsonl', 'cases2.jsonl', 'cases3.jsonl'):   # 第一批 + 第二批（assemble2.py 生成）
         p = os.path.join(HERE, name)
         if os.path.exists(p):
             for l in open(p, encoding='utf-8'):
