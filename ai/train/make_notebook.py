@@ -51,7 +51,7 @@ code('''
 code('''
 import json, glob, re, urllib.request, torch, random
 print(torch.__version__, torch.cuda.get_device_name(0))
-BF16 = torch.cuda.is_bf16_supported()
+BF16 = torch.cuda.get_device_capability(0)[0] >= 8   # T4（7.5）没有原生 bf16；新版 torch 的 is_bf16_supported() 在 T4 上也会返回 True
 print("bf16 支持:", BF16)
 
 def load_split(name):
@@ -121,16 +121,21 @@ model.print_trainable_parameters()
 md('## 监督训练（SFT）')
 
 code('''
-from transformers import Trainer, TrainingArguments, DataCollatorForSeq2Seq
+from transformers import Trainer, TrainingArguments, DataCollatorForSeq2Seq, TrainerCallback
+import time
+class PrintLog(TrainerCallback):   # 后台运行（Save Version）时进度条不进日志，改成直接打印
+    def on_train_begin(self, args, state, control, **kw): self.t0 = time.time()
+    def on_log(self, args, state, control, logs=None, **kw):
+        print(f"[{time.time() - self.t0:6.0f}s] step {state.global_step}/{state.max_steps}", {k: round(v, 4) for k, v in (logs or {}).items() if isinstance(v, float)}, flush=True)
 args = TrainingArguments(
     output_dir=f"{OUT}/sft", num_train_epochs=EPOCHS, learning_rate=LR, lr_scheduler_type="cosine", warmup_ratio=0.05,
     per_device_train_batch_size=2, per_device_eval_batch_size=2, gradient_accumulation_steps=8,
     bf16=BF16, fp16=not BF16, logging_steps=5, eval_strategy="epoch", save_strategy="no",
-    report_to="none", group_by_length=True, remove_unused_columns=True, seed=42)
+    report_to="none", group_by_length=True, remove_unused_columns=True, seed=42, disable_tqdm=True)
 cols = ["input_ids", "attention_mask", "labels"]
 trainer = Trainer(model=model, args=args,
                   train_dataset=ds["train"].select_columns(cols), eval_dataset=ds["val"].select_columns(cols),
-                  data_collator=DataCollatorForSeq2Seq(tok, padding=True, label_pad_token_id=-100))
+                  data_collator=DataCollatorForSeq2Seq(tok, padding=True, label_pad_token_id=-100), callbacks=[PrintLog()])
 trainer.train()
 log = trainer.state.log_history
 json.dump(log, open(f"{OUT}/sft_log.json", "w"), ensure_ascii=False, indent=1)
@@ -166,7 +171,8 @@ def quick_issues(task, action, text):
 random.seed(0)
 rows = [to_pc(r) for r in sft["test"]]
 report = []
-for r in rows:
+for i, r in enumerate(rows):
+    print("对照生成", i + 1, "/", len(rows), flush=True)
     with model.disable_adapter():
         base = gen(r["prompt"])
     tuned = gen(r["prompt"])
@@ -199,10 +205,10 @@ if RUN_DPO:
     cfg = DPOConfig(output_dir=f"{OUT}/dpo", beta=DPO_BETA, learning_rate=DPO_LR, num_train_epochs=DPO_EPOCHS,
                     per_device_train_batch_size=1, per_device_eval_batch_size=1, gradient_accumulation_steps=8,
                     max_length=MAX_LEN, max_prompt_length=MAX_LEN - 300, bf16=BF16, fp16=not BF16,
-                    gradient_checkpointing=True, logging_steps=5, eval_strategy="epoch", save_strategy="no", report_to="none")
+                    gradient_checkpointing=True, logging_steps=5, eval_strategy="epoch", save_strategy="no", report_to="none", disable_tqdm=True)
     dpo_trainer = DPOTrainer(model=model, args=cfg, train_dataset=dtr, eval_dataset=dva, processing_class=tok,
                              peft_config=LoraConfig(r=8, lora_alpha=16, lora_dropout=0.05, task_type="CAUSAL_LM",
-                                                    target_modules=["q_proj", "k_proj", "v_proj", "o_proj"]))
+                                                    target_modules=["q_proj", "k_proj", "v_proj", "o_proj"]), callbacks=[PrintLog()])
     dpo_trainer.train()
     json.dump(dpo_trainer.state.log_history, open(f"{OUT}/dpo_log.json", "w"), ensure_ascii=False, indent=1)
     model = dpo_trainer.model
