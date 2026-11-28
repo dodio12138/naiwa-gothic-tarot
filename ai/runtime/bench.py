@@ -3,7 +3,7 @@
 用法：python3 ai/runtime/bench.py [模型名，默认 qwen3:1.7b] [只跑的 case_id ...]
 检查项：
 - expected_action：程序选的动作是否符合预期
-- must_not：输出里不能出现（前面紧跟否定词的不算，例如「不一定会」）
+- must_not：输出里不能出现（前面紧跟否定词的不算，例如「不一定会」；正反问的前半截也不算，例如「明年会不会」）
 - must_mention_any：至少提到其中一个
 """
 import json
@@ -23,7 +23,8 @@ def hits(text, words):
     out = []
     for w in words or []:
         for m in re.finditer(re.escape(w), text):
-            if not NEG.search(text[max(0, m.start() - 4):m.start()]):
+            # 前面紧跟否定词，或者是「会不会」「能不能」这种正反问的前半截，都不算
+            if not NEG.search(text[max(0, m.start() - 4):m.start()]) and not text[m.end():m.end() + 1] == '不':
                 out.append(w)
                 break
     return out

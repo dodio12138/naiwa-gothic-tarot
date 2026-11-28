@@ -1,0 +1,782 @@
+{
+ "heldout.001#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "single"
+ },
+ "heldout.001#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "single"
+ },
+ "heldout.002#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "single"
+ },
+ "heldout.002#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "single"
+ },
+ "heldout.003#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "single"
+ },
+ "heldout.003#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "single"
+ },
+ "heldout.004#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "single"
+ },
+ "heldout.004#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "single"
+ },
+ "heldout.005#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "single"
+ },
+ "heldout.005#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "single"
+ },
+ "heldout.006#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "single"
+ },
+ "heldout.006#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "single"
+ },
+ "heldout.007#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "single"
+ },
+ "heldout.007#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "single"
+ },
+ "heldout.008#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "single"
+ },
+ "heldout.008#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "single"
+ },
+ "heldout.009#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "single"
+ },
+ "heldout.009#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "single"
+ },
+ "heldout.010#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "single"
+ },
+ "heldout.010#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "single"
+ },
+ "heldout.011#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "three"
+ },
+ "heldout.011#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "three"
+ },
+ "heldout.012#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "three"
+ },
+ "heldout.012#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "three"
+ },
+ "heldout.013#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "three"
+ },
+ "heldout.013#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "three"
+ },
+ "heldout.014#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "three"
+ },
+ "heldout.014#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "three"
+ },
+ "heldout.015#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "three"
+ },
+ "heldout.015#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "three"
+ },
+ "heldout.016#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "three"
+ },
+ "heldout.016#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "three"
+ },
+ "heldout.017#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "three"
+ },
+ "heldout.017#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "three"
+ },
+ "heldout.018#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "three"
+ },
+ "heldout.018#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "three"
+ },
+ "heldout.019#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "large"
+ },
+ "heldout.019#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "large"
+ },
+ "heldout.020#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "large"
+ },
+ "heldout.020#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "large"
+ },
+ "heldout.021#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "large"
+ },
+ "heldout.021#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "large"
+ },
+ "heldout.022#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "large"
+ },
+ "heldout.022#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "large"
+ },
+ "heldout.023#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "large"
+ },
+ "heldout.023#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "large"
+ },
+ "heldout.024#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "large"
+ },
+ "heldout.024#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "large"
+ },
+ "heldout.025#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "large"
+ },
+ "heldout.025#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "large"
+ },
+ "heldout.026#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "large"
+ },
+ "heldout.026#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "large"
+ },
+ "heldout.027#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "mirror"
+ },
+ "heldout.027#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "mirror"
+ },
+ "heldout.028#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "mirror"
+ },
+ "heldout.028#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "mirror"
+ },
+ "heldout.029#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "ask_single"
+ },
+ "heldout.029#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "ask_single"
+ },
+ "heldout.030#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "ask_single"
+ },
+ "heldout.030#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "ask_single"
+ },
+ "heldout.031#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "ask_single"
+ },
+ "heldout.031#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "ask_single"
+ },
+ "heldout.032#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "ask_single"
+ },
+ "heldout.032#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "ask_single"
+ },
+ "heldout.033#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "ask_single"
+ },
+ "heldout.033#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "ask_single"
+ },
+ "heldout.034#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "ask_single"
+ },
+ "heldout.034#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "ask_single"
+ },
+ "heldout.035#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "ask_three"
+ },
+ "heldout.035#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "ask_three"
+ },
+ "heldout.036#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "ask_three"
+ },
+ "heldout.036#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "ask_three"
+ },
+ "heldout.037#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "ask_three"
+ },
+ "heldout.037#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "ask_three"
+ },
+ "heldout.038#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "ask_three"
+ },
+ "heldout.038#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "ask_three"
+ },
+ "heldout.039#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "ask_three"
+ },
+ "heldout.039#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "ask_three"
+ },
+ "heldout.040#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "ask_three"
+ },
+ "heldout.040#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "ask_three"
+ },
+ "heldout.041#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "meaning"
+ },
+ "heldout.041#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "meaning"
+ },
+ "heldout.042#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "meaning"
+ },
+ "heldout.042#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "meaning"
+ },
+ "heldout.043#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "meaning"
+ },
+ "heldout.043#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "meaning"
+ },
+ "heldout.044#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "meaning"
+ },
+ "heldout.044#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "meaning"
+ },
+ "heldout.045#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "meaning"
+ },
+ "heldout.045#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "meaning"
+ },
+ "heldout.046#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "reflect"
+ },
+ "heldout.046#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "reflect"
+ },
+ "heldout.047#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "reflect"
+ },
+ "heldout.047#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "reflect"
+ },
+ "heldout.048#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "reflect"
+ },
+ "heldout.048#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "reflect"
+ },
+ "heldout.049#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "reflect"
+ },
+ "heldout.049#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "reflect"
+ },
+ "heldout.050#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "reflect"
+ },
+ "heldout.050#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "reflect"
+ },
+ "heldout.051#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "reflect"
+ },
+ "heldout.051#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "reflect"
+ },
+ "heldout.052#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "playful"
+ },
+ "heldout.052#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "playful"
+ },
+ "heldout.053#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "playful"
+ },
+ "heldout.053#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "playful"
+ },
+ "heldout.054#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "playful"
+ },
+ "heldout.054#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "playful"
+ },
+ "heldout.055#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "playful"
+ },
+ "heldout.055#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "playful"
+ },
+ "heldout.056#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "playful"
+ },
+ "heldout.056#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "playful"
+ },
+ "heldout.057#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "other"
+ },
+ "heldout.057#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "other"
+ },
+ "heldout.058#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "other"
+ },
+ "heldout.058#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "other"
+ },
+ "heldout.059#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "other"
+ },
+ "heldout.059#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "other"
+ },
+ "heldout.060#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "other"
+ },
+ "heldout.060#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "other"
+ },
+ "heldout.061#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "other"
+ },
+ "heldout.061#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "other"
+ },
+ "heldout.062#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "other"
+ },
+ "heldout.062#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "other"
+ },
+ "heldout.063#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "bait"
+ },
+ "heldout.063#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "bait"
+ },
+ "heldout.064#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "bait"
+ },
+ "heldout.064#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "bait"
+ },
+ "heldout.065#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "bait"
+ },
+ "heldout.065#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "bait"
+ },
+ "heldout.066#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "bait"
+ },
+ "heldout.066#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "bait"
+ },
+ "heldout.067#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "bait"
+ },
+ "heldout.067#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "bait"
+ },
+ "heldout.068#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "bait"
+ },
+ "heldout.068#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "bait"
+ },
+ "heldout.069#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "bait"
+ },
+ "heldout.069#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "bait"
+ },
+ "heldout.070#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "bait"
+ },
+ "heldout.070#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "bait"
+ },
+ "heldout.071#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "bait"
+ },
+ "heldout.071#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "bait"
+ },
+ "heldout.072#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "bait"
+ },
+ "heldout.072#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "bait"
+ },
+ "heldout.073#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "self"
+ },
+ "heldout.073#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "self"
+ },
+ "heldout.074#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "self"
+ },
+ "heldout.074#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "self"
+ },
+ "heldout.075#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "self"
+ },
+ "heldout.075#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "self"
+ },
+ "heldout.076#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "self"
+ },
+ "heldout.076#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "self"
+ },
+ "heldout.077#0": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "self"
+ },
+ "heldout.077#1": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "self"
+ },
+ "heldout.078#0": {
+  "A": "naiwa-sft:1.7b",
+  "B": "naiwa-sft2:1.7b",
+  "category": "self"
+ },
+ "heldout.078#1": {
+  "A": "naiwa-sft2:1.7b",
+  "B": "naiwa-sft:1.7b",
+  "category": "self"
+ }
+}
