@@ -123,6 +123,10 @@ def check(case, resp, rejected=None, et=None):
             m = AFFIRM.search(clause)
             if m and not re.search(r'能不能|会不会|不一定|没法|说不了|给不了|算不出|不替|不知道|看不出', clause):
                 issues.append(f'把期待说成了肯定句：{clause.strip()[:20]}')
+    if action == 'PARABLE' and '奶蛙' in resp:
+        issues.append('寓言里奶蛙出场')
+    if multi and action in ('EXPAND', 'REVISE', 'ACK') and re.search(r'通常读作|象征着?', resp) and '意象的传统读法' not in prompt:
+        issues.append('多轮里补了资料外的意象读法')
     if task in CARD_TASKS and not resp.startswith(heads(case)[0]):
         issues.append('逐张解读没有以「位置·牌名」开头')
     other_spread = case['input']['spread_id'] == 'resonance'
