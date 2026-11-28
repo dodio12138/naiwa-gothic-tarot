@@ -1,0 +1,812 @@
+{
+ "$comment": "大牌传统意象的通常读法（v0.6 知识库「约 100 个符号」）。basis：waite_symbolism = 韦特 1911《The Pictorial Key to the Tarot》象征解说（evidence 为原文短语，公有领域）；golden_dawn = 黄金黎明对应体系；modern_convention = 今天 RWS 体系的通行读法；none = 画面陈设，无固定读法。三个子代理分写、一个子代理审查（改 7 条），2026-11-28。",
+ "review_status": "reviewed",
+ "cards": {
+  "major_00": {
+   "悬崖边": {
+    "reading": "通常读作踏入未知前的那一刻，象征信任与无畏的冒险",
+    "basis": "waite_symbolism",
+    "evidence": "The edge which opens on the depth has no terror",
+    "note": "韦特说崖边「没有恐惧」，仿佛天使在等着托住他"
+   },
+   "扛在肩上的小包袱": {
+    "reading": "通常读作随身带着的经验与所需，也有人读作尚未打开的潜能",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只写作「刺绣奇特的钱袋」，没有解释；现代读法不统一，这里取最常见的一种"
+   },
+   "脚边的小狗": {
+    "reading": "通常读作忠诚的伙伴与本能，也常被看作在提醒前方的危险",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只写小狗还在跳跃，没有解释含义；现代有「陪伴」与「警示」两种读法。站内小狗在崖边仰头看，不影响读法"
+   }
+  },
+  "major_01": {
+   "举向天空的权杖": {
+    "reading": "与指地的手合读，象征从上方汲取力量，即「如其在上，如其在下」",
+    "basis": "waite_symbolism",
+    "evidence": "drawn from things above and derived to things below",
+    "note": ""
+   },
+   "指向大地的手": {
+    "reading": "象征把上方的恩典与力量引到人间，常读作把意念化为现实",
+    "basis": "waite_symbolism",
+    "evidence": "it shews the descent of grace, virtue and light",
+    "note": "站内是张掌向外下方，「指地」不明显，读法需和举杖的手放在一起看"
+   },
+   "头顶的无限符号": {
+    "reading": "象征生命与永恒，现代也常读作无穷的潜能",
+    "basis": "waite_symbolism",
+    "evidence": "the sign of life, like an endless cord",
+    "note": ""
+   },
+   "桌上的权杖、圣杯、宝剑、星币": {
+    "reading": "象征四元素即自然生命的要素，任他按意志调用",
+    "basis": "waite_symbolism",
+    "evidence": "signifying the elements of natural life",
+    "note": ""
+   },
+   "摆放道具的桌子": {
+    "reading": "画面陈设，传统上没有固定的象征读法",
+    "basis": "none",
+    "evidence": "",
+    "note": "韦特只把它当作摆放四件道具的位置；部分现代读本视作物质世界或工作台，但不统一。站内石祭坛的雕饰属风格"
+   },
+   "红玫瑰": {
+    "reading": "与白百合合读，象征被精心培育的志向；现代常单读作热情",
+    "basis": "waite_symbolism",
+    "evidence": "changed into garden flowers, to shew the culture of aspiration",
+    "note": "韦特把玫瑰与百合合在一起解释；「红玫瑰=热情/欲望」是现代分开读的常见说法。站内黑红色属风格化"
+   },
+   "白百合": {
+    "reading": "与红玫瑰合读，象征被培育的志向；现代常单读作纯洁",
+    "basis": "waite_symbolism",
+    "evidence": "changed into garden flowers, to shew the culture of aspiration",
+    "note": "「白百合=纯洁」是现代分开读的常见说法"
+   }
+  },
+  "major_02": {
+   "黑白双柱（刻 B 与 J）": {
+    "reading": "通常读作对立的两极（明与暗、阴与阳），她坐在中间象征平衡与门槛",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只说是神秘圣殿的 J、B 双柱，未解释含义。站内没有字母，改刻新月与太阳，仍可按对立两极读"
+   },
+   "半掩在袍中的 TORA 卷轴": {
+    "reading": "象征更高的隐秘律法；半掩表示有些已说出，有些只可意会",
+    "basis": "waite_symbolism",
+    "evidence": "partly covered by her mantle, to shew that some things are implied and some spoken",
+    "note": "站内卷轴没有字样、也不是半掩，「半掩」这层读法在画面里不成立"
+   },
+   "身后的石榴帷幕": {
+    "reading": "通常读作遮住奥秘的帘幕，石榴多联想到丰饶与冥后珀耳塞福涅",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只说是圣殿帷幕、绣着棕榈与石榴，未作解释"
+   },
+   "脚边的新月": {
+    "reading": "呼应这张牌对应的月亮，通常读作直觉、周期与借来的光",
+    "basis": "golden_dawn",
+    "evidence": "",
+    "note": "韦特称她为「借来之光的女王」，与月亮对应相合"
+   },
+   "三相月冠": {
+    "reading": "通常读作月亮的盈、满、亏三相，也常联想到伊西斯的角冠",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只描述为中间有圆球的角冠。站内是新月头冠，「三相」在画面里不成立，只保留月亮意象"
+   },
+   "帷幕后隐约的水": {
+    "reading": "通常读作潜意识与藏在表面之下的深层情感",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特的象征解说没有提到水。站内是座前一目了然的水池，「隐藏」这一层减弱"
+   },
+   "如流水般的蓝袍": {
+    "reading": "通常读作化为溪流的衣袍，象征潜意识与情感的流动",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只描写衣袍飘逸轻薄、斗篷泛着微光（the mantle suggests light），属画面描述；「袍如流水」是现代通行读法。站内是深紫斗篷，颜色不同"
+   }
+  },
+  "major_03": {
+   "十二星冠": {
+    "reading": "通常读作黄道十二宫或一年十二个月，象征与自然周期相连",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只描述星冠；他提到「披着太阳的女人」，与《启示录》中戴十二星冠的形象相关。站内星数待人工数"
+   },
+   "刻金星符号的心形盾牌": {
+    "reading": "金星符号呼应这张牌对应的金星，通常读作爱、美与创造力",
+    "basis": "golden_dawn",
+    "evidence": "",
+    "note": "韦特只写盾上有金星符号，未解释"
+   },
+   "脚下成片的麦田": {
+    "reading": "通常读作丰收与大地的丰饶，是孕育结出果实的样子",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只描写正在成熟的麦田，他对整张牌的总体解释是「普遍的丰饶」。站内是一丛麦穗，读法不变"
+   },
+   "长袍上的石榴纹": {
+    "reading": "通常读作多子与丰饶，呼应她作为大地之母的孕育力",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特的象征解说没有提到石榴。站内是散落的石榴而非袍纹，读法相同"
+   },
+   "顶端是宝球的权杖": {
+    "reading": "通常读作她对尘世与有形生命的统领，宝球代表这个世界",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只写权杖顶端是「这个世界的宝球」，属画面描述，未解释；站内权杖顶端改为白百合，「宝球=尘世」在画面里不成立，百合通常读作纯洁"
+   },
+   "铺软垫的宝座": {
+    "reading": "通常读作舒适与感官享受，呼应她对身体与物质世界的亲近",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特的象征解说没有提到软垫"
+   }
+  },
+  "major_04": {
+   "宝座上的公羊头": {
+    "reading": "公羊对应白羊座，通常读作开创的冲劲、领导力与火星之力",
+    "basis": "golden_dawn",
+    "evidence": "",
+    "note": "韦特只描述扶手前的公羊头，未解释；白羊座由火星守护"
+   },
+   "方正的石宝座": {
+    "reading": "通常读作稳固、持久、不易动摇的结构与根基",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特提到立方石座的画法「会混淆一些问题」，没有给出正面解释"
+   },
+   "安卡（生命之符）权杖": {
+    "reading": "安卡是古埃及的生命之符，通常读作他对生命与世界的掌控",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只说权杖是一种安卡十字，未解释。站内是十字花饰权杖，「安卡」在画面里不成立，只保留权杖=统治权"
+   },
+   "宝球": {
+    "reading": "通常读作他所统治的疆域，即掌管的世界",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只描述左手持宝球，未解释"
+   },
+   "王冠": {
+    "reading": "通常读作世俗的王权与权威",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特说他是「戴冠的君主」，把整张牌读作世俗王权，但没有单独解释王冠"
+   },
+   "身后的荒山": {
+    "reading": "通常读作坚硬不屈的意志与雄心，也常被看作缺少柔软与情感",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特的象征解说没有提到荒山"
+   },
+   "橙色天空": {
+    "reading": "画面陈设，传统上没有固定的象征读法",
+    "basis": "none",
+    "evidence": "",
+    "note": "部分现代读本读作热情与能量（呼应白羊座火象），但不统一。站内是更浓的血红色"
+   }
+  },
+  "major_05": {
+   "举起赐福的手": {
+    "reading": "今天通常读作赐福与传授；韦特解作区分教义显、隐两部分的手势",
+    "basis": "waite_symbolism",
+    "evidence": "distinguishing between the manifest and concealed part of doctrine",
+    "note": ""
+   },
+   "交叉的两把钥匙": {
+    "reading": "象征「钥匙的权柄」，通常读作开启天与地之门、掌管教义的权力",
+    "basis": "waite_symbolism",
+    "evidence": "the Hierophant is the power of the keys",
+    "note": "韦特是借 Grand Orient 的说法认可这一读法；「天与地之门」是现代常见的补充。站内钥匙在座前台阶上"
+   },
+   "跪在座前的两位侍从": {
+    "reading": "通常读作受教的弟子或信众，象征知识与传统向下传承",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只描述两位穿白袍的执事跪在座前，未单独解释。站内侍从披兜帽遮脸"
+   },
+   "三重冠": {
+    "reading": "通常读作对三重世界（如身、心、灵）的统摄",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只写他戴三重冠，未解释；现代读法不统一，这里取最常见的一种"
+   },
+   "三重十字杖": {
+    "reading": "通常读作宗教权威，三道横杠常对应三重世界",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只描述权杖顶端是三重十字，未解释；现代读法不统一，这里取最常见的一种"
+   },
+   "红色祭袍": {
+    "reading": "画面陈设，传统上没有固定的象征读法",
+    "basis": "none",
+    "evidence": "",
+    "note": "韦特没有解释；现代对红色的读法不统一"
+   },
+   "两侧的灰色石柱": {
+    "reading": "韦特强调不是女祭司的圣殿柱，通常读作外在、制度化宗教的门庭",
+    "basis": "waite_symbolism",
+    "evidence": "they are not those of the Temple which is guarded by the High Priestess",
+    "note": "韦特以此对照女祭司：他是外在宗教，女祭司是隐秘的一面。站内柱上壁龛与圣像属风格"
+   }
+  },
+  "major_06": {
+   "伊甸园中的一男一女": {
+    "reading": "通常读作初入乐园的亚当与夏娃，象征纯真、坦诚相待的人间之爱",
+    "basis": "waite_symbolism",
+    "evidence": "The figures suggest youth, virginity, innocence and love",
+    "note": "站内是两只一模一样的奶蛙并肩牵手，男女之分与「亚当夏娃」在画面里不成立，只保留结合与伴侣"
+   },
+   "上方的天使拉斐尔": {
+    "reading": "通常认作天使拉斐尔，象征来自上方的祝福、疗愈与眷顾",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只描述为张开双臂、向下倾注影响的大翼人物，既未点名也未解释；「拉斐尔」与「疗愈」是现代通行说法"
+   },
+   "缠在知识之树上的蛇": {
+    "reading": "通常读作诱惑与欲望，呼应伊甸园的堕落故事",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只说蛇缠在知识之树上，把「堕落」的意涵放在女子身上，并说她不是有意的诱惑者"
+   },
+   "结果实的知识之树": {
+    "reading": "通常读作对感官生活与善恶认知的追求，联系到伊甸园的堕落",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特说女子象征「趋向感官生活的吸引，内含堕落之意」，树本身未单独解释。站内结的是石榴而非苹果"
+   },
+   "燃着火焰的生命之树": {
+    "reading": "通常读作激情与灵性的生命力，十二簇火焰常对应黄道十二宫",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特原文写的是「结十二个果实」，画面则是火焰。站内是开满玫瑰的树，火焰与十二之数在画面里不成立"
+   }
+  },
+  "major_07": {
+   "一黑一白两只狮身兽": {
+    "reading": "韦特读作他已答出斯芬克斯之谜；现代通常读作需驾驭的对立力量",
+    "basis": "waite_symbolism",
+    "evidence": "He has thus replied to the sphinx",
+    "note": "「一黑一白=对立力量」是现代通行读法，韦特没有解释颜色"
+   },
+   "头顶的星篷": {
+    "reading": "通常读作天界的庇护，表示他的胜利受上天眷顾",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特的象征解说没有提到星篷"
+   },
+   "带星的王冠": {
+    "reading": "通常读作胜利与开明的心智",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特没有解释王冠；现代读法不统一，这里取最常见的一种"
+   },
+   "手中的权杖": {
+    "reading": "通常读作意志与权威：他没有缰绳，全凭意志驾驭",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特原文写的是「出鞘之剑」，与史密斯画的短杖不一致"
+   },
+   "车前的带翼圆盘": {
+    "reading": "源自埃及的带翼日轮，通常读作神圣的启发与精神的提升",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特没有提到。站内是月桂环绕的八芒星徽，形态完全不同，这一读法在画面里不成立"
+   }
+  },
+  "major_08": {
+   "狮子": {
+    "reading": "通常读作人的激情与本能，由更高的天性温和地驯服。",
+    "basis": "waite_symbolism",
+    "evidence": "There is one aspect in which the lion signifies the passions",
+    "note": "站内是闭眼低头的黑狮，颜色不作意义；读法按传统的「本能被驯服」。"
+   },
+   "双手合上狮子的嘴": {
+    "reading": "象征以温和的坚毅而非蛮力降服本能。",
+    "basis": "waite_symbolism",
+    "evidence": "her beneficent fortitude has already subdued the lion",
+    "note": "站内是手掌轻按狮子额头、没有合嘴动作，但「温和制服」的读法仍适用。"
+   },
+   "头顶的无限符号": {
+    "reading": "韦特称之为生命的象征；现代多读作无限、永恒的力量。",
+    "basis": "waite_symbolism",
+    "evidence": "over whose head there broods the same symbol of life",
+    "note": "韦特原文此处写「见于教皇牌」，实际与魔术师牌头顶的符号相同（魔术师牌原文称其为 sign of life），引文照录。"
+   }
+  },
+  "major_09": {
+   "装着六芒星的提灯": {
+    "reading": "象征修行达成后的内在之光，为后来的人照路。",
+    "basis": "waite_symbolism",
+    "evidence": "His beacon intimates that \"where I am, you also may be.\"",
+    "note": "韦特只说灯里是一颗星；把星读作六芒星（所罗门封印）是现代补充。"
+   },
+   "长杖": {
+    "reading": "通常读作求道路上的支撑，也代表积累下来的经验。",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特没解释长杖，现代读法不统一（也有读作权威或魔术师权杖的延续），这里取最常见的一种。站内为顶端弯曲的木杖，造型不作意义。"
+   },
+   "雪峰顶": {
+    "reading": "象征已经抵达的高度，修行达到顶点。",
+    "basis": "waite_symbolism",
+    "evidence": "to extend this conception the figure is seen holding up his beacon on an eminence",
+    "note": "韦特只讲「高处」；雪常被现代读作冷静与孤寂，属补充。"
+   },
+   "灰色兜帽长袍": {
+    "reading": "通常读作隐退与低调，灰色常被解释为中性、内敛的智慧。",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只提到提灯不再被斗篷半掩，并反对把斗篷读作秘术式的隔绝；站内是无兜帽的深色短斗篷。"
+   },
+   "昏暗的天色": {
+    "reading": "通常读作未知或向内探寻的处境，衬托出提灯的光。",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特没解释天色，这里取现代常见读法。"
+   }
+  },
+  "major_10": {
+   "刻着符号的轮盘": {
+    "reading": "象征宇宙永不停歇的运转，以及人生的起伏流转。",
+    "basis": "waite_symbolism",
+    "evidence": "the symbolic picture stands for the perpetual motion of a fluidic universe and for the flux of human life",
+    "note": "轮上的炼金符号韦特没有逐一解释；站内多出的齿轮与沙漏不在传统意象内。"
+   },
+   "轮顶持剑的狮身人面兽": {
+    "reading": "象征变动之中的平衡与稳定。",
+    "basis": "waite_symbolism",
+    "evidence": "The Sphinx is the equilibrium therein.",
+    "note": "站内的狮身兽看不出持剑；剑的现代读法（判断、公正）这里未采用。"
+   },
+   "沿轮下滑的蛇": {
+    "reading": "通常读作下降的力量，提丰也常被解释为破坏或沉入物质。",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只说明这是蛇形的提丰（Typhon），没有解释含义；读法取现代通行说法。"
+   },
+   "向上攀升的阿努比斯": {
+    "reading": "通常读作上升的力量，阿努比斯常被解释为灵魂的引导者。",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只说可以借用埃及象征，没有单独解释阿努比斯。"
+   },
+   "四角的天使、鹰、狮、牛": {
+    "reading": "象征以西结异象中的四活物，神意在外在世界的体现。",
+    "basis": "waite_symbolism",
+    "evidence": "the similar intention without is exemplified by the four Living Creatures",
+    "note": "对应四固定星座（宝瓶、天蝎、狮子、金牛）与四福音书是现代通行补充；传统四者捧书常读作学习，站内只有天使拿书。"
+   }
+  },
+  "major_11": {
+   "竖起的双刃剑": {
+    "reading": "通常读作明断与执行，双刃常被解释为判决的后果对双方都成立。",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只说本牌沿用传统象征、意义明显，没有单独解释剑。"
+   },
+   "天平": {
+    "reading": "象征权衡与公平，衡量行为与其后果。",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特未单独解释；黄金黎明把本牌对应天秤座，与天平意象相合。"
+   },
+   "两根柱子": {
+    "reading": "象征律法秩序的框架；韦特指它与女祭司的双柱通向不同世界。",
+    "basis": "waite_symbolism",
+    "evidence": "the pillars of Justice open into one world and the pillars of the High Priestess into another",
+    "note": ""
+   },
+   "两柱之间的帷幕": {
+    "reading": "通常读作帷幕后另有更深的真相，判断需要越过表象。",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特没解释，现代读法不统一（传统紫色常被读作智慧或慈悲），这里取最常见的一种；站内改为深红帷幕。"
+   },
+   "宝座": {
+    "reading": "通常读作稳定的权威与不偏不倚的立场。",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特没解释；站内尖拱石座的哥特样式不作意义。"
+   },
+   "红袍": {
+    "reading": "红色通常读作行动力与现世事务，表示正义要落到实处。",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特没解释，现代读法不统一（也有读作激情受理性约束），这里取较常见的一种。"
+   },
+   "睁开的眼睛（不蒙眼）": {
+    "reading": "通常读作看清事实的公正，有别于蒙眼的世俗正义女神。",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特原文没提眼睛。注意：站内两侧柱上的雕像是蒙眼的，与这一读法相反。"
+   }
+  },
+  "major_12": {
+   "倒挂的人": {
+    "reading": "象征生命的悬停而非死亡，一种主动的暂停与换位。",
+    "basis": "waite_symbolism",
+    "evidence": "the figure, as a whole, suggests life in suspension, but life and not death",
+    "note": "韦特同时强调其面容是深度出神而非受苦。"
+   },
+   "系在一只脚上的绳": {
+    "reading": "通常读作自愿接受的束缚：被悬住，却不是受刑。",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特没解释绳子，现代读法不统一，这里取最常见的一种；站内为发光丝带。"
+   },
+   "另一条腿弯成「4」字": {
+    "reading": "通常读作数字 4，象征稳定，并常与「世界」牌的腿形相对照",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只指出腿形构成旋转十字（fylfot），未解释含义；「数字 4」与「世界」牌腿形倒转呼应属现代通行读法"
+   },
+   "头部光环": {
+    "reading": "通常读作觉悟之光，暗示悬停之中正在发生的领悟。",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只提到头部有光环（nimbus），没有单独解释；他把整张牌联系到一种「伟大的觉醒」。"
+   },
+   "T 字形的活树": {
+    "reading": "象征带着生命的牺牲之树：悬挂换来的是生，而不是死。",
+    "basis": "waite_symbolism",
+    "evidence": "the tree of sacrifice is living wood, with leaves thereon",
+    "note": "韦特也指出绞架构成 T 形十字（Tau）；站内古树横枝 T 形不明显。"
+   }
+  },
+  "major_13": {
+   "白马": {
+    "reading": "通常读作纯净与缓慢而不可阻挡的推进。",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只说这是启示录式的异象、骑手缓缓前行，没有解释马的白色。"
+   },
+   "绘有白玫瑰的黑旗": {
+    "reading": "白玫瑰被读作「神秘玫瑰」，象征生命：终结之中含着新生。",
+    "basis": "waite_symbolism",
+    "evidence": "bearing a black banner emblazoned with the Mystic Rose, which signifies life",
+    "note": "站内旗边破损，不影响读法。"
+   },
+   "倒在地上的国王": {
+    "reading": "通常读作世俗权位也无法免于终结与变化。",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只描述国王倒下，未解释；站内只画了落地的金冠、没有国王，读作「权位跌落」仍适用。"
+   },
+   "两座塔之间升起的太阳": {
+    "reading": "韦特称之为不朽之日，通常读作终结之后的延续与新生。",
+    "basis": "waite_symbolism",
+    "evidence": "Between two pillars on the verge of the horizon there shines the sun of immortality",
+    "note": "韦特原文是「两根柱子」，现代多画作两座塔；站内太阳升落难辨，文案写「天正在亮」，与新生读法相合。"
+   }
+  },
+  "major_14": {
+   "天使的翅膀": {
+    "reading": "通常读作连接天与地的神性使者，代表精神层面的引导。",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只描述为有翼天使，没解释翅膀；站内为白色羽翼（传统为红色）。"
+   },
+   "在两只杯子之间倒水": {
+    "reading": "象征生命精华在两杯间流转，调和心灵与物质两种本性。",
+    "basis": "waite_symbolism",
+    "evidence": "pouring the essences of life from chalice to chalice",
+    "note": "「调和心灵与物质」也出自韦特：tempers, combines and harmonises the psychic and material natures。站内两杯不同，不影响读法。"
+   },
+   "一足踏水、一足踏岸": {
+    "reading": "象征同时立足于物质与心灵两端，体现被调和之物的本性。",
+    "basis": "waite_symbolism",
+    "evidence": "one foot upon the earth and one upon waters, thus illustrating the nature of the essences",
+    "note": ""
+   },
+   "水池": {
+    "reading": "通常读作情感与潜意识之水。",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特没有单独解释水池。"
+   },
+   "白色长袍": {
+    "reading": "通常读作纯净与精神上的清明。",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特没提长袍。站内长袍绣金纹，不作意义。"
+   },
+   "通往远山、尽头有王冠般光芒的小路": {
+    "reading": "象征通往更高境界的道路，尽头的光与王冠指向永生之秘。",
+    "basis": "waite_symbolism",
+    "evidence": "a great light, through which a crown is seen vaguely. Hereof is some part of the Secret of Eternal Life",
+    "note": "站内没有王冠形状，太阳升落难辨。"
+   },
+   "岸边的鸢尾花": {
+    "reading": "通常联系彩虹女神伊里斯，象征天地之间的信使与希望。",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特没提鸢尾。站内画的是白百合，现代读法多为纯洁，与鸢尾的读法不同。"
+   }
+  },
+  "major_15": {
+   "台下戴锁链的一男一女": {
+    "reading": "韦特读作堕落后的亚当与夏娃，象征被物质生活束缚的人",
+    "basis": "waite_symbolism",
+    "evidence": "Hereof is the chain and fatality of the material life",
+    "note": "韦特还说两人长尾巴表示兽性；站内画成两个黑色小人影，没有尾巴"
+   },
+   "松松套在脖子上的锁链": {
+    "reading": "通常读作束缚多半是自愿的，锁链松垮，随时可以自己取下",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只写锁链连到两人脖子上，「锁链是松的」这层是现代通行读法"
+   },
+   "倒持的火炬": {
+    "reading": "通常读作光与能量被导向地面，转为物质欲望；也读作误导之光",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只描述火炬倒向大地，没有解释；现代读法不统一，这里取最常见的两种"
+   },
+   "头上的角": {
+    "reading": "通常读作山羊的角，象征兽性本能，并呼应这张牌对应的摩羯座",
+    "basis": "golden_dawn",
+    "evidence": "",
+    "note": "摩羯座对应来自黄金黎明；韦特称这个形象为「门德斯的有角山羊」，未单独解释角"
+   },
+   "蝠翼": {
+    "reading": "通常读作「恋人」天使羽翼的反面，象征被本能与阴影面支配",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只说翅膀像蝙蝠的，没有解释"
+   },
+   "方形台座": {
+    "reading": "通常读作只承认物质现实的祭坛，人被拴在这块方石上",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特称之为祭坛，未解释；现代常说它是半个立方体，象征有形的物质世界"
+   }
+  },
+  "major_16": {
+   "闪电": {
+    "reading": "通常读作突如其来的冲击或启示，击碎建立在虚假之上的东西",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特没有解释闪电；他的占卜义里写这是「意外灾变」之牌"
+   },
+   "山顶高塔": {
+    "reading": "韦特读作「虚假之屋」，象征建立在错误基础上的信念或体系",
+    "basis": "waite_symbolism",
+    "evidence": "I understand that the reference is, however, to a House of Falsehood",
+    "note": ""
+   },
+   "被掀飞的王冠": {
+    "reading": "通常读作骄傲、自我或旧权威被推翻",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特转述过「惩罚骄傲」的说法，但没有直接解释王冠"
+   },
+   "两个坠落的人": {
+    "reading": "韦特读作被落空的字面教义与对它的错误解读；现代多读作被迫跌出旧处境的人",
+    "basis": "waite_symbolism",
+    "evidence": "The one is the literal word made void and the other its false interpretation",
+    "note": "站内画成两缕发光的光影"
+   },
+   "漆黑的天空": {
+    "reading": "画面陈设，传统上没有固定的象征读法",
+    "basis": "none",
+    "evidence": "",
+    "note": "夜色是传统画面的一部分，但没有通行的单独读法"
+   },
+   "陡峭的岩山": {
+    "reading": "画面陈设，传统上没有固定的象征读法",
+    "basis": "none",
+    "evidence": "",
+    "note": "个别现代教材把它读作高处孤立、根基不稳，但并不统一，这里不取"
+   }
+  },
+  "major_17": {
+   "八芒大星": {
+    "reading": "韦特认作共济会的「火焰之星」；现代通常读作希望与指引之光",
+    "basis": "waite_symbolism",
+    "evidence": "The star is l'étoile flamboyante, which appears in Masonic symbolism",
+    "note": "韦特只认定大星的出处；「希望」在原文里是他转述并贬为浅薄的旧说，现代把大星读作希望与指引是通行读法，与站内关键词「希望」一致"
+   },
+   "七颗小星": {
+    "reading": "通常读作七颗古典行星，或七个脉轮",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只说七颗小星也是八芒，没有解释；现代读法不统一，这里取最常见的两种；站内数量待人工数"
+   },
+   "两只水壶": {
+    "reading": "韦特读作倾倒「生命之水」，同时灌溉海与陆",
+    "basis": "waite_symbolism",
+    "evidence": "She pours Water of Life from two great ewers, irrigating sea and land",
+    "note": ""
+   },
+   "一壶倒进水里": {
+    "reading": "通常读作滋养内心与潜意识；韦特说她把珍贵之物倒进「灵魂之水」",
+    "basis": "waite_symbolism",
+    "evidence": "pouring on the waters of the soul some part and measure of her priceless possession",
+    "note": ""
+   },
+   "一壶倒在地上（分成五股）": {
+    "reading": "通常读作滋养现实层面；五股水流常被读作五种感官",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只说灌溉陆地；五感读法是现代通行的；站内画成浇在玫瑰丛上"
+   },
+   "树上的朱鹭": {
+    "reading": "通常读作朱鹭，联系埃及智慧之神托特，象征智慧与思想",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只写「一只鸟」，朱鹭与托特是现代通行读法；站内是一只黑色的鸟"
+   },
+   "池塘": {
+    "reading": "通常读作灵魂与潜意识之水，接受星光的滋养",
+    "basis": "waite_symbolism",
+    "evidence": "the waters of the soul",
+    "note": ""
+   },
+   "星夜": {
+    "reading": "画面陈设，传统上没有固定的象征读法",
+    "basis": "none",
+    "evidence": "",
+    "note": "夜色只是衬托星光的背景，没有通行的单独读法"
+   }
+  },
+  "major_18": {
+   "月亮": {
+    "reading": "通常读作反射之光，象征脱离灵性的想象、幻象与潜意识",
+    "basis": "waite_symbolism",
+    "evidence": "there is only reflected light to guide it",
+    "note": "韦特明说这张牌代表脱离灵性生活的想象生活；传统月亮里的侧脸站内没有画"
+   },
+   "狗与狼": {
+    "reading": "韦特读作本性心灵在通往未知的出口前生出的恐惧",
+    "basis": "waite_symbolism",
+    "evidence": "The dog and wolf are the fears of the natural mind in the presence of that place of exit",
+    "note": "现代也常读作驯化与野性两面，属后人补充"
+   },
+   "从水里爬出的龙虾": {
+    "reading": "通常读作从潜意识深处浮现的原始冲动，多半又沉回去",
+    "basis": "waite_symbolism",
+    "evidence": "the nameless and hideous tendency which is lower than the savage beast",
+    "note": "韦特没点名是什么动物，只说「从深处上来的东西」"
+   },
+   "两座塔": {
+    "reading": "通常读作已知与未知之间的门槛或关口",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只解释了两塔之间的路，没有单独解释塔"
+   },
+   "蜿蜒的小路": {
+    "reading": "韦特读作通往未知的出口，在月光下延伸向远方",
+    "basis": "waite_symbolism",
+    "evidence": "The path between the towers is the issue into the unknown",
+    "note": ""
+   },
+   "池水": {
+    "reading": "通常读作潜意识的深渊，原始冲动从这里爬上陆地",
+    "basis": "waite_symbolism",
+    "evidence": "crawling from the abyss of water to the land",
+    "note": ""
+   }
+  },
+  "major_19": {
+   "带人脸的大太阳": {
+    "reading": "韦特读作灵性中的意识，是与月亮反射之光相对的直射之光",
+    "basis": "waite_symbolism",
+    "evidence": "The sun is that of consciousness in the spirit",
+    "note": ""
+   },
+   "白马": {
+    "reading": "通常读作被和谐引领的动物本性；白色也常读作纯洁",
+    "basis": "waite_symbolism",
+    "evidence": "leads forth the animal nature in a state of perfect conformity",
+    "note": "韦特没点名白马，但这句讲的正是孩子骑马的画面；「白色＝纯洁」是现代补充"
+   },
+   "红旗": {
+    "reading": "通常读作生命力、行动与胜利",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只说骑马举红旗是这张牌「更好的象征」，没有解释红旗本身；站内多出的太阳纹不作意义"
+   },
+   "墙后的向日葵": {
+    "reading": "通常读作朝向光明生长的生命力",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特没有解释；有人把四朵向日葵读作四元素，但并不统一"
+   },
+   "矮墙": {
+    "reading": "韦特读作感官生活的围墙花园，孩子正从中走出",
+    "basis": "waite_symbolism",
+    "evidence": "coming out from the walled garden of the sensitive life",
+    "note": "站内墙上的藤蔓和哥特拱饰属风格化，不作意义"
+   },
+   "明亮的白天": {
+    "reading": "通常读作一切清楚显露，与「月亮」的朦胧相对",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特没有单独解释白昼；这是现代通行的对照读法"
+   }
+  },
+  "major_20": {
+   "天使（加百列）的翅膀": {
+    "reading": "通常读作来自更高处的使者，传统上认作吹号的加百列",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只称「大天使」，加百列之名是现代通行说法；翅膀颜色没有固定读法，站内混色翅膀不作意义"
+   },
+   "号角": {
+    "reading": "韦特读作来自至高者的召唤，在内心被听见并回应",
+    "basis": "waite_symbolism",
+    "evidence": "the summons of the Supernal—which summons is heard and answered from within",
+    "note": ""
+   },
+   "号角上挂的红十字旗": {
+    "reading": "通常读作复活与新生的旗帜",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只说旗上照例有十字，没有解释；也有人读作四元素平衡，读法不统一，这里取最常见的一种"
+   },
+   "天使所在的云": {
+    "reading": "通常读作天界，表示召唤来自更高的层面",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特只描述天使被云环绕，没有解释"
+   },
+   "打开的棺木": {
+    "reading": "通常读作封存的旧状态被打开，人从过去中解脱",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特说画面沿用「最后的审判」与复活意象；棺木本身未单独解释；站内石棺的哥特造型不作意义"
+   },
+   "从棺中站起的人": {
+    "reading": "韦特读作召唤响起时，我们本性中较低的部分起身回应",
+    "basis": "waite_symbolism",
+    "evidence": "all that is lower in our nature rises in response",
+    "note": "站内画成顺光束升起的半透明光灵"
+   },
+   "远处的雪山": {
+    "reading": "通常读作远处高远的境界或抽象真理",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特没有解释；现代读法不统一（也有读作挑战），这里取最常见的一种；站内的废墟与城堡不作意义"
+   }
+  },
+  "major_21": {
+   "椭圆形的月桂花环": {
+    "reading": "通常读作胜利与圆满；椭圆形也常被读作循环与新生的门户",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特没有解释花环；站内的黑玫瑰点缀属风格化，不作意义"
+   },
+   "花环中央起舞的人": {
+    "reading": "通常读作与整体和谐合一的状态，在完成中仍保持流动",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特把整张牌读作宇宙的圆满与终点，但没有单独解释人物，并否定了「魔法师最高位阶」「绝对」「真理」等说法；站内奶蛙是悬浮而非起舞"
+   },
+   "两手各持一杖": {
+    "reading": "通常读作平衡并掌握对立的两股力量，与「魔术师」的单杖对照",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特没有解释"
+   },
+   "四角的天使、鹰、狮、牛": {
+    "reading": "通常读作四活物，对应四个固定星座与四元素，象征世界的完整",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "韦特在这张牌没有解释；四固定星座的对应常归于黄金黎明体系，但项目资料里没有收录，故按现代通行读法记"
+   },
+   "花环上下的红色无限结丝带": {
+    "reading": "通常读作无限与永恒循环，呼应「魔术师」的无限符号",
+    "basis": "modern_convention",
+    "evidence": "",
+    "note": "站内是缠绕花环的金丝带，没有无限结，这层读法在画面上并不直接成立"
+   }
+  }
+ }
+}

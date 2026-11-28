@@ -1,6 +1,6 @@
 """在留出测试集上跑完整运行时（engine.run，和网站里一样：选动作、生成、程序后处理），每条跑 N 次，按规则检查。
 
-用法：python3 ai/eval/run_eval.py <模型> [次数，默认 2]
+用法：python3 ai/eval/run_eval.py <模型> [次数，默认 2] [测试集名，默认 heldout_v1]；EVAL_TAG 环境变量给结果文件名加后缀（比如换了推理参数）
 产出：ai/eval/results/<模型>.json（逐条输出与问题）、并打印各类别的通过率
 另见 make_judge.py：把两个模型的输出匿名配对，交给独立评审做盲评。
 """
@@ -19,6 +19,20 @@ from engine import run  # noqa: E402
 from policy import violations  # noqa: E402
 from check import AFFIRM, CHICKEN_SOUP, DIAGNOSIS, GOTHIC, IMAGERY, LIST_RE, MIND, whispers  # noqa: E402
 
+def repeated(text, n=8):
+    """同一段（同一行）里有 n 字以上的片段出现两次（去掉标点和空白后），算整句重复。
+    大牌阵逐张一行、整体一句再引用意象，这种跨行的重复不算。"""
+    for line in text.split('\n'):
+        t = re.sub(r'[\s，。、；：！？「」（）·…—,.;:!?()]', '', line)
+        seen = set()
+        for i in range(len(t) - n + 1):
+            g = t[i:i + n]
+            if g in seen:
+                return g
+            seen.add(g)
+    return ''
+
+
 NEG = r'读不出|看不出|照不进|没有写|没写|不知道|猜不到|说不了|读不到|给不了|不替|没法|算不出|能不能|会不会|不一定'
 
 
@@ -29,8 +43,20 @@ def issues_of(case, tr):
         iss.append(f'动作不对：{action}')
     if not tr.get('generated'):
         return iss
+    r = repeated(tr['output'].split('\n\n不想多说也没关系')[0])
+    if r:
+        iss.append(f'整句重复：{r}')
     body = out.split('\n\n不想多说也没关系')[0]
     q = body.count('？') + body.count('?')
+    n = len(re.sub(r'\s', '', body))
+    if action in ('EXPLAIN', 'PARABLE', 'EXPAND', 'WHISPER', 'COMPRESS') and q:
+        iss.append('不该提问')
+    if action in ('REVISE', 'ACK') and q > 1:
+        iss.append(f'问号过多（{q}）')
+    if action == 'WHISPER' and (n > 30 or '\n' in body.strip()):
+        iss.append(f'低语太长（{n}）')
+    if action == 'COMPRESS' and n > 36:
+        iss.append(f'压缩太长（{n}）')
     if action in ('ANSWER', 'ANSWER_MEANING', 'REFLECT') and q:
         iss.append('不该提问')
     if action == 'ASK' and (q != 1 or not body.rstrip().endswith(('？', '?'))):
@@ -48,7 +74,7 @@ def issues_of(case, tr):
         if m and not re.search(NEG, clause):
             iss.append(f'读心：{m.group(0)}')
     iss += [f'编了画面：{w}' for w in IMAGERY if w in out and w not in prompt]
-    if action in ('ANSWER', 'ASK') and (action == 'ANSWER' or len(case['input']['cards']) > 1):
+    if action in ('ANSWER', 'ASK') and not case['input'].get('history') and (action == 'ANSWER' or len(case['input']['cards']) > 1):
         for c in tr['state']['active_cards']:
             h = f"{c['position']['name']}·{c['name']}"
             if h not in out:
@@ -64,8 +90,8 @@ def issues_of(case, tr):
     return iss
 
 
-def main(model, n=2):
-    cases = [json.loads(l) for l in open(os.path.join(HERE, 'heldout_v1.jsonl'), encoding='utf-8')]
+def main(model, n=2, set_name='heldout_v1'):
+    cases = [json.loads(l) for l in open(os.path.join(HERE, f'{set_name}.jsonl'), encoding='utf-8')]
     res, t0 = [], time.time()
     for c in cases:
         for k in range(n):
@@ -74,7 +100,7 @@ def main(model, n=2):
                         'output': tr['output'], 'issues': issues_of(c, tr), 'latency_s': tr['latency_s']})
         print(c['case_id'], c['category'], ['✓' if not r['issues'] else '✗' for r in res[-n:]], flush=True)
     os.makedirs(os.path.join(HERE, 'results'), exist_ok=True)
-    name = model.replace(':', '-').replace('/', '_')
+    name = model.replace(':', '-').replace('/', '_') + ('' if set_name == 'heldout_v1' else f'@{set_name}') + os.environ.get('EVAL_TAG', '')
     json.dump(res, open(os.path.join(HERE, 'results', f'{name}.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     by = defaultdict(lambda: [0, 0])
     for r in res:
@@ -92,4 +118,4 @@ def main(model, n=2):
 
 
 if __name__ == '__main__':
-    main(sys.argv[1], int(sys.argv[2]) if len(sys.argv) > 2 else 2)
+    main(sys.argv[1], int(sys.argv[2]) if len(sys.argv) > 2 else 2, sys.argv[3] if len(sys.argv) > 3 else 'heldout_v1')

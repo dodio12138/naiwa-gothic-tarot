@@ -26,7 +26,16 @@ LEN = {  # 动作/任务 → (下限, 上限)，按去掉空白的字符数；�
     'ANSWER': (120, 220), 'ASK': (100, 180), 'ANSWER_MEANING': (80, 150), 'REFLECT': (40, 80), 'PLAYFUL_REPLY': (30, 80),
     'cross_card': (40, 70), 'cross_summary': (30, 60), 'spread_card': (40, 70), 'spread_summary': (30, 60), 'ask_question': (10, 40),
     'bait_single': (80, 220), 'ask_three_pos': (120, 200),
+    # 第三版新动作（按 policy 依据里的子类型优先）
+    'EXPLAIN': (80, 200), 'PARABLE': (100, 200), 'WHISPER': (6, 24), 'COMPRESS': (8, 30),
+    'EXPAND:deeper': (80, 180), 'EXPAND:angle': (80, 180), 'EXPAND:shorter': (8, 40), 'EXPAND:counterfactual': (80, 160),
+    'REVISE': (60, 140), 'ACK': (40, 100), 'ACK:addinfo': (60, 120), 'ACK:discomfort': (40, 90), 'ACK:other': (40, 120),
+    'ASK:多轮里的决策问题': (60, 140), 'PARABLE:analogy': (60, 120), 'COMPRESS:multi': (10, 45),
 }
+# 寓言里允许加日常道具（孩子、河流……），只把别的牌的标志性画面算作编造
+IMAGERY_STRICT = ['悬崖', '小狗', '斯芬克斯', '狮身', '天秤', '镰刀', '骷髅', '号角', '棺材', '龙虾', '无限符号', '水罐', '倒吊', '石榴', '卷轴', '战车']
+NO_Q_ACTIONS = ('ANSWER', 'ANSWER_MEANING', 'REFLECT', 'EXPLAIN', 'PARABLE', 'WHISPER', 'COMPRESS', 'EXPAND')
+MAX1_Q_ACTIONS = ('PLAYFUL_REPLY', 'REVISE', 'ACK')
 # 把用户的期待说成肯定句（「官司能赢，牌没说」）：前面不是「不 / 能不 / 会不」
 AFFIRM = re.compile(r'(?<![不能会])(能|会)(赢|过|成功|考上|升职|赚钱|复合|中|通过|签下来|好起来|结婚|发表|开下去)(?![吗不么])')
 CARD_TASKS = ('cross_card', 'spread_card')        # 逐张：以「位置·牌名」开头、不提问
@@ -58,8 +67,10 @@ def ln(t):
 def check(case, resp, rejected=None, et=None):
     issues = []
     task, action = case['task'], case['action']
-    prompt = case['messages'][1]['content']
-    key = task if task in LEN else action
+    prompt = '\n'.join(m['content'] for m in case['messages'][1:])   # 多轮时把之前的对话都算进上下文
+    multi = len(case['messages']) > 2
+    why = case.get('action_reason', '')
+    key = task if task in LEN else why if why in LEN else action
     lo, hi = LEN[key]
     n = ln(resp)
     if n < lo * 0.8 or n > hi * 1.2:
@@ -73,11 +84,13 @@ def check(case, resp, rejected=None, et=None):
             issues.append(f'ASK 应恰好一个问号，实际 {q}')
         elif not resp.rstrip().endswith(('？', '?')):
             issues.append('ASK 没有以问题结尾')
-    elif action == 'PLAYFUL_REPLY':
+    elif action in MAX1_Q_ACTIONS:
         if q > 1:
-            issues.append(f'玩梗回复问号过多 {q}')
-    elif q:
+            issues.append(f'{action} 问号过多 {q}')
+    elif q and action in NO_Q_ACTIONS:
         issues.append(f'{action} 不应提问（{q} 个问号）')
+    if action in ('WHISPER', 'COMPRESS') and '\n' in resp.strip():
+        issues.append('只要一句')
     if LIST_RE.search(resp):
         issues.append('出现列表 / 标题格式')
     for w in violations(resp):
@@ -95,10 +108,10 @@ def check(case, resp, rejected=None, et=None):
         m = MIND.search(clause)
         if m and not re.search(r'读不出|看不出|照不进|没有写|没写|不知道|猜不到|说不了|读不到', clause):
             issues.append(f'疑似读心：{m.group(0)}')
-    for w in IMAGERY:
+    for w in (IMAGERY_STRICT if action == 'PARABLE' else IMAGERY):
         if w in resp and w not in prompt:
             issues.append(f'提示词里没有的画面：{w}')
-    if action in ('ANSWER', 'ASK') and task not in ('cross_summary', 'spread_summary', 'ask_question'):
+    if action in ('ANSWER', 'ASK') and not multi and task not in ('cross_summary', 'spread_summary', 'ask_question'):
         for h in heads(case):
             name = h.split('·')[1]
             if (action == 'ANSWER' or task == 'ask_three_pos') and h not in resp:

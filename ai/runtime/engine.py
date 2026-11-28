@@ -4,6 +4,7 @@
 危机转向与结束是程序直接给出的固定话术，不经过模型。
 """
 import json
+import os
 import re
 import time
 import urllib.request
@@ -12,6 +13,9 @@ from knowledge import Knowledge
 from policy import about_other, decide, violations
 
 OLLAMA = 'http://localhost:11434/api/chat'
+# 生成参数：默认值；做实验时可用环境变量 NAIWA_GEN='{"repeat_penalty": 1.1}' 覆盖
+GEN = {'temperature': 0.6, 'top_p': 0.9}
+GEN.update(json.loads(os.environ.get('NAIWA_GEN', '{}')))
 
 SYSTEM = """你是「奶蛙」：一只面无表情、温和、话不多的黄色梨形小生物，在一个塔罗网站里陪用户看牌。
 
@@ -32,7 +36,34 @@ ACTION_GUIDE = {
     'ANSWER_MEANING': '用户只想知道牌义：直接讲这张牌在当前方向下的含义和关键词，不分析用户本人，不联系用户的经历，不提问。80～150 字。',
     'REFLECT': '用户说出了自己的联想。只用一两句轻轻接住（可以复述用户的原话），然后停下：不解释这段记忆，不说它代表什么、来自哪里，不把它和牌义联系起来下结论，不追问细节，不做任何诊断。40～80 字。',
     'PLAYFUL_REPLY': '用户明确是来玩梗的。用一两句轻松、带点自嘲的话接住，不做心理分析，不讲大道理；可以邀请对方「比一张牌」。30～80 字。',
+    # ── v0.6 原计划的其余任务（第三版起）──
+    'EXPLAIN': '用户问的是牌本身的知识或含义。依据给出的资料直接回答：说清这是韦特原典的说法、通行解读，还是对应体系（元素、星象）；用一个给出的意象落地；涉及观点时说清它在什么情况下成立、什么情况下不适用。不分析用户，不提问。80～200 字。',
+    'PARABLE': '用这张牌给出的意象讲一个很短的寓言：一个小场景、一个转折，100～200 字。牌面意象是故事的核心，可以加少量日常道具，但不加别的牌的标志性画面。不点名用户、不给用户贴标签，结尾不说教、不总结道理，可以留白。不提问。',
+    'WHISPER': '写一句低语：一句话，24 字以内，只借一个给出的意象，克制、留白，不说教、不预测，不用「你」开头，不照抄已有的低语。只输出这一句。',
+    'COMPRESS': '把上面这段解读压缩成一句话，30 字以内，保留最关键的意象和意思，不加新内容。只输出这一句。',
 }
+# 多轮：同一动作按用户的说法细分（policy 依据里的子类型）
+SUB_GUIDE = {
+    'PARABLE:analogy': '用户想听一个比方。用一两句话，把这张牌的意思比作一件日常的事或物（60～120 字）：先说比方，再用一句点出它和牌面哪个意象对应。不点名用户、不贴标签、不说教，不提问。',
+    'COMPRESS:multi': '把上面这段解读压缩成一句话，45 字以内，保留最关键的意象和意思，不加新内容。只输出这一句。',
+    'EXPAND:deeper': '用户想听更多。在上一轮的基础上往下展开一层：换一个上一轮没用过的意象，或从意象推到它背后的观点，或落到用户问题的具体情境。不重复上一轮的句子，不预测、不替用户决定，不提问。80～180 字。',
+    'EXPAND:angle': '用户想换个角度。用另一个意象，或这张牌的另一面（矛盾的另一极）来读，不否定上一轮，不重复上一轮的句子，不提问。80～180 字。',
+    'EXPAND:shorter': '用户想听短一点。用一两句话重说上一轮的重点，40 字以内，不加新内容，不提问。',
+    'EXPAND:counterfactual': '用户问「如果换成……会怎样」。依据牌义说清哪些意思会变、哪些不变；没有给出资料的牌只按牌名常识简短说，不编画面；不预测结果，不提问。80～160 字。',
+    'REVISE:用户不认同上一轮': '用户不认同上一轮的说法。先坦然接受，不辩解、不坚持，收回那个具体的说法；再从牌面给一个不同的读法，或请用户说说哪里不贴合（最多一个问题）。不说「其实你就是……」。60～140 字。',
+    'ACK:agree': '用户认同。简短回应，不夸大牌的准确（不说「牌很准」「被我说中了」），可以把话交回给用户，不提问。40～100 字。',
+    'ACK:unsure': '用户不确定。说这很正常，牌只是一个看的角度，可以先放着；也可以给一个很短的不同角度，不强求。最多一个问题。40～100 字。',
+    'ACK:nofeel': '用户对这段解读没什么感觉。说没有共鸣也没关系，不追着解释；可以先放着，或者换一个很轻的角度。最多一个问题。40～100 字。',
+    'ACK:addinfo': '用户补充了自己的情况。只把它和已经说过的牌义轻轻连起来，不下结论、不扩大成判断，不预测。最多一个问题。60～120 字。',
+    'ACK:discomfort': '用户听了有些不舒服。先放慢，承认刚才的话可能说重了；不再继续解读，请用户选择：继续、换个轻一点的方式，还是先停下（只问这一个问题）。40～90 字。',
+    'ACK:other': '回应用户刚才说的话：依据已经说过的牌义，简短、不预测、不替用户决定。最多一个问题。40～120 字。',
+    'ASK:多轮里的决策问题': '用户在接着问一个要不要的问题。依据已经说过的牌义简短回应，不替用户决定，以一个开放、不诱导的问题结尾。60～140 字。',
+}
+
+
+def guide_for(action, why):
+    """这一轮的写法要求：多轮的子类型优先，其余按动作"""
+    return SUB_GUIDE.get(why) or SUB_GUIDE.get(why.split('：')[0]) or ACTION_GUIDE[action]
 
 EXIT_TEXT = {'zh': '不想多说也没关系，可以不说，也可以随时停下。', 'en': "You don't have to say more. You can stop whenever you like."}
 GRIEF_TEXT = {
@@ -78,7 +109,7 @@ def build_state(inp, lang='zh'):
     }
 
 
-def _prompt(state, action):
+def _prompt(state, action, guide=None, compact=False):
     lines = [f"牌阵：{state['spread']['name']}" + (f"（{state['spread']['note']}）" if state['spread']['note'] else '')]
     lines.append(f"用户的问题：{state['question'] or '（没有提问，做纯符号解读，不要追问私事）'}")
     if state['spread']['note']:
@@ -94,7 +125,15 @@ def _prompt(state, action):
         lines.append(f"关键词：{'、'.join(c['keywords'])}")
         lines.append(f"牌义：{c['meaning']}")
         if c.get('visible_traditional'):
-            lines.append(f"画面里看得见的传统意象：{'；'.join(c['visible_traditional'][:6])}")
+            lines.append(f"画面里看得见的传统意象：{'；'.join(c['visible_traditional'][:4 if compact else 6])}")
+        if compact:
+            continue
+        if action == 'EXPLAIN':
+            if c.get('correspondence'):
+                lines.append(f"对应（黄金黎明体系）：{c['correspondence']}")
+            if c.get('archetype'):
+                lines.append(f"传统画面说明：{c['archetype']}")
+            lines += knowledge_lines(c)
         if c.get('naiwa_specific'):
             lines.append(f"奶蛙版特有的画面（可以提，但不要说成传统）：{'；'.join(c['naiwa_specific'])}")
         if c.get('propositions'):
@@ -102,15 +141,73 @@ def _prompt(state, action):
                 f"{p['text']}（不适用：{'；'.join(p['counterexamples'][:2])}）" for p in c['propositions'][:2]))
         if c.get('whispers'):
             lines.append('可选的低语（原文照用，或不用）：' + ' / '.join(w['text'] for w in c['whispers'][:3]))
-    lines.append(f"\n这一轮你要做的：{ACTION_GUIDE[action]}")
+    lines.append(f"\n这一轮你要做的：{guide or ACTION_GUIDE[action]}")
     return '\n'.join(lines)
 
 
+BASIS = {'waite_symbolism': '韦特原典', 'golden_dawn': '黄金黎明', 'modern_convention': '通行读法'}
+
+
+def knowledge_lines(c):
+    """知识问答用的资料（每条都标明出处）"""
+    o = '逆位' if c['orientation'] == 'reversed' else '正位'
+    lines = []
+    if c.get('imagery_readings'):
+        lines.append('意象的传统读法：' + ' / '.join(f"{x['imagery']}——{x['reading']}（{BASIS.get(x['basis'], x['basis'])}）" for x in c['imagery_readings']))
+    if c.get('correspondence'):
+        lines.append(f"对应（黄金黎明体系）：{c['correspondence']}")
+    if c.get('archetype'):
+        lines.append(f"传统画面说明：{c['archetype']}")
+    if c.get('waite_divinatory'):
+        lines.append(f"韦特原典的{o}占卜义（1911，英文原文；韦特自己说占卜义是约定俗成的，常和今天的通行读法不同）：{c['waite_divinatory']}")
+    if c.get('contradictions'):
+        lines.append('这张牌里的张力（本站整理的解读，不是原典）：' + ' / '.join(f"{x['poles']}：{x['text']}" for x in c['contradictions'][:2]))
+    return lines
+
+
+def build_messages(inp, state, action, why):
+    """这一轮发给模型的对话（不含 system）。训练语料用同一个函数生成，保证格式一致。
+
+    单轮：一条 user（牌面资料 + 写法要求）。
+    多轮：第一条 user 是第一轮的提示词（牌多时用紧凑版），接着是之前的对话，最后一条 user =「用户说：……」+ 这一轮的写法要求。
+    程序调用：whisper（按 focus 那张牌写一句低语）、compress（压缩 inp['text']）。
+    """
+    guide = guide_for(action, why)
+    if action == 'WHISPER':
+        c = state['active_cards'][inp.get('focus_index', 0)]
+        o = '逆位' if c['orientation'] == 'reversed' else '正位'
+        lines = [f"牌：{c['name']} · {o}" + (f"（位置：{c['position']['name']}，{c['position']['meaning']}）" if len(state['active_cards']) > 1 else ''),
+                 f"牌义：{c['meaning']}", f"画面里看得见的传统意象：{'；'.join((c.get('visible_traditional') or [])[:6])}"]
+        if c.get('whispers'):
+            lines.append('已有的低语（看风格，不要照抄）：' + ' / '.join(w['text'] for w in c['whispers'][:3]))
+        if state['question']:
+            lines.append(f"用户的问题：{state['question']}")
+        lines.append(f"\n这一轮你要做的：{guide}")
+        return [{'role': 'user', 'content': '\n'.join(lines)}]
+    if action == 'COMPRESS':
+        names = '、'.join(f"{c['name']}（{'逆位' if c['orientation'] == 'reversed' else '正位'}）" for c in state['active_cards'])
+        return [{'role': 'user', 'content': f"牌：{names}\n一段解读：{inp['text']}\n\n这一轮你要做的：{guide}"}]
+    history = inp.get('history') or []
+    if not history:
+        return [{'role': 'user', 'content': _prompt(state, action, guide)}]
+    first_action = inp.get('first_action', 'ANSWER')
+    msgs = [{'role': 'user', 'content': _prompt(state, first_action, compact=len(state['active_cards']) >= 4)}]
+    msgs += [dict(h) for h in history[:-1]]
+    extra = ''
+    if action == 'EXPLAIN':
+        extra = '\n\n资料：\n' + '\n'.join(f"【{c['name']}】\n" + '\n'.join(knowledge_lines(c)) for c in state['active_cards'])
+    msgs.append({'role': 'user', 'content': f"用户说：{history[-1]['content']}{extra}\n\n这一轮你要做的：{guide}"})
+    return msgs
+
+
 def _chat(model, system, user, num_predict=420):
+    """user 可以是一段文字（单轮），也可以是对话列表（多轮）；/no_think 只加在最后一条用户消息上"""
+    msgs = [{'role': 'user', 'content': user}] if isinstance(user, str) else [dict(m) for m in user]
+    msgs[-1]['content'] += '\n/no_think'
     body = json.dumps({
         'model': model, 'stream': False, 'think': False,
-        'messages': [{'role': 'system', 'content': system}, {'role': 'user', 'content': user + '\n/no_think'}],
-        'options': {'temperature': 0.6, 'top_p': 0.9, 'num_predict': num_predict, 'num_ctx': 4096},
+        'messages': [{'role': 'system', 'content': system}] + msgs,
+        'options': dict(GEN, num_predict=num_predict, num_ctx=4096),
     }).encode()
     req = urllib.request.Request(OLLAMA, data=body, headers={'Content-Type': 'application/json'})
     with urllib.request.urlopen(req, timeout=600) as r:
@@ -166,7 +263,7 @@ def _strip_questions(text):
 def run(inp, model='qwen3:1.7b', lang='zh'):
     """跑一轮，返回完整调试轨迹（v0.6 第 21.8 节：检索内容、状态、动作、提示词、输出、耗时）"""
     t0 = time.time()
-    action, why = decide(inp.get('question', ''), inp.get('user_turns') or [])
+    action, why = decide(inp.get('question', ''), inp.get('user_turns') or [], inp.get('history'), inp.get('mode'), len(inp['cards']))
     state = build_state(inp, lang)
     trace = {'input': inp, 'model': model, 'action': action, 'action_reason': why, 'state': state}
     if action == 'SAFETY_REDIRECT':
@@ -176,8 +273,10 @@ def run(inp, model='qwen3:1.7b', lang='zh'):
     elif action == 'CLOSE':
         trace.update(output=CLOSE_TEXT[lang], generated=False)
     else:
-        prompt = _prompt(state, action)
-        if action in ('ANSWER', 'ASK') and len(state['active_cards']) >= 4:
+        msgs = build_messages(inp, state, action, why)
+        prompt = '\n\n'.join(m['content'] for m in msgs)   # 调试与检查用：整段对话的文字
+        limit = {'WHISPER': 60, 'COMPRESS': 80}.get(action, 420)
+        if action in ('ANSWER', 'ASK') and len(state['active_cards']) >= 4 and not inp.get('history'):
             text, stats = _card_lines(state, model, lang)
             if action == 'ASK':
                 tq, _ = _chat(model, SYSTEM, f"用户的问题：{state['question']}\n\n只写一个开放、不诱导、帮用户想清楚自己在意什么的问题，一句话。", num_predict=60)
@@ -185,18 +284,22 @@ def run(inp, model='qwen3:1.7b', lang='zh'):
             if state['spread']['has_other'] and '你眼中' not in text and lang == 'zh':
                 text += '\n\n（这里的「对方」只是你眼中的对方，牌读不出别人的真实想法。）'
         else:
-            text, stats = _chat(model, SYSTEM, prompt)
+            text, stats = _chat(model, SYSTEM, msgs, num_predict=limit)
         bad = violations(text)
         retried = False
         if bad:   # 命中禁用说法：带着提醒重写一次
             retried = True
-            text, stats = _chat(model, SYSTEM, prompt + f"\n\n注意：上一次的回答用了不允许的说法（{'、'.join(bad)}），请重写，避免它们。")
+            msgs2 = [dict(m) for m in msgs]
+            msgs2[-1]['content'] += f"\n\n注意：上一次的回答用了不允许的说法（{'、'.join(bad)}），请重写，避免它们。"
+            text, stats = _chat(model, SYSTEM, msgs2, num_predict=limit)
             bad = violations(text)
+        if action in ('WHISPER', 'COMPRESS'):   # 只要一句
+            text = re.split(r'\n', text.strip())[0].strip('「」"\' ')
         if action == 'REFLECT':   # 个人联想之后：去掉追问，由程序补上「可以不说、可以停」的出口，不依赖模型记得
             text = _strip_questions(text) or ('嗯，你想起了那个时候。' if lang == 'zh' else 'I hear what came to mind.')
             text = text.rstrip() + '\n\n' + EXIT_TEXT[lang]
         if about_other(inp.get('question', '')) and not any(w in text for w in ['你眼中', '你在意', '你自己']) and lang == 'zh':
             text = text.rstrip() + '\n\n' + OTHER_TEXT[lang]
-        trace.update(prompt=prompt, output=text, generated=True, stats=stats, retried=retried, violations=bad)
+        trace.update(prompt=prompt, messages=msgs, output=text, generated=True, stats=stats, retried=retried, violations=bad)
     trace['latency_s'] = round(time.time() - t0, 1)
     return trace

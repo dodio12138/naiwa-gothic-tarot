@@ -69,18 +69,25 @@ print({k: len(v) for k, v in sft.items()}, {k: len(v) for k, v in dpo.items()})
 
 md('''
 ## 提示词格式
-必须和本机 Ollama 运行时**逐字一致**（已在本机用贪心解码对照验证）：qwen3 模板在 system 后多一个空行，并在用户消息末尾追加 ` /no_think`，助手开头是空的思考块。
+必须和本机 Ollama 运行时**逐字一致**（单轮、多轮都已在本机用贪心解码对照验证）：qwen3 模板在 system 后多一个空行；只有最后一条用户消息末尾追加 ` /no_think`；之前的助手回答不带思考块；这一轮的助手开头是空的思考块。
 ''')
 
 code('''
-def render_prompt(system, user):
-    return ("<|im_start|>system\\n\\n" + system + "<|im_end|>\\n"
-            "<|im_start|>user\\n" + user + " /no_think<|im_end|>\\n"
-            "<|im_start|>assistant\\n<think>\\n\\n</think>\\n\\n")
+def render_prompt(system, turns):
+    """turns：system 之后到最后一条用户消息为止的对话（单轮就是一条 user）。之前的助手回答不带思考块；只有最后一条用户消息末尾追加 /no_think"""
+    if isinstance(turns, str):
+        turns = [{"role": "user", "content": turns}]
+    s = "<|im_start|>system\\n\\n" + system + "<|im_end|>\\n"
+    for i, t in enumerate(turns):
+        if t["role"] == "user":
+            s += "<|im_start|>user\\n" + t["content"] + (" /no_think" if i == len(turns) - 1 else "") + "<|im_end|>\\n"
+        else:
+            s += "<|im_start|>assistant\\n" + t["content"] + "<|im_end|>\\n"
+    return s + "<|im_start|>assistant\\n<think>\\n\\n</think>\\n\\n"
 
 def to_pc(row):
     m = row["messages"]
-    return {"prompt": render_prompt(m[0]["content"], m[1]["content"]), "completion": m[2]["content"],
+    return {"prompt": render_prompt(m[0]["content"], m[1:-1]), "completion": m[-1]["content"],
             "task": row["task"], "case_id": row["case_id"]}
 
 print(to_pc(sft["train"][0])["prompt"][-300:])
@@ -198,7 +205,7 @@ if RUN_DPO:
     model.config.use_cache = False
     def to_dpo(r):   # DPOTrainer 会自己在回答末尾加 eos（即 <|im_end|>），这里不再加
         m = r["prompt"]
-        return {"prompt": render_prompt(m[0]["content"], m[1]["content"]),
+        return {"prompt": render_prompt(m[0]["content"], m[1:]),
                 "chosen": r["chosen"][0]["content"], "rejected": r["rejected"][0]["content"]}
     dtr = Dataset.from_list([to_dpo(r) for r in dpo["train"]])
     dva = Dataset.from_list([to_dpo(r) for r in dpo["val"]])
