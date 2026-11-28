@@ -68,7 +68,9 @@ def build_state(inp, lang='zh'):
         cards.append(ctx)
     turns = inp.get('user_turns') or []
     return {
-        'spread': {'id': sp['id'], 'name': sp['name'][lang], 'note': (sp.get('note') or {}).get(lang, '')},
+        'spread': {'id': sp['id'], 'name': sp['name'][lang], 'note': (sp.get('note') or {}).get(lang, ''),
+                   # 牌阵里有「对方」这个位置（共鸣牌阵）时，才需要提醒「只是你眼中的对方」
+                   'has_other': any(p['id'] == 'other' for p in sp['positions'])},
         'question': inp.get('question', ''),
         # 用户明确说出的话才算事实；其余都不写进事实
         'known_facts': [{'source': 'user', 'text': t} for t in ([inp['question']] if inp.get('question') else []) + turns],
@@ -80,7 +82,8 @@ def _prompt(state, action):
     lines = [f"牌阵：{state['spread']['name']}" + (f"（{state['spread']['note']}）" if state['spread']['note'] else '')]
     lines.append(f"用户的问题：{state['question'] or '（没有提问，做纯符号解读，不要追问私事）'}")
     if state['spread']['note']:
-        lines.append(f"这个牌阵的边界（必须遵守）：{state['spread']['note']} 解读时用「在你眼中」来说对方，不替对方下结论。")
+        lines.append(f"这个牌阵的边界（必须遵守）：{state['spread']['note']}"
+                     + (" 解读时用「在你眼中」来说对方，不替对方下结论。" if state['spread']['has_other'] else ''))
     if about_other(state['question']):
         lines.append("这个问题关于另一个人：不要猜对方会怎样、心里怎么想；把解读放回用户自己身上（用「在你眼中」「你在意的是」这样的说法）。")
     for f in state['known_facts'][1 if state['question'] else 0:]:
@@ -133,7 +136,7 @@ def summary_prompt(state, lines):
     q = state['question'] or '（没有提问）'
     return ("用户的问题：" + q + "\n各位置的解读：\n" + '\n'.join(lines)
             + (f"\n牌阵边界：{state['spread']['note']}" if state['spread']['note'] else '')
-            + "\n\n用一句话说整体（不预测结果，不替任何人下结论" + ("，用「在你眼中」来说对方" if state['spread']['note'] else '') + "），30～60 字。")
+            + "\n\n用一句话说整体（不预测结果，不替任何人下结论" + ("，用「在你眼中」来说对方" if state['spread']['has_other'] else '') + "），30～60 字。")
 
 
 def _card_lines(state, model, lang):
@@ -179,7 +182,7 @@ def run(inp, model='qwen3:1.7b', lang='zh'):
             if action == 'ASK':
                 tq, _ = _chat(model, SYSTEM, f"用户的问题：{state['question']}\n\n只写一个开放、不诱导、帮用户想清楚自己在意什么的问题，一句话。", num_predict=60)
                 text += '\n\n' + tq.strip()
-            if state['spread']['note'] and '你眼中' not in text and lang == 'zh':
+            if state['spread']['has_other'] and '你眼中' not in text and lang == 'zh':
                 text += '\n\n（这里的「对方」只是你眼中的对方，牌读不出别人的真实想法。）'
         else:
             text, stats = _chat(model, SYSTEM, prompt)

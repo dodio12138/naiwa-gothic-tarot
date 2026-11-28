@@ -22,6 +22,8 @@ def main(keep_flagged=False):
     for r in rows:
         if r['issues'] and not keep_flagged:
             continue
+        if r['task'] == 'cross_summary':   # 第一批用牌义占位的整体一句，已被第二批的 spread_summary（真实逐张解读）取代
+            continue
         sp = r['split']
         meta = {'case_id': r['case_id'], 'task': r['task'], 'action': r['action']}
         sft = dict(meta, messages=r['messages'] + [{'role': 'assistant', 'content': r['response']}])

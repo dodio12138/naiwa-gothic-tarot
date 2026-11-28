@@ -1,0 +1,278 @@
+{"case_id": "corpus.0483", "response": "现状·节制：画面里的人把水在两只杯子之间慢慢倒来倒去。你此刻大概也站在两端之间找平衡，急不来，只能一点点调。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0484", "response": "阻碍·皇后：脚下成片的麦田长得很满。放在阻碍的位置，也许是想照顾的东西太多，每样都想养好，反而把自己的步子拖慢了。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0485", "response": "助力·愚者：肩上那只小包袱不大，却够用。可以借的是一点不必想清楚每一步的轻快，先迈出那只短短的脚再说。", "rejected": "助力·愚者：肩上的小包袱已经收拾好了，下个月你就会遇到一个新机会，换工作一定会成功，新岗位会比现在顺利得多。", "error_type": "prediction"}
+{"case_id": "corpus.0486", "response": "建议·审判：逆位的审判，号角一直在响，只是被过重的自我批判盖住了。可以试着先原谅过去的自己，再去听那声召唤。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0487", "response": "可能的发展·倒吊人：系在一只脚上的绳让人停在原处。顺着走下去，可能是一段看似停滞的时间，换个角度看，也许会酝酿出新的理解。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0488", "response": "适不适合，牌没有替你判断；它摊开的是一段在平衡、负担与停顿之间摸索的时期，答案还得你自己慢慢掂量。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0489", "response": "现状·魔术师：一只手把权杖举向天空，另一只手指向大地，桌上四样东西都摆齐了。你手里并不缺材料，缺的是把意志落下去的那一下。", "rejected": "现状·魔术师：魔术师骑在一匹白马上，手里捧着一只沙漏，意思是你此刻只能等时间替你做决定，先别急着动手。", "error_type": "symbol_error"}
+{"case_id": "corpus.0490", "response": "阻碍·高塔：闪电劈中山顶的塔，王冠被掀飞出去。拖住你的，可能是一份不太牢靠的确定，它松动的时候难免有点吵。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0491", "response": "助力·皇后：脚下成片的麦田还在，只是长得慢了。能借的力量要从照顾自己开始，先给自己一点养分，再去养别的东西。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0492", "response": "建议·战车：一黑一白两只狮身兽，拉的是同一辆车。可以试着让相反的两股劲朝一个方向使，专注比用力更要紧。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0493", "response": "可能的发展·审判：天使在云里吹响号角，号角上挂着红十字旗。顺着走下去，可能会听见某种召唤，回不回应，还在你手里。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0494", "response": "从桌上摆齐的材料到云里的号角，这一副牌像在说：先松开不牢靠的确定，再把意志放到一个方向上。", "rejected": "高塔说明你现在已经站在废墟里，审判的觉醒也早就发生了，皇后和战车都是正在拖住你的阻碍。", "error_type": "ignore_position"}
+{"case_id": "corpus.0495", "response": "现状·倒吊人：绳子只系住一只脚，另一条腿还弯成「4」字，倒挂着也挺从容。此刻的停顿未必是卡住，更像换个角度看同一件事。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0496", "response": "阻碍·力量：拖住你的，可能恰恰是那股想把一切都按住的劲。双手合上狮子的嘴靠的是耐心，太用力反而合不上。", "rejected": "阻碍·力量：画面里那个女人骑在狮子背上挥着鞭子，硬把狮子往悬崖下赶，拖住你的正是这种用蛮力压住一切的习惯。", "error_type": "symbol_error"}
+{"case_id": "corpus.0497", "response": "助力·隐者：提灯里的六芒星还亮着，只是提灯的人走得有点远。可以借的，是独处时那一点清醒，也记得从雪峰顶下来。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0498", "response": "建议·审判：号角响起时，云上的天使不催谁，只是叫一声。可以试着听听心里那声召唤，先认出它，再慢慢决定怎么回应。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0499", "response": "可能的发展·战车：一黑一白两只狮身兽若慢慢朝向同一边，车就能往前走。顺着现在，可能出现一种自己握住方向的推进，不是定数。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0500", "response": "从停顿、松开用力，到借一点独处的光、听见心里的召唤，这副牌像在说往前走可以一步一步来。", "rejected": "这副牌显示你很快就能彻底走出这段感情，下个月前后会遇到一个让你重新心动的人。", "error_type": "prediction"}
+{"case_id": "corpus.0501", "response": "现状·女祭司：她坐在黑白双柱之间，TORA 卷轴半掩在袍中，没有全摊开。有些答案还收在里面，安静一点，才听得见自己的低语。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0502", "response": "阻碍·皇后：麦田长得很满，皇后的心思多半放在照料上。落在阻碍这里，拖住你的也许正是这份周到，照顾别人时，自己那一份被排到了后头。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0503", "response": "助力·太阳：墙后的向日葵都朝着那张带人脸的大太阳。可以借的是这份清明，把事情摊在日光下，喜欢什么、不喜欢什么，都看得清清楚楚。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0504", "response": "建议·正义：天平的两端都能放东西，不只放别人的那一份。可以试着诚实地称一称，自己给出去的和收回来的，再做一个公正的决定。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0505", "response": "可能的发展·愚者：肩上的小包袱不大，人已经走到悬崖边。顺着走下去，可能是一段新的开始，不必每一步都先想清楚，先迈出那只短短的脚就好。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0506", "response": "这几张牌没有给委屈找一个原因，只是把照顾别人和听见自己摆在一处，看你留给自己的那一端有多重。", "rejected": "关系里最重要的是先学会爱自己，别再委屈自己了，勇敢说出你的需要，做回真正的自己，一切都会好起来的。", "error_type": "preachy"}
+{"case_id": "corpus.0507", "response": "现状·皇后：长袍上的石榴纹、脚下的麦田，都是正在生长的样子。此刻的你，更像在照顾自己这一片地，让它慢慢丰盛起来。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0508", "response": "阻碍·星星：一壶水正慢慢倒进水里，疗愈还在进行。落在阻碍上，或许是太想等到完全好了再出发，这份希望反而让人停在原地。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0509", "response": "助力·恋人：天使拉斐尔在上方，看着伊甸园里的一男一女。能借用的，是忠于内心的那份选择，价值观对上了，联结才站得稳。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0510", "response": "建议·太阳：带人脸的大太阳照得很直白。可以试试的方向，是让日子清明一点、快乐一点，不必背着任务去生活。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0511", "response": "可能的发展·倒吊人：逆位的倒吊人，绳子还系在一只脚上。顺着走下去，可能会有一段无谓的拖延，也可能迎来一个放下执念的时机。", "rejected": "可能的发展·倒吊人：倒挂的人悬在血月下的黑暗城堡外，绳子缠着黑玫瑰的藤，前面可能是一段漫长的暗夜，执念像蝙蝠一样盘旋不散。", "error_type": "gothic_style"}
+{"case_id": "corpus.0512", "response": "没准备好也是一种状态。牌面更多在说照顾自己、听清内心，节奏可以由你来定，不必急着去够那颗星。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0513", "response": "现状·节制：天使在两只杯子之间倒水，水流得有点急。此刻像是一下子倒得太多，可以把手腕放慢一点。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0514", "response": "阻碍·魔术师：桌上权杖、圣杯、宝剑、星币一样不少。拖住你的，也许正是这份「什么都能做」，东西太齐，反而不知道先拿哪一样。", "rejected": "阻碍·魔术师：举向天空的权杖说明，下个月你手上的计划一定会被上司否掉，这件事会卡住你大半年。", "error_type": "prediction"}
+{"case_id": "corpus.0515", "response": "助力·死神：倒下的国王身后，太阳在两座塔之间升起。一个阶段的结束，在这里反倒是可以借的力，它替新的东西腾出了地方。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0516", "response": "建议·恶魔：台下那两个人，脖子上的锁链套得很松。可以试着看清是什么在拴着你，看清之后，它也许没有想象中那么紧。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0517", "response": "可能的发展·教皇：交叉的两把钥匙还在，只是门不一定要照旧的方式开。往下走，一个可能的方向是离开一些不再合身的规矩。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0518", "response": "先让倒水的手慢下来，看清那根松松的锁链，旧的阶段和旧的规矩，或许都能换一种方式放下。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0519", "response": "过去·世界：月桂花环中央起舞的人，好像还差最后一步没落地。来路上有件事没画上句号，到现在还牵着你。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0520", "response": "现在·魔术师：桌上的权杖、圣杯、宝剑、星币都摆着，此刻手边的东西其实不少。一手指天、一手指地，要做的是把想法落成具体的一步。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0521", "response": "潜在影响·太阳：带人脸的大太阳被云挡住一些，墙后的向日葵还朝着它。暗中起作用的，可能是一份暂时提不起的轻松，或一点过于乐观的估计。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0522", "response": "阻碍·审判：号角响了，听的人却忙着数落自己。最需要正视的卡点，可能是对自己下手太重，原谅一点过去，才腾得出手。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0523", "response": "外部环境·女祭司：黑白双柱之间，她把卷轴半掩在袍子里，不急着摊开。身边的处境偏安静、不明说，很多信息要靠你自己慢慢感觉。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0524", "response": "建议·皇帝：方正的石宝座坐得稳，靠的是清楚的规矩和边界。可以试着先把自己这边的分寸理一理，什么接、什么不接，心里有个框。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0525", "response": "可能结果·死神：旗上画着白玫瑰，两座塔之间升起了太阳。顺着现在走，可能是某种旧的相处方式慢慢结束，给新的样子腾出地方，不是定数。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0526", "response": "一件没收尾的旧事，加上一点过重的自我批判，这副牌把重心放回你能自己理清的分寸上。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0527", "response": "过去·星星：逆位的星星，八芒大星还挂在那里，只是一时看不太清。来路上有过一段灵感变少、信心发虚的时候，到现在还留着一点影子。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0528", "response": "现在·战车：一黑一白两只狮身兽，方向未必天然一致。此刻你握着权杖往前推，靠的是专注，不是蛮力，两股劲都得照看着。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0529", "response": "潜在影响·节制：天使在两只杯子之间慢慢倒水，不洒也不急。还没被看清的那股力量，可能就是这种耐心的调和，正一点一点起作用。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0530", "response": "阻碍·倒吊人：绳只系着一只脚，另一条腿弯成「4」字，倒挂的人看上去很安稳。卡住的地方是停得太久了，换个角度看一眼，也许就松了。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0531", "response": "外部环境·愚者：身边的处境带着一点刚出发的味道，有人扛着小包袱就走，小狗在脚边跟着。未知的东西多，未必都要你先想好。", "rejected": "外部环境·愚者：身边的处境像一座笼着夜幕的古堡，愚者扛着小包袱走在血月下的悬崖边，小狗在蝙蝠的影子里跟着。未知的东西多，先别急着想好。", "error_type": "gothic_style"}
+{"case_id": "corpus.0532", "response": "建议·女祭司：逆位的女祭司，石榴帷幕后面还有没浮出来的东西。可以先别急着下结论，留一点时间，给被你放在一边的直觉。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0533", "response": "可能结果·太阳：逆位的太阳，那张带人脸的大太阳暂时被遮住一角，墙后的向日葵还在。顺着走下去，快乐可能来得慢一点，等云散开。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0534", "response": "这一串牌像一段在推进和停顿之间来回的路，急的地方和慢的地方都在，可以先听听哪一边更像此刻的你。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0535", "response": "过去·月亮：来路上那片让狗与狼都看不清的迷雾，正在慢慢散开。被压着的情绪一点点浮上来，过去的事还在，只是没那么朦胧了。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0536", "response": "现在·节制：逆位的节制，两只杯子之间的水倒得有点急。此刻也许是一下太多、一下太少，可以先放慢倒水的速度。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0537", "response": "潜在影响·恶魔：台下那一男一女脖子上的锁链套得很松。还没看清却在起作用的，可能是某种执念，看清了，就会发现它没那么牢。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0538", "response": "阻碍·皇后：麦田长得很满，皇后什么都在养。最需要正视的卡点，也许是想把每件事都照顾周全，结果哪一件都迟迟开不了头。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0539", "response": "外部环境·倒吊人：身边的处境像那个倒挂的人，看起来停着不动。周围节奏慢下来未必是坏事，换个角度，也许能看见平时看不见的东西。", "rejected": "外部环境·倒吊人：身边的人像那个倒挂的人一样停滞不前，你的拖延很可能是焦虑症的表现，根源在童年创伤，环境只是把它放大了。", "error_type": "diagnosis"}
+{"case_id": "corpus.0540", "response": "建议·皇帝：方正的石宝座稳稳立着。可以试着给自己定几条小规则、划一点边界，有了结构，事情才有地方落脚。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0541", "response": "可能结果·恋人：伊甸园里，知识之树结着果实，蛇缠在树上。顺着走下去，可能会走到一个需要忠于内心做选择的地方，选什么，看你在意什么。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0542", "response": "拖延在这里不像是懒，更像在照顾太多和倒水太急之间来回拉扯，给自己一点结构，也许比硬逼自己更好用。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0543", "response": "过去·恋人：天使在上方，知识之树上缠着一条蛇。来路里有过摇摆不定的选择，它还在影响你，提醒你先问清自己想要什么。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0544", "response": "现在·月亮：狗与狼各在一边，水里有龙虾爬上来。此刻看什么都隔着一层，朦胧本来就是这一段路的样子。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0545", "response": "潜在影响·力量：双手轻轻合上狮子的嘴，没有用蛮力。还没被看清的，可能是你身上那份耐心，它一直在悄悄起作用。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0546", "response": "阻碍·女祭司：TORA 卷轴半掩在袍子里，没有完全打开。卡住的地方，也许是直觉被晾在了一边，答案还没浮上来，就急着下结论。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0547", "response": "外部环境·愚者：有人扛着小包袱站在悬崖边，小狗在脚边。身边的处境带着一股「先走走看」的气息，未知不少，起点也不少。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0548", "response": "建议·死神：倒在地上的国王，没能拦住结束这件事。可以尝试的方向，是放开那些已经走完、却还攥在手里的旧模式。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0549", "response": "可能结果·节制：一足踏水，一足踏岸，水在两只杯子之间慢慢倒。顺着走下去，可能会在两头之间找到自己的节奏，不必一步到位。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0550", "response": "方向模糊的时候，这副牌没有指出哪条路，只是把耐心、直觉和慢慢调和的节奏摆在了你面前。", "rejected": "人生本来就是一场旅行，迷茫也是成长的一部分，只要你勇敢迈出第一步并坚持下去，路自然会越走越宽。", "error_type": "preachy"}
+{"case_id": "corpus.0551", "response": "过去·星星：一只水壶把水倒回水里，头顶是八芒大星和七颗小星。来路上曾有过一段被慢慢照顾、重新有希望的时候，它还在影响你。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0552", "response": "现在·皇帝：宝座上刻着公羊头，石座方方正正。此刻的你可能正在给生活立规矩、搭框架，用秩序先把自己稳住。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0553", "response": "潜在影响·隐者：灰色兜帽压得低，提灯却没熄。悄悄起作用的，可能是把自己关得有点久的独处，不太见人，也不太往里看。", "rejected": "潜在影响·隐者：这张说的是你已经过去的那段日子，你早就独处够了、反思完了，现在完全走出来了，提灯可以收起来了。", "error_type": "ignore_position"}
+{"case_id": "corpus.0554", "response": "阻碍·教皇：两位侍从跪在座前，等那只赐福的手落下。最需要正视的卡点，可能是太依赖现成的说法，让「应该怎样」替你做了判断。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0555", "response": "外部环境·高塔：闪电劈中山顶高塔，王冠被掀飞。身边的处境可能正有突然的变动，有些原本以为稳当的东西，不再那么稳了。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0556", "response": "建议·世界：月桂花环还差一点合拢。可以尝试的方向，是把那件迟迟没收尾的事好好收一收，画个句号，不用画得多漂亮。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0557", "response": "可能结果·太阳：墙后的向日葵还在，太阳只是被云遮住一点。顺着现在走，快乐可能来得慢一些，也可能要留意太早的乐观。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0558", "response": "你正用秩序稳住自己，身边也还有变动，这副牌轻轻提一句：别把自己关太久，旧事可以慢慢收尾。", "rejected": "分手不是世界末日，你要学会好好爱自己，相信自己值得更好的，勇敢走出来，阳光总在风雨后！", "error_type": "preachy"}
+{"case_id": "corpus.0559", "response": "过去·力量：那双手合上狮子的嘴，用的是温柔，不是蛮劲。来路上你靠过这种耐心，它到现在还在影响你怎么做事。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0560", "response": "现在·月亮：月亮下，狗与狼各在一边，龙虾刚从水里爬出来。此刻前路朦胧，看不清不等于走错，可以慢一点，跟着直觉走。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0561", "response": "潜在影响·命运之轮：蛇沿着轮盘往下滑，阿努比斯从另一边往上攀。还没看清的那股力量是变化本身，时机在转，顺着它比顶着它省力。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0562", "response": "阻碍·隐者：提灯里装着六芒星，只照得亮身边一小圈。卡点可能在一个人想得太久，独处原本带来清明，走过了头，就成了闭门不出。", "rejected": "阻碍·隐者：隐者骑着白马站在雪峰顶，长杖顶端缠着一条蛇，提灯已经熄灭了。卡点在于方向全丢了，灯不亮，杖也指错了路。", "error_type": "symbol_error"}
+{"case_id": "corpus.0563", "response": "外部环境·恋人：天使拉斐尔在一男一女的上方，知识之树结着果实。身边的人与处境，可能正把你推到一个要问清价值观的选择前。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0564", "response": "建议·恶魔：台下两个人脖子上的锁链套得很松。可以试着看清，让你放不下的是执念还是真想要，看清了，那根链子也许就能取下来。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0565", "response": "可能结果·高塔：逆位的高塔，闪电劈在山顶高塔上，被掀飞的王冠还没落地。顺着现在走，可能是一场被推迟的改变，早点面对，损失也许更小。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0566", "response": "工作上的迷茫不必急着拨开，这组牌把力气指向看清自己在抓着什么，使劲的方向也许就藏在那里。", "rejected": "照这组牌看，下个月你的工作一定会迎来一次大变动，跳槽的机会会主动找上门，到时候往新方向使劲就对了。", "error_type": "prediction"}
+{"case_id": "corpus.0567", "response": "过去·倒吊人：逆位的倒吊人，绳子在脚上系了太久。来路里可能有一段不必要的硬撑或拖延，那份执念到今天还牵着你。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0568", "response": "现在·教皇：两把交叉的钥匙还在，只是旧规矩不再适用了。此刻的状态，或许是原来那套方法打不开现在的门，需要走出自己的路。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0569", "response": "潜在影响·力量：一双手轻轻合上狮子的嘴，没有用蛮力。还没被看清的，可能是一种温柔的耐心，它一直在底下起作用。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0570", "response": "阻碍·隐者：提灯里的六芒星只照亮脚下一小块。卡点也许在于一个人闷着往里找，独处是好的，久了，路就只剩灯下那一点。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0571", "response": "外部环境·皇帝：逆位的皇帝，方正的石宝座显得有些僵。身边的规则可能太紧，也可能散得没了框架，两头都让人不好用力。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0572", "response": "建议·节制：逆位的节制提醒的是速度。两只杯子之间的水别倒那么急，先少一点、慢一点，让自己重新找回平衡。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0573", "response": "可能结果·高塔：闪电劈下之后，余震还没平。顺着走下去，可能是一直绕开某个该来的改变，早一点面对，损失或许会小一些。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0574", "response": "学不进去，或许不全是用力不够；旧方法松了、节奏乱了，慢一点、换一种自己的办法，可能就是调整的起点。", "rejected": "七张牌合在一起看，高塔已经塌了，倒吊人和隐者都说你现在就该停下，皇帝和节制是你过去的问题，整体就是学不进去。", "error_type": "ignore_position"}
+{"case_id": "corpus.0575", "response": "过去·正义：双刃剑竖着，天平没有偏向哪一边。来路上有过一次诚实的衡量，那份公正，至今还在你身后起作用。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0576", "response": "现在·恶魔：脖子上的锁链本来就套得松，现在正一点点往下滑。此刻像是在挣开什么，察觉到它，就已经松了一半。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0577", "response": "潜在影响·月亮：月亮底下，龙虾刚从水里爬出来。有些没看清的担心像水里的东西，正慢慢浮上来，不急着给它命名。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0578", "response": "阻碍·死神：国王倒在地上，旗上绘着白玫瑰。卡点可能就在一个正在结束的阶段上，结束本身不难看，难的是接受它在发生。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0579", "response": "外部环境·隐者：雪峰顶上，有人提着装六芒星的灯，拄着长杖。身边的处境偏安静，人少一点，光也够照亮脚下这一小块。", "rejected": "外部环境·隐者：提灯的人独自站在雪峰顶，说明你身边没人，是因为你总把别人推开，性格太孤僻，才落到这一步。", "error_type": "blame_user"}
+{"case_id": "corpus.0580", "response": "建议·愚者：肩上一个小包袱，脚边一只小狗。可以试着轻装出发，不用把每一步都想清楚，先迈出短短的一步就好。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0581", "response": "可能结果·倒吊人：绳子系在一只脚上，人还倒挂着。顺着现在走，一个可能的样子是等待拖得太久，值得留意哪些执念已经可以放下。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0582", "response": "从诚实的衡量到慢慢滑落的锁链，这副牌像在说同一件事：一点点松手，比一直撑着更有余地。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0583", "response": "现状·女祭司：她坐在黑白双柱之间，身后是石榴帷幕。当下的处境里，答案可能不在外面的声音里，而在你安静下来时自己听见的那部分。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0584", "response": "挑战·恋人：天使拉斐尔在上方，伊甸园里站着一男一女。横在面前的，可能是一个要忠于内心的选择，它拦着你，也推着你。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0585", "response": "根基·教皇：交叉的两把钥匙放在座前。事情底下的基础，可能是你一直信任的经验、老师或某套规矩，它们给了你一块能站的地方。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0586", "response": "过去·月亮：狗与狼还对着月亮，龙虾正从水里往外爬。曾经罩着你的那层迷雾正在散开，那段迷惘慢慢在离开。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0587", "response": "意识·皇帝：方正的石宝座，手里的宝球，都是稳当的样子。你有意识在追求的，可能是一份结构：清楚的边界，可控的节奏。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0588", "response": "近期发展·皇后：脚下是成片的麦田，长袍上绣着石榴纹。不久之后可能出现的，是一段慢慢生长的时候，也需要你照顾好自己。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0589", "response": "自我态度·力量：她用双手合上狮子的嘴，没有硬扳。你看待自己的方式，可能偏向温和的自我掌控，不硬压，也不放任。", "rejected": "自我态度·力量：双手合上狮子的嘴，说明你下个月就会凭这份温柔的掌控拿下一个重要机会，年底前一定会有明确的方向。", "error_type": "prediction"}
+{"case_id": "corpus.0590", "response": "外部环境·高塔：闪电已经落下，王冠被掀飞。外部环境可能还在余震里，有些改变大家都绕着走，早点面对反而轻一些。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0591", "response": "希望与恐惧·魔术师：桌上四样东西都摆着，举起的权杖和指地的手却没接上。你期待的和害怕的，可能是同一件事：本事都在，方向却散了。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0592", "response": "可能结果·战车：一黑一白两只狮身兽各朝一边，车被拉扯着。顺着现在走，可能出现内耗，先让它们朝同一个方向，这不是定数。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0593", "response": "你想要稳当的框架，也在听自己的直觉，这副牌像是在说方向不必一下想清，先把散开的力气收拢一点。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0594", "response": "现状·恶魔：台下一男一女戴着锁链，链子却松松地套在脖子上。眼下像是被什么执念拽住了，看清它，能动的空间比想象中多。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0595", "response": "挑战·恋人：逆位的恋人，知识之树上缠着蛇。横在面前的是一种摇摆，它可能拖住你，也可能推着你先问清自己真正想要什么。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0596", "response": "根基·战车：一黑一白两只狮身兽，各有各的方向。事情底下有一股想往前推的意志，靠着它，相反的两股劲也能被慢慢驾驭。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0597", "response": "过去·皇帝：方正的石宝座，宝座上的公羊头，讲的都是规矩和边界。这股靠结构撑住局面的影响正在离开，留下的空位还没被填上。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0598", "response": "意识·命运之轮：轮顶的狮身人面兽持剑坐着，下面的轮盘一直在转。你有意识在等的，也许是一个转机，在意的是能不能接得住它。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0599", "response": "近期发展·力量：头顶的无限符号下，那双手轻轻合上狮子的嘴。不久之后可能出现的，是一种更温柔的自我掌控，不靠压，靠耐心。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0600", "response": "自我态度·节制：一足踏水、一足踏岸，天使站在两边之间。你看待自己的方式，像在找一个平衡点，愿意慢慢调和，不急着倒向哪一头。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0601", "response": "外部环境·倒吊人：逆位的倒吊人，系在一只脚上的绳挂得有点久了。周围的处境里，也许有一些不必要的等待和牺牲，可以看看哪些能放下。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0602", "response": "希望与恐惧·教皇：两位侍从跪在座前，等着那只举起赐福的手。你期待一份可靠的指引，也许同时害怕，只能照着别人的规矩走。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0603", "response": "可能结果·星星：一壶水倒进水里，八芒大星挂在上方。再往前走一段，可能慢慢回到一种平静、有希望的状态，这是一个方向，不是定数。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0604", "response": "起伏或许不来自某一件事，而是被执念拽住的那股劲，和想慢慢调和的那股劲，同时在你身上拉扯。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0605", "response": "现状·审判：逆位的审判，云上的号角一直在响。当下的处境，可能是对自己批判得太重，反而听不见那声召唤。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0606", "response": "挑战·死神：绘着白玫瑰的黑旗还举着，逆位时是不肯让旧的结束。横在面前的，可能就是对放手的那一点抗拒。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0607", "response": "根基·女祭司：TORA 卷轴半掩在袍中，没有完全展开。根基里也许有被忽略的直觉，别急着替自己下结论，它还没浮出水面。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0608", "response": "过去·战车：一黑一白两只狮身兽各朝一边。正在离开的，是一段方向拉扯、内耗很重的日子，它在慢慢退场。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0609", "response": "意识·恶魔：倒持的火炬照不了多远，锁链却只是松松挂着。你有意识在追的东西里，可能夹着一点执念，看清它，就知道能摘下来。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0610", "response": "近期发展·正义：竖起的双刃剑和天平摆得很正。不久之后，可能会出现一个需要诚实面对事实、自己做衡量的时刻。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0611", "response": "自我态度·愚者：脚边的小狗跟着，肩上的小包袱很轻。你看待自己的方式，或许带着一点愿意从头再来的纯真。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0612", "response": "外部环境·教皇：逆位的教皇，三重冠下的旧规矩不太合身了。身边的人与环境给的那套教导，可能正被你重新掂量。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0613", "response": "希望与恐惧·命运之轮：逆位的轮盘上，蛇正沿轮下滑。你期待的和害怕的，也许是同一件事，就是变化本身，轮盘还在转。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0614", "response": "可能结果·月亮：月亮底下有狗与狼，路看不太清。顺着走下去，可能是一段要靠直觉慢慢辨认的路，而不是一个定好的答案。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0615", "response": "想了解现在的自己，牌照出的像是一个正在松开旧模式、学着倾听直觉的你，清楚的和朦胧的部分都还在路上。", "rejected": "十张牌合起来看，月亮说明你现在就很迷茫，愚者是你的过去，死神代表你已经彻底告别了旧的自己，审判是将来会到的结果。", "error_type": "ignore_position"}
+{"case_id": "corpus.0616", "response": "现状·皇帝：方正的石宝座上刻着公羊头。眼下的秩序有点失衡，要么绷得太紧，要么散了架，需要重新找一个合适的框架。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0617", "response": "挑战·太阳：大太阳带着一张脸，墙后的向日葵开得很满。横在面前的，可能是一种「什么都要亮堂」的压力，也可能正是推你一把的光。", "rejected": "挑战·太阳：大太阳把一切照得很亮，说明你有明显的讨好型人格，很可能源于童年创伤，总害怕自己不够好、不被喜欢。", "error_type": "diagnosis"}
+{"case_id": "corpus.0618", "response": "根基·教皇：两位侍从跪在座前，教皇举起赐福的手。事情的底下压着一些学来的规矩和传统，它们也曾给过你可靠的指引。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0619", "response": "过去·星星：一只壶把水倒进水里，头顶是八芒大星和七颗小星。正在离开的，是一段带着希望的时光，它留下的东西还算温和。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0620", "response": "意识·愚者：悬崖边，包袱扛在肩上，小狗在脚边。心里在意的方向被冲动和犹豫同时拉着，先看清脚下，再决定跳还是等。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0621", "response": "近期发展·命运之轮：蛇沿着轮盘往下滑，阿努比斯在另一边往上攀。不久之后可能会有一段低一点的时候，轮子本身还在转。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0622", "response": "自我态度·高塔：闪电落下，王冠被掀飞。你看待自己的方式里，可能有一份正在松动的确定，它松开时，会露出一些更真实的东西。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0623", "response": "外部环境·月亮：两座塔立在两边，狗与狼都在月下。身边的人和环境不太好看清，像隔着一层雾，可以靠直觉慢慢辨认。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0624", "response": "希望与恐惧·审判：天使从云里吹响号角，号角上挂着红十字旗。期待的和害怕的，可能都是那一声召唤：被叫醒，然后要回应。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0625", "response": "可能结果·女祭司：石榴帷幕挡在身后，脚边是一弯新月。顺着现在走，直觉可能还会被放在一边，这不是定数，只是提醒别急着下结论。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0626", "response": "关于委屈，这副牌没有给出原因，只是把学来的规矩、正在松动的确定和被晾着的直觉摆在一起，留给你自己看。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0627", "response": "现状·教皇：两位侍从跪在座前，等那只举起的手赐福。当下的处境里，外面的规矩、经验和权威的说法，占着不小的位置。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0628", "response": "挑战·皇后：成片的麦田要有养分才长得起来。横在面前的，可能是付出太多、留给自己太少，生长卡住了，先给自己一点养分。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0629", "response": "根基·命运之轮：轮盘在转，蛇沿轮下滑，阿努比斯往上攀。事情的底下是起起落落的循环，一时的高低都在转动里，不会一直停在一处。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0630", "response": "过去·世界：花环中央的人还在跳，最后一步迟迟没落下。正在离开的影响，是一件没收尾的事，它在慢慢松手。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0631", "response": "意识·高塔：闪电劈向山顶高塔，王冠被掀飞。你有意识在意的，可能是不让某样东西塌下来，绕着该来的改变走，余震就一直在。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0632", "response": "近期发展·愚者：肩上扛着小包袱，脚边跟着小狗，人站在悬崖边。不久之后，可能会有一个不必全想清楚、就能先迈出去的开始。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0633", "response": "自我态度·恋人：知识之树结着果实，蛇缠在树上。你看待自己的方式，可能落在「我选什么、我信什么」上，价值观一致才站得稳。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0634", "response": "外部环境·隐者：灰袍的人站在雪峰顶，离人群有点远。身边的环境里，可能有人把自己关得太紧，彼此都少了些回头看的时候。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0635", "response": "希望与恐惧·魔术师：一只手举起权杖，一只手指向大地。你期待的也许正是你害怕的：能把想法真的做出来，也就得真的去做。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0636", "response": "可能结果·力量：头顶的无限符号，像一个绕回来又接上的圈。顺着现在走，可能的方向是一种温和的自我掌控，不靠压，也不靠躲。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0637", "response": "外面的规矩和期待占着位置，你也在找自己认的那份价值，这副牌把目光放回你怎样温和地照顾自己。", "rejected": "这副牌说明你很快就会不再在意别人的眼光，三个月内一定会有人公开认可你，到时候所有顾虑都会消失。", "error_type": "prediction"}
+{"case_id": "corpus.0638", "response": "现状·月亮：月亮挂在两座塔之间，狗与狼各在一边。眼下的处境有些朦胧，害怕和想象缠在一起，看不清的时候，慢慢走也算在走。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0639", "response": "挑战·皇后：逆位的皇后，脚下成片的麦田长得慢了。横在面前的，可能是给出去太多、留给自己太少，先给自己一点养分，也是一种推动。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0640", "response": "根基·命运之轮：刻着符号的轮盘一直在转，起和落本来就在同一个圈上。事情底下的那层东西，是变化本来就一直在发生，不是冲着谁来的。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0641", "response": "过去·审判：号角吹响了，上面挂着红十字旗。正在离开的，是一段被唤醒、要清算的时候，它把你一路推到了现在这里。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0642", "response": "意识·教皇：逆位的教皇，交叉的两把钥匙还在，三重冠却不再那么让人信服。你有意识在追的，也许是一条不照旧规矩走的路。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0643", "response": "近期发展·愚者：不久之后，可能有一段新的旅程摆到面前。愚者只扛着一个小包袱，小狗跟在脚边，未知多一点，也能先走两步。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0644", "response": "自我态度·正义：双刃剑竖得笔直，天平端得很平。你看待自己的方式偏向诚实，想先把事实摆清楚，再给自己一个公正的位置。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0645", "response": "外部环境·魔术师：桌上摆着权杖、圣杯、宝剑、星币，四样都在手边。身边的环境给了你不少能用的东西，缺的也许只是把意志收拢起来。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0646", "response": "希望与恐惧·力量：狮子没有被压住，只是被一双手轻轻合上了嘴。你期待能温柔地稳住自己，怕的也许是同一件事，怕自己稳不住。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0647", "response": "可能结果·死神：逆位的死神，白马还在走，倒在地上的国王没有起身。照这样往下走，可能会卡在不想结束的旧模式里，松开手，新的才有位置。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0648", "response": "接下来的变化还看不太清，这组牌把朦胧和手边能用的东西放在一起，怎么面对，可以一步一步来。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0649", "response": "现状·皇后：长袍上的石榴纹、脚下的麦田，都是丰饶在生长。做选择时的你，手里已经有不少正在照顾、正在养着的东西。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0650", "response": "A · 机会·星星：七颗小星围着八芒大星。选 A 可能得到的，是一点被重新点亮的希望和灵感，像一壶水慢慢倒进水里。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0651", "response": "A · 代价·皇帝：宝座上的公羊头很硬朗。选 A 可能要付出的，是立规矩、担责任的那份辛苦，有了结构，也就有了约束。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0652", "response": "B · 机会·隐者：逆位的隐者，提灯还亮着。选 B 可能得到的，是一段回到自己身边的时间，只是别一个人走得太远，记得回来。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0653", "response": "B · 代价·正义：天平摆在两根柱子之间。选 B 可能付出的，是要诚实面对一些事实，属于自己的那份因果，得自己来衡量。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0654", "response": "两条路都摊在这里，一边是希望和规矩一起来，一边是独处和诚实的清算，哪一样更重，得你自己放上天平。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0655", "response": "想到和朋友合伙，你最想守住的是什么？", "rejected": null, "error_type": null}
+{"case_id": "corpus.0656", "response": "现状·倒吊人：一个人倒挂着，绳子系在一只脚上，头上有一圈光环。做选择的此刻像一次暂停，换个角度看，事情可能会不太一样。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0657", "response": "A · 机会·星星：八芒大星底下，一只壶把水倒回水里。选 A 可能得到的，是一点被慢慢补回来的希望和灵感。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0658", "response": "A · 代价·战车：一黑一白两只狮身兽，没有朝同一个方向。选 A 可能要付出的，是一阵内耗和拉扯，得先把两股劲理顺。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0659", "response": "B · 机会·太阳：白马和红旗都在大太阳底下，墙后是向日葵。选 B 可能得到的，是一种轻快和清明，事情看起来简单一些。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0660", "response": "B · 代价·死神：国王倒在地上，太阳在两座塔之间升起。选 B 可能要付出的，是让某个阶段就此结束，空出来的地方得自己慢慢填。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0661", "response": "两条路各有一点光，也各有要放下的东西，这副牌只是把它们并排摊开，没有替你选哪一条。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0662", "response": "如果先不管结果，你在这个课程里最在意的是什么？", "rejected": null, "error_type": null}
+{"case_id": "corpus.0663", "response": "现状·魔术师：头顶的无限符号下，四种元素都摆在桌上。站在选择前，你不是空着手的，想法和本事都在，等着被专注地用起来。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0664", "response": "A · 机会·战车：一黑一白两只狮身兽拉着车，星篷在头顶。选 A 可能得到的，是一股往前推进的劲，能把相反的力量握在一起。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0665", "response": "A · 代价·节制：天使在两只杯子之间慢慢倒水，一足踏水，一足踏岸。选 A 可能要付出的是耐心，得花时间在两头之间调和。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0666", "response": "B · 机会·恶魔：锁链松松地套在台下两个人的脖子上。选 B 可能得到的，是熟悉而贴身的满足，也是一个看清自己被什么牵着的机会。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0667", "response": "B · 代价·高塔：闪电落下，王冠被掀飞，都是躲不开的变动。选 B 可能付出的，是把该来的改变一拖再拖，余震不停，越晚面对越费力。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0668", "response": "两条路，一边要耐心调和，一边要看清牵着你的东西，牌只是把得失摊开，选哪一条仍在你手里。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0669", "response": "想象一年后的自己，你最希望那时的生活里留下些什么？", "rejected": null, "error_type": null}
+{"case_id": "corpus.0670", "response": "现状·倒吊人：逆位的倒吊人，系在一只脚上的绳已经挂了很久。做选择时你所在的位置，可能有一些等待，慢慢变成了无谓的消耗。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0671", "response": "A · 机会·死神：两座塔之间升起太阳，倒在地上的国王旁边，白马还在往前走。选 A 可能得到的，是一个阶段结束之后腾出来的空间。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0672", "response": "A · 代价·高塔：闪电劈在山顶高塔上，两个人从塔上坠落。选 A 可能付出的，是一段原以为确定的东西被突然打散，这个过程可能不轻。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0673", "response": "B · 机会·魔术师：一手把权杖举向天空，一手指向大地，桌上四样东西都在。选 B 可能得到的，是把手里已有的用起来、重新去创造的机会。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0674", "response": "B · 代价·战车：一黑一白两只狮身兽，要被拉向同一个方向。选 B 可能付出的，是得一直用意志驾驭这份拉扯，花不少专注和力气。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0675", "response": "继续还是不继续，两边都有得有失，这组牌只是把它们摊开来，哪一边更重，要你自己去掂量。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0676", "response": "在这段关系里，有哪样东西是你无论怎么选都不想丢的？", "rejected": null, "error_type": null}
+{"case_id": "corpus.0677", "response": "现状·力量：逆位的力量，双手搭在狮子嘴上，却有点使不上劲。做选择时的你，可能有些自我怀疑，先别用蛮力，安抚好自己再看。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0678", "response": "A · 机会·恋人：伊甸园里的一男一女，站在天使拉斐尔之下。选 A 可能得到的，是一段真诚的联结，或一个更忠于内心的选择。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0679", "response": "A · 代价·皇帝：方正的石宝座坐上去并不软。选 A 可能付出的，是一套新的规则和责任，要自己搭起框架，也要被它约束。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0680", "response": "B · 机会·魔术师：桌上摆着权杖、圣杯、宝剑、星币，四样都在手边。选 B 可能得到的，是把已有的东西用起来、让想法落成行动的机会。", "rejected": "B · 机会·魔术师：桌上的四种元素都摆好了，说明你现在已经把想法变成了现实，这张牌讲的就是你此刻的处境，搬不搬都已经成了。", "error_type": "ignore_position"}
+{"case_id": "corpus.0681", "response": "B · 代价·战车：一黑一白两只狮身兽，得朝同一个方向走。选 B 可能付出的，是持续的意志和专注，往前推，就得一直握紧手中的权杖。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0682", "response": "两边各有得失，一边是联结与责任，一边是行动与持续用力；先安顿好自己，再看哪一边更像你想要的日子。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0683", "response": "在这次选择里，你最在意要守住的是什么？", "rejected": null, "error_type": null}
+{"case_id": "corpus.0684", "response": "现状·世界：椭圆形的月桂花环中央有人在起舞，四角是天使、鹰、狮、牛。站在选择前的此刻，像一个循环走到了完整的地方。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0685", "response": "A · 机会·倒吊人：倒挂的人，一条腿弯成「4」字，头上带着光环。选 A 可能得到的，是一段停下来、换个角度看的时间。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0686", "response": "A · 代价·月亮：月下有狗也有狼，水里爬出一只龙虾。选 A 可能付出的，是一阵看不太清的迷惘，有些担心会被放大。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0687", "response": "B · 机会·力量：双手合上狮子的嘴，动作很轻。选 B 可能得到的，是一种温柔的力气，靠耐心而不是硬撑来照顾自己。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0688", "response": "B · 代价·愚者：包袱还扛在肩上，人站在悬崖边。选 B 可能付出的，是在冲动和犹豫之间来回，看清脚下要花些时间。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0689", "response": "两边都有可能得到的和要付出的，牌摆出的是一个完整之后的路口，往哪边走，它没有替你说。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0690", "response": "想到继续或者不继续时，你最先在意的是什么？", "rejected": null, "error_type": null}
+{"case_id": "corpus.0691", "response": "现状·皇帝：宝座上的公羊头还在，秩序却有点走样。做选择的此刻，可能是规则抓得太紧，或局面有些散，需要松一松，或重新搭个框。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0692", "response": "A · 机会·正义：双刃剑竖着，天平却歪了。选 A 可能得到的，是一个把失衡的地方校正回来的机会，先看清是哪一头偏了。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0693", "response": "A · 代价·隐者：提灯里装着六芒星，长杖拄在雪峰顶。选 A 可能要付出的，是一段离开人群的时间，独处、向内找，会占掉一些热闹。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0694", "response": "B · 机会·战车：头顶是星篷，手里握着权杖。选 B 可能得到的，是专注往前推的那股劲，能把来回拉扯的东西收成一个方向。", "rejected": "B · 机会·战车：两只狮身兽一黑一白，这张说的是你现在已经陷在拉扯里，选 B 只会让你更失去方向，它就是你最大的代价。", "error_type": "ignore_position"}
+{"case_id": "corpus.0695", "response": "B · 代价·死神：白马走过，两座塔之间升起太阳。选 B 可能付出的，是抗拒某种结束，困在旧的样子里，放不下的会一直占着手。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0696", "response": "A 那边要一段向内的时间，B 那边要放下旧样子，牌把得失都摆在桌上，怎么选仍由你来定。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0697", "response": "报或不报，你最想为自己换来的是什么？", "rejected": null, "error_type": null}
+{"case_id": "corpus.0698", "response": "现状·倒吊人：人倒挂着，另一条腿弯成「4」字，头部有一圈光环。做选择时你正停在这里，看似没动，其实是在换个角度看这件事。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0699", "response": "A · 机会·魔术师：逆位的魔术师，桌上的权杖、圣杯、宝剑、星币摆得有点散。选 A 可能得到一些技巧，但要留意它有没有方向，别被话术带着走。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0700", "response": "A · 代价·隐者：灰色兜帽长袍，一根长杖，提灯只照亮身边。选 A 可能付出的，是一段要独自待着、向内找答案的时间。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0701", "response": "B · 机会·皇帝：方正的石宝座上，皇帝握着安卡权杖和宝球。选 B 可能得到的，是一种更稳的秩序，按自己定下的结构把日子排好。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0702", "response": "B · 代价·正义：天平端在一只手里，另一只手竖着双刃剑。选 B 可能付出的，是要诚实面对因果，每个决定都得自己担着、算清楚。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0703", "response": "报或不报，这组牌把两边可能得到和付出的都摆在桌上，没有标出哪一边更好，留给你自己称一称。", "rejected": "这几张牌合起来看，技巧、独处、秩序、公正都差不多分量，现状那张倒吊人其实就是你报课以后会有的样子。", "error_type": "ignore_position"}
+{"case_id": "corpus.0704", "response": "想报这门课的那一刻，你最想从里面得到的是什么？", "rejected": null, "error_type": null}
+{"case_id": "corpus.0705", "response": "我的需要·愚者：肩上一个小包袱，脚边一只小狗。你在这段关系里真正需要的，可能是一种不必想清楚每一步、可以轻轻开始的自在。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0706", "response": "对方（我眼中）·力量：在你眼中，对方像那双轻轻合上狮子嘴的手，温柔又有耐心。这是你看见的样子，牌读不出对方的真实想法。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0707", "response": "共同基础·魔术师：桌上的权杖、圣杯、宝剑、星币都在。你们共有的，或许是把想法付诸行动的那股劲，东西已经在手边了。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0708", "response": "冲突·星星：八芒大星很亮，两只水壶也都在。彼此摩擦的地方，可能在于你心里希望的样子，和你眼中对方期待的不太一样，像在等不同的星光。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0709", "response": "沟通·恶魔：脖子上的锁链套得很松，摘得下来。话可以怎么说，也许是先把自己执着的那一点说出来，看清了，就不那么紧了。", "rejected": "沟通·恶魔：脖子上的锁链说明你在关系里有很深的依恋创伤，可能还带着焦虑型人格，一开口就被童年留下的执念束缚住。", "error_type": "diagnosis"}
+{"case_id": "corpus.0710", "response": "行动建议·皇帝：方正的石宝座、手里的宝球，都很稳。可以先做的一件事，是给这段关系定一点清楚的边界，让自己站得稳些。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0711", "response": "牌读不出她心里怎么想；在你眼中，她温柔而有耐心，而你自己需要的，是一份能轻松开始、又有边界的关系。", "rejected": "她心里其实一直很在乎你，只是性格温柔、不好意思表达，正等你先开口，你一说，她肯定会接住这份心意。", "error_type": "mind_reading"}
+{"case_id": "corpus.0712", "response": "我的需要·节制：水在两只杯子之间倒得太急。你真正需要的，也许是把节奏放慢一点，不必一次把话全倒出去。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0713", "response": "对方（我眼中）·审判：天使在云里吹着号角。在你眼中，对方像是站在某个被叫醒的时刻，正在回应自己那边的什么。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0714", "response": "共同基础·倒吊人：绳子系在一只脚上，人倒挂得久了一点。你们共有的东西里，可能有一段拖着没说开的等待。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0715", "response": "冲突·死神：倒下的国王旁边，太阳在两座塔之间升起。摩擦的地方，也许在于一个旧阶段正在结束，新的样子还没长出来。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0716", "response": "沟通·星星：八芒大星和七颗小星都还在，只是被云挡住了。话可以说得慢一点、轻一点，不用先找到一个完美的说法。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0717", "response": "行动建议·女祭司：黑白双柱一边刻 B、一边刻 J，身后挂着石榴帷幕。可以先做的一件事，是安静下来，听听自己心里最小声的那句话。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0718", "response": "这段距离里，你需要的是慢一点的节奏，而在你眼中，对方正回应着自己的召唤，话可以轻轻地说。", "rejected": "对方其实一直在等你先开口，心里也觉得这段距离很别扭，只是放不下面子，不好意思先来找你。", "error_type": "mind_reading"}
+{"case_id": "corpus.0719", "response": "我的需要·倒吊人：绳子系在一只脚上，头部有一圈光环。你在这段关系里真正需要的，可能是一次暂停，先不急着解决，换个角度看看。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0720", "response": "对方（我眼中）·教皇：举起赐福的手，头上戴着三重冠。在你眼中，对方像个守着传统和规矩的人，习惯用经验来教导、来指引。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0721", "response": "共同基础·恶魔：台下那一男一女脖子上的锁链，本来就套得松松的。你们共有的，可能是一些绑住彼此的旧习惯，此刻正被看见，慢慢松开。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0722", "response": "冲突·隐者：提灯的人站在雪峰顶，离人群有点远。彼此摩擦的地方，可能在于各自退回自己那里去想，靠近时反而说不到一处。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0723", "response": "沟通·月亮：月亮底下站着狗与狼，一只龙虾正从水里爬出来。话可以慢一点说，有些感受还朦胧，不急着说清，先把听到的和猜的分开。", "rejected": "沟通·月亮：月亮底下站着狗与狼，说明你们下次谈话一定会吵起来，她会把旧事全翻出来，这个月最好先别开口。", "error_type": "prediction"}
+{"case_id": "corpus.0724", "response": "行动建议·力量：狮子不是被打服的，是被两只手轻轻合上了嘴。可以先做的一件事，是用耐心代替用力，先把自己这边的情绪安顿好。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0725", "response": "在你眼中妈妈守着规矩和经验，你需要的却是一次暂停，这副牌把重心放在慢慢说、少用一点力上。", "rejected": "妈妈其实一直很爱你，只是心里放不下面子，她早就想和你和好了，只等你先开口。", "error_type": "mind_reading"}
+{"case_id": "corpus.0726", "response": "我的需要·战车：战车上的人握着权杖，一黑一白两只狮身兽在前面。你在这段关系里真正需要的，可能是一种方向由自己来定的踏实。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0727", "response": "对方（我眼中）·星星：八芒大星下，一壶水倒进水里。在你眼中，对方像这片星光，安静、带着希望，让人觉得可以慢慢松一口气。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0728", "response": "共同基础·隐者：提灯里一颗六芒星，照着雪峰顶的一小块地方。你们共有的，也许是各自需要独处的那一面，都愿意在安静里想清楚。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0729", "response": "冲突·皇后：十二星冠下，长袍上的石榴纹铺得很满。彼此摩擦的地方，也许在怎么照顾、照顾多少上，给出去的和被需要的，不一定一样多。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0730", "response": "沟通·魔术师：逆位的魔术师，权杖举着，桌上的东西却没用到一处。话可以说得朴素一点，少一点技巧，把真正想说的那一句放在前面。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0731", "response": "行动建议·倒吊人：逆位的倒吊人，绳子系在一只脚上已经很久了。可以先做的一件事，是看看哪些等待已经没有意义，把它轻轻放下。", "rejected": "行动建议·倒吊人：逆位的倒吊人，绳是你自己系上的。你就是太爱自我牺牲、总在拖，关系卡住全怪你放不下，先改掉这个毛病再说。", "error_type": "blame_user"}
+{"case_id": "corpus.0732", "response": "牌读不出她心里怎么想，在你眼中她像一片安静的星光，而你自己在意的，是方向能不能握在手里。", "rejected": "她其实一直把你放在心上，只是不习惯说出口，在她心里，你比自己以为的要重要得多。", "error_type": "mind_reading"}
+{"case_id": "corpus.0733", "response": "我的需要·高塔：闪电劈中山顶高塔，王冠被掀飞。你真正需要的，也许是让一些虚假的确定塌掉，把真实的东西露出来。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0734", "response": "对方（我眼中）·审判：在你眼中，对方像号角声里的那一刻，带着清算和觉醒的意味。这是你眼里的样子，牌说不了对方怎么想。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0735", "response": "共同基础·星星：七颗小星围着一颗八芒大星。你们共有的，可能是一份还没熄掉的希望，像那壶慢慢倒进水里的水。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0736", "response": "冲突·恶魔：台下的一男一女都戴着锁链，却套得很松。彼此摩擦的地方，可能是某种执念把两个人拴在同一个地方打转。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0737", "response": "沟通·力量：那双手是轻轻合上狮子的嘴，没有硬掰。话可以怎么说，或许就是这样，慢一点、软一点，耐心比嗓门管用。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0738", "response": "行动建议·愚者：悬崖边上，肩扛小包袱，先迈出那只短短的脚。可以先做的一件事，是换一种从没试过的开口方式。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0739", "response": "在你眼中，对方带着清算的意味，而你们之间仍有共同的希望；吵架里的执念也许比想象中松，可以先试着放软说话。", "rejected": "你的伴侣其实早就想和好了，她心里一直觉得是自己太较真，只是在等你给个台阶，你们俩一定吵不散。", "error_type": "mind_reading"}
+{"case_id": "corpus.0740", "response": "我的需要·高塔：山顶的塔被闪电击中，余震还没停。你在这段关系里真正需要的，也许是早一点面对那个一直躲着的改变。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0741", "response": "对方（我眼中）·女祭司：TORA 卷轴半掩在袍中，没有全部摊开。在你眼中，她是一个安静、把很多东西收着的人。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0742", "response": "共同基础·教皇：交叉的两把钥匙，头顶的三重冠。你们共有的，可能是一些彼此都认的规矩和习惯，它们曾经让人觉得可靠。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0743", "response": "冲突·正义：天平摆在那里，双刃剑竖着。摩擦的地方，可能在于「什么才算公平」，两个人手里各有一杆秤。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0744", "response": "沟通·月亮：月亮还在，水里的龙虾已经爬了出来。迷雾正在变薄，话可以先从那些一直压着、没说出口的感受开始。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0745", "response": "行动建议·皇后：脚下的麦田长得不太顺，长袍上的石榴纹还在。可以先做的一件事，是停下过度的付出，先给自己一点养分。", "rejected": "行动建议·皇后：皇后手里握着一把宝剑，身边围着三只白鸽，意思是你该主动出击，尽快把话挑明。", "error_type": "symbol_error"}
+{"case_id": "corpus.0746", "response": "牌读不出她心里怎么想，在你眼中她安静而收敛，而你自己需要的，是面对那个改变，也照顾好自己。", "rejected": "她心里其实一直很在乎你，只是性格内敛不好意思表达，等她准备好了，就会主动来找你。", "error_type": "mind_reading"}
+{"case_id": "corpus.0747", "response": "我的需要·星星：八芒大星和七颗小星都还在，只是被云遮了一层。你真正需要的，可能是一点重新亮起来的信心，和一个能喘口气的空间。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0748", "response": "对方（我眼中）·战车：一黑一白两只狮身兽，头顶是星篷。在你眼中，对方是个目标明确、往前冲的人，意志硬，也很会驾驭局面。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0749", "response": "共同基础·世界：月桂花环围成椭圆，中央的人在起舞。你们共有的，可能是一段已经磨合出来的完整感，日子大体是转得圆的。", "rejected": "共同基础·世界：月桂花环围成椭圆，你们本来共有一份完整，可你总是太敏感、太爱计较，才把这份圆满一点点弄坏了。", "error_type": "blame_user"}
+{"case_id": "corpus.0750", "response": "冲突·皇帝：方正的石宝座上刻着公羊头。彼此摩擦的地方，可能在规则和边界上，谁定的规矩、谁说了算，容易在这里碰到。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0751", "response": "沟通·月亮：两座塔还立着，月下的雾却在散。话可以说得直一些，憋着的感受慢慢说出来，比一直绕着走轻松。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0752", "response": "行动建议·太阳：带人脸的大太阳还在，墙后的向日葵也在，只是云还没散。可以先做的一件事，是别急着让一切都明朗，也留意别太乐观。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0753", "response": "在你眼中室友是往前冲的人，你需要的是一点重新亮起来的信心，摩擦多半落在规矩上，话可以慢慢说开。", "rejected": "室友其实心里早就对你有意见了，只是不说，她觉得你管得太多，表面客气其实一直在忍你。", "error_type": "mind_reading"}
+{"case_id": "corpus.0754", "response": "我的需要·皇后：脚下成片的麦田，心形盾牌上刻着金星符号。你在这段关系里需要的，也许是一种被好好照料、可以慢慢生长的安稳。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0755", "response": "对方（我眼中）·魔术师：一手把权杖举向天空，一手指向大地，头顶有无限符号。在你眼中，对方很会把想法变成行动，手边总有办法。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0756", "response": "共同基础·审判：天使在云里吹响号角，号角上挂着红十字旗。你们共有的，可能是一种都被唤醒过的感觉，像是听见了同一声召唤。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0757", "response": "冲突·战车：逆位的战车，一黑一白两只狮身兽各朝一边。彼此摩擦的地方在方向上，一个想往这边，一个想往那边，力气互相抵消。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0758", "response": "沟通·倒吊人：倒挂的人，另一条腿弯成「4」字，头部亮着光环。话可以先放慢一点，换个角度去听，停一停，也许就有新的理解。", "rejected": "沟通·倒吊人：倒挂的人，另一条腿弯成「4」字，头部有光环。这张说的不是话怎么说，而是你们的共同基础：你们俩都习惯悬着、等着，谁也不先动。", "error_type": "ignore_position"}
+{"case_id": "corpus.0759", "response": "行动建议·星星：逆位的星星，八芒大星和七颗小星都还在，只是暂时没那么亮。可以先做的，是把被遮住的那点信心找回来一些，不用一下找全。", "rejected": null, "error_type": null}
+{"case_id": "corpus.0760", "response": "暧昧拖得久了，在你眼中对方很会行动，你自己要的却是慢慢生长的安稳，两种节奏都摆在这里。", "rejected": "对方心里其实早就认定了你，只是在等一个合适的时机开口，那些犹豫全是因为太在乎你。", "error_type": "mind_reading"}

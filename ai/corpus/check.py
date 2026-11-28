@@ -24,8 +24,10 @@ IMAGERY = ['悬崖', '小狗', '白狗', '骑士', '白马', '狮子', '天使',
            '苹果树', '火焰', '十字', '钥匙', '鹰', '公牛', '天平', '沙漏', '无限符号', '盾牌', '战车']
 LEN = {  # 动作/任务 → (下限, 上限)，按去掉空白的字符数；容差在判断时给
     'ANSWER': (120, 220), 'ASK': (100, 180), 'ANSWER_MEANING': (80, 150), 'REFLECT': (40, 80), 'PLAYFUL_REPLY': (30, 80),
-    'cross_card': (40, 70), 'cross_summary': (30, 60),
+    'cross_card': (40, 70), 'cross_summary': (30, 60), 'spread_card': (40, 70), 'spread_summary': (30, 60), 'ask_question': (10, 40),
 }
+CARD_TASKS = ('cross_card', 'spread_card')        # 逐张：以「位置·牌名」开头、不提问
+NO_Q_TASKS = CARD_TASKS + ('cross_summary', 'spread_summary')
 LIST_RE = re.compile(r'(^|\n)\s*([-•*#]|\d+[.、)]|\*\*)')
 
 
@@ -34,7 +36,7 @@ def heads(case):
     import engine  # noqa: E402
     st = engine.build_state(case['input'])
     cards = st['active_cards']
-    if case['task'] == 'cross_card':
+    if case['task'] in CARD_TASKS:
         cards = [cards[case['input']['focus_index']]]
     return [f"{c['position']['name']}·{c['name']}" for c in cards]
 
@@ -54,13 +56,16 @@ def check(case, resp, rejected=None, et=None):
     issues = []
     task, action = case['task'], case['action']
     prompt = case['messages'][1]['content']
-    key = task if task.startswith('cross') else action
+    key = task if task in LEN else action
     lo, hi = LEN[key]
     n = ln(resp)
     if n < lo * 0.8 or n > hi * 1.2:
         issues.append(f'长度 {n}（应 {lo}～{hi}）')
     q = resp.count('？') + resp.count('?')
-    if action == 'ASK' and not task.startswith('cross'):
+    if task in NO_Q_TASKS:
+        if q:
+            issues.append(f'逐张 / 整体一句不应提问（{q} 个问号）')
+    elif action == 'ASK':
         if q != 1:
             issues.append(f'ASK 应恰好一个问号，实际 {q}')
         elif not resp.rstrip().endswith(('？', '?')):
@@ -90,15 +95,18 @@ def check(case, resp, rejected=None, et=None):
     for w in IMAGERY:
         if w in resp and w not in prompt:
             issues.append(f'提示词里没有的画面：{w}')
-    if action in ('ANSWER', 'ASK') and task != 'cross_summary':
+    if action in ('ANSWER', 'ASK') and task not in ('cross_summary', 'spread_summary', 'ask_question'):
         for h in heads(case):
             name = h.split('·')[1]
             if action == 'ANSWER' and h not in resp:
                 issues.append(f'缺少位置开头：{h}')
             elif action == 'ASK' and name not in resp:
                 issues.append(f'没提到牌：{name}')
-    if task == 'cross_card' and not resp.startswith(heads(case)[0]):
+    if task in CARD_TASKS and not resp.startswith(heads(case)[0]):
         issues.append('逐张解读没有以「位置·牌名」开头')
+    other_spread = case['input']['spread_id'] == 'resonance'
+    if task == 'spread_summary' and other_spread and '你眼中' not in resp:
+        issues.append('共鸣牌阵的整体一句没有用「在你眼中」')
     for w in whispers(prompt):   # 低语：要么原文照用，要么不用
         core = w.rstrip('。')
         if core not in resp and any(core[i:i + 12] in resp for i in range(0, max(1, len(core) - 11))):   # 低语常复用意象原词，12 字以上重合才算改写
@@ -112,18 +120,35 @@ def check(case, resp, rejected=None, et=None):
             issues.append(f'反面回答错误类型不符：{et}')
         elif rejected.strip() == resp.strip():
             issues.append('反面回答与正面相同')
+        elif task in CARD_TASKS and not rejected.startswith(heads(case)[0]):
+            issues.append('逐张的反面回答没有以「位置·牌名」开头')
+    elif rejected:
+        issues.append('没有要求却写了反面回答')
     return issues
 
 
 def main(out_dir):
-    cases = {json.loads(l)['case_id']: json.loads(l) for l in open(os.path.join(HERE, 'cases.jsonl'), encoding='utf-8')}
-    outs = {}
+    cases = {}
+    for name in ('cases.jsonl', 'cases2.jsonl'):   # 第一批 + 第二批（assemble2.py 生成）
+        p = os.path.join(HERE, name)
+        if os.path.exists(p):
+            for l in open(p, encoding='utf-8'):
+                c = json.loads(l)
+                cases[c['case_id']] = c
+    p = os.path.join(HERE, 'addon_rejected.jsonl')   # 给第一批补的反面回答要求
+    if os.path.exists(p):
+        for l in open(p, encoding='utf-8'):
+            a = json.loads(l)
+            cases[a['case_id']]['want_rejected'] = a['want_rejected']
+    outs, patches = {}, []
     for f in sorted(os.listdir(out_dir)):
         if f.endswith('.jsonl'):
             for l in open(os.path.join(out_dir, f), encoding='utf-8'):
                 if l.strip():
                     o = json.loads(l)
-                    outs[o['case_id']] = o
+                    (patches.append(o) if o.get('response') is None else outs.__setitem__(o['case_id'], o))
+    for o in patches:   # response 为 null 的行只给已有样例补反面回答
+        outs[o['case_id']].update(rejected=o['rejected'], error_type=o['error_type'])
     merged, flagged = [], []
     for cid, c in cases.items():
         o = outs.get(cid)

@@ -92,7 +92,7 @@ python3 ai/runtime/bench.py qwen3:1.7b      # 跑测试集，报告在 ai/runtim
 测试集只能抓到明显越界；读输出还能看到未微调模型的问题：未来位用「将……」近似预言、画面细节说错、偶尔把冲突位的特质直接安在用户身上、结尾像鸡汤——这些留给 Kaggle 上的 SFT 解决。
 
 ## 训练语料（22 张大牌）
-见 [corpus/README.md](corpus/README.md)：482 条监督样例 + 157 对偏好数据，输入就是运行时的真实提示词（`engine.py` 同一套函数生成），按牌组合切分 train 431 / val 38 / test 13，导出在 `corpus/data/`。
+见 [corpus/README.md](corpus/README.md)：790 条样例（导出监督训练 770 条）+ 252 对偏好数据，覆盖全部牌阵，输入就是运行时的真实提示词（`engine.py` 同一套函数生成），按牌组合切分 train 706 / val 44 / test 20，导出在 `corpus/data/`。
 
 ## 下一步（未做）
 1. 在 Kaggle 上以 qwen3:1.7b 为基座做 LoRA（先 SFT，再视情况 DPO），导出 GGUF 后放回本机 Ollama，用同一测试集对比微调前后。

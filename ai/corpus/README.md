@@ -9,24 +9,34 @@
 - 按**牌的组合**切分 train / val / test，同一组合不会跨集合；benchmark 里的（问题，牌组合）在抽样时避开。
 
 ## 规模
+第一批 482 条 + 第二批 308 条，共 790 条样例；导出时去掉第一批用牌义占位的 20 条 cross_summary（已被第二批真实逐张解读的整体一句取代），实际监督训练 770 条，偏好对 252 对。
+
 | 任务 | 动作 | 条数 |
 |---|---|---|
 | single_answer 单张解读 | ANSWER | 88 |
+| daily_answer 每日一牌 | ANSWER | 10 |
 | three_answer 三张（时间之流） | ANSWER | 80 |
-| cross_card 五张牌阵逐张一句 | ANSWER / ASK | 50 |
-| cross_summary 五张牌阵整体一句 | ANSWER / ASK | 20 |
+| mirror_answer / mirror_reflect 镜像牌阵（3 张，原创） | ANSWER / REFLECT | 16 + 4 |
+| cross_card 五张牌阵逐张一句（第一批，单张抽取） | ANSWER / ASK | 50 |
+| spread_card 整副大牌阵逐张一句：五张、马蹄、凯尔特十字、两难抉择、共鸣 | ANSWER / ASK | 234 |
+| spread_summary 整副大牌阵的整体一句（提示词里是老师自己写的逐张解读） | ANSWER / ASK | 36 |
+| ask_question 大牌阵决策类最后单独的一个问题 | ASK | 8 |
 | decision_ask / _three 决策类 | ASK | 60 |
 | meaning_only 只要牌义 | ANSWER_MEANING | 44 |
 | reflect_association 个人联想 | REFLECT | 60 |
 | playful 玩梗 | PLAYFUL_REPLY | 40 |
 | third_party / _three 问他人 | ANSWER | 40 |
 
-共 482 条监督样例，其中 157 条另有「反面回答」用于偏好训练（DPO）。错误类型分布：哥特风格 27、预测 26、归咎用户 24、鸡汤说教 19、编造 / 说错意象 19、过度追问 16、列表格式 14、诊断 9、忽略位置 2、读心 1（后两类只在多张 / 问他人的样例里出现，偏少，下一批补）。
+切分：train 706 / val 44 / test 20（偏好对 228 / 16 / 8）。
+反面回答的错误类型：预测 35、忽略或说错位置 35、读心 31、哥特风格 29、归咎用户 28、鸡汤说教 24、编造 / 说错意象 24、过度追问 21、诊断 16、列表格式 14。
 
 ## 流程
 ```bash
-python3 ai/corpus/build_cases.py          # 1. 抽样生成输入 → cases.jsonl、batches/
-# 2. 老师写回答（子代理按 WRITER_BRIEF.md 分批写），再做语义审查
+python3 ai/corpus/build_cases.py          # 1. 第一批输入 → cases.jsonl、batches/
+python3 ai/corpus/build_cases2.py         #    第二批输入 → jobs2.jsonl、cases2_small.jsonl、addon_rejected.jsonl、batches2/
+# 2. 老师写回答（子代理按 WRITER_BRIEF.md / WRITER_BRIEF2.md 分批写）
+python3 ai/corpus/assemble2.py <第二批输出目录>   #    整副牌阵拆成逐张 / 整体 / 提问样例 → cases2.jsonl、teacher/out2_*.jsonl
+#    语义审查改动套用后：python3 ai/corpus/assemble2.py --refresh（用改过的逐张解读重建整体一句的提示词）
 python3 ai/corpus/check.py ai/corpus/teacher  # 3. 自动检查 → corpus.jsonl、reports/check.md
 python3 ai/corpus/export.py               # 4. 导出 → data/sft_*.jsonl、data/dpo_*.jsonl
 ```
@@ -40,6 +50,6 @@ python3 ai/corpus/export.py               # 4. 导出 → data/sft_*.jsonl、dat
 - `WRITER_BRIEF.md`：写作规则；`reports/check.md`：自动检查报告
 
 ## 已知局限
-- 只覆盖单张、三张、五张牌阵；马蹄、凯尔特十字、原创牌阵没有单独样例（运行时 ≥4 张都是逐张生成，cross_card 覆盖了这种格式）。
-- cross_summary 的「各位置的解读」用牌义占位，和运行时（模型自己写的逐张解读）略有差别。
-- 老师回答由大模型写、子代理审查，没有逐条人工审核；可以抽看 `corpus.jsonl`。
+- 老师回答由大模型写、子代理审查（两批共改 30 处），没有逐条人工审核；可以抽看 `corpus.jsonl`。
+- 危机、哀悼、结束是程序固定话术，不在语料里；英文语料没有做。
+- 只覆盖 22 张大牌；小牌要等牌面画面标注做完。
