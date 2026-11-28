@@ -95,5 +95,5 @@ python3 ai/runtime/bench.py qwen3:1.7b      # 跑测试集，报告在 ai/runtim
 见 [corpus/README.md](corpus/README.md)：790 条样例（导出监督训练 770 条）+ 252 对偏好数据，覆盖全部牌阵，输入就是运行时的真实提示词（`engine.py` 同一套函数生成），按牌组合切分 train 706 / val 44 / test 20，导出在 `corpus/data/`。
 
 ## 下一步（未做）
-1. 在 Kaggle 上以 qwen3:1.7b 为基座做 LoRA（先 SFT，再视情况 DPO），导出 GGUF 后放回本机 Ollama，用同一测试集对比微调前后。
+1. 在 Kaggle 上跑 [train/kaggle_lora_qwen3.ipynb](train/README.md)（qwen3:1.7b LoRA，先 SFT、DPO 可选），导出 GGUF 放回本机 Ollama，用行为测试集和语料留出测试集对比微调前后。
 2. 小阿卡纳的语义框架（命题、种子、追问树）：先给 56 张牌面做画面标注，再按大牌的做法分批写、审查，之后扩充语料。
